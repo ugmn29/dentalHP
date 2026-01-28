@@ -1,0 +1,13 @@
+name = "fuku-dental"
+compatibility_date = "2026-01-28"
+pages_build_output_dir = "./out"
+
+# Cloudflare Pages の設定
+[build]
+command = "npm run build"
+cwd = "."
+
+# 環境変数（必要に応じて追加）
+[env.production]
+
+[env.preview]

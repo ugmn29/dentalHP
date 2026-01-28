@@ -1,0 +1,21 @@
+# フク歯科 - robots.txt
+
+# すべての検索エンジンに対する設定
+User-agent: *
+Allow: /
+
+# クロールしないディレクトリ
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+
+# サイトマップの場所
+Sitemap: https://fuku-dental.com/sitemap.xml
+
+# Googlebot 特有の設定（オプション）
+User-agent: Googlebot
+Allow: /
+
+# Bingbot 特有の設定（オプション）
+User-agent: Bingbot
+Allow: /
