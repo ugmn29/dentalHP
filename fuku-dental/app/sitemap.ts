@@ -3,7 +3,7 @@ import { MetadataRoute } from 'next';
 export const dynamic = 'force-static';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://fuku-dental.com'; // 実際のドメインに変更してください
+  const baseUrl = 'https://fshika.com';
 
   const pages = [
     // トップページ
