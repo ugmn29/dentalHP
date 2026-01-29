@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/', '/admin/'],
     },
-    sitemap: 'https://sol-dental.com/sitemap.xml',
+    sitemap: 'https://fshika.com/sitemap.xml',
   };
 }
