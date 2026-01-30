@@ -126,7 +126,7 @@ export default function Home() {
       id: "01",
       title: "すべて見せる、わかりやすい",
       highlight: "最新<span style='font-size: 0.8em;'>の</span>透明<span style='font-size: 0.8em;'>な</span>治療",
-      summary: "納得して治療を受けていただくために",
+      summary: "<strong>豊洲の歯医者</strong>として、納得して治療を受けていただくために",
       details: [
         "治療前には必ず<span class='font-bold bg-yellow-100'>口の中の写真</span>を撮影し、現在の状態を一緒に確認します。さらに<span class='font-bold bg-yellow-100'>３Dスキャナー</span>で歯並びを立体的にデータ化し、<span class='font-bold bg-yellow-100'>ペン型カメラ</span>で細部まで拡大して見ることができます。これらの最新機器を使って、<span class='text-[#395b45] font-bold'>お口の状態や治療内容を丁寧にわかりやすく説明</span>します。"
       ],
@@ -250,7 +250,7 @@ export default function Home() {
                               WebkitBackgroundClip: 'text',
                               WebkitTextFillColor: 'transparent'
                             }}>
-                        <span className="text-[110%]">豊洲駅</span><span className="text-[85%]">から</span>
+                        <strong><span className="text-[110%]">豊洲駅</span></strong><span className="text-[85%]">から</span>
                       </span>
                       <span className="inline-flex items-center justify-center px-3 md:px-6 py-2 md:py-3 bg-gradient-to-r from-[#FFD700] via-[#FFC107] to-[#FFD700] rounded-2xl shadow-2xl transform hover:scale-110 hover:rotate-2 transition-all duration-300 relative overflow-hidden"
                             style={{
@@ -270,7 +270,7 @@ export default function Home() {
                               WebkitBackgroundClip: 'text',
                               WebkitTextFillColor: 'transparent'
                             }}>
-                        <span className="text-[85%]">の</span><span className="text-[110%]">歯医者</span>
+                        <span className="text-[85%]">の</span><strong><span className="text-[110%]">歯医者</span></strong>
                       </span>
                     </span>
                   </div>
@@ -278,7 +278,7 @@ export default function Home() {
                   <div className="absolute -inset-2 bg-gradient-to-r from-transparent via-[#395b45]/5 to-transparent rounded-2xl -z-10"></div>
                 </div>
                 <span className="block text-[5.5vw] sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-[#5A4D41] -mt-4 md:-mt-6 font-semibold" style={{ fontStyle: 'normal' }}>
-                  豊洲で0歳から通える歯医者
+                  <strong>豊洲</strong>で0歳から通える<strong>歯医者</strong>
                 </span>
               </h1>
             </div>
@@ -507,11 +507,11 @@ export default function Home() {
                 </p>
                 <div className="relative inline-block mb-2">
                   <p className="text-[#8D8070] text-xs md:text-sm font-bold mb-1">
-                    豊洲駅から徒歩2分の歯医者
+                    <strong>豊洲駅から徒歩2分の歯医者</strong>
                   </p>
-                  <h3 className="text-[9vw] sm:text-5xl md:text-7xl font-black text-[#395b45] whitespace-nowrap" style={{ fontFamily: 'Georgia, "Yu Mincho", "Hiragino Mincho ProN", serif' }}>
+                  <h2 className="text-[9vw] sm:text-5xl md:text-7xl font-black text-[#395b45] whitespace-nowrap" style={{ fontFamily: 'Georgia, "Yu Mincho", "Hiragino Mincho ProN", serif' }}>
                     F歯科・矯正歯科
-                  </h3>
+                  </h2>
                 </div>
                 <p className="text-[#5A4D41] text-2xl md:text-3xl font-bold mb-8">
                   で解決！

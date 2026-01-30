@@ -13,19 +13,19 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "豊洲の歯医者・矯正歯科｜豊洲駅徒歩2分 豊洲プライムスクエア1階｜F歯科・矯正歯科",
+  title: "豊洲 歯医者｜駅徒歩2分 F歯科・矯正歯科",
   description: "豊洲駅6a出口から徒歩2分、豊洲プライムスクエア1階の歯医者「F歯科・矯正歯科」。こども矯正・セラミック治療・インプラント・マウスピース矯正など幅広く対応。豊洲の地域密着型歯科医院として、丁寧なカウンセリングと最新の治療技術をご提供します。",
   keywords: "豊洲 歯医者,豊洲 矯正歯科,豊洲 歯科,豊洲駅 歯医者,豊洲プライムスクエア,こども矯正,インプラント,セラミック,ホワイトニング,江東区 歯医者",
   openGraph: {
-    title: "豊洲の歯医者・矯正歯科｜豊洲駅徒歩2分｜F歯科・矯正歯科",
+    title: "豊洲 歯医者｜駅徒歩2分 F歯科・矯正歯科",
     description: "豊洲駅6a出口から徒歩2分、豊洲プライムスクエア1階。こども矯正・インプラント・セラミック治療など幅広く対応。豊洲の地域密着型歯科医院。",
-    url: "https://fuku-dental.com",
+    url: "https://fshika.com",
     siteName: "F歯科・矯正歯科 豊洲",
     locale: "ja_JP",
     type: "website",
     images: [
       {
-        url: "https://fuku-dental.com/images/og-image.jpg",
+        url: "https://fshika.com/images/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "F歯科・矯正歯科",
@@ -34,9 +34,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "豊洲の歯医者・矯正歯科｜豊洲駅徒歩2分｜F歯科・矯正歯科",
+    title: "豊洲 歯医者｜駅徒歩2分 F歯科・矯正歯科",
     description: "豊洲駅6a出口から徒歩2分、豊洲プライムスクエア1階。こども矯正・インプラント・セラミック治療など幅広く対応。",
-    images: ["https://fuku-dental.com/images/og-image.jpg"],
+    images: ["https://fshika.com/images/og-image.jpg"],
   },
   robots: {
     index: true,
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://fuku-dental.com",
+    canonical: "https://fshika.com",
   },
   verification: {
     google: 'your-google-verification-code', // Google Search Consoleで取得したコードに置き換えてください
@@ -67,7 +67,7 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Dentist",
     "name": "F歯科・矯正歯科 豊洲",
-    "image": "https://fuku-dental.com/images/clinic-photo.jpg",
+    "image": "https://fshika.com/images/clinic-photo.jpg",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "豊洲5-6-36 豊洲プライムスクエア1階",
@@ -81,7 +81,7 @@ export default function RootLayout({
       "latitude": 35.652121,
       "longitude": 139.797686
     },
-    "url": "https://fuku-dental.com",
+    "url": "https://fshika.com",
     "telephone": "+81-3-XXXX-XXXX", // 実際の電話番号に変更してください
     "priceRange": "¥¥-¥¥¥",
     "openingHoursSpecification": [
