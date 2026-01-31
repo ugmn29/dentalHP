@@ -99,7 +99,7 @@ export const Footer = () => {
                                                 <td className="py-5 px-2 pr-3 text-center text-[#2d4835] font-medium">★</td>
                                             </tr>
                                             <tr className="border-b border-gray-200">
-                                                <td className="py-5 px-3 text-left font-normal text-[#2d4835] text-base md:text-lg whitespace-nowrap" style={{ fontStyle: 'normal', fontFamily: 'sans-serif', fontWeight: '400' }}>14:00-18:30</td>
+                                                <td className="py-5 px-3 text-left font-normal text-[#2d4835] text-base md:text-lg whitespace-nowrap" style={{ fontStyle: 'normal', fontFamily: 'sans-serif', fontWeight: '400' }}>14:00-19:00</td>
                                                 <td className="py-5 px-2 text-center text-[#2d4835] text-lg font-light">●</td>
                                                 <td className="py-5 px-2 text-center text-gray-300 text-lg font-light">−</td>
                                                 <td className="py-5 px-2 text-center text-[#2d4835] text-lg font-light">●</td>
@@ -112,8 +112,8 @@ export const Footer = () => {
                                     </table>
                                 </div>
                                 <div className="mt-6 space-y-1 text-sm md:text-base text-[#2d4835] text-center font-sans font-light">
-                                    <p style={{ fontStyle: 'normal', fontFamily: 'sans-serif', fontWeight: '300' }}><span className="text-[#2d4835] font-medium text-xl">★</span> 土日：9:00-12:00 / 13:00-16:00</p>
-                                    <p className="font-medium text-[#2d4835] mt-3" style={{ fontFamily: 'sans-serif', fontWeight: '500' }}>休診日：火曜日・祝日</p>
+                                    <p style={{ fontStyle: 'normal', fontFamily: 'sans-serif', fontWeight: '300' }}><span className="text-[#2d4835] font-medium text-xl">★</span> 土日：9:00-12:00 / 13:00-17:00</p>
+                                    <p className="font-medium text-[#2d4835] mt-3" style={{ fontFamily: 'sans-serif', fontWeight: '500' }}>休診日：火曜日</p>
                                 </div>
                             </div>
                         </div>
