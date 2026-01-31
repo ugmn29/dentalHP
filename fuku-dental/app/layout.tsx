@@ -52,6 +52,14 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://fshika.com",
   },
+  icons: {
+    icon: [
+      { url: '/icon.png', sizes: '512x512', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/apple-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+  },
   verification: {
     google: 'your-google-verification-code', // Google Search Consoleで取得したコードに置き換えてください
   },
