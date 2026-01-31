@@ -196,6 +196,9 @@ export default function Home() {
                   新規開業のお知らせ
                 </div>
               </div>
+              <p className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#5A4D41] mb-4" style={{ fontFamily: 'sans-serif' }}>
+                0歳から通える歯科医院
+              </p>
               <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-6" style={{
                 fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif',
                 background: 'linear-gradient(135deg, #1a5738 0%, #395b45 50%, #2d4835 100%)',
