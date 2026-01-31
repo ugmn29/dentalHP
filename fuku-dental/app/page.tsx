@@ -584,7 +584,7 @@ export default function Home() {
                       <img
                         src={feature.image}
                         alt={feature.imageAlt}
-                        className="w-full h-auto aspect-[4/3] object-cover"
+                        className="w-full h-auto aspect-[3/2] object-cover"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-[#395b45]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                     </div>
