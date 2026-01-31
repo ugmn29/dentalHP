@@ -73,7 +73,7 @@ export default function CaseStudiesPage() {
                         <img
                           src={caseStudy.beforeImage}
                           alt={`${caseStudy.title} - Before`}
-                          className="w-full aspect-[4/3] object-cover"
+                          className="w-full aspect-[3/2] object-cover"
                         />
                         <div className="absolute top-2 left-2">
                           <span className="bg-gray-600 text-white px-3 py-1 rounded-md font-bold text-xs">
@@ -87,7 +87,7 @@ export default function CaseStudiesPage() {
                         <img
                           src={caseStudy.afterImage}
                           alt={`${caseStudy.title} - After`}
-                          className="w-full aspect-[4/3] object-cover border-l-2 border-white"
+                          className="w-full aspect-[3/2] object-cover border-l-2 border-white"
                         />
                         <div className="absolute top-2 right-2">
                           <span className="bg-[#395b45] text-white px-3 py-1 rounded-md font-bold text-xs">
