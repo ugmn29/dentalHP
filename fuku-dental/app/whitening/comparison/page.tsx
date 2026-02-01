@@ -1,6 +1,7 @@
 import React from 'react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
+import { AuthorBio } from '@/components/AuthorBio';
 import { Sparkles, ArrowRight, CheckCircle, Clock, Heart, Star, AlertCircle, Shield, Users, TrendingUp, X, Zap } from 'lucide-react';
 import type { Metadata } from 'next';
 
@@ -70,7 +71,7 @@ export default function WhiteningComparisonPage() {
       </section>
 
       {/* --- 選ばれる5つの理由 --- */}
-      <section className="py-2 md:py-2 bg-white">
+      <section className="py-6 md:py-6 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-800">
@@ -391,7 +392,7 @@ export default function WhiteningComparisonPage() {
       </section>
 
       {/* --- 比較表 --- */}
-      <section className="py-2 md:py-2 bg-gradient-to-br from-pink-50 to-white">
+      <section className="py-6 md:py-6 bg-gradient-to-br from-pink-50 to-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">
@@ -517,7 +518,7 @@ export default function WhiteningComparisonPage() {
       </section>
 
       {/* --- 患者様の声 --- */}
-      <section className="py-2 md:py-2 bg-white">
+      <section className="py-6 md:py-6 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">
@@ -566,7 +567,7 @@ export default function WhiteningComparisonPage() {
       </section>
 
       {/* --- FAQ --- */}
-      <section className="py-2 md:py-2 bg-gradient-to-br from-blue-50 to-white">
+      <section className="py-6 md:py-6 bg-gradient-to-br from-blue-50 to-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">
@@ -621,7 +622,7 @@ export default function WhiteningComparisonPage() {
       </section>
 
       {/* --- 関連ページ --- */}
-      <section className="py-2 md:py-2 bg-white">
+      <section className="py-6 md:py-6 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">
@@ -703,7 +704,7 @@ export default function WhiteningComparisonPage() {
       </section>
 
       {/* --- CTA Section --- */}
-      <section className="py-2 md:py-2 bg-gradient-to-r from-pink-600 to-pink-400 text-white">
+      <section className="py-6 md:py-6 bg-gradient-to-r from-pink-600 to-pink-400 text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -742,8 +743,11 @@ export default function WhiteningComparisonPage() {
           </div>
         </div>
       </section>
-
-      </main>
+                {/* 監修者情報 */}
+                <div className="container mx-auto px-4 pt-2 pb-16">
+                    <AuthorBio />
+                </div>
+            </main>
       <Footer />
     </>
   );

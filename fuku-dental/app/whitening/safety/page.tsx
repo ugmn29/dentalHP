@@ -1,6 +1,7 @@
 import React from 'react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
+import { AuthorBio } from '@/components/AuthorBio';
 import { ArrowRight, CheckCircle, Shield, X, AlertCircle, Info, Home, ChevronRight } from 'lucide-react';
 import type { Metadata } from 'next';
 
@@ -38,7 +39,7 @@ export default function WhiteningSafetyPage() {
       </div>
 
       {/* Hero Section */}
-      <section className="py-2 md:py-2 bg-[#FDFBF7]">
+      <section className="py-6 md:py-6 bg-[#FDFBF7]">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#5A4D41] font-serif">
@@ -474,7 +475,7 @@ export default function WhiteningSafetyPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-2 md:py-2 bg-white">
+      <section className="py-6 md:py-6 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
@@ -693,8 +694,11 @@ export default function WhiteningSafetyPage() {
           </div>
         </div>
       </section>
-
-      </main>
+                {/* 監修者情報 */}
+                <div className="container mx-auto px-4 pt-2 pb-16">
+                    <AuthorBio />
+                </div>
+            </main>
       <Footer />
     </>
   );

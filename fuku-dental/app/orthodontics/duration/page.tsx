@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
+import { AuthorBio } from '@/components/AuthorBio';
 import { ChevronRight, Clock, Calendar, CheckCircle, AlertTriangle, TrendingUp } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -710,7 +711,11 @@ export default function OrthodonticsDurationPage() {
             </div>
           </div>
         </section>
-      </main>
+                {/* 監修者情報 */}
+                <div className="container mx-auto px-4 pt-2 pb-16">
+                    <AuthorBio />
+                </div>
+            </main>
       <Footer />
     </>
   );

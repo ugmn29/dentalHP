@@ -145,7 +145,7 @@ export default function FacilitiesPage() {
                     <img
                       src={facility.image}
                       alt={facility.imageAlt}
-                      className="w-full h-auto aspect-[3/2] object-cover"
+                      className="w-full h-auto aspect-[16/9] object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   </div>

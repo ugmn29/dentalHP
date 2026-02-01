@@ -3,6 +3,7 @@
 import React from 'react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
+import { AuthorBio } from '@/components/AuthorBio';
 import { AlertTriangle, CheckCircle, Clock, Shield } from 'lucide-react';
 
 export default function BruxismPage() {
@@ -92,7 +93,7 @@ export default function BruxismPage() {
         </section>
 
         {/* Definition Section */}
-        <section id="definition" className="py-2 md:py-2 px-4 bg-white scroll-mt-24">
+        <section id="definition" className="py-6 md:py-6 px-4 bg-white scroll-mt-24">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
               <span className="text-[#9B89B3] font-bold tracking-[0.2em] text-sm block mb-2">WHAT IS BRUXISM</span>
@@ -196,7 +197,7 @@ export default function BruxismPage() {
         </section>
 
         {/* Symptoms Check Section */}
-        <section id="symptoms" className="py-2 md:py-2 px-4 bg-gray-50 scroll-mt-24">
+        <section id="symptoms" className="py-6 md:py-6 px-4 bg-gray-50 scroll-mt-24">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <span className="text-[#9B89B3] font-bold tracking-[0.2em] text-sm block mb-2">SELF CHECK</span>
@@ -276,7 +277,7 @@ export default function BruxismPage() {
         </section>
 
         {/* Risks Section */}
-        <section id="risks" className="py-2 md:py-2 px-4 bg-white scroll-mt-24">
+        <section id="risks" className="py-6 md:py-6 px-4 bg-white scroll-mt-24">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
               <span className="text-[#E74C3C] font-bold tracking-[0.2em] text-sm block mb-2">RISKS OF NEGLECT</span>
@@ -558,7 +559,7 @@ export default function BruxismPage() {
         </section>
 
         {/* Treatment Section */}
-        <section id="treatments" className="py-2 md:py-2 px-4 bg-gray-50 scroll-mt-24">
+        <section id="treatments" className="py-6 md:py-6 px-4 bg-gray-50 scroll-mt-24">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <span className="text-[#9B89B3] font-bold tracking-[0.2em] text-sm block mb-2">TREATMENT OPTIONS</span>
@@ -1037,7 +1038,7 @@ export default function BruxismPage() {
         </section>
 
         {/* FAQ Section */}
-        <section id="faq" className="py-2 md:py-2 px-4 bg-white scroll-mt-24">
+        <section id="faq" className="py-6 md:py-6 px-4 bg-white scroll-mt-24">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <span className="text-[#9B89B3] font-bold tracking-[0.2em] text-sm block mb-2">FAQ</span>
@@ -1294,7 +1295,11 @@ export default function BruxismPage() {
             </div>
           </div>
         </section>
-      </main>
+                {/* 監修者情報 */}
+                <div className="container mx-auto px-4 pt-2 pb-16">
+                    <AuthorBio />
+                </div>
+            </main>
 
       <Footer />
     </div>

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { ChevronRight, Home, CheckCircle2, ArrowRight, AlertCircle } from 'lucide-react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
+import { AuthorBio } from '@/components/AuthorBio';
 
 export const metadata: Metadata = {
   title: '歯周病の進行段階｜軽度・中等度・重度の症状と治療法｜F歯科・矯正歯科',
@@ -34,7 +35,7 @@ export default function PeriodontalStagesPage() {
         </div>
 
         {/* Hero Section */}
-        <section className="py-2 md:py-2 bg-[#FDFBF7]">
+        <section className="py-6 md:py-6 bg-[#FDFBF7]">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#5A4D41] font-serif">
@@ -414,7 +415,7 @@ export default function PeriodontalStagesPage() {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-2 md:py-2 bg-white">
+        <section className="py-6 md:py-6 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-12">
@@ -521,7 +522,11 @@ export default function PeriodontalStagesPage() {
             </div>
           </div>
         </section>
-      </main>
+                {/* 監修者情報 */}
+                <div className="container mx-auto px-4 pt-2 pb-16">
+                    <AuthorBio />
+                </div>
+            </main>
       <Footer />
     </>
   );

@@ -3,6 +3,7 @@
 import React from 'react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
+import { AuthorBio } from '@/components/AuthorBio';
 import { CheckCircle2, AlertTriangle, Calendar, ChevronRight } from 'lucide-react';
 
 export default function TMJPage() {
@@ -1119,7 +1120,11 @@ export default function TMJPage() {
             </div>
           </div>
         </section>
-      </main>
+                {/* 監修者情報 */}
+                <div className="container mx-auto px-4 pt-2 pb-16">
+                    <AuthorBio />
+                </div>
+            </main>
 
       <Footer />
     </div>

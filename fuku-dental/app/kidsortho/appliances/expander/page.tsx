@@ -1,6 +1,7 @@
 import React from 'react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
+import { AuthorBio } from '@/components/AuthorBio';
 import { Wrench, ArrowRight, CheckCircle, AlertCircle, Clock, TrendingUp, X, Info, Home, ChevronRight } from 'lucide-react';
 import Link from 'next/link';
 
@@ -62,7 +63,7 @@ export default function ExpanderPage() {
                 </section>
 
                 {/* 拡大床とは */}
-                <section className="py-2 md:py-2">
+                <section className="py-6 md:py-6">
                     <div className="container mx-auto px-4">
                         <div className="max-w-5xl mx-auto">
                             <div className="text-center mb-12">
@@ -180,7 +181,7 @@ export default function ExpanderPage() {
                 </section>
 
                 {/* メリット・デメリット */}
-                <section className="py-2 md:py-2 bg-gray-50">
+                <section className="py-6 md:py-6 bg-gray-50">
                     <div className="container mx-auto px-4">
                         <div className="max-w-5xl mx-auto">
                             <div className="text-center mb-12">
@@ -332,7 +333,7 @@ export default function ExpanderPage() {
                 </section>
 
                 {/* 使用方法・装着時間 */}
-                <section className="py-2 md:py-2">
+                <section className="py-6 md:py-6">
                     <div className="container mx-auto px-4">
                         <div className="max-w-5xl mx-auto">
                             <div className="text-center mb-12">
@@ -553,7 +554,7 @@ export default function ExpanderPage() {
                 </section>
 
                 {/* 治療の流れ */}
-                <section className="py-2 md:py-2">
+                <section className="py-6 md:py-6">
                     <div className="container mx-auto px-4">
                         <div className="max-w-5xl mx-auto">
                             <div className="text-center mb-12">
@@ -629,7 +630,7 @@ export default function ExpanderPage() {
                 </section>
 
                 {/* よくある質問 */}
-                <section className="py-2 md:py-2 bg-gray-50">
+                <section className="py-6 md:py-6 bg-gray-50">
                     <div className="container mx-auto px-4">
                         <div className="max-w-4xl mx-auto">
                             <div className="text-center mb-12">
@@ -863,7 +864,7 @@ export default function ExpanderPage() {
                 </section>
 
                 {/* CTA Section */}
-                <section className="py-2 md:py-2 bg-gradient-to-br from-[#E67A2E] to-[#D66A28] text-white">
+                <section className="py-6 md:py-6 bg-gradient-to-br from-[#E67A2E] to-[#D66A28] text-white">
                     <div className="container mx-auto px-4">
                         <div className="max-w-4xl mx-auto text-center">
                             <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -912,6 +913,10 @@ export default function ExpanderPage() {
                         </div>
                     </div>
                 </section>
+                {/* 監修者情報 */}
+                <div className="container mx-auto px-4 pt-2 pb-16">
+                    <AuthorBio />
+                </div>
             </main>
             <Footer />
         </>

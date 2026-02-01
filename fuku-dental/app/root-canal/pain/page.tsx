@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Home, ChevronRight, AlertCircle, Clock, Pill, Shield, CheckCircle, Phone, ArrowRight } from 'lucide-react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
+import { AuthorBio } from '@/components/AuthorBio';
 
 export const metadata: Metadata = {
   title: '根管治療の痛み｜治療中・治療後の痛みと対処法｜F歯科・矯正歯科',
@@ -34,7 +35,7 @@ export default function RootCanalPainPage() {
         </div>
 
         {/* Hero Section */}
-        <section className="py-2 md:py-2 bg-[#FDFBF7]">
+        <section className="py-6 md:py-6 bg-[#FDFBF7]">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <div className="inline-flex items-center justify-center w-20 h-20 bg-[#C5A572]/10 rounded-full mb-6">
@@ -351,7 +352,7 @@ export default function RootCanalPainPage() {
         </section>
 
         {/* よくある質問 */}
-        <section className="py-2 md:py-2 bg-white">
+        <section className="py-6 md:py-6 bg-white">
           <div className="max-w-4xl mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-[#5A4D41] font-serif">よくある質問</h2>
@@ -470,7 +471,7 @@ export default function RootCanalPainPage() {
         </section>
 
         {/* 関連ページ */}
-        <section className="py-2 md:py-2 bg-[#FDFBF7]">
+        <section className="py-6 md:py-6 bg-[#FDFBF7]">
           <div className="max-w-6xl mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-[#5A4D41] font-serif">根管治療について、さらに詳しく</h2>
@@ -561,7 +562,11 @@ export default function RootCanalPainPage() {
             </div>
           </div>
         </section>
-      </main>
+                {/* 監修者情報 */}
+                <div className="container mx-auto px-4 pt-2 pb-16">
+                    <AuthorBio />
+                </div>
+            </main>
       <Footer />
     </>
   );

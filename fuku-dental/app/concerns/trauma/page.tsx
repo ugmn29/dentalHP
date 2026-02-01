@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { AuthorBio } from '@/components/AuthorBio';
 import { Phone, Calendar, AlertTriangle, Clock, CheckCircle } from "lucide-react";
 
 const TraumaPage = () => {
@@ -52,7 +53,7 @@ const TraumaPage = () => {
       </section>
 
       {/* Anxiety Relief Section */}
-      <section className="py-2 md:py-2 px-4">
+      <section className="py-6 md:py-6 px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <span className="text-[#E74C3C] font-bold tracking-[0.2em] text-sm block mb-2">EMERGENCY SITUATIONS</span>
@@ -120,7 +121,7 @@ const TraumaPage = () => {
       </section>
 
       {/* 状態別・包括的対処ガイド */}
-      <section id="emergency-guide" className="py-2 md:py-2 px-4 bg-gray-50">
+      <section id="emergency-guide" className="py-6 md:py-6 px-4 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <span className="text-[#E74C3C] font-bold tracking-[0.2em] text-sm block mb-2">COMPREHENSIVE GUIDE</span>
@@ -863,7 +864,7 @@ const TraumaPage = () => {
       </section>
 
       {/* Prevention Section */}
-      <section className="py-2 md:py-2 px-4">
+      <section className="py-6 md:py-6 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <span className="text-[#E74C3C] font-bold tracking-[0.2em] text-sm block mb-2">PREVENTION</span>
@@ -913,7 +914,7 @@ const TraumaPage = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-2 md:py-2 px-4 bg-gray-50">
+      <section className="py-6 md:py-6 px-4 bg-gray-50">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <span className="text-[#E74C3C] font-bold tracking-[0.2em] text-sm block mb-2">FAQ</span>
@@ -1074,7 +1075,7 @@ const TraumaPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-2 md:py-2 px-4 bg-gradient-to-b from-[#E74C3C] to-[#C0392B]">
+      <section className="py-6 md:py-6 px-4 bg-gradient-to-b from-[#E74C3C] to-[#C0392B]">
         <div className="max-w-4xl mx-auto text-center text-white">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             歯<span className="text-[0.75em]">の</span>外傷<span className="text-[0.75em]">は</span>緊急対応<span className="text-[0.75em]">が</span>重要<span className="text-[0.75em]">です</span>

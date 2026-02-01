@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import { AlertCircle, CheckCircle, ArrowRight, Users, Clock, TrendingUp, Shield, Calendar, Phone, ChevronRight, Home } from 'lucide-react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
+import { AuthorBio } from '@/components/AuthorBio';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
@@ -775,7 +776,11 @@ export default function OverbiteDetailPage() {
           </section>
         </div>
       </div>
-      </main>
+                {/* 監修者情報 */}
+                <div className="container mx-auto px-4 pt-2 pb-16">
+                    <AuthorBio />
+                </div>
+            </main>
       <Footer />
     </>
   );

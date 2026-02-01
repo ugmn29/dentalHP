@@ -358,7 +358,7 @@ export default function Home() {
                       <td className="py-5 px-2 pr-3 text-center text-[#2d4835] font-bold">★</td>
                     </tr>
                     <tr className="border-b border-gray-200">
-                      <td className="py-5 px-3 text-left font-semibold text-[#2d4835] text-base md:text-lg whitespace-nowrap" style={{ fontStyle: 'normal', fontFamily: 'sans-serif' }}>14:00-18:30</td>
+                      <td className="py-5 px-3 text-left font-semibold text-[#2d4835] text-base md:text-lg whitespace-nowrap" style={{ fontStyle: 'normal', fontFamily: 'sans-serif' }}>14:00-19:00</td>
                       <td className="py-5 px-2 text-center text-[#2d4835] text-lg">●</td>
                       <td className="py-5 px-2 text-center text-gray-300 text-lg">−</td>
                       <td className="py-5 px-2 text-center text-[#2d4835] text-lg">●</td>
@@ -371,8 +371,8 @@ export default function Home() {
                 </table>
               </div>
               <div className="mt-6 space-y-1 text-sm md:text-base text-[#2d4835] text-center font-sans">
-                <p style={{ fontStyle: 'normal', fontFamily: 'sans-serif' }}><span className="text-[#2d4835] font-bold text-xl">★</span> 土日：9:00-12:00 / 13:00-16:00</p>
-                <p className="font-bold text-[#2d4835] mt-3" style={{ fontFamily: 'sans-serif' }}>休診日：火曜日・祝日</p>
+                <p style={{ fontStyle: 'normal', fontFamily: 'sans-serif' }}><span className="text-[#2d4835] font-bold text-xl">★</span> 土日：9:00-12:00 / 13:00-17:00</p>
+                <p className="font-bold text-[#2d4835] mt-3" style={{ fontFamily: 'sans-serif' }}>休診日：火曜日</p>
               </div>
             </div>
 
@@ -587,7 +587,7 @@ export default function Home() {
                       <img
                         src={feature.image}
                         alt={feature.imageAlt}
-                        className="w-full h-auto aspect-[3/2] object-cover"
+                        className="w-full h-auto aspect-[16/9] object-cover"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-[#395b45]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                     </div>
@@ -634,7 +634,7 @@ export default function Home() {
                         <img
                           src={feature.image}
                           alt={feature.imageAlt}
-                          className="w-full h-auto aspect-[4/3] object-cover"
+                          className="w-full h-auto aspect-[16/9] object-cover"
                         />
                       </div>
                     </div>
@@ -698,7 +698,7 @@ export default function Home() {
                           <img
                             src={caseStudy.before}
                             alt={`${caseStudy.title} - Before`}
-                            className="w-full aspect-[4/3] object-cover rounded-2xl shadow-lg hover:shadow-xl transition-all"
+                            className="w-full aspect-[16/9] object-cover rounded-2xl shadow-lg hover:shadow-xl transition-all"
                           />
                         </div>
 
@@ -712,7 +712,7 @@ export default function Home() {
                           <img
                             src={caseStudy.after}
                             alt={`${caseStudy.title} - After`}
-                            className="w-full aspect-[4/3] object-cover rounded-2xl shadow-lg hover:shadow-xl transition-all border-2 border-[#395b45]/30"
+                            className="w-full aspect-[16/9] object-cover rounded-2xl shadow-lg hover:shadow-xl transition-all border-2 border-[#395b45]/30"
                           />
                         </div>
                       </div>

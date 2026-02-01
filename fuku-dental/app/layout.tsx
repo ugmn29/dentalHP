@@ -168,6 +168,41 @@ export default function RootLayout({
       ]
     },
     "description": "F歯科・矯正歯科では、科学的根拠に基づいた精密治療を提供。インプラント、矯正歯科、歯周病治療、根管治療など、幅広い診療に対応しています。",
+    "founder": {
+      "@type": "Person",
+      "name": "福永 真大",
+      "jobTitle": "院長・歯科医師",
+      "image": "https://fshika.com/images/doctor-profile.jpg",
+      "description": "矯正歯科専門医。東京歯科大学歯学部卒業。日本矯正歯科学会認定医として、科学的根拠に基づいた精密な矯正治療を提供。",
+      "credential": "歯科医師免許",
+      "memberOf": [
+        {
+          "@type": "Organization",
+          "name": "日本矯正歯科学会"
+        },
+        {
+          "@type": "Organization",
+          "name": "日本小児歯科学会"
+        },
+        {
+          "@type": "Organization",
+          "name": "日本歯周病学会"
+        },
+        {
+          "@type": "Organization",
+          "name": "日本口腔インプラント学会"
+        }
+      ]
+    },
+    "employee": [
+      {
+        "@type": "Person",
+        "name": "福永 真大",
+        "jobTitle": "院長・歯科医師",
+        "credential": "歯科医師免許",
+        "knowsAbout": ["矯正歯科", "小児歯科", "予防歯科", "審美歯科"]
+      }
+    ],
     "sameAs": [
       "https://www.facebook.com/fuku-dental", // 実際のSNSリンクに変更してください
       "https://www.instagram.com/fuku-dental",

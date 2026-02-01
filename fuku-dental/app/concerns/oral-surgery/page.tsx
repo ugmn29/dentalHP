@@ -266,7 +266,7 @@ export default function OralSurgeryPage() {
                                             <img
                                                 src={feature.image}
                                                 alt={feature.highlight}
-                                                className="w-full h-auto aspect-[2/1] object-cover"
+                                                className="w-full h-auto aspect-[16/9] object-cover"
                                             />
                                             <div className="absolute inset-0 bg-gradient-to-t from-[#C5A572]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                                         </div>

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { ChevronRight, Home, FileText, CheckCircle, Clock, DollarSign, Star, Phone } from 'lucide-react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
+import { AuthorBio } from '@/components/AuthorBio';
 
 export const metadata: Metadata = {
   title: '根管治療の症例紹介｜治療事例と患者様の声｜F歯科・矯正歯科',
@@ -643,7 +644,11 @@ export default function RootCanalCaseStudiesPage() {
             </div>
           </div>
         </section>
-      </main>
+                {/* 監修者情報 */}
+                <div className="container mx-auto px-4 pt-2 pb-16">
+                    <AuthorBio />
+                </div>
+            </main>
       <Footer />
     </>
   );

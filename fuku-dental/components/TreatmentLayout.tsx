@@ -4,6 +4,7 @@ import React from 'react';
 import { Header } from './Header';
 import { Footer } from './Footer';
 import { WaveBottom } from './Wave';
+import { AuthorBio } from './AuthorBio';
 import { CheckCircle2, ChevronRight, Calendar, Phone, ArrowRight } from 'lucide-react';
 
 interface Feature {
@@ -429,6 +430,11 @@ export const TreatmentLayout: React.FC<TreatmentLayoutProps> = ({
                         </div>
                     </section>
                 )}
+
+                {/* 監修者情報 */}
+                <div className="container mx-auto px-4 pt-2 pb-16">
+                    <AuthorBio />
+                </div>
 
                 {/* CTA & Price Link */}
                 <section className="py-16 md:py-24 bg-[#FFF9F0]">

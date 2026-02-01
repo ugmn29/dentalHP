@@ -1,6 +1,7 @@
 import React from 'react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
+import { AuthorBio } from '@/components/AuthorBio';
 import { Clock, ArrowRight, CheckCircle, AlertCircle, TrendingUp, Calendar, Info, Home, ChevronRight } from 'lucide-react';
 import Link from 'next/link';
 
@@ -28,7 +29,7 @@ export default function KidsOrthoDurationPage() {
                 </div>
 
                 {/* Hero Section */}
-                <section className="py-2 md:py-2 bg-[#FDFBF7]">
+                <section className="py-6 md:py-6 bg-[#FDFBF7]">
                     <div className="container mx-auto px-4">
                         <div className="max-w-4xl mx-auto text-center">
                             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#5A4D41] font-serif">
@@ -46,7 +47,7 @@ export default function KidsOrthoDurationPage() {
                 </section>
 
                 {/* 結論：標準的な治療期間 */}
-                <section className="py-2 md:py-2 bg-white">
+                <section className="py-6 md:py-6 bg-white">
                     <div className="container mx-auto px-4">
                         <div className="max-w-5xl mx-auto">
                             <div className="text-center mb-12">
@@ -111,7 +112,7 @@ export default function KidsOrthoDurationPage() {
                 </section>
 
                 {/* 1期治療の期間詳細 */}
-                <section className="py-2 md:py-2 bg-[#FDFBF7]">
+                <section className="py-6 md:py-6 bg-[#FDFBF7]">
                     <div className="container mx-auto px-4">
                         <div className="max-w-5xl mx-auto">
                             <div className="text-center mb-12">
@@ -251,7 +252,7 @@ export default function KidsOrthoDurationPage() {
                 </section>
 
                 {/* 2期治療の期間 */}
-                <section className="py-2 md:py-2 bg-white">
+                <section className="py-6 md:py-6 bg-white">
                     <div className="container mx-auto px-4">
                         <div className="max-w-5xl mx-auto">
                             <div className="text-center mb-12">
@@ -338,7 +339,7 @@ export default function KidsOrthoDurationPage() {
                 </section>
 
                 {/* 治療期間に影響する要因 */}
-                <section className="py-2 md:py-2 bg-[#FDFBF7]">
+                <section className="py-6 md:py-6 bg-[#FDFBF7]">
                     <div className="container mx-auto px-4">
                         <div className="max-w-5xl mx-auto">
                             <div className="text-center mb-12">
@@ -523,7 +524,7 @@ export default function KidsOrthoDurationPage() {
                 </section>
 
                 {/* よくある質問 */}
-                <section className="py-2 md:py-2 bg-white">
+                <section className="py-6 md:py-6 bg-white">
                     <div className="container mx-auto px-4">
                         <div className="max-w-4xl mx-auto">
                             <div className="text-center mb-12">
@@ -762,6 +763,10 @@ export default function KidsOrthoDurationPage() {
                         </div>
                     </div>
                 </section>
+                {/* 監修者情報 */}
+                <div className="container mx-auto px-4 pt-2 pb-16">
+                    <AuthorBio />
+                </div>
             </main>
             <Footer />
         </>

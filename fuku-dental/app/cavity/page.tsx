@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
+import { AuthorBio } from '@/components/AuthorBio';
 import { CheckCircle2, ArrowRight, Calendar, Phone, Plus, Minus, ChevronRight } from 'lucide-react';
 
 export default function CavityPage() {
@@ -253,18 +254,16 @@ export default function CavityPage() {
                                 }
                             ].map((feature, index) => (
                                 <div key={feature.id} className="flex flex-col group">
-                                    {/* Title Area - Title Left, Number Alternating */}
-                                    <div className="relative h-24 flex items-center mb-0">
+                                    {/* Title Area */}
+                                    <div className="relative">
                                         {/* Large Gradient Number */}
-                                        <span
-                                            className={`absolute top-[20%] -translate-y-1/2 block text-[8rem] md:text-[11rem] leading-[0.8] font-serif text-transparent bg-clip-text bg-gradient-to-b from-[#C5A572] via-[#E5C592] to-transparent select-none opacity-60 scale-x-[0.85] tracking-tighter ${index % 2 === 0 ? 'left-[-1rem] origin-left' : 'right-0 origin-right'}`}
-                                        >
+                                        <span className="text-8xl font-serif text-[#C5A572]/15 absolute -top-16 -left-8 z-0 select-none font-bold" style={{ letterSpacing: '-0.05em' }}>
                                             {feature.id}
                                         </span>
 
-                                        {/* Title - Always Left */}
-                                        <div className="relative z-10 w-full text-left pl-4">
-                                            <h3 className="text-3xl md:text-4xl font-bold text-[#5A4D41] leading-tight tracking-wide font-serif inline-block relative">
+                                        {/* Title */}
+                                        <div className="flex items-start justify-between gap-4">
+                                            <h3 className="text-3xl md:text-4xl font-bold text-[#5A4D41] leading-tight tracking-wide font-serif inline-block relative flex-1">
                                                 {feature.id === "01" ? (
                                                     <>痛み<span className="text-[0.75em]">に</span>配慮した無痛治療</>
                                                 ) : feature.id === "02" ? (
@@ -289,7 +288,7 @@ export default function CavityPage() {
                                             <img
                                                 src={feature.image}
                                                 alt={feature.highlight}
-                                                className="w-full h-auto aspect-[2/1] object-cover"
+                                                className="w-full h-auto aspect-[16/9] object-cover"
                                             />
                                             <div className="absolute inset-0 bg-gradient-to-t from-[#C5A572]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                                         </div>
@@ -626,6 +625,10 @@ export default function CavityPage() {
                         </div>
                     </div>
                 </section>
+                {/* 監修者情報 */}
+                <div className="container mx-auto px-4 pt-2 pb-16">
+                    <AuthorBio />
+                </div>
             </main>
 
             <Footer />

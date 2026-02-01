@@ -149,7 +149,7 @@ export default function PeriodontalCaseStudiesPage() {
       priceLink={false}
     >
       {/* Treatment Statistics Section - Custom Section inserted between features and FAQs */}
-      <section className="py-2 md:py-2 bg-white">
+      <section className="py-6 md:py-6 bg-white">
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="bg-gradient-to-br from-[#FDFBF7] to-white rounded-3xl shadow-xl p-8 md:p-12 border border-[#C5A572]/20">
             <h2 className="text-3xl font-bold text-[#5A4D41] mb-8 flex items-center justify-center gap-3 font-serif">

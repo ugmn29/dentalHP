@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { Header } from '../../components/Header';
 import { Footer } from '../../components/Footer';
+import { AuthorBio } from '../../components/AuthorBio';
 import { CheckCircle2, ArrowRight, Calendar, ChevronRight } from 'lucide-react';
 import Image from "next/image";
 
@@ -155,12 +156,12 @@ export default function PeriodontalPage() {
                                 { id: "05", title: "Reminder System", highlight: "予防を習慣化するサポート", summary: "「気づいたら1年以上歯医者に行ってない」を防ぐため、<span class='font-bold bg-yellow-100'>検診時期をLINEやメールでお知らせ</span>。患者様ごとに最適な間隔を設定し、<span class='text-[#395b45] font-bold'>予防を習慣化</span>します。", details: [], image: "https://images.unsplash.com/photo-1629909615184-74f495363b67?auto=format&fit=crop&q=80&w=800" }
                             ].map((feature, index) => (
                                 <div key={feature.id} className="flex flex-col group">
-                                    <div className="relative h-24 flex items-center mb-0">
-                                        <span className={`absolute top-[20%] -translate-y-1/2 block text-[8rem] md:text-[11rem] leading-[0.8] font-serif text-transparent bg-clip-text bg-gradient-to-b from-[#C5A572] via-[#E5C592] to-transparent select-none opacity-60 scale-x-[0.85] tracking-tighter ${index % 2 === 0 ? 'left-[-1rem] origin-left' : 'right-0 origin-right'}`}>
+                                    <div className="relative">
+                                        <span className="text-8xl font-serif text-[#C5A572]/15 absolute -top-16 -left-8 z-0 select-none font-bold" style={{ letterSpacing: '-0.05em' }}>
                                             {feature.id}
                                         </span>
-                                        <div className="relative z-10 w-full text-left pl-4">
-                                            <h3 className="text-3xl md:text-4xl font-bold text-[#5A4D41] leading-tight tracking-wide font-serif inline-block relative">
+                                        <div className="flex items-start justify-between gap-4">
+                                            <h3 className="text-3xl md:text-4xl font-bold text-[#5A4D41] leading-tight tracking-wide font-serif inline-block relative flex-1">
                                                 <span dangerouslySetInnerHTML={{ __html: feature.highlight.replace(/(の|を|に|が|は|と|へ|から|より|で|や)/g, '<span class="text-[0.75em]">$1</span>') }} />
                                                 <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#C5A572] via-[#C5A572] to-transparent"></div>
                                             </h3>
@@ -168,7 +169,7 @@ export default function PeriodontalPage() {
                                     </div>
                                     <div className="w-full mb-8 relative">
                                         <div className="relative rounded-[30px] overflow-hidden shadow-lg border-2 border-white">
-                                            <img src={feature.image} alt={feature.highlight} className="w-full h-auto aspect-[2/1] object-cover" />
+                                            <img src={feature.image} alt={feature.highlight} className="w-full h-auto aspect-[16/9] object-cover" />
                                             <div className="absolute inset-0 bg-gradient-to-t from-[#C5A572]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                                         </div>
                                     </div>
@@ -391,6 +392,10 @@ export default function PeriodontalPage() {
                         </div>
                     </div>
                 </section>
+                {/* 監修者情報 */}
+                <div className="container mx-auto px-4 pt-2 pb-16">
+                    <AuthorBio />
+                </div>
             </main>
 
             <Footer />

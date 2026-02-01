@@ -4,6 +4,7 @@ import React from 'react';
 import { Metadata } from 'next';
 import { Header } from '../../../components/Header';
 import { Footer } from '../../../components/Footer';
+import { AuthorBio } from '../../../components/AuthorBio';
 import { CheckCircle2, ArrowRight, Home, ChevronRight, AlertCircle } from 'lucide-react';
 
 export default function MouthBreathingPage() {
@@ -26,7 +27,7 @@ export default function MouthBreathingPage() {
                 </div>
 
                 {/* Hero Section */}
-                <section className="py-2 md:py-2 bg-gradient-to-b from-[#FDFBF7] to-white relative overflow-hidden">
+                <section className="py-6 md:py-6 bg-gradient-to-b from-[#FDFBF7] to-white relative overflow-hidden">
                     <div className="absolute inset-0 opacity-5">
                         <div className="absolute inset-0 bg-[radial-gradient(#C5A572_1px,transparent_1px)] [background-size:20px_20px]"></div>
                     </div>
@@ -436,6 +437,10 @@ export default function MouthBreathingPage() {
                         </div>
                     </div>
                 </section>
+                {/* 監修者情報 */}
+                <div className="container mx-auto px-4 pt-2 pb-16">
+                    <AuthorBio />
+                </div>
             </main>
 
             <Footer />

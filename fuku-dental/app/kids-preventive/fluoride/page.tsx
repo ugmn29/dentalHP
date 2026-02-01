@@ -4,6 +4,7 @@ import React from 'react';
 import { CheckCircle2, ArrowRight, Calendar, Phone, Shield, AlertTriangle } from 'lucide-react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
+import { AuthorBio } from '@/components/AuthorBio';
 
 export default function FluoridePage() {
     return (
@@ -810,7 +811,11 @@ export default function FluoridePage() {
                     </div>
                 </div>
             </section>
-        </main>
+                {/* 監修者情報 */}
+                <div className="container mx-auto px-4 pt-2 pb-16">
+                    <AuthorBio />
+                </div>
+            </main>
 
         <Footer />
         </div>

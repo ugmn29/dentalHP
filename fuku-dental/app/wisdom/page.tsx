@@ -39,7 +39,7 @@ const WisdomToothPage = () => {
       </section>
 
       {/* Anxiety Relief Section */}
-      <section className="py-2 md:py-2 px-4">
+      <section className="py-6 md:py-6 px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <span className="text-[#8B7355] font-bold tracking-[0.2em] text-sm block mb-2">ANXIETY RELIEF</span>
@@ -107,7 +107,7 @@ const WisdomToothPage = () => {
       </section>
 
       {/* When Extraction is Needed */}
-      <section className="py-2 md:py-2 px-4 bg-gray-50">
+      <section className="py-6 md:py-6 px-4 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <span className="text-[#8B7355] font-bold tracking-[0.2em] text-sm block mb-2">EXTRACTION NEEDED</span>
@@ -192,7 +192,7 @@ const WisdomToothPage = () => {
       </section>
 
       {/* When Extraction is NOT Needed */}
-      <section className="py-2 md:py-2 px-4">
+      <section className="py-6 md:py-6 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <span className="text-[#8B7355] font-bold tracking-[0.2em] text-sm block mb-2">NO EXTRACTION NEEDED</span>
@@ -296,7 +296,7 @@ const WisdomToothPage = () => {
       </section>
 
       {/* Complications Section */}
-      <section className="py-2 md:py-2 px-4 bg-gray-50">
+      <section className="py-6 md:py-6 px-4 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <span className="text-[#8B7355] font-bold tracking-[0.2em] text-sm block mb-2">COMPLICATIONS</span>
@@ -423,7 +423,7 @@ const WisdomToothPage = () => {
       </section>
 
       {/* Cost Section */}
-      <section className="py-2 md:py-2 bg-[#FAF5F0]">
+      <section className="py-6 md:py-6 bg-[#FAF5F0]">
         <div className="max-w-4xl mx-auto px-4">
           <div className="text-center mb-12">
             <span className="text-[#8B7355] font-bold tracking-[0.2em] text-sm block mb-2">COST</span>
@@ -512,7 +512,7 @@ const WisdomToothPage = () => {
       </section>
 
       {/* Treatment Flow */}
-      <section className="py-2 md:py-2 bg-white">
+      <section className="py-6 md:py-6 bg-white">
         <div className="max-w-4xl mx-auto px-4">
           <div className="bg-white p-8 md:p-12 rounded-2xl border border-gray-100">
             <div className="text-center mb-10">
@@ -661,7 +661,7 @@ const WisdomToothPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-2 md:py-2 px-4 bg-gradient-to-r from-[#8B7355] to-[#A0826D]">
+      <section className="py-6 md:py-6 px-4 bg-gradient-to-r from-[#8B7355] to-[#A0826D]">
         <div className="max-w-4xl mx-auto text-center text-white">
           <div>
             <span className="text-white/90 font-bold tracking-[0.2em] text-sm block mb-3">CONTACT US</span>

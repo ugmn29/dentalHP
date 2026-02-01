@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
+import { AuthorBio } from '@/components/AuthorBio';
 import { Home, ChevronRight, CheckCircle, AlertCircle, ArrowRight, DollarSign, CreditCard } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -35,7 +36,7 @@ export default function RootCanalCostPage() {
         </div>
 
         {/* Hero Section */}
-        <section className="py-2 md:py-2 bg-[#FDFBF7]">
+        <section className="py-6 md:py-6 bg-[#FDFBF7]">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#5A4D41] font-serif">
@@ -404,7 +405,7 @@ export default function RootCanalCostPage() {
         </section>
 
         {/* よくある質問 */}
-        <section className="py-2 md:py-2 bg-white">
+        <section className="py-6 md:py-6 bg-white">
           <div className="max-w-4xl mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-[#5A4D41] font-serif">費用に関するよくある質問</h2>
@@ -522,7 +523,7 @@ export default function RootCanalCostPage() {
         </section>
 
         {/* 関連ページ */}
-        <section className="py-2 md:py-2 bg-[#FDFBF7]">
+        <section className="py-6 md:py-6 bg-[#FDFBF7]">
           <div className="max-w-6xl mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-[#5A4D41] font-serif">根管治療について、さらに詳しく</h2>
@@ -635,7 +636,11 @@ export default function RootCanalCostPage() {
             </div>
           </div>
         </section>
-      </main>
+                {/* 監修者情報 */}
+                <div className="container mx-auto px-4 pt-2 pb-16">
+                    <AuthorBio />
+                </div>
+            </main>
       <Footer />
     </>
   );

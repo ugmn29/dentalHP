@@ -3,6 +3,7 @@
 import React from 'react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
+import { AuthorBio } from '@/components/AuthorBio';
 import { CheckCircle2, AlertCircle, Calendar, ArrowRight, DollarSign, Home, ChevronRight } from 'lucide-react';
 import Link from 'next/link';
 
@@ -31,7 +32,7 @@ export default function KidsOrthoCostPage() {
                 </div>
 
                 {/* Hero Section */}
-                <section className="py-2 md:py-2 bg-[#FDFBF7]">
+                <section className="py-6 md:py-6 bg-[#FDFBF7]">
                     <div className="container mx-auto px-4">
                         <div className="max-w-4xl mx-auto text-center">
                             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#5A4D41] font-serif">
@@ -999,6 +1000,10 @@ export default function KidsOrthoCostPage() {
                         </div>
                     </div>
                 </section>
+                {/* 監修者情報 */}
+                <div className="container mx-auto px-4 pt-2 pb-16">
+                    <AuthorBio />
+                </div>
             </main>
 
             <Footer />

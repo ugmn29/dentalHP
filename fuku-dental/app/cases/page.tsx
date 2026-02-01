@@ -81,7 +81,7 @@ export default function CasesPage() {
                       <img
                         src={caseStudy.before}
                         alt={`${caseStudy.title} - Before`}
-                        className="w-full aspect-[3/2] object-cover rounded-2xl shadow-lg"
+                        className="w-full aspect-[16/9] object-cover rounded-2xl shadow-lg"
                       />
                     </div>
 
@@ -100,7 +100,7 @@ export default function CasesPage() {
                       <img
                         src={caseStudy.after}
                         alt={`${caseStudy.title} - After`}
-                        className="w-full aspect-[3/2] object-cover rounded-2xl shadow-lg"
+                        className="w-full aspect-[16/9] object-cover rounded-2xl shadow-lg"
                       />
                     </div>
                   </div>
