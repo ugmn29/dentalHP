@@ -400,13 +400,14 @@ export default function KidsOrthoPage() {
                             {/* Map */}
                             <div className="rounded-2xl overflow-hidden shadow-lg aspect-square">
                                 <iframe
-                                    src="https://www.google.com/maps?q=豊洲プライムスクエア,東京都江東区豊洲5-6-36&output=embed"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.0989654321!2d139.7941!3d35.6563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601889f7b7c3a9a9%3A0x1234567890abcdef!2z6LGK5rSyIOODl-ODqeOCpOODoOOCueOCr-OCqOOCog!5e0!3m2!1sja!2sjp!4v1234567890"
                                     width="100%"
                                     height="100%"
                                     style={{ border: 0 }}
                                     allowFullScreen
                                     loading="lazy"
                                     referrerPolicy="no-referrer-when-downgrade"
+                                    title="豊洲プライムスクエア地図"
                                 ></iframe>
                             </div>
                         </div>
@@ -436,7 +437,7 @@ export default function KidsOrthoPage() {
                                 <div className="flex-1 border-t-2 border-dotted border-[#D97845]"></div>
                             </div>
                             <div className="overflow-x-auto">
-                                <table className="w-full border-collapse text-base md:text-lg">
+                                <table className="w-full border-collapse text-base md:text-lg font-sans">
                                     <thead>
                                         <tr className="bg-white">
                                             <th className="py-4 px-3 text-left font-bold border-b border-gray-200 text-[#2d4835] w-[30%]">診療時間</th>
@@ -446,36 +447,36 @@ export default function KidsOrthoPage() {
                                             <th className="py-4 px-2 text-center font-bold border-b border-gray-200 text-[#2d4835] w-[10%]">木</th>
                                             <th className="py-4 px-2 text-center font-bold border-b border-gray-200 text-[#2d4835] w-[10%]">金</th>
                                             <th className="py-4 px-2 text-center font-bold border-b border-gray-200 text-[#2d4835] w-[10%]">土</th>
-                                            <th className="py-4 px-2 text-center font-bold border-b border-gray-200 text-[#2d4835] w-[10%]">日</th>
+                                            <th className="py-4 px-2 pr-3 text-center font-bold border-b border-gray-200 text-[#2d4835] w-[10%]">日</th>
                                         </tr>
                                     </thead>
                                     <tbody className="bg-white">
                                         <tr className="border-b border-gray-200">
-                                            <td className="py-5 px-3 text-left font-semibold text-[#2d4835] text-base md:text-lg whitespace-nowrap">10:00-13:00</td>
+                                            <td className="py-5 px-3 text-left font-semibold text-[#2d4835] text-base md:text-lg whitespace-nowrap" style={{ fontStyle: 'normal', fontFamily: 'sans-serif' }}>10:00-13:00</td>
                                             <td className="py-5 px-2 text-center text-[#2d4835] text-lg">●</td>
                                             <td className="py-5 px-2 text-center text-gray-300 text-lg">−</td>
                                             <td className="py-5 px-2 text-center text-[#2d4835] text-lg">●</td>
                                             <td className="py-5 px-2 text-center text-[#2d4835] text-lg">●</td>
                                             <td className="py-5 px-2 text-center text-[#2d4835] text-lg">●</td>
                                             <td className="py-5 px-2 text-center text-[#2d4835] font-bold">★</td>
-                                            <td className="py-5 px-2 text-center text-[#2d4835] font-bold">★</td>
+                                            <td className="py-5 px-2 pr-3 text-center text-[#2d4835] font-bold">★</td>
                                         </tr>
                                         <tr className="border-b border-gray-200">
-                                            <td className="py-5 px-3 text-left font-semibold text-[#2d4835] text-base md:text-lg whitespace-nowrap">14:00-18:30</td>
+                                            <td className="py-5 px-3 text-left font-semibold text-[#2d4835] text-base md:text-lg whitespace-nowrap" style={{ fontStyle: 'normal', fontFamily: 'sans-serif' }}>14:00-19:00</td>
                                             <td className="py-5 px-2 text-center text-[#2d4835] text-lg">●</td>
                                             <td className="py-5 px-2 text-center text-gray-300 text-lg">−</td>
                                             <td className="py-5 px-2 text-center text-[#2d4835] text-lg">●</td>
                                             <td className="py-5 px-2 text-center text-[#2d4835] text-lg">●</td>
                                             <td className="py-5 px-2 text-center text-[#2d4835] text-lg">●</td>
                                             <td className="py-5 px-2 text-center text-[#2d4835] font-bold">★</td>
-                                            <td className="py-5 px-2 text-center text-[#2d4835] font-bold">★</td>
+                                            <td className="py-5 px-2 pr-3 text-center text-[#2d4835] font-bold">★</td>
                                         </tr>
                                     </tbody>
                                 </table>
                             </div>
-                            <div className="mt-6 space-y-1 text-sm md:text-base text-[#2d4835] text-center">
-                                <p><span className="text-[#2d4835] font-bold text-xl">★</span> 土日：9:00-12:00 / 13:00-16:00</p>
-                                <p className="font-bold text-[#2d4835] mt-3">休診日：火曜日・祝日</p>
+                            <div className="mt-6 space-y-1 text-sm md:text-base text-[#2d4835] text-center font-sans">
+                                <p style={{ fontStyle: 'normal', fontFamily: 'sans-serif' }}><span className="text-[#2d4835] font-bold text-xl">★</span> 土日：9:00-12:00 / 13:00-17:00</p>
+                                <p className="font-bold text-[#2d4835] mt-3" style={{ fontFamily: 'sans-serif' }}>休診日：火曜日</p>
                             </div>
                         </div>
                     </div>

@@ -77,7 +77,7 @@ export default function RootLayout({
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Dentist",
-    "name": "F歯科・矯正歯科 豊洲",
+    "name": "F歯科・矯正歯科 豊洲プライムスクエア院",
     "image": "https://fshika.com/images/clinic-photo.jpg",
     "address": {
       "@type": "PostalAddress",
