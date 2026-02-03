@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import { AuthorBio } from '@/components/AuthorBio';
 
 export default function LasikLPPage() {
   return (
