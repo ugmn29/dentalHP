@@ -14,13 +14,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: '/contact', priority: 0.9, changeFrequency: 'monthly' as const },
     { url: '/cases', priority: 0.8, changeFrequency: 'weekly' as const },
 
-    // インプラント（トピッククラスター）― 一時非表示
-    // { url: '/implant', priority: 0.9, changeFrequency: 'weekly' as const },
-    // { url: '/implant/types', priority: 0.8, changeFrequency: 'monthly' as const },
-    // { url: '/implant/cost', priority: 0.8, changeFrequency: 'monthly' as const },
-    // { url: '/implant/vs-denture', priority: 0.8, changeFrequency: 'monthly' as const },
-    // { url: '/implant/procedure', priority: 0.8, changeFrequency: 'monthly' as const },
-    // { url: '/implant/case-studies', priority: 0.7, changeFrequency: 'weekly' as const },
+    // インプラント（トピッククラスター）
+    { url: '/implant', priority: 0.9, changeFrequency: 'weekly' as const },
+    { url: '/implant/flow', priority: 0.8, changeFrequency: 'monthly' as const },
+    { url: '/implant/comparison', priority: 0.8, changeFrequency: 'monthly' as const },
+    { url: '/implant/cost', priority: 0.8, changeFrequency: 'monthly' as const },
+    { url: '/implant/safety', priority: 0.8, changeFrequency: 'monthly' as const },
+    { url: '/implant/qa', priority: 0.7, changeFrequency: 'monthly' as const },
 
     // 矯正歯科（トピッククラスター）
     { url: '/orthodontics', priority: 0.9, changeFrequency: 'weekly' as const },
