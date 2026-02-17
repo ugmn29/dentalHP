@@ -6,9 +6,9 @@ import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
 
 export const metadata: Metadata = {
-  title: '根管治療の症例紹介｜治療事例と患者様の声｜F歯科・矯正歯科',
+  title: '根管治療の症例紹介｜治療事例と患者様の声｜F歯科・矯正歯科 豊洲プライムスクエア院',
   description: '根管治療の症例を詳しくご紹介。初回根管治療、再根管治療、歯根端切除術の実際の治療例と患者様の声を掲載しています。',
-  keywords: '根管治療,症例,事例,体験談,患者様の声,ビフォーアフター,成功例,F歯科・矯正歯科',
+  keywords: '根管治療,症例,事例,体験談,患者様の声,ビフォーアフター,成功例,F歯科・矯正歯科 豊洲プライムスクエア院',
 };
 
 export default function RootCanalCaseStudiesPage() {

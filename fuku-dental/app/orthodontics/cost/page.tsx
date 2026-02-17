@@ -7,9 +7,9 @@ import { AuthorBio } from '@/components/AuthorBio';
 import { ChevronRight, DollarSign, CreditCard, Calendar, Calculator, CheckCircle, AlertCircle } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: '矯正治療の費用・料金｜分割払い・デンタルローン対応｜F歯科・矯正歯科',
+  title: '矯正治療の費用・料金｜分割払い・デンタルローン対応｜F歯科・矯正歯科 豊洲プライムスクエア院',
   description: '矯正治療の費用を詳しく解説。ワイヤー矯正70万円〜、マウスピース矯正80万円〜、裏側矯正120万円〜。分割払い・デンタルローン・医療費控除にも対応。明確な料金体系で安心です。',
-  keywords: '矯正,費用,料金,値段,安い,分割払い,デンタルローン,医療費控除,支払い方法,F歯科・矯正歯科',
+  keywords: '矯正,費用,料金,値段,安い,分割払い,デンタルローン,医療費控除,支払い方法,F歯科・矯正歯科 豊洲プライムスクエア院',
 };
 
 export default function OrthodonticsCostPage() {

@@ -7,9 +7,9 @@ import { AuthorBio } from '@/components/AuthorBio';
 import { ChevronRight, Heart, MessageCircle, Clock, Coins, CheckCircle, Star, TrendingUp } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: '矯正治療の症例紹介｜治療実績と患者様の声｜F歯科・矯正歯科',
-  description: 'F歯科・矯正歯科の矯正治療症例を詳しくご紹介。出っ歯・受け口・ガタガタ・すきっ歯など、様々な症例の治療結果をビフォーアフターでご覧いただけます。',
-  keywords: '矯正,症例,治療例,ビフォーアフター,患者様の声,実績,成功率,出っ歯,受け口,ガタガタ,F歯科・矯正歯科',
+  title: '矯正治療の症例紹介｜治療実績と患者様の声｜F歯科・矯正歯科 豊洲プライムスクエア院',
+  description: 'F歯科・矯正歯科 豊洲プライムスクエア院の矯正治療症例を詳しくご紹介。出っ歯・受け口・ガタガタ・すきっ歯など、様々な症例の治療結果をビフォーアフターでご覧いただけます。',
+  keywords: '矯正,症例,治療例,ビフォーアフター,患者様の声,実績,成功率,出っ歯,受け口,ガタガタ,F歯科・矯正歯科 豊洲プライムスクエア院',
 };
 
 export default function OrthodonticsCaseStudiesPage() {

@@ -4,9 +4,10 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
 import Link from 'next/link';
+import { KidsOrthoImage } from '@/components/KidsOrthoImage';
 
 export const metadata: Metadata = {
-  title: '開咬（かいこう）オープンバイトの治療 | こども矯正 | F歯科・矯正歯科',
+  title: '開咬（かいこう）オープンバイトの治療 | こども矯正 | F歯科・矯正歯科 豊洲プライムスクエア院',
   description: '開咬（オープンバイト）の特徴、原因、治療法について詳しく解説。前歯が噛み合わない状態で、習癖改善と早期治療が重要です。お子様の歯並びが気になる方はご相談ください。',
   keywords: '開咬,オープンバイト,前歯が閉じない,こども矯正,小児矯正,歯列矯正,不正咬合,歯科,横浜',
 };
@@ -15,13 +16,10 @@ export default function OpenBiteDetailPage() {
   return (
     <>
       <Header />
-      <main className="min-h-screen bg-gradient-to-b from-[#FDFBF7] via-white to-[#FAF8F5]">
+      <main className="min-h-screen bg-gradient-to-b from-white to-[#FDFBF7]" style={{ fontFamily: '"游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", sans-serif' }}>
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-[#FFF9F0] to-[#FFF3E0] py-2 md:py-2 overflow-hidden">
-          <div className="absolute inset-0 opacity-5">
-            <div className="absolute top-10 left-10 w-32 h-32 bg-[#E67A2E] rounded-full blur-3xl"></div>
-            <div className="absolute bottom-10 right-10 w-40 h-40 bg-[#D66A28] rounded-full blur-3xl"></div>
-          </div>
+        <section className="relative bg-[#FDFBF7] py-2 md:py-2">
+
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl mx-auto">
               {/* パンくずリスト */}
@@ -49,13 +47,20 @@ export default function OpenBiteDetailPage() {
                   </h1>
                 </div>
               </div>
+            </div>
 
-              <p className="text-lg text-[#E67A2E] font-bold mb-4">通称：オープンバイト</p>
+              {/* ヒーロー画像 */}
+              <KidsOrthoImage
+                name="openbite-hero"
+                alt="開咬（オープンバイト）の症例写真"
+                category="types"
+              />
+
+              <p className="text-lg text-[#E67A2E] font-bold mt-6 mb-4">通称：オープンバイト</p>
 
               <p className="text-base md:text-lg leading-relaxed text-[#8D8070]">
                 開咬は、奥歯を噛み合わせても前歯が閉じず、上下の前歯の間に隙間ができる状態です。指しゃぶりや舌を前に出す癖が主な原因で、咀嚼や発音に大きな影響を与えます。習癖が固定化する前の4〜8歳での早期治療が最も効果的です。
               </p>
-            </div>
           </div>
         </section>
 
@@ -72,11 +77,20 @@ export default function OpenBiteDetailPage() {
             </div>
 
             {/* 見た目の特徴 */}
-            <div className="bg-white rounded-2xl shadow-xl p-8 md:p-10 mb-6">
-              <h3 className="text-2xl font-bold text-[#5A4D41] mb-6 flex items-center gap-3">
-                <span className="w-8 h-8 bg-[#E67A2E] rounded-full flex items-center justify-center text-white text-sm">1</span>
-                見た目の特徴
-              </h3>
+            <div className="mb-12">
+              <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 pb-2 border-b-2 border-[#C5A572]">
+                1. 見た目の特徴
+              </h4>
+
+              {/* 開咬の見た目を示す画像 */}
+              <div className="mb-6">
+                <KidsOrthoImage
+                  name="openbite-profile"
+                  alt="開咬の前歯が閉じない特徴"
+                  category="types"
+                  className="max-w-2xl mx-auto"
+                />
+              </div>
               <div className="space-y-4 text-[#8D8070] leading-relaxed">
                 <ul className="space-y-3 ml-4">
                   <li className="flex items-start gap-3">
@@ -100,11 +114,10 @@ export default function OpenBiteDetailPage() {
             </div>
 
             {/* 機能面での問題 */}
-            <div className="bg-white rounded-2xl shadow-xl p-8 md:p-10 mb-6">
-              <h3 className="text-2xl font-bold text-[#5A4D41] mb-6 flex items-center gap-3">
-                <span className="w-8 h-8 bg-[#E67A2E] rounded-full flex items-center justify-center text-white text-sm">2</span>
-                機能面での問題
-              </h3>
+            <div className="mb-12">
+              <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 pb-2 border-b-2 border-[#C5A572]">
+                2. 機能面での問題
+              </h4>
               <div className="space-y-4 text-[#8D8070] leading-relaxed">
                 <ul className="space-y-3 ml-4">
                   <li className="flex items-start gap-3">
@@ -132,11 +145,10 @@ export default function OpenBiteDetailPage() {
             </div>
 
             {/* 放置した場合のリスク */}
-            <div className="bg-white rounded-2xl shadow-xl p-8 md:p-10 border-l-4 border-red-500">
-              <h3 className="text-2xl font-bold text-[#5A4D41] mb-6 flex items-center gap-3">
-                <span className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center text-white text-sm">!</span>
+            <div className="mb-12">
+              <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 pb-2 border-b-2 border-[#C5A572]">
                 放置した場合のリスク
-              </h3>
+              </h4>
               <div className="space-y-4 text-[#8D8070] leading-relaxed">
                 <ul className="space-y-3 ml-4">
                   <li className="flex items-start gap-3">
@@ -174,12 +186,20 @@ export default function OpenBiteDetailPage() {
               <h2 className="text-3xl md:text-4xl font-bold text-[#5A4D41]">開咬の原因</h2>
             </div>
 
+            <div className="mb-8">
+              <KidsOrthoImage
+                name="openbite-causes"
+                alt="開咬の原因となる習癖と骨格"
+                category="types"
+                className="max-w-3xl mx-auto"
+              />
+            </div>
+
             {/* 遺伝的要因 */}
-            <div className="bg-white rounded-2xl shadow-xl p-8 md:p-10 mb-6">
-              <h3 className="text-2xl font-bold text-[#5A4D41] mb-6 flex items-center gap-3">
-                <span className="w-8 h-8 bg-[#E67A2E] rounded-full flex items-center justify-center text-white text-sm">1</span>
-                遺伝的要因
-              </h3>
+            <div className="mb-12">
+              <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 pb-2 border-b-2 border-[#C5A572]">
+                1. 遺伝的要因
+              </h4>
               <div className="space-y-4 text-[#8D8070] leading-relaxed">
                 <ul className="space-y-3 ml-4">
                   <li className="flex items-start gap-3">
@@ -204,11 +224,10 @@ export default function OpenBiteDetailPage() {
             </div>
 
             {/* 環境的要因 */}
-            <div className="bg-white rounded-2xl shadow-xl p-8 md:p-10 mb-6">
-              <h3 className="text-2xl font-bold text-[#5A4D41] mb-6 flex items-center gap-3">
-                <span className="w-8 h-8 bg-[#E67A2E] rounded-full flex items-center justify-center text-white text-sm">2</span>
-                環境的要因（後天的な習癖）
-              </h3>
+            <div className="mb-12">
+              <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 pb-2 border-b-2 border-[#C5A572]">
+                2. 環境的要因（後天的な習癖）
+              </h4>
               <div className="space-y-4 text-[#8D8070] leading-relaxed">
                 <ul className="space-y-3 ml-4">
                   <li className="flex items-start gap-3">
@@ -255,11 +274,10 @@ export default function OpenBiteDetailPage() {
             </div>
 
             {/* 1期治療 */}
-            <div className="bg-white rounded-2xl shadow-xl p-8 md:p-10 mb-6">
-              <h3 className="text-2xl font-bold text-[#5A4D41] mb-6 flex items-center gap-3">
-                <span className="w-8 h-8 bg-[#E67A2E] rounded-full flex items-center justify-center text-white text-sm">1</span>
-                1期治療（4〜12歳頃）
-              </h3>
+            <div className="mb-12">
+              <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 pb-2 border-b-2 border-[#C5A572]">
+                1. 1期治療（4〜12歳頃）
+              </h4>
               <div className="space-y-4 text-[#8D8070] leading-relaxed">
                 <p className="text-[#5A4D41] font-semibold mb-4">
                   習癖の改善と垂直的な成長のコントロールが中心です。開咬は習癖改善が最も重要で、早期治療が効果的です。
@@ -272,6 +290,16 @@ export default function OpenBiteDetailPage() {
                   <li className="flex items-start gap-3">
                     <span className="text-[#395b45] mt-1 flex-shrink-0">✓</span>
                     <span><strong className="text-[#5A4D41]">機能的マウスピース装置：</strong>プレオルソなどで口腔周囲筋のバランスを整え、習癖を改善します</span>
+
+                    {/* 治療装置の画像 */}
+                    <div className="my-6">
+                      <KidsOrthoImage
+                        name="openbite-treatment"
+                        alt="開咬の治療装置"
+                        category="types"
+                        className="max-w-xl mx-auto"
+                      />
+                    </div>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-[#395b45] mt-1 flex-shrink-0">✓</span>
@@ -295,11 +323,10 @@ export default function OpenBiteDetailPage() {
             </div>
 
             {/* 2期治療 */}
-            <div className="bg-white rounded-2xl shadow-xl p-8 md:p-10 mb-6">
-              <h3 className="text-2xl font-bold text-[#5A4D41] mb-6 flex items-center gap-3">
-                <span className="w-8 h-8 bg-[#E67A2E] rounded-full flex items-center justify-center text-white text-sm">2</span>
-                2期治療（12歳以降〜）
-              </h3>
+            <div className="mb-12">
+              <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 pb-2 border-b-2 border-[#C5A572]">
+                2. 2期治療（12歳以降〜）
+              </h4>
               <div className="space-y-4 text-[#8D8070] leading-relaxed">
                 <p className="text-[#5A4D41] font-semibold mb-4">
                   永久歯が生え揃った後に、歯の位置を細かく調整する段階です。
@@ -326,11 +353,10 @@ export default function OpenBiteDetailPage() {
             </div>
 
             {/* 使用する装置 */}
-            <div className="bg-white rounded-2xl shadow-xl p-8 md:p-10 mb-6">
-              <h3 className="text-2xl font-bold text-[#5A4D41] mb-6 flex items-center gap-3">
-                <span className="w-8 h-8 bg-[#E67A2E] rounded-full flex items-center justify-center text-white text-sm">3</span>
-                主な使用装置
-              </h3>
+            <div className="mb-12">
+              <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 pb-2 border-b-2 border-[#C5A572]">
+                3. 主な使用装置
+              </h4>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-[#FAF8F5] p-6 rounded-xl border-2 border-[#E67A2E]/20">
                   <h4 className="font-bold text-[#5A4D41] mb-3 text-lg">タンガード</h4>
@@ -356,11 +382,10 @@ export default function OpenBiteDetailPage() {
             </div>
 
             {/* 治療期間と費用 */}
-            <div className="bg-white rounded-2xl shadow-xl p-8 md:p-10">
-              <h3 className="text-2xl font-bold text-[#5A4D41] mb-6 flex items-center gap-3">
-                <span className="w-8 h-8 bg-[#E67A2E] rounded-full flex items-center justify-center text-white text-sm">4</span>
-                治療期間と費用の目安
-              </h3>
+            <div className="mb-12">
+              <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 pb-2 border-b-2 border-[#C5A572]">
+                4. 治療期間と費用の目安
+              </h4>
               <div className="space-y-6">
                 {/* 1期治療 */}
                 <div className="bg-blue-50 p-6 rounded-xl border-l-4 border-blue-500">
@@ -420,7 +445,7 @@ export default function OpenBiteDetailPage() {
               <h2 className="text-3xl md:text-4xl font-bold text-[#5A4D41]">最適な治療開始時期</h2>
             </div>
 
-            <div className="bg-gradient-to-br from-[#E67A2E]/10 via-white to-[#E67A2E]/5 rounded-2xl shadow-xl p-8 md:p-10 border-2 border-[#E67A2E]/30">
+            <div className="bg-white rounded-2xl shadow-sm border border-[#C5A572]/10 p-8 md:p-10">
               <div className="space-y-6">
                 <div className="bg-white p-6 rounded-xl shadow-md">
                   <h3 className="text-xl font-bold text-[#5A4D41] mb-4 flex items-center gap-3">

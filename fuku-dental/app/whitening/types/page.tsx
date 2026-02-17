@@ -6,11 +6,11 @@ import { CheckCircle2, ArrowRight, Home, ChevronRight } from 'lucide-react';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'ホワイトニングの種類｜オフィス・ホーム・デュアル徹底比較｜F歯科・矯正歯科',
+  title: 'ホワイトニングの種類｜オフィス・ホーム・デュアル徹底比較｜F歯科・矯正歯科 豊洲プライムスクエア院',
   description: 'ホワイトニングの3つの種類（オフィス・ホーム・デュアル）を徹底比較。それぞれのメリット・デメリット、費用、効果持続期間、おすすめの方を詳しく解説します。',
   keywords: 'ホワイトニング,種類,オフィスホワイトニング,ホームホワイトニング,デュアルホワイトニング,比較,違い',
   openGraph: {
-    title: 'ホワイトニングの種類｜オフィス・ホーム・デュアル徹底比較｜F歯科・矯正歯科',
+    title: 'ホワイトニングの種類｜オフィス・ホーム・デュアル徹底比較｜F歯科・矯正歯科 豊洲プライムスクエア院',
     description: 'ホワイトニングの3つの種類を徹底比較。あなたに最適な方法が見つかります。',
     type: 'website',
   },

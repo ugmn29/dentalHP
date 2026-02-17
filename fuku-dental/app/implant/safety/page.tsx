@@ -3,9 +3,6 @@ import Link from 'next/link';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
-import { ImplantBreadcrumb } from '@/components/implant/ImplantBreadcrumb';
-import { ImplantHero } from '@/components/implant/ImplantHero';
-import { ImplantCTA } from '@/components/implant/ImplantCTA';
 import {
   Monitor,
   Shield,
@@ -19,12 +16,14 @@ import {
   Target,
   Siren,
   Clock,
+  Home,
+  ChevronRight,
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'インプラントの安全性へのこだわり | インプラント | F歯科・矯正歯科',
+  title: 'インプラントの安全性へのこだわり | インプラント | F歯科・矯正歯科 豊洲プライムスクエア院',
   description:
-    'F歯科・矯正歯科のインプラント治療における安全性への取り組み。CT精密診断、サージカルガイド、世界基準のストローマンインプラント、徹底した感染対策、静脈内鎮静法など、安心・安全な治療体制をご紹介します。',
+    'F歯科・矯正歯科 豊洲プライムスクエア院のインプラント治療における安全性への取り組み。CT精密診断、サージカルガイド、世界基準のストローマンインプラント、徹底した感染対策、静脈内鎮静法など、安心・安全な治療体制をご紹介します。',
   keywords:
     'インプラント,安全性,CT診断,サージカルガイド,ストローマン,感染対策,静脈内鎮静法,歯科,インプラントリスク',
 };
@@ -33,31 +32,67 @@ export default function ImplantSafetyPage() {
   return (
     <>
       <Header />
-      <main className="min-h-screen bg-[#FDFBF7]">
+      <main className="min-h-screen bg-gradient-to-b from-white to-[#FDFBF7]">
         {/* Breadcrumb */}
-        <ImplantBreadcrumb items={[{ label: '安全性へのこだわり' }]} />
+        <div className="bg-white border-b">
+          <div className="container mx-auto px-4 py-3">
+            <div className="flex items-center text-sm text-gray-600">
+              <Link href="/" className="hover:text-[#395b45] flex items-center">
+                <Home className="w-4 h-4 mr-1" />
+                ホーム
+              </Link>
+              <ChevronRight className="w-4 h-4 mx-2" />
+              <Link href="/implant" className="hover:text-[#395b45]">
+                インプラント
+              </Link>
+              <ChevronRight className="w-4 h-4 mx-2" />
+              <span className="text-[#395b45]">安全性へのこだわり</span>
+            </div>
+          </div>
+        </div>
 
-        {/* Hero */}
-        <ImplantHero
-          title="安全性へのこだわり"
-          subtitle="Safety"
-          description="外科手術を伴うインプラント治療だからこそ、安全性を最優先に。精密な診断・信頼性の高い材料・徹底した感染対策で、患者様に安心をお届けします。"
-        />
-
-        {/* Introduction */}
-        <section className="py-16 px-4 bg-[#FDFBF7]">
-          <div className="max-w-4xl mx-auto text-center">
-            <p className="text-[#5A4D41] leading-relaxed text-sm md:text-base max-w-3xl mx-auto">
-              インプラント治療は外科手術を伴うため、「本当に安全なのだろうか」とご不安に思われる方も少なくありません。
-              当院では、最先端の設備と世界基準の材料、そして徹底した管理体制により、
-              患者様が安心して治療を受けていただける環境を整えています。
-              ここでは、当院が安全なインプラント治療のために実践している取り組みをご紹介します。
-            </p>
+        {/* Hero Section */}
+        <section className="py-6 md:py-6 bg-[#FDFBF7]">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#2d4835] font-serif">
+                安全性へのこだわり
+              </h1>
+              <div className="w-24 h-1 bg-[#395b45] mx-auto mb-8"></div>
+              <p className="text-xl md:text-2xl mb-6 text-[#2d4835] font-medium">
+                精密な診断と徹底した管理体制で安心の治療を
+              </p>
+              <p className="text-lg text-[#5A4D41] leading-relaxed">
+                患者様の安全を第一に考えた、当院の取り組みをご紹介します
+              </p>
+            </div>
           </div>
         </section>
 
-        {/* Section 1: CT精密診断 */}
-        <section className="py-16 px-4 bg-white">
+        {/* Main Content */}
+        <section className="pt-8 pb-2 bg-[#FDFBF7]">
+          <div className="container mx-auto px-4 max-w-5xl" style={{ fontFamily: 'YuGothic, "Yu Gothic", sans-serif' }}>
+
+            {/* 結論 */}
+            <div className="text-center mb-20">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#2d4835] mb-8 font-serif">
+                結論
+              </h2>
+              <div className="space-y-4 text-[#5A4D41] leading-loose max-w-3xl mx-auto">
+                <p>
+                  インプラント治療の安全性を高めるため、当院では<span className="bg-yellow-100 font-bold">歯科用3D CTによる精密診断</span>、<span className="bg-yellow-100 font-bold">サージカルガイドを用いた正確な手術</span>、<span className="bg-yellow-100 font-bold">世界トップシェアのストローマンインプラント</span>を採用しています。
+                </p>
+                <p>
+                  また、<span className="text-[#395b45] font-bold">徹底した滅菌・感染対策</span>と<span className="text-[#395b45] font-bold">静脈内鎮静法による痛み・不安の軽減</span>により、患者様が安心して治療を受けられる環境を整えています。
+                </p>
+                <p>
+                  万が一のトラブルにも<span className="font-bold">10年保証と24時間緊急対応体制</span>で対応し、長期的に安心してインプラントをお使いいただけます。
+                </p>
+              </div>
+            </div>
+
+            {/* Section 1: CT精密診断 */}
+            <div className="mb-16">
           <div className="max-w-5xl mx-auto">
             <div className="flex items-center gap-3 mb-2">
               <div className="w-12 h-12 rounded-xl bg-[#395b45]/10 flex items-center justify-center">
@@ -136,10 +171,10 @@ export default function ImplantSafetyPage() {
               </div>
             </div>
           </div>
-        </section>
+        </div>
 
         {/* Section 2: サージカルガイド */}
-        <section className="py-16 px-4 bg-[#FDFBF7]">
+        <div className="mb-16">
           <div className="max-w-5xl mx-auto">
             <div className="flex items-center gap-3 mb-2">
               <div className="w-12 h-12 rounded-xl bg-[#395b45]/10 flex items-center justify-center">
@@ -202,10 +237,10 @@ export default function ImplantSafetyPage() {
               </div>
             </div>
           </div>
-        </section>
+        </div>
 
         {/* Section 3: 世界基準のインプラント体 */}
-        <section className="py-16 px-4 bg-white">
+        <div className="mb-16">
           <div className="max-w-5xl mx-auto">
             <div className="flex items-center gap-3 mb-2">
               <div className="w-12 h-12 rounded-xl bg-[#395b45]/10 flex items-center justify-center">
@@ -286,10 +321,10 @@ export default function ImplantSafetyPage() {
               </div>
             </div>
           </div>
-        </section>
+        </div>
 
         {/* Section 4: 徹底した感染対策 */}
-        <section className="py-16 px-4 bg-[#FDFBF7]">
+        <div className="mb-16">
           <div className="max-w-5xl mx-auto">
             <div className="flex items-center gap-3 mb-2">
               <div className="w-12 h-12 rounded-xl bg-[#395b45]/10 flex items-center justify-center">
@@ -340,10 +375,10 @@ export default function ImplantSafetyPage() {
               ))}
             </div>
           </div>
-        </section>
+        </div>
 
         {/* Section 5: 静脈内鎮静法 */}
-        <section className="py-16 px-4 bg-white">
+        <div className="mb-16">
           <div className="max-w-5xl mx-auto">
             <div className="flex items-center gap-3 mb-2">
               <div className="w-12 h-12 rounded-xl bg-[#395b45]/10 flex items-center justify-center">
@@ -418,10 +453,10 @@ export default function ImplantSafetyPage() {
               </div>
             </div>
           </div>
-        </section>
+        </div>
 
         {/* Section 6: リスクと対策 */}
-        <section className="py-16 px-4 bg-[#FDFBF7]">
+        <div className="mb-16">
           <div className="max-w-5xl mx-auto">
             <div className="flex items-center gap-3 mb-2">
               <div className="w-12 h-12 rounded-xl bg-[#FF9F43]/10 flex items-center justify-center">
@@ -526,10 +561,10 @@ export default function ImplantSafetyPage() {
               ))}
             </div>
           </div>
-        </section>
+        </div>
 
         {/* Section 7: 緊急対応体制 */}
-        <section className="py-16 px-4 bg-white">
+        <div className="mb-16">
           <div className="max-w-5xl mx-auto">
             <div className="flex items-center gap-3 mb-2">
               <div className="w-12 h-12 rounded-xl bg-[#FF9F43]/10 flex items-center justify-center">
@@ -632,18 +667,52 @@ export default function ImplantSafetyPage() {
               </div>
             </div>
           </div>
+        </div>
+
+            {/* 関連ページへのリンク */}
+            <div className="mt-16 bg-white rounded-2xl p-8 border border-gray-100">
+              <h3 className="text-xl font-bold text-[#2d4835] mb-6 text-center">インプラント治療についてもっと詳しく</h3>
+              <div className="grid md:grid-cols-2 gap-4">
+                <Link
+                  href="/implant/about"
+                  className="flex items-center justify-between p-4 bg-[#FDFBF7] hover:bg-gray-50 rounded-xl border border-gray-100 transition-colors group"
+                >
+                  <span className="font-medium text-[#2d4835]">インプラントとは</span>
+                  <ArrowRight className="w-5 h-5 text-[#395b45] group-hover:translate-x-1 transition-transform" />
+                </Link>
+                <Link
+                  href="/implant/comparison"
+                  className="flex items-center justify-between p-4 bg-[#FDFBF7] hover:bg-gray-50 rounded-xl border border-gray-100 transition-colors group"
+                >
+                  <span className="font-medium text-[#2d4835]">入れ歯・ブリッジとの比較</span>
+                  <ArrowRight className="w-5 h-5 text-[#395b45] group-hover:translate-x-1 transition-transform" />
+                </Link>
+                <Link
+                  href="/implant/flow"
+                  className="flex items-center justify-between p-4 bg-[#FDFBF7] hover:bg-gray-50 rounded-xl border border-gray-100 transition-colors group"
+                >
+                  <span className="font-medium text-[#2d4835]">治療の流れ</span>
+                  <ArrowRight className="w-5 h-5 text-[#395b45] group-hover:translate-x-1 transition-transform" />
+                </Link>
+                <Link
+                  href="/implant/cost"
+                  className="flex items-center justify-between p-4 bg-[#FDFBF7] hover:bg-gray-50 rounded-xl border border-gray-100 transition-colors group"
+                >
+                  <span className="font-medium text-[#2d4835]">費用について</span>
+                  <ArrowRight className="w-5 h-5 text-[#395b45] group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
+            </div>
+
+          </div>
         </section>
 
-        {/* CTA */}
-        <ImplantCTA
-          title="安全・安心のインプラント治療"
-          subtitle="当院の安全への取り組みについて、さらに詳しくご説明いたします。まずは無料カウンセリングでお気軽にご相談ください。"
-        />
-
-        {/* AuthorBio */}
-        <div className="max-w-4xl mx-auto px-4">
-          <AuthorBio />
-        </div>
+        {/* Author Bio */}
+        <section className="py-12 bg-[#FDFBF7]">
+          <div className="container mx-auto px-4 max-w-4xl">
+            <AuthorBio />
+          </div>
+        </section>
       </main>
       <Footer />
     </>

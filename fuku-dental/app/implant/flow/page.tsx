@@ -1,10 +1,8 @@
 import { Metadata } from 'next';
+import Link from 'next/link';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
-import { ImplantBreadcrumb } from '@/components/implant/ImplantBreadcrumb';
-import { ImplantHero } from '@/components/implant/ImplantHero';
-import { ImplantCTA } from '@/components/implant/ImplantCTA';
 import { TreatmentSteps } from '@/components/implant/TreatmentSteps';
 import {
   CheckCircle,
@@ -12,13 +10,15 @@ import {
   ShieldCheck,
   Stethoscope,
   ArrowRight,
+  Home,
+  ChevronRight,
 } from 'lucide-react';
 
 /* ─── SEO Metadata ─── */
 export const metadata: Metadata = {
-  title: 'インプラント治療の流れ｜8つのステップで安心治療 | F歯科・矯正歯科',
+  title: 'インプラント治療の流れ｜8つのステップで安心治療 | F歯科・矯正歯科 豊洲プライムスクエア院',
   description:
-    'インプラント治療の流れを8つのステップで詳しく解説。無料カウンセリングから精密検査、手術、人工歯装着、メンテナンスまで、安心・安全な治療プロセスをご紹介します。F歯科・矯正歯科。',
+    'インプラント治療の流れを8つのステップで詳しく解説。無料カウンセリングから精密検査、手術、人工歯装着、メンテナンスまで、安心・安全な治療プロセスをご紹介します。F歯科・矯正歯科 豊洲プライムスクエア院。',
   keywords:
     'インプラント,治療の流れ,手術の流れ,インプラント手術,治療期間,治療プロセス,歯科インプラント,CT検査,骨結合,アバットメント,人工歯,メンテナンス',
 };
@@ -115,66 +115,69 @@ export default function ImplantFlowPage() {
   return (
     <>
       <Header />
-      <main className="min-h-screen bg-[#FDFBF7]">
+      <main className="min-h-screen bg-gradient-to-b from-white to-[#FDFBF7]">
         {/* Breadcrumb */}
-        <ImplantBreadcrumb items={[{ label: '治療の流れ' }]} />
-
-        {/* Hero */}
-        <ImplantHero
-          title="インプラント治療の流れ"
-          subtitle="Treatment Flow"
-          description="カウンセリングから人工歯の装着まで、8つのステップで安心・安全なインプラント治療をご提供します。各ステップを丁寧にご説明し、患者様にご納得いただきながら治療を進めてまいります。"
-        />
-
-        {/* Introduction */}
-        <section className="py-16 px-4 bg-[#FDFBF7]">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-[#2d4835] mb-4">
-                安心して治療を受けていただくために
-              </h2>
-              <p className="text-sm md:text-base text-[#5A4D41]/80 leading-relaxed max-w-2xl mx-auto">
-                インプラント治療は外科手術を伴うため、不安を感じる方も多くいらっしゃいます。
-                当院では、治療の各ステップを患者様に分かりやすくご説明し、十分にご理解・ご納得いただいた上で治療を進めてまいります。
-                治療期間はおおよそ4〜8ヶ月程度で、以下の8つのステップで進行します。
-              </p>
+        <div className="bg-white border-b">
+          <div className="container mx-auto px-4 py-3">
+            <div className="flex items-center text-sm text-gray-600">
+              <Link href="/" className="hover:text-[#395b45] flex items-center">
+                <Home className="w-4 h-4 mr-1" />
+                ホーム
+              </Link>
+              <ChevronRight className="w-4 h-4 mx-2" />
+              <Link href="/implant" className="hover:text-[#395b45]">
+                インプラント
+              </Link>
+              <ChevronRight className="w-4 h-4 mx-2" />
+              <span className="text-[#395b45]">治療の流れ</span>
             </div>
+          </div>
+        </div>
 
-            {/* Key Points */}
-            <div className="grid sm:grid-cols-3 gap-4 mb-12">
-              <div className="bg-white rounded-xl p-5 border border-gray-100 text-center shadow-sm">
-                <div className="w-12 h-12 rounded-full bg-[#395b45]/10 flex items-center justify-center mx-auto mb-3">
-                  <Stethoscope className="w-6 h-6 text-[#395b45]" />
-                </div>
-                <h3 className="font-bold text-[#2d4835] text-sm mb-1">丁寧なカウンセリング</h3>
-                <p className="text-xs text-gray-500">
-                  お悩み・ご要望を丁寧にヒアリングし、最適な治療計画をご提案します
-                </p>
-              </div>
-              <div className="bg-white rounded-xl p-5 border border-gray-100 text-center shadow-sm">
-                <div className="w-12 h-12 rounded-full bg-[#FF9F43]/10 flex items-center justify-center mx-auto mb-3">
-                  <ShieldCheck className="w-6 h-6 text-[#FF9F43]" />
-                </div>
-                <h3 className="font-bold text-[#2d4835] text-sm mb-1">安全性を最優先</h3>
-                <p className="text-xs text-gray-500">
-                  CTによる精密診断とサージカルガイドで安全・正確な手術を実現
-                </p>
-              </div>
-              <div className="bg-white rounded-xl p-5 border border-gray-100 text-center shadow-sm">
-                <div className="w-12 h-12 rounded-full bg-[#C5A572]/10 flex items-center justify-center mx-auto mb-3">
-                  <Clock className="w-6 h-6 text-[#C5A572]" />
-                </div>
-                <h3 className="font-bold text-[#2d4835] text-sm mb-1">充実のアフターケア</h3>
-                <p className="text-xs text-gray-500">
-                  治療完了後も定期メンテナンスで長期的な安定をサポートします
-                </p>
-              </div>
+        {/* Hero Section */}
+        <section className="py-6 md:py-6 bg-[#FDFBF7]">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#2d4835] font-serif">
+                インプラント治療の流れ
+              </h1>
+              <div className="w-24 h-1 bg-[#395b45] mx-auto mb-8"></div>
+              <p className="text-xl md:text-2xl mb-6 text-[#2d4835] font-medium">
+                8つのステップで安心・安全な治療を
+              </p>
+              <p className="text-lg text-[#5A4D41] leading-relaxed">
+                カウンセリングから人工歯の装着まで、丁寧にサポートします
+              </p>
             </div>
           </div>
         </section>
 
+        {/* Main Content */}
+        <section className="pt-8 pb-2 bg-[#FDFBF7]">
+          <div className="container mx-auto px-4 max-w-5xl" style={{ fontFamily: 'YuGothic, "Yu Gothic", sans-serif' }}>
+
+            {/* 結論 */}
+            <div className="text-center mb-20">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#2d4835] mb-8 font-serif">
+                結論
+              </h2>
+              <div className="space-y-4 text-[#5A4D41] leading-loose max-w-3xl mx-auto">
+                <p>
+                  インプラント治療は<span className="bg-yellow-100 font-bold">カウンセリングから完成まで約4〜8ヶ月</span>かかり、8つのステップで進行します。
+                </p>
+                <p>
+                  まず無料カウンセリングとCT検査で治療計画を立て、手術でインプラント体を埋入します。
+                  その後<span className="text-[#395b45] font-bold">3〜6ヶ月の治癒期間</span>を経て、骨と結合したら人工歯を装着して完成です。
+                </p>
+                <p>
+                  当院では各ステップを患者様に分かりやすくご説明し、<span className="font-bold">十分にご理解・ご納得いただいた上で治療を進めます</span>。
+                  不安なことがあれば、いつでもお気軽にご相談ください。
+                </p>
+              </div>
+            </div>
+
         {/* Timeline Infographic */}
-        <section className="py-16 px-4 bg-white">
+        <section className="py-16 px-4 bg-white" style={{ fontFamily: 'YuGothic, "Yu Gothic", sans-serif' }}>
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-10">
               <h2 className="text-2xl md:text-3xl font-bold text-[#2d4835] mb-3">
@@ -234,7 +237,7 @@ export default function ImplantFlowPage() {
         </section>
 
         {/* Detailed Treatment Steps */}
-        <section className="py-16 px-4 bg-[#FDFBF7]">
+        <section className="py-16 px-4 bg-[#FDFBF7]" style={{ fontFamily: 'YuGothic, "Yu Gothic", sans-serif' }}>
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-2xl md:text-3xl font-bold text-[#2d4835] mb-3">
@@ -250,7 +253,7 @@ export default function ImplantFlowPage() {
         </section>
 
         {/* Post-Treatment Maintenance Section */}
-        <section className="py-16 px-4 bg-white">
+        <section className="py-16 px-4 bg-white" style={{ fontFamily: 'YuGothic, "Yu Gothic", sans-serif' }}>
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-10">
               <h2 className="text-2xl md:text-3xl font-bold text-[#2d4835] mb-3">
@@ -370,7 +373,7 @@ export default function ImplantFlowPage() {
         </section>
 
         {/* FAQ about the flow */}
-        <section className="py-16 px-4 bg-[#FDFBF7]">
+        <section className="py-16 px-4 bg-[#FDFBF7]" style={{ fontFamily: 'YuGothic, "Yu Gothic", sans-serif' }}>
           <div className="max-w-3xl mx-auto">
             <h2 className="text-2xl md:text-3xl font-bold text-center text-[#2d4835] mb-3">
               治療の流れに関するよくある質問
@@ -423,16 +426,50 @@ export default function ImplantFlowPage() {
           </div>
         </section>
 
-        {/* CTA */}
-        <ImplantCTA
-          title="治療の流れを詳しくご説明します"
-          subtitle="不安やご質問がございましたら、無料カウンセリングでお気軽にご相談ください。インプラント治療の流れや費用について、院長が直接お答えします。"
-        />
+            {/* 関連ページへのリンク */}
+            <div className="mt-16 bg-white rounded-2xl p-8 border border-gray-100">
+              <h3 className="text-xl font-bold text-[#2d4835] mb-6 text-center">インプラント治療についてもっと詳しく</h3>
+              <div className="grid md:grid-cols-2 gap-4">
+                <Link
+                  href="/implant/about"
+                  className="flex items-center justify-between p-4 bg-[#FDFBF7] hover:bg-gray-50 rounded-xl border border-gray-100 transition-colors group"
+                >
+                  <span className="font-medium text-[#2d4835]">インプラントとは</span>
+                  <ArrowRight className="w-5 h-5 text-[#395b45] group-hover:translate-x-1 transition-transform" />
+                </Link>
+                <Link
+                  href="/implant/comparison"
+                  className="flex items-center justify-between p-4 bg-[#FDFBF7] hover:bg-gray-50 rounded-xl border border-gray-100 transition-colors group"
+                >
+                  <span className="font-medium text-[#2d4835]">入れ歯・ブリッジとの比較</span>
+                  <ArrowRight className="w-5 h-5 text-[#395b45] group-hover:translate-x-1 transition-transform" />
+                </Link>
+                <Link
+                  href="/implant/cost"
+                  className="flex items-center justify-between p-4 bg-[#FDFBF7] hover:bg-gray-50 rounded-xl border border-gray-100 transition-colors group"
+                >
+                  <span className="font-medium text-[#2d4835]">費用について</span>
+                  <ArrowRight className="w-5 h-5 text-[#395b45] group-hover:translate-x-1 transition-transform" />
+                </Link>
+                <Link
+                  href="/implant/safety"
+                  className="flex items-center justify-between p-4 bg-[#FDFBF7] hover:bg-gray-50 rounded-xl border border-gray-100 transition-colors group"
+                >
+                  <span className="font-medium text-[#2d4835]">安全性へのこだわり</span>
+                  <ArrowRight className="w-5 h-5 text-[#395b45] group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
+            </div>
+
+          </div>
+        </section>
 
         {/* Author Bio */}
-        <div className="max-w-4xl mx-auto px-4 bg-[#FDFBF7]">
-          <AuthorBio />
-        </div>
+        <section className="py-12 bg-[#FDFBF7]">
+          <div className="container mx-auto px-4 max-w-4xl">
+            <AuthorBio />
+          </div>
+        </section>
       </main>
       <Footer />
     </>

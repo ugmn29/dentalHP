@@ -85,7 +85,7 @@ export function AuthorBio({ showLastUpdated = true, lastUpdated }: AuthorBioProp
                 <p>大阪大学卒業</p>
                 <p>大手医療法人勤務・研修医指導医を歴任</p>
                 <p>都内歯科医院 副院長</p>
-                <p>F歯科・こども歯科・矯正 開業</p>
+                <p>F歯科・矯正歯科 豊洲プライムスクエア院 開業</p>
               </div>
             </div>
 

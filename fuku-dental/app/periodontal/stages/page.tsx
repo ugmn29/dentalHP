@@ -6,9 +6,9 @@ import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
 
 export const metadata: Metadata = {
-  title: '歯周病の進行段階｜軽度・中等度・重度の症状と治療法｜F歯科・矯正歯科',
+  title: '歯周病の進行段階｜軽度・中等度・重度の症状と治療法｜F歯科・矯正歯科 豊洲プライムスクエア院',
   description: '歯周病の進行段階を詳しく解説。歯肉炎から重度歯周炎までの症状、各段階での治療法、セルフチェック方法をご紹介します。',
-  keywords: '歯周病,進行段階,歯肉炎,歯周炎,重度,症状,チェック,F歯科・矯正歯科',
+  keywords: '歯周病,進行段階,歯肉炎,歯周炎,重度,症状,チェック,F歯科・矯正歯科 豊洲プライムスクエア院',
 };
 
 export default function PeriodontalStagesPage() {

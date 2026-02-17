@@ -7,9 +7,9 @@ import { AuthorBio } from '@/components/AuthorBio';
 import { Home, ChevronRight, CheckCircle, AlertCircle, ArrowRight, DollarSign, CreditCard } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: '根管治療の費用・料金｜保険診療と自費診療の違い｜F歯科・矯正歯科',
+  title: '根管治療の費用・料金｜保険診療と自費診療の違い｜F歯科・矯正歯科 豊洲プライムスクエア院',
   description: '根管治療の費用を詳しく解説。保険診療は3,000円〜12,000円程度、マイクロスコープを使った精密根管治療は自費で50,000円〜150,000円。費用の違いと治療内容を比較できます。',
-  keywords: '根管治療,費用,料金,値段,保険,自費,マイクロスコープ,精密根管治療,F歯科・矯正歯科',
+  keywords: '根管治療,費用,料金,値段,保険,自費,マイクロスコープ,精密根管治療,F歯科・矯正歯科 豊洲プライムスクエア院',
 };
 
 export default function RootCanalCostPage() {

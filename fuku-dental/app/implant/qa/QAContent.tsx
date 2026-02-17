@@ -317,7 +317,7 @@ export default function QAContent() {
   const totalQuestions = faqCategories.reduce((sum, cat) => sum + cat.faqs.length, 0);
 
   return (
-    <div className="bg-[#FDFBF7]">
+    <div className="bg-[#FDFBF7]" style={{ fontFamily: 'YuGothic, "Yu Gothic", sans-serif' }}>
       {/* Introduction */}
       <section className="py-10 px-4">
         <div className="max-w-3xl mx-auto text-center">

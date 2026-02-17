@@ -2,8 +2,8 @@ import Link from 'next/link'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'ページが見つかりません | F歯科・矯正歯科',
-  description: 'お探しのページは見つかりませんでした。F歯科・矯正歯科のトップページからお探しください。',
+  title: 'ページが見つかりません | F歯科・矯正歯科 豊洲プライムスクエア院',
+  description: 'お探しのページは見つかりませんでした。F歯科・矯正歯科 豊洲プライムスクエア院のトップページからお探しください。',
 }
 
 export default function NotFound() {

@@ -91,7 +91,7 @@ export const TreatmentLayout: React.FC<TreatmentLayoutProps> = ({
                                 {/* Left Side - Main Title */}
                                 <div className="text-white flex-shrink-0">
                                     <h1 className="text-[#F2E5C5] text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-0 text-left" style={{ letterSpacing: '0.18em', lineHeight: '1.5', fontWeight: '700', fontFamily: 'Georgia, "Yu Mincho", "Hiragino Mincho ProN", serif' }}>
-                                        F歯科・矯正歯科の<br />
+                                        F歯科・矯正歯科 豊洲プライムスクエア院の<br />
                                         プレミアム<br />
                                         インプラント
                                     </h1>

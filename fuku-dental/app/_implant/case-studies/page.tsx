@@ -7,9 +7,9 @@ import { AuthorBio } from '@/components/AuthorBio';
 import { ChevronRight, Heart, MessageCircle, Clock, Coins, CheckCircle, Star } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'インプラント治療の症例紹介｜治療実績と患者様の声｜F歯科・矯正歯科',
-  description: 'F歯科・矯正歯科のインプラント治療症例を詳しくご紹介。前歯・奥歯・複数本の症例から、治療期間・費用・患者様の満足度まで実際の治療結果をご覧いただけます。',
-  keywords: 'インプラント,症例,治療例,ビフォーアフター,患者様の声,実績,成功率,F歯科・矯正歯科',
+  title: 'インプラント治療の症例紹介｜治療実績と患者様の声｜F歯科・矯正歯科 豊洲プライムスクエア院',
+  description: 'F歯科・矯正歯科 豊洲プライムスクエア院のインプラント治療症例を詳しくご紹介。前歯・奥歯・複数本の症例から、治療期間・費用・患者様の満足度まで実際の治療結果をご覧いただけます。',
+  keywords: 'インプラント,症例,治療例,ビフォーアフター,患者様の声,実績,成功率,F歯科・矯正歯科 豊洲プライムスクエア院',
 };
 
 export default function ImplantCaseStudiesPage() {

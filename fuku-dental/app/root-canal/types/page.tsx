@@ -7,9 +7,9 @@ import { AuthorBio } from '@/components/AuthorBio';
 import { ChevronRight, CheckCircle, AlertCircle, Home, ArrowRight } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: '根管治療の種類｜初回治療・再根管治療・歯根端切除術｜F歯科・矯正歯科',
+  title: '根管治療の種類｜初回治療・再根管治療・歯根端切除術｜F歯科・矯正歯科 豊洲プライムスクエア院',
   description: '根管治療の種類を詳しく解説。初回根管治療、再根管治療（リトリートメント）、歯根端切除術など、症状に応じた最適な治療法をご紹介します。',
-  keywords: '根管治療,種類,再根管治療,リトリートメント,歯根端切除術,抜髄,感染根管治療,F歯科・矯正歯科',
+  keywords: '根管治療,種類,再根管治療,リトリートメント,歯根端切除術,抜髄,感染根管治療,F歯科・矯正歯科 豊洲プライムスクエア院',
 };
 
 export default function RootCanalTypesPage() {

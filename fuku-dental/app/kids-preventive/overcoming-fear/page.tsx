@@ -40,7 +40,7 @@ export default function OvercomingFearPage() {
                         </h1>
                         <p className="text-lg md:text-xl leading-relaxed opacity-95">
                             泣いて嫌がるお子様も、正しいアプローチで必ず克服できます。<br />
-                            F歯科・矯正歯科のステップアップ方式で、歯医者を「怖くない場所」に
+                            F歯科・矯正歯科 豊洲プライムスクエア院のステップアップ方式で、歯医者を「怖くない場所」に
                         </p>
                     </div>
                 </div>
@@ -170,11 +170,11 @@ export default function OvercomingFearPage() {
                             </div>
                         </div>
 
-                        {/* F歯科・矯正歯科のステップアップ方式 */}
+                        {/* F歯科・矯正歯科 豊洲プライムスクエア院のステップアップ方式 */}
                         <div>
                             <div className="text-center mb-8">
                                 <h3 className="text-2xl md:text-3xl font-bold text-[#5A4D41] font-serif inline-block">
-                                    F歯科・矯正歯科のステップアップ方式
+                                    F歯科・矯正歯科 豊洲プライムスクエア院のステップアップ方式
                                 </h3>
                                 <div className="w-16 h-0.5 bg-[#395b45] mx-auto mt-4"></div>
                             </div>

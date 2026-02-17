@@ -2,62 +2,63 @@ import React from 'react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
+import { KidsOrthoImage } from '@/components/KidsOrthoImage';
 import { Wrench, ArrowRight, CheckCircle, AlertCircle, Clock, TrendingUp, X, Info, Home, ChevronRight } from 'lucide-react';
 import Link from 'next/link';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: '拡大床とは？｜効果・費用・装着時間を詳しく解説｜F歯科・矯正歯科 豊洲プライムスクエア院',
+    description: '拡大床による小児矯正治療を徹底解説。顎を広げて永久歯のスペースを確保する拡大床の効果、費用、装着時間、メリット・デメリットをわかりやすく説明します。',
+    keywords: '拡大床,こども矯正,小児矯正,費用,効果,装着時間,顎を広げる,スペース確保',
+};
 
 export default function ExpanderPage() {
     return (
         <>
             <Header />
-            <main className="bg-white">
-                {/* Hero Section */}
-                <section className="relative bg-gradient-to-br from-[#FFF9F0] to-[#FFF3E0] py-2 md:py-2 overflow-hidden">
-                    <div className="absolute inset-0 opacity-5">
-                        <div className="absolute top-10 left-10 w-32 h-32 bg-[#E67A2E] rounded-full blur-3xl"></div>
-                        <div className="absolute bottom-10 right-10 w-40 h-40 bg-[#D66A28] rounded-full blur-3xl"></div>
-                    </div>
-                    <div className="container mx-auto px-4 relative z-10">
-                        <div className="max-w-4xl mx-auto text-center">
-                            <div className="inline-block bg-white/80 backdrop-blur-sm px-6 py-2 rounded-full text-[#E67A2E] font-bold text-sm mb-6 shadow-sm border border-[#E67A2E]/20">
-                                <Wrench className="inline-block w-4 h-4 mr-2" />
-                                取り外し式装置
-                            </div>
-                            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#5A4D41] mb-6 leading-tight">
-                                拡大床（かくだいしょう）
-                            </h1>
-                            <p className="text-lg md:text-xl text-[#8D8070] mb-8 leading-relaxed">
-                                顎を横に広げて永久歯のスペースを確保する、<br className="hidden md:block" />
-                                こども矯正で最も一般的に使用される装置です
-                            </p>
-                            <div className="flex flex-wrap justify-center gap-3">
-                                <span className="bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-bold text-[#5A4D41] border border-gray-200">
-                                    対象年齢: 3〜9歳
-                                </span>
-                                <span className="bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-bold text-[#5A4D41] border border-gray-200">
-                                    期間: 6〜12ヶ月
-                                </span>
-                                <span className="bg-green-100 px-4 py-2 rounded-full text-sm font-bold text-green-700">
-                                    取り外し可能
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </section>
 
-                {/* Breadcrumbs */}
-                <section className="bg-white py-3 border-b border-gray-200">
+            {/* Breadcrumbs */}
+            <section className="bg-white py-3 border-b border-gray-200">
+                <div className="container mx-auto px-4">
+                    <div className="flex items-center gap-2 text-sm text-[#8D8070]">
+                        <Link href="/" className="hover:text-[#C5A572] transition-colors flex items-center">
+                            <Home className="w-4 h-4 mr-1" />
+                            ホーム
+                        </Link>
+                        <ChevronRight size={14} />
+                        <Link href="/kidsortho" className="hover:text-[#C5A572] transition-colors">こども矯正</Link>
+                        <ChevronRight size={14} />
+                        <Link href="/kidsortho/appliances" className="hover:text-[#C5A572] transition-colors">装置一覧</Link>
+                        <ChevronRight size={14} />
+                        <span className="text-[#C5A572] font-bold">拡大床</span>
+                    </div>
+                </div>
+            </section>
+
+            <main className="bg-[#FDFBF7]" style={{ fontFamily: '"游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", sans-serif' }}>
+                {/* Hero Section */}
+                <section className="bg-[#FDFBF7] py-6 md:py-6">
                     <div className="container mx-auto px-4">
-                        <div className="flex items-center gap-2 text-sm text-[#8D8070]">
-                            <Link href="/" className="hover:text-[#E67A2E] transition-colors flex items-center">
-                                <Home className="w-4 h-4 mr-1" />
-                                ホーム
-                            </Link>
-                            <ChevronRight size={14} />
-                            <Link href="/kidsortho" className="hover:text-[#E67A2E] transition-colors">こども矯正</Link>
-                            <ChevronRight size={14} />
-                            <Link href="/kidsortho/appliances" className="hover:text-[#E67A2E] transition-colors">装置一覧</Link>
-                            <ChevronRight size={14} />
-                            <span className="text-[#E67A2E] font-bold">拡大床</span>
+                        <div className="max-w-4xl mx-auto">
+                            <div className="mb-6">
+                                <p className="text-[#C5A572] font-bold text-sm mb-2">拡大床（かくだいしょう）</p>
+                                <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[#5A4D41] mb-3">
+                                    拡大床とは？｜効果・費用・装着時間を詳しく解説
+                                </h1>
+                                <div className="w-16 h-0.5 bg-[#C5A572] mb-6"></div>
+                            </div>
+
+                            {/* ヒーロー画像 */}
+                            <KidsOrthoImage
+                                name="expander-hero"
+                                alt="拡大床の外観"
+                                category="appliances"
+                            />
+
+                            <p className="text-base md:text-lg leading-loose text-[#8D8070] font-sans mt-6 mb-8">
+                                こども矯正で最も一般的に使用される取り外し式装置です
+                            </p>
                         </div>
                     </div>
                 </section>
@@ -75,105 +76,89 @@ export default function ExpanderPage() {
                                 </p>
                             </div>
 
-                            <div className="bg-gradient-to-br from-[#FFF9F0] to-[#FFE9CC] rounded-2xl p-8 md:p-10 shadow-xl border-2 border-[#E67A2E]/20 mb-12">
-                                <div className="flex items-start gap-4 mb-6">
-                                    <div className="w-16 h-16 bg-[#E67A2E] rounded-2xl flex items-center justify-center flex-shrink-0 shadow-md">
-                                        <Wrench className="w-8 h-8 text-white" />
-                                    </div>
-                                    <div>
-                                        <h3 className="text-2xl font-bold text-[#5A4D41] mb-2">
-                                            拡大床の仕組み
-                                        </h3>
-                                        <p className="text-[#8D8070] leading-relaxed">
-                                            拡大床は、プラスチック製のプレートと金属製のワイヤーで構成された取り外し式の装置です。中央に組み込まれた「拡大ネジ」を定期的に回すことで、少しずつ顎の骨を横に広げていきます。
-                                        </p>
-                                    </div>
-                                </div>
+                            <div className="mb-12">
+                                <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 pb-2 border-b-2 border-[#C5A572]">
+                                    拡大床の仕組み
+                                </h4>
+                                <p className="text-[#5A4D41] leading-relaxed mb-8">
+                                    拡大床は、プラスチック製のプレートと金属製のワイヤーで構成された取り外し式の装置です。中央に組み込まれた「拡大ネジ」を定期的に回すことで、少しずつ顎の骨を横に広げていきます。
+                                </p>
 
-                                <div className="grid md:grid-cols-3 gap-4">
-                                    <div className="bg-white/60 backdrop-blur-sm rounded-xl p-4">
-                                        <h4 className="font-bold text-[#E67A2E] mb-2 flex items-center gap-2">
-                                            <span className="w-6 h-6 bg-[#E67A2E] rounded-full flex items-center justify-center text-white text-sm">1</span>
-                                            プレート部分
-                                        </h4>
-                                        <p className="text-sm text-[#5A4D41]">
+                                <div className="space-y-6">
+                                    <div>
+                                        <p className="font-bold text-[#5A4D41] mb-2">
+                                            1. プレート部分
+                                        </p>
+                                        <p className="text-[#8D8070]">
                                             上顎または下顎の歯列に沿ったプラスチック製の床
                                         </p>
                                     </div>
-                                    <div className="bg-white/60 backdrop-blur-sm rounded-xl p-4">
-                                        <h4 className="font-bold text-[#E67A2E] mb-2 flex items-center gap-2">
-                                            <span className="w-6 h-6 bg-[#E67A2E] rounded-full flex items-center justify-center text-white text-sm">2</span>
-                                            拡大ネジ
-                                        </h4>
-                                        <p className="text-sm text-[#5A4D41]">
+                                    <div>
+                                        <p className="font-bold text-[#5A4D41] mb-2">
+                                            2. 拡大ネジ
+                                        </p>
+                                        <p className="text-[#8D8070]">
                                             中央の金属ネジを回すことで装置が少しずつ広がる
                                         </p>
                                     </div>
-                                    <div className="bg-white/60 backdrop-blur-sm rounded-xl p-4">
-                                        <h4 className="font-bold text-[#E67A2E] mb-2 flex items-center gap-2">
-                                            <span className="w-6 h-6 bg-[#E67A2E] rounded-full flex items-center justify-center text-white text-sm">3</span>
-                                            クラスプ
-                                        </h4>
-                                        <p className="text-sm text-[#5A4D41]">
+                                    <div>
+                                        <p className="font-bold text-[#5A4D41] mb-2">
+                                            3. クラスプ
+                                        </p>
+                                        <p className="text-[#8D8070]">
                                             装置を固定するための金属製のバネ（ワイヤー）
                                         </p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div className="grid md:grid-cols-2 gap-8">
-                                <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
-                                    <h3 className="text-xl font-bold text-[#5A4D41] mb-4 flex items-center gap-2">
-                                        <CheckCircle className="w-6 h-6 text-[#395b45]" />
+                            <div className="space-y-8">
+                                <div>
+                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 pb-2 border-b-2 border-[#C5A572]">
                                         上顎拡大床
-                                    </h3>
+                                    </h4>
                                     <p className="text-[#8D8070] mb-4 leading-relaxed">
                                         上顎の歯列を横に広げる装置。上顎は左右の骨が中央で結合しているため、成長期であれば骨自体を広げることが可能です。
                                     </p>
-                                    <div className="bg-[#E8F2ED] rounded-xl p-4">
-                                        <p className="text-sm text-[#5A4D41] font-bold mb-2">適応症例</p>
-                                        <ul className="text-sm text-[#5A4D41] space-y-1">
-                                            <li className="flex items-start gap-2">
-                                                <span className="text-[#395b45]">•</span>
-                                                <span>上顎が狭く、永久歯のスペース不足</span>
-                                            </li>
-                                            <li className="flex items-start gap-2">
-                                                <span className="text-[#395b45]">•</span>
-                                                <span>交叉咬合（奥歯の咬み合わせが逆）</span>
-                                            </li>
-                                            <li className="flex items-start gap-2">
-                                                <span className="text-[#395b45]">•</span>
-                                                <span>叢生（歯が重なっている）</span>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                    <p className="text-[#5A4D41] font-bold mb-2">適応症例</p>
+                                    <ul className="text-[#8D8070] space-y-2">
+                                        <li className="flex items-start gap-2">
+                                            <span className="text-[#C5A572]">•</span>
+                                            <span>上顎が狭く、永久歯のスペース不足</span>
+                                        </li>
+                                        <li className="flex items-start gap-2">
+                                            <span className="text-[#C5A572]">•</span>
+                                            <span>交叉咬合（奥歯の咬み合わせが逆）</span>
+                                        </li>
+                                        <li className="flex items-start gap-2">
+                                            <span className="text-[#C5A572]">•</span>
+                                            <span>叢生（歯が重なっている）</span>
+                                        </li>
+                                    </ul>
                                 </div>
 
-                                <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
-                                    <h3 className="text-xl font-bold text-[#5A4D41] mb-4 flex items-center gap-2">
-                                        <CheckCircle className="w-6 h-6 text-[#395b45]" />
+                                <div>
+                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 pb-2 border-b-2 border-[#C5A572]">
                                         下顎拡大床
-                                    </h3>
+                                    </h4>
                                     <p className="text-[#8D8070] mb-4 leading-relaxed">
                                         下顎の歯列を横に広げる装置。下顎は一体の骨のため、主に歯列の傾斜を改善します。
                                     </p>
-                                    <div className="bg-[#E8F2ED] rounded-xl p-4">
-                                        <p className="text-sm text-[#5A4D41] font-bold mb-2">適応症例</p>
-                                        <ul className="text-sm text-[#5A4D41] space-y-1">
-                                            <li className="flex items-start gap-2">
-                                                <span className="text-[#395b45]">•</span>
-                                                <span>下顎の叢生（歯が重なっている）</span>
-                                            </li>
-                                            <li className="flex items-start gap-2">
-                                                <span className="text-[#395b45]">•</span>
-                                                <span>前歯が内側に倒れている</span>
-                                            </li>
-                                            <li className="flex items-start gap-2">
-                                                <span className="text-[#395b45]">•</span>
-                                                <span>上顎拡大との併用治療</span>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                    <p className="text-[#5A4D41] font-bold mb-2">適応症例</p>
+                                    <ul className="text-[#8D8070] space-y-2">
+                                        <li className="flex items-start gap-2">
+                                            <span className="text-[#C5A572]">•</span>
+                                            <span>下顎の叢生（歯が重なっている）</span>
+                                        </li>
+                                        <li className="flex items-start gap-2">
+                                            <span className="text-[#C5A572]">•</span>
+                                            <span>前歯が内側に倒れている</span>
+                                        </li>
+                                        <li className="flex items-start gap-2">
+                                            <span className="text-[#C5A572]">•</span>
+                                            <span>上顎拡大との併用治療</span>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -181,7 +166,7 @@ export default function ExpanderPage() {
                 </section>
 
                 {/* メリット・デメリット */}
-                <section className="py-6 md:py-6 bg-gray-50">
+                <section className="py-6 md:py-6 bg-[#FDFBF7]">
                     <div className="container mx-auto px-4">
                         <div className="max-w-5xl mx-auto">
                             <div className="text-center mb-12">
@@ -193,137 +178,67 @@ export default function ExpanderPage() {
                                 </p>
                             </div>
 
-                            <div className="grid md:grid-cols-2 gap-8">
+                            <div className="space-y-12">
                                 {/* メリット */}
-                                <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8 shadow-xl border-2 border-green-200">
-                                    <div className="flex items-center gap-3 mb-6">
-                                        <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-xl">
-                                            ○
-                                        </div>
-                                        <h3 className="text-2xl font-bold text-green-700">メリット</h3>
-                                    </div>
+                                <div>
+                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 pb-2 border-b-2 border-[#C5A572]">メリット</h4>
 
-                                    <ul className="space-y-4">
+                                    <ul className="space-y-3 text-[#8D8070] leading-loose font-sans">
                                         <li className="flex items-start gap-3">
-                                            <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
-                                            <div>
-                                                <h4 className="font-bold text-[#5A4D41] mb-1">取り外し可能</h4>
-                                                <p className="text-sm text-[#8D8070]">
-                                                    食事・歯磨き時に外せるため、衛生的で日常生活への影響が少ない
-                                                </p>
-                                            </div>
+                                            <CheckCircle className="w-5 h-5 text-[#C5A572] flex-shrink-0 mt-1" />
+                                            <span><strong className="text-[#5A4D41]">取り外し可能：</strong>食事・歯磨き時に外せるため、衛生的で日常生活への影響が少ない</span>
                                         </li>
                                         <li className="flex items-start gap-3">
-                                            <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
-                                            <div>
-                                                <h4 className="font-bold text-[#5A4D41] mb-1">むし歯リスクが低い</h4>
-                                                <p className="text-sm text-[#8D8070]">
-                                                    装置を外して歯磨きができるため、固定式に比べてむし歯になりにくい
-                                                </p>
-                                            </div>
+                                            <CheckCircle className="w-5 h-5 text-[#C5A572] flex-shrink-0 mt-1" />
+                                            <span><strong className="text-[#5A4D41]">むし歯リスクが低い：</strong>装置を外して歯磨きができるため、固定式に比べてむし歯になりにくい</span>
                                         </li>
                                         <li className="flex items-start gap-3">
-                                            <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
-                                            <div>
-                                                <h4 className="font-bold text-[#5A4D41] mb-1">痛みが少ない</h4>
-                                                <p className="text-sm text-[#8D8070]">
-                                                    少しずつ拡大するため、痛みや違和感が比較的少ない
-                                                </p>
-                                            </div>
+                                            <CheckCircle className="w-5 h-5 text-[#C5A572] flex-shrink-0 mt-1" />
+                                            <span><strong className="text-[#5A4D41]">痛みが少ない：</strong>少しずつ拡大するため、痛みや違和感が比較的少ない</span>
                                         </li>
                                         <li className="flex items-start gap-3">
-                                            <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
-                                            <div>
-                                                <h4 className="font-bold text-[#5A4D41] mb-1">費用が比較的安い</h4>
-                                                <p className="text-sm text-[#8D8070]">
-                                                    固定式装置に比べて製作費が安く、治療費を抑えられる
-                                                </p>
-                                            </div>
+                                            <CheckCircle className="w-5 h-5 text-[#C5A572] flex-shrink-0 mt-1" />
+                                            <span><strong className="text-[#5A4D41]">費用が比較的安い：</strong>固定式装置に比べて製作費が安く、治療費を抑えられる</span>
                                         </li>
                                         <li className="flex items-start gap-3">
-                                            <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
-                                            <div>
-                                                <h4 className="font-bold text-[#5A4D41] mb-1">緊急時に外せる</h4>
-                                                <p className="text-sm text-[#8D8070]">
-                                                    スポーツや楽器演奏など、必要に応じて取り外せる
-                                                </p>
-                                            </div>
+                                            <CheckCircle className="w-5 h-5 text-[#C5A572] flex-shrink-0 mt-1" />
+                                            <span><strong className="text-[#5A4D41]">緊急時に外せる：</strong>スポーツや楽器演奏など、必要に応じて取り外せる</span>
                                         </li>
                                         <li className="flex items-start gap-3">
-                                            <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
-                                            <div>
-                                                <h4 className="font-bold text-[#5A4D41] mb-1">抜歯を回避できる</h4>
-                                                <p className="text-sm text-[#8D8070]">
-                                                    早期に顎を広げることで、将来的な抜歯を避けられる可能性が高まる
-                                                </p>
-                                            </div>
+                                            <CheckCircle className="w-5 h-5 text-[#C5A572] flex-shrink-0 mt-1" />
+                                            <span><strong className="text-[#5A4D41]">抜歯を回避できる：</strong>早期に顎を広げることで、将来的な抜歯を避けられる可能性が高まる</span>
                                         </li>
                                     </ul>
                                 </div>
 
                                 {/* デメリット */}
-                                <div className="bg-gradient-to-br from-red-50 to-red-100 rounded-2xl p-8 shadow-xl border-2 border-red-200">
-                                    <div className="flex items-center gap-3 mb-6">
-                                        <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center text-white font-bold text-xl">
-                                            △
-                                        </div>
-                                        <h3 className="text-2xl font-bold text-red-700">デメリット</h3>
-                                    </div>
+                                <div>
+                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 pb-2 border-b-2 border-[#C5A572]">デメリット</h4>
 
-                                    <ul className="space-y-4">
+                                    <ul className="space-y-3 text-[#8D8070] leading-loose font-sans">
                                         <li className="flex items-start gap-3">
-                                            <X className="w-6 h-6 text-red-600 flex-shrink-0 mt-1" />
-                                            <div>
-                                                <h4 className="font-bold text-[#5A4D41] mb-1">装着時間を守る必要がある</h4>
-                                                <p className="text-sm text-[#8D8070]">
-                                                    1日12〜14時間以上の装着が必須。お子さまの協力性が求められる
-                                                </p>
-                                            </div>
+                                            <AlertCircle className="w-5 h-5 text-yellow-600 flex-shrink-0 mt-1" />
+                                            <span><strong className="text-[#5A4D41]">装着時間を守る必要がある：</strong>1日12〜14時間以上の装着が必須。お子さまの協力性が求められる</span>
                                         </li>
                                         <li className="flex items-start gap-3">
-                                            <X className="w-6 h-6 text-red-600 flex-shrink-0 mt-1" />
-                                            <div>
-                                                <h4 className="font-bold text-[#5A4D41] mb-1">紛失・破損のリスク</h4>
-                                                <p className="text-sm text-[#8D8070]">
-                                                    取り外し式のため、紛失や破損の可能性がある（再製作費用が発生）
-                                                </p>
-                                            </div>
+                                            <AlertCircle className="w-5 h-5 text-yellow-600 flex-shrink-0 mt-1" />
+                                            <span><strong className="text-[#5A4D41]">紛失・破損のリスク：</strong>取り外し式のため、紛失や破損の可能性がある（再製作費用が発生）</span>
                                         </li>
                                         <li className="flex items-start gap-3">
-                                            <X className="w-6 h-6 text-red-600 flex-shrink-0 mt-1" />
-                                            <div>
-                                                <h4 className="font-bold text-[#5A4D41] mb-1">発音への影響</h4>
-                                                <p className="text-sm text-[#8D8070]">
-                                                    装着時は発音がしづらく、慣れるまで数日〜数週間かかる
-                                                </p>
-                                            </div>
+                                            <AlertCircle className="w-5 h-5 text-yellow-600 flex-shrink-0 mt-1" />
+                                            <span><strong className="text-[#5A4D41]">発音への影響：</strong>装着時は発音がしづらく、慣れるまで数日〜数週間かかる</span>
                                         </li>
                                         <li className="flex items-start gap-3">
-                                            <X className="w-6 h-6 text-red-600 flex-shrink-0 mt-1" />
-                                            <div>
-                                                <h4 className="font-bold text-[#5A4D41] mb-1">効果が装着時間に依存</h4>
-                                                <p className="text-sm text-[#8D8070]">
-                                                    装着時間が短いと効果が出ず、治療期間が延びる
-                                                </p>
-                                            </div>
+                                            <AlertCircle className="w-5 h-5 text-yellow-600 flex-shrink-0 mt-1" />
+                                            <span><strong className="text-[#5A4D41]">効果が装着時間に依存：</strong>装着時間が短いと効果が出ず、治療期間が延びる</span>
                                         </li>
                                         <li className="flex items-start gap-3">
-                                            <X className="w-6 h-6 text-red-600 flex-shrink-0 mt-1" />
-                                            <div>
-                                                <h4 className="font-bold text-[#5A4D41] mb-1">適応症例が限定的</h4>
-                                                <p className="text-sm text-[#8D8070]">
-                                                    重度の不正咬合や骨格的な問題には効果が限定的
-                                                </p>
-                                            </div>
+                                            <AlertCircle className="w-5 h-5 text-yellow-600 flex-shrink-0 mt-1" />
+                                            <span><strong className="text-[#5A4D41]">適応症例が限定的：</strong>重度の不正咬合や骨格的な問題には効果が限定的</span>
                                         </li>
                                         <li className="flex items-start gap-3">
-                                            <X className="w-6 h-6 text-red-600 flex-shrink-0 mt-1" />
-                                            <div>
-                                                <h4 className="font-bold text-[#5A4D41] mb-1">後戻りのリスク</h4>
-                                                <p className="text-sm text-[#8D8070]">
-                                                    拡大後、保定装置を使用しないと後戻りする可能性がある
-                                                </p>
-                                            </div>
+                                            <AlertCircle className="w-5 h-5 text-yellow-600 flex-shrink-0 mt-1" />
+                                            <span><strong className="text-[#5A4D41]">後戻りのリスク：</strong>拡大後、保定装置を使用しないと後戻りする可能性がある</span>
                                         </li>
                                     </ul>
                                 </div>
@@ -345,35 +260,29 @@ export default function ExpanderPage() {
                                 </p>
                             </div>
 
-                            <div className="bg-gradient-to-br from-[#E8F2ED] to-[#D4E8DC] rounded-2xl p-8 md:p-10 shadow-xl border-2 border-[#395b45]/20 mb-8">
-                                <h3 className="text-2xl font-bold text-[#395b45] mb-6 flex items-center gap-3">
-                                    <Clock className="w-8 h-8" />
+                            <div className="mb-8">
+                                <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 pb-2 border-b-2 border-[#C5A572]">
                                     推奨装着時間
-                                </h3>
-                                <div className="grid md:grid-cols-2 gap-6">
-                                    <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6">
-                                        <h4 className="font-bold text-[#5A4D41] mb-3 text-lg">最低装着時間</h4>
-                                        <div className="text-4xl font-bold text-[#E67A2E] mb-2">12時間/日</div>
-                                        <p className="text-sm text-[#8D8070]">
+                                </h4>
+                                <div className="space-y-6">
+                                    <div>
+                                        <p className="font-bold text-[#5A4D41] mb-2">最低装着時間：12時間/日</p>
+                                        <p className="text-[#8D8070]">
                                             効果を出すための最低ライン。これ以下では治療効果が期待できません
                                         </p>
                                     </div>
-                                    <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 border-2 border-[#395b45]">
-                                        <h4 className="font-bold text-[#5A4D41] mb-3 text-lg">理想的な装着時間</h4>
-                                        <div className="text-4xl font-bold text-[#395b45] mb-2">14〜16時間/日</div>
-                                        <p className="text-sm text-[#8D8070]">
+                                    <div>
+                                        <p className="font-bold text-[#5A4D41] mb-2">理想的な装着時間：14〜16時間/日</p>
+                                        <p className="text-[#8D8070]">
                                             より確実な効果を得るための推奨時間。就寝時+日中の数時間
                                         </p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div className="grid md:grid-cols-3 gap-6 mb-8">
-                                <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-200">
-                                    <div className="w-12 h-12 bg-[#E67A2E] rounded-full flex items-center justify-center text-white font-bold text-xl mb-4">
-                                        1
-                                    </div>
-                                    <h4 className="font-bold text-[#5A4D41] mb-2">装着タイミング</h4>
+                            <div className="space-y-8 mb-8">
+                                <div>
+                                    <h4 className="font-bold text-[#5A4D41] font-serif mb-3 pb-2 border-b-2 border-[#C5A572]">装着タイミング</h4>
                                     <ul className="text-sm text-[#8D8070] space-y-2">
                                         <li className="flex items-start gap-2">
                                             <CheckCircle className="w-4 h-4 text-[#395b45] flex-shrink-0 mt-0.5" />
@@ -390,11 +299,8 @@ export default function ExpanderPage() {
                                     </ul>
                                 </div>
 
-                                <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-200">
-                                    <div className="w-12 h-12 bg-[#E67A2E] rounded-full flex items-center justify-center text-white font-bold text-xl mb-4">
-                                        2
-                                    </div>
-                                    <h4 className="font-bold text-[#5A4D41] mb-2">装着中に外す時</h4>
+                                <div>
+                                    <h4 className="font-bold text-[#5A4D41] font-serif mb-3 pb-2 border-b-2 border-[#C5A572]">装着中に外す時</h4>
                                     <ul className="text-sm text-[#8D8070] space-y-2">
                                         <li className="flex items-start gap-2">
                                             <span className="text-[#395b45] mt-0.5">✓</span>
@@ -415,29 +321,26 @@ export default function ExpanderPage() {
                                     </ul>
                                 </div>
 
-                                <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-200">
-                                    <div className="w-12 h-12 bg-[#E67A2E] rounded-full flex items-center justify-center text-white font-bold text-xl mb-4">
-                                        3
-                                    </div>
-                                    <h4 className="font-bold text-[#5A4D41] mb-2">ネジの回転</h4>
+                                <div>
+                                    <h4 className="font-bold text-[#5A4D41] font-serif mb-3 pb-2 border-b-2 border-[#C5A572]">ネジの回転</h4>
                                     <ul className="text-sm text-[#8D8070] space-y-2">
                                         <li className="flex items-start gap-2">
-                                            <span className="text-[#E67A2E] font-bold mt-0.5">•</span>
+                                            <span className="text-[#C5A572] font-bold mt-0.5">•</span>
                                             <span><strong>頻度：</strong>週に1〜2回</span>
                                         </li>
                                         <li className="flex items-start gap-2">
-                                            <span className="text-[#E67A2E] font-bold mt-0.5">•</span>
+                                            <span className="text-[#C5A572] font-bold mt-0.5">•</span>
                                             <span><strong>方法：</strong>専用キーで90°回転</span>
                                         </li>
                                         <li className="flex items-start gap-2">
-                                            <span className="text-[#E67A2E] font-bold mt-0.5">•</span>
+                                            <span className="text-[#C5A572] font-bold mt-0.5">•</span>
                                             <span><strong>担当：</strong>保護者の方が実施</span>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
 
-                            <div className="bg-yellow-50 rounded-2xl p-6 border-2 border-yellow-300">
+                            <div className="bg-yellow-50 p-6 border-l-4 border-yellow-400 rounded-r-lg">
                                 <div className="flex items-start gap-4">
                                     <AlertCircle className="w-8 h-8 text-yellow-600 flex-shrink-0 mt-1" />
                                     <div>
@@ -463,10 +366,20 @@ export default function ExpanderPage() {
                             </div>
                         </div>
                     </div>
+
+                        {/* 装着方法の画像 */}
+                        <div className="container mx-auto px-4 max-w-4xl mb-8">
+                            <KidsOrthoImage
+                                name="expander-usage"
+                                alt="拡大床を装着している様子"
+                                category="appliances"
+                            />
+                        </div>
+
                 </section>
 
                 {/* お手入れ方法 */}
-                <section className="py-2 bg-gray-50">
+                <section className="py-2 bg-white">
                     <div className="container mx-auto px-4">
                         <div className="max-w-4xl mx-auto">
                             <div className="text-center mb-12">
@@ -478,72 +391,53 @@ export default function ExpanderPage() {
                                 </p>
                             </div>
 
-                            <div className="space-y-6">
-                                <div className="bg-white rounded-2xl p-6 shadow-lg">
-                                    <div className="flex items-start gap-4">
-                                        <div className="w-10 h-10 bg-[#395b45] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">
-                                            1
-                                        </div>
-                                        <div className="flex-1">
-                                            <h3 className="text-xl font-bold text-[#5A4D41] mb-2">毎食後の洗浄</h3>
-                                            <p className="text-[#8D8070] mb-3">
-                                                装置を外した後は、必ず水またはぬるま湯で洗います。歯ブラシを使って優しくこすり、食べカスや汚れを落としましょう。
-                                            </p>
-                                            <div className="bg-[#E8F2ED] rounded-lg p-4">
-                                                <p className="text-sm text-[#5A4D41]">
-                                                    <strong className="text-[#395b45]">注意：</strong>熱湯は使用しないでください。プラスチックが変形する恐れがあります。
-                                                </p>
-                                            </div>
-                                        </div>
+                            <div className="space-y-8">
+                                <div>
+                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 pb-2 border-b-2 border-[#C5A572]">毎食後の洗浄</h4>
+                                    <div className="space-y-4 text-[#5A4D41] leading-loose">
+                                        <p className="text-[#8D8070] mb-3">
+                                            装置を外した後は、必ず水またはぬるま湯で洗います。歯ブラシを使って優しくこすり、食べカスや汚れを落としましょう。
+                                        </p>
+                                        <p className="text-sm text-[#5A4D41] bg-yellow-50 p-4 border-l-4 border-yellow-400 rounded-r-lg mt-3">
+                                            <strong>注意：</strong>熱湯は使用しないでください。プラスチックが変形する恐れがあります。
+                                        </p>
                                     </div>
                                 </div>
 
-                                <div className="bg-white rounded-2xl p-6 shadow-lg">
-                                    <div className="flex items-start gap-4">
-                                        <div className="w-10 h-10 bg-[#395b45] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">
-                                            2
-                                        </div>
-                                        <div className="flex-1">
-                                            <h3 className="text-xl font-bold text-[#5A4D41] mb-2">週に1〜2回の念入り洗浄</h3>
-                                            <p className="text-[#8D8070] mb-3">
-                                                入れ歯洗浄剤（ポリデントなど）を使用して、装置を浸け置き洗いします。臭いや着色を防ぎ、清潔に保てます。
-                                            </p>
-                                            <div className="bg-[#E8F2ED] rounded-lg p-4">
-                                                <p className="text-sm text-[#5A4D41]">
-                                                    <strong className="text-[#395b45]">方法：</strong>コップに水と洗浄剤を入れ、装置を15〜30分浸す → 水でよくすすぐ
-                                                </p>
-                                            </div>
-                                        </div>
+                                <div>
+                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 pb-2 border-b-2 border-[#C5A572]">週に1〜2回の念入り洗浄</h4>
+                                    <div className="space-y-4 text-[#5A4D41] leading-loose">
+                                        <p className="text-[#8D8070] mb-3">
+                                            入れ歯洗浄剤（ポリデントなど）を使用して、装置を浸け置き洗いします。臭いや着色を防ぎ、清潔に保てます。
+                                        </p>
+                                        <p className="text-sm text-[#5A4D41] bg-blue-50 p-4 border-l-4 border-blue-400 rounded-r-lg mt-3">
+                                            <strong>方法：</strong>コップに水と洗浄剤を入れ、装置を15〜30分浸す → 水でよくすすぐ
+                                        </p>
                                     </div>
                                 </div>
 
-                                <div className="bg-white rounded-2xl p-6 shadow-lg">
-                                    <div className="flex items-start gap-4">
-                                        <div className="w-10 h-10 bg-[#395b45] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">
-                                            3
-                                        </div>
-                                        <div className="flex-1">
-                                            <h3 className="text-xl font-bold text-[#5A4D41] mb-2">保管方法</h3>
-                                            <p className="text-[#8D8070] mb-3">
-                                                使用しない時は、専用ケースに入れて保管します。ティッシュに包むと誤って捨ててしまうリスクがあるので注意。
-                                            </p>
-                                            <div className="grid md:grid-cols-2 gap-4">
-                                                <div className="bg-green-50 rounded-lg p-4 border border-green-200">
-                                                    <p className="text-sm font-bold text-green-700 mb-2">✓ 良い保管方法</p>
-                                                    <ul className="text-sm text-[#5A4D41] space-y-1">
-                                                        <li>• 専用ケースに入れる</li>
-                                                        <li>• 風通しの良い場所に置く</li>
-                                                        <li>• 直射日光を避ける</li>
-                                                    </ul>
-                                                </div>
-                                                <div className="bg-red-50 rounded-lg p-4 border border-red-200">
-                                                    <p className="text-sm font-bold text-red-700 mb-2">× 悪い保管方法</p>
-                                                    <ul className="text-sm text-[#5A4D41] space-y-1">
-                                                        <li>• ティッシュに包む</li>
-                                                        <li>• ポケットに入れる</li>
-                                                        <li>• 高温の場所に置く</li>
-                                                    </ul>
-                                                </div>
+                                <div>
+                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 pb-2 border-b-2 border-[#C5A572]">保管方法</h4>
+                                    <div className="space-y-4 text-[#5A4D41] leading-loose">
+                                        <p className="text-[#8D8070] mb-3">
+                                            使用しない時は、専用ケースに入れて保管します。ティッシュに包むと誤って捨ててしまうリスクがあるので注意。
+                                        </p>
+                                        <div className="space-y-4 mt-3">
+                                            <div>
+                                                <p className="font-bold text-[#5A4D41] mb-2">良い保管方法</p>
+                                                <ul className="text-[#8D8070] space-y-1">
+                                                    <li>• 専用ケースに入れる</li>
+                                                    <li>• 風通しの良い場所に置く</li>
+                                                    <li>• 直射日光を避ける</li>
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <p className="font-bold text-[#5A4D41] mb-2">悪い保管方法</p>
+                                                <ul className="text-[#8D8070] space-y-1">
+                                                    <li>• ティッシュに包む</li>
+                                                    <li>• ポケットに入れる</li>
+                                                    <li>• 高温の場所に置く</li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
@@ -567,7 +461,7 @@ export default function ExpanderPage() {
                             </div>
 
                             <div className="relative">
-                                <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-[#E67A2E] hidden md:block"></div>
+                                <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-[#C5A572] hidden md:block"></div>
 
                                 <div className="space-y-8">
                                     {[
@@ -609,7 +503,7 @@ export default function ExpanderPage() {
                                         },
                                     ].map((item, index) => (
                                         <div key={index} className="relative flex items-start gap-6 md:ml-16">
-                                            <div className="absolute -left-16 w-12 h-12 bg-[#E67A2E] rounded-full flex items-center justify-center text-white font-bold shadow-lg hidden md:flex">
+                                            <div className="absolute -left-16 w-12 h-12 bg-[#C5A572] rounded-full flex items-center justify-center text-white font-bold shadow-lg hidden md:flex">
                                                 {item.step}
                                             </div>
                                             <div className="flex-1 bg-white rounded-2xl p-6 shadow-lg border border-gray-200">
@@ -630,7 +524,7 @@ export default function ExpanderPage() {
                 </section>
 
                 {/* よくある質問 */}
-                <section className="py-6 md:py-6 bg-gray-50">
+                <section className="py-6 md:py-6 bg-[#FDFBF7]">
                     <div className="container mx-auto px-4">
                         <div className="max-w-4xl mx-auto">
                             <div className="text-center mb-12">
@@ -646,7 +540,7 @@ export default function ExpanderPage() {
                                 {/* Q1 */}
                                 <div className="bg-white rounded-xl shadow-md border border-gray-200 p-6">
                                     <h3 className="font-bold text-[#5A4D41] mb-4 flex items-start gap-3">
-                                        <span className="w-8 h-8 bg-[#E67A2E] rounded-full flex items-center justify-center text-white text-sm flex-shrink-0">Q1</span>
+                                        <span className="w-8 h-8 bg-[#C5A572] rounded-full flex items-center justify-center text-white text-sm flex-shrink-0">Q1</span>
                                         <span>痛みはありますか？</span>
                                     </h3>
                                     <div className="pl-11">
@@ -676,7 +570,7 @@ export default function ExpanderPage() {
                                 {/* Q2 */}
                                 <div className="bg-white rounded-xl shadow-md border border-gray-200 p-6">
                                     <h3 className="font-bold text-[#5A4D41] mb-4 flex items-start gap-3">
-                                        <span className="w-8 h-8 bg-[#E67A2E] rounded-full flex items-center justify-center text-white text-sm flex-shrink-0">Q2</span>
+                                        <span className="w-8 h-8 bg-[#C5A572] rounded-full flex items-center justify-center text-white text-sm flex-shrink-0">Q2</span>
                                         <span>学校に装着していく必要がありますか？</span>
                                     </h3>
                                     <div className="pl-11">
@@ -721,7 +615,7 @@ export default function ExpanderPage() {
                                 {/* Q3 */}
                                 <div className="bg-white rounded-xl shadow-md border border-gray-200 p-6">
                                     <h3 className="font-bold text-[#5A4D41] mb-4 flex items-start gap-3">
-                                        <span className="w-8 h-8 bg-[#E67A2E] rounded-full flex items-center justify-center text-white text-sm flex-shrink-0">Q3</span>
+                                        <span className="w-8 h-8 bg-[#C5A572] rounded-full flex items-center justify-center text-white text-sm flex-shrink-0">Q3</span>
                                         <span>食事中は外しますか？</span>
                                     </h3>
                                     <div className="pl-11">
@@ -751,7 +645,7 @@ export default function ExpanderPage() {
                                 {/* Q4 */}
                                 <div className="bg-white rounded-xl shadow-md border border-gray-200 p-6">
                                     <h3 className="font-bold text-[#5A4D41] mb-4 flex items-start gap-3">
-                                        <span className="w-8 h-8 bg-[#E67A2E] rounded-full flex items-center justify-center text-white text-sm flex-shrink-0">Q4</span>
+                                        <span className="w-8 h-8 bg-[#C5A572] rounded-full flex items-center justify-center text-white text-sm flex-shrink-0">Q4</span>
                                         <span>何歳まで使えますか？</span>
                                     </h3>
                                     <div className="pl-11">
@@ -796,7 +690,7 @@ export default function ExpanderPage() {
                                 {/* Q5 */}
                                 <div className="bg-white rounded-xl shadow-md border border-gray-200 p-6">
                                     <h3 className="font-bold text-[#5A4D41] mb-4 flex items-start gap-3">
-                                        <span className="w-8 h-8 bg-[#E67A2E] rounded-full flex items-center justify-center text-white text-sm flex-shrink-0">Q5</span>
+                                        <span className="w-8 h-8 bg-[#C5A572] rounded-full flex items-center justify-center text-white text-sm flex-shrink-0">Q5</span>
                                         <span>拡大後、元に戻ることはありますか？</span>
                                     </h3>
                                     <div className="pl-11">
@@ -832,7 +726,7 @@ export default function ExpanderPage() {
                                 {/* Q6 */}
                                 <div className="bg-white rounded-xl shadow-md border border-gray-200 p-6">
                                     <h3 className="font-bold text-[#5A4D41] mb-4 flex items-start gap-3">
-                                        <span className="w-8 h-8 bg-[#E67A2E] rounded-full flex items-center justify-center text-white text-sm flex-shrink-0">Q6</span>
+                                        <span className="w-8 h-8 bg-[#C5A572] rounded-full flex items-center justify-center text-white text-sm flex-shrink-0">Q6</span>
                                         <span>費用はどのくらいですか？</span>
                                     </h3>
                                     <div className="pl-11">
@@ -864,51 +758,41 @@ export default function ExpanderPage() {
                 </section>
 
                 {/* CTA Section */}
-                <section className="py-6 md:py-6 bg-gradient-to-br from-[#E67A2E] to-[#D66A28] text-white">
+                <section className="py-6 md:py-6 bg-[#FDFBF7]">
                     <div className="container mx-auto px-4">
-                        <div className="max-w-4xl mx-auto text-center">
-                            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                                お子さまに拡大床が<br className="md:hidden" />
-                                <span className="text-5xl block mt-2">適しているか</span>
-                                <span className="block mt-2">無料相談で確認できます</span>
-                            </h2>
-                            <p className="text-lg md:text-xl mb-8 opacity-90 leading-relaxed">
-                                歯並びの状態を拝見し、拡大床治療が最適かどうかを診断します。<br className="hidden md:block" />
-                                他の装置との比較もご説明しますので、お気軽にご相談ください。
-                            </p>
+                        <div className="max-w-4xl mx-auto">
+                            <div className="text-center mb-8">
+                                <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#5A4D41] mb-4">お子さまに最適な装置を無料でご提案</h2>
+                                <p className="text-lg md:text-xl text-[#8D8070] leading-loose font-sans">
+                                    拡大床が適しているか、まずは無料相談でご確認ください
+                                </p>
+                            </div>
 
-                            <div className="flex flex-col md:flex-row gap-4 justify-center items-center mb-8">
-                                <a
-                                    href="#"
-                                    className="w-full md:w-auto bg-white text-[#E67A2E] px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-1 flex items-center justify-center gap-2"
+                            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                                <Link
+                                    href="/contact"
+                                    className="inline-flex items-center justify-center gap-2 bg-[#C5A572] hover:bg-[#B39562] text-white font-bold py-4 px-8 rounded-full transition-all transform hover:scale-105 shadow-lg"
                                 >
                                     無料相談を予約する
                                     <ArrowRight size={20} />
-                                </a>
+                                </Link>
                             </div>
 
-                            <div className="grid md:grid-cols-3 gap-4 text-sm">
-                                <a
+                            <div className="flex flex-col sm:flex-row gap-4 justify-center text-sm">
+                                <Link
                                     href="/kidsortho/appliances"
-                                    className="bg-white/10 backdrop-blur-sm px-4 py-3 rounded-xl hover:bg-white/20 transition border border-white/20 flex items-center justify-center gap-2"
+                                    className="flex items-center justify-center gap-2 text-[#5A4D41] hover:text-[#C5A572] transition-colors"
                                 >
                                     <ArrowRight size={16} />
                                     装置一覧に戻る
-                                </a>
-                                <a
+                                </Link>
+                                <Link
                                     href="/kidsortho/cost"
-                                    className="bg-white/10 backdrop-blur-sm px-4 py-3 rounded-xl hover:bg-white/20 transition border border-white/20 flex items-center justify-center gap-2"
+                                    className="flex items-center justify-center gap-2 text-[#5A4D41] hover:text-[#C5A572] transition-colors"
                                 >
                                     <ArrowRight size={16} />
                                     費用について
-                                </a>
-                                <a
-                                    href="/kidsortho"
-                                    className="bg-white/10 backdrop-blur-sm px-4 py-3 rounded-xl hover:bg-white/20 transition border border-white/20 flex items-center justify-center gap-2"
-                                >
-                                    <ArrowRight size={16} />
-                                    こども矯正トップ
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>

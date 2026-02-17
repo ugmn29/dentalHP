@@ -90,24 +90,24 @@ export default function Home() {
   }, [caseStudies.length]);
 
   const menuItems = [
-    { name: "こども矯正", cat: "kids", link: "/kidsortho", icon: Smile, iconImage: "/images/icons/icon-kids-ortho.png" },
-    { name: "０歳からの口育", cat: "kids", link: "/kids/oral-education", icon: Baby, iconImage: "/images/icons/icon-oral-edu.png" },
-    { name: "こども歯科・予防", cat: "kids", link: "/kids/preventive", icon: ShieldCheck, iconImage: "/images/icons/icon-kids-prev.png" },
-    { name: "セラミック治療", cat: "aesthetic", link: "/aesthetic/ceramic", icon: Gem, iconImage: "/images/icons/icon-ceramic.png" },
-    { name: "マウスピース矯正", cat: "ortho", link: "/mouthpiece", icon: Smile, iconImage: "/images/icons/icon-mouthpiece.png" },
-    { name: "矯正歯科", cat: "ortho", link: "/orthodontics", icon: Sparkles, iconImage: "/images/icons/icon-ortho.png" },
-    { name: "インプラント", cat: "general", link: "/implant", icon: ArrowDownToLine, iconImage: "/images/icons/icon-implant.png" },
-    { name: "ホワイトニング", cat: "aesthetic", link: "/whitening", icon: Sparkles },
-    { name: "予防歯科", cat: "general", link: "/preventive", icon: Shield },
-    { name: "口臭治療", cat: "general", link: "/general/bad-breath", icon: Wind },
-    { name: "むしば治療", cat: "general", link: "/cavity", icon: Search },
-    { name: "根管治療", cat: "general", link: "/root-canal", icon: Activity },
-    { name: "歯周病治療", cat: "general", link: "/periodontal", icon: Layers },
-    { name: "親知らず抜歯", cat: "surgery", link: "/wisdom", icon: Scissors },
-    { name: "歯の外傷・急患", cat: "concerns", link: "/concerns/trauma", icon: AlertCircle },
-    { name: "歯ぎしり・食いしばり", cat: "concerns", link: "/concerns/bruxism", icon: Moon },
-    { name: "顎関節症", cat: "concerns", link: "/concerns/tmj", icon: Zap },
-    { name: "口腔外科・トラブル", cat: "concerns", link: "/concerns/oral-surgery", icon: Stethoscope },
+    { name: "こども矯正", cat: "kids", link: "/kidsortho", icon: Smile, iconImage: "/images/icons/05_矯正歯科.png" },
+    { name: "０歳からの口育", cat: "kids", link: "/kids/oral-education", icon: Baby, iconImage: "/images/icons/12_小児歯科.png" },
+    { name: "こども歯科・予防", cat: "kids", link: "/kids/preventive", icon: ShieldCheck, iconImage: "/images/icons/12_小児歯科.png" },
+    { name: "セラミック治療", cat: "aesthetic", link: "/aesthetic/ceramic", icon: Gem, iconImage: "/images/icons/14_審美歯科.png" },
+    { name: "マウスピース矯正", cat: "ortho", link: "/mouthpiece", icon: Smile, iconImage: "/images/icons/06_マウスピース矯正.png" },
+    { name: "矯正歯科", cat: "ortho", link: "/orthodontics", icon: Sparkles, iconImage: "/images/icons/05_矯正歯科.png" },
+    { name: "インプラント", cat: "general", link: "/implant", icon: ArrowDownToLine, iconImage: "/images/icons/07_インプラント.png" },
+    { name: "ホワイトニング", cat: "aesthetic", link: "/whitening", icon: Sparkles, iconImage: "/images/icons/15_ホワイトニング.png" },
+    { name: "予防歯科", cat: "general", link: "/preventive", icon: Shield, iconImage: "/images/icons/13_予防歯科.png" },
+    { name: "口臭治療", cat: "general", link: "/general/bad-breath", icon: Wind, iconImage: "/images/icons/10_口腔外科.png" },
+    { name: "むしば治療", cat: "general", link: "/cavity", icon: Search, iconImage: "/images/icons/01_虫歯治療.png" },
+    { name: "根管治療", cat: "general", link: "/root-canal", icon: Activity, iconImage: "/images/icons/03_根管治療.png" },
+    { name: "歯周病治療", cat: "general", link: "/periodontal", icon: Layers, iconImage: "/images/icons/02_歯周病治療.png" },
+    { name: "親知らず抜歯", cat: "surgery", link: "/wisdom", icon: Scissors, iconImage: "/images/icons/04_親知らず.png" },
+    { name: "歯の外傷・急患", cat: "concerns", link: "/concerns/trauma", icon: AlertCircle, iconImage: "/images/icons/10_口腔外科.png" },
+    { name: "歯ぎしり・食いしばり", cat: "concerns", link: "/concerns/bruxism", icon: Moon, iconImage: "/images/icons/09_歯ぎしり.png" },
+    { name: "顎関節症", cat: "concerns", link: "/concerns/tmj", icon: Zap, iconImage: "/images/icons/11_噛み合わせ.png" },
+    { name: "口腔外科・トラブル", cat: "concerns", link: "/concerns/oral-surgery", icon: Stethoscope, iconImage: "/images/icons/10_口腔外科.png" },
   ];
 
   const getCategoryColor = (cat: string) => {
@@ -512,8 +512,9 @@ export default function Home() {
                   <p className="text-[#8D8070] text-xs md:text-sm font-bold mb-1">
                     <strong>豊洲駅から徒歩2分の歯医者</strong>
                   </p>
-                  <h2 className="text-[9vw] sm:text-5xl md:text-7xl font-black text-[#395b45] whitespace-nowrap" style={{ fontFamily: 'Georgia, "Yu Mincho", "Hiragino Mincho ProN", serif' }}>
-                    F歯科・矯正歯科
+                  <h2 className="font-black text-[#395b45] text-center" style={{ fontFamily: 'Georgia, "Yu Mincho", "Hiragino Mincho ProN", serif' }}>
+                    <div className="text-[9vw] sm:text-5xl md:text-7xl">F歯科・矯正歯科</div>
+                    <div className="text-[7vw] sm:text-4xl md:text-5xl mt-1">豊洲プライムスクエア院</div>
                   </h2>
                 </div>
                 <p className="text-[#5A4D41] text-2xl md:text-3xl font-bold mb-8">
@@ -821,7 +822,7 @@ export default function Home() {
                         <li>• 大阪大学卒業</li>
                         <li>• 大手医療法人勤務・研修医指導医を歴任</li>
                         <li>• 都内歯科医院 副院長</li>
-                        <li>• F歯科・こども歯科・矯正 開業</li>
+                        <li>• F歯科・矯正歯科 豊洲プライムスクエア院 開業</li>
                       </ul>
                     </div>
 
@@ -863,7 +864,7 @@ export default function Home() {
             </div>
 
             {/* Carousel */}
-            <div className="relative max-w-3xl mx-auto mb-4 group">
+            <div className="relative max-w-2xl mx-auto mb-4 group">
               <div className="overflow-hidden rounded-[40px] shadow-2xl border-4 border-white aspect-square">
                 <div
                   className="flex transition-transform duration-1000 ease-in-out h-full"
@@ -907,7 +908,7 @@ export default function Home() {
             <div className="text-center">
               <a
                 href="/facilities"
-                className="inline-flex items-center gap-3 bg-gradient-to-r from-[#c8ddd0] to-[#395b45] hover:from-[#d4e8dc] hover:to-[#4a6b55] text-white px-10 py-5 rounded-full font-bold shadow-lg hover:shadow-xl transition-all duration-300 group"
+                className="inline-flex items-center gap-3 bg-[#395b45] hover:bg-[#4a6b55] text-white px-10 py-5 rounded-full font-bold shadow-lg hover:shadow-xl transition-all duration-300 group"
               >
                 <span>院内設備を見る</span>
                 <div className="bg-white/20 rounded-full p-1 group-hover:translate-x-1 transition-transform">
@@ -938,32 +939,32 @@ export default function Home() {
                   },
                   {
                     num: "02",
-                    title: "カウンセリング",
-                    desc: "現在のお悩みや治療へのご希望を丁寧にお伺いします。不安なことは何でもご相談ください。",
+                    title: "症状のカウンセリング",
+                    desc: "現在のお悩みや症状について詳しくお伺いします。不安なことや気になることは何でもご相談ください。",
                     image: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=800"
                   },
                   {
                     num: "03",
-                    title: "精密検査",
-                    desc: "レントゲンや口腔内写真など、必要な検査を行い、お口の状態を正確に把握します。",
+                    title: "レントゲン撮影",
+                    desc: "お口の状態を正確に把握するため、レントゲン撮影を行います。必要に応じて歯科用CTでの撮影も実施します。",
                     image: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=800"
                   },
                   {
                     num: "04",
-                    title: "治療計画のご説明",
-                    desc: "検査結果に基づき、最適な治療プランをご提案します。費用や期間についても詳しくご説明します。",
+                    title: "歯周病検査、口腔内写真の撮影",
+                    desc: "歯周ポケットの深さを測定し、口腔内写真を撮影します。現在の状態を視覚的に確認いただけます。",
                     image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800"
                   },
                   {
                     num: "05",
-                    title: "治療開始",
-                    desc: "同意いただいたプランに沿って治療を進めます。痛みに配慮し、丁寧な処置を心がけます。",
+                    title: "治療計画の説明",
+                    desc: "検査結果に基づき、最適な治療プランをご提案します。費用や期間についても詳しくご説明します。",
                     image: "https://images.unsplash.com/photo-1584036561566-b93a945c3cbc?auto=format&fit=crop&q=80&w=800"
                   },
                   {
                     num: "06",
-                    title: "メインテナンス",
-                    desc: "治療終了後は、健康な状態を維持するために定期的な検診とクリーニングをおすすめしています。",
+                    title: "治療開始",
+                    desc: "同意いただいたプランに沿って治療を進めます。痛みに配慮し、丁寧な処置を心がけます。",
                     image: "https://images.unsplash.com/photo-1629909615184-74f495363b67?auto=format&fit=crop&q=80&w=800"
                   }
                 ].map((step, index) => (
@@ -985,7 +986,7 @@ export default function Home() {
                       />
                     </div>
                     {/* 説明文 */}
-                    <p className="text-[#5A4D41] leading-loose text-sm md:text-base">{step.desc}</p>
+                    <p className="text-[#5A4D41] leading-loose text-sm md:text-base" style={{ fontFamily: 'YuGothic, "Yu Gothic", sans-serif' }}>{step.desc}</p>
                   </div>
                 ))}
               </div>
@@ -1007,7 +1008,7 @@ export default function Home() {
                   <div className="w-20 h-20 md:w-28 md:h-28 bg-white rounded-full shadow-sm border border-gray-100 flex items-center justify-center mb-4 group-hover:shadow-md group-hover:border-[#395b45]/30 transition-all duration-300 group-hover:-translate-y-1 overflow-hidden p-4">
                     {/* @ts-ignore */}
                     {menu.iconImage ? (
-                      <img src={menu.iconImage} alt={menu.name} className="w-full h-full object-contain" />
+                      <img src={menu.iconImage} alt={menu.name} className="w-full h-full object-contain" style={{ backgroundColor: 'white' }} />
                     ) : (
                       <menu.icon strokeWidth={1.5} className="w-8 h-8 md:w-12 md:h-12 text-[#5A4D41] group-hover:text-[#395b45] transition-colors" />
                     )}

@@ -124,7 +124,7 @@ export default function CeramicPage() {
                             FEATURES OF PREMIUM CERAMIC
                         </p>
                         <h2 className="text-2xl md:text-3xl font-medium text-[#5A4D41] font-serif leading-loose tracking-widest">
-                            F歯科・矯正歯科のセラミック治療は<br />
+                            F歯科・矯正歯科 豊洲プライムスクエア院のセラミック治療は<br />
                             これまでのものと違います
                         </h2>
                     </div>

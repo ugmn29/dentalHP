@@ -6,11 +6,11 @@ import { ArrowRight, CheckCircle, Shield, X, AlertCircle, Info, Home, ChevronRig
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'ホワイトニングの安全性・副作用｜知覚過敏などのリスクと対策｜F歯科・矯正歯科',
+  title: 'ホワイトニングの安全性・副作用｜知覚過敏などのリスクと対策｜F歯科・矯正歯科 豊洲プライムスクエア院',
   description: 'ホワイトニングは安全？知覚過敏などの副作用やリスクについて詳しく解説。歯科医師が安全性を最優先に施術する理由と、副作用を最小限に抑える方法をご紹介します。',
   keywords: 'ホワイトニング,安全性,副作用,知覚過敏,リスク,痛い,しみる,危険性',
   openGraph: {
-    title: 'ホワイトニングの安全性・副作用｜知覚過敏などのリスクと対策｜F歯科・矯正歯科',
+    title: 'ホワイトニングの安全性・副作用｜知覚過敏などのリスクと対策｜F歯科・矯正歯科 豊洲プライムスクエア院',
     description: 'ホワイトニングの安全性と副作用について、歯科医師が詳しく解説します。',
     type: 'website',
   },

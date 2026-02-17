@@ -6,9 +6,9 @@ import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
 
 export const metadata: Metadata = {
-  title: '根管治療の期間・回数｜治療にかかる期間と通院回数｜F歯科・矯正歯科',
+  title: '根管治療の期間・回数｜治療にかかる期間と通院回数｜F歯科・矯正歯科 豊洲プライムスクエア院',
   description: '根管治療にかかる期間と通院回数を詳しく解説。初回治療、再根管治療、歯根端切除術それぞれの治療期間、各回の治療内容、期間が長引く原因について説明します。',
-  keywords: '根管治療,期間,回数,通院,治療期間,何回,何ヶ月,F歯科・矯正歯科',
+  keywords: '根管治療,期間,回数,通院,治療期間,何回,何ヶ月,F歯科・矯正歯科 豊洲プライムスクエア院',
 };
 
 export default function RootCanalDurationPage() {

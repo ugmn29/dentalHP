@@ -53,8 +53,8 @@ export const Header = () => {
                             </div>
                             <div>
                                 <p className="text-[10px] md:text-xs text-[#395b45] font-bold leading-none mb-0.5">豊洲の歯医者</p>
-                                <h1 className="text-sm md:text-lg font-bold text-[#5A4D41] leading-none tracking-wide whitespace-nowrap">
-                                    F歯科・矯正歯科
+                                <h1 className="text-sm md:text-lg font-bold text-[#5A4D41] leading-none tracking-wide whitespace-nowrap" style={{ fontFamily: 'Georgia, "Yu Mincho", "Hiragino Mincho ProN", serif' }}>
+                                    F歯科・矯正歯科 豊洲プライムスクエア院
                                 </h1>
                             </div>
                         </a>

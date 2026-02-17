@@ -1,11 +1,9 @@
 import React from 'react';
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
-import { ImplantBreadcrumb } from '@/components/implant/ImplantBreadcrumb';
-import { ImplantHero } from '@/components/implant/ImplantHero';
-import { ImplantCTA } from '@/components/implant/ImplantCTA';
 import {
   CreditCard,
   Calculator,
@@ -14,10 +12,13 @@ import {
   Banknote,
   CheckCircle2,
   Info,
+  Home,
+  ChevronRight,
+  ArrowRight,
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'インプラントの費用・料金｜明確な料金体系で安心｜F歯科・矯正歯科',
+  title: 'インプラントの費用・料金｜明確な料金体系で安心｜F歯科・矯正歯科 豊洲プライムスクエア院',
   description:
     'インプラント治療の費用・料金一覧ページです。1本¥330,000〜。カウンセリング無料。医療費控除の対象。クレジットカード・デンタルローン対応。10年保証制度あり。明確な料金体系で安心して治療を始められます。',
   keywords: [
@@ -90,19 +91,68 @@ export default function ImplantCostPage() {
   return (
     <>
       <Header />
-      <main>
-        {/* パンくずリスト */}
-        <ImplantBreadcrumb items={[{ label: '費用・料金' }]} />
+      <main className="min-h-screen bg-gradient-to-b from-white to-[#FDFBF7]">
+        {/* Breadcrumb */}
+        <div className="bg-white border-b">
+          <div className="container mx-auto px-4 py-3">
+            <div className="flex items-center text-sm text-gray-600">
+              <Link href="/" className="hover:text-[#395b45] flex items-center">
+                <Home className="w-4 h-4 mr-1" />
+                ホーム
+              </Link>
+              <ChevronRight className="w-4 h-4 mx-2" />
+              <Link href="/implant" className="hover:text-[#395b45]">
+                インプラント
+              </Link>
+              <ChevronRight className="w-4 h-4 mx-2" />
+              <span className="text-[#395b45]">費用・料金</span>
+            </div>
+          </div>
+        </div>
 
-        {/* ヒーロー */}
-        <ImplantHero
-          title="インプラント治療の費用"
-          subtitle="Price"
-          description="明確な料金体系で、安心してインプラント治療を始めていただけます。カウンセリングは無料です。まずはお気軽にご相談ください。"
-        />
+        {/* Hero Section */}
+        <section className="py-6 md:py-6 bg-[#FDFBF7]">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#2d4835] font-serif">
+                インプラント治療の費用
+              </h1>
+              <div className="w-24 h-1 bg-[#395b45] mx-auto mb-8"></div>
+              <p className="text-xl md:text-2xl mb-6 text-[#2d4835] font-medium">
+                明確な料金体系で安心の治療を
+              </p>
+              <p className="text-lg text-[#5A4D41] leading-relaxed">
+                カウンセリングは無料です。まずはお気軽にご相談ください
+              </p>
+            </div>
+          </div>
+        </section>
 
-        {/* ── セクション1: 料金一覧 ── */}
-        <section className="py-16 px-4 bg-[#FDFBF7]">
+        {/* Main Content */}
+        <section className="pt-8 pb-2 bg-[#FDFBF7]">
+          <div className="container mx-auto px-4 max-w-5xl" style={{ fontFamily: 'YuGothic, "Yu Gothic", sans-serif' }}>
+
+            {/* 結論 */}
+            <div className="text-center mb-20">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#2d4835] mb-8 font-serif">
+                結論
+              </h2>
+              <div className="space-y-4 text-[#5A4D41] leading-loose max-w-3xl mx-auto">
+                <p>
+                  インプラント治療の費用は<span className="bg-yellow-100 font-bold">1本あたり約33万円〜44万円程度</span>（税込）です。
+                </p>
+                <p>
+                  自費診療のため保険は適用されませんが、<span className="text-[#395b45] font-bold">医療費控除の対象</span>となり、確定申告で税金の一部が還付されます。
+                  また、月々1万円からのデンタルローンもご利用いただけます。
+                </p>
+                <p>
+                  当院では<span className="font-bold">カウンセリング無料・10年保証制度</span>を設けており、明確な料金体系で安心して治療を始めていただけます。
+                </p>
+              </div>
+            </div>
+
+            {/* ── セクション1: 料金一覧 ── */}
+            <div className="mb-16">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-10">
               <h2 className="text-2xl md:text-3xl font-bold text-[#2d4835] mb-3">
@@ -161,10 +211,10 @@ export default function ImplantCostPage() {
               ※ 症例により費用は異なります。詳しくはカウンセリング時にご説明いたします。
             </p>
           </div>
-        </section>
+        </div>
 
         {/* ── セクション2: ケース別費用の目安 ── */}
-        <section className="py-16 px-4 bg-white">
+        <div className="mb-16">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-10">
               <h2 className="text-2xl md:text-3xl font-bold text-[#2d4835] mb-3">
@@ -204,12 +254,12 @@ export default function ImplantCostPage() {
               </p>
             </div>
           </div>
-        </section>
+        </div>
 
         {/* ── セクション3: お支払い方法 ── */}
-        <section className="py-16 px-4 bg-[#FDFBF7]">
+        <div className="mb-16">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-10">
+            <div className="text-center mb-8">
               <h2 className="text-2xl md:text-3xl font-bold text-[#2d4835] mb-3">
                 お支払い方法
               </h2>
@@ -297,12 +347,12 @@ export default function ImplantCostPage() {
               </p>
             </div>
           </div>
-        </section>
+        </div>
 
         {/* ── セクション4: 医療費控除について ── */}
-        <section className="py-16 px-4 bg-white">
+        <div className="mb-16">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-10">
+            <div className="text-center mb-8">
               <h2 className="text-2xl md:text-3xl font-bold text-[#2d4835] mb-3">
                 医療費控除について
               </h2>
@@ -411,12 +461,12 @@ export default function ImplantCostPage() {
               </div>
             </div>
           </div>
-        </section>
+        </div>
 
         {/* ── セクション5: 保証制度 ── */}
-        <section className="py-16 px-4 bg-[#FDFBF7]">
+        <div className="mb-16">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-10">
+            <div className="text-center mb-8">
               <h2 className="text-2xl md:text-3xl font-bold text-[#2d4835] mb-3">
                 保証制度
               </h2>
@@ -500,17 +550,49 @@ export default function ImplantCostPage() {
               </p>
             </div>
           </div>
+        </div>
+
+            {/* 関連ページへのリンク */}
+            <div className="mt-16 bg-white rounded-2xl p-8 border border-gray-100">
+              <h3 className="text-xl font-bold text-[#2d4835] mb-6 text-center">インプラント治療についてもっと詳しく</h3>
+              <div className="grid md:grid-cols-2 gap-4">
+                <Link
+                  href="/implant/about"
+                  className="flex items-center justify-between p-4 bg-[#FDFBF7] hover:bg-gray-50 rounded-xl border border-gray-100 transition-colors group"
+                >
+                  <span className="font-medium text-[#2d4835]">インプラントとは</span>
+                  <ArrowRight className="w-5 h-5 text-[#395b45] group-hover:translate-x-1 transition-transform" />
+                </Link>
+                <Link
+                  href="/implant/comparison"
+                  className="flex items-center justify-between p-4 bg-[#FDFBF7] hover:bg-gray-50 rounded-xl border border-gray-100 transition-colors group"
+                >
+                  <span className="font-medium text-[#2d4835]">入れ歯・ブリッジとの比較</span>
+                  <ArrowRight className="w-5 h-5 text-[#395b45] group-hover:translate-x-1 transition-transform" />
+                </Link>
+                <Link
+                  href="/implant/flow"
+                  className="flex items-center justify-between p-4 bg-[#FDFBF7] hover:bg-gray-50 rounded-xl border border-gray-100 transition-colors group"
+                >
+                  <span className="font-medium text-[#2d4835]">治療の流れ</span>
+                  <ArrowRight className="w-5 h-5 text-[#395b45] group-hover:translate-x-1 transition-transform" />
+                </Link>
+                <Link
+                  href="/implant/safety"
+                  className="flex items-center justify-between p-4 bg-[#FDFBF7] hover:bg-gray-50 rounded-xl border border-gray-100 transition-colors group"
+                >
+                  <span className="font-medium text-[#2d4835]">安全性へのこだわり</span>
+                  <ArrowRight className="w-5 h-5 text-[#395b45] group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
+            </div>
+
+          </div>
         </section>
 
-        {/* ── CTA ── */}
-        <ImplantCTA
-          title="まずは無料カウンセリングから"
-          subtitle="インプラント治療の費用について、詳しいお見積もりをお出しいたします。お気軽にご相談ください。"
-        />
-
-        {/* ── AuthorBio ── */}
-        <section className="py-8 bg-[#FDFBF7]">
-          <div className="max-w-4xl mx-auto px-4">
+        {/* Author Bio */}
+        <section className="py-12 bg-[#FDFBF7]">
+          <div className="container mx-auto px-4 max-w-4xl">
             <AuthorBio />
           </div>
         </section>

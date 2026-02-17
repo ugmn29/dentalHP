@@ -7,9 +7,9 @@ import { AuthorBio } from '@/components/AuthorBio';
 import { ChevronRight, Clock, Calendar, CheckCircle, AlertTriangle, TrendingUp } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: '矯正治療の期間｜どれくらいかかる？通院頻度は？｜F歯科・矯正歯科',
+  title: '矯正治療の期間｜どれくらいかかる？通院頻度は？｜F歯科・矯正歯科 豊洲プライムスクエア院',
   description: '矯正治療にかかる期間を詳しく解説。ワイヤー矯正2〜3年、マウスピース矯正1〜2年、部分矯正3ヶ月〜1年。通院頻度や治療の流れ、期間を短縮する方法もご紹介します。',
-  keywords: '矯正,期間,治療期間,どのくらい,何年,通院,頻度,短縮,F歯科・矯正歯科',
+  keywords: '矯正,期間,治療期間,どのくらい,何年,通院,頻度,短縮,F歯科・矯正歯科 豊洲プライムスクエア院',
 };
 
 export default function OrthodonticsDurationPage() {

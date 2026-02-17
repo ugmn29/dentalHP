@@ -6,9 +6,9 @@ import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
 
 export const metadata: Metadata = {
-  title: '根管治療の痛み｜治療中・治療後の痛みと対処法｜F歯科・矯正歯科',
+  title: '根管治療の痛み｜治療中・治療後の痛みと対処法｜F歯科・矯正歯科 豊洲プライムスクエア院',
   description: '根管治療の痛みについて詳しく解説。治療中の痛み、治療後の痛み、痛みの期間、痛み止めの使用方法など、痛みに関する不安を解消します。',
-  keywords: '根管治療,痛み,痛い,麻酔,痛み止め,治療後,腫れ,F歯科・矯正歯科',
+  keywords: '根管治療,痛み,痛い,麻酔,痛み止め,治療後,腫れ,F歯科・矯正歯科 豊洲プライムスクエア院',
 };
 
 export default function RootCanalPainPage() {

@@ -74,9 +74,11 @@ export default function PricePage() {
             items: [
                 { name: "相談料", taxPrice: "¥0", note: "矯正相談は無料です。" },
                 { name: "検査代", taxPrice: "¥0", note: "初回検査は無料です。" },
-                { name: "プレオルソ", taxPrice: "¥77,000", note: "取り外し可能なマウスピース型矯正装置です。" },
-                { name: "拡大床", taxPrice: "¥440,000", note: "顎を広げて歯が並ぶスペースを作る装置です。" },
+                { name: "結果説明", taxPrice: "¥11,000", note: "検査結果の詳しい説明とカウンセリングです。" },
+                { name: "プレオルソ、EFライン etc(他の付加的装置の全てを含む)", taxPrice: "¥132,000", note: "取り外し可能なマウスピース型矯正装置です。" },
+                { name: "拡大床", taxPrice: "¥495,000", note: "顎を広げて歯が並ぶスペースを作る装置です。" },
                 { name: "マウスピース矯正", taxPrice: "¥660,000", note: "透明なマウスピースで目立たず矯正できます。" },
+                { name: "ワイヤー矯正", taxPrice: "¥660,000", note: "従来型のブラケット矯正です。" },
             ]
         },
         {
@@ -219,7 +221,7 @@ export default function PricePage() {
                             <div className="bg-white p-6 md:p-10 rounded-3xl shadow-sm border border-gray-100">
                                 <h2 className="text-xl font-bold mb-4 text-[#5A4D41]">治療費について</h2>
                                 <p className="text-[#8D8070] leading-relaxed text-sm md:text-base">
-                                    当院の自費診療（保険適用外）の料金一覧です。<br />
+                                    当院の自費診療（保険適用外）の料金一覧です。<span className="font-bold text-[#5A4D41]">※表示価格はすべて税込です</span><br />
                                     患者様一人ひとりのお口の状態やご希望に合わせて、最適な治療プランをご提案させていただきます。<br />
                                     費用についてご不明な点がございましたら、カウンセリング時にご遠慮なくご相談ください。
                                 </p>

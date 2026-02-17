@@ -7,9 +7,9 @@ import { AuthorBio } from '@/components/AuthorBio';
 import { ChevronRight, CheckCircle, Users, Heart, Briefcase, Calendar, TrendingUp, Shield } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: '大人の矯正治療｜何歳からでも始められる歯列矯正｜F歯科・矯正歯科',
+  title: '大人の矯正治療｜何歳からでも始められる歯列矯正｜F歯科・矯正歯科 豊洲プライムスクエア院',
   description: '大人になってからでも矯正治療は可能です。40代・50代から始める方も増加中。目立たないマウスピース矯正や裏側矯正で、仕事や生活に支障なく美しい歯並びを手に入れられます。',
-  keywords: '大人,矯正,成人矯正,何歳まで,40代,50代,社会人,目立たない,F歯科・矯正歯科',
+  keywords: '大人,矯正,成人矯正,何歳まで,40代,50代,社会人,目立たない,F歯科・矯正歯科 豊洲プライムスクエア院',
 };
 
 export default function OrthodonticsAdultPage() {

@@ -10,7 +10,7 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: '虫歯の治療方法 | コンポジットレジン・インレー・クラウン・根管治療 | F歯科・矯正歯科',
+  title: '虫歯の治療方法 | コンポジットレジン・インレー・クラウン・根管治療 | F歯科・矯正歯科 豊洲プライムスクエア院',
   description: '虫歯の進行度に応じた治療方法を詳しく解説。コンポジットレジン、インレー、クラウン、根管治療など、それぞれの特徴、メリット・デメリット、費用について。',
   keywords: '虫歯治療,コンポジットレジン,インレー,クラウン,根管治療,詰め物,被せ物,保険治療,自費治療',
 };
@@ -773,7 +773,7 @@ export default function TreatmentMethodsPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center text-white">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 font-serif">
-                虫歯治療のご相談は<br className="md:hidden" />F歯科・矯正歯科へ
+                虫歯治療のご相談は<br className="md:hidden" />F歯科・矯正歯科 豊洲プライムスクエア院へ
               </h2>
               <p className="text-lg mb-8 leading-relaxed opacity-95">
                 進行度に応じた最適な治療方法をご提案します。<br />

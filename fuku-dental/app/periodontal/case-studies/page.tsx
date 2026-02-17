@@ -3,9 +3,9 @@ import { TreatmentLayout } from '@/components/TreatmentLayout';
 import { Clock, DollarSign, CheckCircle, Star, TrendingUp } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: '歯周病治療の症例紹介｜治療事例と患者様の声｜F歯科・矯正歯科',
+  title: '歯周病治療の症例紹介｜治療事例と患者様の声｜F歯科・矯正歯科 豊洲プライムスクエア院',
   description: '歯周病治療の症例を詳しくご紹介。軽度から重度まで、実際の治療例と患者様の声を掲載しています。',
-  keywords: '歯周病,症例,事例,体験談,患者様の声,ビフォーアフター,治療例,F歯科・矯正歯科',
+  keywords: '歯周病,症例,事例,体験談,患者様の声,ビフォーアフター,治療例,F歯科・矯正歯科 豊洲プライムスクエア院',
 };
 
 // Case Study Feature Data

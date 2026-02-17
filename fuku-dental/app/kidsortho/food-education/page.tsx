@@ -1,63 +1,77 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ChevronRight, BookOpen, AlertCircle, CheckCircle2, Clock, Utensils, Apple, TrendingUp } from 'lucide-react'
+import { ChevronRight, BookOpen, AlertCircle, CheckCircle2, Clock, Utensils, Apple, TrendingUp, Home, ArrowRight } from 'lucide-react'
+import { KidsOrthoImage } from '@/components/KidsOrthoImage'
+import { Header } from '@/components/Header'
+import { Footer } from '@/components/Footer'
+import { AuthorBio } from '@/components/AuthorBio'
 
 export const metadata: Metadata = {
-  title: '顎を育てる食育レシピ｜よく噛む食事で歯並び改善｜F歯科・矯正歯科',
+  title: '顎を育てる食育レシピ｜よく噛む食事で歯並び改善｜F歯科・矯正歯科 豊洲プライムスクエア院',
   description: '硬い食べ物を前歯で噛みちぎる練習で、顎の発達を促進。スルメ・ナッツ・ニンジンスティックなど、家庭でできる食育レシピを紹介します。',
   keywords: '食育,顎の発達,咀嚼力,歯並び,小児矯正,硬い食べ物,よく噛む,レシピ',
 }
 
 export default function FoodEducationPage() {
   return (
-    <div className="min-h-screen bg-white">
-      {/* Breadcrumb */}
-      <div className="bg-[#FDFBF7] py-4">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <div className="flex items-center gap-2 text-sm">
-            <Link href="/" className="text-gray-600 hover:text-[#E67A2E] transition-colors">
-              ホーム
-            </Link>
-            <ChevronRight className="w-4 h-4 text-gray-400" />
-            <Link href="/kidsortho" className="text-gray-600 hover:text-[#E67A2E] transition-colors">
-              こども矯正
-            </Link>
-            <ChevronRight className="w-4 h-4 text-gray-400" />
-            <span className="text-[#E67A2E]">食育レシピ</span>
+    <>
+      <Header />
+      <main className="min-h-screen bg-[#FDFBF7]" style={{ fontFamily: '"游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", sans-serif' }}>
+        {/* Breadcrumb */}
+        <div className="bg-[#FDFBF7] border-b">
+          <div className="container mx-auto px-4 py-3">
+            <div className="flex items-center text-sm text-[#8D8070]">
+              <Link href="/" className="hover:text-[#C5A572] flex items-center transition-colors">
+                <Home className="w-4 h-4 mr-1" />
+                ホーム
+              </Link>
+              <ChevronRight className="w-4 h-4 mx-2" />
+              <Link href="/kidsortho" className="hover:text-[#C5A572] transition-colors">
+                こども矯正
+              </Link>
+              <ChevronRight className="w-4 h-4 mx-2" />
+              <span className="text-[#C5A572] font-bold">食育レシピ</span>
+            </div>
           </div>
         </div>
-      </div>
 
       {/* Hero Section */}
-      <section className="py-2 bg-gradient-to-b from-[#FDFBF7] to-white">
+      <section className="py-6 bg-gradient-to-b from-[#FDFBF7] to-white">
         <div className="container mx-auto px-4 max-w-5xl text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#5A4D41] font-serif">
             顎を育てる食育レシピ<br />
             よく噛む食事で歯並び改善
           </h1>
-          <p className="text-xl md:text-2xl mb-6 text-[#5A4D41] font-medium">
+          <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
+
+          {/* Hero Image */}
+          <div className="mt-8">
+            <KidsOrthoImage
+              name="/images/kidsortho/training/food-education-hero"
+              alt="食育レシピ - よく噛む食事で顎の発達を促進し歯並びを改善"
+              category="training"
+            />
+          </div>
+
+          <p className="text-xl md:text-2xl mt-6 mb-6 text-[#5A4D41] font-medium font-sans">
             硬い食べ物を前歯で噛みちぎる練習で顎の発達を促進
           </p>
-          <div className="w-24 h-1 bg-[#E67A2E] mx-auto"></div>
         </div>
       </section>
 
       {/* Conclusion Section */}
-      <section className="py-2 bg-white">
+      <section className="py-8 bg-white">
         <div className="container mx-auto px-4 max-w-4xl">
-          <div className="bg-gradient-to-br from-[#FDFBF7] to-white rounded-3xl shadow-xl p-8 md:p-12 border-2 border-[#E67A2E]/20">
-            <div className="flex items-start gap-4 mb-6">
-              <BookOpen className="w-8 h-8 text-[#E67A2E] flex-shrink-0 mt-1" />
-              <h2 className="text-2xl md:text-3xl font-bold text-[#5A4D41] font-serif">
-                結論
-              </h2>
-            </div>
-            <div className="prose prose-lg max-w-none text-[#5A4D41] leading-loose">
+          <div className="text-center mb-20">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#5A4D41] mb-8 font-serif">
+              結論
+            </h2>
+            <div className="space-y-4 text-[#5A4D41] leading-loose max-w-3xl mx-auto font-sans">
               <p>
                 <span className="font-bold bg-yellow-100">柔らかい食事ばかりでは、顎が発達せず歯並びが悪化</span>します。
               </p>
-              <p className="mb-4">
-                硬い食べ物を<span className="font-bold text-[#E67A2E]">「前歯で噛みちぎる」</span>練習をすることで、
+              <p>
+                硬い食べ物を<span className="font-bold text-[#C5A572]">「前歯で噛みちぎる」</span>練習をすることで、
                 顎の骨が横に広がり、<span className="font-bold bg-yellow-100">歯が並ぶスペースが確保</span>されます。
               </p>
               <p>
@@ -70,465 +84,187 @@ export default function FoodEducationPage() {
       </section>
 
       {/* なぜ硬い食べ物が必要なのか */}
-      <section className="py-2 bg-[#FDFBF7]">
+      <section className="py-12 bg-[#FDFBF7]">
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-[#5A4D41] font-serif inline-block">
               なぜ硬い食べ物が必要なのか？
             </h2>
-            <div className="w-16 h-0.5 bg-[#E67A2E] mx-auto mt-4"></div>
+            <div className="w-16 h-0.5 bg-[#C5A572] mx-auto mt-4"></div>
           </div>
 
-          <div className="bg-white rounded-3xl shadow-xl p-8 md:p-10 border-2 border-[#E67A2E]/20 mb-8">
-            <p className="text-gray-700 leading-loose mb-6">
+          <div className="space-y-4 text-[#5A4D41] leading-loose font-sans">
+            <p>
               現代の子どもは、<span className="font-bold bg-yellow-100">柔らかい食事（ハンバーグ・パスタ・カレー）</span>が中心で、
               咀嚼回数が激減しています。その結果、顎が十分に発達せず、歯並びが悪化しています。
             </p>
 
-            <div className="grid md:grid-cols-2 gap-6 mb-8">
-              <div className="bg-red-50 p-6 rounded-2xl border-2 border-red-200">
-                <h4 className="font-bold text-red-700 mb-3 text-lg">現代の子ども（柔らかい食事）</h4>
-                <div className="space-y-3">
-                  <div className="bg-white p-4 rounded-lg">
-                    <p className="text-sm text-gray-700 mb-1"><span className="font-bold text-red-700">咀嚼回数：</span></p>
-                    <p className="text-3xl font-bold text-red-700">620回/食</p>
-                  </div>
-                  <div className="bg-white p-4 rounded-lg">
-                    <p className="text-sm text-gray-700 mb-1"><span className="font-bold text-red-700">食事時間：</span></p>
-                    <p className="text-3xl font-bold text-red-700">11分</p>
-                  </div>
-                </div>
+            <div className="space-y-6 mt-6">
+              <div>
+                <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 pb-2 border-b-2 border-[#C5A572]">
+                  現代の子ども（柔らかい食事）
+                </h4>
+                <p><span className="font-bold">咀嚼回数：</span>620回/食</p>
+                <p><span className="font-bold">食事時間：</span>11分</p>
               </div>
 
-              <div className="bg-green-50 p-6 rounded-2xl border-2 border-green-200">
-                <h4 className="font-bold text-green-700 mb-3 text-lg">戦前の日本人（硬い食事）</h4>
-                <div className="space-y-3">
-                  <div className="bg-white p-4 rounded-lg">
-                    <p className="text-sm text-gray-700 mb-1"><span className="font-bold text-green-700">咀嚼回数：</span></p>
-                    <p className="text-3xl font-bold text-green-700">1,420回/食</p>
-                  </div>
-                  <div className="bg-white p-4 rounded-lg">
-                    <p className="text-sm text-gray-700 mb-1"><span className="font-bold text-green-700">食事時間：</span></p>
-                    <p className="text-3xl font-bold text-green-700">22分</p>
-                  </div>
-                </div>
+              <div>
+                <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 pb-2 border-b-2 border-[#C5A572]">
+                  昭和初期の子ども（硬い食事）
+                </h4>
+                <p><span className="font-bold">咀嚼回数：</span>1,420回/食</p>
+                <p><span className="font-bold">食事時間：</span>22分</p>
               </div>
             </div>
 
-            <div className="bg-[#FDFBF7] p-6 rounded-xl">
-              <h4 className="font-bold text-[#5A4D41] mb-3 text-lg">咀嚼回数が半分以下になった結果</h4>
-              <ul className="space-y-2 text-sm text-gray-700">
-                <li className="flex items-start gap-2">
-                  <span className="text-red-600 mt-1">●</span>
-                  <span><span className="font-bold">顎の骨が十分に発達しない</span>（横幅が狭いまま）</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-red-600 mt-1">●</span>
-                  <span>歯が並ぶスペースが不足し、<span className="font-bold">デコボコ（叢生）</span>になる</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-red-600 mt-1">●</span>
-                  <span>咬合力（噛む力）が弱く、<span className="font-bold">消化不良</span>や<span className="font-bold">集中力低下</span>にもつながる</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="bg-gradient-to-br from-[#E67A2E]/10 to-[#E67A2E]/5 rounded-3xl p-8 border-2 border-[#E67A2E]/20">
-            <div className="flex items-start gap-4">
-              <Apple className="w-10 h-10 text-[#E67A2E] flex-shrink-0 mt-1" />
-              <div className="flex-1">
-                <h4 className="font-bold text-[#5A4D41] mb-3 text-xl">「前歯で噛みちぎる」が最重要</h4>
-                <p className="text-gray-700 leading-loose mb-3">
-                  ただ硬いだけでなく、<span className="font-bold bg-yellow-100">「前歯で噛みちぎる」動作</span>が重要です。
-                  前歯で噛むことで、<span className="font-bold text-[#E67A2E]">顎の骨に垂直方向の刺激</span>が加わり、
-                  骨が横に広がります。
-                </p>
-                <p className="text-sm text-gray-600">
-                  例：リンゴの丸かじり、トウモロコシの芯かじり、スルメを前歯で引きちぎるなど
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 顎を育てる食材リスト */}
-      <section className="py-2 bg-white">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#5A4D41] font-serif inline-block">
-              顎を育てる食材リスト
-            </h2>
-            <div className="w-16 h-0.5 bg-[#E67A2E] mx-auto mt-4"></div>
-            <p className="text-gray-600 mt-4">
-              年齢別におすすめの食材を紹介します
+            <p className="mt-6">
+              <span className="font-bold">重要：</span>
+              咀嚼回数が減ると、<span className="font-bold">顎の骨への刺激が不足</span>し、
+              横方向への成長が止まります。結果、歯が並ぶスペースが不足し、叢生（デコボコ）になります。
             </p>
           </div>
-
-          {/* 3〜5歳向け */}
-          <div className="bg-gradient-to-br from-[#FDFBF7] to-white rounded-3xl shadow-xl p-8 md:p-10 border-2 border-[#E67A2E]/20 mb-8">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 bg-[#E67A2E] rounded-full flex items-center justify-center text-white font-bold text-lg">
-                3〜5歳
-              </div>
-              <h3 className="text-2xl font-bold text-[#5A4D41] font-serif">
-                まずは「少し硬め」から始める
-              </h3>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-4">
-              <div className="bg-white p-4 rounded-xl border border-gray-200">
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-[#E67A2E] flex-shrink-0 mt-1" />
-                  <div className="flex-1">
-                    <h4 className="font-bold text-[#5A4D41] mb-1">ニンジンスティック（生）</h4>
-                    <p className="text-xs text-gray-600">前歯で噛みちぎる練習に最適。スティック状にカットして持たせる</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-white p-4 rounded-xl border border-gray-200">
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-[#E67A2E] flex-shrink-0 mt-1" />
-                  <div className="flex-1">
-                    <h4 className="font-bold text-[#5A4D41] mb-1">リンゴ（皮つき・4等分）</h4>
-                    <p className="text-xs text-gray-600">「丸かじり」の練習。皮つきのまま大きめにカットする</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-white p-4 rounded-xl border border-gray-200">
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-[#E67A2E] flex-shrink-0 mt-1" />
-                  <div className="flex-1">
-                    <h4 className="font-bold text-[#5A4D41] mb-1">焼き芋（皮つき）</h4>
-                    <p className="text-xs text-gray-600">自然な甘みで子どもが好きな硬さ。皮ごと噛む練習になる</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-white p-4 rounded-xl border border-gray-200">
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-[#E67A2E] flex-shrink-0 mt-1" />
-                  <div className="flex-1">
-                    <h4 className="font-bold text-[#5A4D41] mb-1">トウモロコシ（芯つき）</h4>
-                    <p className="text-xs text-gray-600">前歯で引きちぎる動作が自然にできる。夏の定番食材</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-white p-4 rounded-xl border border-gray-200">
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-[#E67A2E] flex-shrink-0 mt-1" />
-                  <div className="flex-1">
-                    <h4 className="font-bold text-[#5A4D41] mb-1">枝豆（さやごと）</h4>
-                    <p className="text-xs text-gray-600">前歯でさやから豆を押し出す動作が顎のトレーニングになる</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-white p-4 rounded-xl border border-gray-200">
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-[#E67A2E] flex-shrink-0 mt-1" />
-                  <div className="flex-1">
-                    <h4 className="font-bold text-[#5A4D41] mb-1">フランスパン（小さめ）</h4>
-                    <p className="text-xs text-gray-600">外側が硬く、よく噛まないと飲み込めない。咀嚼回数が増える</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* 6〜12歳向け */}
-          <div className="bg-gradient-to-br from-[#FDFBF7] to-white rounded-3xl shadow-xl p-8 md:p-10 border-2 border-[#E67A2E]/20">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 bg-[#E67A2E] rounded-full flex items-center justify-center text-white font-bold text-lg">
-                6〜12歳
-              </div>
-              <h3 className="text-2xl font-bold text-[#5A4D41] font-serif">
-                本格的に「硬い食材」に挑戦
-              </h3>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-4">
-              <div className="bg-white p-4 rounded-xl border border-gray-200">
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-[#E67A2E] flex-shrink-0 mt-1" />
-                  <div className="flex-1">
-                    <h4 className="font-bold text-[#5A4D41] mb-1">スルメ（無添加）</h4>
-                    <p className="text-xs text-gray-600 mb-2">最強の顎トレ食材。前歯で引きちぎり、奥歯で100回以上噛む</p>
-                    <p className="text-xs text-[#E67A2E] font-bold">★おすすめ度：5/5</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-white p-4 rounded-xl border border-gray-200">
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-[#E67A2E] flex-shrink-0 mt-1" />
-                  <div className="flex-1">
-                    <h4 className="font-bold text-[#5A4D41] mb-1">ナッツ類（アーモンド・クルミ）</h4>
-                    <p className="text-xs text-gray-600 mb-2">栄養価も高く、毎日のおやつに最適。1日10粒を目安に</p>
-                    <p className="text-xs text-[#E67A2E] font-bold">★おすすめ度：5/5</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-white p-4 rounded-xl border border-gray-200">
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-[#E67A2E] flex-shrink-0 mt-1" />
-                  <div className="flex-1">
-                    <h4 className="font-bold text-[#5A4D41] mb-1">昆布（おしゃぶり昆布）</h4>
-                    <p className="text-xs text-gray-600 mb-2">長時間噛み続けられる。テレビを見ながらでもOK</p>
-                    <p className="text-xs text-[#E67A2E] font-bold">★おすすめ度：4/5</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-white p-4 rounded-xl border border-gray-200">
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-[#E67A2E] flex-shrink-0 mt-1" />
-                  <div className="flex-1">
-                    <h4 className="font-bold text-[#5A4D41] mb-1">干し芋</h4>
-                    <p className="text-xs text-gray-600 mb-2">甘くて子どもが好きな味。硬さもちょうど良い</p>
-                    <p className="text-xs text-[#E67A2E] font-bold">★おすすめ度：4/5</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-white p-4 rounded-xl border border-gray-200">
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-[#E67A2E] flex-shrink-0 mt-1" />
-                  <div className="flex-1">
-                    <h4 className="font-bold text-[#5A4D41] mb-1">せんべい（固焼き）</h4>
-                    <p className="text-xs text-gray-600 mb-2">おやつとして手軽。ただし糖分に注意（虫歯リスク）</p>
-                    <p className="text-xs text-[#E67A2E] font-bold">★おすすめ度：3/5</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-white p-4 rounded-xl border border-gray-200">
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-[#E67A2E] flex-shrink-0 mt-1" />
-                  <div className="flex-1">
-                    <h4 className="font-bold text-[#5A4D41] mb-1">ビーフジャーキー</h4>
-                    <p className="text-xs text-gray-600 mb-2">高タンパクで栄養価が高い。塩分が多いので量に注意</p>
-                    <p className="text-xs text-[#E67A2E] font-bold">★おすすめ度：3/5</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-white p-4 rounded-xl border border-gray-200">
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-[#E67A2E] flex-shrink-0 mt-1" />
-                  <div className="flex-1">
-                    <h4 className="font-bold text-[#5A4D41] mb-1">煮干し</h4>
-                    <p className="text-xs text-gray-600 mb-2">カルシウムも摂れる。頭・内臓を取った食べやすいものを選ぶ</p>
-                    <p className="text-xs text-[#E67A2E] font-bold">★おすすめ度：4/5</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-white p-4 rounded-xl border border-gray-200">
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-[#E67A2E] flex-shrink-0 mt-1" />
-                  <div className="flex-1">
-                    <h4 className="font-bold text-[#5A4D41] mb-1">根菜類（レンコン・ゴボウ）</h4>
-                    <p className="text-xs text-gray-600 mb-2">食事に取り入れやすい。きんぴらごぼうなどで提供</p>
-                    <p className="text-xs text-[#E67A2E] font-bold">★おすすめ度：4/5</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
-      {/* 実践！1週間の食育レシピ例 */}
-      <section className="py-2 bg-[#FDFBF7]">
+      {/* 顎を育てる食育レシピ */}
+      <section className="py-12 bg-white">
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-[#5A4D41] font-serif inline-block">
-              実践！1週間の食育レシピ例
+              顎を育てる食育レシピ
             </h2>
-            <div className="w-16 h-0.5 bg-[#E67A2E] mx-auto mt-4"></div>
-            <p className="text-gray-600 mt-4">
-              毎日の食事・おやつに取り入れやすいメニュー
-            </p>
+            <div className="w-16 h-0.5 bg-[#C5A572] mx-auto mt-4"></div>
           </div>
 
-          <div className="bg-white rounded-3xl shadow-xl p-8 md:p-10 border-2 border-[#E67A2E]/20">
-            <div className="space-y-6">
-              <div className="border-b border-gray-200 pb-6">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 bg-[#E67A2E] rounded-full flex items-center justify-center text-white font-bold">
-                    月
-                  </div>
-                  <h4 className="font-bold text-[#5A4D41] text-lg">朝：トースト → フランスパン</h4>
-                </div>
-                <p className="text-sm text-gray-700 leading-relaxed ml-12">
-                  <span className="font-bold bg-yellow-100">食パンの代わりにフランスパン</span>を出すだけで、咀嚼回数が2倍に。
-                  外側の硬い部分を前歯で噛みちぎる練習になります。
-                </p>
-              </div>
-
-              <div className="border-b border-gray-200 pb-6">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 bg-[#E67A2E] rounded-full flex items-center justify-center text-white font-bold">
-                    火
-                  </div>
-                  <h4 className="font-bold text-[#5A4D41] text-lg">おやつ：グミ → アーモンド10粒</h4>
-                </div>
-                <p className="text-sm text-gray-700 leading-relaxed ml-12">
-                  <span className="font-bold bg-yellow-100">市販のグミをアーモンドに変更</span>。
-                  よく噛まないと飲み込めないため、自然と咀嚼回数が増えます。
-                  ビタミンEも摂れて栄養バランスも◎。
-                </p>
-              </div>
-
-              <div className="border-b border-gray-200 pb-6">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 bg-[#E67A2E] rounded-full flex items-center justify-center text-white font-bold">
-                    水
-                  </div>
-                  <h4 className="font-bold text-[#5A4D41] text-lg">夕食：ハンバーグ → きんぴらごぼうを追加</h4>
-                </div>
-                <p className="text-sm text-gray-700 leading-relaxed ml-12">
-                  ハンバーグ（柔らかい）だけでなく、<span className="font-bold bg-yellow-100">硬めのきんぴらごぼうを副菜</span>として追加。
-                  レンコン・ゴボウは根菜類で噛み応えがあります。
-                </p>
-              </div>
-
-              <div className="border-b border-gray-200 pb-6">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 bg-[#E67A2E] rounded-full flex items-center justify-center text-white font-bold">
-                    木
-                  </div>
-                  <h4 className="font-bold text-[#5A4D41] text-lg">朝：バナナ → リンゴ（皮つき・4等分）</h4>
-                </div>
-                <p className="text-sm text-gray-700 leading-relaxed ml-12">
-                  バナナ（噛まずに飲み込める）ではなく、<span className="font-bold bg-yellow-100">リンゴを大きめにカット</span>して提供。
-                  「丸かじり」の練習になり、前歯で噛みちぎる動作が顎を育てます。
-                </p>
-              </div>
-
-              <div className="border-b border-gray-200 pb-6">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 bg-[#E67A2E] rounded-full flex items-center justify-center text-white font-bold">
-                    金
-                  </div>
-                  <h4 className="font-bold text-[#5A4D41] text-lg">おやつ：ポテトチップス → 干し芋</h4>
-                </div>
-                <p className="text-sm text-gray-700 leading-relaxed ml-12">
-                  ポテトチップス（噛まずに溶ける）を<span className="font-bold bg-yellow-100">干し芋に変更</span>。
-                  自然な甘みで子どもが好きな味。硬さもちょうど良く、よく噛まないと飲み込めません。
-                </p>
-              </div>
-
-              <div className="border-b border-gray-200 pb-6">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 bg-[#E67A2E] rounded-full flex items-center justify-center text-white font-bold">
-                    土
-                  </div>
-                  <h4 className="font-bold text-[#5A4D41] text-lg">おやつ：スルメ5分チャレンジ</h4>
-                </div>
-                <p className="text-sm text-gray-700 leading-relaxed ml-12">
-                  週末は<span className="font-bold bg-yellow-100">スルメを5分間噛み続ける</span>チャレンジ。
-                  テレビを見ながらでもOK。前歯で引きちぎり、奥歯で100回以上噛む最強トレーニング。
-                </p>
-              </div>
-
-              <div className="pb-0">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 bg-[#E67A2E] rounded-full flex items-center justify-center text-white font-bold">
-                    日
-                  </div>
-                  <h4 className="font-bold text-[#5A4D41] text-lg">昼：焼きトウモロコシ（芯つき）</h4>
-                </div>
-                <p className="text-sm text-gray-700 leading-relaxed ml-12">
-                  トウモロコシを芯つきのまま提供。<span className="font-bold bg-yellow-100">前歯で引きちぎる動作</span>が自然にできる。
-                  夏の定番食材で、子どもも楽しく食べられます。
-                </p>
-              </div>
-            </div>
+          {/* Method Image */}
+          <div className="mb-12">
+            <KidsOrthoImage
+              name="/images/kidsortho/training/food-education-method"
+              alt="食育の実践方法 - 硬い食べ物を前歯で噛みちぎる練習"
+              category="training"
+            />
           </div>
 
-          <div className="bg-gradient-to-br from-[#E67A2E]/10 to-[#E67A2E]/5 rounded-3xl p-8 border-2 border-[#E67A2E]/20 mt-8">
-            <div className="flex items-start gap-4">
-              <Utensils className="w-10 h-10 text-[#E67A2E] flex-shrink-0 mt-1" />
-              <div className="flex-1">
-                <h4 className="font-bold text-[#5A4D41] mb-3 text-xl">食育のポイント</h4>
-                <ul className="space-y-2 text-sm text-gray-700">
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#E67A2E] mt-1">●</span>
-                    <span><span className="font-bold">「柔らかい食事をなくす」のではなく、「硬い食材を追加」</span>する考え方</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#E67A2E] mt-1">●</span>
-                    <span>毎食すべてを硬くする必要はなく、<span className="font-bold">1日1回、硬い食材を取り入れる</span>だけでOK</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#E67A2E] mt-1">●</span>
-                    <span>子どもが嫌がる場合は無理強いせず、<span className="font-bold">好きな味のもの（干し芋・ナッツ）</span>から始める</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#E67A2E] mt-1">●</span>
-                    <span>親が一緒に食べることで、<span className="font-bold">「よく噛むのが当たり前」</span>の文化を作る</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+          <div className="space-y-8 text-[#5A4D41] leading-loose font-sans">
+            {/* おやつ編 */}
+            <div>
+              <h3 className="text-2xl md:text-3xl font-bold text-[#5A4D41] font-serif mb-6">おやつ編</h3>
 
-      {/* 注意点 */}
-      <section className="py-2 bg-white">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#5A4D41] font-serif inline-block">
-              注意点
-            </h2>
-            <div className="w-16 h-0.5 bg-[#E67A2E] mx-auto mt-4"></div>
-          </div>
+              <div className="space-y-6">
+                <div>
+                  <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 pb-2 border-b-2 border-[#C5A572]">
+                    スルメ（するめいか）
+                  </h4>
+                  <p>
+                    <span className="font-bold bg-yellow-100">最も効果的な顎育おやつ</span>。
+                    前歯で噛みちぎる練習に最適で、咀嚼回数も多くなります。
+                  </p>
+                  <p className="text-sm mt-2">
+                    <span className="font-bold text-[#C5A572]">目安：</span>
+                    1日1枚（10cm×5cm程度）
+                  </p>
+                </div>
 
-          <div className="space-y-6">
-            <div className="bg-red-50 p-6 rounded-2xl border-2 border-red-200">
-              <div className="flex items-start gap-4">
-                <AlertCircle className="w-8 h-8 text-red-600 flex-shrink-0 mt-1" />
-                <div className="flex-1">
-                  <h4 className="font-bold text-red-700 mb-2 text-lg">3歳未満は誤嚥に注意</h4>
-                  <p className="text-sm text-gray-700 leading-relaxed">
-                    ナッツ類・スルメは<span className="font-bold bg-yellow-100">3歳未満には与えない</span>でください。
-                    気管に入って窒息する危険があります。3歳未満はニンジンスティック・リンゴなど、
-                    大きめにカットして持たせられる食材から始めましょう。
+                <div>
+                  <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 pb-2 border-b-2 border-[#C5A572]">
+                    アーモンド・クルミ
+                  </h4>
+                  <p>
+                    硬くて栄養価が高いナッツ類。
+                    <span className="font-bold bg-yellow-100">奥歯で噛む力</span>を鍛えます。
+                  </p>
+                  <p className="text-sm mt-2">
+                    <span className="font-bold text-[#C5A572]">目安：</span>
+                    1日10粒程度（無塩・素焼き）
+                  </p>
+                </div>
+
+                <div>
+                  <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 pb-2 border-b-2 border-[#C5A572]">
+                    ニンジンスティック
+                  </h4>
+                  <p>
+                    生のニンジンを縦に切ったもの。
+                    <span className="font-bold bg-yellow-100">前歯で噛みちぎる</span>練習に最適。
+                  </p>
+                  <p className="text-sm mt-2">
+                    <span className="font-bold text-[#C5A572]">目安：</span>
+                    1日1〜2本（10cm程度）
+                  </p>
+                </div>
+
+                <div>
+                  <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 pb-2 border-b-2 border-[#C5A572]">
+                    煮干し・小魚
+                  </h4>
+                  <p>
+                    カルシウムも豊富で骨の成長にも良い。
+                    <span className="font-bold bg-yellow-100">頭から丸ごと食べる</span>ことで咀嚼回数が増えます。
+                  </p>
+                  <p className="text-sm mt-2">
+                    <span className="font-bold text-[#C5A572]">目安：</span>
+                    1日10匹程度
+                  </p>
+                </div>
+
+                <div>
+                  <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 pb-2 border-b-2 border-[#C5A572]">
+                    干し芋
+                  </h4>
+                  <p>
+                    自然な甘みで子どもが喜ぶおやつ。
+                    <span className="font-bold bg-yellow-100">よく噛まないと飲み込めない</span>ため、咀嚼力を鍛えられます。
+                  </p>
+                  <p className="text-sm mt-2">
+                    <span className="font-bold text-[#C5A572]">目安：</span>
+                    1日1〜2切れ（無添加のもの）
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="bg-red-50 p-6 rounded-2xl border-2 border-red-200">
-              <div className="flex items-start gap-4">
-                <AlertCircle className="w-8 h-8 text-red-600 flex-shrink-0 mt-1" />
-                <div className="flex-1">
-                  <h4 className="font-bold text-red-700 mb-2 text-lg">砂糖入りのおやつは虫歯リスク</h4>
-                  <p className="text-sm text-gray-700 leading-relaxed">
-                    硬いおやつでも、<span className="font-bold bg-yellow-100">砂糖が入っているもの（せんべい・キャラメル）</span>は虫歯のリスクがあります。
-                    できるだけ<span className="font-bold text-[#E67A2E]">無添加・無糖のもの（スルメ・ナッツ・煮干し）</span>を選びましょう。
+            {/* 食事編 */}
+            <div>
+              <h3 className="text-2xl md:text-3xl font-bold text-[#5A4D41] font-serif mb-6">食事編</h3>
+
+              <div className="space-y-6">
+                <div>
+                  <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 pb-2 border-b-2 border-[#C5A572]">
+                    玄米・雑穀米
+                  </h4>
+                  <p>
+                    白米より硬く、<span className="font-bold bg-yellow-100">咀嚼回数が1.5倍</span>に増えます。
+                    栄養価も高いので一石二鳥。
                   </p>
                 </div>
-              </div>
-            </div>
 
-            <div className="bg-red-50 p-6 rounded-2xl border-2 border-red-200">
-              <div className="flex items-start gap-4">
-                <AlertCircle className="w-8 h-8 text-red-600 flex-shrink-0 mt-1" />
-                <div className="flex-1">
-                  <h4 className="font-bold text-red-700 mb-2 text-lg">アレルギー確認を忘れずに</h4>
-                  <p className="text-sm text-gray-700 leading-relaxed">
-                    ナッツ類は<span className="font-bold bg-yellow-100">アレルギーが出やすい食材</span>です。
-                    初めて与える場合は、少量から始めて様子を見てください。
-                    アレルギーがある場合は、昆布・煮干し・根菜類など別の硬い食材で代用しましょう。
+                <div>
+                  <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 pb-2 border-b-2 border-[#C5A572]">
+                    根菜類（ごぼう・レンコン）
+                  </h4>
+                  <p>
+                    繊維質が多く、<span className="font-bold bg-yellow-100">自然と噛む回数が増える</span>食材。
+                    きんぴらごぼうなどがおすすめ。
+                  </p>
+                </div>
+
+                <div>
+                  <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 pb-2 border-b-2 border-[#C5A572]">
+                    りんご・梨（丸かじり）
+                  </h4>
+                  <p>
+                    <span className="font-bold bg-yellow-100">前歯で噛みちぎる力</span>を鍛えるのに最適。
+                    カットせず、丸ごとかぶりつかせましょう。
+                  </p>
+                </div>
+
+                <div>
+                  <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 pb-2 border-b-2 border-[#C5A572]">
+                    焼き魚（骨付き）
+                  </h4>
+                  <p>
+                    骨を取りながら食べることで、
+                    <span className="font-bold bg-yellow-100">咀嚼を意識</span>するようになります。
                   </p>
                 </div>
               </div>
@@ -537,189 +273,289 @@ export default function FoodEducationPage() {
         </div>
       </section>
 
-      {/* 効果が出るまでの期間 */}
-      <section className="py-2 bg-[#FDFBF7]">
+      {/* 効果が出る期間 */}
+      <section className="py-12 bg-[#FDFBF7]">
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-[#5A4D41] font-serif inline-block">
               効果が出るまでの期間
             </h2>
-            <div className="w-16 h-0.5 bg-[#E67A2E] mx-auto mt-4"></div>
+            <div className="w-16 h-0.5 bg-[#C5A572] mx-auto mt-4"></div>
           </div>
 
-          <div className="space-y-8">
-            <div className="flex items-start gap-4">
-              <div className="w-20 h-20 bg-[#E67A2E] rounded-full flex items-center justify-center flex-shrink-0">
-                <div className="text-center">
-                  <p className="text-2xl font-bold text-white">1</p>
-                  <p className="text-xs text-white">ヶ月</p>
-                </div>
-              </div>
-              <div className="flex-1 bg-white p-6 rounded-2xl shadow-lg">
-                <h4 className="font-bold text-gray-800 mb-2 text-lg">咀嚼回数が増える（食事時間が長くなる）</h4>
-                <p className="text-sm text-gray-700">
-                  硬い食材を食べることに慣れて、<span className="font-bold bg-yellow-100">自然と咀嚼回数が増えます</span>。
-                  食事時間が15分以上になれば、顎の筋肉が鍛えられている証拠です。
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4">
-              <div className="w-20 h-20 bg-[#E67A2E] rounded-full flex items-center justify-center flex-shrink-0">
-                <div className="text-center">
-                  <p className="text-2xl font-bold text-white">3</p>
-                  <p className="text-xs text-white">ヶ月</p>
-                </div>
-              </div>
-              <div className="flex-1 bg-white p-6 rounded-2xl shadow-lg">
-                <h4 className="font-bold text-gray-800 mb-2 text-lg">顎の筋肉がつき、咬合力が向上</h4>
-                <p className="text-sm text-gray-700">
-                  毎日硬い食材を食べることで、<span className="font-bold bg-yellow-100">顎の筋肉が発達</span>します。
-                  咬合力（噛む力）が強くなり、硬いものを噛むのが苦にならなくなります。
-                  <span className="font-bold text-[#E67A2E]">顎の骨も少しずつ横に広がり始めます</span>。
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4">
-              <div className="w-20 h-20 bg-[#E67A2E] rounded-full flex items-center justify-center flex-shrink-0">
-                <div className="text-center">
-                  <p className="text-2xl font-bold text-white">6</p>
-                  <p className="text-xs text-white">ヶ月</p>
-                </div>
-              </div>
-              <div className="flex-1 bg-white p-6 rounded-2xl shadow-lg">
-                <h4 className="font-bold text-gray-800 mb-2 text-lg">顎の横幅が広がり、歯が並ぶスペースが確保される</h4>
-                <p className="text-sm text-gray-700">
-                  6ヶ月〜1年続けることで、<span className="font-bold bg-yellow-100">顎の骨が横に広がり、歯が並ぶスペースが確保</span>されます。
-                  特に<span className="font-bold text-[#E67A2E]">成長期（6〜12歳）</span>は効果が出やすく、
-                  矯正治療と併用すれば治療期間の短縮にもつながります。
-                </p>
-              </div>
-            </div>
+          {/* Effect Image */}
+          <div className="mb-12">
+            <KidsOrthoImage
+              name="/images/kidsortho/training/food-education-effect"
+              alt="食育の効果 - 顎の発達と歯並びの改善"
+              category="training"
+            />
           </div>
 
-          <div className="bg-gradient-to-br from-[#E67A2E]/10 to-[#E67A2E]/5 rounded-3xl p-8 border-2 border-[#E67A2E]/20 mt-12">
-            <div className="flex items-start gap-4">
-              <TrendingUp className="w-10 h-10 text-[#E67A2E] flex-shrink-0 mt-1" />
-              <div className="flex-1">
-                <h4 className="font-bold text-[#5A4D41] mb-3 text-xl">継続のコツ</h4>
-                <ul className="space-y-2 text-sm text-gray-700">
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#E67A2E] mt-1">●</span>
-                    <span><span className="font-bold">「硬い食事の日」を週3回</span>設定する（月・水・金など）</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#E67A2E] mt-1">●</span>
-                    <span>子どもが好きな味のもの（干し芋・ナッツ）から始める</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#E67A2E] mt-1">●</span>
-                    <span>親も一緒に食べて、<span className="font-bold">「よく噛むのが当たり前」の文化</span>を作る</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#E67A2E] mt-1">●</span>
-                    <span>食事時間を計測して、<span className="font-bold">「15分以上」を目標</span>にする</span>
-                  </li>
-                </ul>
+          <div className="space-y-6 text-[#5A4D41] leading-loose font-sans">
+            <div>
+              <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 pb-2 border-b-2 border-[#C5A572]">
+                3ヶ月：噛む力が強くなる
+              </h4>
+              <p>
+                咬筋が発達し、硬いものでも問題なく食べられるようになります。
+                「食事時間が長くなった」「よく噛むようになった」という変化が見られます。
+              </p>
+            </div>
+
+            <div>
+              <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 pb-2 border-b-2 border-[#C5A572]">
+                6ヶ月：顎の幅が広がり始める
+              </h4>
+              <p>
+                レントゲンで顎の骨の成長が確認できます。
+                特に<span className="font-bold bg-yellow-100">横方向への成長</span>が促進され、
+                歯が並ぶスペースが確保され始めます。
+              </p>
+            </div>
+
+            <div>
+              <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 pb-2 border-b-2 border-[#C5A572]">
+                1年：歯並びの改善が実感できる
+              </h4>
+              <p>
+                軽度の叢生であれば、自然と歯が並び始めます。
+                ただし、<span className="font-bold bg-yellow-100">重度の場合は装置との併用が必要</span>です。
+              </p>
+            </div>
+
+            <p className="mt-8">
+              <span className="font-bold">重要：</span>
+              食育は<span className="font-bold bg-yellow-100">予防・成長期の顎育</span>に最も効果的です。
+              既に重度の不正咬合がある場合は、装置治療と併用することで相乗効果が得られます。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* 注意点 */}
+      <section className="py-12 bg-white">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#5A4D41] font-serif inline-block">
+              食育の注意点
+            </h2>
+            <div className="w-16 h-0.5 bg-[#C5A572] mx-auto mt-4"></div>
+          </div>
+
+          <div className="space-y-6 text-[#5A4D41] leading-loose font-sans">
+            <div>
+              <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 pb-2 border-b-2 border-[#C5A572]">
+                3歳未満は誤嚥に注意
+              </h4>
+              <p>
+                ナッツ類・スルメなどは、3歳未満の子どもには<span className="font-bold">誤嚥のリスク</span>があります。
+                必ず保護者が見守りながら与えてください。
+              </p>
+            </div>
+
+            <div>
+              <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 pb-2 border-b-2 border-[#C5A572]">
+                食べ過ぎに注意
+              </h4>
+              <p>
+                ナッツ類は高カロリーなので、<span className="font-bold bg-yellow-100">1日10粒程度</span>に留めましょう。
+                食べ過ぎると肥満の原因になります。
+              </p>
+            </div>
+
+            <div>
+              <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 pb-2 border-b-2 border-[#C5A572]">
+                アレルギーチェック
+              </h4>
+              <p>
+                ナッツ類はアレルギーを起こしやすい食品です。
+                初めて与える場合は、<span className="font-bold bg-yellow-100">少量から始めて様子を見る</span>ようにしてください。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 食事の時の姿勢 */}
+      <section className="py-12 bg-[#FDFBF7]">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#5A4D41] font-serif inline-block">
+              食事の時の姿勢
+            </h2>
+            <div className="w-16 h-0.5 bg-[#C5A572] mx-auto mt-4"></div>
+            <p className="text-gray-600 mt-4">
+              正しい姿勢で食べることで、噛む力が最大限に発揮されます
+            </p>
+          </div>
+
+          <div className="space-y-6 text-[#5A4D41] leading-loose font-sans">
+            <div>
+              <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 pb-2 border-b-2 border-[#C5A572]">
+                足を床にしっかりつける
+              </h4>
+              <p>
+                <span className="font-bold bg-yellow-100">足が床につかないと、噛む力が30%低下</span>します。
+                子ども用の椅子や足台を使って、足裏全体が床につくようにしましょう。
+              </p>
+            </div>
+
+            <div>
+              <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 pb-2 border-b-2 border-[#C5A572]">
+                背筋を伸ばして座る
+              </h4>
+              <p>
+                猫背で食べると、<span className="font-bold">奥歯に力が入りにくく</span>なります。
+                背もたれに軽く背中をつけて、<span className="font-bold bg-yellow-100">背筋を伸ばした姿勢</span>で食事をしましょう。
+              </p>
+            </div>
+
+            <div>
+              <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 pb-2 border-b-2 border-[#C5A572]">
+                テーブルと椅子の高さを調整
+              </h4>
+              <p>
+                テーブルが高すぎたり低すぎたりすると、噛みにくくなります。
+                <span className="font-bold bg-yellow-100">肘が90度に曲がる高さ</span>が理想的です。
+              </p>
+            </div>
+
+            <div>
+              <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 pb-2 border-b-2 border-[#C5A572]">
+                両足を揃えて座る
+              </h4>
+              <p>
+                足を組んだり、片方の足だけを床につけたりすると、<span className="font-bold">体が歪んで噛み合わせにも影響</span>します。
+                両足を揃えて、しっかり床につけることが大切です。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* よくある質問 */}
+      <section className="py-12 bg-white">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl md:text-3xl font-bold text-[#5A4D41] font-serif inline-block">よくある質問</h3>
+            <div className="w-16 h-0.5 bg-[#C5A572] mx-auto mt-4"></div>
+          </div>
+
+          <div className="space-y-6">
+            <div className="bg-white rounded-xl shadow-md border border-gray-200 p-6">
+              <div className="mb-4">
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="w-8 h-8 bg-[#C5A572] rounded-full flex items-center justify-center text-white text-sm flex-shrink-0">Q1</span>
+                  <h4 className="font-bold text-[#5A4D41] text-lg">硬い食べ物はいつから与えても大丈夫ですか？</h4>
+                </div>
+              </div>
+              <div className="text-[#8D8070] leading-relaxed">
+                <p>
+                  <strong className="text-[#C5A572]">A.</strong>
+                  <span className="font-bold bg-yellow-100">3歳頃から徐々に始める</span>のがおすすめです。
+                  スルメやナッツは誤嚥のリスクがあるため、必ず保護者が見守りながら与えてください。
+                  最初は柔らかめのものから始めて、徐々に硬いものに移行していきましょう。
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-md border border-gray-200 p-6">
+              <div className="mb-4">
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="w-8 h-8 bg-[#C5A572] rounded-full flex items-center justify-center text-white text-sm flex-shrink-0">Q2</span>
+                  <h4 className="font-bold text-[#5A4D41] text-lg">すでに歯並びが悪い場合でも食育は効果がありますか？</h4>
+                </div>
+              </div>
+              <div className="text-[#8D8070] leading-relaxed">
+                <p>
+                  <strong className="text-[#C5A572]">A.</strong>
+                  はい、効果があります。<span className="font-bold bg-yellow-100">装置治療と食育を併用することで、より効果的な矯正治療</span>が可能になります。
+                  また、治療後の後戻り防止にも役立ちます。ただし、重度の不正咬合の場合は、装置治療が必須です。
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-md border border-gray-200 p-6">
+              <div className="mb-4">
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="w-8 h-8 bg-[#C5A572] rounded-full flex items-center justify-center text-white text-sm flex-shrink-0">Q3</span>
+                  <h4 className="font-bold text-[#5A4D41] text-lg">毎日続けないと効果はありませんか？</h4>
+                </div>
+              </div>
+              <div className="text-[#8D8070] leading-relaxed">
+                <p>
+                  <strong className="text-[#C5A572]">A.</strong>
+                  <span className="font-bold bg-yellow-100">週4〜5日続けるだけでも十分効果があります</span>。
+                  完璧を目指すと続かないので、できる範囲で習慣化することが大切です。
+                  おやつの時間に硬いものを取り入れるなど、無理なく続けられる方法を見つけましょう。
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-md border border-gray-200 p-6">
+              <div className="mb-4">
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="w-8 h-8 bg-[#C5A572] rounded-full flex items-center justify-center text-white text-sm flex-shrink-0">Q4</span>
+                  <h4 className="font-bold text-[#5A4D41] text-lg">食育だけで歯並びは治りますか？</h4>
+                </div>
+              </div>
+              <div className="text-[#8D8070] leading-relaxed">
+                <p>
+                  <strong className="text-[#C5A572]">A.</strong>
+                  軽度の叢生（ガタガタ）や<span className="font-bold bg-yellow-100">予防段階であれば、食育だけで改善する可能性</span>があります。
+                  しかし、受け口・出っ歯・重度の叢生などは、装置治療が必要です。
+                  まずは歯科医院で診断を受けて、適切な治療方法を相談しましょう。
+                </p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-2 bg-white">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#5A4D41] font-serif inline-block">
-              よくある質問
-            </h2>
-            <div className="w-16 h-0.5 bg-[#E67A2E] mx-auto mt-4"></div>
-          </div>
-
-          <div className="space-y-6">
-            <div className="bg-[#FDFBF7] rounded-2xl shadow-lg p-8 border-2 border-[#E67A2E]/10">
-              <h3 className="text-xl font-bold text-[#E67A2E] mb-4 flex items-start gap-3">
-                <span className="flex-shrink-0">Q1.</span>
-                <span>硬い食べ物だけで歯並びは治りますか？</span>
-              </h3>
-              <div className="pl-9">
-                <p className="text-gray-700 leading-loose">
-                  <span className="font-bold text-[#5A4D41]">A.</span>
-                  硬い食べ物だけでは、すでに悪化した歯並びを完全に治すことはできません。
-                  しかし、<span className="font-bold bg-yellow-100">成長期（6〜12歳）に硬い食材を食べることで、顎の正常な発達を促し、
-                  歯が並ぶスペースを確保</span>できます。矯正治療と併用することで、相乗効果が期待できます。
-                </p>
-              </div>
-            </div>
-
-            <div className="bg-[#FDFBF7] rounded-2xl shadow-lg p-8 border-2 border-[#E67A2E]/10">
-              <h3 className="text-xl font-bold text-[#E67A2E] mb-4 flex items-start gap-3">
-                <span className="flex-shrink-0">Q2.</span>
-                <span>子どもが硬い食べ物を嫌がります。どうすればいいですか？</span>
-              </h3>
-              <div className="pl-9">
-                <p className="text-gray-700 leading-loose">
-                  <span className="font-bold text-[#5A4D41]">A.</span>
-                  最初から硬すぎるものを与えると、嫌がって食べなくなります。
-                  <span className="font-bold bg-yellow-100">干し芋・焼き芋など、甘くて子どもが好きな味のもの</span>から始めましょう。
-                  また、<span className="font-bold text-[#E67A2E]">親が一緒に食べて「美味しいね」と声をかける</span>ことで、
-                  子どもも抵抗感なく食べられるようになります。
-                </p>
-              </div>
-            </div>
-
-            <div className="bg-[#FDFBF7] rounded-2xl shadow-lg p-8 border-2 border-[#E67A2E]/10">
-              <h3 className="text-xl font-bold text-[#E67A2E] mb-4 flex items-start gap-3">
-                <span className="flex-shrink-0">Q3.</span>
-                <span>矯正装置をつけながらでも硬い食べ物を食べられますか？</span>
-              </h3>
-              <div className="pl-9">
-                <p className="text-gray-700 leading-loose">
-                  <span className="font-bold text-[#5A4D41]">A.</span>
-                  矯正装置の種類によります。<span className="font-bold bg-yellow-100">プレオルソ・ムーシールドなどの取り外し式装置</span>は、
-                  外して食事をするため問題ありません。
-                  固定式のワイヤー矯正の場合、<span className="font-bold text-red-700">スルメ・ナッツなど非常に硬いものは避ける</span>べきです。
-                  根菜類・リンゴなど、適度な硬さのものを選びましょう。担当医に相談してください。
-                </p>
-              </div>
-            </div>
-          </div>
+      {/* 監修者情報 */}
+      <section className="py-2 bg-[#FDFBF7]">
+        <div className="container mx-auto px-4 pt-2 pb-8">
+          <AuthorBio />
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-2 bg-gradient-to-br from-[#E67A2E] to-[#D66A28]">
-        <div className="container mx-auto px-4 max-w-4xl text-center">
-          <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 font-serif">
-              食育指導も含めた<br className="md:hidden" />こども矯正を
-            </h2>
-            <p className="text-white/90 text-lg mb-8 leading-relaxed">
-              F歯科・矯正歯科では、矯正治療だけでなく<br className="md:hidden" />
-              <span className="font-bold">食育指導</span>も行っています。<br />
-              家庭でできる顎を育てる食事法を<br className="md:hidden" />
-              詳しくお伝えします。
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center gap-2 bg-white text-[#E67A2E] px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-colors shadow-lg"
-              >
-                <Clock className="w-6 h-6" />
-                無料相談を予約する
-              </Link>
-              <Link
-                href="/kidsortho"
-                className="inline-flex items-center justify-center gap-2 bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/30 transition-colors border-2 border-white"
-              >
-                こども矯正TOPへ
-              </Link>
+      <section className="py-2 bg-[#FDFBF7]">
+        <div className="container mx-auto px-4 pb-16">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-gradient-to-br from-[#FDFBF7] to-[#FFF9F0] rounded-xl p-8 md:p-12">
+              <div className="text-center mb-8">
+                <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#5A4D41] mb-4">
+                  食育で顎を育て、<br className="md:hidden" />歯並びを改善しましょう
+                </h2>
+                <p className="text-lg md:text-xl text-[#8D8070] leading-loose font-sans">
+                  装置治療と食育の併用で、より効果的な矯正治療を実現します
+                </p>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center justify-center gap-2 bg-[#C5A572] hover:bg-[#B39562] text-white font-bold py-4 px-8 rounded-full transition-all transform hover:scale-105 shadow-lg"
+                >
+                  無料相談を予約する
+                  <ArrowRight size={20} />
+                </Link>
+                <Link
+                  href="/kidsortho"
+                  className="inline-flex items-center justify-center gap-2 bg-[#5A4D41] hover:bg-[#4A3D31] text-white font-bold py-4 px-8 rounded-full transition-all border-2 border-[#5A4D41]"
+                >
+                  <span>こども矯正トップへ</span>
+                  <ArrowRight size={20} />
+                </Link>
+              </div>
             </div>
           </div>
         </div>
       </section>
-    </div>
+      </main>
+      <Footer />
+    </>
   )
 }

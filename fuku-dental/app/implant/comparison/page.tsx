@@ -1,10 +1,8 @@
 import { Metadata } from 'next';
+import Link from 'next/link';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
-import { ImplantBreadcrumb } from '@/components/implant/ImplantBreadcrumb';
-import { ImplantHero } from '@/components/implant/ImplantHero';
-import { ImplantCTA } from '@/components/implant/ImplantCTA';
 import { ComparisonTable } from '@/components/implant/ComparisonTable';
 import {
   CheckCircle2,
@@ -12,10 +10,12 @@ import {
   AlertTriangle,
   HelpCircle,
   ArrowRight,
+  Home,
+  ChevronRight,
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'インプラント・入れ歯・ブリッジの違いを徹底比較｜F歯科・矯正歯科',
+  title: 'インプラント・入れ歯・ブリッジの違いを徹底比較｜F歯科・矯正歯科 豊洲プライムスクエア院',
   description:
     'インプラント・入れ歯・ブリッジの3つの治療法を、噛む力・見た目・費用・治療期間・耐久性など9つの項目で徹底比較。それぞれのメリット・デメリットを正直に解説し、あなたに合った治療法の選び方をご案内します。',
   keywords:
@@ -26,50 +26,69 @@ export default function ComparisonPage() {
   return (
     <>
       <Header />
-      <main className="min-h-screen bg-[#FDFBF7]">
+      <main className="min-h-screen bg-gradient-to-b from-white to-[#FDFBF7]">
         {/* Breadcrumb */}
-        <ImplantBreadcrumb
-          items={[{ label: 'インプラント・入れ歯・ブリッジ比較' }]}
-        />
+        <div className="bg-white border-b">
+          <div className="container mx-auto px-4 py-3">
+            <div className="flex items-center text-sm text-gray-600">
+              <Link href="/" className="hover:text-[#395b45] flex items-center">
+                <Home className="w-4 h-4 mr-1" />
+                ホーム
+              </Link>
+              <ChevronRight className="w-4 h-4 mx-2" />
+              <Link href="/implant" className="hover:text-[#395b45]">
+                インプラント
+              </Link>
+              <ChevronRight className="w-4 h-4 mx-2" />
+              <span className="text-[#395b45]">入れ歯・ブリッジとの比較</span>
+            </div>
+          </div>
+        </div>
 
-        {/* Hero */}
-        <ImplantHero
-          title="インプラント・入れ歯・ブリッジ比較"
-          subtitle="COMPARISON"
-          description="歯を失ったときの3つの治療法を、多角的に比較します。それぞれの特徴を正しく理解し、ご自身に合った選択をするための情報をお届けします。"
-        />
-
-        {/* Introduction */}
-        <section className="py-16 px-4 bg-[#FDFBF7]">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-2xl md:text-3xl font-bold text-center text-[#2d4835] mb-4">
-              なぜ治療法の違いを知ることが大切なのか
-            </h2>
-            <div className="w-16 h-1 bg-[#395b45] mx-auto mb-8 rounded-full" />
-            <div className="bg-white rounded-2xl p-6 md:p-10 shadow-sm border border-gray-100">
-              <div className="space-y-4 text-[#5A4D41] leading-relaxed">
-                <p>
-                  歯を失ったとき、主な治療法は<strong className="text-[#2d4835]">インプラント</strong>、
-                  <strong className="text-[#2d4835]">入れ歯（義歯）</strong>、
-                  <strong className="text-[#2d4835]">ブリッジ</strong>の3つです。
-                  どの治療法にもメリットとデメリットがあり、「これが一番良い」と一概に言うことはできません。
-                </p>
-                <p>
-                  大切なのは、それぞれの治療法の特徴を正しく理解し、
-                  ご自身のお口の状態・ライフスタイル・ご予算に合った選択をすることです。
-                  治療法の違いを知らないまま選んでしまうと、後から「こちらにすればよかった」と後悔することにもなりかねません。
-                </p>
-                <p>
-                  このページでは、3つの治療法を多角的に比較し、それぞれのメリット・デメリットを
-                  正直にお伝えします。治療選択の参考にしていただければ幸いです。
-                </p>
-              </div>
+        {/* Hero Section */}
+        <section className="py-6 md:py-6 bg-[#FDFBF7]">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#2d4835] font-serif">
+                インプラント・入れ歯・ブリッジ比較
+              </h1>
+              <div className="w-24 h-1 bg-[#395b45] mx-auto mb-8"></div>
+              <p className="text-xl md:text-2xl mb-6 text-[#2d4835] font-medium">
+                3つの治療法を徹底比較して、あなたに合った選択を
+              </p>
+              <p className="text-lg text-[#5A4D41] leading-relaxed">
+                それぞれの特徴・メリット・デメリットを正しく理解しましょう
+              </p>
             </div>
           </div>
         </section>
 
+        {/* Main Content */}
+        <section className="pt-8 pb-2 bg-[#FDFBF7]">
+          <div className="container mx-auto px-4 max-w-5xl" style={{ fontFamily: 'YuGothic, "Yu Gothic", sans-serif' }}>
+
+            {/* 結論 */}
+            <div className="text-center mb-20">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#2d4835] mb-8 font-serif">
+                結論
+              </h2>
+              <div className="space-y-4 text-[#5A4D41] leading-loose max-w-3xl mx-auto">
+                <p>
+                  歯を失ったときの治療法には<span className="bg-yellow-100 font-bold">インプラント・入れ歯・ブリッジの3つ</span>があり、それぞれに長所と短所があります。
+                </p>
+                <p>
+                  <span className="text-[#395b45] font-bold">インプラント</span>は見た目・噛む力・耐久性において最も優れていますが、外科手術が必要で費用がかかります。
+                  <span className="text-[#395b45] font-bold">入れ歯</span>は手軽で保険適用もありますが、違和感や噛む力の低下があります。
+                  <span className="text-[#395b45] font-bold">ブリッジ</span>は固定式で使いやすいですが、健康な隣の歯を削る必要があります。
+                </p>
+                <p>
+                  最適な治療法は、<span className="font-bold">お口の状態・ライフスタイル・ご予算</span>によって異なります。このページで詳しく比較して、ご自身に合った選択をしましょう。
+                </p>
+              </div>
+            </div>
+
         {/* Comparison Table */}
-        <section className="py-16 px-4 bg-white">
+        <section className="py-16 px-4 bg-white" style={{ fontFamily: 'YuGothic, "Yu Gothic", sans-serif' }}>
           <div className="max-w-4xl mx-auto">
             <h2 className="text-2xl md:text-3xl font-bold text-center text-[#2d4835] mb-4">
               一目でわかる比較表
@@ -82,7 +101,7 @@ export default function ComparisonPage() {
         </section>
 
         {/* Implant Detail */}
-        <section className="py-16 px-4 bg-[#FDFBF7]">
+        <section className="py-16 px-4 bg-[#FDFBF7]" style={{ fontFamily: 'YuGothic, "Yu Gothic", sans-serif' }}>
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center gap-3 mb-6">
               <span className="w-12 h-12 rounded-xl bg-[#395b45] text-white flex items-center justify-center text-lg font-bold flex-shrink-0">
@@ -183,7 +202,7 @@ export default function ComparisonPage() {
         </section>
 
         {/* Denture Detail */}
-        <section className="py-16 px-4 bg-white">
+        <section className="py-16 px-4 bg-white" style={{ fontFamily: 'YuGothic, "Yu Gothic", sans-serif' }}>
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center gap-3 mb-6">
               <span className="w-12 h-12 rounded-xl bg-[#C5A572] text-white flex items-center justify-center text-lg font-bold flex-shrink-0">
@@ -307,7 +326,7 @@ export default function ComparisonPage() {
         </section>
 
         {/* Bridge Detail */}
-        <section className="py-16 px-4 bg-[#FDFBF7]">
+        <section className="py-16 px-4 bg-[#FDFBF7]" style={{ fontFamily: 'YuGothic, "Yu Gothic", sans-serif' }}>
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center gap-3 mb-6">
               <span className="w-12 h-12 rounded-xl bg-[#5A4D41] text-white flex items-center justify-center text-lg font-bold flex-shrink-0">
@@ -408,7 +427,7 @@ export default function ComparisonPage() {
         </section>
 
         {/* Decision Guide */}
-        <section className="py-16 px-4 bg-white">
+        <section className="py-16 px-4 bg-white" style={{ fontFamily: 'YuGothic, "Yu Gothic", sans-serif' }}>
           <div className="max-w-4xl mx-auto">
             <h2 className="text-2xl md:text-3xl font-bold text-center text-[#2d4835] mb-4">
               どの治療が自分に合っている？
@@ -519,16 +538,50 @@ export default function ComparisonPage() {
           </div>
         </section>
 
-        {/* CTA */}
-        <ImplantCTA
-          title="あなたに合った治療法をご提案します"
-          subtitle="インプラント・入れ歯・ブリッジのそれぞれの選択肢について、あなたのお口の状態に合わせて丁寧にご説明いたします。まずは無料カウンセリングにお越しください。"
-        />
+            {/* 関連ページへのリンク */}
+            <div className="mt-16 bg-white rounded-2xl p-8 border border-gray-100">
+              <h3 className="text-xl font-bold text-[#2d4835] mb-6 text-center">インプラント治療についてもっと詳しく</h3>
+              <div className="grid md:grid-cols-2 gap-4">
+                <Link
+                  href="/implant/about"
+                  className="flex items-center justify-between p-4 bg-[#FDFBF7] hover:bg-gray-50 rounded-xl border border-gray-100 transition-colors group"
+                >
+                  <span className="font-medium text-[#2d4835]">インプラントとは</span>
+                  <ArrowRight className="w-5 h-5 text-[#395b45] group-hover:translate-x-1 transition-transform" />
+                </Link>
+                <Link
+                  href="/implant/flow"
+                  className="flex items-center justify-between p-4 bg-[#FDFBF7] hover:bg-gray-50 rounded-xl border border-gray-100 transition-colors group"
+                >
+                  <span className="font-medium text-[#2d4835]">治療の流れ</span>
+                  <ArrowRight className="w-5 h-5 text-[#395b45] group-hover:translate-x-1 transition-transform" />
+                </Link>
+                <Link
+                  href="/implant/cost"
+                  className="flex items-center justify-between p-4 bg-[#FDFBF7] hover:bg-gray-50 rounded-xl border border-gray-100 transition-colors group"
+                >
+                  <span className="font-medium text-[#2d4835]">費用について</span>
+                  <ArrowRight className="w-5 h-5 text-[#395b45] group-hover:translate-x-1 transition-transform" />
+                </Link>
+                <Link
+                  href="/implant/safety"
+                  className="flex items-center justify-between p-4 bg-[#FDFBF7] hover:bg-gray-50 rounded-xl border border-gray-100 transition-colors group"
+                >
+                  <span className="font-medium text-[#2d4835]">安全性へのこだわり</span>
+                  <ArrowRight className="w-5 h-5 text-[#395b45] group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
+            </div>
+
+          </div>
+        </section>
 
         {/* Author Bio */}
-        <div className="max-w-4xl mx-auto px-4">
-          <AuthorBio />
-        </div>
+        <section className="py-12 bg-[#FDFBF7]">
+          <div className="container mx-auto px-4 max-w-4xl">
+            <AuthorBio />
+          </div>
+        </section>
       </main>
       <Footer />
     </>

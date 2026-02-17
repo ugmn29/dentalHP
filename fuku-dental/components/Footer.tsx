@@ -9,7 +9,7 @@ import { MdBuild, MdLocalHospital } from 'react-icons/md';
 import { BiWind } from 'react-icons/bi';
 
 export const Footer = () => {
-    const [isTreatmentMenuOpen, setIsTreatmentMenuOpen] = useState(false);
+    const [isTreatmentMenuOpen, setIsTreatmentMenuOpen] = useState(true);
     const [isConcernsMenuOpen, setIsConcernsMenuOpen] = useState(false);
 
     const treatmentMenuItems = [
@@ -63,7 +63,7 @@ export const Footer = () => {
                                     ></iframe>
                                 </div>
                                 <div className="px-2">
-                                    <p className="font-bold text-[#5A4D41] text-lg mb-1">F歯科・矯正歯科</p>
+                                    <p className="font-bold text-[#5A4D41] text-lg mb-1" style={{ fontFamily: 'Georgia, "Yu Mincho", "Hiragino Mincho ProN", serif' }}>F歯科・矯正歯科 豊洲プライムスクエア院</p>
                                     <p className="text-sm text-[#8D8070]">
                                         〒135-0061 東京都江東区豊洲5-6-36 豊洲プライムスクエア1階<br />
                                         豊洲駅 徒歩2分 / 提携駐車場あり

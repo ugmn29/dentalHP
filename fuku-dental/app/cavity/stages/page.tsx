@@ -10,11 +10,11 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: '虫歯の進行段階（C0〜C4）｜虫歯治療｜F歯科・矯正歯科',
+  title: '虫歯の進行段階（C0〜C4）｜虫歯治療｜F歯科・矯正歯科 豊洲プライムスクエア院',
   description: '虫歯の進行段階をC0からC4まで詳しく解説。各段階での症状、痛みの程度、治療法について分かりやすくご説明します。',
   keywords: '虫歯,C0,C1,C2,C3,C4,進行段階,痛み,症状,虫歯治療',
   openGraph: {
-    title: '虫歯の進行段階（C0〜C4）｜虫歯治療｜F歯科・矯正歯科',
+    title: '虫歯の進行段階（C0〜C4）｜虫歯治療｜F歯科・矯正歯科 豊洲プライムスクエア院',
     description: '虫歯の進行段階をC0からC4まで詳しく解説。各段階での症状、痛みの程度、治療法について分かりやすくご説明します。',
     type: 'website',
   },

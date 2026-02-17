@@ -4,35 +4,35 @@ import { Phone, Calendar } from 'lucide-react';
 interface ImplantCTAProps {
   title?: string;
   subtitle?: string;
-  variant?: 'green' | 'cream';
+  variant?: 'blue' | 'lightblue';
 }
 
 export function ImplantCTA({
   title = 'まずは無料カウンセリングから',
   subtitle = 'インプラント治療に関するご不安やご質問、お気軽にご相談ください。',
-  variant = 'green',
+  variant = 'blue',
 }: ImplantCTAProps) {
-  const isGreen = variant === 'green';
+  const isBlue = variant === 'blue';
 
   return (
     <section
       className={`py-14 px-4 ${
-        isGreen
-          ? 'bg-gradient-to-br from-[#395b45] to-[#2d4835] text-white'
-          : 'bg-gradient-to-br from-[#f5f0e8] to-[#ebe4d8] text-[#5A4D41]'
+        isBlue
+          ? 'bg-gradient-to-br from-[#248cc4] to-[#1f7aa8] text-white'
+          : 'bg-gradient-to-br from-[#ebf5fa] to-[#d4ebf5] text-[#1e1e1e]'
       }`}
     >
       <div className="max-w-3xl mx-auto text-center">
         <h3
           className={`text-2xl md:text-3xl font-bold mb-3 ${
-            isGreen ? 'text-white' : 'text-[#2d4835]'
+            isBlue ? 'text-white' : 'text-[#1e1e1e]'
           }`}
         >
           {title}
         </h3>
         <p
           className={`mb-8 text-sm md:text-base leading-relaxed ${
-            isGreen ? 'text-white/85' : 'text-[#5A4D41]/80'
+            isBlue ? 'text-white/85' : 'text-[#1e1e1e]/70'
           }`}
         >
           {subtitle}
@@ -41,9 +41,9 @@ export function ImplantCTA({
           <a
             href="tel:03-1234-5678"
             className={`inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full font-bold text-lg transition-all ${
-              isGreen
-                ? 'bg-white text-[#395b45] hover:bg-gray-100 shadow-lg'
-                : 'bg-white text-[#395b45] border-2 border-[#395b45] hover:bg-[#395b45] hover:text-white shadow-md'
+              isBlue
+                ? 'bg-white text-[#248cc4] hover:bg-gray-100 shadow-lg'
+                : 'bg-white text-[#248cc4] border-2 border-[#248cc4] hover:bg-[#248cc4] hover:text-white shadow-md'
             }`}
           >
             <Phone size={20} />
@@ -52,13 +52,13 @@ export function ImplantCTA({
           <a
             href="#"
             className={`inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full font-bold text-lg transition-all ${
-              isGreen
+              isBlue
                 ? 'bg-[#FF9F43] text-white hover:bg-[#e8903c] shadow-lg'
-                : 'bg-[#395b45] text-white hover:bg-[#2d4835] shadow-md'
+                : 'bg-[#248cc4] text-white hover:bg-[#1f7aa8] shadow-md'
             }`}
           >
             <Calendar size={20} />
-            24\u6642\u9593WEB\u4E88\u7D04
+            24時間WEB予約
           </a>
         </div>
       </div>

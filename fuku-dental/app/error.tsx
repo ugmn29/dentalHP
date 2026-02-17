@@ -95,7 +95,7 @@ export default function Error({
         {/* Contact Info */}
         <div className="mt-8 p-6 bg-gray-50 rounded-lg">
           <p className="text-sm text-[#5A4D41] font-bold mb-2">
-            F歯科・矯正歯科
+            F歯科・矯正歯科 豊洲プライムスクエア院
           </p>
           <p className="text-xs text-gray-600">
             〒135-0061 東京都江東区豊洲5-6-36 豊洲プライムスクエア1階

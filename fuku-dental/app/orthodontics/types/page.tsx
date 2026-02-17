@@ -7,9 +7,9 @@ import { AuthorBio } from '@/components/AuthorBio';
 import { ChevronRight, CheckCircle, XCircle, Clock, DollarSign, Eye, Smile } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: '矯正治療の種類｜ワイヤー・マウスピース・裏側矯正の比較｜F歯科・矯正歯科',
-  description: 'F歯科・矯正歯科の矯正治療の種類を詳しく解説。ワイヤー矯正、マウスピース矯正、裏側矯正、部分矯正など、それぞれの特徴・費用・治療期間を比較。あなたに最適な矯正方法が見つかります。',
-  keywords: '矯正,種類,ワイヤー矯正,マウスピース矯正,インビザライン,裏側矯正,部分矯正,比較,F歯科・矯正歯科',
+  title: '矯正治療の種類｜ワイヤー・マウスピース・裏側矯正の比較｜F歯科・矯正歯科 豊洲プライムスクエア院',
+  description: 'F歯科・矯正歯科 豊洲プライムスクエア院の矯正治療の種類を詳しく解説。ワイヤー矯正、マウスピース矯正、裏側矯正、部分矯正など、それぞれの特徴・費用・治療期間を比較。あなたに最適な矯正方法が見つかります。',
+  keywords: '矯正,種類,ワイヤー矯正,マウスピース矯正,インビザライン,裏側矯正,部分矯正,比較,F歯科・矯正歯科 豊洲プライムスクエア院',
 };
 
 export default function OrthodonticsTypesPage() {

@@ -4,9 +4,10 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
 import Link from 'next/link';
+import { KidsOrthoImage } from '@/components/KidsOrthoImage';
 
 export const metadata: Metadata = {
-  title: '交叉咬合（こうさこうごう）クロスバイトの治療 | こども矯正 | F歯科・矯正歯科',
+  title: '交叉咬合（こうさこうごう）クロスバイトの治療 | こども矯正 | F歯科・矯正歯科 豊洲プライムスクエア院',
   description: '交叉咬合（クロスバイト）の特徴、原因、治療法について詳しく解説。上下の歯が交差して噛み合う状態で、顔の歪みを引き起こす可能性があります。お子様の歯並びが気になる方はご相談ください。',
   keywords: '交叉咬合,クロスバイト,歯の交差,顔の歪み,こども矯正,小児矯正,歯列矯正,不正咬合,歯科,横浜',
 };
@@ -15,13 +16,10 @@ export default function CrossBiteDetailPage() {
   return (
     <>
       <Header />
-      <main className="min-h-screen bg-gradient-to-b from-[#FDFBF7] via-white to-[#FAF8F5]">
+      <main className="min-h-screen bg-gradient-to-b from-white to-[#FDFBF7]" style={{ fontFamily: '"游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", sans-serif' }}>
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-[#FFF9F0] to-[#FFF3E0] py-2 md:py-2 overflow-hidden">
-          <div className="absolute inset-0 opacity-5">
-            <div className="absolute top-10 left-10 w-32 h-32 bg-[#E67A2E] rounded-full blur-3xl"></div>
-            <div className="absolute bottom-10 right-10 w-40 h-40 bg-[#D66A28] rounded-full blur-3xl"></div>
-          </div>
+        <section className="relative bg-[#FDFBF7] py-2 md:py-2">
+
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl mx-auto">
               {/* パンくずリスト */}
@@ -49,13 +47,20 @@ export default function CrossBiteDetailPage() {
                   </h1>
                 </div>
               </div>
+            </div>
 
-              <p className="text-lg text-[#E67A2E] font-bold mb-4">通称：クロスバイト</p>
+              {/* ヒーロー画像 */}
+              <KidsOrthoImage
+                name="crossbite-hero"
+                alt="交叉咬合（クロスバイト）の症例写真"
+                category="types"
+              />
+
+              <p className="text-lg text-[#E67A2E] font-bold mt-6 mb-4">通称：クロスバイト</p>
 
               <p className="text-base md:text-lg leading-relaxed text-[#8D8070]">
                 交叉咬合は、上下の歯が正常とは逆に交差して噛み合っている状態です。本来は上の歯が外側にくるべきところ、下の歯が外側になっています。放置すると顔の左右非対称や顎の変形を引き起こすため、6〜9歳での早期治療が非常に重要です。
               </p>
-            </div>
           </div>
         </section>
 
@@ -72,11 +77,20 @@ export default function CrossBiteDetailPage() {
             </div>
 
             {/* 見た目の特徴 */}
-            <div className="bg-white rounded-2xl shadow-xl p-8 md:p-10 mb-6">
-              <h3 className="text-2xl font-bold text-[#5A4D41] mb-6 flex items-center gap-3">
-                <span className="w-8 h-8 bg-[#E67A2E] rounded-full flex items-center justify-center text-white text-sm">1</span>
-                見た目の特徴
-              </h3>
+            <div className="mb-12">
+              <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 pb-2 border-b-2 border-[#C5A572]">
+                1. 見た目の特徴
+              </h4>
+
+              {/* 交叉咬合の見た目を示す画像 */}
+              <div className="mb-6">
+                <KidsOrthoImage
+                  name="crossbite-profile"
+                  alt="交叉咬合の噛み合わせの特徴"
+                  category="types"
+                  className="max-w-2xl mx-auto"
+                />
+              </div>
               <div className="space-y-4 text-[#8D8070] leading-relaxed">
                 <ul className="space-y-3 ml-4">
                   <li className="flex items-start gap-3">
@@ -100,11 +114,10 @@ export default function CrossBiteDetailPage() {
             </div>
 
             {/* 機能面での問題 */}
-            <div className="bg-white rounded-2xl shadow-xl p-8 md:p-10 mb-6">
-              <h3 className="text-2xl font-bold text-[#5A4D41] mb-6 flex items-center gap-3">
-                <span className="w-8 h-8 bg-[#E67A2E] rounded-full flex items-center justify-center text-white text-sm">2</span>
-                機能面での問題
-              </h3>
+            <div className="mb-12">
+              <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 pb-2 border-b-2 border-[#C5A572]">
+                2. 機能面での問題
+              </h4>
               <div className="space-y-4 text-[#8D8070] leading-relaxed">
                 <ul className="space-y-3 ml-4">
                   <li className="flex items-start gap-3">
@@ -132,11 +145,10 @@ export default function CrossBiteDetailPage() {
             </div>
 
             {/* 放置した場合のリスク */}
-            <div className="bg-white rounded-2xl shadow-xl p-8 md:p-10 border-l-4 border-red-500">
-              <h3 className="text-2xl font-bold text-[#5A4D41] mb-6 flex items-center gap-3">
-                <span className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center text-white text-sm">!</span>
+            <div className="mb-12">
+              <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 pb-2 border-b-2 border-[#C5A572]">
                 放置した場合のリスク
-              </h3>
+              </h4>
               <div className="space-y-4 text-[#8D8070] leading-relaxed">
                 <ul className="space-y-3 ml-4">
                   <li className="flex items-start gap-3">
@@ -174,12 +186,20 @@ export default function CrossBiteDetailPage() {
               <h2 className="text-3xl md:text-4xl font-bold text-[#5A4D41]">交叉咬合の原因</h2>
             </div>
 
+            <div className="mb-8">
+              <KidsOrthoImage
+                name="crossbite-causes"
+                alt="交叉咬合の原因となる顎の幅の不調和"
+                category="types"
+                className="max-w-3xl mx-auto"
+              />
+            </div>
+
             {/* 遺伝的要因 */}
-            <div className="bg-white rounded-2xl shadow-xl p-8 md:p-10 mb-6">
-              <h3 className="text-2xl font-bold text-[#5A4D41] mb-6 flex items-center gap-3">
-                <span className="w-8 h-8 bg-[#E67A2E] rounded-full flex items-center justify-center text-white text-sm">1</span>
-                遺伝的要因
-              </h3>
+            <div className="mb-12">
+              <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 pb-2 border-b-2 border-[#C5A572]">
+                1. 遺伝的要因
+              </h4>
               <div className="space-y-4 text-[#8D8070] leading-relaxed">
                 <ul className="space-y-3 ml-4">
                   <li className="flex items-start gap-3">
@@ -204,11 +224,10 @@ export default function CrossBiteDetailPage() {
             </div>
 
             {/* 環境的要因 */}
-            <div className="bg-white rounded-2xl shadow-xl p-8 md:p-10 mb-6">
-              <h3 className="text-2xl font-bold text-[#5A4D41] mb-6 flex items-center gap-3">
-                <span className="w-8 h-8 bg-[#E67A2E] rounded-full flex items-center justify-center text-white text-sm">2</span>
-                環境的要因（後天的な要因）
-              </h3>
+            <div className="mb-12">
+              <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 pb-2 border-b-2 border-[#C5A572]">
+                2. 環境的要因（後天的な要因）
+              </h4>
               <div className="space-y-4 text-[#8D8070] leading-relaxed">
                 <ul className="space-y-3 ml-4">
                   <li className="flex items-start gap-3">
@@ -255,11 +274,10 @@ export default function CrossBiteDetailPage() {
             </div>
 
             {/* 1期治療 */}
-            <div className="bg-white rounded-2xl shadow-xl p-8 md:p-10 mb-6">
-              <h3 className="text-2xl font-bold text-[#5A4D41] mb-6 flex items-center gap-3">
-                <span className="w-8 h-8 bg-[#E67A2E] rounded-full flex items-center justify-center text-white text-sm">1</span>
-                1期治療（6〜12歳頃）
-              </h3>
+            <div className="mb-12">
+              <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 pb-2 border-b-2 border-[#C5A572]">
+                1. 1期治療（6〜12歳頃）
+              </h4>
               <div className="space-y-4 text-[#8D8070] leading-relaxed">
                 <p className="text-[#5A4D41] font-semibold mb-4">
                   成長期を利用した顎の拡大と位置の修正が中心です。交叉咬合は早期治療が最も重要な不正咬合の一つです。
@@ -271,6 +289,16 @@ export default function CrossBiteDetailPage() {
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-[#395b45] mt-1 flex-shrink-0">✓</span>
+
+                    {/* 治療装置の画像 */}
+                    <div className="my-6">
+                      <KidsOrthoImage
+                        name="crossbite-treatment"
+                        alt="交叉咬合の治療装置"
+                        category="types"
+                        className="max-w-xl mx-auto"
+                      />
+                    </div>
                     <span><strong className="text-[#5A4D41]">拡大床：</strong>取り外し式の装置で顎を少しずつ拡大します</span>
                   </li>
                   <li className="flex items-start gap-3">
@@ -299,11 +327,10 @@ export default function CrossBiteDetailPage() {
             </div>
 
             {/* 2期治療 */}
-            <div className="bg-white rounded-2xl shadow-xl p-8 md:p-10 mb-6">
-              <h3 className="text-2xl font-bold text-[#5A4D41] mb-6 flex items-center gap-3">
-                <span className="w-8 h-8 bg-[#E67A2E] rounded-full flex items-center justify-center text-white text-sm">2</span>
-                2期治療（12歳以降〜）
-              </h3>
+            <div className="mb-12">
+              <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 pb-2 border-b-2 border-[#C5A572]">
+                2. 2期治療（12歳以降〜）
+              </h4>
               <div className="space-y-4 text-[#8D8070] leading-relaxed">
                 <p className="text-[#5A4D41] font-semibold mb-4">
                   永久歯が生え揃った後に、歯の位置を細かく調整する段階です。
@@ -330,11 +357,10 @@ export default function CrossBiteDetailPage() {
             </div>
 
             {/* 使用する装置 */}
-            <div className="bg-white rounded-2xl shadow-xl p-8 md:p-10 mb-6">
-              <h3 className="text-2xl font-bold text-[#5A4D41] mb-6 flex items-center gap-3">
-                <span className="w-8 h-8 bg-[#E67A2E] rounded-full flex items-center justify-center text-white text-sm">3</span>
-                主な使用装置
-              </h3>
+            <div className="mb-12">
+              <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 pb-2 border-b-2 border-[#C5A572]">
+                3. 主な使用装置
+              </h4>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-[#FAF8F5] p-6 rounded-xl border-2 border-[#E67A2E]/20">
                   <h4 className="font-bold text-[#5A4D41] mb-3 text-lg">機能的マウスピース装置</h4>
@@ -365,11 +391,10 @@ export default function CrossBiteDetailPage() {
             </div>
 
             {/* 治療期間と費用 */}
-            <div className="bg-white rounded-2xl shadow-xl p-8 md:p-10">
-              <h3 className="text-2xl font-bold text-[#5A4D41] mb-6 flex items-center gap-3">
-                <span className="w-8 h-8 bg-[#E67A2E] rounded-full flex items-center justify-center text-white text-sm">4</span>
-                治療期間と費用の目安
-              </h3>
+            <div className="mb-12">
+              <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 pb-2 border-b-2 border-[#C5A572]">
+                4. 治療期間と費用の目安
+              </h4>
               <div className="space-y-6">
                 {/* 1期治療 */}
                 <div className="bg-blue-50 p-6 rounded-xl border-l-4 border-blue-500">
@@ -429,7 +454,7 @@ export default function CrossBiteDetailPage() {
               <h2 className="text-3xl md:text-4xl font-bold text-[#5A4D41]">最適な治療開始時期</h2>
             </div>
 
-            <div className="bg-gradient-to-br from-[#E67A2E]/10 via-white to-[#E67A2E]/5 rounded-2xl shadow-xl p-8 md:p-10 border-2 border-[#E67A2E]/30">
+            <div className="bg-white rounded-2xl shadow-sm border border-[#C5A572]/10 p-8 md:p-10">
               <div className="space-y-6">
                 <div className="bg-white p-6 rounded-xl shadow-md">
                   <h3 className="text-xl font-bold text-[#5A4D41] mb-4 flex items-center gap-3">

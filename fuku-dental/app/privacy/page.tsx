@@ -23,7 +23,7 @@ export default function PrivacyPolicyPage() {
           {/* 前文 */}
           <section className="mb-12">
             <p className="text-gray-700 leading-relaxed">
-              F歯科・矯正歯科 豊洲（以下、「当院」といいます。）は、患者様の個人情報の保護に最大限の注意を払い、以下の方針に基づいて個人情報を適切に取り扱います。
+              F歯科・矯正歯科 豊洲プライムスクエア院 豊洲（以下、「当院」といいます。）は、患者様の個人情報の保護に最大限の注意を払い、以下の方針に基づいて個人情報を適切に取り扱います。
             </p>
           </section>
 
@@ -194,7 +194,7 @@ export default function PrivacyPolicyPage() {
                 個人情報の取り扱いに関するお問い合わせは、以下までご連絡ください。
               </p>
               <div className="space-y-2 text-gray-700">
-                <p className="font-semibold text-[#2d4835]">F歯科・矯正歯科 豊洲</p>
+                <p className="font-semibold text-[#2d4835]">F歯科・矯正歯科 豊洲プライムスクエア院 豊洲</p>
                 <p>個人情報保護管理責任者: 院長 福永 真大</p>
                 <p>住所: 〒135-0061 東京都江東区豊洲5-6-36 豊洲プライムスクエア1階</p>
                 <p>電話: 03-XXXX-XXXX（代表）</p>

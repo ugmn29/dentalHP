@@ -117,7 +117,7 @@ export default function OralEducationPage() {
                             FEATURES OF ORAL EDUCATION
                         </p>
                         <h2 className="text-2xl md:text-3xl font-medium text-[#5A4D41] font-serif leading-loose tracking-widest">
-                            F歯科・矯正歯科の口育は<br />
+                            F歯科・矯正歯科 豊洲プライムスクエア院の口育は<br />
                             歯並びの根本原因にアプローチします
                         </h2>
                     </div>

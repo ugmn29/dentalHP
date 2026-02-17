@@ -6,11 +6,11 @@ import { Sparkles, ArrowRight, CheckCircle, Clock, Heart, Star, AlertCircle, Shi
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: '当院のホワイトニングが選ばれる理由｜他院との違い｜F歯科・矯正歯科',
+  title: '当院のホワイトニングが選ばれる理由｜他院との違い｜F歯科・矯正歯科 豊洲プライムスクエア院',
   description: '当院のホワイトニングが選ばれる理由を徹底解説。他院との違い、当院だけの特徴、充実したサービス内容をご紹介します。',
   keywords: 'ホワイトニング,比較,選び方,おすすめ,歯科医院,違い,特徴',
   openGraph: {
-    title: '当院のホワイトニングが選ばれる理由｜他院との違い｜F歯科・矯正歯科',
+    title: '当院のホワイトニングが選ばれる理由｜他院との違い｜F歯科・矯正歯科 豊洲プライムスクエア院',
     description: '当院のホワイトニングが選ばれる理由と他院との違いをご紹介します。',
     type: 'website',
   },
