@@ -14,6 +14,14 @@ export const metadata: Metadata = {
   title: '骨造成治療（GBR・サイナスリフト）｜F歯科・矯正歯科 豊洲プライムスクエア院',
   description: '骨が不足している方でもインプラント治療が可能に。GBR法、サイナスリフト、ソケットリフトなど、骨造成治療の種類と方法を詳しく解説します。',
   keywords: '骨造成,GBR,サイナスリフト,ソケットリフト,骨移植,インプラント',
+  openGraph: {
+    title: '骨造成治療（GBR・サイナスリフト）｜F歯科・矯正歯科 豊洲プライムスクエア院',
+    description: '骨が不足している方でもインプラント治療が可能に。GBR法、サイナスリフト、ソケットリフトなど骨造成治療の種類と方法を解説。',
+    type: 'website',
+    locale: 'ja_JP',
+    url: 'https://fuku-dental.jp/implant/bone-augmentation',
+    siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
+  },
 };
 
 export default function BoneAugmentationPage() {

@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ChevronRight, BookOpen, AlertCircle, CheckCircle2, Trophy, Music, HeartPulse, Wind, Home, ArrowRight } from 'lucide-react'
 import { KidsOrthoImage } from '@/components/KidsOrthoImage'
+import { PageImage } from '@/components/PageImage'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { AuthorBio } from '@/components/AuthorBio'
@@ -10,6 +11,14 @@ export const metadata: Metadata = {
   title: 'スポーツ・楽器への影響｜歯並びと運動・演奏パフォーマンスの関係｜F歯科・矯正歯科 豊洲プライムスクエア院',
   description: '歯並びが悪いと、運動能力・呼吸効率・楽器の演奏に影響します。矯正治療でパフォーマンスが向上する理由を詳しく解説します。',
   keywords: 'スポーツ,楽器,運動能力,パフォーマンス,歯並び,小児矯正,咬合,呼吸',
+  openGraph: {
+    title: 'スポーツ・楽器への影響｜歯並びと運動・演奏パフォーマンスの関係｜F歯科・矯正歯科 豊洲プライムスクエア院',
+    description: '歯並びが悪いと、運動能力・呼吸効率・楽器の演奏に影響します。矯正治療でパフォーマンスが向上する理由を詳しく解説します。',
+    type: 'website',
+    locale: 'ja_JP',
+    url: 'https://fuku-dental.jp/kidsortho/sports-and-music',
+    siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
+  },
 }
 
 export default function SportsAndMusicPage() {
@@ -42,6 +51,7 @@ export default function SportsAndMusicPage() {
             スポーツ・楽器への影響<br />
             歯並びと運動・演奏パフォーマンスの関係
           </h1>
+          <PageImage path="/kidsortho/sports-and-music" alt="スポーツ・楽器への影響と歯並びの関係" />
           <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
 
           <KidsOrthoImage
@@ -53,6 +63,7 @@ export default function SportsAndMusicPage() {
           <p className="text-xl md:text-2xl mt-6 mb-6 text-[#5A4D41] font-medium">
             矯正治療でパフォーマンスが向上する理由
           </p>
+          <p className="text-[#8D8070] mt-3 font-sans">豊洲の矯正歯科が詳しく解説します</p>
         </div>
       </section>
 
@@ -571,7 +582,7 @@ export default function SportsAndMusicPage() {
                   スポーツ・楽器と両立できる<br className="md:hidden" />矯正治療を
                 </h2>
                 <p className="text-lg md:text-xl text-[#8D8070] leading-loose font-sans">
-                  F歯科・矯正歯科 豊洲プライムスクエア院では、お子さんの習い事に合わせた<br className="md:hidden" />
+                  豊洲で小児矯正をお考えなら、豊洲駅徒歩2分の当院へ。お子さんの習い事に合わせた<br className="md:hidden" />
                   <span className="font-bold">治療計画</span>を提案しています。<br />
                   取り外し式装置や、治療開始のタイミングなど、<br className="md:hidden" />
                   最適なプランをご提案します。

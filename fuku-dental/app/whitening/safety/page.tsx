@@ -2,16 +2,17 @@ import React from 'react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
+import { PageImage } from '@/components/PageImage';
 import { ArrowRight, CheckCircle, Shield, X, AlertCircle, Info, Home, ChevronRight } from 'lucide-react';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'ホワイトニングの安全性・副作用｜知覚過敏などのリスクと対策｜F歯科・矯正歯科 豊洲プライムスクエア院',
-  description: 'ホワイトニングは安全？知覚過敏などの副作用やリスクについて詳しく解説。歯科医師が安全性を最優先に施術する理由と、副作用を最小限に抑える方法をご紹介します。',
-  keywords: 'ホワイトニング,安全性,副作用,知覚過敏,リスク,痛い,しみる,危険性',
+  description: '豊洲の歯医者 F歯科がホワイトニングの安全性を解説。知覚過敏などの副作用やリスクについて詳しくご説明。歯科医師が安全性を最優先に施術する理由と、副作用を最小限に抑える方法をご紹介します。',
+  keywords: 'ホワイトニング,安全性,副作用,知覚過敏,リスク,痛い,しみる,危険性,豊洲,歯医者',
   openGraph: {
     title: 'ホワイトニングの安全性・副作用｜知覚過敏などのリスクと対策｜F歯科・矯正歯科 豊洲プライムスクエア院',
-    description: 'ホワイトニングの安全性と副作用について、歯科医師が詳しく解説します。',
+    description: '豊洲の歯医者 F歯科がホワイトニングの安全性と副作用について詳しく解説します。',
     type: 'website',
   },
 };
@@ -45,12 +46,13 @@ export default function WhiteningSafetyPage() {
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#5A4D41] font-serif">
               ホワイトニングの安全性・副作用
             </h1>
+            <PageImage path="/whitening/safety" alt="ホワイトニングの安全性・副作用" />
             <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
             <p className="text-xl md:text-2xl mb-6 text-[#5A4D41] font-medium">
               知覚過敏などのリスクと対策
             </p>
             <p className="text-lg text-[#8D8070] leading-relaxed">
-              副作用について正直にお伝えします。<br />
+              豊洲駅徒歩2分の当院が副作用について正直にお伝えします。<br />
               安全性を最優先に、リスクを最小限に抑える方法を解説。
             </p>
           </div>

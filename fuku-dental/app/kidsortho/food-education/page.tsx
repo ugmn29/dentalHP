@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ChevronRight, BookOpen, AlertCircle, CheckCircle2, Clock, Utensils, Apple, TrendingUp, Home, ArrowRight } from 'lucide-react'
 import { KidsOrthoImage } from '@/components/KidsOrthoImage'
+import { PageImage } from '@/components/PageImage'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { AuthorBio } from '@/components/AuthorBio'
@@ -10,6 +11,14 @@ export const metadata: Metadata = {
   title: '顎を育てる食育レシピ｜よく噛む食事で歯並び改善｜F歯科・矯正歯科 豊洲プライムスクエア院',
   description: '硬い食べ物を前歯で噛みちぎる練習で、顎の発達を促進。スルメ・ナッツ・ニンジンスティックなど、家庭でできる食育レシピを紹介します。',
   keywords: '食育,顎の発達,咀嚼力,歯並び,小児矯正,硬い食べ物,よく噛む,レシピ',
+  openGraph: {
+    title: '顎を育てる食育レシピ｜よく噛む食事で歯並び改善｜F歯科・矯正歯科 豊洲プライムスクエア院',
+    description: '硬い食べ物を前歯で噛みちぎる練習で、顎の発達を促進。スルメ・ナッツ・ニンジンスティックなど、家庭でできる食育レシピを紹介します。',
+    type: 'website',
+    locale: 'ja_JP',
+    url: 'https://fuku-dental.jp/kidsortho/food-education',
+    siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
+  },
 }
 
 export default function FoodEducationPage() {
@@ -42,6 +51,7 @@ export default function FoodEducationPage() {
             顎を育てる食育レシピ<br />
             よく噛む食事で歯並び改善
           </h1>
+          <PageImage path="/kidsortho/food-education" alt="顎を育てる食育レシピ" />
           <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
 
           {/* Hero Image */}
@@ -56,6 +66,7 @@ export default function FoodEducationPage() {
           <p className="text-xl md:text-2xl mt-6 mb-6 text-[#5A4D41] font-medium font-sans">
             硬い食べ物を前歯で噛みちぎる練習で顎の発達を促進
           </p>
+          <p className="text-[#8D8070] mt-3 font-sans">豊洲の矯正歯科が詳しく解説します</p>
         </div>
       </section>
 
@@ -530,7 +541,7 @@ export default function FoodEducationPage() {
                   食育で顎を育て、<br className="md:hidden" />歯並びを改善しましょう
                 </h2>
                 <p className="text-lg md:text-xl text-[#8D8070] leading-loose font-sans">
-                  装置治療と食育の併用で、より効果的な矯正治療を実現します
+                  豊洲で小児矯正をお考えなら、豊洲駅徒歩2分の当院へ。装置治療と食育の併用で、より効果的な矯正治療を実現します
                 </p>
               </div>
 

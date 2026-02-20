@@ -4,12 +4,21 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
 import { KidsOrthoImage } from '@/components/KidsOrthoImage';
+import { PageImage } from '@/components/PageImage';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: '叢生(そうせい)ガタガタの歯並びの治療 | こども矯正 | F歯科・矯正歯科 豊洲プライムスクエア院',
   description: '叢生(ガタガタの歯並び)の特徴、原因、治療法について詳しく解説。日本人に最も多い不正咬合で、早期治療により非抜歯での改善が可能です。お子様の歯並びが気になる方はご相談ください。',
   keywords: '叢生,ガタガタ,歯並び,デコボコ,こども矯正,小児矯正,歯列矯正,不正咬合,歯科,横浜',
+  openGraph: {
+    title: '叢生(そうせい)ガタガタの歯並びの治療 | こども矯正 | F歯科・矯正歯科 豊洲プライムスクエア院',
+    description: '叢生(ガタガタの歯並び)の特徴、原因、治療法について詳しく解説。日本人に最も多い不正咬合で、早期治療により非抜歯での改善が可能です。',
+    type: 'website',
+    locale: 'ja_JP',
+    url: 'https://fuku-dental.jp/kidsortho/types/crowding',
+    siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
+  },
 };
 
 export default function CrowdingDetailPage() {
@@ -40,6 +49,8 @@ export default function CrowdingDetailPage() {
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[#5A4D41] mb-3">
                   叢生(そうせい)
                 </h1>
+                <PageImage path="/kidsortho/types/crowding" alt="叢生（ガタガタの歯並び）の治療" />
+                <p className="text-sm text-[#8D8070] mb-3">豊洲の矯正歯科が詳しく解説</p>
                 <div className="w-16 h-0.5 bg-[#C5A572] mb-6"></div>
               </div>
 
@@ -409,7 +420,7 @@ export default function CrowdingDetailPage() {
                 </h2>
                 <p className="text-lg mb-8 opacity-90">
                   叢生は早期治療で抜歯を避けられる可能性が高まります。<br />
-                  まずはお気軽に無料相談をご利用ください。
+                  豊洲で小児矯正をお考えなら、まずはお気軽に無料相談をご利用ください。
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                   <Link

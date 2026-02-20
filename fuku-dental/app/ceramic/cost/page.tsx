@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
+import { PageImage } from '@/components/PageImage';
 import {
   CheckCircle2,
   ArrowRight,
@@ -12,8 +13,16 @@ import {
 
 export const metadata: Metadata = {
   title: 'セラミック治療の費用・値段｜相場と当院の料金表｜F歯科・矯正歯科 豊洲プライムスクエア院',
-  description: 'セラミック治療の費用について詳しく解説。インレー、クラウン、ベニアの料金相場と当院の価格、保険適用、分割払いの情報をご紹介します。',
+  description: '豊洲の歯医者 F歯科がセラミック治療の費用について詳しく解説。インレー、クラウン、ベニアの料金相場と当院の価格、保険適用、分割払いの情報をご紹介します。',
   keywords: 'セラミック,歯,値段,費用,料金,価格,相場,保険,分割払い,デンタルローン',
+  openGraph: {
+    title: 'セラミック治療の費用・値段｜相場と当院の料金表｜F歯科・矯正歯科 豊洲プライムスクエア院',
+    description: 'セラミック治療の費用について詳しく解説。インレー、クラウン、ベニアの料金相場と当院の価格をご紹介。',
+    type: 'website',
+    locale: 'ja_JP',
+    url: 'https://fuku-dental.jp/ceramic/cost',
+    siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
+  },
 };
 
 export default function CeramicCostPage() {
@@ -46,12 +55,13 @@ export default function CeramicCostPage() {
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#5A4D41] font-serif">
                 セラミック治療の費用・料金
               </h1>
+              <PageImage path="/ceramic/cost" alt="セラミック治療の費用・料金" />
               <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
               <p className="text-xl md:text-2xl mb-6 text-[#5A4D41] font-medium">
                 透明性のある料金体系で安心
               </p>
               <p className="text-lg text-[#8D8070] leading-relaxed">
-                当院では、事前に明確な費用をお伝えし、<br />
+                豊洲駅徒歩2分の当院では、事前に明確な費用をお伝えし、<br />
                 追加料金の心配なく治療を受けていただけます
               </p>
             </div>

@@ -4,6 +4,7 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
 import { TreatmentSteps } from '@/components/implant/TreatmentSteps';
+import { PageImage } from '@/components/PageImage';
 import {
   CheckCircle,
   Clock,
@@ -21,6 +22,14 @@ export const metadata: Metadata = {
     'インプラント治療の流れを8つのステップで詳しく解説。無料カウンセリングから精密検査、手術、人工歯装着、メンテナンスまで、安心・安全な治療プロセスをご紹介します。F歯科・矯正歯科 豊洲プライムスクエア院。',
   keywords:
     'インプラント,治療の流れ,手術の流れ,インプラント手術,治療期間,治療プロセス,歯科インプラント,CT検査,骨結合,アバットメント,人工歯,メンテナンス',
+  openGraph: {
+    title: 'インプラント治療の流れ｜8つのステップで安心治療 | F歯科・矯正歯科 豊洲プライムスクエア院',
+    description: 'インプラント治療の流れを8ステップで解説。無料カウンセリングから精密検査、手術、人工歯装着、メンテナンスまでご紹介。',
+    type: 'website',
+    locale: 'ja_JP',
+    url: 'https://fuku-dental.jp/implant/flow',
+    siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
+  },
 };
 
 /* ─── Treatment Steps Data ─── */
@@ -141,6 +150,7 @@ export default function ImplantFlowPage() {
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#2d4835] font-serif">
                 インプラント治療の流れ
               </h1>
+              <PageImage path="/implant/flow" alt="インプラント治療の流れ" />
               <div className="w-24 h-1 bg-[#395b45] mx-auto mb-8"></div>
               <p className="text-xl md:text-2xl mb-6 text-[#2d4835] font-medium">
                 8つのステップで安心・安全な治療を

@@ -5,11 +5,20 @@ import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
 import Link from 'next/link';
 import { KidsOrthoImage } from '@/components/KidsOrthoImage';
+import { PageImage } from '@/components/PageImage';
 
 export const metadata: Metadata = {
   title: '上顎前突（出っ歯）の治療 | こども矯正 | F歯科・矯正歯科 豊洲プライムスクエア院',
   description: '上顎前突（出っ歯）の特徴、原因、治療法について詳しく解説。早期治療で効果的に改善できる不正咬合の一つです。お子様の歯並びが気になる方はご相談ください。',
   keywords: '上顎前突,出っ歯,こども矯正,小児矯正,歯列矯正,不正咬合,歯科,横浜',
+  openGraph: {
+    title: '上顎前突（出っ歯）の治療 | こども矯正 | F歯科・矯正歯科 豊洲プライムスクエア院',
+    description: '上顎前突（出っ歯）の特徴、原因、治療法について詳しく解説。早期治療で効果的に改善できる不正咬合の一つです。',
+    type: 'website',
+    locale: 'ja_JP',
+    url: 'https://fuku-dental.jp/kidsortho/types/overbite',
+    siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
+  },
 };
 
 export default function OverbiteDetailPage() {
@@ -40,6 +49,8 @@ export default function OverbiteDetailPage() {
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[#5A4D41] mb-3">
                   上顎前突（じょうがくぜんとつ）
                 </h1>
+                <PageImage path="/kidsortho/types/overbite" alt="上顎前突（出っ歯）の治療" />
+                <p className="text-sm text-[#8D8070] mb-3">豊洲の矯正歯科が詳しく解説</p>
                 <div className="w-16 h-0.5 bg-[#C5A572] mb-6"></div>
               </div>
 
@@ -602,7 +613,7 @@ export default function OverbiteDetailPage() {
                 <h2 className="text-3xl md:text-4xl font-bold text-[#5A4D41] mb-4">お子様の出っ歯が気になりませんか？</h2>
                 <p className="text-lg md:text-xl text-[#8D8070] leading-relaxed">
                   上顎前突（出っ歯）は早期治療が効果的です。<br />
-                  まずは無料カウンセリングでご相談ください。
+                  豊洲で小児矯正をお考えなら、まずは無料カウンセリングにお越しください。
                 </p>
               </div>
 

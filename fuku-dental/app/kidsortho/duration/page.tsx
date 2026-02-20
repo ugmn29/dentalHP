@@ -1,10 +1,26 @@
 import React from 'react';
+import type { Metadata } from 'next';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
 import { Clock, ArrowRight, CheckCircle, AlertCircle, TrendingUp, Calendar, Info, Home, ChevronRight } from 'lucide-react';
 import { KidsOrthoImage } from '@/components/KidsOrthoImage';
+import { PageImage } from '@/components/PageImage';
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: '小児矯正の治療期間｜いつまでかかる？｜F歯科・矯正歯科 豊洲プライムスクエア院',
+  description: '小児矯正の治療期間を歯科医師が解説。1期治療・2期治療それぞれの目安期間、治療期間を左右する要因、通院頻度について。豊洲のF歯科で計画的な矯正治療を行います。',
+  keywords: '小児矯正 期間,子供 矯正 いつまで,小児矯正 何年,矯正 通院頻度,1期治療 期間,豊洲 小児矯正',
+  openGraph: {
+    title: '小児矯正の治療期間｜いつまでかかる？｜F歯科・矯正歯科 豊洲プライムスクエア院',
+    description: '小児矯正の治療期間を歯科医師が解説。1期治療・2期治療の目安期間と通院頻度について。',
+    type: 'website',
+    locale: 'ja_JP',
+    url: 'https://fuku-dental.jp/kidsortho/duration',
+    siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
+  },
+};
 
 export default function KidsOrthoDurationPage() {
     return (
@@ -36,6 +52,7 @@ export default function KidsOrthoDurationPage() {
                             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#5A4D41] font-serif">
                                 小児矯正はいつ終わる？<br />「長い」と感じる理由
                             </h1>
+                            <PageImage path="/kidsortho/duration" alt="小児矯正の治療期間" />
                             <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
 
                             <KidsOrthoImage
@@ -47,6 +64,7 @@ export default function KidsOrthoDurationPage() {
                             <p className="text-xl md:text-2xl mt-6 mb-6 text-[#5A4D41] font-medium">
                                 期間が長いのは成長を待つ時間（経過観察）が含まれるから
                             </p>
+                            <p className="text-[#8D8070] mt-3 font-sans">豊洲の矯正歯科が詳しく解説します</p>
                             <p className="text-lg text-[#8D8070] leading-relaxed">
                                 I期治療とII期治療のタイムラインを詳しく解説します
                             </p>
@@ -682,7 +700,7 @@ export default function KidsOrthoDurationPage() {
                                 お子さまの治療期間を詳しくシミュレーション
                             </h2>
                             <p className="text-xl mb-8 text-white/90">
-                                精密検査で現在の歯並びを分析し、治療期間・装置・費用を詳しくご説明します
+                                豊洲で小児矯正をお考えなら、豊洲駅徒歩2分の当院へ。精密検査で現在の歯並びを分析し、治療期間・装置・費用を詳しくご説明します
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                 <Link

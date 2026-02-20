@@ -2,16 +2,17 @@ import React from 'react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
+import { PageImage } from '@/components/PageImage';
 import { Sparkles, ArrowRight, CheckCircle, Clock, Heart, Star, AlertCircle, Shield, Users, TrendingUp, X, Zap } from 'lucide-react';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: '当院のホワイトニングが選ばれる理由｜他院との違い｜F歯科・矯正歯科 豊洲プライムスクエア院',
-  description: '当院のホワイトニングが選ばれる理由を徹底解説。他院との違い、当院だけの特徴、充実したサービス内容をご紹介します。',
-  keywords: 'ホワイトニング,比較,選び方,おすすめ,歯科医院,違い,特徴',
+  description: '豊洲の歯医者 F歯科のホワイトニングが選ばれる理由を徹底解説。他院との違い、当院だけの特徴、充実したサービス内容をご紹介します。',
+  keywords: 'ホワイトニング,比較,選び方,おすすめ,歯科医院,違い,特徴,豊洲,歯医者',
   openGraph: {
     title: '当院のホワイトニングが選ばれる理由｜他院との違い｜F歯科・矯正歯科 豊洲プライムスクエア院',
-    description: '当院のホワイトニングが選ばれる理由と他院との違いをご紹介します。',
+    description: '豊洲の歯医者 F歯科のホワイトニングが選ばれる理由と他院との違いをご紹介します。',
     type: 'website',
   },
 };
@@ -40,6 +41,7 @@ export default function WhiteningComparisonPage() {
               当院のホワイトニングが<br />
               選ばれる5つの理由
             </h1>
+            <PageImage path="/whitening/comparison" alt="当院のホワイトニングが選ばれる5つの理由" />
 
             <p className="text-lg md:text-xl mb-8 text-pink-50 leading-relaxed max-w-3xl mx-auto">
               他院との違いを明確にお伝えします。<br />
@@ -78,7 +80,7 @@ export default function WhiteningComparisonPage() {
               当院が選ばれる5つの理由
             </h2>
             <p className="text-center text-gray-600 mb-12 text-lg">
-              他院にはない、当院だけの特徴をご紹介します
+              豊洲駅徒歩2分。他院にはない、当院だけの特徴をご紹介します
             </p>
 
             <div className="space-y-12">

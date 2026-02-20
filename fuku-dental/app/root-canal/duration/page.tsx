@@ -4,11 +4,20 @@ import { Home, ChevronRight, Clock, Calendar, CheckCircle, AlertCircle, Phone, A
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
+import { PageImage } from '@/components/PageImage';
 
 export const metadata: Metadata = {
   title: '根管治療の期間・回数｜治療にかかる期間と通院回数｜F歯科・矯正歯科 豊洲プライムスクエア院',
-  description: '根管治療にかかる期間と通院回数を詳しく解説。初回治療、再根管治療、歯根端切除術それぞれの治療期間、各回の治療内容、期間が長引く原因について説明します。',
+  description: '豊洲の歯医者 F歯科が根管治療にかかる期間と通院回数を詳しく解説。初回治療、再根管治療、歯根端切除術それぞれの治療期間、各回の治療内容、期間が長引く原因について説明します。',
   keywords: '根管治療,期間,回数,通院,治療期間,何回,何ヶ月,F歯科・矯正歯科 豊洲プライムスクエア院',
+  openGraph: {
+    title: '根管治療の期間・回数｜治療にかかる期間と通院回数｜F歯科・矯正歯科 豊洲プライムスクエア院',
+    description: '豊洲の歯医者 F歯科が根管治療にかかる期間と通院回数を詳しく解説。初回治療・再根管治療・歯根端切除術それぞれの治療期間をご紹介。',
+    type: 'website',
+    locale: 'ja_JP',
+    url: 'https://fuku-dental.jp/root-canal/duration',
+    siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
+  },
 };
 
 export default function RootCanalDurationPage() {
@@ -44,9 +53,10 @@ export default function RootCanalDurationPage() {
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#5A4D41] font-serif">
                 根管治療の期間・回数
               </h1>
+              <PageImage path="/root-canal/duration" alt="根管治療の期間・回数" />
               <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
               <p className="text-xl md:text-2xl mb-6 text-[#5A4D41] font-medium">
-                治療にかかる期間と通院回数を詳しく解説します
+                豊洲駅徒歩2分の当院が治療にかかる期間と通院回数を詳しく解説します
               </p>
             </div>
           </div>

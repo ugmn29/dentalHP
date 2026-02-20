@@ -1,10 +1,26 @@
 import React from 'react';
+import type { Metadata } from 'next';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
 import { Wrench, ArrowRight, CheckCircle, AlertCircle, Clock, Heart, Shield, TrendingUp, Users, Home, ChevronRight } from 'lucide-react';
 import { KidsOrthoImage } from '@/components/KidsOrthoImage';
+import { PageImage } from '@/components/PageImage';
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: '小児矯正の装置一覧｜種類と特徴を比較｜F歯科・矯正歯科 豊洲プライムスクエア院',
+  description: '豊洲のF歯科が小児矯正で使用する装置を一覧でご紹介。プレオルソ・拡大床・ワイヤー矯正など、各装置の特徴・対象年齢・治療期間を比較。お子様に最適な装置をご提案します。',
+  keywords: '小児矯正 装置,子供 矯正 種類,プレオルソ,拡大床,小児矯正 装置 比較,豊洲 小児矯正',
+  openGraph: {
+    title: '小児矯正の装置一覧｜種類と特徴を比較｜F歯科・矯正歯科 豊洲プライムスクエア院',
+    description: '小児矯正で使用する装置を一覧でご紹介。各装置の特徴・対象年齢・治療期間を比較。',
+    type: 'website',
+    locale: 'ja_JP',
+    url: 'https://fuku-dental.jp/kidsortho/appliances',
+    siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
+  },
+};
 
 export default function KidsOrthoAppliancesPage() {
     const appliances = [
@@ -17,7 +33,7 @@ export default function KidsOrthoAppliancesPage() {
             removable: true,
             color: "from-[#8E7CC3] to-[#7E6CB3]",
             borderColor: "border-[#8E7CC3]",
-            image: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=800",
+            imageId: "preortho",
             shortDesc: "マウスピース型の筋機能訓練装置",
             features: [
                 "柔らかいシリコン製で違和感が少ない",
@@ -43,7 +59,7 @@ export default function KidsOrthoAppliancesPage() {
             removable: true,
             color: "from-[#C5A572] to-[#B39562]",
             borderColor: "border-[#C5A572]",
-            image: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=800",
+            imageId: "expander",
             shortDesc: "顎を広げて永久歯のスペースを確保する装置",
             features: [
                 "上顎・下顎の骨を横に広げる",
@@ -69,7 +85,7 @@ export default function KidsOrthoAppliancesPage() {
             removable: true,
             color: "from-[#395b45] to-[#2d4835]",
             borderColor: "border-[#395b45]",
-            image: "https://images.unsplash.com/photo-1609137144813-7d9921338f24?auto=format&fit=crop&q=80&w=800",
+            imageId: "functional",
             shortDesc: "上下の顎のバランスを整える装置（バイオネーター、FKOなど）",
             features: [
                 "下顎の成長を促進（受け口の改善）",
@@ -95,7 +111,7 @@ export default function KidsOrthoAppliancesPage() {
             removable: true,
             color: "from-[#9B89B3] to-[#8B79A3]",
             borderColor: "border-[#9B89B3]",
-            image: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=800",
+            imageId: "mft-trainer",
             shortDesc: "舌・唇・頬の筋肉を正しく使えるようにする装置",
             features: [
                 "口呼吸を鼻呼吸に改善",
@@ -121,7 +137,7 @@ export default function KidsOrthoAppliancesPage() {
             removable: true,
             color: "from-[#E89B4D] to-[#D88B3D]",
             borderColor: "border-[#E89B4D]",
-            image: "https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?auto=format&fit=crop&q=80&w=800",
+            imageId: "headgear",
             shortDesc: "上顎の過成長を抑制し、出っ歯を改善する装置",
             features: [
                 "上顎の前方への成長を抑制",
@@ -147,7 +163,7 @@ export default function KidsOrthoAppliancesPage() {
             removable: true,
             color: "from-[#6B9BD1] to-[#5B8BC1]",
             borderColor: "border-[#6B9BD1]",
-            image: "https://images.unsplash.com/photo-1609137144813-7d9921338f24?auto=format&fit=crop&q=80&w=800",
+            imageId: "chin-cap",
             shortDesc: "下顎の過成長を抑制し、受け口を改善する装置",
             features: [
                 "下顎の前方への成長を抑制",
@@ -173,7 +189,7 @@ export default function KidsOrthoAppliancesPage() {
             removable: false,
             color: "from-[#4A7C59] to-[#3A6C49]",
             borderColor: "border-[#4A7C59]",
-            image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=800",
+            imageId: "quad-helix",
             shortDesc: "固定式の顎拡大装置（上顎専用）",
             features: [
                 "上顎を効率的に横に広げる",
@@ -199,7 +215,7 @@ export default function KidsOrthoAppliancesPage() {
             removable: false,
             color: "from-[#6B7AA1] to-[#5B6A91]",
             borderColor: "border-[#6B7AA1]",
-            image: "https://images.unsplash.com/photo-1598531228433-d9f0bb81d96e?auto=format&fit=crop&q=80&w=800",
+            imageId: "lingual-arch",
             shortDesc: "永久歯のスペースを確保する固定式装置",
             features: [
                 "乳歯抜歯後のスペースを保持",
@@ -225,7 +241,7 @@ export default function KidsOrthoAppliancesPage() {
             removable: false,
             color: "from-[#C85A54] to-[#B84A44]",
             borderColor: "border-[#C85A54]",
-            image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=800",
+            imageId: "rapid-expander",
             shortDesc: "短期間で上顎を効率的に拡大する固定式装置",
             features: [
                 "数週間〜数ヶ月で顎を拡大",
@@ -251,7 +267,7 @@ export default function KidsOrthoAppliancesPage() {
             removable: false,
             color: "from-[#5A7C9B] to-[#4A6C8B]",
             borderColor: "border-[#5A7C9B]",
-            image: "https://images.unsplash.com/photo-1609137144813-7d9921338f24?auto=format&fit=crop&q=80&w=800",
+            imageId: "wire-braces",
             shortDesc: "2期治療で使用する本格的な歯列矯正",
             features: [
                 "あらゆる不正咬合に対応可能",
@@ -277,7 +293,7 @@ export default function KidsOrthoAppliancesPage() {
             removable: true,
             color: "from-[#7B9FAB] to-[#6B8F9B]",
             borderColor: "border-[#7B9FAB]",
-            image: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=800",
+            imageId: "clear-aligner",
             shortDesc: "透明で目立たないマウスピース型矯正装置",
             features: [
                 "透明で目立たない",
@@ -325,10 +341,12 @@ export default function KidsOrthoAppliancesPage() {
                             <h1 className="text-4xl md:text-5xl font-serif font-bold mb-6 text-[#5A4D41]">
                                 こども矯正で使用する装置
                             </h1>
+                            <PageImage path="/kidsortho/appliances" alt="こども矯正で使用する装置" />
                             <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
-                            <p className="text-xl md:text-2xl mb-6 text-[#5A4D41] font-sans font-medium">
+                            <p className="text-xl md:text-2xl mb-4 text-[#5A4D41] font-sans font-medium">
                                 お子さまに最適な矯正装置をご提案
                             </p>
+                            <p className="text-sm text-[#8D8070] mb-4">豊洲の矯正歯科が各装置の特徴を詳しく解説</p>
                             <p className="text-lg text-[#8D8070] font-sans leading-relaxed">
                                 1期治療（小児矯正）では、顎の成長を利用した様々な装置を使用します。<br className="hidden md:block" />
                                 お子さまの年齢・症状・生活スタイルに合わせて、最も効果的な装置を選択します。
@@ -822,7 +840,7 @@ export default function KidsOrthoAppliancesPage() {
                                 お子さまに最適な装置を専門医がご提案
                             </h2>
                             <p className="text-xl mb-8 font-sans text-white/90">
-                                症状・年齢・生活スタイルに合わせて、最も効果的な装置をオーダーメイドでご提案します
+                                豊洲の歯医者として、症状・年齢・生活スタイルに合わせて最も効果的な装置をオーダーメイドでご提案します
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                 <Link

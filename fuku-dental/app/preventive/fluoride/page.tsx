@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
+import { PageImage } from '@/components/PageImage';
 import {
   CheckCircle2,
   ArrowRight,
@@ -11,11 +12,11 @@ import {
 
 export const metadata: Metadata = {
   title: 'フッ素塗布｜予防歯科｜F歯科・矯正歯科 豊洲プライムスクエア院',
-  description: 'フッ素塗布は虫歯予防に効果的な予防処置です。歯質の強化、再石灰化の促進、虫歯菌の抑制など、フッ素塗布のメリットと効果について詳しくご紹介します。',
-  keywords: 'フッ素塗布,虫歯予防,歯質強化,再石灰化,子ども,大人,フッ素,予防歯科',
+  description: '豊洲の歯科 F歯科のフッ素塗布は虫歯予防に効果的な予防処置です。歯質の強化、再石灰化の促進、虫歯菌の抑制など、フッ素塗布のメリットと効果について詳しくご紹介します。',
+  keywords: 'フッ素塗布,虫歯予防,歯質強化,再石灰化,子ども,大人,フッ素,予防歯科,豊洲,歯医者',
   openGraph: {
     title: 'フッ素塗布｜予防歯科｜F歯科・矯正歯科 豊洲プライムスクエア院',
-    description: 'フッ素塗布は虫歯予防に効果的な予防処置です。歯質の強化、再石灰化の促進、虫歯菌の抑制など、フッ素塗布のメリットと効果について詳しくご紹介します。',
+    description: '豊洲の歯科 F歯科のフッ素塗布は虫歯予防に効果的な予防処置です。歯質の強化、再石灰化の促進、虫歯菌の抑制など、フッ素塗布のメリットと効果について詳しくご紹介します。',
     type: 'website',
   },
 };
@@ -46,12 +47,13 @@ export default function FluoridePage() {
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#5A4D41] font-serif">
                 フッ素塗布
               </h1>
+              <PageImage path="/preventive/fluoride" alt="フッ素塗布" />
               <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
               <p className="text-xl md:text-2xl mb-6 text-[#5A4D41] font-medium">
                 歯を強くし、虫歯を予防する安全で効果的な予防処置
               </p>
               <p className="text-lg text-[#8D8070] leading-relaxed">
-                定期的なフッ素塗布で、虫歯リスクを約40%低減できます
+                豊洲駅すぐの当院で、定期的なフッ素塗布により虫歯リスクを約40%低減できます
               </p>
             </div>
           </div>

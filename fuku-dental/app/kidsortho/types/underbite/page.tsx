@@ -4,12 +4,21 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
 import { KidsOrthoImage } from '@/components/KidsOrthoImage';
+import { PageImage } from '@/components/PageImage';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: '下顎前突（受け口）の治療 | こども矯正 | F歯科・矯正歯科 豊洲プライムスクエア院',
   description: '下顎前突（受け口）の特徴、原因、治療法について詳しく解説。早期治療で効果的に改善できる不正咬合の一つです。お子様の歯並びが気になる方はご相談ください。',
   keywords: '下顎前突,受け口,反対咬合,こども矯正,小児矯正,歯列矯正,不正咬合,歯科,横浜',
+  openGraph: {
+    title: '下顎前突（受け口）の治療 | こども矯正 | F歯科・矯正歯科 豊洲プライムスクエア院',
+    description: '下顎前突（受け口）の特徴、原因、治療法について詳しく解説。早期治療で効果的に改善できる不正咬合の一つです。',
+    type: 'website',
+    locale: 'ja_JP',
+    url: 'https://fuku-dental.jp/kidsortho/types/underbite',
+    siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
+  },
 };
 
 export default function UnderbiteDetailPage() {
@@ -40,6 +49,8 @@ export default function UnderbiteDetailPage() {
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[#5A4D41] mb-3">
                   下顎前突（かがくぜんとつ）
                 </h1>
+                <PageImage path="/kidsortho/types/underbite" alt="下顎前突（受け口）の治療" />
+                <p className="text-sm text-[#8D8070] mb-3">豊洲の矯正歯科が詳しく解説</p>
                 <div className="w-16 h-0.5 bg-[#C5A572] mb-6"></div>
               </div>
 
@@ -625,7 +636,7 @@ export default function UnderbiteDetailPage() {
                 <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#5A4D41] mb-4">お子様の受け口が気になりませんか？</h2>
                 <p className="text-lg md:text-xl text-[#8D8070] leading-loose">
                   下顎前突（受け口）は3〜5歳からの超早期治療が最も効果的です。<br />
-                  3歳児検診で指摘されたら、すぐにご相談ください。
+                  豊洲の歯医者・F歯科矯正歯科へ、3歳児検診で指摘されたらすぐにご相談ください。
                 </p>
               </div>
 

@@ -4,12 +4,21 @@ import { Metadata } from 'next';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
+import { PageImage } from '@/components/PageImage';
 import { ChevronRight, CheckCircle, Users, Heart, Briefcase, Calendar, TrendingUp, Shield } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: '大人の矯正治療｜何歳からでも始められる歯列矯正｜F歯科・矯正歯科 豊洲プライムスクエア院',
-  description: '大人になってからでも矯正治療は可能です。40代・50代から始める方も増加中。目立たないマウスピース矯正や裏側矯正で、仕事や生活に支障なく美しい歯並びを手に入れられます。',
+  description: '豊洲の歯医者 F歯科の大人の矯正治療。40代・50代から始める方も増加中。目立たないマウスピース矯正や裏側矯正で、仕事や生活に支障なく美しい歯並びを手に入れられます。',
   keywords: '大人,矯正,成人矯正,何歳まで,40代,50代,社会人,目立たない,F歯科・矯正歯科 豊洲プライムスクエア院',
+  openGraph: {
+    title: '大人の矯正治療｜何歳からでも始められる歯列矯正｜F歯科・矯正歯科 豊洲プライムスクエア院',
+    description: '豊洲の歯医者 F歯科の大人の矯正治療。40代・50代から始める方も増加中。目立たないマウスピース矯正や裏側矯正で美しい歯並びに。',
+    type: 'website',
+    locale: 'ja_JP',
+    url: 'https://fuku-dental.jp/orthodontics/adult',
+    siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
+  },
 };
 
 export default function OrthodonticsAdultPage() {
@@ -41,8 +50,9 @@ export default function OrthodonticsAdultPage() {
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
                 大人の矯正治療
               </h1>
+              <PageImage path="/orthodontics/adult" alt="大人の矯正治療" />
               <p className="text-xl md:text-2xl text-amber-100 mb-8 max-w-3xl mx-auto leading-relaxed">
-                何歳からでも遅くない。あなたのライフスタイルに合わせた矯正治療
+                何歳からでも遅くない。豊洲駅すぐのF歯科が、あなたのライフスタイルに合わせた矯正治療をご提案
               </p>
             </div>
           </div>

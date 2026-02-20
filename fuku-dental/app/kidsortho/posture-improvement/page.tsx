@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ChevronRight, BookOpen, AlertCircle, CheckCircle2, Clock, Smartphone, TrendingUp, Users, Home, ArrowRight } from 'lucide-react'
 import { KidsOrthoImage } from '@/components/KidsOrthoImage'
+import { PageImage } from '@/components/PageImage'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { AuthorBio } from '@/components/AuthorBio'
@@ -10,6 +11,14 @@ export const metadata: Metadata = {
   title: '正しい姿勢と咬合の関係｜猫背・ストレートネックが歯並びを悪化させる｜F歯科・矯正歯科 豊洲プライムスクエア院',
   description: '猫背やストレートネックが歯並びを悪化させるメカニズムと、浮き指チェック法、家庭でできる姿勢改善トレーニングを詳しく解説します。',
   keywords: '姿勢,咬合,猫背,ストレートネック,浮き指,小児矯正,姿勢改善,歯並び',
+  openGraph: {
+    title: '正しい姿勢と咬合の関係｜猫背・ストレートネックが歯並びを悪化させる｜F歯科・矯正歯科 豊洲プライムスクエア院',
+    description: '猫背やストレートネックが歯並びを悪化させるメカニズムと、浮き指チェック法、家庭でできる姿勢改善トレーニングを詳しく解説します。',
+    type: 'website',
+    locale: 'ja_JP',
+    url: 'https://fuku-dental.jp/kidsortho/posture-improvement',
+    siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
+  },
 }
 
 export default function PostureImprovementPage() {
@@ -42,6 +51,7 @@ export default function PostureImprovementPage() {
             正しい姿勢と咬合の関係<br />
             猫背・ストレートネックが歯並びを悪化させる
           </h1>
+          <PageImage path="/kidsortho/posture-improvement" alt="正しい姿勢と咬合の関係" />
           <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
 
           {/* Hero Image */}
@@ -56,6 +66,7 @@ export default function PostureImprovementPage() {
           <p className="text-xl md:text-2xl mt-6 mb-6 text-[#5A4D41] font-medium">
             浮き指チェック法と家庭でできる姿勢改善トレーニング
           </p>
+          <p className="text-[#8D8070] mt-3 font-sans">豊洲の矯正歯科が詳しく解説します</p>
         </div>
       </section>
 
@@ -530,7 +541,7 @@ export default function PostureImprovementPage() {
                 姿勢改善と矯正治療を<br className="md:hidden" />併用しませんか？
               </h2>
               <p className="text-lg md:text-xl text-[#8D8070] leading-loose font-sans">
-                F歯科・矯正歯科 豊洲プライムスクエア院では、こども矯正の治療計画に<br className="md:hidden" />
+                豊洲で小児矯正をお考えなら、豊洲駅徒歩2分の当院へ。こども矯正の治療計画に<br className="md:hidden" />
                 <span className="font-bold">姿勢改善指導</span>を組み込んでいます。<br />
                 浮き指チェック、家庭でのトレーニング方法を<br className="md:hidden" />
                 詳しくお伝えします。

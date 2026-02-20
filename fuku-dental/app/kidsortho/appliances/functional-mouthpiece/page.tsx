@@ -3,6 +3,7 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
 import { KidsOrthoImage } from '@/components/KidsOrthoImage';
+import { PageImage } from '@/components/PageImage';
 import { ArrowRight, CheckCircle, AlertCircle, Calendar, Heart, TrendingUp, Clock, DollarSign, Users, Wrench, Home, ChevronRight } from 'lucide-react';
 import Link from 'next/link';
 import type { Metadata } from 'next';
@@ -11,6 +12,14 @@ export const metadata: Metadata = {
     title: 'プレオルソ・マイオブレース・T4K・EFラインの比較｜どれがいい？費用と効果の違い｜F歯科・矯正歯科 豊洲プライムスクエア院',
     description: '機能的マウスピース装置（プレオルソ・マイオブレース・T4K・EFライン）の違いを徹底比較。どれを選べばいい？費用・効果・適応症例の違いをわかりやすく解説します。',
     keywords: 'プレオルソ,マイオブレース,T4K,EFライン,機能的マウスピース,こども矯正,小児矯正,費用,比較,選び方',
+    openGraph: {
+        title: 'プレオルソ・マイオブレース・T4K・EFラインの比較｜どれがいい？費用と効果の違い｜F歯科・矯正歯科 豊洲プライムスクエア院',
+        description: '機能的マウスピース装置（プレオルソ・マイオブレース・T4K・EFライン）の違いを徹底比較。費用・効果・適応症例の違いをわかりやすく解説します。',
+        type: 'website',
+        locale: 'ja_JP',
+        url: 'https://fuku-dental.jp/kidsortho/appliances/functional-mouthpiece',
+        siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
+    },
 };
 
 export default function FunctionalMouthpiecePage() {
@@ -41,6 +50,7 @@ export default function FunctionalMouthpiecePage() {
                                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[#5A4D41] mb-3">
                                     プレオルソ・マイオブレース・T4K・EFラインの比較｜どれがいい？費用と効果の違い
                                 </h1>
+                                <PageImage path="/kidsortho/appliances/functional-mouthpiece" alt="機能的マウスピース装置の比較" />
                                 <div className="w-16 h-0.5 bg-[#C5A572] mb-6"></div>
                             </div>
 
@@ -51,7 +61,8 @@ export default function FunctionalMouthpiecePage() {
                                 category="appliances"
                             />
 
-                            <p className="text-base md:text-lg leading-loose text-[#8D8070] font-sans mt-6 mb-8">
+                            <p className="text-sm text-[#8D8070] mt-3">豊洲の矯正歯科が各装置の違いを徹底比較</p>
+                            <p className="text-base md:text-lg leading-loose text-[#8D8070] font-sans mt-4 mb-8">
                                 プレオルソ・T4K・マイオブレースなど、柔らかいシリコン製のマウスピースで口呼吸・舌癖を改善しながら歯並びを整える治療法です
                             </p>
                         </div>
@@ -545,7 +556,7 @@ export default function FunctionalMouthpiecePage() {
                             <div className="text-center mb-8">
                                 <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#5A4D41] mb-4">お子さまに最適な装置を無料でご提案</h2>
                                 <p className="text-lg md:text-xl text-[#8D8070] leading-loose font-sans">
-                                    機能的マウスピース装置が適しているか、まずは無料相談でご確認ください
+                                    機能的マウスピース装置が適しているか、豊洲の歯医者・F歯科矯正歯科の無料相談でご確認ください
                                 </p>
                             </div>
 

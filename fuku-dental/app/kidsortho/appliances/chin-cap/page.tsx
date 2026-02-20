@@ -3,6 +3,7 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
 import { KidsOrthoImage } from '@/components/KidsOrthoImage';
+import { PageImage } from '@/components/PageImage';
 import { ArrowRight, CheckCircle, AlertCircle, Calendar, Heart, TrendingUp, Clock, DollarSign, Users, Wrench, Home, ChevronRight } from 'lucide-react';
 import Link from 'next/link';
 import type { Metadata } from 'next';
@@ -11,6 +12,14 @@ export const metadata: Metadata = {
     title: 'チンキャップとは？｜受け口治療の効果・費用・装着時間を詳しく解説｜F歯科・矯正歯科 豊洲プライムスクエア院',
     description: 'チンキャップで骨格性の受け口を早期改善。下顎の成長抑制による根本的治療の効果、費用相場、装着時間、外科手術回避の可能性をわかりやすく解説します。',
     keywords: 'チンキャップ,受け口,下顎前突,反対咬合,小児矯正,こども矯正,費用,効果,装着時間,外科手術回避',
+    openGraph: {
+        title: 'チンキャップとは？｜受け口治療の効果・費用・装着時間を詳しく解説｜F歯科・矯正歯科 豊洲プライムスクエア院',
+        description: 'チンキャップで骨格性の受け口を早期改善。下顎の成長抑制による根本的治療の効果、費用相場、装着時間、外科手術回避の可能性をわかりやすく解説します。',
+        type: 'website',
+        locale: 'ja_JP',
+        url: 'https://fuku-dental.jp/kidsortho/appliances/chin-cap',
+        siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
+    },
 };
 
 export default function ChinCapPage() {
@@ -41,6 +50,7 @@ export default function ChinCapPage() {
                                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[#5A4D41] mb-3">
                                     受け口を早期に改善するチンキャップ
                                 </h1>
+                                <PageImage path="/kidsortho/appliances/chin-cap" alt="受け口を早期に改善するチンキャップ" />
                                 <div className="w-16 h-0.5 bg-[#C5A572] mb-6"></div>
                             </div>
 

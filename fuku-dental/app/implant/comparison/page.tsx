@@ -4,6 +4,7 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
 import { ComparisonTable } from '@/components/implant/ComparisonTable';
+import { PageImage } from '@/components/PageImage';
 import {
   CheckCircle2,
   XCircle,
@@ -20,6 +21,14 @@ export const metadata: Metadata = {
     'インプラント・入れ歯・ブリッジの3つの治療法を、噛む力・見た目・費用・治療期間・耐久性など9つの項目で徹底比較。それぞれのメリット・デメリットを正直に解説し、あなたに合った治療法の選び方をご案内します。',
   keywords:
     'インプラント,入れ歯,ブリッジ,比較,違い,メリット,デメリット,歯を失った,治療法,選び方',
+  openGraph: {
+    title: 'インプラント・入れ歯・ブリッジの違いを徹底比較｜F歯科・矯正歯科 豊洲プライムスクエア院',
+    description: 'インプラント・入れ歯・ブリッジを噛む力・見た目・費用・治療期間・耐久性など9項目で徹底比較。あなたに合った治療法の選び方をご案内。',
+    type: 'website',
+    locale: 'ja_JP',
+    url: 'https://fuku-dental.jp/implant/comparison',
+    siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
+  },
 };
 
 export default function ComparisonPage() {
@@ -52,6 +61,7 @@ export default function ComparisonPage() {
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#2d4835] font-serif">
                 インプラント・入れ歯・ブリッジ比較
               </h1>
+              <PageImage path="/implant/comparison" alt="インプラント・入れ歯・ブリッジの比較" />
               <div className="w-24 h-1 bg-[#395b45] mx-auto mb-8"></div>
               <p className="text-xl md:text-2xl mb-6 text-[#2d4835] font-medium">
                 3つの治療法を徹底比較して、あなたに合った選択を

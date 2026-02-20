@@ -4,6 +4,7 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
 import { KidsOrthoImage } from '@/components/KidsOrthoImage';
+import { PageImage } from '@/components/PageImage';
 import {
   CheckCircle2,
   AlertCircle,
@@ -17,6 +18,14 @@ export const metadata: Metadata = {
   title: '受け口は自然に治る？確率14%の真実｜F歯科・矯正歯科 豊洲プライムスクエア院',
   description: '「放置して治った」はレアケース。自然治癒率14%のエビデンスと、3歳から始める早期治療（ムーシールド・プレオルソ）を詳しく解説します。',
   keywords: '受け口,自然治癒,反対咬合,ムーシールド,プレオルソ,小児矯正,早期治療',
+  openGraph: {
+    title: '受け口は自然に治る？確率14%の真実｜F歯科・矯正歯科 豊洲プライムスクエア院',
+    description: '「放置して治った」はレアケース。自然治癒率14%のエビデンスと、3歳から始める早期治療（ムーシールド・プレオルソ）を詳しく解説します。',
+    type: 'website',
+    locale: 'ja_JP',
+    url: 'https://fuku-dental.jp/kidsortho/underbite-natural-cure',
+    siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
+  },
 };
 
 export default function UnderbiteNaturalCurePage() {
@@ -49,6 +58,7 @@ export default function UnderbiteNaturalCurePage() {
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#5A4D41] font-serif">
                 受け口は自然に治る？<br />確率14%の真実
               </h1>
+              <PageImage path="/kidsortho/underbite-natural-cure" alt="受け口は自然に治るか" />
               <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
 
               <KidsOrthoImage
@@ -60,6 +70,7 @@ export default function UnderbiteNaturalCurePage() {
               <p className="text-xl md:text-2xl mt-6 mb-6 text-[#5A4D41] font-medium">
                 「放置して治った」はレアケース
               </p>
+              <p className="text-[#8D8070] mt-3 font-sans">豊洲の矯正歯科が詳しく解説します</p>
               <p className="text-lg text-[#8D8070] leading-relaxed mb-8">
                 自然治癒率14%のエビデンスと、<br className="hidden md:block" />
                 3歳から始める早期治療を詳しく解説します
@@ -488,7 +499,7 @@ export default function UnderbiteNaturalCurePage() {
                 <div className="text-center mb-8">
                   <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#5A4D41] mb-4">お子さまの受け口、今すぐ相談を</h2>
                   <p className="text-lg md:text-xl text-[#8D8070] leading-loose font-sans">
-                    3歳からの早期治療で、手術を回避できる可能性が高まります
+                    豊洲で小児矯正をお考えなら、豊洲駅徒歩2分の当院へ。3歳からの早期治療で、手術を回避できる可能性が高まります
                   </p>
                 </div>
 

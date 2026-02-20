@@ -4,11 +4,20 @@ import { ChevronRight, Home, CheckCircle2, ArrowRight, AlertCircle } from 'lucid
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
+import { PageImage } from '@/components/PageImage';
 
 export const metadata: Metadata = {
   title: '歯周病の進行段階｜軽度・中等度・重度の症状と治療法｜F歯科・矯正歯科 豊洲プライムスクエア院',
-  description: '歯周病の進行段階を詳しく解説。歯肉炎から重度歯周炎までの症状、各段階での治療法、セルフチェック方法をご紹介します。',
+  description: '豊洲の歯医者が歯周病の進行段階を詳しく解説。歯肉炎から重度歯周炎までの症状、各段階での治療法、セルフチェック方法をご紹介します。',
   keywords: '歯周病,進行段階,歯肉炎,歯周炎,重度,症状,チェック,F歯科・矯正歯科 豊洲プライムスクエア院',
+  openGraph: {
+    title: '歯周病の進行段階｜軽度・中等度・重度の症状と治療法｜F歯科・矯正歯科 豊洲プライムスクエア院',
+    description: '歯周病の進行段階を詳しく解説。歯肉炎から重度歯周炎までの症状、各段階での治療法、セルフチェック方法をご紹介します。',
+    type: 'website',
+    locale: 'ja_JP',
+    url: 'https://fuku-dental.jp/periodontal/stages',
+    siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
+  },
 };
 
 export default function PeriodontalStagesPage() {
@@ -41,13 +50,14 @@ export default function PeriodontalStagesPage() {
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#5A4D41] font-serif">
                 歯周病の進行段階
               </h1>
+              <PageImage path="/periodontal/stages" alt="歯周病の進行段階" />
               <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
               <p className="text-xl md:text-2xl mb-6 text-[#5A4D41] font-medium">
                 早期発見・早期治療で大切な歯を守りましょう
               </p>
               <p className="text-lg text-[#8D8070] leading-relaxed">
                 歯周病は段階的に進行します。<br />
-                各段階の症状と治療法を理解しましょう
+                豊洲の歯科 F歯科が各段階の症状と治療法を解説します
               </p>
             </div>
           </div>

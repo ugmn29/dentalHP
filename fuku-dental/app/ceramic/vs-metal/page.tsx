@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
+import { PageImage } from '@/components/PageImage';
 import {
   CheckCircle2,
   ArrowRight,
@@ -12,8 +13,16 @@ import {
 
 export const metadata: Metadata = {
   title: 'セラミック vs 銀歯｜どっちがいい？徹底比較｜F歯科・矯正歯科 豊洲プライムスクエア院',
-  description: 'セラミックと銀歯の違いを徹底比較。見た目、寿命、費用、健康面など、あらゆる角度から解説します。あなたに最適な選択肢が見つかります。',
+  description: '豊洲の歯医者 F歯科がセラミックと銀歯の違いを徹底比較。見た目、寿命、費用、健康面など、あらゆる角度から解説します。あなたに最適な選択肢が見つかります。',
   keywords: 'セラミック,銀歯,比較,違い,どっち,メリット,デメリット,保険,自費',
+  openGraph: {
+    title: 'セラミック vs 銀歯｜どっちがいい？徹底比較｜F歯科・矯正歯科 豊洲プライムスクエア院',
+    description: 'セラミックと銀歯の違いを徹底比較。見た目、寿命、費用、健康面など、あらゆる角度から解説します。',
+    type: 'website',
+    locale: 'ja_JP',
+    url: 'https://fuku-dental.jp/ceramic/vs-metal',
+    siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
+  },
 };
 
 export default function CeramicVsMetalPage() {
@@ -46,12 +55,13 @@ export default function CeramicVsMetalPage() {
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#5A4D41] font-serif">
                 セラミック vs 銀歯
               </h1>
+              <PageImage path="/ceramic/vs-metal" alt="セラミック vs 銀歯" />
               <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
               <p className="text-xl md:text-2xl mb-6 text-[#5A4D41] font-medium">
                 どっちがいい？徹底比較
               </p>
               <p className="text-lg text-[#8D8070] leading-relaxed">
-                見た目、寿命、費用、健康面など、<br />
+                豊洲の歯科 F歯科が見た目・寿命・費用・健康面など、<br />
                 あらゆる角度から比較します
               </p>
             </div>

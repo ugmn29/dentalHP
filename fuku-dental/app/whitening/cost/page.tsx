@@ -2,16 +2,17 @@ import React from 'react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
+import { PageImage } from '@/components/PageImage';
 import { CheckCircle, ArrowRight } from 'lucide-react';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'ホワイトニングの料金・費用｜各プランの価格を徹底解説｜F歯科・矯正歯科 豊洲プライムスクエア院',
-  description: 'ホワイトニングの料金・費用を詳しく解説。オフィス・ホーム・デュアルホワイトニングの価格相場、当院の料金プラン、費用対効果、保険適用、支払い方法まで完全ガイド。',
-  keywords: 'ホワイトニング,料金,費用,値段,価格,相場,オフィスホワイトニング,ホームホワイトニング,デュアルホワイトニング',
+  description: '豊洲の歯医者 F歯科のホワイトニング料金・費用を詳しく解説。オフィス・ホーム・デュアルホワイトニングの価格相場、当院の料金プラン、費用対効果、保険適用、支払い方法まで完全ガイド。',
+  keywords: 'ホワイトニング,料金,費用,値段,価格,相場,オフィスホワイトニング,ホームホワイトニング,デュアルホワイトニング,豊洲,歯医者',
   openGraph: {
     title: 'ホワイトニングの料金・費用｜各プランの価格を徹底解説｜F歯科・矯正歯科 豊洲プライムスクエア院',
-    description: 'ホワイトニングの料金を詳しく解説。オフィス・ホーム・デュアルの価格相場と費用対効果を比較。',
+    description: '豊洲の歯医者 F歯科のホワイトニング料金を詳しく解説。オフィス・ホーム・デュアルの価格相場と費用対効果を比較。',
     type: 'website',
   },
 };
@@ -42,12 +43,13 @@ export default function WhiteningCostPage() {
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#5A4D41] font-serif">
               ホワイトニングの料金・費用
             </h1>
+            <PageImage path="/whitening/cost" alt="ホワイトニングの料金・費用" />
             <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
             <p className="text-xl md:text-2xl mb-6 text-[#5A4D41] font-medium">
               明瞭な料金体系で安心
             </p>
             <p className="text-lg text-[#8D8070] leading-relaxed">
-              当院では、事前に明確な費用をお伝えし、<br />
+              豊洲駅すぐの当院では、事前に明確な費用をお伝えし、<br />
               追加料金の心配なく治療を受けていただけます
             </p>
           </div>

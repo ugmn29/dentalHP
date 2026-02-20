@@ -2,16 +2,17 @@ import React from 'react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
+import { PageImage } from '@/components/PageImage';
 import { CheckCircle2, ArrowRight, Home, ChevronRight } from 'lucide-react';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'ホワイトニングの種類｜オフィス・ホーム・デュアル徹底比較｜F歯科・矯正歯科 豊洲プライムスクエア院',
-  description: 'ホワイトニングの3つの種類（オフィス・ホーム・デュアル）を徹底比較。それぞれのメリット・デメリット、費用、効果持続期間、おすすめの方を詳しく解説します。',
-  keywords: 'ホワイトニング,種類,オフィスホワイトニング,ホームホワイトニング,デュアルホワイトニング,比較,違い',
+  description: '豊洲の歯科 F歯科がホワイトニングの3つの種類（オフィス・ホーム・デュアル）を徹底比較。それぞれのメリット・デメリット、費用、効果持続期間、おすすめの方を詳しく解説します。',
+  keywords: 'ホワイトニング,種類,オフィスホワイトニング,ホームホワイトニング,デュアルホワイトニング,比較,違い,豊洲,歯医者',
   openGraph: {
     title: 'ホワイトニングの種類｜オフィス・ホーム・デュアル徹底比較｜F歯科・矯正歯科 豊洲プライムスクエア院',
-    description: 'ホワイトニングの3つの種類を徹底比較。あなたに最適な方法が見つかります。',
+    description: '豊洲の歯医者 F歯科がホワイトニングの3つの種類を徹底比較。あなたに最適な方法が見つかります。',
     type: 'website',
   },
 };
@@ -46,12 +47,13 @@ export default function WhiteningTypesPage() {
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#5A4D41] font-serif">
               ホワイトニングの種類
             </h1>
+            <PageImage path="/whitening/types" alt="ホワイトニングの種類" />
             <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
             <p className="text-xl md:text-2xl mb-6 text-[#5A4D41] font-medium">
               3つのホワイトニング方法を徹底比較
             </p>
             <p className="text-lg text-[#8D8070] leading-relaxed">
-              オフィス・ホーム・デュアルの3つの方法を詳しく比較。<br />
+              豊洲駅すぐの当院で、オフィス・ホーム・デュアルの3つの方法を詳しく比較。<br />
               あなたのライフスタイルに合った最適なホワイトニングが見つかります。
             </p>
           </div>

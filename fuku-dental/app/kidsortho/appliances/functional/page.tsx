@@ -3,6 +3,7 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
 import { KidsOrthoImage } from '@/components/KidsOrthoImage';
+import { PageImage } from '@/components/PageImage';
 import { ArrowRight, CheckCircle, AlertCircle, Calendar, Heart, TrendingUp, Clock, DollarSign, Users, Wrench, Home, ChevronRight } from 'lucide-react';
 import Link from 'next/link';
 import type { Metadata } from 'next';
@@ -11,6 +12,14 @@ export const metadata: Metadata = {
     title: '機能的矯正装置（バイオネーター・FKO）｜効果・費用・治療期間を詳しく解説｜F歯科・矯正歯科 豊洲プライムスクエア院',
     description: '機能的矯正装置（バイオネーター・FKO・アクチバトール）で顎のバランスを整える小児矯正治療を徹底解説。受け口・出っ歯の改善効果、費用、治療期間をわかりやすく説明します。',
     keywords: '機能的矯正装置,バイオネーター,FKO,アクチバトール,こども矯正,小児矯正,受け口,出っ歯,費用,治療期間',
+    openGraph: {
+        title: '機能的矯正装置（バイオネーター・FKO）｜効果・費用・治療期間を詳しく解説｜F歯科・矯正歯科 豊洲プライムスクエア院',
+        description: '機能的矯正装置（バイオネーター・FKO・アクチバトール）で顎のバランスを整える小児矯正治療を徹底解説。受け口・出っ歯の改善効果、費用、治療期間をわかりやすく説明します。',
+        type: 'website',
+        locale: 'ja_JP',
+        url: 'https://fuku-dental.jp/kidsortho/appliances/functional',
+        siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
+    },
 };
 
 export default function FunctionalAppliancePage() {
@@ -46,6 +55,7 @@ export default function FunctionalAppliancePage() {
                                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#5A4D41] mb-3" style={{ fontFamily: '"游明朝", "Yu Mincho", YuMincho, "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", serif' }}>
                                     機能的矯正装置（バイオネーター・FKO）｜効果・費用・治療期間を詳しく解説
                                 </h1>
+                                <PageImage path="/kidsortho/appliances/functional" alt="機能的矯正装置の効果・費用・治療期間" />
                                 <div className="w-16 h-0.5 bg-[#C5A572] mb-6"></div>
                             </div>
 

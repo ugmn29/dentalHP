@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
+import { PageImage } from '@/components/PageImage';
 import {
   Monitor,
   Shield,
@@ -26,6 +27,14 @@ export const metadata: Metadata = {
     'F歯科・矯正歯科 豊洲プライムスクエア院のインプラント治療における安全性への取り組み。CT精密診断、サージカルガイド、世界基準のストローマンインプラント、徹底した感染対策、静脈内鎮静法など、安心・安全な治療体制をご紹介します。',
   keywords:
     'インプラント,安全性,CT診断,サージカルガイド,ストローマン,感染対策,静脈内鎮静法,歯科,インプラントリスク',
+  openGraph: {
+    title: 'インプラントの安全性へのこだわり | F歯科・矯正歯科 豊洲プライムスクエア院',
+    description: 'CT精密診断、サージカルガイド、ストローマンインプラント、徹底した感染対策、静脈内鎮静法など、安心・安全な治療体制をご紹介。',
+    type: 'website',
+    locale: 'ja_JP',
+    url: 'https://fuku-dental.jp/implant/safety',
+    siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
+  },
 };
 
 export default function ImplantSafetyPage() {
@@ -58,6 +67,7 @@ export default function ImplantSafetyPage() {
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#2d4835] font-serif">
                 安全性へのこだわり
               </h1>
+              <PageImage path="/implant/safety" alt="インプラントの安全性へのこだわり" />
               <div className="w-24 h-1 bg-[#395b45] mx-auto mb-8"></div>
               <p className="text-xl md:text-2xl mb-6 text-[#2d4835] font-medium">
                 精密な診断と徹底した管理体制で安心の治療を

@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
+import { PageImage } from '@/components/PageImage';
 import {
   CheckCircle2,
   ArrowRight,
@@ -11,11 +12,11 @@ import {
 
 export const metadata: Metadata = {
   title: '虫歯の進行段階（C0〜C4）｜虫歯治療｜F歯科・矯正歯科 豊洲プライムスクエア院',
-  description: '虫歯の進行段階をC0からC4まで詳しく解説。各段階での症状、痛みの程度、治療法について分かりやすくご説明します。',
-  keywords: '虫歯,C0,C1,C2,C3,C4,進行段階,痛み,症状,虫歯治療',
+  description: '豊洲の歯医者 F歯科が虫歯の進行段階をC0からC4まで詳しく解説。各段階での症状、痛みの程度、治療法について分かりやすくご説明します。',
+  keywords: '虫歯,C0,C1,C2,C3,C4,進行段階,痛み,症状,虫歯治療,豊洲,歯医者',
   openGraph: {
     title: '虫歯の進行段階（C0〜C4）｜虫歯治療｜F歯科・矯正歯科 豊洲プライムスクエア院',
-    description: '虫歯の進行段階をC0からC4まで詳しく解説。各段階での症状、痛みの程度、治療法について分かりやすくご説明します。',
+    description: '豊洲の歯医者 F歯科が虫歯の進行段階をC0からC4まで詳しく解説。各段階での症状、痛みの程度、治療法について分かりやすくご説明します。',
     type: 'website',
   },
 };
@@ -46,12 +47,13 @@ export default function CavityStagesPage() {
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#5A4D41] font-serif">
                 虫歯の進行段階
               </h1>
+              <PageImage path="/cavity/stages" alt="虫歯の進行段階" />
               <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
               <p className="text-xl md:text-2xl mb-6 text-[#5A4D41] font-medium">
                 C0からC4まで、進行度別の症状と治療法
               </p>
               <p className="text-lg text-[#8D8070] leading-relaxed">
-                虫歯は進行段階によって症状や治療法が大きく異なります
+                豊洲駅すぐのF歯科が解説｜虫歯は進行段階によって症状や治療法が大きく異なります
               </p>
             </div>
           </div>

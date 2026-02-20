@@ -16,6 +16,14 @@ export const metadata: Metadata = {
   title: '静脈内鎮静法（セデーション）｜手術が怖い方へ｜F歯科・矯正歯科 豊洲プライムスクエア院',
   description: '静脈内鎮静法は、点滴から鎮静剤を投与し、リラックスした状態で手術を受けられる方法です。麻酔専門医が管理するため安全性が高く、痛みや不安を最小限に抑えられます。',
   keywords: '静脈内鎮静法,セデーション,無痛治療,麻酔専門医,インプラント手術,歯科恐怖症',
+  openGraph: {
+    title: '静脈内鎮静法（セデーション）｜手術が怖い方へ｜F歯科・矯正歯科 豊洲プライムスクエア院',
+    description: '静脈内鎮静法は点滴から鎮静剤を投与しリラックスした状態で手術を受けられる方法。麻酔専門医が管理し安全性が高く、痛みや不安を最小限に。',
+    type: 'website',
+    locale: 'ja_JP',
+    url: 'https://fuku-dental.jp/implant/iv-sedation',
+    siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
+  },
 };
 
 export default function IVSedationPage() {

@@ -4,11 +4,20 @@ import { Home, ChevronRight, AlertCircle, Clock, Pill, Shield, CheckCircle, Phon
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
+import { PageImage } from '@/components/PageImage';
 
 export const metadata: Metadata = {
   title: '根管治療の痛み｜治療中・治療後の痛みと対処法｜F歯科・矯正歯科 豊洲プライムスクエア院',
-  description: '根管治療の痛みについて詳しく解説。治療中の痛み、治療後の痛み、痛みの期間、痛み止めの使用方法など、痛みに関する不安を解消します。',
+  description: '豊洲の歯科 F歯科が根管治療の痛みについて詳しく解説。治療中の痛み、治療後の痛み、痛みの期間、痛み止めの使用方法など、痛みに関する不安を解消します。',
   keywords: '根管治療,痛み,痛い,麻酔,痛み止め,治療後,腫れ,F歯科・矯正歯科 豊洲プライムスクエア院',
+  openGraph: {
+    title: '根管治療の痛み｜治療中・治療後の痛みと対処法｜F歯科・矯正歯科 豊洲プライムスクエア院',
+    description: '豊洲の歯科 F歯科が根管治療の痛みについて詳しく解説。治療中・治療後の痛み、痛みの期間、痛み止めの使用方法など。',
+    type: 'website',
+    locale: 'ja_JP',
+    url: 'https://fuku-dental.jp/root-canal/pain',
+    siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
+  },
 };
 
 export default function RootCanalPainPage() {
@@ -44,9 +53,10 @@ export default function RootCanalPainPage() {
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#5A4D41] font-serif">
                 根管治療の痛みについて
               </h1>
+              <PageImage path="/root-canal/pain" alt="根管治療の痛みについて" />
               <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
               <p className="text-xl md:text-2xl mb-6 text-[#5A4D41] font-medium">
-                治療中・治療後の痛みと対処法を詳しく解説します
+                豊洲の歯医者が治療中・治療後の痛みと対処法を詳しく解説します
               </p>
             </div>
           </div>

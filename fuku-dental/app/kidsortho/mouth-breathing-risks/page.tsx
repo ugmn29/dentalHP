@@ -4,6 +4,7 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
 import { KidsOrthoImage } from '@/components/KidsOrthoImage';
+import { PageImage } from '@/components/PageImage';
 import {
   CheckCircle2,
   AlertCircle,
@@ -17,6 +18,14 @@ export const metadata: Metadata = {
   title: 'お口ポカン（口呼吸）が引き起こす病気リスク｜F歯科・矯正歯科 豊洲プライムスクエア院',
   description: '口呼吸が原因で起こる8つの病気リスク。アデノイド顔貌、睡眠時無呼吸症候群、集中力低下など、今すぐ対策が必要な理由を詳しく解説します。',
   keywords: '口呼吸,お口ポカン,病気,リスク,アデノイド顔貌,睡眠時無呼吸,集中力低下,小児矯正',
+  openGraph: {
+    title: 'お口ポカン（口呼吸）が引き起こす病気リスク｜F歯科・矯正歯科 豊洲プライムスクエア院',
+    description: '口呼吸が原因で起こる8つの病気リスク。アデノイド顔貌、睡眠時無呼吸症候群、集中力低下など、今すぐ対策が必要な理由を詳しく解説します。',
+    type: 'website',
+    locale: 'ja_JP',
+    url: 'https://fuku-dental.jp/kidsortho/mouth-breathing-risks',
+    siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
+  },
 };
 
 export default function MouthBreathingRisksPage() {
@@ -49,6 +58,7 @@ export default function MouthBreathingRisksPage() {
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#5A4D41] font-serif">
                 お口ポカン（口呼吸）が<br />引き起こす病気リスク
               </h1>
+              <PageImage path="/kidsortho/mouth-breathing-risks" alt="口呼吸が引き起こす病気リスク" />
               <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
 
               <KidsOrthoImage
@@ -60,6 +70,7 @@ export default function MouthBreathingRisksPage() {
               <p className="font-sans text-xl md:text-2xl mt-6 mb-6 text-[#5A4D41] font-medium font-sans">
                 「癖」ではなく「病気のサイン」です
               </p>
+              <p className="text-[#8D8070] mt-3 font-sans">豊洲の矯正歯科が詳しく解説します</p>
               <p className="font-sans text-lg text-[#8D8070] leading-relaxed font-sans mb-8">
                 アデノイド顔貌、睡眠時無呼吸症候群、集中力低下など、<br className="hidden md:block" />
                 今すぐ対策が必要な8つのリスクを詳しく解説します
@@ -583,7 +594,7 @@ export default function MouthBreathingRisksPage() {
                 お口ポカン、今すぐ相談を
               </h2>
               <p className="font-sans text-xl mb-8 text-white/90">
-                6歳までの対策で、顔の骨格変形を予防できます
+                豊洲で小児矯正をお考えなら、豊洲駅徒歩2分の当院へ。6歳までの対策で、顔の骨格変形を予防できます
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link

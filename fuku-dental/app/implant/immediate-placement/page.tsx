@@ -16,6 +16,14 @@ export const metadata: Metadata = {
   title: '抜歯即時埋入インプラント｜治療期間を短縮｜F歯科・矯正歯科 豊洲プライムスクエア院',
   description: '抜歯と同時にインプラントを埋入する抜歯即時埋入。治療期間の短縮、骨吸収の抑制、手術回数の削減など、多くのメリットがあります。適応条件と治療の流れを詳しく解説します。',
   keywords: '抜歯即時埋入,インプラント,即時荷重,治療期間短縮,骨吸収抑制',
+  openGraph: {
+    title: '抜歯即時埋入インプラント｜治療期間を短縮｜F歯科・矯正歯科 豊洲プライムスクエア院',
+    description: '抜歯と同時にインプラントを埋入する抜歯即時埋入。治療期間の短縮、骨吸収の抑制、手術回数の削減など多くのメリットを解説。',
+    type: 'website',
+    locale: 'ja_JP',
+    url: 'https://fuku-dental.jp/implant/immediate-placement',
+    siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
+  },
 };
 
 export default function ImmediatePlacementPage() {

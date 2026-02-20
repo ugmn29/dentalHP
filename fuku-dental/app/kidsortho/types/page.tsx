@@ -1,10 +1,26 @@
 import React from 'react';
+import type { Metadata } from 'next';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
 import { AlertCircle, CheckCircle, ArrowRight, Users, Clock, TrendingUp, Shield, ChevronDown, Calendar, Phone, Home, ChevronRight } from 'lucide-react';
 import { KidsOrthoImage } from '@/components/KidsOrthoImage';
+import { PageImage } from '@/components/PageImage';
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: '子供の不正咬合の種類｜歯並びタイプ別解説｜F歯科・矯正歯科 豊洲プライムスクエア院',
+  description: '子供の不正咬合の種類を歯科医師が解説。出っ歯・受け口・すきっ歯・叢生・開咬・過蓋咬合・交叉咬合など、各タイプの特徴と治療法をわかりやすくご紹介。豊洲のF歯科で無料相談。',
+  keywords: '不正咬合 種類,子供 歯並び 種類,出っ歯,受け口,すきっ歯,叢生,開咬,過蓋咬合,豊洲 小児矯正',
+  openGraph: {
+    title: '子供の不正咬合の種類｜歯並びタイプ別解説｜F歯科・矯正歯科 豊洲プライムスクエア院',
+    description: '子供の不正咬合の種類を解説。出っ歯・受け口・すきっ歯など各タイプの特徴と治療法をご紹介。',
+    type: 'website',
+    locale: 'ja_JP',
+    url: 'https://fuku-dental.jp/kidsortho/types',
+    siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
+  },
+};
 
 export default function KidsOrthoTypesPage() {
     return (
@@ -36,6 +52,7 @@ export default function KidsOrthoTypesPage() {
                             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#5A4D41] font-serif">
                                 こどもの不正咬合の種類
                             </h1>
+                            <PageImage path="/kidsortho/types" alt="こどもの不正咬合の種類" />
                             <div className="w-24 h-1 bg-[#E67A2E] mx-auto mb-8"></div>
 
                             <KidsOrthoImage
@@ -47,8 +64,9 @@ export default function KidsOrthoTypesPage() {
                             <p className="text-xl md:text-2xl mt-6 mb-6 text-[#5A4D41] font-medium font-sans">
                                 7つのタイプとその特徴
                             </p>
+                            <p className="text-sm text-[#8D8070] mt-1 mb-4">豊洲の矯正歯科が詳しく解説</p>
                             <p className="text-lg text-[#8D8070] leading-relaxed font-sans">
-                                お子さまの不正咬合のタイプを知り、適切な治療時期と方法を理解しましょう
+                                豊洲で小児矯正をお考えの方へ。お子さまの不正咬合のタイプを知り、適切な治療時期と方法を理解しましょう
                             </p>
                         </div>
                     </div>
@@ -781,7 +799,7 @@ export default function KidsOrthoTypesPage() {
                                 お子さまの歯並びが気になったら
                             </h2>
                             <p className="text-xl mb-8 text-white/90 font-sans">
-                                まずは無料相談で、お子さまの不正咬合のタイプと最適な治療時期を確認しましょう
+                                豊洲の歯医者として、まずは無料相談でお子さまの不正咬合のタイプと最適な治療時期を確認いたします
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                 <Link

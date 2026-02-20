@@ -4,6 +4,7 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
 import QAContent from './QAContent';
+import { PageImage } from '@/components/PageImage';
 import { Home, ChevronRight, ArrowRight } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -12,6 +13,14 @@ export const metadata: Metadata = {
     'インプラント治療に関するよくある質問を25問以上掲載。治療前の疑問、手術について、費用・支払い、治療後のメンテナンス、トラブル対処まで、カテゴリー別にわかりやすく回答しています。',
   keywords:
     'インプラント,よくある質問,FAQ,Q&A,インプラント治療,費用,痛み,メンテナンス,骨造成,歯科',
+  openGraph: {
+    title: 'インプラントQ&A よくある質問 | F歯科・矯正歯科 豊洲プライムスクエア院',
+    description: 'インプラント治療に関するよくある質問を25問以上掲載。治療前の疑問、費用・支払い、メンテナンス、トラブル対処までカテゴリー別に回答。',
+    type: 'website',
+    locale: 'ja_JP',
+    url: 'https://fuku-dental.jp/implant/qa',
+    siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
+  },
 };
 
 /* ─── JSON-LD Structured Data ─── */
@@ -108,6 +117,7 @@ export default function ImplantQAPage() {
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#2d4835] font-serif">
                 インプラントよくある質問
               </h1>
+              <PageImage path="/implant/qa" alt="インプラントよくある質問" />
               <div className="w-24 h-1 bg-[#395b45] mx-auto mb-8"></div>
               <p className="text-xl md:text-2xl mb-6 text-[#2d4835] font-medium">
                 患者様からよくいただくご質問にお答えします

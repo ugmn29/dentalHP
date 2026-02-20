@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
+import { PageImage } from '@/components/PageImage';
 import {
   CheckCircle2,
   ArrowRight,
@@ -12,8 +13,16 @@ import {
 
 export const metadata: Metadata = {
   title: 'クリーニング・PMTC｜専門的な歯のクリーニングで虫歯・歯周病予防｜F歯科・矯正歯科 豊洲プライムスクエア院',
-  description: '歯科衛生士による専門的なPMTCで、普段の歯磨きでは落としきれないバイオフィルムや着色を除去。虫歯・歯周病のリスクを大幅に軽減します。',
+  description: '豊洲の歯医者 F歯科の歯科衛生士による専門的なPMTCで、普段の歯磨きでは落としきれないバイオフィルムや着色を除去。虫歯・歯周病のリスクを大幅に軽減します。',
   keywords: 'PMTC,クリーニング,歯のクリーニング,専門的歯面清掃,虫歯予防,歯周病予防,予防歯科',
+  openGraph: {
+    title: 'クリーニング・PMTC｜専門的な歯のクリーニングで虫歯・歯周病予防｜F歯科・矯正歯科 豊洲プライムスクエア院',
+    description: '歯科衛生士による専門的なPMTCで、普段の歯磨きでは落としきれないバイオフィルムや着色を除去。虫歯・歯周病のリスクを大幅に軽減します。',
+    type: 'website',
+    locale: 'ja_JP',
+    url: 'https://fuku-dental.jp/preventive/cleaning',
+    siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
+  },
 };
 
 export default function PreventiveCleaningPage() {
@@ -46,12 +55,13 @@ export default function PreventiveCleaningPage() {
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#5A4D41] font-serif">
                 クリーニング・PMTC
               </h1>
+              <PageImage path="/preventive/cleaning" alt="クリーニング・PMTC" />
               <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
               <p className="text-xl md:text-2xl mb-6 text-[#5A4D41] font-medium">
                 専門的な歯のクリーニングで虫歯・歯周病予防
               </p>
               <p className="text-lg text-[#8D8070] leading-relaxed">
-                歯科衛生士による徹底的なクリーニングで、お口の健康を守ります
+                豊洲駅すぐの当院で、歯科衛生士による徹底的なクリーニングを受けられます
               </p>
             </div>
           </div>

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
+import { PageImage } from '@/components/PageImage';
 import {
   CheckCircle2,
   ArrowRight,
@@ -12,8 +13,16 @@ import {
 
 export const metadata: Metadata = {
   title: 'ホワイトニングの効果持続期間｜白さを長持ちさせる方法｜F歯科・矯正歯科 豊洲プライムスクエア院',
-  description: 'ホワイトニングの効果はどれくらい持続する？オフィス・ホーム・デュアルの持続期間と、白さを長持ちさせるための具体的な方法を徹底解説します。',
+  description: '豊洲の歯医者 F歯科がホワイトニングの効果持続期間を解説。オフィス・ホーム・デュアルの持続期間と、白さを長持ちさせるための具体的な方法を徹底解説します。',
   keywords: 'ホワイトニング,持続期間,効果,どれくらい,長持ち,メンテナンス,タッチアップ',
+  openGraph: {
+    title: 'ホワイトニングの効果持続期間｜白さを長持ちさせる方法｜F歯科・矯正歯科 豊洲プライムスクエア院',
+    description: 'ホワイトニングの効果持続期間を解説。オフィス・ホーム・デュアルの持続期間と、白さを長持ちさせるための具体的な方法を徹底解説します。',
+    type: 'website',
+    locale: 'ja_JP',
+    url: 'https://fuku-dental.jp/whitening/duration',
+    siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
+  },
 };
 
 export default function WhiteningDurationPage() {
@@ -46,12 +55,13 @@ export default function WhiteningDurationPage() {
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#5A4D41] font-serif">
                 ホワイトニングの効果持続期間
               </h1>
+              <PageImage path="/whitening/duration" alt="ホワイトニングの効果持続期間" />
               <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
               <p className="text-xl md:text-2xl mb-6 text-[#5A4D41] font-medium">
                 どれくらい持つ？白さを長持ちさせる秘訣
               </p>
               <p className="text-lg text-[#8D8070] leading-relaxed">
-                適切なケアで白さを長期間維持することができます
+                豊洲の歯科 F歯科が、適切なケアで白さを長期間維持する方法をお伝えします
               </p>
             </div>
           </div>

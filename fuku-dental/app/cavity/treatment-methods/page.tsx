@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
+import { PageImage } from '@/components/PageImage';
 import {
   CheckCircle2,
   ArrowRight,
@@ -11,8 +12,16 @@ import {
 
 export const metadata: Metadata = {
   title: '虫歯の治療方法 | コンポジットレジン・インレー・クラウン・根管治療 | F歯科・矯正歯科 豊洲プライムスクエア院',
-  description: '虫歯の進行度に応じた治療方法を詳しく解説。コンポジットレジン、インレー、クラウン、根管治療など、それぞれの特徴、メリット・デメリット、費用について。',
-  keywords: '虫歯治療,コンポジットレジン,インレー,クラウン,根管治療,詰め物,被せ物,保険治療,自費治療',
+  description: '豊洲の歯医者 F歯科が虫歯の進行度に応じた治療方法を詳しく解説。コンポジットレジン、インレー、クラウン、根管治療など、それぞれの特徴、メリット・デメリット、費用について。',
+  keywords: '虫歯治療,コンポジットレジン,インレー,クラウン,根管治療,詰め物,被せ物,保険治療,自費治療,豊洲,歯医者',
+  openGraph: {
+    title: '虫歯の治療方法 | コンポジットレジン・インレー・クラウン・根管治療 | F歯科・矯正歯科 豊洲プライムスクエア院',
+    description: '虫歯の進行度に応じた治療方法を詳しく解説。コンポジットレジン、インレー、クラウン、根管治療の特徴・メリット・費用について。',
+    type: 'website',
+    locale: 'ja_JP',
+    url: 'https://fuku-dental.jp/cavity/treatment-methods',
+    siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
+  },
 };
 
 export default function TreatmentMethodsPage() {
@@ -52,10 +61,11 @@ export default function TreatmentMethodsPage() {
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#5A4D41] font-serif">
                 虫歯の治療方法
               </h1>
+              <PageImage path="/cavity/treatment-methods" alt="虫歯の治療方法" />
               <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
               <p className="text-lg md:text-xl text-[#5A4D41] leading-relaxed">
                 虫歯の進行度に応じた最適な治療法をご提案<br />
-                <span className="text-base text-[#8D8070] mt-2 inline-block">コンポジットレジン・インレー・クラウン・根管治療</span>
+                <span className="text-base text-[#8D8070] mt-2 inline-block">豊洲の歯科 F歯科が解説｜コンポジットレジン・インレー・クラウン・根管治療</span>
               </p>
             </div>
           </div>

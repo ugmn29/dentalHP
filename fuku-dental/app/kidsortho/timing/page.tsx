@@ -1,10 +1,26 @@
 import React from 'react';
+import type { Metadata } from 'next';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
 import { ArrowRight, Home, ChevronRight, CheckCircle, AlertCircle } from 'lucide-react';
 import { KidsOrthoImage } from '@/components/KidsOrthoImage';
+import { PageImage } from '@/components/PageImage';
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: '小児矯正を始める時期｜何歳から？ベストタイミング｜F歯科・矯正歯科 豊洲プライムスクエア院',
+  description: '小児矯正を始めるベストなタイミングを歯科医師が解説。何歳から始めるべきか、早期治療のメリット、矯正が必要なサインの見分け方をご紹介。豊洲のF歯科で無料相談実施中。',
+  keywords: '小児矯正 いつから,子供 矯正 何歳,小児矯正 タイミング,矯正 始める時期,早期矯正 メリット,豊洲 小児矯正',
+  openGraph: {
+    title: '小児矯正を始める時期｜何歳から？ベストタイミング｜F歯科・矯正歯科 豊洲プライムスクエア院',
+    description: '小児矯正を始めるベストなタイミングを解説。何歳から始めるべきか、早期治療のメリットをご紹介。',
+    type: 'website',
+    locale: 'ja_JP',
+    url: 'https://fuku-dental.jp/kidsortho/timing',
+    siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
+  },
+};
 
 export default function KidsOrthoTimingPage() {
     return (
@@ -36,6 +52,7 @@ export default function KidsOrthoTimingPage() {
                             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#5A4D41] font-serif">
                                 「様子を見ましょう」は信じていい？<br />ベストタイミング
                             </h1>
+                            <PageImage path="/kidsortho/timing" alt="小児矯正のベストタイミング" />
                             <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
 
                             <KidsOrthoImage
@@ -48,7 +65,8 @@ export default function KidsOrthoTimingPage() {
                                 受け口は3歳から、デコボコは6歳から。<br />
                                 不正咬合の種類によって最適な開始時期が異なります
                             </p>
-                            <p className="text-lg text-[#8D8070] leading-relaxed mb-8 font-sans">
+                            <p className="text-[#8D8070] mt-3 font-sans">豊洲の矯正歯科が詳しく解説します</p>
+                            <p className="text-lg text-[#8D8070] leading-relaxed mb-8 font-sans mt-4">
                                 「様子を見ましょう」と言われて待っていたら手遅れに...そんな後悔をしないために、<br className="hidden md:block" />
                                 お子さまの歯並びに合わせた正しい治療開始時期の見極め方をお伝えします。
                             </p>
@@ -398,7 +416,7 @@ export default function KidsOrthoTimingPage() {
                                 お子さまの歯並び、今がベストタイミング
                             </h2>
                             <p className="text-xl mb-8 text-white/90">
-                                6歳までに一度、専門医にご相談ください。無料相談で、お子さまに最適な治療開始時期をアドバイスします
+                                豊洲で小児矯正をお考えなら、豊洲駅徒歩2分の当院へ。無料相談で、お子さまに最適な治療開始時期をアドバイスします
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                 <Link

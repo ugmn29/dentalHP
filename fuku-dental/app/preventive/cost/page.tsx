@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
+import { PageImage } from '@/components/PageImage';
 import {
   CheckCircle2,
   ArrowRight,
@@ -11,11 +12,11 @@ import {
 
 export const metadata: Metadata = {
   title: '予防歯科の費用｜予防歯科｜F歯科・矯正歯科 豊洲プライムスクエア院',
-  description: '予防歯科の多くは保険診療で対応可能です。定期検診、クリーニング、フッ素塗布など、各予防処置ごとの費用目安と医療費控除について詳しくご紹介します。',
-  keywords: '予防歯科,費用,保険診療,料金,医療費控除,定期検診,クリーニング,フッ素塗布',
+  description: '豊洲の歯医者 F歯科の予防歯科費用をご案内。予防歯科の多くは保険診療で対応可能です。定期検診、クリーニング、フッ素塗布など、各予防処置ごとの費用目安と医療費控除について詳しくご紹介します。',
+  keywords: '予防歯科,費用,保険診療,料金,医療費控除,定期検診,クリーニング,フッ素塗布,豊洲,歯医者',
   openGraph: {
     title: '予防歯科の費用｜予防歯科｜F歯科・矯正歯科 豊洲プライムスクエア院',
-    description: '予防歯科の多くは保険診療で対応可能です。定期検診、クリーニング、フッ素塗布など、各予防処置ごとの費用目安と医療費控除について詳しくご紹介します。',
+    description: '豊洲の歯医者 F歯科の予防歯科費用をご案内。予防歯科の多くは保険診療で対応可能です。定期検診、クリーニング、フッ素塗布など、各予防処置ごとの費用目安と医療費控除について詳しくご紹介します。',
     type: 'website',
   },
 };
@@ -46,12 +47,13 @@ export default function PreventiveCostPage() {
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#5A4D41] font-serif">
                 予防歯科の費用
               </h1>
+              <PageImage path="/preventive/cost" alt="予防歯科の費用" />
               <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
               <p className="text-xl md:text-2xl mb-6 text-[#5A4D41] font-medium">
                 透明性のある料金体系で、安心して予防ケアを
               </p>
               <p className="text-lg text-[#8D8070] leading-relaxed">
-                基本的な予防処置は保険診療で対応可能。長期的な健康投資として最適です
+                豊洲駅徒歩2分の当院では、基本的な予防処置は保険診療で対応可能。長期的な健康投資として最適です
               </p>
             </div>
           </div>

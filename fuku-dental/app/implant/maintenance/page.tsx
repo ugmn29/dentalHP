@@ -15,6 +15,14 @@ export const metadata: Metadata = {
   title: 'インプラントのメンテナンス・定期検診｜F歯科・矯正歯科 豊洲プライムスクエア院',
   description: 'インプラントを長持ちさせるためには定期的なメンテナンスが不可欠です。インプラント周囲炎の予防、日々のセルフケア、定期検診の内容を詳しく解説します。',
   keywords: 'インプラント,メンテナンス,定期検診,インプラント周囲炎,セルフケア,クリーニング',
+  openGraph: {
+    title: 'インプラントのメンテナンス・定期検診｜F歯科・矯正歯科 豊洲プライムスクエア院',
+    description: 'インプラントを長持ちさせるための定期メンテナンス。インプラント周囲炎の予防、セルフケア、定期検診の内容を詳しく解説。',
+    type: 'website',
+    locale: 'ja_JP',
+    url: 'https://fuku-dental.jp/implant/maintenance',
+    siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
+  },
 };
 
 export default function MaintenancePage() {

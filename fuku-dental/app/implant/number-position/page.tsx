@@ -14,6 +14,14 @@ export const metadata: Metadata = {
   title: '歯を失った本数と埋入部位別のインプラント治療｜F歯科・矯正歯科 豊洲プライムスクエア院',
   description: '失った歯の本数や部位によって最適なインプラント治療法は異なります。1本欠損から全歯欠損まで、それぞれのケースに応じた治療方法を詳しく解説します。',
   keywords: 'インプラント,本数,部位,1本欠損,複数本欠損,全歯欠損,前歯,奥歯,オールオン4',
+  openGraph: {
+    title: '歯を失った本数と埋入部位別のインプラント治療｜F歯科・矯正歯科 豊洲プライムスクエア院',
+    description: '失った歯の本数や部位によって最適なインプラント治療法は異なります。1本欠損から全歯欠損まで、それぞれのケースに応じた治療方法を詳しく解説します。',
+    type: 'website',
+    locale: 'ja_JP',
+    url: 'https://fuku-dental.jp/implant/number-position',
+    siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
+  },
 };
 
 export default function ImplantNumberPositionPage() {

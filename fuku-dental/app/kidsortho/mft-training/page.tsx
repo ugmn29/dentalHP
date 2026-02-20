@@ -4,6 +4,7 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
 import { KidsOrthoImage } from '@/components/KidsOrthoImage';
+import { PageImage } from '@/components/PageImage';
 import {
   CheckCircle2,
   AlertCircle,
@@ -17,6 +18,14 @@ export const metadata: Metadata = {
   title: '自宅でできるMFT｜あいうべ体操とボタンプル完全ガイド｜F歯科・矯正歯科 豊洲プライムスクエア院',
   description: '口腔筋機能療法（MFT）の2大トレーニング。あいうべ体操とボタンプルの正しいやり方、効果が出る期間、注意点を動画付きで詳しく解説します。',
   keywords: 'MFT,口腔筋機能療法,あいうべ体操,ボタンプル,小児矯正,トレーニング',
+  openGraph: {
+    title: '自宅でできるMFT｜あいうべ体操とボタンプル完全ガイド｜F歯科・矯正歯科 豊洲プライムスクエア院',
+    description: '口腔筋機能療法（MFT）の2大トレーニング。あいうべ体操とボタンプルの正しいやり方、効果が出る期間、注意点を詳しく解説します。',
+    type: 'website',
+    locale: 'ja_JP',
+    url: 'https://fuku-dental.jp/kidsortho/mft-training',
+    siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
+  },
 };
 
 export default function MFTTrainingPage() {
@@ -49,6 +58,7 @@ export default function MFTTrainingPage() {
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#5A4D41] font-serif">
                 自宅でできるMFT<br />あいうべ体操とボタンプル
               </h1>
+              <PageImage path="/kidsortho/mft-training" alt="MFTトレーニング あいうべ体操とボタンプル" />
               <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
 
               {/* Hero Image */}
@@ -63,6 +73,7 @@ export default function MFTTrainingPage() {
               <p className="text-xl md:text-2xl mt-6 mb-6 text-[#5A4D41] font-medium">
                 1日3分で口呼吸・歯並びを改善
               </p>
+              <p className="text-[#8D8070] mt-3 font-sans">豊洲の矯正歯科が詳しく解説します</p>
               <p className="text-lg text-[#8D8070] leading-relaxed">
                 口腔筋機能療法（MFT）の2大トレーニング。<br className="hidden md:block" />
                 正しいやり方、効果が出る期間、注意点を詳しく解説します
@@ -434,7 +445,7 @@ export default function MFTTrainingPage() {
                 <div className="text-center mb-8">
                   <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#5A4D41] mb-4">MFTで根本から改善しましょう</h2>
                   <p className="text-lg md:text-xl text-[#8D8070] leading-loose font-sans">
-                    装置とMFTの併用で、後戻りしない矯正治療を
+                    豊洲で小児矯正をお考えなら、豊洲駅徒歩2分の当院へ。装置とMFTの併用で、後戻りしない矯正治療を
                   </p>
                 </div>
 

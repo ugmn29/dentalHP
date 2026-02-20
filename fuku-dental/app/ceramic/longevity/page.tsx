@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
+import { PageImage } from '@/components/PageImage';
 import {
   CheckCircle2,
   ArrowRight,
@@ -12,8 +13,16 @@ import {
 
 export const metadata: Metadata = {
   title: 'セラミック治療の寿命・耐久性｜何年持つ？長持ちさせる方法｜F歯科・矯正歯科 豊洲プライムスクエア院',
-  description: 'セラミック治療はどのくらい持つ？インレー、クラウン、ベニアの寿命と、長持ちさせるためのケア方法を詳しく解説します。',
+  description: '豊洲の歯医者 F歯科がセラミック治療の寿命を解説。インレー、クラウン、ベニアの寿命と、長持ちさせるためのケア方法を詳しくご紹介します。',
   keywords: 'セラミック,寿命,耐久性,何年,持つ,長持ち,ケア方法,メンテナンス',
+  openGraph: {
+    title: 'セラミック治療の寿命・耐久性｜何年持つ？長持ちさせる方法｜F歯科・矯正歯科 豊洲プライムスクエア院',
+    description: 'セラミック治療の寿命を解説。インレー、クラウン、ベニアの寿命と、長持ちさせるためのケア方法をご紹介。',
+    type: 'website',
+    locale: 'ja_JP',
+    url: 'https://fuku-dental.jp/ceramic/longevity',
+    siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
+  },
 };
 
 export default function CeramicLongevityPage() {
@@ -46,12 +55,13 @@ export default function CeramicLongevityPage() {
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#5A4D41] font-serif">
                 セラミック治療の寿命・耐久性
               </h1>
+              <PageImage path="/ceramic/longevity" alt="セラミック治療の寿命・耐久性" />
               <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
               <p className="text-xl md:text-2xl mb-6 text-[#5A4D41] font-medium">
                 何年持つ？長持ちさせる秘訣とは
               </p>
               <p className="text-lg text-[#8D8070] leading-relaxed">
-                適切なケアで10年以上使い続けることも可能です
+                豊洲の歯科 F歯科が解説｜適切なケアで10年以上使い続けることも可能です
               </p>
             </div>
           </div>

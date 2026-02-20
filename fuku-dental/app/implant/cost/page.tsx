@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
+import { PageImage } from '@/components/PageImage';
 import {
   CreditCard,
   Calculator,
@@ -31,6 +32,14 @@ export const metadata: Metadata = {
     'インプラント 保証',
     'インプラント 分割払い',
   ],
+  openGraph: {
+    title: 'インプラントの費用・料金｜明確な料金体系で安心｜F歯科・矯正歯科 豊洲プライムスクエア院',
+    description: 'インプラント治療の費用・料金一覧。1本¥330,000〜。カウンセリング無料。医療費控除対象。クレジットカード・デンタルローン対応。10年保証制度あり。',
+    type: 'website',
+    locale: 'ja_JP',
+    url: 'https://fuku-dental.jp/implant/cost',
+    siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
+  },
 };
 
 /* ─── 料金一覧テーブル ─── */
@@ -117,6 +126,7 @@ export default function ImplantCostPage() {
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#2d4835] font-serif">
                 インプラント治療の費用
               </h1>
+              <PageImage path="/implant/cost" alt="インプラント治療の費用・料金" />
               <div className="w-24 h-1 bg-[#395b45] mx-auto mb-8"></div>
               <p className="text-xl md:text-2xl mb-6 text-[#2d4835] font-medium">
                 明確な料金体系で安心の治療を

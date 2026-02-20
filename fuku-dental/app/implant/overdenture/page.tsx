@@ -14,6 +14,14 @@ export const metadata: Metadata = {
   title: 'インプラントオーバーデンチャー｜入れ歯の悩みを解決｜F歯科・矯正歯科 豊洲プライムスクエア院',
   description: 'インプラントで入れ歯を固定するオーバーデンチャー。通常の入れ歯よりも安定性が高く、しっかり噛めて、取り外しも可能。全歯を失った方に最適な治療法です。',
   keywords: 'インプラントオーバーデンチャー,入れ歯,総入れ歯,インプラント,ロケーター,ボールアタッチメント',
+  openGraph: {
+    title: 'インプラントオーバーデンチャー｜入れ歯の悩みを解決｜F歯科・矯正歯科 豊洲プライムスクエア院',
+    description: 'インプラントで入れ歯を固定するオーバーデンチャー。通常の入れ歯より安定性が高く、しっかり噛めて取り外しも可能。全歯を失った方に最適。',
+    type: 'website',
+    locale: 'ja_JP',
+    url: 'https://fuku-dental.jp/implant/overdenture',
+    siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
+  },
 };
 
 export default function OverdenturePage() {

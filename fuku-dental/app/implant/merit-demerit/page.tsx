@@ -16,6 +16,14 @@ export const metadata: Metadata = {
   title: 'インプラントのメリット・デメリット｜F歯科・矯正歯科 豊洲プライムスクエア院',
   description: 'インプラント治療のメリット・デメリットを詳しく解説。天然歯に近い噛み心地、周囲の歯を守れる、骨吸収を防ぐなどのメリットと、手術が必要、費用、治療期間などのデメリットを正直にお伝えします。',
   keywords: 'インプラント,メリット,デメリット,利点,欠点,入れ歯との比較,ブリッジとの比較',
+  openGraph: {
+    title: 'インプラントのメリット・デメリット｜F歯科・矯正歯科 豊洲プライムスクエア院',
+    description: 'インプラント治療のメリット・デメリットを詳しく解説。噛み心地、周囲の歯を守れるなどのメリットと、手術・費用・治療期間などのデメリットを正直にお伝えします。',
+    type: 'website',
+    locale: 'ja_JP',
+    url: 'https://fuku-dental.jp/implant/merit-demerit',
+    siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
+  },
 };
 
 export default function ImplantMeritDemeritPage() {

@@ -3,6 +3,7 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
 import { KidsOrthoImage } from '@/components/KidsOrthoImage';
+import { PageImage } from '@/components/PageImage';
 import { Wrench, ArrowRight, CheckCircle, AlertCircle, Clock, TrendingUp, X, Info, Home, ChevronRight } from 'lucide-react';
 import Link from 'next/link';
 import type { Metadata } from 'next';
@@ -11,6 +12,14 @@ export const metadata: Metadata = {
     title: '拡大床とは？｜効果・費用・装着時間を詳しく解説｜F歯科・矯正歯科 豊洲プライムスクエア院',
     description: '拡大床による小児矯正治療を徹底解説。顎を広げて永久歯のスペースを確保する拡大床の効果、費用、装着時間、メリット・デメリットをわかりやすく説明します。',
     keywords: '拡大床,こども矯正,小児矯正,費用,効果,装着時間,顎を広げる,スペース確保',
+    openGraph: {
+        title: '拡大床とは？｜効果・費用・装着時間を詳しく解説｜F歯科・矯正歯科 豊洲プライムスクエア院',
+        description: '拡大床による小児矯正治療を徹底解説。顎を広げて永久歯のスペースを確保する拡大床の効果、費用、装着時間、メリット・デメリットをわかりやすく説明します。',
+        type: 'website',
+        locale: 'ja_JP',
+        url: 'https://fuku-dental.jp/kidsortho/appliances/expander',
+        siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
+    },
 };
 
 export default function ExpanderPage() {
@@ -46,6 +55,7 @@ export default function ExpanderPage() {
                                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[#5A4D41] mb-3">
                                     拡大床とは？｜効果・費用・装着時間を詳しく解説
                                 </h1>
+                                <PageImage path="/kidsortho/appliances/expander" alt="拡大床の効果・費用・装着時間" />
                                 <div className="w-16 h-0.5 bg-[#C5A572] mb-6"></div>
                             </div>
 
@@ -56,7 +66,8 @@ export default function ExpanderPage() {
                                 category="appliances"
                             />
 
-                            <p className="text-base md:text-lg leading-loose text-[#8D8070] font-sans mt-6 mb-8">
+                            <p className="text-sm text-[#8D8070] mt-3">豊洲の矯正歯科が詳しく解説</p>
+                            <p className="text-base md:text-lg leading-loose text-[#8D8070] font-sans mt-4 mb-8">
                                 こども矯正で最も一般的に使用される取り外し式装置です
                             </p>
                         </div>
@@ -764,7 +775,7 @@ export default function ExpanderPage() {
                             <div className="text-center mb-8">
                                 <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#5A4D41] mb-4">お子さまに最適な装置を無料でご提案</h2>
                                 <p className="text-lg md:text-xl text-[#8D8070] leading-loose font-sans">
-                                    拡大床が適しているか、まずは無料相談でご確認ください
+                                    拡大床が適しているか、豊洲の歯医者・F歯科矯正歯科の無料相談でご確認ください
                                 </p>
                             </div>
 

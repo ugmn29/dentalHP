@@ -5,11 +5,20 @@ import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
 import Link from 'next/link';
 import { KidsOrthoImage } from '@/components/KidsOrthoImage';
+import { PageImage } from '@/components/PageImage';
 
 export const metadata: Metadata = {
   title: '開咬（かいこう）オープンバイトの治療 | こども矯正 | F歯科・矯正歯科 豊洲プライムスクエア院',
   description: '開咬（オープンバイト）の特徴、原因、治療法について詳しく解説。前歯が噛み合わない状態で、習癖改善と早期治療が重要です。お子様の歯並びが気になる方はご相談ください。',
   keywords: '開咬,オープンバイト,前歯が閉じない,こども矯正,小児矯正,歯列矯正,不正咬合,歯科,横浜',
+  openGraph: {
+    title: '開咬（かいこう）オープンバイトの治療 | こども矯正 | F歯科・矯正歯科 豊洲プライムスクエア院',
+    description: '開咬（オープンバイト）の特徴、原因、治療法について詳しく解説。前歯が噛み合わない状態で、習癖改善と早期治療が重要です。',
+    type: 'website',
+    locale: 'ja_JP',
+    url: 'https://fuku-dental.jp/kidsortho/types/openbite',
+    siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
+  },
 };
 
 export default function OpenBiteDetailPage() {
@@ -45,6 +54,8 @@ export default function OpenBiteDetailPage() {
                   <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#5A4D41]">
                     開咬（かいこう）
                   </h1>
+                  <PageImage path="/kidsortho/types/openbite" alt="開咬（オープンバイト）の治療" />
+                  <p className="text-sm text-[#8D8070] mt-2">豊洲の矯正歯科が症状・原因・治療法を解説</p>
                 </div>
               </div>
             </div>
@@ -707,7 +718,7 @@ export default function OpenBiteDetailPage() {
                 <h2 className="text-3xl md:text-4xl font-bold text-[#5A4D41] mb-4">お子様の前歯が閉じないことが気になりませんか？</h2>
                 <p className="text-lg md:text-xl text-[#8D8070] leading-relaxed">
                   開咬（オープンバイト）は早期治療が効果的です。<br />
-                  まずは無料カウンセリングでご相談ください。
+                  豊洲の歯医者・F歯科矯正歯科で、まずは無料カウンセリングにお越しください。
                 </p>
               </div>
 

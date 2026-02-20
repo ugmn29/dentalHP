@@ -17,6 +17,14 @@ export const metadata: Metadata = {
   title: 'インプラントとは？仕組みと構造を詳しく解説｜F歯科・矯正歯科 豊洲プライムスクエア院',
   description: 'インプラント治療の基本的な仕組みと構造を詳しく解説。インプラント体、アバットメント、上部構造の3つのパーツの役割と、なぜインプラントが天然歯に近い機能を実現できるのかをわかりやすくご説明します。',
   keywords: 'インプラント,仕組み,構造,インプラント体,アバットメント,上部構造,チタン,骨結合,オッセオインテグレーション',
+  openGraph: {
+    title: 'インプラントとは？仕組みと構造を詳しく解説｜F歯科・矯正歯科 豊洲プライムスクエア院',
+    description: 'インプラント治療の基本的な仕組みと構造を解説。インプラント体・アバットメント・上部構造の役割と、天然歯に近い機能を実現できる理由をご説明します。',
+    type: 'website',
+    locale: 'ja_JP',
+    url: 'https://fuku-dental.jp/implant/about',
+    siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
+  },
 };
 
 export default function ImplantAboutPage() {

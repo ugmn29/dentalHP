@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
+import { PageImage } from '@/components/PageImage';
 import {
   CheckCircle2,
   ArrowRight,
@@ -12,8 +13,16 @@ import {
 
 export const metadata: Metadata = {
   title: '定期検診｜虫歯・歯周病の早期発見で歯を守る｜F歯科・矯正歯科 豊洲プライムスクエア院',
-  description: '定期検診で虫歯や歯周病を早期発見・早期治療。痛みが出る前に対処し、治療も最小限に。80歳まで自分の歯を残すために定期検診が重要です。',
+  description: '豊洲の歯医者 F歯科の定期検診で虫歯や歯周病を早期発見・早期治療。痛みが出る前に対処し、治療も最小限に。80歳まで自分の歯を残すために定期検診が重要です。',
   keywords: '定期検診,歯科検診,虫歯予防,歯周病予防,早期発見,予防歯科',
+  openGraph: {
+    title: '定期検診｜虫歯・歯周病の早期発見で歯を守る｜F歯科・矯正歯科 豊洲プライムスクエア院',
+    description: '定期検診で虫歯や歯周病を早期発見・早期治療。痛みが出る前に対処し、治療も最小限に。80歳まで自分の歯を残すために定期検診が重要です。',
+    type: 'website',
+    locale: 'ja_JP',
+    url: 'https://fuku-dental.jp/preventive/checkup',
+    siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
+  },
 };
 
 export default function PreventiveCheckupPage() {
@@ -46,12 +55,13 @@ export default function PreventiveCheckupPage() {
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#5A4D41] font-serif">
                 定期検診
               </h1>
+              <PageImage path="/preventive/checkup" alt="定期検診" />
               <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
               <p className="text-xl md:text-2xl mb-6 text-[#5A4D41] font-medium">
                 虫歯・歯周病の早期発見で歯を守る
               </p>
               <p className="text-lg text-[#8D8070] leading-relaxed">
-                痛みが出る前に発見できれば、治療も最小限で済みます
+                豊洲駅徒歩2分。痛みが出る前に発見できれば、治療も最小限で済みます
               </p>
             </div>
           </div>

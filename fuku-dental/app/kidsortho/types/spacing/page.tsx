@@ -5,11 +5,20 @@ import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
 import Link from 'next/link';
 import { KidsOrthoImage } from '@/components/KidsOrthoImage';
+import { PageImage } from '@/components/PageImage';
 
 export const metadata: Metadata = {
   title: '空隙歯列（くうげきしれつ）の治療 | こども矯正 | F歯科・矯正歯科 豊洲プライムスクエア院',
   description: '空隙歯列（歯と歯の間に隙間がある状態）の特徴、原因、治療法について詳しく解説。見た目や機能に影響する不正咬合です。お子様の歯並びが気になる方はご相談ください。',
   keywords: '空隙歯列,歯間,隙間,歯の隙間,こども矯正,小児矯正,歯列矯正,不正咬合,歯科,横浜',
+  openGraph: {
+    title: '空隙歯列（くうげきしれつ）の治療 | こども矯正 | F歯科・矯正歯科 豊洲プライムスクエア院',
+    description: '空隙歯列（歯と歯の間に隙間がある状態）の特徴、原因、治療法について詳しく解説。見た目や機能に影響する不正咬合です。',
+    type: 'website',
+    locale: 'ja_JP',
+    url: 'https://fuku-dental.jp/kidsortho/types/spacing',
+    siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
+  },
 };
 
 export default function SpacingDetailPage() {
@@ -40,6 +49,8 @@ export default function SpacingDetailPage() {
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[#5A4D41] mb-3">
                   空隙歯列（くうげきしれつ）
                 </h1>
+                <PageImage path="/kidsortho/types/spacing" alt="空隙歯列（すきっ歯）の治療" />
+                <p className="text-sm text-[#8D8070] mb-3">豊洲の矯正歯科が詳しく解説</p>
                 <div className="w-16 h-0.5 bg-[#C5A572] mb-6"></div>
               </div>
 
@@ -580,7 +591,7 @@ export default function SpacingDetailPage() {
                 <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#5A4D41] mb-4">お子様の前歯に隙間が気になりませんか？</h2>
                 <p className="text-lg md:text-xl text-[#8D8070] leading-loose">
                   空隙歯列は早期治療で効果的に改善できます。<br />
-                  まずは無料カウンセリングでご相談ください。
+                  豊洲の歯医者・F歯科矯正歯科で、まずは無料カウンセリングにお越しください。
                 </p>
               </div>
 

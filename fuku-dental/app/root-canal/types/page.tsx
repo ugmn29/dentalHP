@@ -4,12 +4,21 @@ import { Metadata } from 'next';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
+import { PageImage } from '@/components/PageImage';
 import { ChevronRight, CheckCircle, AlertCircle, Home, ArrowRight } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: '根管治療の種類｜初回治療・再根管治療・歯根端切除術｜F歯科・矯正歯科 豊洲プライムスクエア院',
-  description: '根管治療の種類を詳しく解説。初回根管治療、再根管治療（リトリートメント）、歯根端切除術など、症状に応じた最適な治療法をご紹介します。',
+  description: '豊洲の歯医者 F歯科が根管治療の種類を詳しく解説。初回根管治療、再根管治療（リトリートメント）、歯根端切除術など、症状に応じた最適な治療法をご紹介します。',
   keywords: '根管治療,種類,再根管治療,リトリートメント,歯根端切除術,抜髄,感染根管治療,F歯科・矯正歯科 豊洲プライムスクエア院',
+  openGraph: {
+    title: '根管治療の種類｜初回治療・再根管治療・歯根端切除術｜F歯科・矯正歯科 豊洲プライムスクエア院',
+    description: '豊洲の歯医者 F歯科が根管治療の種類を詳しく解説。初回根管治療、再根管治療、歯根端切除術など、症状に応じた最適な治療法をご紹介します。',
+    type: 'website',
+    locale: 'ja_JP',
+    url: 'https://fuku-dental.jp/root-canal/types',
+    siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
+  },
 };
 
 export default function RootCanalTypesPage() {
@@ -41,12 +50,13 @@ export default function RootCanalTypesPage() {
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#5A4D41] font-serif">
               根管治療の種類
             </h1>
+            <PageImage path="/root-canal/types" alt="根管治療の種類" />
             <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
             <p className="text-xl md:text-2xl mb-6 text-[#5A4D41] font-medium">
               初回治療・再治療・歯根端切除術
             </p>
             <p className="text-lg text-[#8D8070] leading-relaxed">
-              症状や歯の状態に応じて、最適な根管治療をご提案します。<br />
+              豊洲駅すぐの当院では、症状や歯の状態に応じて最適な根管治療をご提案します。<br />
               精密な診断のもと、それぞれの症例に最適な治療法を選択しています。
             </p>
           </div>

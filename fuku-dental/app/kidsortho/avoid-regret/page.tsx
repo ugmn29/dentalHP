@@ -4,6 +4,7 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
 import { KidsOrthoImage } from '@/components/KidsOrthoImage';
+import { PageImage } from '@/components/PageImage';
 import {
   CheckCircle2,
   AlertCircle,
@@ -17,6 +18,14 @@ export const metadata: Metadata = {
   title: '小児矯正で後悔しないために｜始める前に知るべき4つのこと｜F歯科・矯正歯科 豊洲プライムスクエア院',
   description: '「やらなきゃよかった」と後悔する人の共通点。治療を始める前に確認すべき4つのポイントと、信頼できる歯科医院の選び方を詳しく解説します。',
   keywords: '小児矯正,後悔,失敗,歯科医院選び,こども矯正,注意点',
+  openGraph: {
+    title: '小児矯正で後悔しないために｜始める前に知るべき4つのこと｜F歯科・矯正歯科 豊洲プライムスクエア院',
+    description: '「やらなきゃよかった」と後悔する人の共通点。治療を始める前に確認すべき4つのポイントと、信頼できる歯科医院の選び方を解説します。',
+    type: 'website',
+    locale: 'ja_JP',
+    url: 'https://fuku-dental.jp/kidsortho/avoid-regret',
+    siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
+  },
 };
 
 export default function AvoidRegretPage() {
@@ -49,6 +58,7 @@ export default function AvoidRegretPage() {
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#5A4D41] font-serif">
                 小児矯正で後悔しないために
               </h1>
+              <PageImage path="/kidsortho/avoid-regret" alt="小児矯正で後悔しないために" />
               <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
 
                             <KidsOrthoImage
@@ -60,6 +70,7 @@ export default function AvoidRegretPage() {
               <p className="text-xl md:text-2xl mt-6 mb-6 text-[#5A4D41] font-medium font-sans">
                 始める前に知るべき4つのこと
               </p>
+              <p className="text-[#8D8070] mt-3 font-sans">豊洲の矯正歯科が詳しく解説します</p>
               <p className="text-lg text-[#8D8070] leading-relaxed font-sans">
                 「やらなきゃよかった」と後悔する人の共通点と、<br className="hidden md:block" />
                 信頼できる歯科医院の選び方を詳しく解説します
@@ -540,7 +551,7 @@ export default function AvoidRegretPage() {
                 後悔しない小児矯正を始めましょう
               </h2>
               <p className="text-xl mb-8 text-white/90 font-sans">
-                納得してから治療を開始できます。まずは無料相談へ
+                豊洲で小児矯正をお考えなら、豊洲駅徒歩2分の当院へ。納得してから治療を開始できます
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link

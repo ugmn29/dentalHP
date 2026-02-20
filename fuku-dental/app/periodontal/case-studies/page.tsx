@@ -1,11 +1,20 @@
 import type { Metadata } from 'next';
 import { TreatmentLayout } from '@/components/TreatmentLayout';
+import { PageImage } from '@/components/PageImage';
 import { Clock, DollarSign, CheckCircle, Star, TrendingUp } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: '歯周病治療の症例紹介｜治療事例と患者様の声｜F歯科・矯正歯科 豊洲プライムスクエア院',
-  description: '歯周病治療の症例を詳しくご紹介。軽度から重度まで、実際の治療例と患者様の声を掲載しています。',
+  description: '豊洲の歯医者 F歯科・矯正歯科が歯周病治療の症例を詳しくご紹介。軽度から重度まで、実際の治療例と患者様の声を掲載しています。',
   keywords: '歯周病,症例,事例,体験談,患者様の声,ビフォーアフター,治療例,F歯科・矯正歯科 豊洲プライムスクエア院',
+  openGraph: {
+    title: '歯周病治療の症例紹介｜治療事例と患者様の声｜F歯科・矯正歯科 豊洲プライムスクエア院',
+    description: '豊洲の歯医者 F歯科・矯正歯科が歯周病治療の症例を詳しくご紹介。軽度から重度まで、実際の治療例と患者様の声を掲載しています。',
+    type: 'website',
+    locale: 'ja_JP',
+    url: 'https://fuku-dental.jp/periodontal/case-studies',
+    siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
+  },
 };
 
 // Case Study Feature Data
@@ -21,7 +30,7 @@ const caseStudyFeatures = [
       "治療回数・期間：3回（3週間） | 費用：約5,000円（保険適用） | 結果：出血消失、歯茎健康",
       "患者様の声：「歯磨き時の出血が気になっていましたが、正しい磨き方を教えていただき、2週間ほどで出血がなくなりました。歯茎の色もピンク色に戻り、とても嬉しいです。定期検診も続けていきたいと思います。」"
     ],
-    image: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=800",
+    imageId: "feature1",
     imageAlt: "歯周病治療・基本治療の様子"
   },
   {
@@ -35,7 +44,7 @@ const caseStudyFeatures = [
       "治療回数・期間：6回（3ヶ月） | 費用：約20,000円（保険適用） | 結果：ポケット改善、口臭軽減",
       "患者様の声：「口臭が気になって受診しましたが、歯周病が進行していることを知りショックでした。しかし、丁寧に治療していただき、3ヶ月後には歯茎の腫れも引き、口臭もほとんど気にならなくなりました。禁煙にも成功し、今は3ヶ月ごとのメンテナンスを受けています。」"
     ],
-    image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=800",
+    imageId: "feature2",
     imageAlt: "歯周病治療・ルートプレーニングの様子"
   },
   {
@@ -49,7 +58,7 @@ const caseStudyFeatures = [
       "治療回数・期間：10回（6ヶ月） | 費用：約50,000円（保険適用） | 結果：ぐらつき改善、噛める",
       "患者様の声：「歯がグラグラで、抜歯になると思っていました。しかし、フラップ手術で歯を残せると聞き、治療を受けることを決めました。手術は緊張しましたが、痛みもほとんどなく、術後1ヶ月でしっかり噛めるようになりました。歯を残せて本当に良かったです。」"
     ],
-    image: "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&q=80&w=800",
+    imageId: "feature3",
     imageAlt: "歯周病治療・フラップ手術の様子"
   },
   {
@@ -63,7 +72,7 @@ const caseStudyFeatures = [
       "治療回数・期間：8回（8ヶ月） | 費用：約180,000円（自費+保険） | 結果：骨再生、歯の安定",
       "患者様の声：「前歯が抜けたらどうしようと不安でしたが、エムドゲインで骨が再生すると聞き、治療を決めました。費用はかかりましたが、8ヶ月後にはレントゲンで骨が回復しているのが確認でき、歯のぐらつきもなくなりました。自分の歯を残せて本当に良かったです。」"
     ],
-    image: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=800",
+    imageId: "feature4",
     imageAlt: "歯周病治療・エムドゲイン再生療法の様子"
   },
   {
@@ -77,7 +86,7 @@ const caseStudyFeatures = [
       "治療回数・期間：7回（5ヶ月） | 費用：約40,000円（保険適用） | 結果：ポケット減少、骨再生",
       "患者様の声：「再生療法は高額だと思っていましたが、リグロスは保険が使えると聞き、治療を受けることにしました。手術後の経過も良く、5ヶ月後には歯周ポケットが3mmまで改善しました。保険で再生療法が受けられるのはありがたいです。」"
     ],
-    image: "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&q=80&w=800",
+    imageId: "feature5",
     imageAlt: "歯周病治療・リグロス再生療法の様子"
   }
 ];
@@ -129,17 +138,19 @@ export default function PeriodontalCaseStudiesPage() {
     <TreatmentLayout
       title="歯周病治療"
       titleEn="Periodontal Case Studies"
+      pagePath="/periodontal/case-studies"
       lead={
         <div className="space-y-4">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#5A4D41] font-serif">
             歯周病治療の症例紹介
           </h1>
+          <PageImage path="/periodontal/case-studies" alt="歯周病治療の症例紹介" />
           <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
           <p className="text-xl md:text-2xl mb-6 text-[#5A4D41] font-medium">
             実際の治療事例と患者様の声をご紹介します
           </p>
           <p className="text-lg text-[#8D8070] leading-relaxed">
-            こちらのページでは、当院で実際に行った歯周病治療の症例をご紹介します。患者様のプライバシーに配慮し、個人を特定できる情報は掲載しておりません。軽度から重度まで、様々な歯周病の治療例を通じて、適切な治療で歯周病は改善できることをご理解いただければ幸いです。
+            こちらのページでは、豊洲駅すぐの当院で実際に行った歯周病治療の症例をご紹介します。患者様のプライバシーに配慮し、個人を特定できる情報は掲載しておりません。軽度から重度まで、様々な歯周病の治療例を通じて、適切な治療で歯周病は改善できることをご理解いただければ幸いです。
           </p>
         </div>
       }

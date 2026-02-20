@@ -4,6 +4,7 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
 import { KidsOrthoImage } from '@/components/KidsOrthoImage';
+import { PageImage } from '@/components/PageImage';
 import {
   CheckCircle2,
   AlertCircle,
@@ -16,6 +17,14 @@ export const metadata: Metadata = {
   title: 'ガムトレーニング完全手順｜咬合力と顎の発達を促進｜F歯科・矯正歯科 豊洲プライムスクエア院',
   description: 'キシリトールガムを使った咬合力強化トレーニング。片側10回ずつ噛む正しいやり方、効果が出る期間、注意点を詳しく解説します。',
   keywords: 'ガムトレーニング,咬合力,顎の発達,小児矯正,キシリトールガム',
+  openGraph: {
+    title: 'ガムトレーニング完全手順｜咬合力と顎の発達を促進｜F歯科・矯正歯科 豊洲プライムスクエア院',
+    description: 'キシリトールガムを使った咬合力強化トレーニング。片側10回ずつ噛む正しいやり方、効果が出る期間、注意点を詳しく解説します。',
+    type: 'website',
+    locale: 'ja_JP',
+    url: 'https://fuku-dental.jp/kidsortho/gum-training',
+    siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
+  },
 };
 
 export default function GumTrainingPage() {
@@ -48,6 +57,7 @@ export default function GumTrainingPage() {
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#5A4D41] font-serif">
                 ガムトレーニング完全手順
               </h1>
+              <PageImage path="/kidsortho/gum-training" alt="ガムトレーニング完全手順" />
               <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
 
               {/* Hero Image */}
@@ -62,6 +72,7 @@ export default function GumTrainingPage() {
               <p className="text-xl md:text-2xl mt-6 mb-6 text-[#5A4D41] font-medium font-sans">
                 咬合力と顎の発達を促進
               </p>
+              <p className="text-[#8D8070] mt-3 font-sans">豊洲の矯正歯科が詳しく解説します</p>
               <p className="text-lg text-[#8D8070] leading-relaxed font-sans">
                 キシリトールガムを使った咬合力強化トレーニング。<br className="hidden md:block" />
                 片側10回ずつ噛む正しいやり方を詳しく解説します
@@ -416,7 +427,7 @@ export default function GumTrainingPage() {
                 <div className="text-center mb-8">
                   <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#5A4D41] mb-4">ガムトレーニングで顎の発達を促進</h2>
                   <p className="text-lg md:text-xl text-[#8D8070] leading-loose font-sans">
-                    装置とトレーニングの併用で、効果的な矯正治療を
+                    豊洲で小児矯正をお考えなら、豊洲駅徒歩2分の当院へ。装置とトレーニングの併用で、効果的な矯正治療を
                   </p>
                 </div>
 

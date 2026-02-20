@@ -4,11 +4,20 @@ import { ChevronRight, Home, FileText, CheckCircle, Clock, DollarSign, Star, Pho
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
+import { PageImage } from '@/components/PageImage';
 
 export const metadata: Metadata = {
   title: '根管治療の症例紹介｜治療事例と患者様の声｜F歯科・矯正歯科 豊洲プライムスクエア院',
-  description: '根管治療の症例を詳しくご紹介。初回根管治療、再根管治療、歯根端切除術の実際の治療例と患者様の声を掲載しています。',
+  description: '豊洲の歯医者 F歯科が根管治療の症例を詳しくご紹介。初回根管治療、再根管治療、歯根端切除術の実際の治療例と患者様の声を掲載しています。',
   keywords: '根管治療,症例,事例,体験談,患者様の声,ビフォーアフター,成功例,F歯科・矯正歯科 豊洲プライムスクエア院',
+  openGraph: {
+    title: '根管治療の症例紹介｜治療事例と患者様の声｜F歯科・矯正歯科 豊洲プライムスクエア院',
+    description: '豊洲の歯医者 F歯科が根管治療の症例を詳しくご紹介。初回根管治療、再根管治療、歯根端切除術の実際の治療例と患者様の声を掲載しています。',
+    type: 'website',
+    locale: 'ja_JP',
+    url: 'https://fuku-dental.jp/root-canal/case-studies',
+    siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
+  },
 };
 
 export default function RootCanalCaseStudiesPage() {
@@ -43,8 +52,9 @@ export default function RootCanalCaseStudiesPage() {
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
                 根管治療の症例紹介
               </h1>
+              <PageImage path="/root-canal/case-studies" alt="根管治療の症例紹介" />
               <p className="text-xl text-orange-100 leading-relaxed">
-                実際の治療事例と患者様の声をご紹介します
+                豊洲駅すぐの当院での治療事例と患者様の声をご紹介します
               </p>
             </div>
           </div>

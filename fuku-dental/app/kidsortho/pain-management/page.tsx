@@ -5,11 +5,20 @@ import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { AuthorBio } from '@/components/AuthorBio'
 import { KidsOrthoImage } from '@/components/KidsOrthoImage'
+import { PageImage } from '@/components/PageImage'
 
 export const metadata: Metadata = {
   title: 'こども矯正は痛い？｜痛みの期間と対処法を詳しく解説｜F歯科・矯正歯科 豊洲プライムスクエア院',
   description: 'こども矯正の痛みはいつまで続く？痛みの種類別対処法（冷やす・鎮痛剤・食事の工夫）と、緊急時の連絡先を詳しく解説します。',
   keywords: '痛み,痛み対処,鎮痛剤,こども矯正,小児矯正,ワイヤー,プレオルソ,緊急対応,痛い',
+  openGraph: {
+    title: 'こども矯正は痛い？｜痛みの期間と対処法を詳しく解説｜F歯科・矯正歯科 豊洲プライムスクエア院',
+    description: 'こども矯正の痛みはいつまで続く？痛みの種類別対処法（冷やす・鎮痛剤・食事の工夫）と、緊急時の連絡先を詳しく解説します。',
+    type: 'website',
+    locale: 'ja_JP',
+    url: 'https://fuku-dental.jp/kidsortho/pain-management',
+    siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
+  },
 }
 
 export default function PainManagementPage() {
@@ -43,6 +52,7 @@ export default function PainManagementPage() {
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[#5A4D41] mb-3">
                   こども矯正は痛い？<br className="md:hidden" />痛みの期間と対処法
                 </h1>
+                <PageImage path="/kidsortho/pain-management" alt="こども矯正の痛みの期間と対処法" />
                 <div className="w-16 h-0.5 bg-[#C5A572] mb-6"></div>
               </div>
 
@@ -53,6 +63,7 @@ export default function PainManagementPage() {
               />
 
               <p className="text-lg text-[#C5A572] font-bold mt-6 mb-4">こども矯正の痛み管理と緊急対応</p>
+              <p className="text-[#8D8070] mt-3 font-sans">豊洲の矯正歯科が詳しく解説します</p>
 
               <p className="text-base md:text-lg leading-loose text-[#8D8070] font-sans mb-8">
                 こども矯正の痛みはいつまで続く？痛みの種類別対処法（冷やす・鎮痛剤・食事の工夫）と、緊急時の連絡先を詳しく解説します。
@@ -427,7 +438,7 @@ export default function PainManagementPage() {
               <div className="text-center mb-8">
                 <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#5A4D41] mb-4">痛みの少ないこども矯正を</h2>
                 <p className="text-lg md:text-xl text-[#8D8070] leading-loose font-sans">
-                  F歯科・矯正歯科 豊洲プライムスクエア院では、お子さんの痛みに配慮した<br />
+                  豊洲で小児矯正をお考えなら、豊洲駅徒歩2分の当院へ。お子さんの痛みに配慮した<br />
                   矯正治療を行っています。<br />
                   痛みへの対処法や、緊急時の対応もしっかりサポートします。
                 </p>

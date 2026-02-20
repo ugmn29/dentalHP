@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
+import { PageImage } from '@/components/PageImage';
 import {
   CheckCircle2,
   XCircle,
@@ -14,8 +15,16 @@ import {
 
 export const metadata: Metadata = {
   title: 'セラミック治療の種類｜インレー・クラウン・ベニア比較｜F歯科・矯正歯科 豊洲プライムスクエア院',
-  description: 'セラミック治療には複数の種類があります。インレー、アンレー、クラウン、ベニアなど、それぞれの特徴と適応症例を詳しく解説。あなたに最適なセラミック治療が見つかります。',
+  description: '豊洲の歯医者 F歯科がセラミック治療の種類を解説。インレー、アンレー、クラウン、ベニアなど、それぞれの特徴と適応症例を詳しくご紹介。あなたに最適なセラミック治療が見つかります。',
   keywords: 'セラミック,インレー,クラウン,ベニア,アンレー,歯科治療,審美歯科',
+  openGraph: {
+    title: 'セラミック治療の種類｜インレー・クラウン・ベニア比較｜F歯科・矯正歯科 豊洲プライムスクエア院',
+    description: 'セラミック治療の種類を解説。インレー、アンレー、クラウン、ベニアの特徴と適応症例を詳しくご紹介。',
+    type: 'website',
+    locale: 'ja_JP',
+    url: 'https://fuku-dental.jp/ceramic/types',
+    siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
+  },
 };
 
 export default function CeramicTypesPage() {
@@ -48,12 +57,13 @@ export default function CeramicTypesPage() {
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#5A4D41] font-serif">
                 セラミック治療の種類
               </h1>
+              <PageImage path="/ceramic/types" alt="セラミック治療の種類" />
               <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
               <p className="text-xl md:text-2xl mb-6 text-[#5A4D41] font-medium">
                 インレー・クラウン・ベニアの違いと選び方
               </p>
               <p className="text-lg text-[#8D8070] leading-relaxed">
-                それぞれの特徴を理解して、<br />
+                豊洲駅すぐのF歯科がそれぞれの特徴を解説。<br />
                 あなたに最適な治療法を見つけましょう
               </p>
             </div>
