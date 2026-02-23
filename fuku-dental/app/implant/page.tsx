@@ -18,6 +18,8 @@ import { DirectorMessageSection } from '@/components/implant/DirectorMessageSect
 import { HeroCarousel } from '@/components/implant/HeroCarousel';
 import { FAQSection } from '@/components/implant/FAQSection';
 import { ArrowRight } from 'lucide-react';
+import { ImplantStructure } from '@/components/implant/ImplantStructure';
+import { PageImage } from '@/components/PageImage';
 
 export const metadata: Metadata = {
   title: '豊洲のインプラント治療｜F歯科・矯正歯科 豊洲プライムスクエア院',
@@ -28,7 +30,7 @@ export const metadata: Metadata = {
     description: '豊洲駅徒歩2分。500症例以上の経験を持つ院長が、歯科用CTと綿密な計画で安全なインプラント治療を提供。完全個室・静脈内鎮静法対応。無料相談実施中。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/implant',
+    url: 'https://fshika.com/implant',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
   twitter: {
@@ -37,7 +39,7 @@ export const metadata: Metadata = {
     description: '豊洲駅徒歩2分。500症例以上の経験、CT診断、静脈内鎮静法対応。無料相談実施中。',
   },
   alternates: {
-    canonical: 'https://fuku-dental.jp/implant',
+    canonical: 'https://fshika.com/implant',
   },
 };
 
@@ -57,11 +59,7 @@ function AboutSection() {
         <div className="bg-white rounded-2xl p-6 md:p-10 shadow-sm border border-gray-100 mb-10">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
-              <img
-                src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=600"
-                alt="インプラントの構造"
-                className="rounded-xl w-full"
-              />
+              <ImplantStructure />
             </div>
             <div className="space-y-4">
               <div className="flex items-start gap-3">
@@ -110,25 +108,22 @@ function AboutSection() {
           ].map((item, i) => (
             <div
               key={i}
-              className={`rounded-xl p-5 border ${
-                item.highlight
-                  ? 'border-[#395b45] bg-[#395b45]/5'
-                  : 'border-gray-200 bg-white'
-              }`}
+              className={`rounded-xl p-5 border ${item.highlight
+                ? 'border-[#395b45] bg-[#395b45]/5'
+                : 'border-gray-200 bg-white'
+                }`}
             >
               <h4
-                className={`font-bold mb-3 text-center ${
-                  item.highlight ? 'text-[#395b45]' : 'text-[#5A4D41]'
-                }`}
+                className={`font-bold mb-3 text-center ${item.highlight ? 'text-[#395b45]' : 'text-[#5A4D41]'
+                  }`}
               >
                 {item.title}
               </h4>
               <ul className="space-y-2">
                 {item.points.map((p, j) => (
                   <li key={j} className="text-sm text-gray-600 flex items-start gap-2">
-                    <span className={`mt-1 w-1.5 h-1.5 rounded-full flex-shrink-0 ${
-                      item.highlight ? 'bg-[#395b45]' : 'bg-gray-300'
-                    }`} />
+                    <span className={`mt-1 w-1.5 h-1.5 rounded-full flex-shrink-0 ${item.highlight ? 'bg-[#395b45]' : 'bg-gray-300'
+                      }`} />
                     {p}
                   </li>
                 ))}
@@ -155,19 +150,19 @@ function TreatmentTypes() {
     {
       title: '1本のインプラント',
       description: '1本の歯を失った場合。隣の歯を削らずに、失った歯だけを補います。',
-      image: 'https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&q=80&w=400',
+      imageId: 'treatment-type1',
       href: '/implant/number-position',
     },
     {
       title: '複数本のインプラント',
       description: '複数の歯を失った場合。インプラントを支えにブリッジを固定します。',
-      image: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=400',
+      imageId: 'treatment-type2',
       href: '/implant/number-position',
     },
     {
       title: '全顎インプラント',
       description: '多くの歯を失った場合。All-on-4など、少ないインプラントで全体を支えます。',
-      image: 'https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?auto=format&fit=crop&q=80&w=400',
+      imageId: 'treatment-type3',
       href: '/implant/overdenture',
     },
   ];
@@ -189,8 +184,9 @@ function TreatmentTypes() {
               className="group bg-[#FDFBF7] rounded-xl overflow-hidden border border-gray-100 hover:shadow-lg hover:border-[#395b45]/20 transition-all"
             >
               <div className="aspect-[4/3] overflow-hidden">
-                <img
-                  src={t.image}
+                <PageImage
+                  path="/implant"
+                  imageId={t.imageId}
                   alt={t.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
@@ -213,12 +209,12 @@ function TreatmentTypes() {
 /* ─── Flow Overview ─── */
 function FlowOverview() {
   const steps = [
-    { number: 1, title: '無料カウンセリング', description: 'お悩みをお聞きし、治療の概要・費用・期間をご説明します。', duration: '30〜60分' },
-    { number: 2, title: '精密検査・診断', description: 'CT撮影やレントゲンで骨の状態を詳しく調べ、治療計画を立てます。' },
-    { number: 3, title: 'インプラント手術', description: '顎の骨にインプラント体を埋入します。手術時間は1〜2時間程度です。', duration: '1〜2時間' },
-    { number: 4, title: '治癒期間', description: 'インプラントと骨が結合するまで待ちます。', duration: '3〜6ヶ月' },
-    { number: 5, title: '人工歯の装着', description: '型取り後、セラミック製の人工歯を作製・装着して完成です。' },
-    { number: 6, title: '定期メンテナンス', description: '3〜6ヶ月ごとの定期検診で、長期間の安定を維持します。' },
+    { number: 1, title: '無料カウンセリング', description: 'お悩みをお聞きし、治療の概要・費用・期間をご説明します。', duration: '30〜60分', icon: <img src="/images/icons/07_インプラント.png" alt="カウンセリング" className="w-full h-full object-contain" /> },
+    { number: 2, title: '精密検査・診断', description: 'CT撮影やレントゲンで骨の状態を詳しく調べ、治療計画を立てます。', icon: <img src="/images/icons/01_虫歯治療.png" alt="検査" className="w-full h-full object-contain" /> },
+    { number: 3, title: 'インプラント手術', description: '顎の骨にインプラント体を埋入します。手術時間は1〜2時間程度です。', duration: '1〜2時間', icon: <img src="/images/icons/04_親知らず.png" alt="手術" className="w-full h-full object-contain" /> },
+    { number: 4, title: '治癒期間', description: 'インプラントと骨が結合するまで待ちます。', duration: '3〜6ヶ月', icon: <div className="text-2xl">⏳</div> },
+    { number: 5, title: '人工歯の装着', description: '型取り後、セラミック製の人工歯を作製・装着して完成です。', icon: <img src="/images/icons/14_審美歯科.png" alt="装着" className="w-full h-full object-contain" /> },
+    { number: 6, title: '定期メンテナンス', description: '3〜6ヶ月ごとの定期検診で、長期間の安定を維持します。', icon: <img src="/images/icons/13_予防歯科.png" alt="メンテナンス" className="w-full h-full object-contain" /> },
   ];
 
   return (
@@ -339,7 +335,7 @@ export default function ImplantMainPage() {
     '@type': 'Dentist',
     name: 'F歯科・矯正歯科 豊洲プライムスクエア院',
     description: '豊洲駅徒歩2分のインプラント治療専門。500症例以上の経験を持つ院長が、歯科用CTと綿密な計画で安全なインプラント治療を提供。',
-    url: 'https://fuku-dental.jp/implant',
+    url: 'https://fshika.com/implant',
     telephone: '+81-3-XXXX-XXXX',
     address: {
       '@type': 'PostalAddress',
@@ -398,6 +394,7 @@ export default function ImplantMainPage() {
       <Header />
       <main>
         <HeroCarousel />
+        <PageImage path="/implant" alt="豊洲のインプラント治療" />
         <IntroSection />
         <ProblemGrid />
         <ConsultationSection />

@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     description: 'インプラント・入れ歯・ブリッジを噛む力・見た目・費用・治療期間・耐久性など9項目で徹底比較。あなたに合った治療法の選び方をご案内。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/implant/comparison',
+    url: 'https://fshika.com/implant/comparison',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

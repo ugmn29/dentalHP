@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     description: '過蓋咬合（ディープバイト）の特徴、原因、治療法について詳しく解説。上の前歯が下の前歯を深く覆う状態で、早期治療が効果的です。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/kidsortho/types/deepbite',
+    url: 'https://fshika.com/kidsortho/types/deepbite',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

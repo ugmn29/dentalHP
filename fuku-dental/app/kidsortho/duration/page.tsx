@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     description: '小児矯正の治療期間を歯科医師が解説。1期治療・2期治療の目安期間と通院頻度について。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/kidsortho/duration',
+    url: 'https://fshika.com/kidsortho/duration',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     description: 'セラミック治療の症例写真をご紹介。前歯・奥歯のビフォーアフターで治療効果をご確認いただけます。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/ceramic/case-studies',
+    url: 'https://fshika.com/ceramic/case-studies',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

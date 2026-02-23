@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     description: '豊洲駅徒歩2分のF歯科で矯正治療。ワイヤー矯正・マウスピース矯正・裏側矯正に対応。精密検査に基づく最適な治療計画で美しい歯並びを実現。分割払い・デンタルローンも利用可能です。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/orthodontics',
+    url: 'https://fshika.com/orthodontics',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

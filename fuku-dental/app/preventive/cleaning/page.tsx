@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     description: '歯科衛生士による専門的なPMTCで、普段の歯磨きでは落としきれないバイオフィルムや着色を除去。虫歯・歯周病のリスクを大幅に軽減します。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/preventive/cleaning',
+    url: 'https://fshika.com/preventive/cleaning',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

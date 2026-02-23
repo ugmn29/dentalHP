@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     description: '小児矯正で使用する装置を一覧でご紹介。各装置の特徴・対象年齢・治療期間を比較。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/kidsortho/appliances',
+    url: 'https://fshika.com/kidsortho/appliances',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

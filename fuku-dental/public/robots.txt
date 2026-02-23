@@ -10,7 +10,7 @@ Disallow: /_next/
 Disallow: /admin/
 
 # サイトマップの場所
-Sitemap: https://fuku-dental.com/sitemap.xml
+Sitemap: https://fshika.com/sitemap.xml
 
 # Googlebot 特有の設定（オプション）
 User-agent: Googlebot

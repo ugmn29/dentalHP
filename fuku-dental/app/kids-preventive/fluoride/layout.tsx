@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     description: '豊洲のF歯科で子供のフッ素塗布。虫歯予防に効果的なフッ素の作用メカニズム、安全性、推奨頻度、費用について歯科医師が詳しく解説。お子様の歯を守る予防ケアをご提案します。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/kids-preventive/fluoride',
+    url: 'https://fshika.com/kids-preventive/fluoride',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

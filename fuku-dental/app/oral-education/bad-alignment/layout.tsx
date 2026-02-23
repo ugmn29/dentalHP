@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     description: '歯並びが悪くなる原因を歯科医師が徹底解説。遺伝・口呼吸・指しゃぶり・舌の癖など、歯並びに影響する要因と、お子様のうちからできる予防法をわかりやすくご紹介します。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/oral-education/bad-alignment',
+    url: 'https://fshika.com/oral-education/bad-alignment',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

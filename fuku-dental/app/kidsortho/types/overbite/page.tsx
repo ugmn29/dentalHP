@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     description: '上顎前突（出っ歯）の特徴、原因、治療法について詳しく解説。早期治療で効果的に改善できる不正咬合の一つです。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/kidsortho/types/overbite',
+    url: 'https://fshika.com/kidsortho/types/overbite',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

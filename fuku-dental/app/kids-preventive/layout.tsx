@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     description: '豊洲駅徒歩2分のF歯科で小児歯科。お子様の虫歯予防・フッ素塗布・シーラント・歯磨き指導を行います。歯医者が苦手なお子様も安心して通えるよう、やさしく丁寧な対応を心がけています。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/kids-preventive',
+    url: 'https://fshika.com/kids-preventive',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

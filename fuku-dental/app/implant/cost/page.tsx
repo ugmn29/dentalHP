@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     description: 'インプラント治療の費用・料金一覧。1本¥330,000〜。カウンセリング無料。医療費控除対象。クレジットカード・デンタルローン対応。10年保証制度あり。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/implant/cost',
+    url: 'https://fshika.com/implant/cost',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     description: '「やらなきゃよかった」と後悔する人の共通点。治療を始める前に確認すべき4つのポイントと、信頼できる歯科医院の選び方を解説します。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/kidsortho/avoid-regret',
+    url: 'https://fshika.com/kidsortho/avoid-regret',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

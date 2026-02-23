@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     description: 'セラミック治療の寿命を解説。インレー、クラウン、ベニアの寿命と、長持ちさせるためのケア方法をご紹介。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/ceramic/longevity',
+    url: 'https://fshika.com/ceramic/longevity',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

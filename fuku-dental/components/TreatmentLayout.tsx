@@ -6,6 +6,7 @@ import { Footer } from './Footer';
 import { WaveBottom } from './Wave';
 import { AuthorBio } from './AuthorBio';
 import { CheckCircle2, ChevronRight, Calendar, Phone, ArrowRight } from 'lucide-react';
+import { PageImage } from '@/components/PageImage';
 
 interface Feature {
     id: string;
@@ -13,7 +14,8 @@ interface Feature {
     highlight: string;
     summary: string;
     details: string[];
-    image: string;
+    image?: string;
+    imageId?: string;
     imageAlt: string;
 }
 
@@ -49,6 +51,7 @@ interface TreatmentLayoutProps {
     showImplantHero?: boolean;
     relatedPages?: RelatedPage[];
     children?: React.ReactNode;
+    pagePath?: string;
 }
 
 export const TreatmentLayout: React.FC<TreatmentLayoutProps> = ({
@@ -65,7 +68,8 @@ export const TreatmentLayout: React.FC<TreatmentLayoutProps> = ({
     risks,
     showImplantHero = false,
     relatedPages,
-    children
+    children,
+    pagePath
 }) => {
     return (
         <div className="min-h-screen bg-[#FDFBF7] font-sans text-[#5A4D41] selection:bg-[#FF9F43] selection:text-white">
@@ -77,8 +81,9 @@ export const TreatmentLayout: React.FC<TreatmentLayoutProps> = ({
                     <section className="relative h-screen overflow-hidden">
                         {/* Background Image with Overlay */}
                         <div className="absolute inset-0">
-                            <img
-                                src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=2000"
+                            <PageImage
+                                path={pagePath || '/shared'}
+                                imageId="layout-hero"
                                 alt="インプラント治療風景"
                                 className="w-full h-full object-cover"
                             />
@@ -241,11 +246,20 @@ export const TreatmentLayout: React.FC<TreatmentLayoutProps> = ({
                                         {/* Image */}
                                         <div className="w-full relative group mb-8">
                                             <div className="relative rounded-[30px] overflow-hidden shadow-2xl border-4 border-white transform transition-all duration-500 group-hover:shadow-[0_20px_60px_rgba(197,165,114,0.3)]">
-                                                <img
-                                                    src={feature.image}
-                                                    alt={feature.imageAlt}
-                                                    className="w-full h-auto aspect-[16/9] object-cover transition-transform duration-700 group-hover:scale-105"
-                                                />
+                                                {feature.imageId && pagePath ? (
+                                                    <PageImage
+                                                        path={pagePath}
+                                                        imageId={feature.imageId}
+                                                        alt={feature.imageAlt}
+                                                        className="w-full h-auto aspect-[16/9] object-cover transition-transform duration-700 group-hover:scale-105"
+                                                    />
+                                                ) : feature.image ? (
+                                                    <img
+                                                        src={feature.image}
+                                                        alt={feature.imageAlt}
+                                                        className="w-full h-auto aspect-[16/9] object-cover transition-transform duration-700 group-hover:scale-105"
+                                                    />
+                                                ) : null}
                                                 <div className="absolute inset-0 bg-gradient-to-t from-[#C5A572]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                                             </div>
                                         </div>

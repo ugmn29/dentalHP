@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     description: '叢生(ガタガタの歯並び)の特徴、原因、治療法について詳しく解説。日本人に最も多い不正咬合で、早期治療により非抜歯での改善が可能です。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/kidsortho/types/crowding',
+    url: 'https://fshika.com/kidsortho/types/crowding',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

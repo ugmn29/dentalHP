@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     description: '口臭でお悩みの方へ。豊洲のF歯科で口臭の原因を検査・特定し、適切な治療を行います。歯周病・虫歯・舌苔など口臭の原因別に対策をご提案。デリケートなお悩みも安心してご相談ください。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/general/bad-breath',
+    url: 'https://fshika.com/general/bad-breath',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

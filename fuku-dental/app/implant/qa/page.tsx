@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     description: 'インプラント治療に関するよくある質問を25問以上掲載。治療前の疑問、費用・支払い、メンテナンス、トラブル対処までカテゴリー別に回答。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/implant/qa',
+    url: 'https://fshika.com/implant/qa',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

@@ -63,9 +63,6 @@ export const metadata: Metadata = {
       { url: '/apple-icon.png', sizes: '180x180', type: 'image/png' },
     ],
   },
-  verification: {
-    google: 'your-google-verification-code', // Google Search Consoleで取得したコードに置き換えてください
-  },
 };
 
 export default function RootLayout({
@@ -93,7 +90,6 @@ export default function RootLayout({
       "longitude": 139.797686
     },
     "url": "https://fshika.com",
-    "telephone": "+81-3-XXXX-XXXX", // 実際の電話番号に変更してください
     "priceRange": "¥¥-¥¥¥",
     "openingHoursSpecification": [
       {
@@ -203,11 +199,7 @@ export default function RootLayout({
         "knowsAbout": ["矯正歯科", "小児歯科", "予防歯科", "審美歯科"]
       }
     ],
-    "sameAs": [
-      "https://www.facebook.com/fuku-dental", // 実際のSNSリンクに変更してください
-      "https://www.instagram.com/fuku-dental",
-      "https://twitter.com/fuku-dental"
-    ]
+    "sameAs": []
   };
 
   return (

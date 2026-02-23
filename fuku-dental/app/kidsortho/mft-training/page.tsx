@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     description: '口腔筋機能療法（MFT）の2大トレーニング。あいうべ体操とボタンプルの正しいやり方、効果が出る期間、注意点を詳しく解説します。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/kidsortho/mft-training',
+    url: 'https://fshika.com/kidsortho/mft-training',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

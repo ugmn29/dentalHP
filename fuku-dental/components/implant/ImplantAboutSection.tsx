@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { PageImage } from '@/components/PageImage';
 
 export function ImplantAboutSection() {
   return (
@@ -11,8 +12,9 @@ export function ImplantAboutSection() {
           {/* インプラント図解画像 */}
           <div className="flex justify-center">
             <div className="w-[296px] h-[157.48px]">
-              <img
-                src="https://images.unsplash.com/photo-1588776814546-daab30f310ce?auto=format&fit=crop&q=80&w=600"
+              <PageImage
+                path="/implant"
+                imageId="about-structure"
                 alt="インプラント構造図"
                 className="w-full h-full object-cover"
               />
@@ -44,8 +46,9 @@ export function ImplantAboutSection() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* 左側: 画像 */}
             <div className="flex justify-center">
-              <img
-                src="https://images.unsplash.com/photo-1588776814546-daab30f310ce?auto=format&fit=crop&q=80&w=800"
+              <PageImage
+                path="/implant"
+                imageId="about-structure"
                 alt="インプラント構造図"
                 className="w-full max-w-md h-auto object-cover rounded-lg shadow-lg"
               />

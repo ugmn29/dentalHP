@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     description: 'セラミックと銀歯の違いを徹底比較。見た目、寿命、費用、健康面など、あらゆる角度から解説します。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/ceramic/vs-metal',
+    url: 'https://fshika.com/ceramic/vs-metal',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

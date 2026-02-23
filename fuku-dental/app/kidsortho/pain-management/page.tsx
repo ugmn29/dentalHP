@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     description: 'こども矯正の痛みはいつまで続く？痛みの種類別対処法（冷やす・鎮痛剤・食事の工夫）と、緊急時の連絡先を詳しく解説します。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/kidsortho/pain-management',
+    url: 'https://fshika.com/kidsortho/pain-management',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 }

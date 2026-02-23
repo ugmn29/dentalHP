@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     description: '豊洲の歯医者 F歯科・矯正歯科の矯正治療症例をご紹介。出っ歯・受け口・ガタガタ・すきっ歯など、様々な症例の治療結果を掲載。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/orthodontics/case-studies',
+    url: 'https://fshika.com/orthodontics/case-studies',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

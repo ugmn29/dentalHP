@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     description: '豊洲の歯科 F歯科が根管治療の痛みについて詳しく解説。治療中・治療後の痛み、痛みの期間、痛み止めの使用方法など。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/root-canal/pain',
+    url: 'https://fshika.com/root-canal/pain',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

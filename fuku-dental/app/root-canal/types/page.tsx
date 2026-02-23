@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     description: '豊洲の歯医者 F歯科が根管治療の種類を詳しく解説。初回根管治療、再根管治療、歯根端切除術など、症状に応じた最適な治療法をご紹介します。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/root-canal/types',
+    url: 'https://fshika.com/root-canal/types',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

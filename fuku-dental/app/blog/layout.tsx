@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     description: '豊洲のF歯科の歯科ブログ・お知らせ。歯の健康に関する最新情報、治療に関するお役立ち記事、医院からのお知らせを配信しています。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/blog',
+    url: 'https://fshika.com/blog',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

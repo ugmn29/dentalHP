@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     description: '歯周病の治療方法を解説。スケーリング・フラップ手術・再生療法など段階に応じた治療法をご紹介。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/periodontal/treatment-methods',
+    url: 'https://fshika.com/periodontal/treatment-methods',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

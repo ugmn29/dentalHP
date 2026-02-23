@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     description: '交叉咬合（クロスバイト）の特徴、原因、治療法について詳しく解説。上下の歯が交差して噛み合う状態で、顔の歪みを引き起こす可能性があります。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/kidsortho/types/crossbite',
+    url: 'https://fshika.com/kidsortho/types/crossbite',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     description: '豊洲の歯医者 F歯科が根管治療の費用を詳しく解説。保険診療3,000円〜、自費精密根管治療50,000円〜。費用の違いと治療内容を比較。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/root-canal/cost',
+    url: 'https://fshika.com/root-canal/cost',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

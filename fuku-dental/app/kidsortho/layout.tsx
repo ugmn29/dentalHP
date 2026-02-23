@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     description: '豊洲駅徒歩2分のF歯科で小児矯正。お子様の成長を利用した負担の少ない矯正治療で、将来の歯並びを整えます。出っ歯・受け口・すきっ歯など各症例に対応。無料相談実施中。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/kidsortho',
+    url: 'https://fshika.com/kidsortho',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

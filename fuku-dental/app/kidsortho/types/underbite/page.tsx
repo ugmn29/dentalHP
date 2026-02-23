@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     description: '下顎前突（受け口）の特徴、原因、治療法について詳しく解説。早期治療で効果的に改善できる不正咬合の一つです。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/kidsortho/types/underbite',
+    url: 'https://fshika.com/kidsortho/types/underbite',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     description: '豊洲のF歯科が歯周病治療の費用を解説。保険診療と自費診療の違い、料金目安、医療費控除をご案内。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/periodontal/cost',
+    url: 'https://fshika.com/periodontal/cost',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

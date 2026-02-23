@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     description: '豊洲駅徒歩2分のF歯科でマウスピース矯正。透明で目立たず、取り外し可能な矯正装置で快適に歯並びを改善。食事や歯磨きもストレスフリー。無料相談・シミュレーション実施中。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/mouthpiece',
+    url: 'https://fshika.com/mouthpiece',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

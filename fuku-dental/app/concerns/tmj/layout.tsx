@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     description: '顎の痛み・口が開かない・カクカク音がする方へ。豊洲のF歯科で顎関節症の治療。マウスピース療法・運動療法・噛み合わせ調整で症状を改善します。お気軽にご相談ください。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/concerns/tmj',
+    url: 'https://fshika.com/concerns/tmj',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

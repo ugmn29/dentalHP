@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     description: '豊洲の歯医者 F歯科が根管治療の症例を詳しくご紹介。初回根管治療、再根管治療、歯根端切除術の実際の治療例と患者様の声を掲載しています。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/root-canal/case-studies',
+    url: 'https://fshika.com/root-canal/case-studies',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

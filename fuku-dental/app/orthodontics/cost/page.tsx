@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     description: '豊洲の歯医者 F歯科が矯正治療の費用を詳しく解説。ワイヤー矯正70万円〜、マウスピース矯正80万円〜。分割払い・医療費控除にも対応。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/orthodontics/cost',
+    url: 'https://fshika.com/orthodontics/cost',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

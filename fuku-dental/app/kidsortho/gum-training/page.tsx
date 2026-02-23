@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     description: 'キシリトールガムを使った咬合力強化トレーニング。片側10回ずつ噛む正しいやり方、効果が出る期間、注意点を詳しく解説します。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/kidsortho/gum-training',
+    url: 'https://fshika.com/kidsortho/gum-training',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

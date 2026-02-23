@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     description: '豊洲のF歯科の症例紹介・治療実績ページ。矯正治療・インプラント・セラミック・ホワイトニングなど各治療のビフォーアフター写真と治療内容をご紹介。実際の仕上がりをご確認ください。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/cases',
+    url: 'https://fshika.com/cases',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

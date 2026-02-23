@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     description: '豊洲駅徒歩2分のF歯科で予防歯科。定期検診・歯のクリーニング・フッ素塗布で虫歯や歯周病を未然に防ぎます。プロによる歯石除去とブラッシング指導で、お口の健康を長く守ります。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/preventive',
+    url: 'https://fshika.com/preventive',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

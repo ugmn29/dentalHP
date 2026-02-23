@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { PageImage } from '@/components/PageImage';
 
 export function IntroSection() {
   return (
@@ -17,8 +18,9 @@ export function IntroSection() {
       <div className="relative flex flex-col items-start max-w-[370px] w-[370px] gap-[18.51px]">
         {/* Image */}
         <div className="flex flex-col items-start pl-[18.5px] w-full">
-          <img
-            src="https://images.unsplash.com/photo-1609840112855-9ab5710745f7?auto=format&fit=crop&q=80&w=300"
+          <PageImage
+            path="/implant"
+            imageId="intro"
             alt="安全性と精度を高める先進インプラント技術"
             className="w-[246.05px] h-[287.14px] max-w-[259px] object-cover"
           />

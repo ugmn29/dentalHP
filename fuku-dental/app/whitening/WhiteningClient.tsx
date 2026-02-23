@@ -3,16 +3,18 @@
 import { useState, useEffect } from 'react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
-import { Sparkles, ArrowRight, CheckCircle, Clock, Heart, Shield, TrendingUp, Star, Calendar, ChevronRight, Plus, Minus, CheckCircle2 } from 'lucide-react';
+import { AuthorBio } from '@/components/AuthorBio';
+import { PageImage } from '@/components/PageImage';
+import { ArrowRight, CheckCircle, Shield, Calendar, ChevronRight, Plus, Minus, CheckCircle2, Sparkles, Clock, TrendingUp, Heart, Star } from 'lucide-react';
 
 export default function WhiteningPage() {
   const [currentHeroSlide, setCurrentHeroSlide] = useState(0);
 
   // Hero slider images - Whitening themed
   const heroImages = [
-    { src: "https://images.unsplash.com/photo-1609840114035-3c981a782dfe?auto=format&fit=crop&q=80&w=2000", alt: "ホワイトニング1" },
-    { src: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=2000", alt: "ホワイトニング2" },
-    { src: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=2000", alt: "ホワイトニング3" },
+    { imageId: "hero-slide1", alt: "ホワイトニング1" },
+    { imageId: "hero-slide2", alt: "ホワイトニング2" },
+    { imageId: "hero-slide3", alt: "ホワイトニング3" },
   ];
 
   // Hero image slider logic
@@ -28,6 +30,12 @@ export default function WhiteningPage() {
     <>
       <Header />
       <main className="min-h-screen bg-white font-sans text-[#4A4A4A]">
+        <style jsx global>{`
+          .brush-underline {
+            background-image: linear-gradient(transparent 60%, rgba(197, 165, 114, 0.4) 60%, rgba(197, 165, 114, 0.6) 80%, transparent 80%);
+            padding: 0 0.2em;
+          }
+        `}</style>
 
         {/* Hero Section - Image Slider + Text */}
         <section className="relative w-full overflow-hidden bg-white">
@@ -40,8 +48,9 @@ export default function WhiteningPage() {
                   index === currentHeroSlide ? 'opacity-100' : 'opacity-0'
                 }`}
               >
-                <img
-                  src={image.src}
+                <PageImage
+                  path="/whitening"
+                  imageId={image.imageId}
                   alt={image.alt}
                   className="w-full h-full object-cover"
                 />
@@ -107,7 +116,7 @@ export default function WhiteningPage() {
         </section>
 
         {/* Concept Message Section */}
-        <section className="pt-6 md:pt-10 pb-12 md:pb-16 bg-[#FDFBF7] relative overflow-hidden">
+        <section className="pt-6 md:pt-2 pb-2 md:pb-2 bg-[#FDFBF7] relative overflow-hidden">
           <div className="absolute inset-0 opacity-5">
             <div className="absolute inset-0 bg-[radial-gradient(#C5A572_1px,transparent_1px)] [background-size:20px_20px]"></div>
           </div>
@@ -135,23 +144,24 @@ export default function WhiteningPage() {
                 {
                   title: "Case.01",
                   desc: "コーヒーによる着色を、オフィスホワイトニングで自然な白さに改善しました。",
-                  image: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=800"
+                  imageId: "case1"
                 },
                 {
                   title: "Case.02",
                   desc: "デュアルホワイトニングにより、結婚式前に理想の白さを実現しました。",
-                  image: "https://images.unsplash.com/photo-1609840114035-3c981a782dfe?auto=format&fit=crop&q=80&w=800"
+                  imageId: "case2"
                 },
                 {
                   title: "Case.03",
                   desc: "ホームホワイトニングで、自然で長持ちする白さを手に入れました。",
-                  image: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=800"
+                  imageId: "case3"
                 }
               ].map((item, index) => (
                 <div key={index} className="group cursor-pointer">
                   <div className="relative overflow-hidden rounded-2xl mb-6 shadow-lg">
-                    <img
-                      src={item.image}
+                    <PageImage
+                      path="/whitening"
+                      imageId={item.imageId}
                       alt={item.title}
                       className="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-700"
                     />
@@ -184,12 +194,12 @@ export default function WhiteningPage() {
         </section>
 
         {/* Features Section - 5つの特徴 */}
-        <section className="pt-8 pb-24 bg-white overflow-hidden">
+        <section className="pt-8 pb-8 bg-white overflow-hidden">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <span className="text-[#C5A572] font-bold tracking-[0.2em] text-sm block mb-2">FEATURES</span>
               <h2 className="text-4xl md:text-5xl font-bold text-[#5A4D41] font-serif">
-                当院<span className="text-[0.75em]">の</span><span className="text-[#C5A572]">ホワイトニング</span>
+                当院<span className="text-[0.75em]">の</span><span className="text-[#C5A572]">特徴</span>
               </h2>
             </div>
 
@@ -199,72 +209,66 @@ export default function WhiteningPage() {
                   id: "01",
                   title: "Pre-Treatment Cleaning",
                   highlight: "処置前の徹底した着色除去",
-                  summary: "ホワイトニング前に歯のクリーニングを行い、表面の着色や歯石を除去することで、最大限の効果を引き出します。",
+                  summary: "ホワイトニング前に歯のクリーニングを行い、<span class='font-bold bg-yellow-100'>表面の着色や歯石を除去</span>することで、<span class='text-[#395b45] font-bold'>最大限の効果</span>を引き出します。",
                   details: [
-                    "専用機器による徹底的なクリーニング",
-                    "歯石や着色を除去し、薬剤の浸透効率を向上"
+                    "<span class='font-bold bg-yellow-100'>専用機器による徹底的なクリーニング</span>で歯石や着色を除去し、<span class='text-[#395b45] font-bold'>薬剤の浸透効率を向上</span>させます。"
                   ],
-                  image: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=800"
+                  imageId: "feature1"
                 },
                 {
                   id: "02",
                   title: "Various Options",
                   highlight: "豊富な種類から選択可能",
-                  summary: "オフィス・ホーム・デュアルの3つの方法から、あなたのライフスタイルや目標に合わせて最適なプランを選べます。",
+                  summary: "<span class='font-bold bg-yellow-100'>オフィス・ホーム・デュアルの3つの方法</span>から、あなたのライフスタイルや目標に合わせて<span class='text-[#395b45] font-bold'>最適なプラン</span>を選べます。",
                   details: [
-                    "即効性のオフィスホワイトニング",
-                    "自然な白さのホームホワイトニング、最高効果のデュアル"
+                    "<span class='text-[#395b45] font-bold'>即効性のオフィスホワイトニング、自然な白さのホームホワイトニング、最高効果のデュアルホワイトニング</span>をご用意しています。"
                   ],
-                  image: "https://images.unsplash.com/photo-1609840114035-3c981a782dfe?auto=format&fit=crop&q=80&w=800"
+                  imageId: "feature2"
                 },
                 {
                   id: "03",
                   title: "No Traditional Impression",
                   highlight: "従来の歯型取り不要",
-                  summary: "最新のデジタルスキャン技術により、不快な歯型取りなしで快適にマウスピースを作製できます。",
+                  summary: "<span class='font-bold bg-yellow-100'>最新のデジタルスキャン技術</span>により、<span class='text-[#395b45] font-bold'>不快な歯型取りなしで快適に</span>マウスピースを作製できます。",
                   details: [
-                    "嘔吐反射のある方も安心",
-                    "短時間で正確なマウスピースを作製"
+                    "<span class='text-[#395b45] font-bold'>嘔吐反射のある方も安心</span>して、<span class='font-bold bg-yellow-100'>短時間で正確なマウスピース</span>を作製できます。"
                   ],
-                  image: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=800"
+                  imageId: "feature3"
                 },
                 {
                   id: "04",
                   title: "High Quality Agent",
                   highlight: "高品質な薬剤を使用",
-                  summary: "厚生労働省認可の高品質なホワイトニング剤のみを使用。効果と安全性が実証された薬剤で確実な結果をお届けします。",
+                  summary: "<span class='font-bold bg-yellow-100'>厚生労働省認可の高品質なホワイトニング剤</span>のみを使用。<span class='text-[#395b45] font-bold'>効果と安全性が実証された薬剤で確実な結果</span>をお届けします。",
                   details: [
-                    "安全性の高い医療用薬剤",
-                    "効果的かつ歯にやさしい成分"
+                    "<span class='font-bold bg-yellow-100'>安全性の高い医療用薬剤</span>で、<span class='text-[#395b45] font-bold'>効果的かつ歯にやさしい</span>治療を提供します。"
                   ],
-                  image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=800"
+                  imageId: "feature4"
                 },
                 {
                   id: "05",
                   title: "Original Materials",
                   highlight: "独自の資料配布でセルフケアをサポート",
-                  summary: "当院オリジナルの資料をお渡しし、着色しにくい食生活や日常ケアの方法を詳しくご説明。白さを長持ちさせるコツを習得できます。",
+                  summary: "<span class='font-bold bg-yellow-100'>当院オリジナルの資料</span>をお渡しし、着色しにくい食生活や日常ケアの方法を詳しくご説明。<span class='text-[#395b45] font-bold'>白さを長持ちさせるコツ</span>を習得できます。",
                   details: [
-                    "着色を防ぐ食品リストと食事のタイミング",
-                    "効果的な歯磨き方法とおすすめケア用品の紹介"
+                    "<span class='font-bold bg-yellow-100'>着色を防ぐ食品リストと食事のタイミング、効果的な歯磨き方法</span>などを詳しくご紹介し、<span class='text-[#395b45] font-bold'>長期的な白さの維持</span>をサポートします。"
                   ],
-                  image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800"
+                  imageId: "feature5"
                 }
               ].map((feature, index) => (
                 <div key={feature.id} className="flex flex-col group">
                   {/* Title Area */}
-                  <div className="relative h-24 flex items-center mb-0">
+                  <div className="relative">
                     {/* Large Gradient Number */}
-                    <span
-                      className={`absolute top-[20%] -translate-y-1/2 block text-[8rem] md:text-[11rem] leading-[0.8] font-serif text-transparent bg-clip-text bg-gradient-to-b from-[#C5A572] via-[#E5C592] to-transparent select-none opacity-60 scale-x-[0.85] tracking-tighter ${index % 2 === 0 ? 'left-[-1rem] origin-left' : 'right-0 origin-right'}`}
-                    >
+                    <span className="text-8xl font-serif text-[#C5A572]/15 absolute -top-16 -left-8 z-0 select-none font-bold" style={{ letterSpacing: '-0.05em' }}>
                       {feature.id}
                     </span>
 
-                    {/* Title - Always Left */}
-                    <div className="relative z-10 w-full text-left pl-4">
-                      <h3 className="text-3xl md:text-4xl font-bold text-[#5A4D41] leading-tight tracking-wide font-serif">
-                        {feature.highlight}
+                    {/* Title */}
+                    <div className="flex items-start justify-between gap-4">
+                      <h3 className="text-3xl md:text-4xl font-bold text-[#5A4D41] leading-tight tracking-wide font-serif inline-block relative flex-1">
+                        <span dangerouslySetInnerHTML={{ __html: feature.highlight.replace(/(の|を|に|が|は|と|へ|から|より|で|や)/g, '<span class="text-[0.75em]">$1</span>') }} />
+                        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#C5A572] via-[#C5A572] to-transparent"></div>
                       </h3>
                     </div>
                   </div>
@@ -272,29 +276,24 @@ export default function WhiteningPage() {
                   {/* Image Area */}
                   <div className="w-full mb-8 relative">
                     <div className="relative rounded-[30px] overflow-hidden shadow-lg border-2 border-white">
-                      <img
-                        src={feature.image}
+                      <PageImage
+                        path="/whitening"
+                        imageId={feature.imageId}
                         alt={feature.highlight}
-                        className="w-full h-auto aspect-[2/1] object-cover"
+                        className="w-full h-auto aspect-[16/9] object-cover"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-[#C5A572]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                     </div>
                   </div>
 
                   {/* Text Area */}
-                  <div className="max-w-3xl text-left">
-                    <p className="text-[#C5A572] font-bold tracking-widest mb-2 uppercase text-xs">{feature.title}</p>
-                    <p className="text-lg text-[#8D8070] mb-6 leading-relaxed font-medium">
-                      {feature.summary}
-                    </p>
-                    <div className="grid gap-3 text-left bg-[#FDFBF7] p-6 rounded-2xl border border-[#C5A572]/10">
+                  <div>
+                    <p className="text-base md:text-lg text-[#5A4D41] leading-loose font-sans">
+                      <span dangerouslySetInnerHTML={{ __html: feature.summary }} />
                       {feature.details.map((detail, i) => (
-                        <div key={i} className="flex items-start gap-3">
-                          <CheckCircle2 size={18} className="text-[#C5A572] flex-shrink-0 mt-0.5" />
-                          <span className="text-[#5A4D41] font-medium text-sm md:text-base">{detail}</span>
-                        </div>
+                        <span key={i} dangerouslySetInnerHTML={{ __html: detail }} />
                       ))}
-                    </div>
+                    </p>
                   </div>
                 </div>
               ))}
@@ -303,7 +302,7 @@ export default function WhiteningPage() {
         </section>
 
         {/* ホワイトニングとは Section */}
-        <section className="py-24 bg-[#FDFBF7]">
+        <section className="py-2 bg-[#FDFBF7]">
           <div className="container mx-auto px-4 max-w-5xl">
             <div className="text-center mb-20">
               <h2 className="text-3xl md:text-4xl font-bold text-[#5A4D41] mb-8 font-serif">
@@ -492,303 +491,123 @@ export default function WhiteningPage() {
                 </a>
               </div>
             </div>
-
-            {/* Recommended Section */}
-            <div className="bg-white p-10 md:p-14 rounded-[40px] shadow-2xl shadow-[#C5A572]/10 border border-[#C5A572]/20 relative overflow-hidden">
-              <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[#C5A572] to-[#E5C592]"></div>
-              <h3 className="text-center text-[#C5A572] font-bold tracking-widest mb-10 uppercase flex items-center justify-center gap-4">
-                <span className="w-8 h-px bg-[#C5A572]"></span>
-                Recommended
-                <span className="w-8 h-px bg-[#C5A572]"></span>
-              </h3>
-              <div className="grid md:grid-cols-2 gap-6">
-                {[
-                  "歯の黄ばみが気になり始めた方",
-                  "大切なイベント前に歯を白くしたい方",
-                  "自然で美しい白さを求めている方",
-                  "笑顔に自信を持ちたい方",
-                  "できる限り自分の歯を残したい方"
-                ].map((item, index) => (
-                  <div key={index} className="flex items-center gap-4 p-5 bg-[#FDFBF7] rounded-2xl hover:bg-[#Fcf8f0] transition-colors">
-                    <div className="w-8 h-8 rounded-full bg-[#C5A572] flex items-center justify-center flex-shrink-0 shadow-md">
-                      <CheckCircle2 size={16} className="text-white" />
-                    </div>
-                    <span className="font-bold text-[#5A4D41]">{item}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Merit & Demerit Section */}
-        <section className="py-24 bg-white">
-          <div className="container mx-auto px-4 max-w-6xl">
-            <div className="text-center mb-16">
-              <p className="text-[#C5A572] tracking-[0.2em] font-bold mb-2">MERIT & DEMERIT</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#5A4D41] font-serif">メリット・デメリット</h2>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
-              {/* Merit */}
-              <div className="bg-white p-10 rounded-[30px] shadow-xl border-t-8 border-[#C5A572] relative overflow-hidden group">
-                <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-                  <Plus size={100} className="text-[#C5A572]" />
-                </div>
-                <h3 className="text-2xl font-bold text-[#5A4D41] mb-8 flex items-center gap-3 relative z-10">
-                  <span className="bg-[#C5A572] text-white p-2 rounded-lg"><Plus size={20} /></span>
-                  メリット
-                </h3>
-                <ul className="space-y-4 relative z-10">
-                  {[
-                    "歯を削らずに白くできる",
-                    "自然で美しい白さを実現",
-                    "若々しく清潔感のある印象に",
-                    "笑顔に自信が持てる"
-                  ].map((item, i) => (
-                    <li key={i} className="flex items-start gap-3">
-                      <CheckCircle2 size={20} className="text-[#C5A572] flex-shrink-0 mt-0.5" />
-                      <span className="text-[#5A4D41] font-bold">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Demerit */}
-              <div className="bg-white p-10 rounded-[30px] shadow-xl border-t-8 border-gray-400 relative overflow-hidden group">
-                <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-                  <Minus size={100} className="text-gray-400" />
-                </div>
-                <h3 className="text-2xl font-bold text-[#5A4D41] mb-8 flex items-center gap-3 relative z-10">
-                  <span className="bg-gray-400 text-white p-2 rounded-lg"><Minus size={20} /></span>
-                  デメリット
-                </h3>
-                <ul className="space-y-4 relative z-10">
-                  {[
-                    "一時的に知覚過敏が起こる場合がある",
-                    "効果の持続には個人差がある",
-                    "定期的なメンテナンスが必要",
-                    "着色性食品の制限が必要な期間がある"
-                  ].map((item, i) => (
-                    <li key={i} className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 bg-gray-400 rounded-full mt-2.5 flex-shrink-0"></div>
-                      <span className="text-[#5A4D41] font-medium">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-
-            {/* Link to Safety Page */}
-            <div className="text-center">
-              <a
-                href="/whitening/safety"
-                className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-blue-400 text-white px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
-              >
-                <Shield className="w-6 h-6" />
-                安全性・副作用について詳しく見る
-                <ArrowRight className="w-5 h-5" />
-                      詳しく見る
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <div className="text-center">
-                <a
-                  href="/whitening/types"
-                  className="inline-flex items-center gap-2 text-blue-600 font-bold hover:gap-3 transition-all"
-                >
-                  3つの方法を詳しく比較する
-                  <ArrowRight className="w-5 h-5" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Merit & Demerit Section */}
-        <section className="py-24 bg-white">
-          <div className="container mx-auto px-4 max-w-6xl">
-            <div className="text-center mb-16">
-              <p className="text-[#C5A572] tracking-[0.2em] font-bold mb-2">MERIT & DEMERIT</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#5A4D41] font-serif">メリット・デメリット</h2>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
-              {/* Merit */}
-              <div className="bg-white p-10 rounded-[30px] shadow-xl border-t-8 border-[#C5A572] relative overflow-hidden group">
-                <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-                  <Plus size={100} className="text-[#C5A572]" />
-                </div>
-                <h3 className="text-2xl font-bold text-[#5A4D41] mb-8 flex items-center gap-3 relative z-10">
-                  <span className="bg-[#C5A572] text-white p-2 rounded-lg"><Plus size={20} /></span>
-                  メリット
-                </h3>
-                <ul className="space-y-4 relative z-10">
-                  {[
-                    "歯を削らずに白くできる",
-                    "自然で美しい白さを実現",
-                    "若々しく清潔感のある印象に",
-                    "笑顔に自信が持てる"
-                  ].map((item, i) => (
-                    <li key={i} className="flex items-start gap-3">
-                      <CheckCircle2 size={20} className="text-[#C5A572] flex-shrink-0 mt-0.5" />
-                      <span className="text-[#5A4D41] font-bold">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Demerit */}
-              <div className="bg-white p-10 rounded-[30px] shadow-xl border-t-8 border-gray-400 relative overflow-hidden group">
-                <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-                  <Minus size={100} className="text-gray-400" />
-                </div>
-                <h3 className="text-2xl font-bold text-[#5A4D41] mb-8 flex items-center gap-3 relative z-10">
-                  <span className="bg-gray-400 text-white p-2 rounded-lg"><Minus size={20} /></span>
-                  デメリット
-                </h3>
-                <ul className="space-y-4 relative z-10">
-                  {[
-                    "一時的に知覚過敏が起こる場合がある",
-                    "効果の持続には個人差がある",
-                    "定期的なメンテナンスが必要",
-                    "着色性食品の制限が必要な期間がある"
-                  ].map((item, i) => (
-                    <li key={i} className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 bg-gray-400 rounded-full mt-2.5 flex-shrink-0"></div>
-                      <span className="text-[#5A4D41] font-medium">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-
-            {/* Link to Safety Page */}
-            <div className="text-center">
-              <a
-                href="/whitening/safety"
-                className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-blue-400 text-white px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
-              >
-                <Shield className="w-6 h-6" />
-                安全性・副作用について詳しく見る
-                <ArrowRight className="w-5 h-5" />
-              </a>
-            </div>
-          </div>
-        </section>
-
-        {/* Risks Section */}
-        <section className="py-20 bg-[#FDFBF7]">
-          <div className="container mx-auto px-4 max-w-4xl">
-            <div className="bg-white p-8 md:p-12 rounded-2xl border border-gray-100">
-              <h3 className="text-lg font-bold text-[#5A4D41] mb-6 text-center">リスク・副作用について</h3>
-              <ul className="space-y-3 mb-6">
-                {[
-                  "個人差がありますが、一時的に知覚過敏（歯がしみる）を感じることがあります。",
-                  "元の歯の色や着色の度合いによって、効果には個人差があります。",
-                  "妊娠中・授乳中の方、18歳未満の方、重度の知覚過敏がある方は施術できません。",
-                  "虫歯や歯周病がある場合は、先にそれらの治療を行ってからホワイトニングを行います。"
-                ].map((item, i) => (
-                  <li key={i} className="text-sm text-[#8D8070] flex items-start gap-2">
-                    <span className="text-[#C5A572] mt-1">●</span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-              <p className="text-xs text-gray-400 text-center">
-                ※全ての方に必ず起こるわけではありませんが、医療行為にはリスクが伴います。<br />
-                当院では、事前に十分なご説明を行い、納得していただいてから治療を開始します。
-              </p>
-            </div>
           </div>
         </section>
 
         {/* FAQ Section */}
-        <section className="py-16 md:py-20 bg-white">
+        <section className="pt-8 pb-2 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-12">
-                <p className="text-[#C5A572] tracking-[0.2em] font-bold mb-2">Q&A</p>
                 <h2 className="text-3xl md:text-4xl font-bold text-[#5A4D41] font-serif">よくある質問</h2>
+                <div className="w-16 h-0.5 bg-[#C5A572] mx-auto mt-4"></div>
               </div>
 
               <div className="space-y-6">
                 {/* FAQ 1 */}
-                <div className="bg-white rounded-xl p-6 md:p-8 shadow-lg hover:shadow-xl transition-shadow">
-                  <h3 className="font-bold text-lg md:text-xl mb-4 text-[#5A4D41] flex items-start gap-3">
-                    <span className="bg-[#E67A2E] text-white px-3 py-1 rounded-full text-sm flex-shrink-0">Q</span>
-                    <span>ホワイトニングは痛いですか？</span>
-                  </h3>
-                  <div className="ml-0 md:ml-12">
-                    <p className="text-[#8D8070] leading-relaxed mb-4">
-                      個人差がありますが、一時的に知覚過敏（歯がしみる）を感じることがあります。当院では、知覚過敏を軽減する薬剤や施術方法を採用しています。施術後24〜48時間で症状は治まることがほとんどです。
+                <div className="bg-white rounded-xl shadow-md border border-gray-200 p-6">
+                  <div className="mb-4">
+                    <div className="flex items-center gap-3 mb-3">
+                      <span className="w-8 h-8 bg-[#C5A572] rounded-full flex items-center justify-center text-white text-sm flex-shrink-0">Q1</span>
+                      <h3 className="font-bold text-[#5A4D41] text-lg">ホワイトニングは痛いですか？</h3>
+                    </div>
+                  </div>
+                  <div className="text-[#8D8070] leading-relaxed">
+                    <p className="mb-3">
+                      <strong className="text-[#C5A572]">A.</strong> 個人差がありますが、一時的に知覚過敏（歯がしみる）を感じることがあります。当院では、知覚過敏を軽減する薬剤や施術方法を採用しています。
+                    </p>
+                    <p className="text-sm bg-yellow-50 p-4 rounded-lg">
+                      施術後24〜48時間で症状は治まることがほとんどです。
                     </p>
                   </div>
                 </div>
 
                 {/* FAQ 2 */}
-                <div className="bg-white rounded-xl p-6 md:p-8 shadow-lg hover:shadow-xl transition-shadow">
-                  <h3 className="font-bold text-lg md:text-xl mb-4 text-[#5A4D41] flex items-start gap-3">
-                    <span className="bg-[#E67A2E] text-white px-3 py-1 rounded-full text-sm flex-shrink-0">Q</span>
-                    <span>どれくらい白くなりますか？</span>
-                  </h3>
-                  <div className="ml-0 md:ml-12">
-                    <p className="text-[#8D8070] leading-relaxed mb-4">
-                      個人差がありますが、一般的に歯の色のトーンを3〜8段階明るくすることができます。元の歯の色や着色の度合いによって効果は異なります。カウンセリング時にシェードガイドで目標の白さを確認します。
+                <div className="bg-white rounded-xl shadow-md border border-gray-200 p-6">
+                  <div className="mb-4">
+                    <div className="flex items-center gap-3 mb-3">
+                      <span className="w-8 h-8 bg-[#C5A572] rounded-full flex items-center justify-center text-white text-sm flex-shrink-0">Q2</span>
+                      <h3 className="font-bold text-[#5A4D41] text-lg">どれくらい白くなりますか？</h3>
+                    </div>
+                  </div>
+                  <div className="text-[#8D8070] leading-relaxed">
+                    <p className="mb-3">
+                      <strong className="text-[#C5A572]">A.</strong> 個人差がありますが、一般的に歯の色のトーンを3〜8段階明るくすることができます。元の歯の色や着色の度合いによって効果は異なります。
+                    </p>
+                    <p className="text-sm bg-[#E8F2ED] p-4 rounded-lg">
+                      カウンセリング時にシェードガイドで目標の白さを確認します。
                     </p>
                   </div>
                 </div>
 
                 {/* FAQ 3 */}
-                <div className="bg-white rounded-xl p-6 md:p-8 shadow-lg hover:shadow-xl transition-shadow">
-                  <h3 className="font-bold text-lg md:text-xl mb-4 text-[#5A4D41] flex items-start gap-3">
-                    <span className="bg-[#E67A2E] text-white px-3 py-1 rounded-full text-sm flex-shrink-0">Q</span>
-                    <span>効果はどれくらい持続しますか？</span>
-                  </h3>
-                  <div className="ml-0 md:ml-12">
-                    <p className="text-[#8D8070] leading-relaxed mb-4">
-                      オフィスホワイトニングは3〜6ヶ月、ホームホワイトニングは6〜12ヶ月、デュアルホワイトニングは1〜2年程度持続します。食生活や口腔ケアによって持続期間は変わります。定期的なタッチアップで白さを維持できます。
+                <div className="bg-white rounded-xl shadow-md border border-gray-200 p-6">
+                  <div className="mb-4">
+                    <div className="flex items-center gap-3 mb-3">
+                      <span className="w-8 h-8 bg-[#C5A572] rounded-full flex items-center justify-center text-white text-sm flex-shrink-0">Q3</span>
+                      <h3 className="font-bold text-[#5A4D41] text-lg">効果はどれくらい持続しますか？</h3>
+                    </div>
+                  </div>
+                  <div className="text-[#8D8070] leading-relaxed">
+                    <p className="mb-3">
+                      <strong className="text-[#C5A572]">A.</strong> オフィスホワイトニングは3〜6ヶ月、ホームホワイトニングは6〜12ヶ月、デュアルホワイトニングは1〜2年程度持続します。
+                    </p>
+                    <p className="text-sm bg-yellow-50 p-4 rounded-lg">
+                      食生活や口腔ケアによって持続期間は変わります。定期的なタッチアップで白さを維持できます。
                     </p>
                   </div>
                 </div>
 
                 {/* FAQ 4 */}
-                <div className="bg-white rounded-xl p-6 md:p-8 shadow-lg hover:shadow-xl transition-shadow">
-                  <h3 className="font-bold text-lg md:text-xl mb-4 text-[#5A4D41] flex items-start gap-3">
-                    <span className="bg-[#E67A2E] text-white px-3 py-1 rounded-full text-sm flex-shrink-0">Q</span>
-                    <span>誰でもホワイトニングできますか？</span>
-                  </h3>
-                  <div className="ml-0 md:ml-12">
-                    <p className="text-[#8D8070] leading-relaxed mb-4">
-                      以下の方はホワイトニングができない、または注意が必要です：妊娠中・授乳中の方、18歳未満の方、重度の知覚過敏がある方、エナメル質形成不全の方、無カタラーゼ症の方。カウンセリング時に詳しく確認いたします。
+                <div className="bg-white rounded-xl shadow-md border border-gray-200 p-6">
+                  <div className="mb-4">
+                    <div className="flex items-center gap-3 mb-3">
+                      <span className="w-8 h-8 bg-[#C5A572] rounded-full flex items-center justify-center text-white text-sm flex-shrink-0">Q4</span>
+                      <h3 className="font-bold text-[#5A4D41] text-lg">誰でもホワイトニングできますか？</h3>
+                    </div>
+                  </div>
+                  <div className="text-[#8D8070] leading-relaxed">
+                    <p className="mb-3">
+                      <strong className="text-[#C5A572]">A.</strong> 以下の方はホワイトニングができない、または注意が必要です：妊娠中・授乳中の方、18歳未満の方、重度の知覚過敏がある方、エナメル質形成不全の方、無カタラーゼ症の方。
+                    </p>
+                    <p className="text-sm bg-[#E8F2ED] p-4 rounded-lg">
+                      カウンセリング時に詳しく確認いたします。
                     </p>
                   </div>
                 </div>
 
                 {/* FAQ 5 */}
-                <div className="bg-white rounded-xl p-6 md:p-8 shadow-lg hover:shadow-xl transition-shadow">
-                  <h3 className="font-bold text-lg md:text-xl mb-4 text-[#5A4D41] flex items-start gap-3">
-                    <span className="bg-[#E67A2E] text-white px-3 py-1 rounded-full text-sm flex-shrink-0">Q</span>
-                    <span>虫歯や歯周病があってもできますか？</span>
-                  </h3>
-                  <div className="ml-0 md:ml-12">
-                    <p className="text-[#8D8070] leading-relaxed mb-4">
-                      虫歯や歯周病がある場合は、先にそれらの治療を行ってからホワイトニングを行います。健康な歯と歯茎の状態でホワイトニングを受けることが、最も効果的で安全です。
+                <div className="bg-white rounded-xl shadow-md border border-gray-200 p-6">
+                  <div className="mb-4">
+                    <div className="flex items-center gap-3 mb-3">
+                      <span className="w-8 h-8 bg-[#C5A572] rounded-full flex items-center justify-center text-white text-sm flex-shrink-0">Q5</span>
+                      <h3 className="font-bold text-[#5A4D41] text-lg">虫歯や歯周病があってもできますか？</h3>
+                    </div>
+                  </div>
+                  <div className="text-[#8D8070] leading-relaxed">
+                    <p className="mb-3">
+                      <strong className="text-[#C5A572]">A.</strong> 虫歯や歯周病がある場合は、先にそれらの治療を行ってからホワイトニングを行います。
+                    </p>
+                    <p className="text-sm bg-yellow-50 p-4 rounded-lg">
+                      健康な歯と歯茎の状態でホワイトニングを受けることが、最も効果的で安全です。
                     </p>
                   </div>
                 </div>
 
                 {/* FAQ 6 */}
-                <div className="bg-white rounded-xl p-6 md:p-8 shadow-lg hover:shadow-xl transition-shadow">
-                  <h3 className="font-bold text-lg md:text-xl mb-4 text-[#5A4D41] flex items-start gap-3">
-                    <span className="bg-[#E67A2E] text-white px-3 py-1 rounded-full text-sm flex-shrink-0">Q</span>
-                    <span>ホワイトニング後の注意点はありますか？</span>
-                  </h3>
-                  <div className="ml-0 md:ml-12">
-                    <p className="text-[#8D8070] leading-relaxed mb-4">
-                      ホワイトニング後24〜48時間は、着色しやすい食べ物や飲み物（コーヒー、紅茶、赤ワイン、カレーなど）を避けることをおすすめします。また、喫煙も控えてください。この期間は歯が着色物質を吸収しやすい状態です。
+                <div className="bg-white rounded-xl shadow-md border border-gray-200 p-6">
+                  <div className="mb-4">
+                    <div className="flex items-center gap-3 mb-3">
+                      <span className="w-8 h-8 bg-[#C5A572] rounded-full flex items-center justify-center text-white text-sm flex-shrink-0">Q6</span>
+                      <h3 className="font-bold text-[#5A4D41] text-lg">ホワイトニング後の注意点はありますか？</h3>
+                    </div>
+                  </div>
+                  <div className="text-[#8D8070] leading-relaxed">
+                    <p className="mb-3">
+                      <strong className="text-[#C5A572]">A.</strong> ホワイトニング後24〜48時間は、着色しやすい食べ物や飲み物（コーヒー、紅茶、赤ワイン、カレーなど）を避けることをおすすめします。
+                    </p>
+                    <p className="text-sm bg-[#E8F2ED] p-4 rounded-lg">
+                      また、喫煙も控えてください。この期間は歯が着色物質を吸収しやすい状態です。
                     </p>
                   </div>
                 </div>
@@ -798,7 +617,7 @@ export default function WhiteningPage() {
         </section>
 
         {/* Topic Cluster Section */}
-        <section className="py-16 md:py-20 bg-[#FDFBF7]">
+        <section className="py-2 md:py-2 bg-[#FDFBF7]">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-[#5A4D41] font-serif">
@@ -958,7 +777,7 @@ export default function WhiteningPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-24 bg-[#5A4D41] text-white">
+        <section className="py-2 bg-[#5A4D41] text-white">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-8 font-serif">
               白く美しい歯で、<br className="md:hidden" />自信あふれる笑顔を手に入れませんか？
@@ -993,8 +812,11 @@ export default function WhiteningPage() {
             </div>
           </div>
         </section>
-
-      </main>
+                {/* 監修者情報 */}
+                <div className="container mx-auto px-4 pt-2 pb-16">
+                    <AuthorBio />
+                </div>
+            </main>
       <Footer />
     </>
   );

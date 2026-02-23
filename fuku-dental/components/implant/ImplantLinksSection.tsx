@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { ChevronRight } from 'lucide-react';
+import { PageImage } from '@/components/PageImage';
 
 const links = [
   {
@@ -34,8 +35,9 @@ export function ImplantLinksSection() {
       <div className="md:hidden" style={{ fontFamily: 'YuGothic, "Yu Gothic", sans-serif' }}>
         {/* 上部画像 */}
         <div className="w-full h-[253.23px]">
-          <img
-            src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&q=80&w=800"
+          <PageImage
+            path="/implant"
+            imageId="links-banner"
             alt="インプラント3D画像"
             className="w-full h-full object-cover"
           />
@@ -69,8 +71,9 @@ export function ImplantLinksSection() {
         <div className="max-w-5xl mx-auto">
           {/* 上部画像 */}
           <div className="mb-8 rounded-xl overflow-hidden">
-            <img
-              src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&q=80&w=1200"
+            <PageImage
+              path="/implant"
+              imageId="links-banner"
               alt="インプラント3D画像"
               className="w-full h-[400px] object-cover"
             />

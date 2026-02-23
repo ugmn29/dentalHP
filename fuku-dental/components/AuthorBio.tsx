@@ -1,4 +1,5 @@
 import React from 'react';
+import { PageImage } from '@/components/PageImage';
 
 interface AuthorBioProps {
   showLastUpdated?: boolean;
@@ -25,8 +26,9 @@ export function AuthorBio({ showLastUpdated = true, lastUpdated }: AuthorBioProp
         {/* プロフィール画像 */}
         <div className="flex-shrink-0">
           <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-[#395b45] shadow-lg bg-gradient-to-br from-[#c8ddd0] to-[#e8f2ed]">
-            <img
-              src="https://placehold.co/200x200/e8f2ed/2d4835?text=Doctor"
+            <PageImage
+              path="/shared"
+              imageId="director-photo"
               alt="院長 プロフィール写真"
               className="w-full h-full object-cover"
             />

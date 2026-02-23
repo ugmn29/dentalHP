@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     description: '失った歯の本数や部位によって最適なインプラント治療法は異なります。1本欠損から全歯欠損まで、それぞれのケースに応じた治療方法を詳しく解説します。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/implant/number-position',
+    url: 'https://fshika.com/implant/number-position',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

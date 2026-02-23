@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     description: '豊洲のF歯科で子供の歯磨き指導。年齢に合わせたブラッシング方法、仕上げ磨きのコツ、歯ブラシの選び方を歯科衛生士がやさしく指導します。正しい歯磨き習慣で虫歯ゼロを目指しましょう。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/kids-preventive/brushing',
+    url: 'https://fshika.com/kids-preventive/brushing',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

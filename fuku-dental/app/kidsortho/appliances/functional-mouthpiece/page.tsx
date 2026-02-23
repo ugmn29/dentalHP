@@ -17,7 +17,7 @@ export const metadata: Metadata = {
         description: '機能的マウスピース装置（プレオルソ・マイオブレース・T4K・EFライン）の違いを徹底比較。費用・効果・適応症例の違いをわかりやすく解説します。',
         type: 'website',
         locale: 'ja_JP',
-        url: 'https://fuku-dental.jp/kidsortho/appliances/functional-mouthpiece',
+        url: 'https://fshika.com/kidsortho/appliances/functional-mouthpiece',
         siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
     },
 };

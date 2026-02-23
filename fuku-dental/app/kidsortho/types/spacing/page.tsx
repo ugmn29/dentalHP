@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     description: '空隙歯列（歯と歯の間に隙間がある状態）の特徴、原因、治療法について詳しく解説。見た目や機能に影響する不正咬合です。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/kidsortho/types/spacing',
+    url: 'https://fshika.com/kidsortho/types/spacing',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     description: 'ホワイトニングの効果持続期間を解説。オフィス・ホーム・デュアルの持続期間と、白さを長持ちさせるための具体的な方法を徹底解説します。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/whitening/duration',
+    url: 'https://fshika.com/whitening/duration',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

@@ -78,11 +78,73 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: '/kidsortho/appliances', priority: 0.8, changeFrequency: 'monthly' as const },
     { url: '/kidsortho/appliances/expander', priority: 0.7, changeFrequency: 'monthly' as const },
 
-    // その他の診療
-    { url: '/cavity', priority: 0.7, changeFrequency: 'weekly' as const },
-    { url: '/general/bad-breath', priority: 0.7, changeFrequency: 'weekly' as const },
+    // むし歯治療
+    { url: '/cavity', priority: 0.8, changeFrequency: 'weekly' as const },
+    { url: '/cavity/cost', priority: 0.7, changeFrequency: 'monthly' as const },
+    { url: '/cavity/pain', priority: 0.7, changeFrequency: 'monthly' as const },
+    { url: '/cavity/treatment-methods', priority: 0.7, changeFrequency: 'monthly' as const },
+
+    // 予防歯科
+    { url: '/preventive', priority: 0.8, changeFrequency: 'weekly' as const },
+    { url: '/preventive/checkup', priority: 0.7, changeFrequency: 'monthly' as const },
+    { url: '/preventive/cleaning', priority: 0.7, changeFrequency: 'monthly' as const },
+
+    // マウスピース矯正
+    { url: '/mouthpiece', priority: 0.8, changeFrequency: 'weekly' as const },
+
+    // 口腔教育・口育
+    { url: '/oral-education', priority: 0.7, changeFrequency: 'weekly' as const },
+    { url: '/oral-education/bad-alignment', priority: 0.6, changeFrequency: 'monthly' as const },
+    { url: '/oral-education/mouth-breathing', priority: 0.6, changeFrequency: 'monthly' as const },
+    { url: '/oral-education/open-mouth', priority: 0.6, changeFrequency: 'monthly' as const },
+
+    // こども予防歯科
+    { url: '/kids-preventive', priority: 0.8, changeFrequency: 'weekly' as const },
+    { url: '/kids-preventive/overcoming-fear', priority: 0.7, changeFrequency: 'monthly' as const },
+
+    // インプラント追加ページ
+    { url: '/implant/about', priority: 0.7, changeFrequency: 'monthly' as const },
+    { url: '/implant/bone-augmentation', priority: 0.7, changeFrequency: 'monthly' as const },
+    { url: '/implant/gallery', priority: 0.7, changeFrequency: 'weekly' as const },
+    { url: '/implant/immediate-placement', priority: 0.7, changeFrequency: 'monthly' as const },
+    { url: '/implant/iv-sedation', priority: 0.7, changeFrequency: 'monthly' as const },
+    { url: '/implant/maintenance', priority: 0.7, changeFrequency: 'monthly' as const },
+    { url: '/implant/merit-demerit', priority: 0.7, changeFrequency: 'monthly' as const },
+    { url: '/implant/number-position', priority: 0.7, changeFrequency: 'monthly' as const },
+    { url: '/implant/overdenture', priority: 0.7, changeFrequency: 'monthly' as const },
+
+    // こども矯正追加ページ
+    { url: '/kidsortho/appliances/chin-cap', priority: 0.6, changeFrequency: 'monthly' as const },
+    { url: '/kidsortho/appliances/functional', priority: 0.6, changeFrequency: 'monthly' as const },
+    { url: '/kidsortho/appliances/functional-mouthpiece', priority: 0.6, changeFrequency: 'monthly' as const },
+    { url: '/kidsortho/avoid-regret', priority: 0.6, changeFrequency: 'monthly' as const },
+    { url: '/kidsortho/food-education', priority: 0.6, changeFrequency: 'monthly' as const },
+    { url: '/kidsortho/gum-training', priority: 0.6, changeFrequency: 'monthly' as const },
+    { url: '/kidsortho/mft-training', priority: 0.6, changeFrequency: 'monthly' as const },
+    { url: '/kidsortho/mouth-breathing-risks', priority: 0.6, changeFrequency: 'monthly' as const },
+    { url: '/kidsortho/pain-management', priority: 0.6, changeFrequency: 'monthly' as const },
+    { url: '/kidsortho/posture-improvement', priority: 0.6, changeFrequency: 'monthly' as const },
+    { url: '/kidsortho/sports-and-music', priority: 0.6, changeFrequency: 'monthly' as const },
+    { url: '/kidsortho/underbite-natural-cure', priority: 0.6, changeFrequency: 'monthly' as const },
+
+    // 外科・口腔外科
     { url: '/surgery/wisdom-tooth', priority: 0.7, changeFrequency: 'weekly' as const },
     { url: '/surgery/tmj', priority: 0.7, changeFrequency: 'weekly' as const },
+    { url: '/wisdom', priority: 0.7, changeFrequency: 'weekly' as const },
+
+    // 口腔外科・お悩み
+    { url: '/concerns/oral-surgery', priority: 0.7, changeFrequency: 'weekly' as const },
+    { url: '/concerns/trauma', priority: 0.7, changeFrequency: 'weekly' as const },
+
+    // 口臭・その他
+    { url: '/general/bad-breath', priority: 0.7, changeFrequency: 'weekly' as const },
+
+    // 院内・施設
+    { url: '/facilities', priority: 0.7, changeFrequency: 'monthly' as const },
+
+    // 案内ページ
+    { url: '/price', priority: 0.7, changeFrequency: 'monthly' as const },
+    { url: '/privacy', priority: 0.4, changeFrequency: 'yearly' as const },
   ];
 
   return pages.map((page) => ({

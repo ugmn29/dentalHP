@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     description: '虫歯治療にかかる費用を詳しく解説。保険適用の治療費、自費診療の料金、医療費控除について。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/cavity/cost',
+    url: 'https://fshika.com/cavity/cost',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

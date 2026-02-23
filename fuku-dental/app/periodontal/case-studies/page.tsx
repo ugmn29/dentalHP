@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     description: '豊洲の歯医者 F歯科・矯正歯科が歯周病治療の症例を詳しくご紹介。軽度から重度まで、実際の治療例と患者様の声を掲載しています。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/periodontal/case-studies',
+    url: 'https://fshika.com/periodontal/case-studies',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

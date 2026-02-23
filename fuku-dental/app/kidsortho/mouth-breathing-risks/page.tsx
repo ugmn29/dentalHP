@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     description: '口呼吸が原因で起こる8つの病気リスク。アデノイド顔貌、睡眠時無呼吸症候群、集中力低下など、今すぐ対策が必要な理由を詳しく解説します。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/kidsortho/mouth-breathing-risks',
+    url: 'https://fshika.com/kidsortho/mouth-breathing-risks',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

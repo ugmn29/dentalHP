@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     description: 'インプラント治療の流れを8ステップで解説。無料カウンセリングから精密検査、手術、人工歯装着、メンテナンスまでご紹介。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/implant/flow',
+    url: 'https://fshika.com/implant/flow',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

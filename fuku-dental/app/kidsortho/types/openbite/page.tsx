@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     description: '開咬（オープンバイト）の特徴、原因、治療法について詳しく解説。前歯が噛み合わない状態で、習癖改善と早期治療が重要です。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/kidsortho/types/openbite',
+    url: 'https://fshika.com/kidsortho/types/openbite',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

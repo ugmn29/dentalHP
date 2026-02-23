@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     description: '豊洲のF歯科の詳細症例集。各治療の診断・治療計画・経過・結果を詳しくご紹介。患者様一人ひとりに合わせた治療アプローチと実際の治療結果をご覧いただけます。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/case-studies',
+    url: 'https://fshika.com/case-studies',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

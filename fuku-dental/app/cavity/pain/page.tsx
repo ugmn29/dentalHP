@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     description: '虫歯の痛みが出たときの応急処置と対処法を詳しく解説。痛み止めの正しい使い方、冷やし方、緊急時の受診目安について。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/cavity/pain',
+    url: 'https://fshika.com/cavity/pain',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

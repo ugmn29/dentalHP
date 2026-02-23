@@ -8,6 +8,7 @@ export default function ImplantPage() {
         <TreatmentLayout
             title="インプラント"
             titleEn="Implant"
+            pagePath="/_implant"
             lead={
                 <>
                     「入れ歯が合わなくて痛い」「ブリッジにするために健康な歯を削りたくない」<br />
@@ -37,7 +38,7 @@ export default function ImplantPage() {
                         "<span class='text-[#395b45] font-bold'>専用ソフトによるシミュレーションで最適な埋入位置を決定</span>",
                         "<span class='text-[#395b45] font-bold'>リスクを最小限に抑えた安全な手術計画の立案</span>"
                     ],
-                    image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=800",
+                    imageId: "feature1",
                     imageAlt: "歯科用CTによる診断の様子"
                 },
                 {
@@ -50,7 +51,7 @@ export default function ImplantPage() {
                         "<span class='text-[#395b45] font-bold'>眠っているような状態で手術を受けられる「静脈内鎮静法」に対応</span>",
                         "<span class='text-[#395b45] font-bold'>術後の腫れや痛みを抑える低侵襲な手術手技</span>"
                     ],
-                    image: "https://images.unsplash.com/photo-1584515933487-9bdb0936e81e?auto=format&fit=crop&q=80&w=800",
+                    imageId: "feature2",
                     imageAlt: "リラックスした状態での治療"
                 },
                 {
@@ -63,7 +64,7 @@ export default function ImplantPage() {
                         "<span class='text-[#395b45] font-bold'>長期的な安定性と安全性が科学的に証明された製品のみを使用</span>",
                         "<span class='text-[#395b45] font-bold'>患者様の骨質や症例に合わせた最適なインプラントの選定</span>"
                     ],
-                    image: "https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?auto=format&fit=crop&q=80&w=800",
+                    imageId: "feature3",
                     imageAlt: "高品質なインプラント体"
                 },
                 {
@@ -76,7 +77,7 @@ export default function ImplantPage() {
                         "<span class='text-[#395b45] font-bold'>専任の歯科衛生士による定期的なメンテナンス</span>",
                         "<span class='text-[#395b45] font-bold'>インプラント周囲炎を防ぐための徹底したクリーニング</span>"
                     ],
-                    image: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=800",
+                    imageId: "feature4",
                     imageAlt: "定期メンテナンスの様子"
                 }
             ]}

@@ -17,7 +17,7 @@ export const metadata: Metadata = {
         description: '機能的矯正装置（バイオネーター・FKO・アクチバトール）で顎のバランスを整える小児矯正治療を徹底解説。受け口・出っ歯の改善効果、費用、治療期間をわかりやすく説明します。',
         type: 'website',
         locale: 'ja_JP',
-        url: 'https://fuku-dental.jp/kidsortho/appliances/functional',
+        url: 'https://fshika.com/kidsortho/appliances/functional',
         siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
     },
 };

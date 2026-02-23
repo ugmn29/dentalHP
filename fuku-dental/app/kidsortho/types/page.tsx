@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     description: '子供の不正咬合の種類を解説。出っ歯・受け口・すきっ歯など各タイプの特徴と治療法をご紹介。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/kidsortho/types',
+    url: 'https://fshika.com/kidsortho/types',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

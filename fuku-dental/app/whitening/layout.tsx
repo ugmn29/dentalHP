@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     description: '豊洲駅徒歩2分のF歯科でホワイトニング。オフィスホワイトニング・ホームホワイトニング・デュアルホワイトニングに対応。安全な薬剤で自然な白さを実現。結婚式やイベント前にもおすすめです。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/whitening',
+    url: 'https://fshika.com/whitening',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

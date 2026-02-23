@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     description: '豊洲駅徒歩2分のF歯科で虫歯治療。痛みの少ないレーザー治療やマイクロスコープを活用した精密治療で、できるだけ歯を残す治療を行います。保険診療から審美的な自費治療まで対応。まずはお気軽にご相談ください。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/cavity',
+    url: 'https://fshika.com/cavity',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

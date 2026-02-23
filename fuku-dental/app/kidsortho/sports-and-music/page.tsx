@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     description: '歯並びが悪いと、運動能力・呼吸効率・楽器の演奏に影響します。矯正治療でパフォーマンスが向上する理由を詳しく解説します。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/kidsortho/sports-and-music',
+    url: 'https://fshika.com/kidsortho/sports-and-music',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 }

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     description: '豊洲のF歯科のインプラント治療症例ギャラリー。実際の治療結果をご覧いただけます。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/implant/gallery',
+    url: 'https://fshika.com/implant/gallery',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

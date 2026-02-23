@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     description: 'インプラント治療の基本的な仕組みと構造を解説。インプラント体・アバットメント・上部構造の役割と、天然歯に近い機能を実現できる理由をご説明します。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/implant/about',
+    url: 'https://fshika.com/implant/about',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

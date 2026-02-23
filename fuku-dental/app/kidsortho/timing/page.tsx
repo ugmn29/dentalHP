@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     description: '小児矯正を始めるベストなタイミングを解説。何歳から始めるべきか、早期治療のメリットをご紹介。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/kidsortho/timing',
+    url: 'https://fshika.com/kidsortho/timing',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

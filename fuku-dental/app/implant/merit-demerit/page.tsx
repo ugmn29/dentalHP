@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     description: 'インプラント治療のメリット・デメリットを詳しく解説。噛み心地、周囲の歯を守れるなどのメリットと、手術・費用・治療期間などのデメリットを正直にお伝えします。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/implant/merit-demerit',
+    url: 'https://fshika.com/implant/merit-demerit',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

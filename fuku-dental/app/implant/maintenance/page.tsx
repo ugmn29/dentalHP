@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     description: 'インプラントを長持ちさせるための定期メンテナンス。インプラント周囲炎の予防、セルフケア、定期検診の内容を詳しく解説。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/implant/maintenance',
+    url: 'https://fshika.com/implant/maintenance',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

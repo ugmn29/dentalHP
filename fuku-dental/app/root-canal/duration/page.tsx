@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     description: '豊洲の歯医者 F歯科が根管治療にかかる期間と通院回数を詳しく解説。初回治療・再根管治療・歯根端切除術それぞれの治療期間をご紹介。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/root-canal/duration',
+    url: 'https://fshika.com/root-canal/duration',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

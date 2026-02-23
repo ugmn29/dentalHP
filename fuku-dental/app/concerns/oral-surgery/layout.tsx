@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     description: '豊洲駅徒歩2分のF歯科で口腔外科治療。親知らずの抜歯・顎関節症・口内のできもの・外傷など幅広く対応。歯科用CTによる精密診断で安全な治療を提供します。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/concerns/oral-surgery',
+    url: 'https://fshika.com/concerns/oral-surgery',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

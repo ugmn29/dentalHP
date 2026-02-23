@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
+import { PageImage } from '@/components/PageImage';
 
 const treatmentMethods = [
   {
@@ -13,7 +14,7 @@ const treatmentMethods = [
       '歯を抜いたその日にインプラントを埋め込む方法です。治療期間を短縮でき、抜歯後の骨吸収も抑えやすくなります。',
       '周囲の歯や歯茎に負担をかけず、自然な見た目と噛み心地を保ちながら治療できます。',
     ],
-    image: 'https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&q=80&w=600', // 歯科治療のイメージ
+    imageId: 'treatment-method1',
     href: '/implant/immediate-placement',
   },
   {
@@ -24,7 +25,7 @@ const treatmentMethods = [
       '骨が不足している場合に、骨を増やしてインプラントを埋入できるようにする治療法です。',
       'サイナスリフトやGBR法など様々な方法があり、骨量が少ない方でもインプラント治療が可能になります。',
     ],
-    image: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=600', // 骨再生のイメージ
+    imageId: 'treatment-method2',
     href: '/implant/bone-augmentation',
   },
   {
@@ -35,7 +36,7 @@ const treatmentMethods = [
       'インプラントで入れ歯を固定する方法です。通常の入れ歯よりも安定性が高く、しっかりと噛めるようになります。',
       '取り外しも可能なので、お手入れも簡単です。',
     ],
-    image: 'https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&q=80&w=600', // 義歯のイメージ
+    imageId: 'treatment-method3',
     href: '/implant/overdenture',
   },
 ];
@@ -75,8 +76,9 @@ export function TreatmentMethodsSection() {
                   <div className="bg-white rounded-[20px] overflow-hidden shadow-[0px_0px_30px_0px_rgba(0,0,0,0.2)]">
                     {/* 画像 */}
                     <div className="relative h-[167.53px]">
-                      <img
-                        src={method.image}
+                      <PageImage
+                        path="/implant"
+                        imageId={method.imageId}
                         alt={method.title}
                         className="w-full h-full object-cover"
                       />
@@ -259,8 +261,9 @@ export function TreatmentMethodsSection() {
             {treatmentMethods.map((method, index) => (
               <div key={index} className="bg-white rounded-xl overflow-hidden shadow-lg">
                 <div className="relative h-[200px]">
-                  <img
-                    src={method.image}
+                  <PageImage
+                    path="/implant"
+                    imageId={method.imageId}
                     alt={method.title}
                     className="w-full h-full object-cover"
                   />

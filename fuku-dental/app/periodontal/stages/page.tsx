@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     description: '歯周病の進行段階を詳しく解説。歯肉炎から重度歯周炎までの症状、各段階での治療法、セルフチェック方法をご紹介します。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/periodontal/stages',
+    url: 'https://fshika.com/periodontal/stages',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

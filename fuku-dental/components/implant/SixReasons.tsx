@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
+import { PageImage } from '@/components/PageImage';
 
 interface ReasonItem {
   title: string;
@@ -10,7 +11,7 @@ interface ReasonItem {
   verticalTitleSmall?: string; // 上部の小さいテキスト
   isGoldColor?: boolean; // 上部テキストをゴールド色にするか
   description: string[];
-  image: string;
+  imageId: string;
   href: string;
   verticalBandHeight?: string; // 縦書きタイトルの白い帯の高さ（カードごとに異なる）
   verticalTitleSize?: string; // 縦書きタイトルのカスタムサイズ
@@ -27,7 +28,7 @@ const reasons: ReasonItem[] = [
     description: [
       '当院の院長は、これまでに500症例以上のインプラント治療に携わってきた経験をもとに、あらゆる症例にも的確に対応しております。骨量が少ない方や難症例にも、精密な診断とシミュレーションを行い、安全で確実な治療を実現。経験に裏づけられた確かな技術で、長期的に安定した結果を目指しています。',
     ],
-    image: 'https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&q=80&w=900',
+    imageId: 'reason1',
     href: '/implant/reason',
   },
   {
@@ -40,7 +41,7 @@ const reasons: ReasonItem[] = [
     description: [
       '当院では、顔全体を鮮明に撮影できる高精度な低線量CTを導入しています。上顎洞の詳細な状態や自然孔の位置まで正確に把握できるため、サイナスリフト（上顎洞底挙上術）などの高度な治療においても、より安全で確実な施術が可能です。このような先進的な設備を導入している歯科医院でのインプラント治療をお勧めします。',
     ],
-    image: 'https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?auto=format&fit=crop&q=80&w=700',
+    imageId: 'reason2',
     href: '/implant/safety',
   },
   {
@@ -53,7 +54,7 @@ const reasons: ReasonItem[] = [
     description: [
       '当院では、世界で最も信頼されているストローマンインプラントを採用しています。ストローマンは世界シェアNo.1の最もメジャーなインプラントメーカーであり、国内外のほとんどの歯科医院で採用されています。そのため、引っ越しや転勤などで当院に通えなくなった場合でも、転居先の歯科医院で継続的なメンテナンスやトラブル対応が可能です。生涯にわたって安心してご使用いただけます。',
     ],
-    image: 'https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=700',
+    imageId: 'reason3',
     href: '/implant/safety',
   },
   {
@@ -65,7 +66,7 @@ const reasons: ReasonItem[] = [
     description: [
       '当院では、これまでの豊富な全顎的な治療経験により、矯正治療をはじめとする様々な治療と同時にインプラント治療を提案することができます。複数の歯科医院を転々とする必要がなく、すべての治療を一つの医院で完結できるため、患者様の負担を大幅に軽減。治療計画も一貫して管理できるため、より効率的で質の高い治療を実現できます。',
     ],
-    image: 'https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&q=80&w=400',
+    imageId: 'reason4',
     href: '/implant/safety',
   },
   {
@@ -77,7 +78,7 @@ const reasons: ReasonItem[] = [
     description: [
       '当院の院長はガイデント認定医です。ガイデントは、インプラント治療の品質と安全性を保証する第三者認証機関であり、厳しい基準をクリアした歯科医院のみが認定されます。この保証制度の大きな特徴は、万が一引っ越しや転勤などで当院に通えなくなった場合でも、全国のガイデント認定医院で保証が引き続き有効となる点です。どこに行っても安心して長期的にインプラントをお使いいただけます。',
     ],
-    image: 'https://images.unsplash.com/photo-1588776814546-daab30f310ce?auto=format&fit=crop&q=80&w=400',
+    imageId: 'reason5',
     href: '/implant/safety',
   },
   {
@@ -89,7 +90,7 @@ const reasons: ReasonItem[] = [
     description: [
       '当院には麻酔専門医が在籍しているため、静脈内鎮静法を用いたインプラント手術を行うことができます。静脈内鎮静法は、点滴から鎮静剤を投与することで、うとうとした状態で治療を受けられる方法です。痛みや恐怖心を感じることなく、リラックスした状態で手術を受けていただけるため、歯科治療に不安を感じる方にも安心して治療を受けていただけます。',
     ],
-    image: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=400',
+    imageId: 'reason6',
     href: '/implant/safety',
   },
 ];
@@ -185,8 +186,9 @@ function DesktopReasonCard({ reason, index }: { reason: ReasonItem; index: numbe
       {/* 画像とタイトルコンテナ */}
       <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-lg">
         {/* 背景画像 */}
-        <img
-          src={reason.image}
+        <PageImage
+          path="/implant"
+          imageId={reason.imageId}
           alt={reason.title}
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -277,9 +279,10 @@ function ReasonCard({ reason, index }: { reason: ReasonItem; index: number }) {
       <div className="flex flex-col items-center pl-[20px] pt-[32px] relative shrink-0 w-full">
         <div className="h-[231.69px] relative shrink-0 w-[350px]">
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            <img
+            <PageImage
+              path="/implant"
+              imageId={reason.imageId}
               alt=""
-              src={reason.image}
               className="absolute h-[99.99%] left-0 max-w-none top-[0.01%] w-full object-cover"
             />
           </div>

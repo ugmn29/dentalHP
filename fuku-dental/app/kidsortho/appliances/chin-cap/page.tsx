@@ -17,7 +17,7 @@ export const metadata: Metadata = {
         description: 'チンキャップで骨格性の受け口を早期改善。下顎の成長抑制による根本的治療の効果、費用相場、装着時間、外科手術回避の可能性をわかりやすく解説します。',
         type: 'website',
         locale: 'ja_JP',
-        url: 'https://fuku-dental.jp/kidsortho/appliances/chin-cap',
+        url: 'https://fshika.com/kidsortho/appliances/chin-cap',
         siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
     },
 };

@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
+import { PageImage } from '@/components/PageImage';
 
 export function DirectorMessageSection() {
   return (
@@ -12,8 +13,9 @@ export function DirectorMessageSection() {
         <div className="relative h-[950px]">
           {/* 背景画像 */}
           <div className="absolute inset-0">
-            <img
-              src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&q=80&w=800"
+            <PageImage
+              path="/implant"
+              imageId="bg-director"
               alt="インプラント治療"
               className="w-full h-full object-cover"
             />
@@ -70,8 +72,9 @@ export function DirectorMessageSection() {
         <div className="relative py-20 overflow-hidden">
           {/* 背景画像 */}
           <div className="absolute inset-0">
-            <img
-              src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&q=80&w=1600"
+            <PageImage
+              path="/implant"
+              imageId="bg-director"
               alt="インプラント治療"
               className="w-full h-full object-cover"
             />

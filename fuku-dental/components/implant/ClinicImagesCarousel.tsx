@@ -1,22 +1,23 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import { PageImage } from '@/components/PageImage';
 
 const clinicImages = [
   {
-    url: 'https://images.unsplash.com/photo-1629909615184-74f495363b67?auto=format&fit=crop&q=80&w=600',
+    imageId: 'clinic1',
     alt: 'F歯科・矯正歯科 豊洲プライムスクエア院 診療室の内観', // 医院の実写真に差し替え予定
   },
   {
-    url: 'https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=600',
+    imageId: 'clinic2',
     alt: 'F歯科・矯正歯科 豊洲プライムスクエア院 CT機器の外観', // 医院の実写真に差し替え予定
   },
   {
-    url: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=600',
+    imageId: 'clinic3',
     alt: 'F歯科・矯正歯科 豊洲プライムスクエア院 滅菌室・衛生管理設備', // 医院の実写真に差し替え予定
   },
   {
-    url: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=600',
+    imageId: 'clinic4',
     alt: 'F歯科・矯正歯科 豊洲プライムスクエア院 オペ室の内観', // 医院の実写真に差し替え予定
   },
 ];
@@ -53,8 +54,9 @@ export function ClinicImagesCarousel() {
                     index === 1 ? 'mt-[20px]' : ''
                   }`}
                 >
-                  <img
-                    src={image.url}
+                  <PageImage
+                    path="/implant"
+                    imageId={image.imageId}
                     alt={image.alt}
                     className="w-full h-full object-cover"
                   />
@@ -72,8 +74,9 @@ export function ClinicImagesCarousel() {
                     index === 1 ? 'mt-[20px]' : ''
                   }`}
                 >
-                  <img
-                    src={image.url}
+                  <PageImage
+                    path="/implant"
+                    imageId={image.imageId}
                     alt={image.alt}
                     className="w-full h-full object-cover"
                   />
@@ -93,8 +96,9 @@ export function ClinicImagesCarousel() {
                 key={index}
                 className="aspect-[4/3] overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-shadow"
               >
-                <img
-                  src={image.url}
+                <PageImage
+                  path="/implant"
+                  imageId={image.imageId}
                   alt={image.alt}
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 />

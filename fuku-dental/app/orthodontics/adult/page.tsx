@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     description: '豊洲の歯医者 F歯科の大人の矯正治療。40代・50代から始める方も増加中。目立たないマウスピース矯正や裏側矯正で美しい歯並びに。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/orthodontics/adult',
+    url: 'https://fshika.com/orthodontics/adult',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

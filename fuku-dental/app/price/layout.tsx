@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     description: '豊洲のF歯科の料金表・治療費一覧。保険診療・自費診療それぞれの費用目安を明確に掲載。矯正・インプラント・セラミック・ホワイトニングなど各治療の料金をご確認いただけます。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/price',
+    url: 'https://fshika.com/price',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

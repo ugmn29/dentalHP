@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     description: 'セラミック治療の費用について詳しく解説。インレー、クラウン、ベニアの料金相場と当院の価格をご紹介。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/ceramic/cost',
+    url: 'https://fshika.com/ceramic/cost',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

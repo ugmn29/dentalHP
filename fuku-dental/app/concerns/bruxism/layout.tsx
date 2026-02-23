@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     description: '歯ぎしり・食いしばりでお悩みの方へ。豊洲のF歯科で原因の特定とナイトガード（マウスピース）・ボトックス治療等で改善。歯の摩耗・顎の痛み・頭痛の緩和に対応します。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/concerns/bruxism',
+    url: 'https://fshika.com/concerns/bruxism',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

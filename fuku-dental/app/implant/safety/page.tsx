@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     description: 'CT精密診断、サージカルガイド、ストローマンインプラント、徹底した感染対策、静脈内鎮静法など、安心・安全な治療体制をご紹介。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/implant/safety',
+    url: 'https://fshika.com/implant/safety',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

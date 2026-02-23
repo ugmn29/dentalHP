@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     description: 'セラミック治療の種類を解説。インレー、アンレー、クラウン、ベニアの特徴と適応症例を詳しくご紹介。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/ceramic/types',
+    url: 'https://fshika.com/ceramic/types',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

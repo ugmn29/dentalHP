@@ -17,7 +17,7 @@ export const metadata: Metadata = {
         description: '拡大床による小児矯正治療を徹底解説。顎を広げて永久歯のスペースを確保する拡大床の効果、費用、装着時間、メリット・デメリットをわかりやすく説明します。',
         type: 'website',
         locale: 'ja_JP',
-        url: 'https://fuku-dental.jp/kidsortho/appliances/expander',
+        url: 'https://fshika.com/kidsortho/appliances/expander',
         siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
     },
 };

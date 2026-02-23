@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     description: 'お子様の歯医者嫌い・歯科恐怖症を克服するためのF歯科の取り組み。Tell-Show-Do法やアニメーション、ご褒美など、お子様が笑顔で通える工夫をご紹介。豊洲駅徒歩2分。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/kids-preventive/overcoming-fear',
+    url: 'https://fshika.com/kids-preventive/overcoming-fear',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

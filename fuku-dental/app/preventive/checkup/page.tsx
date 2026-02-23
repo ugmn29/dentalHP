@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     description: '定期検診で虫歯や歯周病を早期発見・早期治療。痛みが出る前に対処し、治療も最小限に。80歳まで自分の歯を残すために定期検診が重要です。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/preventive/checkup',
+    url: 'https://fshika.com/preventive/checkup',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

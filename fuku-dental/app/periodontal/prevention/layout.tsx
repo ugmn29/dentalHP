@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     description: '歯周病の予防とメンテナンスについて解説。定期検診・PMTC・セルフケアで再発を防ぎます。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/periodontal/prevention',
+    url: 'https://fshika.com/periodontal/prevention',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

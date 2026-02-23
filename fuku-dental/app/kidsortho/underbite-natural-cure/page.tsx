@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     description: '「放置して治った」はレアケース。自然治癒率14%のエビデンスと、3歳から始める早期治療（ムーシールド・プレオルソ）を詳しく解説します。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/kidsortho/underbite-natural-cure',
+    url: 'https://fshika.com/kidsortho/underbite-natural-cure',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

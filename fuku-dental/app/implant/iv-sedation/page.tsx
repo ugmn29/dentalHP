@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     description: '静脈内鎮静法は点滴から鎮静剤を投与しリラックスした状態で手術を受けられる方法。麻酔専門医が管理し安全性が高く、痛みや不安を最小限に。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/implant/iv-sedation',
+    url: 'https://fshika.com/implant/iv-sedation',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

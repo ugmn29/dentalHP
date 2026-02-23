@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
+import { PageImage } from '@/components/PageImage';
 import {
   ToothPainIcon,
   WorriedFaceIcon,
@@ -102,8 +103,9 @@ export function ProblemGrid() {
     <section className="relative py-7 md:py-12 overflow-hidden">
       {/* 背景画像 */}
       <div className="absolute inset-0">
-        <img
-          src="https://images.unsplash.com/photo-1629909615184-74f495363b67?auto=format&fit=crop&q=80&w=1600"
+        <PageImage
+          path="/implant"
+          imageId="bg-problems"
           alt=""
           className="absolute inset-0 w-full h-full object-cover"
         />

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     description: '歯をぶつけた・折れた・抜けた等の歯の外傷に対応。豊洲のF歯科では、お子様の転倒やスポーツ中のけがによる歯の外傷を迅速に治療します。応急処置の方法もご紹介。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/concerns/trauma',
+    url: 'https://fshika.com/concerns/trauma',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

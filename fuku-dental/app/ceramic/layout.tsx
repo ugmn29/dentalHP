@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     description: '豊洲駅徒歩2分のF歯科で審美歯科・セラミック治療。銀歯を白いセラミックに交換、オールセラミッククラウン・ジルコニア・e-maxなど豊富な素材から最適な治療をご提案。自然で美しい仕上がりを実現します。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/ceramic',
+    url: 'https://fshika.com/ceramic',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

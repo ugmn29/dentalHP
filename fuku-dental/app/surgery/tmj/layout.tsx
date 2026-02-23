@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     description: '豊洲のF歯科で顎関節症の専門治療。精密検査で原因を特定し、スプリント療法・理学療法・噛み合わせ治療で根本から改善。顎の痛み・開口障害・関節音でお悩みの方はご相談ください。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/surgery/tmj',
+    url: 'https://fshika.com/surgery/tmj',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

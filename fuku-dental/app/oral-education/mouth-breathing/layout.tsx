@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     description: '口呼吸が歯並び・顔の成長に与える影響を歯科医師が解説。口呼吸の原因、見分け方、鼻呼吸に改善するためのトレーニング法、矯正治療との関係についてわかりやすくご紹介します。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/oral-education/mouth-breathing',
+    url: 'https://fshika.com/oral-education/mouth-breathing',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

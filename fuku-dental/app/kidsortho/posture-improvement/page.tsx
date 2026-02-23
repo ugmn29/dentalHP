@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     description: '猫背やストレートネックが歯並びを悪化させるメカニズムと、浮き指チェック法、家庭でできる姿勢改善トレーニングを詳しく解説します。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/kidsortho/posture-improvement',
+    url: 'https://fshika.com/kidsortho/posture-improvement',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 }

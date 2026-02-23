@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     description: '親知らずの生え方・症状・治療法を歯科医師が詳しく解説。抜くべきか残すべきか、痛みが出た時の対処法、抜歯の流れや費用について。豊洲のF歯科で安心の親知らず治療を。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/wisdom',
+    url: 'https://fshika.com/wisdom',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

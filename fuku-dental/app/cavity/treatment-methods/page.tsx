@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     description: '虫歯の進行度に応じた治療方法を詳しく解説。コンポジットレジン、インレー、クラウン、根管治療の特徴・メリット・費用について。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/cavity/treatment-methods',
+    url: 'https://fshika.com/cavity/treatment-methods',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

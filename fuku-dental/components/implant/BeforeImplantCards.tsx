@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import { PageImage } from '@/components/PageImage';
 
 export function BeforeImplantCards() {
   return (
@@ -15,11 +16,11 @@ export function BeforeImplantCards() {
         >
           {/* 背景画像 */}
           <div className="absolute inset-0">
-            <img
-              src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=800"
+            <PageImage
+              path="/implant"
+              imageId="before-extraction"
               alt="抜歯を勧められた方へ"
               className="w-full h-full object-cover"
-              style={{ objectPosition: 'center' }}
             />
             <div className="absolute inset-0 bg-[#248cc4]/40" />
           </div>
@@ -72,11 +73,11 @@ export function BeforeImplantCards() {
         >
           {/* 背景画像 */}
           <div className="absolute inset-0">
-            <img
-              src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&q=80&w=800"
+            <PageImage
+              path="/implant"
+              imageId="before-bone"
               alt="インプラントを断られた方へ"
               className="w-full h-full object-cover"
-              style={{ objectPosition: 'center' }}
             />
             <div className="absolute inset-0 bg-[#137d9e]/50" />
           </div>
@@ -132,8 +133,9 @@ export function BeforeImplantCards() {
             className="group relative block overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-shadow"
           >
             <div className="absolute inset-0">
-              <img
-                src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=800"
+              <PageImage
+                path="/implant"
+                imageId="before-extraction"
                 alt="抜歯を勧められた方へ"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
@@ -156,8 +158,9 @@ export function BeforeImplantCards() {
             className="group relative block overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-shadow"
           >
             <div className="absolute inset-0">
-              <img
-                src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&q=80&w=800"
+              <PageImage
+                path="/implant"
+                imageId="before-bone"
                 alt="インプラントを断られた方へ"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />

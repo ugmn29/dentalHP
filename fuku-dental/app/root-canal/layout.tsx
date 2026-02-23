@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     description: '豊洲駅徒歩2分のF歯科で根管治療。マイクロスコープを使用した精密な根管治療で、できるだけ歯を抜かずに残します。歯の激しい痛み・腫れでお悩みの方はご相談ください。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/root-canal',
+    url: 'https://fshika.com/root-canal',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

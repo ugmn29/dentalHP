@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     description: 'F歯科がお届けする歯と口腔の健康に関する豆知識・コラム。口呼吸のリスク、歯並びが悪くなる原因、お口ぽかんの対策など、日常生活で役立つ歯科情報をわかりやすく解説します。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/oral-education',
+    url: 'https://fshika.com/oral-education',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

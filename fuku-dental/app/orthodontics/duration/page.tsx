@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     description: '豊洲の歯医者 F歯科が矯正治療にかかる期間を詳しく解説。ワイヤー矯正2〜3年、マウスピース矯正1〜2年、部分矯正3ヶ月〜1年。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/orthodontics/duration',
+    url: 'https://fshika.com/orthodontics/duration',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 };

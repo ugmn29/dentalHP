@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     description: '硬い食べ物を前歯で噛みちぎる練習で、顎の発達を促進。スルメ・ナッツ・ニンジンスティックなど、家庭でできる食育レシピを紹介します。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://fuku-dental.jp/kidsortho/food-education',
+    url: 'https://fshika.com/kidsortho/food-education',
     siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
   },
 }
