@@ -563,28 +563,37 @@ const WisdomToothPage = () => {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                icon: "🔬",
+                imageId: "feature1",
                 title: "CTによる精密診断",
                 description: "<span class='font-bold bg-yellow-100'>3次元CT画像で神経や血管の位置をミリ単位で把握</span>。<span class='text-[#395b45] font-bold'>安全な抜歯計画を立て、リスクを最小化</span>します。"
               },
               {
-                icon: "💉",
+                imageId: "feature2",
                 title: "痛みへの配慮",
                 description: "<span class='font-bold bg-yellow-100'>表面麻酔、極細針の使用、麻酔液の温度管理</span>など、<span class='text-[#395b45] font-bold'>麻酔から痛みを軽減する工夫</span>を徹底しています。"
               },
               {
-                icon: "👨‍⚕️",
+                imageId: "feature3",
                 title: "経験豊富な医師による安全な抜歯",
                 description: "多くの抜歯経験を持つ医師が、<span class='text-[#395b45] font-bold'>丁寧かつ迅速に処置</span>。<span class='text-[#395b45] font-bold'>難症例にも対応できる技術と経験</span>があります。"
               }
             ].map((feature, index) => (
               <div
                 key={index}
-                className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 border-2 border-gray-100 hover:border-[#8B7355]"
+                className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 border-2 border-gray-100 hover:border-[#8B7355] overflow-hidden"
               >
-                <div className="text-5xl mb-4 text-center">{feature.icon}</div>
-                <h3 className="text-xl font-bold text-gray-800 mb-4 text-center" dangerouslySetInnerHTML={{ __html: feature.title }}></h3>
-                <p className="text-gray-700 leading-relaxed text-center" dangerouslySetInnerHTML={{ __html: feature.description }}></p>
+                <div className="aspect-[16/9]">
+                  <PageImage
+                    path="/wisdom"
+                    imageId={feature.imageId}
+                    alt={feature.title}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-gray-800 mb-3 text-center" dangerouslySetInnerHTML={{ __html: feature.title }}></h3>
+                  <p className="text-gray-700 leading-relaxed text-center" dangerouslySetInnerHTML={{ __html: feature.description }}></p>
+                </div>
               </div>
             ))}
           </div>

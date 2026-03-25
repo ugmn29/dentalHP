@@ -125,6 +125,20 @@ export default function Home() {
   const featureHighlights = [
     {
       id: "01",
+      title: "歯を「最大限残す」",
+      highlight: "保存治療",
+      summary: "できる限り削らない・抜かない治療",
+      details: [
+        "歯を細かく見れる<span class='font-bold bg-yellow-100'>拡大鏡</span>、より精密に治療できる<span class='font-bold bg-yellow-100'>マイクロスコープ</span>、精密診断を可能にする<span class='font-bold bg-yellow-100'>３Dスキャナー・CT</span>。これらの最新設備と診断力で、<span class='text-[#395b45] font-bold'>できる限り削らない・抜かない治療</span>を実現します。"
+      ],
+      imageId: "feature5",
+      imageAlt: "豊洲 歯科 保存治療 削らない治療",
+      icon: HeartPulse,
+      color: "from-red-100 to-rose-200",
+      iconColor: "text-rose-500"
+    },
+    {
+      id: "02",
       title: "すべて見せる、わかりやすい",
       highlight: "最新<span style='font-size: 0.8em;'>の</span>透明<span style='font-size: 0.8em;'>な</span>治療",
       summary: "<strong>豊洲の歯医者</strong>として、納得して治療を受けていただくために",
@@ -138,7 +152,7 @@ export default function Home() {
       iconColor: "text-blue-600"
     },
     {
-      id: "02",
+      id: "03",
       title: "「お顔」も育てる",
       highlight: "こども矯正",
       summary: "歯並びの教科書（冊子）",
@@ -152,7 +166,7 @@ export default function Home() {
       iconColor: "text-green-600"
     },
     {
-      id: "03",
+      id: "04",
       title: "天井テレビ付き",
       highlight: "個室の診療室",
       summary: "リラックスして治療を受けられる空間",
@@ -166,7 +180,7 @@ export default function Home() {
       iconColor: "text-orange-500"
     },
     {
-      id: "04",
+      id: "05",
       title: "「後悔しない」ための",
       highlight: "審美歯科",
       summary: "美しさと機能性を両立した治療",
@@ -178,20 +192,6 @@ export default function Home() {
       icon: Sparkles,
       color: "from-purple-100 to-pink-100",
       iconColor: "text-purple-500"
-    },
-    {
-      id: "05",
-      title: "歯を「最大限残す」",
-      highlight: "保存治療",
-      summary: "できる限り削らない・抜かない治療",
-      details: [
-        "歯を細かく見れる<span class='font-bold bg-yellow-100'>拡大鏡</span>、より精密に治療できる<span class='font-bold bg-yellow-100'>マイクロスコープ</span>、精密診断を可能にする<span class='font-bold bg-yellow-100'>３Dスキャナー・CT</span>。これらの最新設備と診断力で、<span class='text-[#395b45] font-bold'>できる限り削らない・抜かない治療</span>を実現します。"
-      ],
-      imageId: "feature5",
-      imageAlt: "豊洲 歯科 保存治療 削らない治療",
-      icon: HeartPulse,
-      color: "from-red-100 to-rose-200",
-      iconColor: "text-rose-500"
     },
   ];
 
@@ -600,22 +600,13 @@ export default function Home() {
                 >
                   {/* Image Side - Hidden on mobile, shown on desktop */}
                   <div className="hidden lg:block lg:w-1/2 relative">
-                    <div className={`relative rounded-[40px] overflow-hidden shadow-2xl transform group-hover:scale-[1.02] transition-transform duration-700 ease-out aspect-[16/9] bg-gradient-to-br ${feature.color} flex items-center justify-center`}>
-                      {/* Abstract Background Shapes */}
-                      <div className="absolute inset-0 opacity-30">
-                        <div className="absolute top-10 left-10 w-32 h-32 rounded-full bg-white blur-2xl"></div>
-                        <div className="absolute bottom-10 right-10 w-40 h-40 rounded-full bg-white blur-3xl"></div>
-                      </div>
-
-                      {/* Icon */}
-                      <div className={`relative z-10 p-8 bg-white/80 backdrop-blur-sm rounded-3xl shadow-lg border border-white/50 ${feature.iconColor}`}>
-                        <feature.icon size={80} strokeWidth={1.5} />
-                      </div>
-
-                      {/* Label Overlay (optional, maybe not needed if icon is clear) */}
-                      <div className="absolute bottom-4 right-6 bg-white/90 backdrop-blur px-4 py-2 rounded-full shadow-sm">
-                        <span className={`text-sm font-bold ${feature.iconColor}`}>F歯科・矯正歯科</span>
-                      </div>
+                    <div className="relative rounded-[40px] overflow-hidden shadow-2xl transform group-hover:scale-[1.02] transition-transform duration-700 ease-out aspect-[16/9]">
+                      <PageImage
+                        path="/homepage"
+                        imageId={feature.imageId}
+                        alt={feature.imageAlt}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                     {/* Decorative Circle */}
                     <div className={`absolute -bottom-10 ${index % 2 === 0 ? '-left-10' : '-right-10'} w-40 h-40 bg-[#c8ddd0]/30 rounded-full blur-2xl -z-10`}></div>
@@ -656,10 +647,13 @@ export default function Home() {
 
                     {/* Image on Mobile - shown here between title and details */}
                     <div className="w-full lg:hidden">
-                      <div className={`relative rounded-[40px] overflow-hidden shadow-2xl aspect-[16/9] bg-gradient-to-br ${feature.color} flex items-center justify-center`}>
-                        <div className={`relative z-10 p-6 bg-white/80 backdrop-blur-sm rounded-3xl shadow-lg border border-white/50 ${feature.iconColor}`}>
-                          <feature.icon size={60} strokeWidth={1.5} />
-                        </div>
+                      <div className="relative rounded-[40px] overflow-hidden shadow-2xl aspect-[16/9]">
+                        <PageImage
+                          path="/homepage"
+                          imageId={feature.imageId}
+                          alt={feature.imageAlt}
+                          className="w-full h-full object-cover"
+                        />
                       </div>
                     </div>
 
@@ -819,11 +813,13 @@ export default function Home() {
               <div className="flex flex-col md:flex-row">
                 {/* Doctor Image */}
                 <div className="w-full md:w-2/5 relative">
-                  <div className="aspect-square md:aspect-auto md:h-full bg-gradient-to-br from-[#395b45]/20 to-[#c8ddd0]/20 relative overflow-hidden flex items-center justify-center">
-                    <div className="text-center">
-                      <p className="text-4xl md:text-5xl font-bold text-[#395b45]/40 mb-2">準備中</p>
-                      <p className="text-sm text-[#8D8070]/60">Coming Soon</p>
-                    </div>
+                  <div className="aspect-square md:aspect-auto md:h-full relative overflow-hidden">
+                    <PageImage
+                      path="/homepage"
+                      imageId="doctor"
+                      alt="院長 福永真大"
+                      className="w-full h-full object-cover"
+                    />
                     <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full">
                       <p className="text-sm font-bold text-[#5A4D41]">院長</p>
                     </div>

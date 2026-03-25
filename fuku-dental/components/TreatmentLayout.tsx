@@ -205,12 +205,6 @@ export const TreatmentLayout: React.FC<TreatmentLayoutProps> = ({
                 {/* Features Section (Redesigned) */}
                 {features && features.length > 0 && (
                     <section className="pt-8 pb-16 bg-gradient-to-b from-[#FAFAFA] to-white relative overflow-hidden" style={{ fontFamily: '"Noto Sans Japanese", sans-serif' }}>
-                        <style jsx global>{`
-                            .brush-underline {
-                                background-image: linear-gradient(transparent 60%, rgba(197, 165, 114, 0.4) 60%, rgba(197, 165, 114, 0.6) 80%, transparent 80%);
-                                padding: 0 0.1em;
-                            }
-                        `}</style>
                         <div className="container mx-auto px-4 relative z-10">
                             <div className="text-center mb-8">
                                 <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-2 relative inline-block">

@@ -84,7 +84,6 @@ export function PageImage({ path, imageId = 'hero', alt, className = '' }: PageI
         src={src}
         alt={alt}
         className={className || 'w-full h-auto rounded-lg'}
-        loading="lazy"
         onError={() => setHasError(true)}
       />
     );
@@ -97,24 +96,24 @@ export function PageImage({ path, imageId = 'hero', alt, className = '' }: PageI
         onDragOver={(e) => { e.preventDefault(); setIsDragging(true); }}
         onDragLeave={() => setIsDragging(false)}
         onDrop={handleDrop}
-        className={`relative border-2 border-dashed rounded-lg my-4 transition-colors ${
+        className={`border-2 border-dashed transition-colors flex flex-col items-center justify-center ${
           isDragging
             ? 'border-[#C5A572] bg-[#C5A572]/10'
             : 'border-gray-300 bg-gray-50 hover:border-gray-400'
         } ${className}`}
       >
-        <label className="cursor-pointer flex flex-col items-center justify-center py-12 px-4">
+        <label className="cursor-pointer flex flex-col items-center justify-center w-full h-full px-4 py-6">
           <input
             type="file"
             accept="image/*"
             onChange={handleFileSelect}
             className="hidden"
           />
-          <div className="text-4xl text-gray-300 mb-3">+</div>
+          <div className="text-4xl text-gray-300 mb-2">+</div>
           <p className="text-gray-500 text-sm font-medium mb-1">
             ここに画像をドロップ
           </p>
-          <p className="text-gray-400 text-xs mb-2">
+          <p className="text-gray-400 text-xs mb-1">
             またはクリックして選択
           </p>
           <p className="text-gray-300 text-xs font-mono">

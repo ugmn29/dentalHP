@@ -143,12 +143,6 @@ export default function KidsOrthoPage() {
 
     return (
         <div className="min-h-screen bg-white text-[#5A4D41]" style={{ fontFamily: '"游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", sans-serif' }}>
-            <style jsx global>{`
-                .brush-underline {
-                    background-image: linear-gradient(transparent 60%, rgba(230, 122, 46, 0.4) 60%, rgba(230, 122, 46, 0.6) 80%, transparent 80%);
-                    padding: 0 0.2em;
-                }
-            `}</style>
             <Header />
 
             <main>
@@ -723,17 +717,13 @@ export default function KidsOrthoPage() {
 
                                     {/* Image Area */}
                                     <div className="w-full mb-8 relative">
-                                        <div className={`relative rounded-[30px] overflow-hidden shadow-lg border-2 border-white aspect-[16/9] bg-gradient-to-br ${feature.color} flex items-center justify-center`}>
-                                            {/* Abstract Background Shapes */}
-                                            <div className="absolute inset-0 opacity-40">
-                                                <div className="absolute top-1/4 left-1/4 w-24 h-24 rounded-full bg-white blur-2xl"></div>
-                                                <div className="absolute bottom-1/4 right-1/4 w-32 h-32 rounded-full bg-white blur-3xl"></div>
-                                            </div>
-
-                                            {/* Icon */}
-                                            <div className={`relative z-10 p-6 md:p-8 bg-white/80 backdrop-blur-sm rounded-3xl shadow-lg border border-white/60 ${feature.iconColor}`}>
-                                                <feature.icon size={70} strokeWidth={1.5} />
-                                            </div>
+                                        <div className="relative rounded-[30px] overflow-hidden shadow-lg border-2 border-white aspect-[16/9]">
+                                            <PageImage
+                                                path="/kidsortho"
+                                                imageId={feature.imageId}
+                                                alt={feature.highlight}
+                                                className="w-full h-full object-cover"
+                                            />
                                         </div>
                                     </div>
 

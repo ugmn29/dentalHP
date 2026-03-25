@@ -29,12 +29,6 @@ export default function CeramicPage() {
 
     return (
         <div className="min-h-screen bg-white font-serif text-[#4A4A4A]">
-            <style jsx global>{`
-                .brush-underline {
-                    background-image: linear-gradient(transparent 60%, rgba(197, 165, 114, 0.4) 60%, rgba(197, 165, 114, 0.6) 80%, transparent 80%);
-                    padding: 0 0.2em;
-                }
-            `}</style>
             <Header />
 
             <main>
