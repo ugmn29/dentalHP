@@ -8,16 +8,16 @@ import { PageImage } from '@/components/PageImage';
 import { ChevronRight, CheckCircle, XCircle, Clock, DollarSign, Eye, Smile } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: '矯正治療の種類｜ワイヤー・マウスピース・裏側矯正の比較｜F歯科・矯正歯科 豊洲プライムスクエア院',
-  description: '豊洲の歯医者 F歯科・矯正歯科が矯正治療の種類を詳しく解説。ワイヤー矯正、マウスピース矯正、裏側矯正、部分矯正など、それぞれの特徴・費用・治療期間を比較。あなたに最適な矯正方法が見つかります。',
-  keywords: '矯正,種類,ワイヤー矯正,マウスピース矯正,インビザライン,裏側矯正,部分矯正,比較,F歯科・矯正歯科 豊洲プライムスクエア院',
+  title: '矯正治療の種類｜ワイヤー・マウスピース・裏側矯正の比較｜Fデンタルオフィス 豊洲プライムスクエア院',
+  description: '豊洲の歯医者 Fデンタルオフィスが矯正治療の種類を詳しく解説。ワイヤー矯正、マウスピース矯正、裏側矯正、部分矯正など、それぞれの特徴・費用・治療期間を比較。あなたに最適な矯正方法が見つかります。',
+  keywords: '矯正,種類,ワイヤー矯正,マウスピース矯正,インビザライン,裏側矯正,部分矯正,比較,Fデンタルオフィス 豊洲プライムスクエア院',
   openGraph: {
-    title: '矯正治療の種類｜ワイヤー・マウスピース・裏側矯正の比較｜F歯科・矯正歯科 豊洲プライムスクエア院',
-    description: '豊洲の歯医者 F歯科が矯正治療の種類を詳しく解説。ワイヤー・マウスピース・裏側・部分矯正の特徴・費用・治療期間を比較。',
+    title: '矯正治療の種類｜ワイヤー・マウスピース・裏側矯正の比較｜Fデンタルオフィス 豊洲プライムスクエア院',
+    description: '豊洲の歯医者 Fデンタルオフィスが矯正治療の種類を詳しく解説。ワイヤー・マウスピース・裏側・部分矯正の特徴・費用・治療期間を比較。',
     type: 'website',
     locale: 'ja_JP',
     url: 'https://fshika.com/orthodontics/types',
-    siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
+    siteName: 'Fデンタルオフィス 豊洲プライムスクエア院',
   },
 };
 
@@ -52,7 +52,7 @@ export default function OrthodonticsTypesPage() {
               </h1>
               <PageImage path="/orthodontics/types" alt="矯正治療の種類" />
               <p className="text-xl md:text-2xl text-amber-100 mb-8 max-w-3xl mx-auto leading-relaxed">
-                豊洲駅徒歩2分のF歯科が、ライフスタイルやご希望に合わせて選べる多彩な矯正治療法をご用意しています
+                豊洲駅徒歩2分のFデンタルオフィスが、ライフスタイルやご希望に合わせて選べる多彩な矯正治療法をご用意しています
               </p>
             </div>
           </div>

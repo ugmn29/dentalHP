@@ -15,16 +15,16 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: '受け口は自然に治る？確率14%の真実｜F歯科・矯正歯科 豊洲プライムスクエア院',
+  title: '受け口は自然に治る？確率14%の真実｜Fデンタルオフィス 豊洲プライムスクエア院',
   description: '「放置して治った」はレアケース。自然治癒率14%のエビデンスと、3歳から始める早期治療（ムーシールド・プレオルソ）を詳しく解説します。',
   keywords: '受け口,自然治癒,反対咬合,ムーシールド,プレオルソ,小児矯正,早期治療',
   openGraph: {
-    title: '受け口は自然に治る？確率14%の真実｜F歯科・矯正歯科 豊洲プライムスクエア院',
+    title: '受け口は自然に治る？確率14%の真実｜Fデンタルオフィス 豊洲プライムスクエア院',
     description: '「放置して治った」はレアケース。自然治癒率14%のエビデンスと、3歳から始める早期治療（ムーシールド・プレオルソ）を詳しく解説します。',
     type: 'website',
     locale: 'ja_JP',
     url: 'https://fshika.com/kidsortho/underbite-natural-cure',
-    siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
+    siteName: 'Fデンタルオフィス 豊洲プライムスクエア院',
   },
 };
 

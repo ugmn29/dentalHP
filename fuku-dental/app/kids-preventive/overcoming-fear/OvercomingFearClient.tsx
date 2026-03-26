@@ -42,7 +42,7 @@ export default function OvercomingFearPage() {
                         <PageImage path="/kids-preventive/overcoming-fear" alt="子供の歯医者嫌い克服法" />
                         <p className="text-lg md:text-xl leading-relaxed opacity-95">
                             泣いて嫌がるお子様も、正しいアプローチで必ず克服できます。<br />
-                            豊洲駅徒歩2分のF歯科のステップアップ方式で、歯医者を「怖くない場所」に
+                            豊洲駅徒歩2分のFデンタルオフィスのステップアップ方式で、歯医者を「怖くない場所」に
                         </p>
                     </div>
                 </div>
@@ -172,11 +172,11 @@ export default function OvercomingFearPage() {
                             </div>
                         </div>
 
-                        {/* F歯科・矯正歯科 豊洲プライムスクエア院のステップアップ方式 */}
+                        {/* Fデンタルオフィス 豊洲プライムスクエア院のステップアップ方式 */}
                         <div>
                             <div className="text-center mb-8">
                                 <h3 className="text-2xl md:text-3xl font-bold text-[#5A4D41] font-serif inline-block">
-                                    F歯科・矯正歯科 豊洲プライムスクエア院のステップアップ方式
+                                    Fデンタルオフィス 豊洲プライムスクエア院のステップアップ方式
                                 </h3>
                                 <div className="w-16 h-0.5 bg-[#395b45] mx-auto mt-4"></div>
                             </div>

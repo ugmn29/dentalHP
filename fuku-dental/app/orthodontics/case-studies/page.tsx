@@ -8,16 +8,16 @@ import { PageImage } from '@/components/PageImage';
 import { ChevronRight, Heart, MessageCircle, Clock, Coins, CheckCircle, Star, TrendingUp } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: '矯正治療の症例紹介｜治療実績と患者様の声｜F歯科・矯正歯科 豊洲プライムスクエア院',
-  description: '豊洲の歯医者 F歯科・矯正歯科の矯正治療症例を詳しくご紹介。出っ歯・受け口・ガタガタ・すきっ歯など、様々な症例の治療結果をビフォーアフターでご覧いただけます。',
-  keywords: '矯正,症例,治療例,ビフォーアフター,患者様の声,実績,成功率,出っ歯,受け口,ガタガタ,F歯科・矯正歯科 豊洲プライムスクエア院',
+  title: '矯正治療の症例紹介｜治療実績と患者様の声｜Fデンタルオフィス 豊洲プライムスクエア院',
+  description: '豊洲の歯医者 Fデンタルオフィスの矯正治療症例を詳しくご紹介。出っ歯・受け口・ガタガタ・すきっ歯など、様々な症例の治療結果をビフォーアフターでご覧いただけます。',
+  keywords: '矯正,症例,治療例,ビフォーアフター,患者様の声,実績,成功率,出っ歯,受け口,ガタガタ,Fデンタルオフィス 豊洲プライムスクエア院',
   openGraph: {
-    title: '矯正治療の症例紹介｜治療実績と患者様の声｜F歯科・矯正歯科 豊洲プライムスクエア院',
-    description: '豊洲の歯医者 F歯科・矯正歯科の矯正治療症例をご紹介。出っ歯・受け口・ガタガタ・すきっ歯など、様々な症例の治療結果を掲載。',
+    title: '矯正治療の症例紹介｜治療実績と患者様の声｜Fデンタルオフィス 豊洲プライムスクエア院',
+    description: '豊洲の歯医者 Fデンタルオフィスの矯正治療症例をご紹介。出っ歯・受け口・ガタガタ・すきっ歯など、様々な症例の治療結果を掲載。',
     type: 'website',
     locale: 'ja_JP',
     url: 'https://fshika.com/orthodontics/case-studies',
-    siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
+    siteName: 'Fデンタルオフィス 豊洲プライムスクエア院',
   },
 };
 
@@ -52,7 +52,7 @@ export default function OrthodonticsCaseStudiesPage() {
               </h1>
               <PageImage path="/orthodontics/case-studies" alt="矯正治療の症例紹介" />
               <p className="text-xl md:text-2xl text-amber-100 mb-8 max-w-3xl mx-auto leading-relaxed">
-                豊洲駅徒歩2分のF歯科による実際の治療例から、矯正治療の効果と患者様の満足度をご確認ください
+                豊洲駅徒歩2分のFデンタルオフィスによる実際の治療例から、矯正治療の効果と患者様の満足度をご確認ください
               </p>
             </div>
           </div>

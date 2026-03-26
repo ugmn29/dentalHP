@@ -6,7 +6,7 @@ import { Bot, X, Send, MessageCircle } from 'lucide-react';
 export const AIChatWidget = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [messages, setMessages] = useState<{ role: string; text: string }[]>([
-        { role: 'system', text: 'こんにちは！F歯科・矯正歯科 豊洲プライムスクエア院のAIアシスタントです。🦷\nお子様の歯のことや、治療について気になることはありますか？お気軽に話しかけてくださいね。' }
+        { role: 'system', text: 'こんにちは！Fデンタルオフィス 豊洲プライムスクエア院のAIアシスタントです。🦷\nお子様の歯のことや、治療について気になることはありますか？お気軽に話しかけてくださいね。' }
     ]);
     const [input, setInput] = useState("");
     const [isLoading, setIsLoading] = useState(false);
@@ -31,7 +31,7 @@ export const AIChatWidget = () => {
         try {
             const apiKey = ""; // Runtime provided key
             const systemPrompt = `
-        あなたは「F歯科・矯正歯科 豊洲プライムスクエア院」の優しいAIアシスタントです。
+        あなたは「Fデンタルオフィス 豊洲プライムスクエア院」の優しいAIアシスタントです。
         
         【クリニックの特徴】
         - ママとこどものための歯科医院

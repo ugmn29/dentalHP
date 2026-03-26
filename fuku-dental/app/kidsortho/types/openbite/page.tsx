@@ -8,16 +8,16 @@ import { KidsOrthoImage } from '@/components/KidsOrthoImage';
 import { PageImage } from '@/components/PageImage';
 
 export const metadata: Metadata = {
-  title: '開咬（かいこう）オープンバイトの治療 | こども矯正 | F歯科・矯正歯科 豊洲プライムスクエア院',
+  title: '開咬（かいこう）オープンバイトの治療 | こども矯正 | Fデンタルオフィス 豊洲プライムスクエア院',
   description: '開咬（オープンバイト）の特徴、原因、治療法について詳しく解説。前歯が噛み合わない状態で、習癖改善と早期治療が重要です。お子様の歯並びが気になる方はご相談ください。',
   keywords: '開咬,オープンバイト,前歯が閉じない,こども矯正,小児矯正,歯列矯正,不正咬合,歯科,横浜',
   openGraph: {
-    title: '開咬（かいこう）オープンバイトの治療 | こども矯正 | F歯科・矯正歯科 豊洲プライムスクエア院',
+    title: '開咬（かいこう）オープンバイトの治療 | こども矯正 | Fデンタルオフィス 豊洲プライムスクエア院',
     description: '開咬（オープンバイト）の特徴、原因、治療法について詳しく解説。前歯が噛み合わない状態で、習癖改善と早期治療が重要です。',
     type: 'website',
     locale: 'ja_JP',
     url: 'https://fshika.com/kidsortho/types/openbite',
-    siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
+    siteName: 'Fデンタルオフィス 豊洲プライムスクエア院',
   },
 };
 
@@ -718,7 +718,7 @@ export default function OpenBiteDetailPage() {
                 <h2 className="text-3xl md:text-4xl font-bold text-[#5A4D41] mb-4">お子様の前歯が閉じないことが気になりませんか？</h2>
                 <p className="text-lg md:text-xl text-[#8D8070] leading-relaxed">
                   開咬（オープンバイト）は早期治療が効果的です。<br />
-                  豊洲の歯医者・F歯科矯正歯科で、まずは無料カウンセリングにお越しください。
+                  豊洲の歯医者・Fデンタルオフィスで、まずは無料カウンセリングにお越しください。
                 </p>
               </div>
 

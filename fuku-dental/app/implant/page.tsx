@@ -22,20 +22,20 @@ import { ImplantStructure } from '@/components/implant/ImplantStructure';
 import { PageImage } from '@/components/PageImage';
 
 export const metadata: Metadata = {
-  title: '豊洲のインプラント治療｜F歯科・矯正歯科 豊洲プライムスクエア院',
-  description: '豊洲駅徒歩2分、F歯科・矯正歯科 豊洲プライムスクエア院のインプラント治療。500症例以上の経験を持つ院長が、歯科用CTと綿密な計画で安全なインプラント治療を提供。完全個室で静脈内鎮静法にも対応。無料相談実施中。',
+  title: '豊洲のインプラント治療｜Fデンタルオフィス 豊洲プライムスクエア院',
+  description: '豊洲駅徒歩2分、Fデンタルオフィス 豊洲プライムスクエア院のインプラント治療。500症例以上の経験を持つ院長が、歯科用CTと綿密な計画で安全なインプラント治療を提供。完全個室で静脈内鎮静法にも対応。無料相談実施中。',
   keywords: '豊洲,歯医者,インプラント,歯科,デンタルクリニック,インプラント治療,CT診断,静脈内鎮静法,無料相談,豊洲駅,江東区,豊洲 歯医者,豊洲 インプラント,豊洲 歯科',
   openGraph: {
-    title: '豊洲のインプラント治療｜F歯科・矯正歯科 豊洲プライムスクエア院',
+    title: '豊洲のインプラント治療｜Fデンタルオフィス 豊洲プライムスクエア院',
     description: '豊洲駅徒歩2分。500症例以上の経験を持つ院長が、歯科用CTと綿密な計画で安全なインプラント治療を提供。完全個室・静脈内鎮静法対応。無料相談実施中。',
     type: 'website',
     locale: 'ja_JP',
     url: 'https://fshika.com/implant',
-    siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
+    siteName: 'Fデンタルオフィス 豊洲プライムスクエア院',
   },
   twitter: {
     card: 'summary_large_image',
-    title: '豊洲のインプラント治療｜F歯科・矯正歯科 豊洲プライムスクエア院',
+    title: '豊洲のインプラント治療｜Fデンタルオフィス 豊洲プライムスクエア院',
     description: '豊洲駅徒歩2分。500症例以上の経験、CT診断、静脈内鎮静法対応。無料相談実施中。',
   },
   alternates: {
@@ -333,7 +333,7 @@ export default function ImplantMainPage() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Dentist',
-    name: 'F歯科・矯正歯科 豊洲プライムスクエア院',
+    name: 'Fデンタルオフィス 豊洲プライムスクエア院',
     description: '豊洲駅徒歩2分のインプラント治療専門。500症例以上の経験を持つ院長が、歯科用CTと綿密な計画で安全なインプラント治療を提供。',
     url: 'https://fshika.com/implant',
     telephone: '+81-3-XXXX-XXXX',

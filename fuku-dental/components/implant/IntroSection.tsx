@@ -41,7 +41,7 @@ export function IntroSection() {
           <div className="flex flex-col items-start w-full">
             <div className="font-medium not-italic leading-[32px] text-[16px] text-white tracking-[1.28px] w-full space-y-4" style={{ fontFamily: 'YuGothic, "Yu Gothic", sans-serif' }}>
               <p>歯を失うと、噛みにくさや発音のしづらさだけでなく、食事や笑顔にも影響が出てきます。</p>
-              <p>豊洲駅徒歩2分のF歯科・矯正歯科 豊洲プライムスクエア院では、患者様が自然で美しい口元と快適な生活を取り戻せるよう、安全性と精度にこだわったインプラント治療を行っています。</p>
+              <p>豊洲駅徒歩2分のFデンタルオフィス 豊洲プライムスクエア院では、患者様が自然で美しい口元と快適な生活を取り戻せるよう、安全性と精度にこだわったインプラント治療を行っています。</p>
               <p>CTによる正確な診断と綿密な治療計画のもと、神経や周囲組織への負担を最小限に抑えた手術を実現。</p>
               <p>見た目の美しさと機能性を両立し、自信の持てる笑顔をサポートいたします。</p>
             </div>

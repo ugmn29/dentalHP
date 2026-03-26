@@ -8,16 +8,16 @@ import { Footer } from '@/components/Footer'
 import { AuthorBio } from '@/components/AuthorBio'
 
 export const metadata: Metadata = {
-  title: 'スポーツ・楽器への影響｜歯並びと運動・演奏パフォーマンスの関係｜F歯科・矯正歯科 豊洲プライムスクエア院',
+  title: 'スポーツ・楽器への影響｜歯並びと運動・演奏パフォーマンスの関係｜Fデンタルオフィス 豊洲プライムスクエア院',
   description: '歯並びが悪いと、運動能力・呼吸効率・楽器の演奏に影響します。矯正治療でパフォーマンスが向上する理由を詳しく解説します。',
   keywords: 'スポーツ,楽器,運動能力,パフォーマンス,歯並び,小児矯正,咬合,呼吸',
   openGraph: {
-    title: 'スポーツ・楽器への影響｜歯並びと運動・演奏パフォーマンスの関係｜F歯科・矯正歯科 豊洲プライムスクエア院',
+    title: 'スポーツ・楽器への影響｜歯並びと運動・演奏パフォーマンスの関係｜Fデンタルオフィス 豊洲プライムスクエア院',
     description: '歯並びが悪いと、運動能力・呼吸効率・楽器の演奏に影響します。矯正治療でパフォーマンスが向上する理由を詳しく解説します。',
     type: 'website',
     locale: 'ja_JP',
     url: 'https://fshika.com/kidsortho/sports-and-music',
-    siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
+    siteName: 'Fデンタルオフィス 豊洲プライムスクエア院',
   },
 }
 

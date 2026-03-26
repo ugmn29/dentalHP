@@ -9,16 +9,16 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: '拡大床とは？｜効果・費用・装着時間を詳しく解説｜F歯科・矯正歯科 豊洲プライムスクエア院',
+    title: '拡大床とは？｜効果・費用・装着時間を詳しく解説｜Fデンタルオフィス 豊洲プライムスクエア院',
     description: '拡大床による小児矯正治療を徹底解説。顎を広げて永久歯のスペースを確保する拡大床の効果、費用、装着時間、メリット・デメリットをわかりやすく説明します。',
     keywords: '拡大床,こども矯正,小児矯正,費用,効果,装着時間,顎を広げる,スペース確保',
     openGraph: {
-        title: '拡大床とは？｜効果・費用・装着時間を詳しく解説｜F歯科・矯正歯科 豊洲プライムスクエア院',
+        title: '拡大床とは？｜効果・費用・装着時間を詳しく解説｜Fデンタルオフィス 豊洲プライムスクエア院',
         description: '拡大床による小児矯正治療を徹底解説。顎を広げて永久歯のスペースを確保する拡大床の効果、費用、装着時間、メリット・デメリットをわかりやすく説明します。',
         type: 'website',
         locale: 'ja_JP',
         url: 'https://fshika.com/kidsortho/appliances/expander',
-        siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
+        siteName: 'Fデンタルオフィス 豊洲プライムスクエア院',
     },
 };
 
@@ -775,7 +775,7 @@ export default function ExpanderPage() {
                             <div className="text-center mb-8">
                                 <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#5A4D41] mb-4">お子さまに最適な装置を無料でご提案</h2>
                                 <p className="text-lg md:text-xl text-[#8D8070] leading-loose font-sans">
-                                    拡大床が適しているか、豊洲の歯医者・F歯科矯正歯科の無料相談でご確認ください
+                                    拡大床が適しているか、豊洲の歯医者・Fデンタルオフィスの無料相談でご確認ください
                                 </p>
                             </div>
 

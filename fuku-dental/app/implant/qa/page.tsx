@@ -8,18 +8,18 @@ import { PageImage } from '@/components/PageImage';
 import { Home, ChevronRight, ArrowRight } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'インプラントQ&A よくある質問 | F歯科・矯正歯科 豊洲プライムスクエア院',
+  title: 'インプラントQ&A よくある質問 | Fデンタルオフィス 豊洲プライムスクエア院',
   description:
     'インプラント治療に関するよくある質問を25問以上掲載。治療前の疑問、手術について、費用・支払い、治療後のメンテナンス、トラブル対処まで、カテゴリー別にわかりやすく回答しています。',
   keywords:
     'インプラント,よくある質問,FAQ,Q&A,インプラント治療,費用,痛み,メンテナンス,骨造成,歯科',
   openGraph: {
-    title: 'インプラントQ&A よくある質問 | F歯科・矯正歯科 豊洲プライムスクエア院',
+    title: 'インプラントQ&A よくある質問 | Fデンタルオフィス 豊洲プライムスクエア院',
     description: 'インプラント治療に関するよくある質問を25問以上掲載。治療前の疑問、費用・支払い、メンテナンス、トラブル対処までカテゴリー別に回答。',
     type: 'website',
     locale: 'ja_JP',
     url: 'https://fshika.com/implant/qa',
-    siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
+    siteName: 'Fデンタルオフィス 豊洲プライムスクエア院',
   },
 };
 

@@ -8,16 +8,16 @@ import { Footer } from '@/components/Footer'
 import { AuthorBio } from '@/components/AuthorBio'
 
 export const metadata: Metadata = {
-  title: '正しい姿勢と咬合の関係｜猫背・ストレートネックが歯並びを悪化させる｜F歯科・矯正歯科 豊洲プライムスクエア院',
+  title: '正しい姿勢と咬合の関係｜猫背・ストレートネックが歯並びを悪化させる｜Fデンタルオフィス 豊洲プライムスクエア院',
   description: '猫背やストレートネックが歯並びを悪化させるメカニズムと、浮き指チェック法、家庭でできる姿勢改善トレーニングを詳しく解説します。',
   keywords: '姿勢,咬合,猫背,ストレートネック,浮き指,小児矯正,姿勢改善,歯並び',
   openGraph: {
-    title: '正しい姿勢と咬合の関係｜猫背・ストレートネックが歯並びを悪化させる｜F歯科・矯正歯科 豊洲プライムスクエア院',
+    title: '正しい姿勢と咬合の関係｜猫背・ストレートネックが歯並びを悪化させる｜Fデンタルオフィス 豊洲プライムスクエア院',
     description: '猫背やストレートネックが歯並びを悪化させるメカニズムと、浮き指チェック法、家庭でできる姿勢改善トレーニングを詳しく解説します。',
     type: 'website',
     locale: 'ja_JP',
     url: 'https://fshika.com/kidsortho/posture-improvement',
-    siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
+    siteName: 'Fデンタルオフィス 豊洲プライムスクエア院',
   },
 }
 

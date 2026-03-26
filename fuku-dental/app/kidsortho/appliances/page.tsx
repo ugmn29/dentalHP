@@ -9,16 +9,16 @@ import { PageImage } from '@/components/PageImage';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: '小児矯正の装置一覧｜種類と特徴を比較｜F歯科・矯正歯科 豊洲プライムスクエア院',
-  description: '豊洲のF歯科が小児矯正で使用する装置を一覧でご紹介。プレオルソ・拡大床・ワイヤー矯正など、各装置の特徴・対象年齢・治療期間を比較。お子様に最適な装置をご提案します。',
+  title: '小児矯正の装置一覧｜種類と特徴を比較｜Fデンタルオフィス 豊洲プライムスクエア院',
+  description: '豊洲のFデンタルオフィスが小児矯正で使用する装置を一覧でご紹介。プレオルソ・拡大床・ワイヤー矯正など、各装置の特徴・対象年齢・治療期間を比較。お子様に最適な装置をご提案します。',
   keywords: '小児矯正 装置,子供 矯正 種類,プレオルソ,拡大床,小児矯正 装置 比較,豊洲 小児矯正',
   openGraph: {
-    title: '小児矯正の装置一覧｜種類と特徴を比較｜F歯科・矯正歯科 豊洲プライムスクエア院',
+    title: '小児矯正の装置一覧｜種類と特徴を比較｜Fデンタルオフィス 豊洲プライムスクエア院',
     description: '小児矯正で使用する装置を一覧でご紹介。各装置の特徴・対象年齢・治療期間を比較。',
     type: 'website',
     locale: 'ja_JP',
     url: 'https://fshika.com/kidsortho/appliances',
-    siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
+    siteName: 'Fデンタルオフィス 豊洲プライムスクエア院',
   },
 };
 
@@ -515,7 +515,7 @@ export default function KidsOrthoAppliancesPage() {
                                 <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#5A4D41]">当院で使用する矯正装置</h2>
                                 <div className="w-16 h-0.5 bg-[#C5A572] mx-auto mt-4 mb-6"></div>
                                 <p className="text-lg text-[#8D8070] font-sans leading-relaxed">
-                                    F歯科・矯正歯科 豊洲プライムスクエア院では、お子さまの症状・年齢・生活スタイルに合わせて、<br className="hidden md:block" />
+                                    Fデンタルオフィス 豊洲プライムスクエア院では、お子さまの症状・年齢・生活スタイルに合わせて、<br className="hidden md:block" />
                                     以下の装置から最適なものを選択し、オーダーメイドの治療を行っています
                                 </p>
                             </div>

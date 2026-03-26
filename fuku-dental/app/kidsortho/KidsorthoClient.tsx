@@ -289,7 +289,7 @@ export default function KidsOrthoPage() {
                                 まずはお気軽にご相談ください
                             </h2>
                             <div className="w-full h-2 bg-[#FFE44D] rounded-full -mt-2"></div>
-                            <p className="text-sm text-[#8D8070] mt-4">豊洲駅徒歩2分のF歯科・矯正歯科では、こども矯正の無料相談を実施しています</p>
+                            <p className="text-sm text-[#8D8070] mt-4">豊洲駅徒歩2分のFデンタルオフィスでは、こども矯正の無料相談を実施しています</p>
                         </div>
 
                         {/* Check items */}
@@ -397,7 +397,7 @@ export default function KidsOrthoPage() {
                         <div className="flex items-center justify-center mb-8 gap-2 md:gap-4">
                             <div className="text-3xl md:text-5xl text-[#C5A572] font-bold">【</div>
                             <h3 className="text-base md:text-2xl font-bold text-[#C5A572] whitespace-nowrap">
-                                F歯科・矯正歯科 <span className="text-sm md:text-2xl">豊洲プライムスクエア院</span>
+                                Fデンタルオフィス <span className="text-sm md:text-2xl">豊洲プライムスクエア院</span>
                             </h3>
                             <div className="text-3xl md:text-5xl text-[#C5A572] font-bold">】</div>
                         </div>
@@ -1042,7 +1042,7 @@ export default function KidsOrthoPage() {
                             <h2 className="text-3xl md:text-4xl font-bold text-[#5A4D41] font-serif mb-4">
                                 料金について
                             </h2>
-                            <p className="text-[#8D8070]">豊洲の歯科 F歯科・矯正歯科の小児矯正料金 ※表示価格はすべて税込です</p>
+                            <p className="text-[#8D8070]">豊洲の歯科 Fデンタルオフィスの小児矯正料金 ※表示価格はすべて税込です</p>
                         </div>
 
                         {/* Price Table */}
@@ -1539,7 +1539,7 @@ export default function KidsOrthoPage() {
                             <h2 className="text-2xl md:text-3xl font-bold text-[#5A4D41]">
                                 よくあるご質問
                             </h2>
-                            <p className="text-sm text-[#8D8070] mt-3">豊洲の歯医者 F歯科に寄せられるこども矯正のよくあるご質問</p>
+                            <p className="text-sm text-[#8D8070] mt-3">豊洲の歯医者 Fデンタルオフィスに寄せられるこども矯正のよくあるご質問</p>
                         </div>
                         <div className="space-y-6">
                             {faqs.map((faq, index) => (
@@ -1578,7 +1578,7 @@ export default function KidsOrthoPage() {
 
                                 {/* Main Message */}
                                 <h2 className="text-xl md:text-2xl font-bold text-[#5A4D41] mb-6 leading-relaxed px-4">
-                                    F歯科・矯正歯科へ<br />
+                                    Fデンタルオフィスへ<br />
                                     まずはお気軽にご相談ください
                                 </h2>
 

@@ -106,7 +106,7 @@ export default function CeramicPage() {
                                     審美性と機能性のセラミック治療
                                 </span>
                                 <span className="block text-sm md:text-base text-[#8D8070] mt-3 md:mt-5 font-normal tracking-normal">
-                                    豊洲駅徒歩2分・F歯科のセラミック専門治療
+                                    豊洲駅徒歩2分・Fデンタルオフィスのセラミック専門治療
                                 </span>
                             </h1>
                             <PageImage path="/ceramic" alt="審美性と機能性のセラミック治療" />
@@ -124,7 +124,7 @@ export default function CeramicPage() {
                             FEATURES OF PREMIUM CERAMIC
                         </p>
                         <h2 className="text-2xl md:text-3xl font-medium text-[#5A4D41] font-serif leading-loose tracking-widest">
-                            F歯科・矯正歯科 豊洲プライムスクエア院のセラミック治療は<br />
+                            Fデンタルオフィス 豊洲プライムスクエア院のセラミック治療は<br />
                             これまでのものと違います
                         </h2>
                     </div>

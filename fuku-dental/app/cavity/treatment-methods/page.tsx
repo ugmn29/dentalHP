@@ -11,16 +11,16 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: '虫歯の治療方法 | コンポジットレジン・インレー・クラウン・根管治療 | F歯科・矯正歯科 豊洲プライムスクエア院',
-  description: '豊洲の歯医者 F歯科が虫歯の進行度に応じた治療方法を詳しく解説。コンポジットレジン、インレー、クラウン、根管治療など、それぞれの特徴、メリット・デメリット、費用について。',
+  title: '虫歯の治療方法 | コンポジットレジン・インレー・クラウン・根管治療 | Fデンタルオフィス 豊洲プライムスクエア院',
+  description: '豊洲の歯医者 Fデンタルオフィスが虫歯の進行度に応じた治療方法を詳しく解説。コンポジットレジン、インレー、クラウン、根管治療など、それぞれの特徴、メリット・デメリット、費用について。',
   keywords: '虫歯治療,コンポジットレジン,インレー,クラウン,根管治療,詰め物,被せ物,保険治療,自費治療,豊洲,歯医者',
   openGraph: {
-    title: '虫歯の治療方法 | コンポジットレジン・インレー・クラウン・根管治療 | F歯科・矯正歯科 豊洲プライムスクエア院',
+    title: '虫歯の治療方法 | コンポジットレジン・インレー・クラウン・根管治療 | Fデンタルオフィス 豊洲プライムスクエア院',
     description: '虫歯の進行度に応じた治療方法を詳しく解説。コンポジットレジン、インレー、クラウン、根管治療の特徴・メリット・費用について。',
     type: 'website',
     locale: 'ja_JP',
     url: 'https://fshika.com/cavity/treatment-methods',
-    siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
+    siteName: 'Fデンタルオフィス 豊洲プライムスクエア院',
   },
 };
 
@@ -65,7 +65,7 @@ export default function TreatmentMethodsPage() {
               <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
               <p className="text-lg md:text-xl text-[#5A4D41] leading-relaxed">
                 虫歯の進行度に応じた最適な治療法をご提案<br />
-                <span className="text-base text-[#8D8070] mt-2 inline-block">豊洲の歯科 F歯科が解説｜コンポジットレジン・インレー・クラウン・根管治療</span>
+                <span className="text-base text-[#8D8070] mt-2 inline-block">豊洲の歯科 Fデンタルオフィスが解説｜コンポジットレジン・インレー・クラウン・根管治療</span>
               </p>
             </div>
           </div>
@@ -783,7 +783,7 @@ export default function TreatmentMethodsPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center text-white">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 font-serif">
-                虫歯治療のご相談は<br className="md:hidden" />F歯科・矯正歯科 豊洲プライムスクエア院へ
+                虫歯治療のご相談は<br className="md:hidden" />Fデンタルオフィス 豊洲プライムスクエア院へ
               </h2>
               <p className="text-lg mb-8 leading-relaxed opacity-95">
                 進行度に応じた最適な治療方法をご提案します。<br />

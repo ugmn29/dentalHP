@@ -14,9 +14,9 @@ export default function Home() {
 
   // Hero slider images
   const heroImages = [
-    { imageId: "hero-slide1", alt: "F歯科・こども歯科・矯正 院内写真1" },
-    { imageId: "hero-slide2", alt: "F歯科・こども歯科・矯正 院内写真2" },
-    { imageId: "hero-slide3", alt: "F歯科・こども歯科・矯正 院内写真3" },
+    { imageId: "hero-slide1", alt: "Fデンタルオフィス 院内写真1" },
+    { imageId: "hero-slide2", alt: "Fデンタルオフィス 院内写真2" },
+    { imageId: "hero-slide3", alt: "Fデンタルオフィス 院内写真3" },
   ];
 
   // Hero image slider logic
@@ -160,7 +160,7 @@ export default function Home() {
         "歯並びだけでなく、<span class='text-[#395b45] font-bold'>お顔全体の成長</span>を考えた治療を行います。それを補助するために、<span class='font-bold bg-yellow-100'>当院独自の歯ならびの教科書</span>を、来院した子ども患者さん全員にお渡しします。"
       ],
       imageId: "feature2",
-      imageAlt: "豊洲 F歯科・こども歯科・矯正 こども矯正 歯並びの教科書",
+      imageAlt: "豊洲 Fデンタルオフィス こども矯正 歯並びの教科書",
       icon: Sprout,
       color: "from-green-100 to-green-200",
       iconColor: "text-green-600"
@@ -397,7 +397,7 @@ export default function Home() {
               <a href="/kidsortho" className="group relative block shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
                 <img
                   src="/kids-orthodontics-banner.png"
-                  alt="豊洲 F歯科・こども歯科・矯正 こども矯正 小児矯正"
+                  alt="豊洲 Fデンタルオフィス こども矯正 小児矯正"
                   className="w-full h-auto transition-transform duration-700 group-hover:scale-105"
                 />
               </a>
@@ -529,7 +529,7 @@ export default function Home() {
                     <strong>豊洲駅から徒歩2分の歯医者</strong>
                   </p>
                   <h2 className="font-black text-[#395b45] text-center" style={{ fontFamily: 'Georgia, "Yu Mincho", "Hiragino Mincho ProN", serif' }}>
-                    <div className="text-[9vw] sm:text-5xl md:text-7xl">F歯科・矯正歯科</div>
+                    <div className="text-[9vw] sm:text-5xl md:text-7xl">Fデンタルオフィス</div>
                     <div className="text-[7vw] sm:text-4xl md:text-5xl mt-1">豊洲プライムスクエア院</div>
                   </h2>
                 </div>
@@ -562,7 +562,7 @@ export default function Home() {
               <button className="flex-1 shadow-lg transform hover:-translate-y-1 transition-all duration-300 group">
                 <img
                   src="/images/web-reserve-banner-v3.png"
-                  alt="豊洲 歯医者 24時間WEB予約受付中 F歯科・こども歯科・矯正"
+                  alt="豊洲 歯医者 24時間WEB予約受付中 Fデンタルオフィス"
                   className="w-full h-full object-contain rounded-2xl"
                 />
               </button>
@@ -779,7 +779,7 @@ export default function Home() {
               <button className="flex-1 shadow-lg transform hover:-translate-y-1 transition-all duration-300 group">
                 <img
                   src="/images/web-reserve-banner-v3.png"
-                  alt="豊洲 歯医者 24時間WEB予約受付中 F歯科・こども歯科・矯正"
+                  alt="豊洲 歯医者 24時間WEB予約受付中 Fデンタルオフィス"
                   className="w-full h-full object-contain rounded-2xl"
                 />
               </button>
@@ -843,7 +843,7 @@ export default function Home() {
                         <li>• 大阪大学卒業</li>
                         <li>• 大手医療法人勤務・研修医指導医を歴任</li>
                         <li>• 都内歯科医院 副院長</li>
-                        <li>• F歯科・矯正歯科 豊洲プライムスクエア院 開業</li>
+                        <li>• Fデンタルオフィス 豊洲プライムスクエア院 開業</li>
                       </ul>
                     </div>
 

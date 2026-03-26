@@ -4,16 +4,16 @@ import { PageImage } from '@/components/PageImage';
 import { Clock, DollarSign, CheckCircle, Star, TrendingUp } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: '歯周病治療の症例紹介｜治療事例と患者様の声｜F歯科・矯正歯科 豊洲プライムスクエア院',
-  description: '豊洲の歯医者 F歯科・矯正歯科が歯周病治療の症例を詳しくご紹介。軽度から重度まで、実際の治療例と患者様の声を掲載しています。',
-  keywords: '歯周病,症例,事例,体験談,患者様の声,ビフォーアフター,治療例,F歯科・矯正歯科 豊洲プライムスクエア院',
+  title: '歯周病治療の症例紹介｜治療事例と患者様の声｜Fデンタルオフィス 豊洲プライムスクエア院',
+  description: '豊洲の歯医者 Fデンタルオフィスが歯周病治療の症例を詳しくご紹介。軽度から重度まで、実際の治療例と患者様の声を掲載しています。',
+  keywords: '歯周病,症例,事例,体験談,患者様の声,ビフォーアフター,治療例,Fデンタルオフィス 豊洲プライムスクエア院',
   openGraph: {
-    title: '歯周病治療の症例紹介｜治療事例と患者様の声｜F歯科・矯正歯科 豊洲プライムスクエア院',
-    description: '豊洲の歯医者 F歯科・矯正歯科が歯周病治療の症例を詳しくご紹介。軽度から重度まで、実際の治療例と患者様の声を掲載しています。',
+    title: '歯周病治療の症例紹介｜治療事例と患者様の声｜Fデンタルオフィス 豊洲プライムスクエア院',
+    description: '豊洲の歯医者 Fデンタルオフィスが歯周病治療の症例を詳しくご紹介。軽度から重度まで、実際の治療例と患者様の声を掲載しています。',
     type: 'website',
     locale: 'ja_JP',
     url: 'https://fshika.com/periodontal/case-studies',
-    siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
+    siteName: 'Fデンタルオフィス 豊洲プライムスクエア院',
   },
 };
 

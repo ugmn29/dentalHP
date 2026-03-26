@@ -105,7 +105,7 @@ export default function KidsPreventivePage() {
                                     こども歯科・予防
                                 </span>
                                 <span className="block text-sm md:text-base text-[#8D8070] mt-3 md:mt-5 font-normal tracking-normal">
-                                    豊洲駅徒歩2分・F歯科のこども専門予防歯科
+                                    豊洲駅徒歩2分・Fデンタルオフィスのこども専門予防歯科
                                 </span>
                             </h1>
                             <PageImage path="/kids-preventive" alt="こども歯科・予防" />
@@ -123,7 +123,7 @@ export default function KidsPreventivePage() {
                             FEATURES OF PEDIATRIC DENTISTRY
                         </p>
                         <h2 className="text-2xl md:text-3xl font-medium text-[#5A4D41] font-serif leading-loose tracking-widest">
-                            F歯科・矯正歯科 豊洲プライムスクエア院のこども歯科は<br />
+                            Fデンタルオフィス 豊洲プライムスクエア院のこども歯科は<br />
                             治療より予防を重視します
                         </h2>
                     </div>

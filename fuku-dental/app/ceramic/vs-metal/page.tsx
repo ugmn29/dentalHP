@@ -12,16 +12,16 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'セラミック vs 銀歯｜どっちがいい？徹底比較｜F歯科・矯正歯科 豊洲プライムスクエア院',
-  description: '豊洲の歯医者 F歯科がセラミックと銀歯の違いを徹底比較。見た目、寿命、費用、健康面など、あらゆる角度から解説します。あなたに最適な選択肢が見つかります。',
+  title: 'セラミック vs 銀歯｜どっちがいい？徹底比較｜Fデンタルオフィス 豊洲プライムスクエア院',
+  description: '豊洲の歯医者 Fデンタルオフィスがセラミックと銀歯の違いを徹底比較。見た目、寿命、費用、健康面など、あらゆる角度から解説します。あなたに最適な選択肢が見つかります。',
   keywords: 'セラミック,銀歯,比較,違い,どっち,メリット,デメリット,保険,自費',
   openGraph: {
-    title: 'セラミック vs 銀歯｜どっちがいい？徹底比較｜F歯科・矯正歯科 豊洲プライムスクエア院',
+    title: 'セラミック vs 銀歯｜どっちがいい？徹底比較｜Fデンタルオフィス 豊洲プライムスクエア院',
     description: 'セラミックと銀歯の違いを徹底比較。見た目、寿命、費用、健康面など、あらゆる角度から解説します。',
     type: 'website',
     locale: 'ja_JP',
     url: 'https://fshika.com/ceramic/vs-metal',
-    siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
+    siteName: 'Fデンタルオフィス 豊洲プライムスクエア院',
   },
 };
 
@@ -61,7 +61,7 @@ export default function CeramicVsMetalPage() {
                 どっちがいい？徹底比較
               </p>
               <p className="text-lg text-[#8D8070] leading-relaxed">
-                豊洲の歯科 F歯科が見た目・寿命・費用・健康面など、<br />
+                豊洲の歯科 Fデンタルオフィスが見た目・寿命・費用・健康面など、<br />
                 あらゆる角度から比較します
               </p>
             </div>

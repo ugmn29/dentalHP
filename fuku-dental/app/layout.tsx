@@ -13,14 +13,14 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "豊洲駅から2分の歯医者｜個室完備・0歳から対応・土日診療｜F歯科・矯正歯科",
-  description: "豊洲駅6a出口から徒歩2分、豊洲プライムスクエア1階の歯医者「F歯科・矯正歯科 豊洲プライムスクエア院」。こども矯正・セラミック治療・インプラント・マウスピース矯正など幅広く対応。豊洲の地域密着型歯科医院として、丁寧なカウンセリングと最新の治療技術をご提供します。",
+  title: "豊洲駅から2分の歯医者｜個室完備・0歳から対応・土日診療｜Fデンタルオフィス",
+  description: "豊洲駅6a出口から徒歩2分、豊洲プライムスクエア1階の歯医者「Fデンタルオフィス 豊洲プライムスクエア院」。こども矯正・セラミック治療・インプラント・マウスピース矯正など幅広く対応。豊洲の地域密着型歯科医院として、丁寧なカウンセリングと最新の治療技術をご提供します。",
   keywords: "豊洲 歯医者,豊洲 矯正歯科,豊洲 歯科,豊洲駅 歯医者,豊洲プライムスクエア,こども矯正,インプラント,セラミック,ホワイトニング,江東区 歯医者",
   openGraph: {
-    title: "豊洲駅から2分の歯医者｜個室完備・0歳から対応・土日診療｜F歯科・矯正歯科",
+    title: "豊洲駅から2分の歯医者｜個室完備・0歳から対応・土日診療｜Fデンタルオフィス",
     description: "豊洲駅6a出口から徒歩2分、豊洲プライムスクエア1階。こども矯正・インプラント・セラミック治療など幅広く対応。豊洲の地域密着型歯科医院。",
     url: "https://fshika.com",
-    siteName: "F歯科・矯正歯科 豊洲プライムスクエア院",
+    siteName: "Fデンタルオフィス 豊洲プライムスクエア院",
     locale: "ja_JP",
     type: "website",
     images: [
@@ -28,13 +28,13 @@ export const metadata: Metadata = {
         url: "https://fshika.com/images/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "F歯科・矯正歯科 豊洲プライムスクエア院",
+        alt: "Fデンタルオフィス 豊洲プライムスクエア院",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "豊洲駅から2分の歯医者｜個室完備・0歳から対応・土日診療｜F歯科・矯正歯科",
+    title: "豊洲駅から2分の歯医者｜個室完備・0歳から対応・土日診療｜Fデンタルオフィス",
     description: "豊洲駅6a出口から徒歩2分、豊洲プライムスクエア1階。こども矯正・インプラント・セラミック治療など幅広く対応。",
     images: ["https://fshika.com/images/og-image.jpg"],
   },
@@ -74,7 +74,7 @@ export default function RootLayout({
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Dentist",
-    "name": "F歯科・矯正歯科 豊洲プライムスクエア院",
+    "name": "Fデンタルオフィス 豊洲プライムスクエア院",
     "image": "https://fshika.com/images/clinic-photo.jpg",
     "address": {
       "@type": "PostalAddress",
@@ -163,7 +163,7 @@ export default function RootLayout({
         }
       ]
     },
-    "description": "F歯科・矯正歯科 豊洲プライムスクエア院では、科学的根拠に基づいた精密治療を提供。インプラント、矯正歯科、歯周病治療、根管治療など、幅広い診療に対応しています。",
+    "description": "Fデンタルオフィス 豊洲プライムスクエア院では、科学的根拠に基づいた精密治療を提供。インプラント、矯正歯科、歯周病治療、根管治療など、幅広い診療に対応しています。",
     "founder": {
       "@type": "Person",
       "name": "福永 真大",

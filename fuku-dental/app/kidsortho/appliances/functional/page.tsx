@@ -9,16 +9,16 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: '機能的矯正装置（バイオネーター・FKO）｜効果・費用・治療期間を詳しく解説｜F歯科・矯正歯科 豊洲プライムスクエア院',
+    title: '機能的矯正装置（バイオネーター・FKO）｜効果・費用・治療期間を詳しく解説｜Fデンタルオフィス 豊洲プライムスクエア院',
     description: '機能的矯正装置（バイオネーター・FKO・アクチバトール）で顎のバランスを整える小児矯正治療を徹底解説。受け口・出っ歯の改善効果、費用、治療期間をわかりやすく説明します。',
     keywords: '機能的矯正装置,バイオネーター,FKO,アクチバトール,こども矯正,小児矯正,受け口,出っ歯,費用,治療期間',
     openGraph: {
-        title: '機能的矯正装置（バイオネーター・FKO）｜効果・費用・治療期間を詳しく解説｜F歯科・矯正歯科 豊洲プライムスクエア院',
+        title: '機能的矯正装置（バイオネーター・FKO）｜効果・費用・治療期間を詳しく解説｜Fデンタルオフィス 豊洲プライムスクエア院',
         description: '機能的矯正装置（バイオネーター・FKO・アクチバトール）で顎のバランスを整える小児矯正治療を徹底解説。受け口・出っ歯の改善効果、費用、治療期間をわかりやすく説明します。',
         type: 'website',
         locale: 'ja_JP',
         url: 'https://fshika.com/kidsortho/appliances/functional',
-        siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
+        siteName: 'Fデンタルオフィス 豊洲プライムスクエア院',
     },
 };
 

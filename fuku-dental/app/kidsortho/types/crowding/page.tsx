@@ -8,16 +8,16 @@ import { PageImage } from '@/components/PageImage';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: '叢生(そうせい)ガタガタの歯並びの治療 | こども矯正 | F歯科・矯正歯科 豊洲プライムスクエア院',
+  title: '叢生(そうせい)ガタガタの歯並びの治療 | こども矯正 | Fデンタルオフィス 豊洲プライムスクエア院',
   description: '叢生(ガタガタの歯並び)の特徴、原因、治療法について詳しく解説。日本人に最も多い不正咬合で、早期治療により非抜歯での改善が可能です。お子様の歯並びが気になる方はご相談ください。',
   keywords: '叢生,ガタガタ,歯並び,デコボコ,こども矯正,小児矯正,歯列矯正,不正咬合,歯科,横浜',
   openGraph: {
-    title: '叢生(そうせい)ガタガタの歯並びの治療 | こども矯正 | F歯科・矯正歯科 豊洲プライムスクエア院',
+    title: '叢生(そうせい)ガタガタの歯並びの治療 | こども矯正 | Fデンタルオフィス 豊洲プライムスクエア院',
     description: '叢生(ガタガタの歯並び)の特徴、原因、治療法について詳しく解説。日本人に最も多い不正咬合で、早期治療により非抜歯での改善が可能です。',
     type: 'website',
     locale: 'ja_JP',
     url: 'https://fshika.com/kidsortho/types/crowding',
-    siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
+    siteName: 'Fデンタルオフィス 豊洲プライムスクエア院',
   },
 };
 

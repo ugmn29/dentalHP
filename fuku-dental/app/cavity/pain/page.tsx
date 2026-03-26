@@ -12,16 +12,16 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: '虫歯の痛みと対処法 | 応急処置・痛み止め・緊急時の対応 | F歯科・矯正歯科 豊洲プライムスクエア院',
-  description: '豊洲の歯医者 F歯科が虫歯の痛みが出たときの応急処置と対処法を詳しく解説。痛み止めの正しい使い方、冷やし方、やってはいけないこと、緊急時の受診目安について。',
+  title: '虫歯の痛みと対処法 | 応急処置・痛み止め・緊急時の対応 | Fデンタルオフィス 豊洲プライムスクエア院',
+  description: '豊洲の歯医者 Fデンタルオフィスが虫歯の痛みが出たときの応急処置と対処法を詳しく解説。痛み止めの正しい使い方、冷やし方、やってはいけないこと、緊急時の受診目安について。',
   keywords: '虫歯,痛み,応急処置,痛み止め,歯痛,急性症状,緊急,対処法,冷やす,夜間',
   openGraph: {
-    title: '虫歯の痛みと対処法 | 応急処置・痛み止め・緊急時の対応 | F歯科・矯正歯科 豊洲プライムスクエア院',
+    title: '虫歯の痛みと対処法 | 応急処置・痛み止め・緊急時の対応 | Fデンタルオフィス 豊洲プライムスクエア院',
     description: '虫歯の痛みが出たときの応急処置と対処法を詳しく解説。痛み止めの正しい使い方、冷やし方、緊急時の受診目安について。',
     type: 'website',
     locale: 'ja_JP',
     url: 'https://fshika.com/cavity/pain',
-    siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
+    siteName: 'Fデンタルオフィス 豊洲プライムスクエア院',
   },
 };
 
@@ -66,7 +66,7 @@ export default function PainPage() {
               <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
               <p className="text-lg md:text-xl text-[#5A4D41] leading-relaxed">
                 急な歯の痛みへの応急処置と正しい対処法<br />
-                <span className="text-base text-[#8D8070] mt-2 inline-block">豊洲の歯科 F歯科が解説｜痛み止め・冷やし方・緊急時の受診目安</span>
+                <span className="text-base text-[#8D8070] mt-2 inline-block">豊洲の歯科 Fデンタルオフィスが解説｜痛み止め・冷やし方・緊急時の受診目安</span>
               </p>
             </div>
           </div>

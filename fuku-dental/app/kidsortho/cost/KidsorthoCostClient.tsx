@@ -487,7 +487,7 @@ export default function KidsOrthoCostPage() {
                         </div>
                         <div className="text-center mb-12">
                             <p className="text-gray-600 font-sans">
-                                ここからは、F歯科・矯正歯科 豊洲プライムスクエア院のこども矯正費用について詳しくご説明します
+                                ここからは、Fデンタルオフィス 豊洲プライムスクエア院のこども矯正費用について詳しくご説明します
                             </p>
                         </div>
 

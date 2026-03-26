@@ -9,16 +9,16 @@ import { PageImage } from '@/components/PageImage';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: '小児矯正の治療期間｜いつまでかかる？｜F歯科・矯正歯科 豊洲プライムスクエア院',
-  description: '小児矯正の治療期間を歯科医師が解説。1期治療・2期治療それぞれの目安期間、治療期間を左右する要因、通院頻度について。豊洲のF歯科で計画的な矯正治療を行います。',
+  title: '小児矯正の治療期間｜いつまでかかる？｜Fデンタルオフィス 豊洲プライムスクエア院',
+  description: '小児矯正の治療期間を歯科医師が解説。1期治療・2期治療それぞれの目安期間、治療期間を左右する要因、通院頻度について。豊洲のFデンタルオフィスで計画的な矯正治療を行います。',
   keywords: '小児矯正 期間,子供 矯正 いつまで,小児矯正 何年,矯正 通院頻度,1期治療 期間,豊洲 小児矯正',
   openGraph: {
-    title: '小児矯正の治療期間｜いつまでかかる？｜F歯科・矯正歯科 豊洲プライムスクエア院',
+    title: '小児矯正の治療期間｜いつまでかかる？｜Fデンタルオフィス 豊洲プライムスクエア院',
     description: '小児矯正の治療期間を歯科医師が解説。1期治療・2期治療の目安期間と通院頻度について。',
     type: 'website',
     locale: 'ja_JP',
     url: 'https://fshika.com/kidsortho/duration',
-    siteName: 'F歯科・矯正歯科 豊洲プライムスクエア院',
+    siteName: 'Fデンタルオフィス 豊洲プライムスクエア院',
   },
 };
 
