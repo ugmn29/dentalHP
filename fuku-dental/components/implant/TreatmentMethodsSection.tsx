@@ -14,7 +14,7 @@ const treatmentMethods = [
       '歯を抜いたその日にインプラントを埋め込む方法です。治療期間を短縮でき、抜歯後の骨吸収も抑えやすくなります。',
       '周囲の歯や歯茎に負担をかけず、自然な見た目と噛み心地を保ちながら治療できます。',
     ],
-    imageId: 'treatment-method1',
+    imageId: '抜歯即時埋入の断面図タイムライン',
     href: '/implant/immediate-placement',
   },
   {
@@ -25,7 +25,7 @@ const treatmentMethods = [
       '骨が不足している場合に、骨を増やしてインプラントを埋入できるようにする治療法です。',
       'サイナスリフトやGBR法など様々な方法があり、骨量が少ない方でもインプラント治療が可能になります。',
     ],
-    imageId: 'treatment-method2',
+    imageId: '骨造成治療の4段階図',
     href: '/implant/bone-augmentation',
   },
   {
@@ -36,7 +36,7 @@ const treatmentMethods = [
       'インプラントで入れ歯を固定する方法です。通常の入れ歯よりも安定性が高く、しっかりと噛めるようになります。',
       '取り外しも可能なので、お手入れも簡単です。',
     ],
-    imageId: 'treatment-method3',
+    imageId: 'オーバーデンチャーの構造図',
     href: '/implant/overdenture',
   },
 ];

@@ -62,7 +62,7 @@ export default function PainPage() {
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#5A4D41] font-serif">
                 虫歯の痛みと対処法
               </h1>
-              <PageImage path="/cavity/pain" alt="虫歯の痛みと対処法" />
+              <PageImage path="/cavity/pain" imageId="虫歯の痛み応急処置4ステップ図" alt="虫歯の痛みと対処法" />
               <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
               <p className="text-lg md:text-xl text-[#5A4D41] leading-relaxed">
                 急な歯の痛みへの応急処置と正しい対処法<br />

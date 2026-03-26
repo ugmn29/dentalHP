@@ -50,7 +50,7 @@ export default function OrthodonticsCostPage() {
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
                 矯正治療の費用・料金
               </h1>
-              <PageImage path="/orthodontics/cost" alt="矯正治療の費用・料金" />
+              <PageImage path="/orthodontics/cost" imageId="矯正法別の費用比較棒グラフ" alt="矯正治療の費用・料金" />
               <p className="text-xl md:text-2xl text-amber-100 mb-8 max-w-3xl mx-auto leading-relaxed">
                 豊洲の歯科 Fデンタルオフィスは明確な料金体系で安心。分割払い・デンタルローンにも対応しています
               </p>

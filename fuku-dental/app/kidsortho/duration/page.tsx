@@ -52,7 +52,7 @@ export default function KidsOrthoDurationPage() {
                             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#5A4D41] font-serif">
                                 小児矯正はいつ終わる？<br />「長い」と感じる理由
                             </h1>
-                            <PageImage path="/kidsortho/duration" alt="小児矯正の治療期間" />
+                            <PageImage path="/kidsortho/duration" imageId="1期2期治療のタイムライン帯グラフ" alt="小児矯正の治療期間" />
                             <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
 
                             <KidsOrthoImage

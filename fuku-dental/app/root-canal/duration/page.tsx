@@ -53,7 +53,7 @@ export default function RootCanalDurationPage() {
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#5A4D41] font-serif">
                 根管治療の期間・回数
               </h1>
-              <PageImage path="/root-canal/duration" alt="根管治療の期間・回数" />
+              <PageImage path="/root-canal/duration" imageId="根管治療タイプ別の通院回数タイムライン" alt="根管治療の期間・回数" />
               <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
               <p className="text-xl md:text-2xl mb-6 text-[#5A4D41] font-medium">
                 豊洲駅徒歩2分の当院が治療にかかる期間と通院回数を詳しく解説します

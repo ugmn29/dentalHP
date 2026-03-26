@@ -57,7 +57,7 @@ export default function GumTrainingPage() {
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#5A4D41] font-serif">
                 ガムトレーニング完全手順
               </h1>
-              <PageImage path="/kidsortho/gum-training" alt="ガムトレーニング完全手順" />
+              <PageImage path="/kidsortho/gum-training" imageId="ガムトレーニング3ステップ手順" alt="ガムトレーニング完全手順" />
               <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
 
               {/* Hero Image */}

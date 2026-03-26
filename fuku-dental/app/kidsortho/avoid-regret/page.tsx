@@ -58,7 +58,7 @@ export default function AvoidRegretPage() {
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#5A4D41] font-serif">
                 小児矯正で後悔しないために
               </h1>
-              <PageImage path="/kidsortho/avoid-regret" alt="小児矯正で後悔しないために" />
+              <PageImage path="/kidsortho/avoid-regret" imageId="治療した場合としなかった場合の歯並び比較" alt="小児矯正で後悔しないために" />
               <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
 
                             <KidsOrthoImage

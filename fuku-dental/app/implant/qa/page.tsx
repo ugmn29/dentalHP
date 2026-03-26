@@ -117,7 +117,7 @@ export default function ImplantQAPage() {
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#2d4835] font-serif">
                 インプラントよくある質問
               </h1>
-              <PageImage path="/implant/qa" alt="インプラントよくある質問" />
+              <PageImage path="/implant/qa" imageId="インプラントQA吹き出しイラスト" alt="インプラントよくある質問" />
               <div className="w-24 h-1 bg-[#395b45] mx-auto mb-8"></div>
               <p className="text-xl md:text-2xl mb-6 text-[#2d4835] font-medium">
                 患者様からよくいただくご質問にお答えします

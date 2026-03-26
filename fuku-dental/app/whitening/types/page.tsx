@@ -47,7 +47,7 @@ export default function WhiteningTypesPage() {
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#5A4D41] font-serif">
               ホワイトニングの種類
             </h1>
-            <PageImage path="/whitening/types" alt="ホワイトニングの種類" />
+            <PageImage path="/whitening/types" imageId="ホワイトニング3種類の比較図" alt="ホワイトニングの種類" />
             <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
             <p className="text-xl md:text-2xl mb-6 text-[#5A4D41] font-medium">
               3つのホワイトニング方法を徹底比較

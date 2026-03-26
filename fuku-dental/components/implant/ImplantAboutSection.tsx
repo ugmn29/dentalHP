@@ -14,7 +14,7 @@ export function ImplantAboutSection() {
             <div className="w-[296px] h-[157.48px]">
               <PageImage
                 path="/implant"
-                imageId="about-structure"
+                imageId="インプラント3層構造の断面図"
                 alt="インプラント構造図"
                 className="w-full h-full object-cover"
               />
@@ -48,7 +48,7 @@ export function ImplantAboutSection() {
             <div className="flex justify-center">
               <PageImage
                 path="/implant"
-                imageId="about-structure"
+                imageId="インプラント3層構造の断面図"
                 alt="インプラント構造図"
                 className="w-full max-w-md h-auto object-cover rounded-lg shadow-lg"
               />

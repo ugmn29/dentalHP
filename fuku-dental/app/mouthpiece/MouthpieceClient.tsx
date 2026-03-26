@@ -245,7 +245,7 @@ export default function MouthpiecePage() {
                                         "<span class='text-[#395b45] font-bold'>舌癖・口呼吸・嚥下癖などの悪習癖を改善</span>",
                                         "<span class='text-[#395b45] font-bold'>矯正後の後戻り防止と、長期的な安定を実現</span>"
                                     ],
-                                    imageId: "feature4"
+                                    imageId: "舌の正しい位置を示す口腔断面図"
                                 },
                                 {
                                     id: "05",
@@ -373,31 +373,31 @@ export default function MouthpiecePage() {
                                         num: "01",
                                         title: "相談・カウンセリング",
                                         desc: "歯並びのお悩みやご希望を伺い、マウスピース矯正が適しているか簡易診断を行います。ワイヤー矯正との違いもご説明します。",
-                                        imageId: "step1"
+                                        imageId: "患者と歯科医師がマウスピースサンプルで相談"
                                     },
                                     {
                                         num: "02",
                                         title: "精密検査・スキャン",
                                         desc: "レントゲン撮影や口腔内スキャナー（iTero）を使って、お口の中をデジタルデータ化します。不快な型取りは不要です。",
-                                        imageId: "step2"
+                                        imageId: "iTeroでスキャン中の場面"
                                     },
                                     {
                                         num: "03",
                                         title: "治療計画の作成（シミュレーション）",
                                         desc: "3Dシミュレーションソフトを使って、歯がどのように動いていくか、最終的にどんな歯並びになるかを確認していただきます。",
-                                        imageId: "step3"
+                                        imageId: "3D画面で歯が動くシミュレーション"
                                     },
                                     {
                                         num: "04",
                                         title: "マウスピースの製作・お渡し",
                                         desc: "オーダーメイドのマウスピースが完成したら、装着方法や取り扱い方法をご説明し、治療スタートです。",
-                                        imageId: "step4"
+                                        imageId: "マウスピースセットを患者に渡している場面"
                                     },
                                     {
                                         num: "05",
                                         title: "定期チェック・交換",
                                         desc: "1〜2週間ごとに新しいマウスピースにご自身で交換していただきます。1.5〜2ヶ月ごとに来院し、進み具合をチェックします。",
-                                        imageId: "step5"
+                                        imageId: "カレンダーに通院マークとマウスピース交換"
                                     }
                                 ].map((step, index) => (
                                     <div key={index}>

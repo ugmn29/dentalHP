@@ -51,7 +51,7 @@ export default function PostureImprovementPage() {
             正しい姿勢と咬合の関係<br />
             猫背・ストレートネックが歯並びを悪化させる
           </h1>
-          <PageImage path="/kidsortho/posture-improvement" alt="正しい姿勢と咬合の関係" />
+          <PageImage path="/kidsortho/posture-improvement" imageId="良い姿勢と悪い姿勢の比較図" alt="正しい姿勢と咬合の関係" />
           <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
 
           {/* Hero Image */}

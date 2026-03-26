@@ -50,7 +50,7 @@ export default function RootCanalTypesPage() {
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#5A4D41] font-serif">
               根管治療の種類
             </h1>
-            <PageImage path="/root-canal/types" alt="根管治療の種類" />
+            <PageImage path="/root-canal/types" imageId="根管治療3種類の歯断面図解" alt="根管治療の種類" />
             <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
             <p className="text-xl md:text-2xl mb-6 text-[#5A4D41] font-medium">
               初回治療・再治療・歯根端切除術

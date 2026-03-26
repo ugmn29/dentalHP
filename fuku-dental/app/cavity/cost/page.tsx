@@ -61,7 +61,7 @@ export default function CostPage() {
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#5A4D41] font-serif">
                 虫歯治療の費用
               </h1>
-              <PageImage path="/cavity/cost" alt="虫歯治療の費用" />
+              <PageImage path="/cavity/cost" imageId="虫歯治療法別の費用比較表" alt="虫歯治療の費用" />
               <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
               <p className="text-lg md:text-xl text-[#5A4D41] leading-relaxed">
                 保険診療と自費診療の料金目安を詳しく解説<br />

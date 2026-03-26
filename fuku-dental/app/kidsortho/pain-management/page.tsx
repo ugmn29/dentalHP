@@ -52,7 +52,7 @@ export default function PainManagementPage() {
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[#5A4D41] mb-3">
                   こども矯正は痛い？<br className="md:hidden" />痛みの期間と対処法
                 </h1>
-                <PageImage path="/kidsortho/pain-management" alt="こども矯正の痛みの期間と対処法" />
+                <PageImage path="/kidsortho/pain-management" imageId="矯正の痛みが減る曲線グラフ" alt="こども矯正の痛みの期間と対処法" />
                 <div className="w-16 h-0.5 bg-[#C5A572] mb-6"></div>
               </div>
 

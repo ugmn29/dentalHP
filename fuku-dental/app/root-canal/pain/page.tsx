@@ -53,7 +53,7 @@ export default function RootCanalPainPage() {
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#5A4D41] font-serif">
                 根管治療の痛みについて
               </h1>
-              <PageImage path="/root-canal/pain" alt="根管治療の痛みについて" />
+              <PageImage path="/root-canal/pain" imageId="根管治療の痛みの推移グラフ" alt="根管治療の痛みについて" />
               <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
               <p className="text-xl md:text-2xl mb-6 text-[#5A4D41] font-medium">
                 豊洲の歯医者が治療中・治療後の痛みと対処法を詳しく解説します

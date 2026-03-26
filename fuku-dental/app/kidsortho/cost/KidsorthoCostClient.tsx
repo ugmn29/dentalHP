@@ -40,7 +40,7 @@ export default function KidsOrthoCostPage() {
                             <h1 className="text-4xl md:text-5xl font-serif font-bold mb-6 text-[#5A4D41]">
                                 こども矯正の費用
                             </h1>
-                            <PageImage path="/kidsortho/cost" alt="こども矯正の費用" />
+                            <PageImage path="/kidsortho/cost" imageId="こども矯正の費用内訳円グラフ" alt="こども矯正の費用" />
                             <div className="w-16 h-0.5 bg-[#C5A572] mx-auto mb-8"></div>
 
                             <KidsOrthoImage

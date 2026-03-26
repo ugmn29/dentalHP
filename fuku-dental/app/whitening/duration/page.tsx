@@ -55,7 +55,7 @@ export default function WhiteningDurationPage() {
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#5A4D41] font-serif">
                 ホワイトニングの効果持続期間
               </h1>
-              <PageImage path="/whitening/duration" alt="ホワイトニングの効果持続期間" />
+              <PageImage path="/whitening/duration" imageId="ホワイトニング効果持続期間のグラフ" alt="ホワイトニングの効果持続期間" />
               <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
               <p className="text-xl md:text-2xl mb-6 text-[#5A4D41] font-medium">
                 どれくらい持つ？白さを長持ちさせる秘訣

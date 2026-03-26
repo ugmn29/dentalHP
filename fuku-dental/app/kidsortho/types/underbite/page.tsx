@@ -49,7 +49,7 @@ export default function UnderbiteDetailPage() {
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[#5A4D41] mb-3">
                   下顎前突（かがくぜんとつ）
                 </h1>
-                <PageImage path="/kidsortho/types/underbite" alt="下顎前突（受け口）の治療" />
+                <PageImage path="/kidsortho/types/underbite" imageId="受け口の横顔と歯列図" alt="下顎前突（受け口）の治療" />
                 <p className="text-sm text-[#8D8070] mb-3">豊洲の矯正歯科が詳しく解説</p>
                 <div className="w-16 h-0.5 bg-[#C5A572] mb-6"></div>
               </div>

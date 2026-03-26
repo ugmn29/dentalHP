@@ -50,7 +50,7 @@ export default function PeriodontalStagesPage() {
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#5A4D41] font-serif">
                 歯周病の進行段階
               </h1>
-              <PageImage path="/periodontal/stages" alt="歯周病の進行段階" />
+              <PageImage path="/periodontal/stages" imageId="歯周病の進行段階図" alt="歯周病の進行段階" />
               <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
               <p className="text-xl md:text-2xl mb-6 text-[#5A4D41] font-medium">
                 早期発見・早期治療で大切な歯を守りましょう

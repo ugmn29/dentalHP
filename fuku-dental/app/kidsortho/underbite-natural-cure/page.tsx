@@ -58,7 +58,7 @@ export default function UnderbiteNaturalCurePage() {
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#5A4D41] font-serif">
                 受け口は自然に治る？<br />確率14%の真実
               </h1>
-              <PageImage path="/kidsortho/underbite-natural-cure" alt="受け口は自然に治るか" />
+              <PageImage path="/kidsortho/underbite-natural-cure" imageId="3歳6歳12歳の顎の成長変化シルエット" alt="受け口は自然に治るか" />
               <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
 
               <KidsOrthoImage

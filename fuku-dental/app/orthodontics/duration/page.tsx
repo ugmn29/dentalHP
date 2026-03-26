@@ -50,7 +50,7 @@ export default function OrthodonticsDurationPage() {
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
                 矯正治療の期間について
               </h1>
-              <PageImage path="/orthodontics/duration" alt="矯正治療の期間について" />
+              <PageImage path="/orthodontics/duration" imageId="矯正法別の治療期間タイムライン" alt="矯正治療の期間について" />
               <p className="text-xl md:text-2xl text-amber-100 mb-8 max-w-3xl mx-auto leading-relaxed">
                 豊洲駅すぐのFデンタルオフィスが矯正治療にかかる期間と通院頻度を詳しく解説します
               </p>

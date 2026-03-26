@@ -58,7 +58,7 @@ export default function MFTTrainingPage() {
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#5A4D41] font-serif">
                 自宅でできるMFT<br />あいうべ体操とボタンプル
               </h1>
-              <PageImage path="/kidsortho/mft-training" alt="MFTトレーニング あいうべ体操とボタンプル" />
+              <PageImage path="/kidsortho/mft-training" imageId="あいうべ体操4ステップの口の形" alt="MFTトレーニング あいうべ体操とボタンプル" />
               <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
 
               {/* Hero Image */}

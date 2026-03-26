@@ -51,7 +51,7 @@ export default function RootCanalCostPage() {
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#5A4D41] font-serif">
                 根管治療の費用・料金
               </h1>
-              <PageImage path="/root-canal/cost" alt="根管治療の費用・料金" />
+              <PageImage path="/root-canal/cost" imageId="根管治療の保険と自費の費用比較表" alt="根管治療の費用・料金" />
               <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
               <p className="text-xl md:text-2xl mb-6 text-[#5A4D41] font-medium">
                 豊洲の歯科が保険診療と自費診療の違いを分かりやすく解説します

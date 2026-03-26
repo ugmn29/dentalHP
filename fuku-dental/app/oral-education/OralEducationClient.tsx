@@ -159,7 +159,7 @@ export default function OralEducationPage() {
                                         "専用のトレーニング器具を使った効果的な練習",
                                         "お子様が飽きずに続けられるプログラム"
                                     ],
-                                    imageId: "feature2"
+                                    imageId: "子供が風船やシャボン玉で遊んでいるイラスト"
                                 },
                                 {
                                     id: "03",
@@ -417,25 +417,25 @@ export default function OralEducationPage() {
                                         num: "01",
                                         title: "相談・カウンセリング",
                                         desc: "お子様のお口の状態や、日頃の様子（食べ方、寝方など）について詳しくお話を伺います。",
-                                        imageId: "step1"
+                                        imageId: "医師と親子が対面で話している場面"
                                     },
                                     {
                                         num: "02",
                                         title: "検査・診断",
                                         desc: "お口の写真撮影、レントゲン撮影（必要な場合）、態癖（たいへき）のチェックなどを行い、問題の原因を探ります。",
-                                        imageId: "step2"
+                                        imageId: "口腔内写真撮影と態癖チェック"
                                     },
                                     {
                                         num: "03",
                                         title: "トレーニング指導",
                                         desc: "お子様の年齢や状態に合わせたトレーニング方法を指導します。親子で一緒に練習していただきます。",
-                                        imageId: "step3"
+                                        imageId: "子供がトレーニング中で衛生士が見守る場面"
                                     },
                                     {
                                         num: "04",
                                         title: "定期チェック",
                                         desc: "1ヶ月〜3ヶ月ごとに来院いただき、トレーニングの成果やお口の変化を確認します。",
-                                        imageId: "step4"
+                                        imageId: "笑顔の子供とGoodサイン"
                                     }
                                 ].map((step, index) => (
                                     <div key={index}>

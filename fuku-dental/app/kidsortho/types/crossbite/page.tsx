@@ -54,7 +54,7 @@ export default function CrossBiteDetailPage() {
                   <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#5A4D41]">
                     交叉咬合（こうさこうごう）
                   </h1>
-                  <PageImage path="/kidsortho/types/crossbite" alt="交叉咬合（クロスバイト）の治療" />
+                  <PageImage path="/kidsortho/types/crossbite" imageId="交叉咬合の正面歯列図" alt="交叉咬合（クロスバイト）の治療" />
                   <p className="text-sm text-[#8D8070] mt-2">豊洲の矯正歯科が症状・原因・治療法を解説</p>
                 </div>
               </div>

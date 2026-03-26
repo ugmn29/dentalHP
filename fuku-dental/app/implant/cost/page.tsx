@@ -126,7 +126,7 @@ export default function ImplantCostPage() {
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#2d4835] font-serif">
                 インプラント治療の費用
               </h1>
-              <PageImage path="/implant/cost" alt="インプラント治療の費用・料金" />
+              <PageImage path="/implant/cost" imageId="インプラント1本の費用内訳フロー図" alt="インプラント治療の費用・料金" />
               <div className="w-24 h-1 bg-[#395b45] mx-auto mb-8"></div>
               <p className="text-xl md:text-2xl mb-6 text-[#2d4835] font-medium">
                 明確な料金体系で安心の治療を

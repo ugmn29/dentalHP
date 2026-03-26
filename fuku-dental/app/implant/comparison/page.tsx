@@ -61,7 +61,7 @@ export default function ComparisonPage() {
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#2d4835] font-serif">
                 インプラント・入れ歯・ブリッジ比較
               </h1>
-              <PageImage path="/implant/comparison" alt="インプラント・入れ歯・ブリッジの比較" />
+              <PageImage path="/implant/comparison" imageId="インプラントと入れ歯とブリッジの比較図" alt="インプラント・入れ歯・ブリッジの比較" />
               <div className="w-24 h-1 bg-[#395b45] mx-auto mb-8"></div>
               <p className="text-xl md:text-2xl mb-6 text-[#2d4835] font-medium">
                 3つの治療法を徹底比較して、あなたに合った選択を

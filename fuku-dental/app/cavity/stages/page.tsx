@@ -47,7 +47,7 @@ export default function CavityStagesPage() {
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#5A4D41] font-serif">
                 虫歯の進行段階
               </h1>
-              <PageImage path="/cavity/stages" alt="虫歯の進行段階" />
+              <PageImage path="/cavity/stages" imageId="C0からC4の虫歯進行段階の歯断面図" alt="虫歯の進行段階" />
               <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
               <p className="text-xl md:text-2xl mb-6 text-[#5A4D41] font-medium">
                 C0からC4まで、進行度別の症状と治療法

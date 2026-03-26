@@ -61,7 +61,7 @@ export default function TreatmentMethodsPage() {
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#5A4D41] font-serif">
                 虫歯の治療方法
               </h1>
-              <PageImage path="/cavity/treatment-methods" alt="虫歯の治療方法" />
+              <PageImage path="/cavity/treatment-methods" imageId="虫歯治療法別の歯断面図" alt="虫歯の治療方法" />
               <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
               <p className="text-lg md:text-xl text-[#5A4D41] leading-relaxed">
                 虫歯の進行度に応じた最適な治療法をご提案<br />

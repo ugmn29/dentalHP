@@ -18,7 +18,7 @@ export function BeforeImplantCards() {
           <div className="absolute inset-0">
             <PageImage
               path="/implant"
-              imageId="before-extraction"
+              imageId="抜歯を勧められた患者に希望のインプラント"
               alt="抜歯を勧められた方へ"
               className="w-full h-full object-cover"
             />
@@ -75,7 +75,7 @@ export function BeforeImplantCards() {
           <div className="absolute inset-0">
             <PageImage
               path="/implant"
-              imageId="before-bone"
+              imageId="骨が足りなくても骨造成で対応可能"
               alt="インプラントを断られた方へ"
               className="w-full h-full object-cover"
             />
@@ -135,7 +135,7 @@ export function BeforeImplantCards() {
             <div className="absolute inset-0">
               <PageImage
                 path="/implant"
-                imageId="before-extraction"
+                imageId="抜歯を勧められた患者に希望のインプラント"
                 alt="抜歯を勧められた方へ"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
@@ -160,7 +160,7 @@ export function BeforeImplantCards() {
             <div className="absolute inset-0">
               <PageImage
                 path="/implant"
-                imageId="before-bone"
+                imageId="骨が足りなくても骨造成で対応可能"
                 alt="インプラントを断られた方へ"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />

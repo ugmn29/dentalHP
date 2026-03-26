@@ -46,7 +46,7 @@ export default function WhiteningSafetyPage() {
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#5A4D41] font-serif">
               ホワイトニングの安全性・副作用
             </h1>
-            <PageImage path="/whitening/safety" alt="ホワイトニングの安全性・副作用" />
+            <PageImage path="/whitening/safety" imageId="ホワイトニング剤が浸透する歯の断面図" alt="ホワイトニングの安全性・副作用" />
             <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
             <p className="text-xl md:text-2xl mb-6 text-[#5A4D41] font-medium">
               知覚過敏などのリスクと対策

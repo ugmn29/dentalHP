@@ -47,7 +47,7 @@ export default function PreventiveCostPage() {
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#5A4D41] font-serif">
                 予防歯科の費用
               </h1>
-              <PageImage path="/preventive/cost" alt="予防歯科の費用" />
+              <PageImage path="/preventive/cost" imageId="予防処置別の費用一覧表" alt="予防歯科の費用" />
               <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
               <p className="text-xl md:text-2xl mb-6 text-[#5A4D41] font-medium">
                 透明性のある料金体系で、安心して予防ケアを

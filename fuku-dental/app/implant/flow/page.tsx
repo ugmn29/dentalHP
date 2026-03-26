@@ -150,7 +150,7 @@ export default function ImplantFlowPage() {
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#2d4835] font-serif">
                 インプラント治療の流れ
               </h1>
-              <PageImage path="/implant/flow" alt="インプラント治療の流れ" />
+              <PageImage path="/implant/flow" imageId="インプラント治療6段階フローチャート" alt="インプラント治療の流れ" />
               <div className="w-24 h-1 bg-[#395b45] mx-auto mb-8"></div>
               <p className="text-xl md:text-2xl mb-6 text-[#2d4835] font-medium">
                 8つのステップで安心・安全な治療を

@@ -51,7 +51,7 @@ export default function SportsAndMusicPage() {
             スポーツ・楽器への影響<br />
             歯並びと運動・演奏パフォーマンスの関係
           </h1>
-          <PageImage path="/kidsortho/sports-and-music" alt="スポーツ・楽器への影響と歯並びの関係" />
+          <PageImage path="/kidsortho/sports-and-music" imageId="スポーツと楽器をする子供と矯正装置" alt="スポーツ・楽器への影響と歯並びの関係" />
           <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
 
           <KidsOrthoImage

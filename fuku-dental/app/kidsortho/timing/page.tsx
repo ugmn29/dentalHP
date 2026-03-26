@@ -52,7 +52,7 @@ export default function KidsOrthoTimingPage() {
                             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#5A4D41] font-serif">
                                 「様子を見ましょう」は信じていい？<br />ベストタイミング
                             </h1>
-                            <PageImage path="/kidsortho/timing" alt="小児矯正のベストタイミング" />
+                            <PageImage path="/kidsortho/timing" imageId="歯の生え変わりと治療開始ベストタイミング" alt="小児矯正のベストタイミング" />
                             <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
 
                             <KidsOrthoImage

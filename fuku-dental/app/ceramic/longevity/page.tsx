@@ -55,7 +55,7 @@ export default function CeramicLongevityPage() {
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#5A4D41] font-serif">
                 セラミック治療の寿命・耐久性
               </h1>
-              <PageImage path="/ceramic/longevity" alt="セラミック治療の寿命・耐久性" />
+              <PageImage path="/ceramic/longevity" imageId="セラミック素材別の寿命比較グラフ" alt="セラミック治療の寿命・耐久性" />
               <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
               <p className="text-xl md:text-2xl mb-6 text-[#5A4D41] font-medium">
                 何年持つ？長持ちさせる秘訣とは

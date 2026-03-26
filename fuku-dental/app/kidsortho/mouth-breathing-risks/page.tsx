@@ -58,7 +58,7 @@ export default function MouthBreathingRisksPage() {
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#5A4D41] font-serif">
                 お口ポカン（口呼吸）が<br />引き起こす病気リスク
               </h1>
-              <PageImage path="/kidsortho/mouth-breathing-risks" alt="口呼吸が引き起こす病気リスク" />
+              <PageImage path="/kidsortho/mouth-breathing-risks" imageId="口呼吸と鼻呼吸の顔の発達比較" alt="口呼吸が引き起こす病気リスク" />
               <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
 
               <KidsOrthoImage

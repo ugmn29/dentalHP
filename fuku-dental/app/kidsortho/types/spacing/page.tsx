@@ -49,7 +49,7 @@ export default function SpacingDetailPage() {
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[#5A4D41] mb-3">
                   空隙歯列（くうげきしれつ）
                 </h1>
-                <PageImage path="/kidsortho/types/spacing" alt="空隙歯列（すきっ歯）の治療" />
+                <PageImage path="/kidsortho/types/spacing" imageId="すきっ歯の正面歯列図" alt="空隙歯列（すきっ歯）の治療" />
                 <p className="text-sm text-[#8D8070] mb-3">豊洲の矯正歯科が詳しく解説</p>
                 <div className="w-16 h-0.5 bg-[#C5A572] mb-6"></div>
               </div>

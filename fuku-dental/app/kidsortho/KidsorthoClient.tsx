@@ -44,7 +44,7 @@ export default function KidsOrthoPage() {
             highlight: "根本改善のMFT",
             summary: "<span class='font-bold bg-yellow-100'>口呼吸や舌の癖</span>など、歯並びが悪くなる<span class='font-bold bg-yellow-100'>根本原因を改善</span>するトレーニング（MFT）を行います。このトレーニングを行わないと必ず後戻りしてしまいます。<span class='text-[#395b45] font-bold'>悪習癖を直すことで治療後の後戻りを防ぎ、長期的に美しい歯並びを維持</span>できます。",
             details: [],
-            imageId: "feature3",
+            imageId: "MFT舌のトレーニングをしている子供",
             icon: Smile,
             color: "from-pink-100 to-rose-100",
             iconColor: "text-pink-500"
@@ -66,7 +66,7 @@ export default function KidsOrthoPage() {
             highlight: "明確な費用設計",
             summary: "当院では<span class='font-bold bg-yellow-100'>トータルフィー制度</span>を導入しており、<span class='text-[#395b45] font-bold'>最初にご提示した金額から費用が変わらない安心の費用設計</span>です。治療開始前に総額を明確に提示し、<span class='font-bold bg-yellow-100'>治療途中での追加費用は一切なし</span>。<span class='text-[#395b45] font-bold'>予算を立てやすく、安心して治療を続けられます</span>。",
             details: [],
-            imageId: "feature5",
+            imageId: "こども矯正の料金プラン図解",
             icon: Coins,
             color: "from-yellow-100 to-orange-100",
             iconColor: "text-yellow-600"
@@ -78,31 +78,31 @@ export default function KidsOrthoPage() {
             num: "01",
             title: "相談・カウンセリング",
             desc: "歯並びのお悩みやご希望を伺い、お口の中を拝見して、治療の必要性や時期についてお話しします。",
-            imageId: "flow1"
+            imageId: "親子が歯科医師と相談している場面"
         },
         {
             num: "02",
             title: "精密検査",
             desc: "レントゲン（セファロ）、写真撮影、型取りなどを行い、骨格や歯の状態を詳しく調べます。",
-            imageId: "flow2"
+            imageId: "子供がレントゲン撮影をしている場面"
         },
         {
             num: "03",
             title: "診断・治療計画",
             desc: "検査結果に基づき、最適な治療法、期間、費用について詳しくご説明します。",
-            imageId: "flow3"
+            imageId: "モニターで治療計画を説明している場面"
         },
         {
             num: "04",
             title: "治療開始（1期治療）",
             desc: "装置を装着し、定期的に通院して調整を行います。MFT（口腔筋機能療法）も並行して行います。",
-            imageId: "flow4"
+            imageId: "子供がマウスピースを装着している場面"
         },
         {
             num: "05",
             title: "経過観察・保定",
             desc: "永久歯が生え揃うまで経過を観察します。必要に応じて2期治療へ移行します。",
-            imageId: "flow5"
+            imageId: "笑顔の子供が歯を見せている場面"
         }
     ];
 

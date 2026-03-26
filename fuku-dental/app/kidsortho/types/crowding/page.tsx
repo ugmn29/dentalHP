@@ -49,7 +49,7 @@ export default function CrowdingDetailPage() {
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[#5A4D41] mb-3">
                   叢生(そうせい)
                 </h1>
-                <PageImage path="/kidsortho/types/crowding" alt="叢生（ガタガタの歯並び）の治療" />
+                <PageImage path="/kidsortho/types/crowding" imageId="叢生ガタガタの正面歯列図" alt="叢生（ガタガタの歯並び）の治療" />
                 <p className="text-sm text-[#8D8070] mb-3">豊洲の矯正歯科が詳しく解説</p>
                 <div className="w-16 h-0.5 bg-[#C5A572] mb-6"></div>
               </div>

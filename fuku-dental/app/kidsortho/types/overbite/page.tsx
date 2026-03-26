@@ -49,7 +49,7 @@ export default function OverbiteDetailPage() {
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[#5A4D41] mb-3">
                   上顎前突（じょうがくぜんとつ）
                 </h1>
-                <PageImage path="/kidsortho/types/overbite" alt="上顎前突（出っ歯）の治療" />
+                <PageImage path="/kidsortho/types/overbite" imageId="出っ歯の横顔と歯列図" alt="上顎前突（出っ歯）の治療" />
                 <p className="text-sm text-[#8D8070] mb-3">豊洲の矯正歯科が詳しく解説</p>
                 <div className="w-16 h-0.5 bg-[#C5A572] mb-6"></div>
               </div>

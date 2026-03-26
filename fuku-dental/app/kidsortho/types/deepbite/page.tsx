@@ -54,7 +54,7 @@ export default function DeepBiteDetailPage() {
                   <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#5A4D41]">
                     過蓋咬合（かがいこうごう）
                   </h1>
-                  <PageImage path="/kidsortho/types/deepbite" alt="過蓋咬合（ディープバイト）の治療" />
+                  <PageImage path="/kidsortho/types/deepbite" imageId="過蓋咬合の横顔と噛み合わせ断面図" alt="過蓋咬合（ディープバイト）の治療" />
                   <p className="text-sm text-[#8D8070] mt-2">豊洲の矯正歯科が症状・原因・治療法を解説</p>
                 </div>
               </div>

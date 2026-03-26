@@ -19,7 +19,7 @@ const TraumaPage = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-[#E74C3C]/90 to-[#C0392B]/80 z-10"></div>
         <PageImage
           path="/concerns/trauma"
-          imageId="hero"
+          imageId="歯の外傷と応急処置の手順図"
           alt="歯の外傷・急患対応"
           className="absolute inset-0 w-full h-full object-cover"
         />

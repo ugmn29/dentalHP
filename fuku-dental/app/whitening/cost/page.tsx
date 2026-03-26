@@ -43,7 +43,7 @@ export default function WhiteningCostPage() {
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#5A4D41] font-serif">
               ホワイトニングの料金・費用
             </h1>
-            <PageImage path="/whitening/cost" alt="ホワイトニングの料金・費用" />
+            <PageImage path="/whitening/cost" imageId="ホワイトニング各プランの料金比較表" alt="ホワイトニングの料金・費用" />
             <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
             <p className="text-xl md:text-2xl mb-6 text-[#5A4D41] font-medium">
               明瞭な料金体系で安心
