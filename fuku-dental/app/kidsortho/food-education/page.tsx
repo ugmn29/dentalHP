@@ -54,14 +54,6 @@ export default function FoodEducationPage() {
           <PageImage path="/kidsortho/food-education" alt="顎を育てる食育レシピ" />
           <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
 
-          {/* Hero Image */}
-          <div className="mt-8">
-            <KidsOrthoImage
-              name="/images/kidsortho/training/food-education-hero"
-              alt="食育レシピ - よく噛む食事で顎の発達を促進し歯並びを改善"
-              category="training"
-            />
-          </div>
 
           <p className="text-xl md:text-2xl mt-6 mb-6 text-[#5A4D41] font-medium font-sans">
             硬い食べ物を前歯で噛みちぎる練習で顎の発達を促進

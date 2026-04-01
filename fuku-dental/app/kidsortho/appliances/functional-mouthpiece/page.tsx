@@ -54,12 +54,6 @@ export default function FunctionalMouthpiecePage() {
                                 <div className="w-16 h-0.5 bg-[#C5A572] mb-6"></div>
                             </div>
 
-                            {/* ヒーロー画像 */}
-                            <KidsOrthoImage
-                                name="functional-mouthpiece-hero"
-                                alt="機能的マウスピース装置の外観"
-                                category="appliances"
-                            />
 
                             <p className="text-sm text-[#8D8070] mt-3">豊洲の矯正歯科が各装置の違いを徹底比較</p>
                             <p className="text-base md:text-lg leading-loose text-[#8D8070] font-sans mt-4 mb-8">

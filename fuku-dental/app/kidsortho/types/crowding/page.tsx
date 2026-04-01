@@ -54,12 +54,6 @@ export default function CrowdingDetailPage() {
                 <div className="w-16 h-0.5 bg-[#C5A572] mb-6"></div>
               </div>
 
-              {/* ヒーロー画像 */}
-              <KidsOrthoImage
-                name="crowding-hero"
-                alt="叢生（ガタガタの歯並び）の症例写真"
-                category="types"
-              />
 
               <p className="text-lg text-[#5A4D41] mb-2 font-sans mt-6">ガタガタ・デコボコの歯並び</p>
               <p className="text-base text-[#8D8070] font-sans">

@@ -60,14 +60,6 @@ export default function GumTrainingPage() {
               <PageImage path="/kidsortho/gum-training" imageId="ガムトレーニング3ステップ手順" alt="ガムトレーニング完全手順" />
               <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
 
-              {/* Hero Image */}
-              <div className="mt-8">
-                <KidsOrthoImage
-                  name="/images/kidsortho/training/gum-training-hero"
-                  alt="ガムトレーニング - キシリトールガムで咬合力と顎の発達を促進"
-                  category="training"
-                />
-              </div>
 
               <p className="text-xl md:text-2xl mt-6 mb-6 text-[#5A4D41] font-medium font-sans">
                 咬合力と顎の発達を促進

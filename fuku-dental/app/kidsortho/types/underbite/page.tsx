@@ -54,12 +54,6 @@ export default function UnderbiteDetailPage() {
                 <div className="w-16 h-0.5 bg-[#C5A572] mb-6"></div>
               </div>
 
-              {/* ヒーロー画像 */}
-              <KidsOrthoImage
-                name="underbite-hero"
-                alt="下顎前突（受け口）の症例写真"
-                category="types"
-              />
 
               <p className="text-lg text-[#C5A572] font-bold mt-6 mb-4">通称：受け口（うけくち）、反対咬合</p>
 

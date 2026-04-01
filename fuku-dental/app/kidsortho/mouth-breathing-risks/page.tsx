@@ -61,11 +61,6 @@ export default function MouthBreathingRisksPage() {
               <PageImage path="/kidsortho/mouth-breathing-risks" imageId="口呼吸と鼻呼吸の顔の発達比較" alt="口呼吸が引き起こす病気リスク" />
               <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
 
-              <KidsOrthoImage
-                name="/images/kidsortho/info/mouth-breathing-risks-hero"
-                alt="お口ポカン（口呼吸）の病気リスク"
-                category="info"
-              />
 
               <p className="font-sans text-xl md:text-2xl mt-6 mb-6 text-[#5A4D41] font-medium font-sans">
                 「癖」ではなく「病気のサイン」です

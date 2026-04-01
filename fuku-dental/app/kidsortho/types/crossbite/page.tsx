@@ -60,12 +60,6 @@ export default function CrossBiteDetailPage() {
               </div>
             </div>
 
-              {/* ヒーロー画像 */}
-              <KidsOrthoImage
-                name="crossbite-hero"
-                alt="交叉咬合（クロスバイト）の症例写真"
-                category="types"
-              />
 
               <p className="text-lg text-[#E67A2E] font-bold mt-6 mb-4">通称：クロスバイト</p>
 

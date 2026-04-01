@@ -4,7 +4,6 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
 import { Clock, ArrowRight, CheckCircle, AlertCircle, TrendingUp, Calendar, Info, Home, ChevronRight } from 'lucide-react';
-import { KidsOrthoImage } from '@/components/KidsOrthoImage';
 import { PageImage } from '@/components/PageImage';
 import Link from 'next/link';
 
@@ -55,11 +54,6 @@ export default function KidsOrthoDurationPage() {
                             <PageImage path="/kidsortho/duration" imageId="1期2期治療のタイムライン帯グラフ" alt="小児矯正の治療期間" />
                             <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
 
-                            <KidsOrthoImage
-                                name="duration-hero"
-                                alt="小児矯正の治療期間"
-                                category="guide"
-                            />
 
                             <p className="text-xl md:text-2xl mt-6 mb-6 text-[#5A4D41] font-medium">
                                 期間が長いのは成長を待つ時間（経過観察）が含まれるから

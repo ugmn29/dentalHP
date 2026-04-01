@@ -61,11 +61,6 @@ export default function AvoidRegretPage() {
               <PageImage path="/kidsortho/avoid-regret" imageId="治療した場合としなかった場合の歯並び比較" alt="小児矯正で後悔しないために" />
               <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
 
-                            <KidsOrthoImage
-                                name="avoid-regret-hero"
-                                alt="小児矯正で後悔しないために"
-                                category="guide"
-                            />
 
               <p className="text-xl md:text-2xl mt-6 mb-6 text-[#5A4D41] font-medium font-sans">
                 始める前に知るべき4つのこと
@@ -85,11 +80,6 @@ export default function AvoidRegretPage() {
 
             {/* 結論 */}
 
-                            <KidsOrthoImage
-                                name="avoid-regret-content"
-                                alt="後悔しない歯科医院の選び方"
-                                category="guide"
-                            />
             <div className="text-center mb-20">
               <h2 className="text-3xl md:text-4xl font-bold text-[#5A4D41] mb-8 font-serif">
                 結論
@@ -106,12 +96,6 @@ export default function AvoidRegretPage() {
                 <p className="font-bold bg-white p-6 rounded-2xl shadow-sm border border-[#C5A572]/10 text-base">
                   当院では初診時に<span className="text-[#C5A572]">「最悪のシナリオ」も含めて</span>すべて説明します。
                   納得してから治療を開始できます。
-                              
-                            <KidsOrthoImage
-                                name="avoid-regret-content"
-                                alt="後悔しない歯科医院の選び方"
-                                category="guide"
-                            />
                 </p>
               </div>
             </div>

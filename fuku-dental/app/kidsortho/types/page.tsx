@@ -55,11 +55,6 @@ export default function KidsOrthoTypesPage() {
                             <PageImage path="/kidsortho/types" imageId="7種類の不正咬合一覧の歯列図" alt="こどもの不正咬合の種類" />
                             <div className="w-24 h-1 bg-[#E67A2E] mx-auto mb-8"></div>
 
-                            <KidsOrthoImage
-                                name="types-hero"
-                                alt="不正咬合の種類と治療法"
-                                category="guide"
-                            />
 
                             <p className="text-xl md:text-2xl mt-6 mb-6 text-[#5A4D41] font-medium font-sans">
                                 7つのタイプとその特徴

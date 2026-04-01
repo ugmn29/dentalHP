@@ -55,11 +55,6 @@ export default function KidsOrthoTimingPage() {
                             <PageImage path="/kidsortho/timing" imageId="歯の生え変わりと治療開始ベストタイミング" alt="小児矯正のベストタイミング" />
                             <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
 
-                            <KidsOrthoImage
-                                name="timing-hero"
-                                alt="小児矯正のベストタイミング"
-                                category="guide"
-                            />
 
                             <p className="text-xl md:text-2xl mt-6 mb-6 text-[#5A4D41] font-medium font-sans">
                                 受け口は3歳から、デコボコは6歳から。<br />

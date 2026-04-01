@@ -54,12 +54,6 @@ export default function ChinCapPage() {
                                 <div className="w-16 h-0.5 bg-[#C5A572] mb-6"></div>
                             </div>
 
-                            {/* ヒーロー画像 */}
-                            <KidsOrthoImage
-                                name="chin-cap-hero"
-                                alt="チンキャップの外観"
-                                category="appliances"
-                            />
 
                             <p className="text-base md:text-lg leading-loose text-[#8D8070] font-sans mt-6 mb-8">
                                 下顎の過成長を抑制し、骨格性の受け口を成長期に根本的に改善する装置です

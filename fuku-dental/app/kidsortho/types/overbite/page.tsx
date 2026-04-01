@@ -54,12 +54,6 @@ export default function OverbiteDetailPage() {
                 <div className="w-16 h-0.5 bg-[#C5A572] mb-6"></div>
               </div>
 
-              {/* ヒーロー画像 */}
-              <KidsOrthoImage
-                name="overbite-hero"
-                alt="上顎前突（出っ歯）の症例写真"
-                category="types"
-              />
 
               <p className="text-lg text-[#C5A572] font-bold mt-6 mb-4">通称：出っ歯（でっぱ）</p>
 

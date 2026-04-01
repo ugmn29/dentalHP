@@ -59,12 +59,6 @@ export default function FunctionalAppliancePage() {
                                 <div className="w-16 h-0.5 bg-[#C5A572] mb-6"></div>
                             </div>
 
-                            {/* ヒーロー画像 */}
-                            <KidsOrthoImage
-                                name="functional-hero"
-                                alt="機能的矯正装置の外観"
-                                category="appliances"
-                            />
 
                             <p className="text-base md:text-lg leading-loose text-[#8D8070] font-sans mt-6 mb-8">
                                 バイオネーター・FKOなど、筋肉の力を利用して顎の成長をコントロールし、骨格的な問題を改善する装置です

@@ -54,11 +54,6 @@ export default function SportsAndMusicPage() {
           <PageImage path="/kidsortho/sports-and-music" imageId="スポーツと楽器をする子供と矯正装置" alt="スポーツ・楽器への影響と歯並びの関係" />
           <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
 
-          <KidsOrthoImage
-            name="sports-and-music-hero"
-            alt="スポーツや楽器演奏と歯並びの関係"
-            category="info"
-          />
 
           <p className="text-xl md:text-2xl mt-6 mb-6 text-[#5A4D41] font-medium">
             矯正治療でパフォーマンスが向上する理由

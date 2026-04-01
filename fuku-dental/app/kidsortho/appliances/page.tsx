@@ -353,11 +353,6 @@ export default function KidsOrthoAppliancesPage() {
                             </p>
                         </div>
                     </div>
-                            <KidsOrthoImage
-                                name="appliances-hero"
-                                alt="小児矯正の装置の種類"
-                                category="guide"
-                            />
                 </section>
 
                 {/* 装置選択の3つのポイント */}
@@ -366,11 +361,6 @@ export default function KidsOrthoAppliancesPage() {
                         <div className="max-w-5xl mx-auto">
                             <div className="text-center mb-12">
                                 <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#5A4D41]">装置選択の3つのポイント</h2>
-                            <KidsOrthoImage
-                                name="appliances-content"
-                                alt="装置の選び方と使用方法"
-                                category="guide"
-                            />
                                 <div className="w-16 h-0.5 bg-[#C5A572] mx-auto mt-4 mb-6"></div>
                                 <p className="text-lg text-[#8D8070] font-sans">
                                     お子さまに最適な装置を選ぶために考慮すること
@@ -417,14 +407,6 @@ export default function KidsOrthoAppliancesPage() {
                                 <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#5A4D41]">こども矯正で使われる主な装置</h2>
                                 <div className="w-16 h-0.5 bg-[#C5A572] mx-auto mt-4 mb-6"></div>
 
-                                <div className="mb-8">
-                                    <KidsOrthoImage
-                                        name="appliances-types"
-                                        alt="小児矯正で使用される主な装置の種類"
-                                        category="guide"
-                                        className="max-w-3xl mx-auto"
-                                    />
-                                </div>
 
                                 <p className="text-lg text-[#8D8070] font-sans">
                                     小児矯正（1期治療）では様々な装置を使用します。症状・年齢に応じて最適な装置を選択します

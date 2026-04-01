@@ -56,11 +56,6 @@ export default function PainManagementPage() {
                 <div className="w-16 h-0.5 bg-[#C5A572] mb-6"></div>
               </div>
 
-              <KidsOrthoImage
-                name="/images/kidsortho/info/pain-management-hero"
-                alt="こども矯正の痛み対処法"
-                category="info"
-              />
 
               <p className="text-lg text-[#C5A572] font-bold mt-6 mb-4">こども矯正の痛み管理と緊急対応</p>
               <p className="text-[#8D8070] mt-3 font-sans">豊洲の矯正歯科が詳しく解説します</p>

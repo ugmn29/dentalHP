@@ -54,14 +54,6 @@ export default function PostureImprovementPage() {
           <PageImage path="/kidsortho/posture-improvement" imageId="良い姿勢と悪い姿勢の比較図" alt="正しい姿勢と咬合の関係" />
           <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
 
-          {/* Hero Image */}
-          <div className="mt-8">
-            <KidsOrthoImage
-              name="/images/kidsortho/training/posture-improvement-hero"
-              alt="姿勢改善マニュアル - 正しい姿勢で咬合と歯並びを改善"
-              category="training"
-            />
-          </div>
 
           <p className="text-xl md:text-2xl mt-6 mb-6 text-[#5A4D41] font-medium">
             浮き指チェック法と家庭でできる姿勢改善トレーニング

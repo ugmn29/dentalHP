@@ -61,14 +61,6 @@ export default function MFTTrainingPage() {
               <PageImage path="/kidsortho/mft-training" imageId="あいうべ体操4ステップの口の形" alt="MFTトレーニング あいうべ体操とボタンプル" />
               <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
 
-              {/* Hero Image */}
-              <div className="mt-8">
-                <KidsOrthoImage
-                  name="/images/kidsortho/training/mft-training-hero"
-                  alt="MFTトレーニング - あいうべ体操とボタンプルで口腔機能を改善"
-                  category="training"
-                />
-              </div>
 
               <p className="text-xl md:text-2xl mt-6 mb-6 text-[#5A4D41] font-medium">
                 1日3分で口呼吸・歯並びを改善

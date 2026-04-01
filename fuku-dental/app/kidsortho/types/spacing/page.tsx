@@ -54,12 +54,6 @@ export default function SpacingDetailPage() {
                 <div className="w-16 h-0.5 bg-[#C5A572] mb-6"></div>
               </div>
 
-              {/* ヒーロー画像 */}
-              <KidsOrthoImage
-                name="spacing-hero"
-                alt="空隙歯列（歯間の隙間）の症例写真"
-                category="types"
-              />
 
               <p className="text-lg text-[#C5A572] font-bold mt-6 mb-4">通称：すきっ歯</p>
 

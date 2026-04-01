@@ -60,12 +60,6 @@ export default function DeepBiteDetailPage() {
               </div>
             </div>
 
-              {/* ヒーロー画像 */}
-              <KidsOrthoImage
-                name="deepbite-hero"
-                alt="過蓋咬合（ディープバイト）の症例写真"
-                category="types"
-              />
 
               <p className="text-lg text-[#E67A2E] font-bold mt-6 mb-4">通称：ディープバイト</p>
 

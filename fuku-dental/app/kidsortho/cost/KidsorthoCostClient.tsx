@@ -43,11 +43,6 @@ export default function KidsOrthoCostPage() {
                             <PageImage path="/kidsortho/cost" imageId="こども矯正の費用内訳円グラフ" alt="こども矯正の費用" />
                             <div className="w-16 h-0.5 bg-[#C5A572] mx-auto mb-8"></div>
 
-                            <KidsOrthoImage
-                                name="cost-hero"
-                                alt="小児矯正の費用と医療費控除"
-                                category="guide"
-                            />
 
                             <p className="text-xl md:text-2xl mt-6 mb-6 text-[#5A4D41] font-serif font-medium">
                                 明確な料金体系で安心
@@ -65,11 +60,6 @@ export default function KidsOrthoCostPage() {
                     <div className="container mx-auto px-4 max-w-4xl">
                         <div className="text-center mb-12">
                             <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#5A4D41]">一般的なこども矯正の費用相場</h2>
-                            <KidsOrthoImage
-                                name="cost-content"
-                                alt="費用の内訳と支払いプラン"
-                                category="guide"
-                            />
                             <div className="w-16 h-0.5 bg-[#C5A572] mx-auto mt-4"></div>
                         </div>
                         <div className="text-center mb-12">
