@@ -12,9 +12,9 @@ export default function KidsPreventivePage() {
 
     // Hero slider images
     const heroImages = [
-        { imageId: "hero-slide1", alt: "優しい診療" },
-        { imageId: "hero-slide2", alt: "楽しそうな子供" },
-        { imageId: "hero-slide3", alt: "親子でのカウンセリング" },
+        { imageId: "hero-slide1", alt: "豊洲の歯医者 こども歯科の優しい診療" },
+        { imageId: "hero-slide2", alt: "豊洲 歯科 こどもの予防歯科" },
+        { imageId: "hero-slide3", alt: "豊洲の歯科医院 親子カウンセリング" },
     ];
 
     // Hero image slider logic

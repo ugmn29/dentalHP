@@ -12,9 +12,9 @@ export default function PeriodontalPage() {
     const [currentHeroSlide, setCurrentHeroSlide] = useState(0);
 
     const heroImages = [
-        { imageId: "hero-slide1", alt: "歯周病治療1" },
-        { imageId: "hero-slide2", alt: "歯周病治療2" },
-        { imageId: "hero-slide3", alt: "歯周病治療3" },
+        { imageId: "hero-slide1", alt: "豊洲の歯科 歯周病治療" },
+        { imageId: "hero-slide2", alt: "豊洲の歯医者 歯周病の精密検査" },
+        { imageId: "hero-slide3", alt: "豊洲 歯周病予防・メンテナンス" },
     ];
 
     useEffect(() => {

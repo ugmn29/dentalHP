@@ -11,9 +11,9 @@ export default function OralSurgeryPage() {
 
     // Hero slider images
     const heroImages = [
-        { imageId: "hero-slide1", alt: "口腔外科1" },
-        { imageId: "hero-slide2", alt: "口腔外科2" },
-        { imageId: "hero-slide3", alt: "口腔外科3" },
+        { imageId: "hero-slide1", alt: "豊洲の歯科 口腔外科" },
+        { imageId: "hero-slide2", alt: "豊洲の歯医者 口腔外科手術" },
+        { imageId: "hero-slide3", alt: "豊洲 口腔外科の診療風景" },
     ];
 
     // Hero image slider logic

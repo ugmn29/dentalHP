@@ -13,9 +13,9 @@ export default function CeramicPage() {
 
     // Hero slider images
     const heroImages = [
-        { imageId: "hero-slide1", alt: "セラミック治療1" },
-        { imageId: "hero-slide2", alt: "セラミック治療2" },
-        { imageId: "hero-slide3", alt: "セラミック治療3" },
+        { imageId: "hero-slide1", alt: "豊洲の歯科 セラミック治療" },
+        { imageId: "hero-slide2", alt: "豊洲の歯医者 審美セラミック" },
+        { imageId: "hero-slide3", alt: "豊洲 セラミッククラウン・インレー治療" },
     ];
 
     // Hero image slider logic

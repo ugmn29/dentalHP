@@ -12,9 +12,9 @@ export default function CavityPage() {
 
     // Hero slider images
     const heroImages = [
-        { imageId: "hero-slide1", alt: "むし歯治療1" },
-        { imageId: "hero-slide2", alt: "むし歯治療2" },
-        { imageId: "hero-slide3", alt: "むし歯治療3" },
+        { imageId: "hero-slide1", alt: "豊洲の歯医者でむし歯治療" },
+        { imageId: "hero-slide2", alt: "豊洲 歯科 痛みの少ないむし歯治療" },
+        { imageId: "hero-slide3", alt: "豊洲駅近くの歯医者 むし歯の精密治療" },
     ];
 
     // Hero image slider logic

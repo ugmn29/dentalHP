@@ -12,9 +12,9 @@ export default function OralEducationPage() {
 
     // Hero slider images
     const heroImages = [
-        { imageId: "hero-slide1", alt: "赤ちゃんと母親" },
-        { imageId: "hero-slide2", alt: "楽しそうな子供" },
-        { imageId: "hero-slide3", alt: "親子でのカウンセリング" },
+        { imageId: "hero-slide1", alt: "豊洲の歯科 0歳からの口育プログラム" },
+        { imageId: "hero-slide2", alt: "豊洲の歯医者 こどもの口育トレーニング" },
+        { imageId: "hero-slide3", alt: "豊洲 歯科医院 親子カウンセリング" },
     ];
 
     // Hero image slider logic

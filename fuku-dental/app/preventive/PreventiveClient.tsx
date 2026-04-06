@@ -12,9 +12,9 @@ export default function GeneralPreventivePage() {
     const [currentHeroSlide, setCurrentHeroSlide] = useState(0);
 
     const heroImages = [
-        { imageId: "hero-slide1", alt: "予防歯科1" },
-        { imageId: "hero-slide2", alt: "予防歯科2" },
-        { imageId: "hero-slide3", alt: "予防歯科3" },
+        { imageId: "hero-slide1", alt: "豊洲の歯科 予防歯科・定期検診" },
+        { imageId: "hero-slide2", alt: "豊洲の歯医者 クリーニング・予防処置" },
+        { imageId: "hero-slide3", alt: "豊洲 予防歯科 フッ素塗布" },
     ];
 
     useEffect(() => {

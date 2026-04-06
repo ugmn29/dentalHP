@@ -12,9 +12,9 @@ export default function MouthpiecePage() {
 
     // Hero slider images
     const heroImages = [
-        { imageId: "hero-slide1", alt: "マウスピース矯正1" },
-        { imageId: "hero-slide2", alt: "マウスピース矯正2" },
-        { imageId: "hero-slide3", alt: "マウスピース矯正3" },
+        { imageId: "hero-slide1", alt: "豊洲 マウスピース矯正の診療" },
+        { imageId: "hero-slide2", alt: "豊洲の矯正歯科 マウスピース型矯正装置" },
+        { imageId: "hero-slide3", alt: "豊洲駅近くの歯科 マウスピース矯正カウンセリング" },
     ];
 
     // Hero image slider logic

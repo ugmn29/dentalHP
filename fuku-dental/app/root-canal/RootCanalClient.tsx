@@ -12,9 +12,9 @@ export default function RootCanalPage() {
 
     // Hero slider images
     const heroImages = [
-        { imageId: "hero-slide1", alt: "根管治療1" },
-        { imageId: "hero-slide2", alt: "根管治療2" },
-        { imageId: "hero-slide3", alt: "根管治療3" },
+        { imageId: "hero-slide1", alt: "豊洲の歯医者 根管治療" },
+        { imageId: "hero-slide2", alt: "豊洲 歯科 精密根管治療" },
+        { imageId: "hero-slide3", alt: "豊洲駅近くの歯医者 マイクロスコープ根管治療" },
     ];
 
     // Hero image slider logic

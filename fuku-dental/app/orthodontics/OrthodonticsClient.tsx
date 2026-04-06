@@ -11,9 +11,9 @@ export default function OrthoGeneralPage() {
     const [currentHeroSlide, setCurrentHeroSlide] = useState(0);
 
     const heroImages = [
-        { imageId: "hero-slide1", alt: "矯正歯科1" },
-        { imageId: "hero-slide2", alt: "矯正歯科2" },
-        { imageId: "hero-slide3", alt: "矯正歯科3" },
+        { imageId: "hero-slide1", alt: "豊洲の矯正歯科 ワイヤー矯正の様子" },
+        { imageId: "hero-slide2", alt: "豊洲 矯正歯科 マウスピース矯正の診療" },
+        { imageId: "hero-slide3", alt: "豊洲駅の矯正歯科 カウンセリング風景" },
     ];
 
     useEffect(() => {
@@ -73,7 +73,7 @@ export default function OrthoGeneralPage() {
                                     <div className="absolute -inset-4 bg-gradient-to-r from-[#D4AF37]/10 via-[#F4E3B2]/20 to-[#D4AF37]/10 rounded-3xl blur-2xl -z-10 animate-pulse"></div>
                                 </div>
                                 <span className="block text-[5.5vw] sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-[#5A4D41] mt-1 md:mt-4 mb-0 pb-0 leading-none font-semibold font-serif">
-                                    確実な結果を追求する矯正治療
+                                    <strong>豊洲</strong>の<strong>矯正歯科</strong>｜確実な結果を追求
                                 </span>
                             </h1>
                         </div>

@@ -12,9 +12,9 @@ export default function WhiteningPage() {
 
   // Hero slider images - Whitening themed
   const heroImages = [
-    { imageId: "hero-slide1", alt: "ホワイトニング1" },
-    { imageId: "hero-slide2", alt: "ホワイトニング2" },
-    { imageId: "hero-slide3", alt: "ホワイトニング3" },
+    { imageId: "hero-slide1", alt: "豊洲の歯科 ホワイトニング" },
+    { imageId: "hero-slide2", alt: "豊洲の歯医者 オフィスホワイトニング" },
+    { imageId: "hero-slide3", alt: "豊洲 ホワイトニング施術の様子" },
   ];
 
   // Hero image slider logic

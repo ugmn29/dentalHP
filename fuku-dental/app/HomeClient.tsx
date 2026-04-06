@@ -14,9 +14,9 @@ export default function Home() {
 
   // Hero slider images
   const heroImages = [
-    { imageId: "hero-slide1", alt: "Fデンタルオフィス 院内写真1" },
-    { imageId: "hero-slide2", alt: "Fデンタルオフィス 院内写真2" },
-    { imageId: "hero-slide3", alt: "Fデンタルオフィス 院内写真3" },
+    { imageId: "hero-slide1", alt: "豊洲の歯医者 Fデンタルオフィス 院内写真" },
+    { imageId: "hero-slide2", alt: "豊洲の歯科医院 Fデンタルオフィス 診療室" },
+    { imageId: "hero-slide3", alt: "豊洲駅徒歩2分の歯医者 Fデンタルオフィス 受付" },
   ];
 
   // Hero image slider logic
@@ -297,7 +297,7 @@ export default function Home() {
                   <div className="absolute -inset-2 bg-gradient-to-r from-transparent via-[#395b45]/5 to-transparent rounded-2xl -z-10"></div>
                 </div>
                 <span className="block text-[5.5vw] sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-[#5A4D41] -mt-4 md:-mt-6 font-semibold" style={{ fontStyle: 'normal' }}>
-                  <strong>豊洲</strong>で0歳から通える<strong>歯医者</strong>
+                  <strong>豊洲</strong>で0歳から通える<strong>歯科</strong>・<strong>歯医者</strong>
                 </span>
               </h1>
             </div>
