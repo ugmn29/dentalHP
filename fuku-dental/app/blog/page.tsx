@@ -1,6 +1,6 @@
 import { Header } from '../../components/Header';
 import { Footer } from '../../components/Footer';
-import { blogPosts as staticPosts, blogCategories } from '../../data/blog-posts';
+import { blogCategories } from '../../data/blog-posts';
 import { getArticles } from '../../lib/microcms';
 import BlogClient from './BlogClient';
 
@@ -12,7 +12,7 @@ export interface BlogPost {
   thumbnail?: string;
   summary: string;
   slug?: string;
-  source: 'static' | 'microcms';
+  source: 'microcms';
 }
 
 export default async function BlogPage() {
@@ -38,19 +38,8 @@ export default async function BlogPage() {
     console.error('microCMS fetch error:', e);
   }
 
-  // 静的データを変換
-  const staticData: BlogPost[] = staticPosts.map((p) => ({
-    id: p.id,
-    title: p.title,
-    category: p.category,
-    date: p.date,
-    thumbnail: p.thumbnail,
-    summary: p.summary,
-    source: 'static' as const,
-  }));
-
-  // マージして日付順ソート
-  const allPosts = [...cmsPosts, ...staticData].sort(
+  // 日付順ソート
+  const allPosts = cmsPosts.sort(
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
   );
 
