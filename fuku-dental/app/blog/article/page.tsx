@@ -136,11 +136,7 @@ function ArticleContent() {
       <section className="pb-12">
         <div className="container mx-auto px-4">
           <div
-            className="max-w-3xl mx-auto prose prose-lg prose-stone
-              prose-headings:text-[#5A4D41] prose-headings:font-serif
-              prose-a:text-[#395b45] prose-a:font-bold
-              prose-img:rounded-xl prose-img:shadow-md
-              bg-white rounded-2xl p-8 md:p-12 shadow-sm"
+            className="article-body max-w-3xl mx-auto bg-white rounded-2xl p-8 md:p-12 shadow-sm"
             dangerouslySetInnerHTML={{ __html: article.body }}
           />
         </div>
