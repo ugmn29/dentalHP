@@ -1,8 +1,15 @@
 import { createClient } from "microcms-js-sdk";
 
 // microCMS クライアント（環境変数がない場合はnull）
-const serviceDomain = process.env.MICROCMS_SERVICE_DOMAIN || "";
-const apiKey = process.env.MICROCMS_API_KEY || "";
+// フォールバック: MICROCMS_SERVICE_DOMAIN が無ければ NEXT_PUBLIC_ 版を使う
+const serviceDomain =
+  process.env.MICROCMS_SERVICE_DOMAIN ||
+  process.env.NEXT_PUBLIC_MICROCMS_SERVICE_DOMAIN ||
+  "";
+const apiKey =
+  process.env.MICROCMS_API_KEY ||
+  process.env.NEXT_PUBLIC_MICROCMS_API_KEY ||
+  "";
 
 // デバッグ: process.stderr.write は removeConsole で消されない
 process.stderr.write(`[microcms-debug] serviceDomain set: ${!!serviceDomain} len: ${serviceDomain.length}\n`);
