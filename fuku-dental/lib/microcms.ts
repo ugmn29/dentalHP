@@ -11,27 +11,10 @@ const apiKey =
   process.env.NEXT_PUBLIC_MICROCMS_API_KEY ||
   "";
 
-// デバッグ: process.stderr.write は removeConsole で消されない
-process.stderr.write(`[microcms-debug] serviceDomain set: ${!!serviceDomain} len: ${serviceDomain.length}\n`);
-process.stderr.write(`[microcms-debug] apiKey set: ${!!apiKey} len: ${apiKey.length}\n`);
-// すべてのMICROCMS関連環境変数をダンプ
-const microcmsKeys = Object.keys(process.env).filter(k => k.toUpperCase().includes('MICROCMS') || k.toUpperCase().includes('CMS'));
-process.stderr.write(`[microcms-debug] all matching env keys: ${JSON.stringify(microcmsKeys)}\n`);
-microcmsKeys.forEach(k => {
-  const v = process.env[k] || '';
-  process.stderr.write(`[microcms-debug]   ${k} = (len:${v.length}) ${v.substring(0, 5)}...${v.substring(v.length - 3)}\n`);
-});
-
 const client =
   serviceDomain && apiKey
     ? createClient({ serviceDomain, apiKey })
     : null;
-
-if (!client) {
-  process.stderr.write(`[microcms-debug] client is NULL - env vars missing\n`);
-} else {
-  process.stderr.write(`[microcms-debug] client initialized OK\n`);
-}
 
 // microCMS の記事型
 export interface MicroCMSArticle {
