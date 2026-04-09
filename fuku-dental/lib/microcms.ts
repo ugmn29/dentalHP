@@ -4,9 +4,9 @@ import { createClient } from "microcms-js-sdk";
 const serviceDomain = process.env.MICROCMS_SERVICE_DOMAIN || "";
 const apiKey = process.env.MICROCMS_API_KEY || "";
 
-// デバッグ: ビルド時に環境変数の状態をログ出力
-console.log("[microcms] serviceDomain set:", !!serviceDomain, "len:", serviceDomain.length);
-console.log("[microcms] apiKey set:", !!apiKey, "len:", apiKey.length);
+// デバッグ: ビルド時に環境変数の状態をログ出力（console.errorはremoveConsoleで消されない）
+console.error("[microcms-debug] serviceDomain set:", !!serviceDomain, "len:", serviceDomain.length);
+console.error("[microcms-debug] apiKey set:", !!apiKey, "len:", apiKey.length);
 
 const client =
   serviceDomain && apiKey
@@ -14,9 +14,9 @@ const client =
     : null;
 
 if (!client) {
-  console.log("[microcms] client is NULL - env vars missing");
+  console.error("[microcms-debug] client is NULL - env vars missing");
 } else {
-  console.log("[microcms] client initialized OK");
+  console.error("[microcms-debug] client initialized OK");
 }
 
 // microCMS の記事型
