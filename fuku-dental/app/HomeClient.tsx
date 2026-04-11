@@ -392,6 +392,78 @@ export default function Home() {
               </div>
             </div>
 
+            {/* --- Doctor Introduction (moved here) --- */}
+            <div className="mt-12 md:mt-16">
+              <div className="text-center mb-6">
+                <div className="inline-block relative">
+                  <span className="text-[#395b45] font-bold tracking-[0.3em] text-xs md:text-sm block mb-3 uppercase opacity-70" style={{ fontFamily: '"Brush Script MT", "Lucida Handwriting", cursive' }}>Doctor</span>
+                  <h2 className="text-4xl md:text-5xl font-bold text-[#5A4D41] font-serif relative">
+                    ドクター紹介
+                    <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-transparent via-[#395b45] to-transparent"></div>
+                  </h2>
+                </div>
+              </div>
+
+              <div className="max-w-4xl mx-auto bg-gradient-to-br from-[#e8f2ed] to-white rounded-3xl shadow-lg border border-[#c8ddd0] overflow-hidden">
+                <div className="flex flex-col md:flex-row">
+                  {/* Doctor Image */}
+                  <div className="w-full md:w-2/5 relative">
+                    <div className="aspect-square md:aspect-auto md:h-full relative overflow-hidden">
+                      <PageImage
+                        path="/homepage"
+                        imageId="doctor"
+                        alt="院長 福永真大"
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full">
+                        <p className="text-sm font-bold text-[#5A4D41]">院長</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Doctor Info */}
+                  <div className="w-full md:w-3/5 p-8 md:p-10">
+                    <div className="mb-6">
+                      <h3 className="text-2xl md:text-3xl font-bold text-[#5A4D41] mb-2">福永　真大</h3>
+                      <p className="text-sm text-[#8D8070] font-medium">Masahiro Fukunaga / 院長・歯科医師</p>
+                    </div>
+
+                    <div className="space-y-4 text-[#5A4D41]">
+                      <div>
+                        <h4 className="font-bold text-[#395b45] mb-2 flex items-center gap-2">
+                          <span className="w-1 h-4 bg-[#395b45] rounded-full"></span>
+                          経歴
+                        </h4>
+                        <ul className="text-sm space-y-1 ml-4">
+                          <li>• 大阪大学卒業</li>
+                          <li>• 大手医療法人勤務・研修医指導医を歴任</li>
+                          <li>• 都内歯科医院 副院長</li>
+                          <li>• Fデンタルオフィス 豊洲プライムスクエア院 開業</li>
+                        </ul>
+                      </div>
+
+                      <div>
+                        <h4 className="font-bold text-[#395b45] mb-2 flex items-center gap-2">
+                          <span className="w-1 h-4 bg-[#395b45] rounded-full"></span>
+                          メッセージ
+                        </h4>
+                        <p className="text-sm leading-relaxed ml-4">
+                          患者様一人ひとりに寄り添い、お口の健康を通じて笑顔あふれる毎日をサポートいたします。
+                          お子様から大人の方まで、安心して通っていただける医院づくりを心がけています。
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="mt-6 pt-6 border-t border-[#c8ddd0]">
+                      <p className="text-xs text-[#8D8070]">
+                        日本小児歯科学会 会員 / 日本審美歯科学会 会員
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <div className="flex justify-center max-w-6xl mx-auto mt-12 md:mt-16">
               {/* Kids Site Card */}
               <a href="/kidsortho" className="group relative block shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
@@ -792,80 +864,6 @@ export default function Home() {
                 </div>
                 <span className="text-sm font-bold">お気軽にお電話ください</span>
               </a>
-            </div>
-          </div>
-        </section>
-
-        {/* --- Doctor Introduction Section --- */}
-        <section className="py-4 bg-[#FAFAFA] relative overflow-hidden">
-          <div className="container mx-auto px-4 relative z-10">
-            <div className="text-center mb-6">
-              <div className="inline-block relative">
-                <span className="text-[#395b45] font-bold tracking-[0.3em] text-xs md:text-sm block mb-3 uppercase opacity-70" style={{ fontFamily: '"Brush Script MT", "Lucida Handwriting", cursive' }}>Doctor</span>
-                <h2 className="text-4xl md:text-5xl font-bold text-[#5A4D41] font-serif relative">
-                  ドクター紹介
-                  <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-transparent via-[#395b45] to-transparent"></div>
-                </h2>
-              </div>
-            </div>
-
-            <div className="max-w-4xl mx-auto bg-gradient-to-br from-[#e8f2ed] to-white rounded-3xl shadow-lg border border-[#c8ddd0] overflow-hidden">
-              <div className="flex flex-col md:flex-row">
-                {/* Doctor Image */}
-                <div className="w-full md:w-2/5 relative">
-                  <div className="aspect-square md:aspect-auto md:h-full relative overflow-hidden">
-                    <PageImage
-                      path="/homepage"
-                      imageId="doctor"
-                      alt="院長 福永真大"
-                      className="w-full h-full object-cover"
-                    />
-                    <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full">
-                      <p className="text-sm font-bold text-[#5A4D41]">院長</p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Doctor Info */}
-                <div className="w-full md:w-3/5 p-8 md:p-10">
-                  <div className="mb-6">
-                    <h3 className="text-2xl md:text-3xl font-bold text-[#5A4D41] mb-2">福永　真大</h3>
-                    <p className="text-sm text-[#8D8070] font-medium">Masahiro Fukunaga / 院長・歯科医師</p>
-                  </div>
-
-                  <div className="space-y-4 text-[#5A4D41]">
-                    <div>
-                      <h4 className="font-bold text-[#395b45] mb-2 flex items-center gap-2">
-                        <span className="w-1 h-4 bg-[#395b45] rounded-full"></span>
-                        経歴
-                      </h4>
-                      <ul className="text-sm space-y-1 ml-4">
-                        <li>• 大阪大学卒業</li>
-                        <li>• 大手医療法人勤務・研修医指導医を歴任</li>
-                        <li>• 都内歯科医院 副院長</li>
-                        <li>• Fデンタルオフィス 豊洲プライムスクエア院 開業</li>
-                      </ul>
-                    </div>
-
-                    <div>
-                      <h4 className="font-bold text-[#395b45] mb-2 flex items-center gap-2">
-                        <span className="w-1 h-4 bg-[#395b45] rounded-full"></span>
-                        メッセージ
-                      </h4>
-                      <p className="text-sm leading-relaxed ml-4">
-                        患者様一人ひとりに寄り添い、お口の健康を通じて笑顔あふれる毎日をサポートいたします。
-                        お子様から大人の方まで、安心して通っていただける医院づくりを心がけています。
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="mt-6 pt-6 border-t border-[#c8ddd0]">
-                    <p className="text-xs text-[#8D8070]">
-                      日本小児歯科学会 会員 / 日本審美歯科学会 会員
-                    </p>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </section>
