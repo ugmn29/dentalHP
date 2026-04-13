@@ -113,9 +113,9 @@ export default function Home() {
 
   const getCategoryColor = (cat: string) => {
     switch (cat) {
-      case 'kids': return 'bg-[#e8f2ed] border-[#c8ddd0] text-[#395b45] hover:bg-[#d4e8dc]';
+      case 'kids': return 'bg-[#EDEEF3] border-[#D0D3DE] text-[#8B92AB] hover:bg-[#E0E2EB]';
       case 'aesthetic': return 'bg-[#F3F0F7] border-[#E0D6EA] text-[#9B89B3] hover:bg-[#EBE5F2]';
-      case 'ortho': return 'bg-[#e8f2ed] border-[#c8ddd0] text-[#395b45] hover:bg-[#d4e8dc]';
+      case 'ortho': return 'bg-[#EDEEF3] border-[#D0D3DE] text-[#8B92AB] hover:bg-[#E0E2EB]';
       case 'surgery': return 'bg-[#FFF0F0] border-[#FFD6D6] text-[#FF6B6B] hover:bg-[#FFE5E5]';
       case 'concerns': return 'bg-[#FFF4E6] border-[#FFE0B2] text-[#E89B4D] hover:bg-[#FFE9CC]';
       default: return 'bg-gray-50 border-gray-100 text-gray-600 hover:bg-gray-100';
@@ -129,7 +129,7 @@ export default function Home() {
       highlight: "保存治療",
       summary: "できる限り削らない・抜かない治療",
       details: [
-        "歯を細かく見れる<span class='font-bold bg-yellow-100'>拡大鏡</span>、より精密に治療できる<span class='font-bold bg-yellow-100'>マイクロスコープ</span>、精密診断を可能にする<span class='font-bold bg-yellow-100'>３Dスキャナー・CT</span>。これらの最新設備と診断力で、<span class='text-[#395b45] font-bold'>できる限り削らない・抜かない治療</span>を実現します。"
+        "歯を細かく見れる<span class='font-bold bg-yellow-100'>拡大鏡</span>、より精密に治療できる<span class='font-bold bg-yellow-100'>マイクロスコープ</span>、精密診断を可能にする<span class='font-bold bg-yellow-100'>３Dスキャナー・CT</span>。これらの最新設備と診断力で、<span class='text-[#8B92AB] font-bold'>できる限り削らない・抜かない治療</span>を実現します。"
       ],
       imageId: "feature5",
       imageAlt: "豊洲 歯科 保存治療 削らない治療",
@@ -143,7 +143,7 @@ export default function Home() {
       highlight: "最新<span style='font-size: 0.8em;'>の</span>透明<span style='font-size: 0.8em;'>な</span>治療",
       summary: "<strong>豊洲の歯医者</strong>として、納得して治療を受けていただくために",
       details: [
-        "治療前には必ず<span class='font-bold bg-yellow-100'>口の中の写真</span>を撮影し、現在の状態を一緒に確認します。さらに<span class='font-bold bg-yellow-100'>３Dスキャナー</span>で歯並びを立体的にデータ化し、<span class='font-bold bg-yellow-100'>ペン型カメラ</span>で細部まで拡大して見ることができます。これらの最新機器を使って、<span class='text-[#395b45] font-bold'>お口の状態や治療内容を丁寧にわかりやすく説明</span>します。"
+        "治療前には必ず<span class='font-bold bg-yellow-100'>口の中の写真</span>を撮影し、現在の状態を一緒に確認します。さらに<span class='font-bold bg-yellow-100'>３Dスキャナー</span>で歯並びを立体的にデータ化し、<span class='font-bold bg-yellow-100'>ペン型カメラ</span>で細部まで拡大して見ることができます。これらの最新機器を使って、<span class='text-[#8B92AB] font-bold'>お口の状態や治療内容を丁寧にわかりやすく説明</span>します。"
       ],
       imageId: "feature1",
       imageAlt: "豊洲 歯科 透明性のある治療説明",
@@ -157,7 +157,7 @@ export default function Home() {
       highlight: "こども矯正",
       summary: "歯並びの教科書（冊子）",
       details: [
-        "歯並びだけでなく、<span class='text-[#395b45] font-bold'>お顔全体の成長</span>を考えた治療を行います。それを補助するために、<span class='font-bold bg-yellow-100'>当院独自の歯ならびの教科書</span>を、来院した子ども患者さん全員にお渡しします。"
+        "歯並びだけでなく、<span class='text-[#8B92AB] font-bold'>お顔全体の成長</span>を考えた治療を行います。それを補助するために、<span class='font-bold bg-yellow-100'>当院独自の歯ならびの教科書</span>を、来院した子ども患者さん全員にお渡しします。"
       ],
       imageId: "feature2",
       imageAlt: "豊洲 Fデンタルオフィス こども矯正 歯並びの教科書",
@@ -171,7 +171,7 @@ export default function Home() {
       highlight: "個室の診療室",
       summary: "リラックスして治療を受けられる空間",
       details: [
-        "<span class='font-bold bg-yellow-100'>個室</span>でプライバシーを確保。<span class='font-bold bg-yellow-100'>天井テレビ</span>があるため、<span class='text-[#395b45] font-bold'>子供が通いやすい環境</span>を整備しています。"
+        "<span class='font-bold bg-yellow-100'>個室</span>でプライバシーを確保。<span class='font-bold bg-yellow-100'>天井テレビ</span>があるため、<span class='text-[#8B92AB] font-bold'>子供が通いやすい環境</span>を整備しています。"
       ],
       imageId: "feature3",
       imageAlt: "豊洲 歯医者 個室診療室 天井テレビ",
@@ -185,7 +185,7 @@ export default function Home() {
       highlight: "審美歯科",
       summary: "美しさと機能性を両立した治療",
       details: [
-        "審美歯科で大事なのは、<span class='font-bold bg-yellow-100'>見た目と機能の両立</span>です。それを実現するために、当院では<span class='text-[#395b45] font-bold'>精密診療を行える環境</span>を整備しています。"
+        "審美歯科で大事なのは、<span class='font-bold bg-yellow-100'>見た目と機能の両立</span>です。それを実現するために、当院では<span class='text-[#8B92AB] font-bold'>精密診療を行える環境</span>を整備しています。"
       ],
       imageId: "feature4",
       imageAlt: "豊洲 審美歯科 セラミック治療 ホワイトニング",
@@ -198,17 +198,17 @@ export default function Home() {
 
 
   return (
-    <div className="min-h-screen bg-[#f7f9ee] font-serif text-[#5A4D41] selection:bg-[#395b45] selection:text-white">
+    <div className="min-h-screen bg-[#FAFAF8] font-serif text-[#5A4D41] selection:bg-[#8B92AB] selection:text-white">
       <Header />
 
       <main>
         {/* --- Hero Section (Image Slider + Text) --- */}
-        <section className="relative w-full h-screen min-h-[600px] overflow-hidden bg-[#f7f9ee]">
+        <section className="relative w-full h-screen min-h-[600px] overflow-hidden bg-[#FAFAF8]">
           {/* Opening Announcement - Reduced height */}
-          <div className="relative w-full bg-gradient-to-br from-[#e8f2ed] via-white to-[#e8f2ed] flex items-center justify-center" style={{ height: '50vh' }}>
+          <div className="relative w-full bg-gradient-to-br from-[#EDEEF3] via-white to-[#EDEEF3] flex items-center justify-center" style={{ height: '50vh' }}>
             <div className="text-center px-4">
               <div className="inline-block mb-8">
-                <div className="bg-gradient-to-r from-[#FFD700] to-[#FFA500] text-[#2d4835] px-10 py-4 rounded-full text-base md:text-lg font-black shadow-xl" style={{ fontFamily: 'sans-serif' }}>
+                <div className="bg-gradient-to-r from-[#FFD700] to-[#FFA500] text-[#5A4D41] px-10 py-4 rounded-full text-base md:text-lg font-black shadow-xl" style={{ fontFamily: 'sans-serif' }}>
                   新規開業のお知らせ
                 </div>
               </div>
@@ -217,7 +217,7 @@ export default function Home() {
               </p>
               <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-6" style={{
                 fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif',
-                background: 'linear-gradient(135deg, #1a5738 0%, #395b45 50%, #2d4835 100%)',
+                background: 'linear-gradient(135deg, #5A4D41 0%, #5A4D41 50%, #5A4D41 100%)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
@@ -225,7 +225,7 @@ export default function Home() {
               }}>
                 2026年7月1日
               </h2>
-              <p className="text-3xl md:text-4xl lg:text-5xl font-black text-[#395b45]" style={{ fontFamily: 'sans-serif' }}>
+              <p className="text-3xl md:text-4xl lg:text-5xl font-black text-[#5A4D41]" style={{ fontFamily: 'sans-serif' }}>
                 新規開業
               </p>
             </div>
@@ -264,7 +264,7 @@ export default function Home() {
                         fontWeight: '900',
                         letterSpacing: '0.05em'
                       }}>
-                      <span className="inline-block bg-gradient-to-br from-[#1a5738] via-[#395b45] to-[#2d4835] bg-clip-text text-transparent drop-shadow-lg transform hover:scale-105 transition-all duration-300"
+                      <span className="inline-block bg-gradient-to-br from-[#5A4D41] via-[#5A4D41] to-[#5A4D41] bg-clip-text text-transparent drop-shadow-lg transform hover:scale-105 transition-all duration-300"
                         style={{
                           WebkitBackgroundClip: 'text',
                           WebkitTextFillColor: 'transparent'
@@ -277,14 +277,14 @@ export default function Home() {
                         }}>
                         <span className="relative z-10 font-black"
                           style={{
-                            color: '#2d4835',
+                            color: '#5A4D41',
                             textShadow: '0 2px 4px rgba(255,255,255,0.3)'
                           }}>
                           徒歩2分
                         </span>
                         <div className="absolute inset-0 bg-gradient-to-t from-transparent via-white/20 to-transparent animate-pulse"></div>
                       </span>
-                      <span className="inline-block bg-gradient-to-br from-[#1a5738] via-[#395b45] to-[#2d4835] bg-clip-text text-transparent drop-shadow-lg transform hover:scale-105 transition-all duration-300"
+                      <span className="inline-block bg-gradient-to-br from-[#5A4D41] via-[#5A4D41] to-[#5A4D41] bg-clip-text text-transparent drop-shadow-lg transform hover:scale-105 transition-all duration-300"
                         style={{
                           WebkitBackgroundClip: 'text',
                           WebkitTextFillColor: 'transparent'
@@ -293,8 +293,8 @@ export default function Home() {
                       </span>
                     </span>
                   </div>
-                  <div className="absolute -inset-4 bg-gradient-to-r from-yellow-400/10 via-[#395b45]/20 to-yellow-400/10 rounded-3xl blur-2xl -z-10 animate-pulse"></div>
-                  <div className="absolute -inset-2 bg-gradient-to-r from-transparent via-[#395b45]/5 to-transparent rounded-2xl -z-10"></div>
+                  <div className="absolute -inset-4 bg-gradient-to-r from-yellow-400/10 via-[#8B92AB]/20 to-yellow-400/10 rounded-3xl blur-2xl -z-10 animate-pulse"></div>
+                  <div className="absolute -inset-2 bg-gradient-to-r from-transparent via-[#8B92AB]/5 to-transparent rounded-2xl -z-10"></div>
                 </div>
                 <span className="block text-[5.5vw] sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-[#5A4D41] -mt-4 md:-mt-6 font-semibold" style={{ fontStyle: 'normal' }}>
                   <strong>豊洲</strong>で0歳から通える<strong>歯科</strong>・<strong>歯医者</strong>
@@ -305,7 +305,7 @@ export default function Home() {
             {/* Building Location Card */}
             <div className="mt-6 md:mt-8 w-full md:px-4">
               <div className="bg-white rounded-xl md:rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <div className="flex items-center p-2 sm:p-3 md:p-4 border-2 border-[#c8ddd0] rounded-xl md:rounded-2xl m-1 md:m-2">
+                <div className="flex items-center p-2 sm:p-3 md:p-4 border-2 border-[#D0D3DE] rounded-xl md:rounded-2xl m-1 md:m-2">
                   {/* Building Image */}
                   <div className="flex-shrink-0 w-24 h-24 md:w-32 md:h-32 lg:w-40 lg:h-40">
                     <img
@@ -344,7 +344,7 @@ export default function Home() {
         </section>
 
         {/* --- Special Sites (Limit-Breaking Redesign: Simple & High CTA) --- */}
-        <section className="pt-0 pb-4 bg-[#f7f9ee] relative overflow-hidden">
+        <section className="pt-0 pb-4 bg-[#FAFAF8] relative overflow-hidden">
           <div className="container mx-auto px-4 relative z-10">
             {/* Opening Hours Table */}
             <div className="w-full font-sans">
@@ -352,43 +352,43 @@ export default function Home() {
                 <table className="w-full border-collapse text-base md:text-lg font-sans">
                   <thead>
                     <tr className="bg-white">
-                      <th className="py-4 px-3 text-left font-bold border-b border-gray-200 text-[#2d4835] w-[30%]">診療時間</th>
-                      <th className="py-4 px-2 text-center font-bold border-b border-gray-200 text-[#2d4835] w-[10%]">月</th>
-                      <th className="py-4 px-2 text-center font-bold border-b border-gray-200 text-[#2d4835] w-[10%]">火</th>
-                      <th className="py-4 px-2 text-center font-bold border-b border-gray-200 text-[#2d4835] w-[10%]">水</th>
-                      <th className="py-4 px-2 text-center font-bold border-b border-gray-200 text-[#2d4835] w-[10%]">木</th>
-                      <th className="py-4 px-2 text-center font-bold border-b border-gray-200 text-[#2d4835] w-[10%]">金</th>
-                      <th className="py-4 px-2 text-center font-bold border-b border-gray-200 text-[#2d4835] w-[10%]">土</th>
-                      <th className="py-4 px-2 pr-3 text-center font-bold border-b border-gray-200 text-[#2d4835] w-[10%]">日</th>
+                      <th className="py-4 px-3 text-left font-bold border-b border-gray-200 text-[#5A4D41] w-[30%]">診療時間</th>
+                      <th className="py-4 px-2 text-center font-bold border-b border-gray-200 text-[#5A4D41] w-[10%]">月</th>
+                      <th className="py-4 px-2 text-center font-bold border-b border-gray-200 text-[#5A4D41] w-[10%]">火</th>
+                      <th className="py-4 px-2 text-center font-bold border-b border-gray-200 text-[#5A4D41] w-[10%]">水</th>
+                      <th className="py-4 px-2 text-center font-bold border-b border-gray-200 text-[#5A4D41] w-[10%]">木</th>
+                      <th className="py-4 px-2 text-center font-bold border-b border-gray-200 text-[#5A4D41] w-[10%]">金</th>
+                      <th className="py-4 px-2 text-center font-bold border-b border-gray-200 text-[#5A4D41] w-[10%]">土</th>
+                      <th className="py-4 px-2 pr-3 text-center font-bold border-b border-gray-200 text-[#5A4D41] w-[10%]">日</th>
                     </tr>
                   </thead>
                   <tbody className="bg-white">
                     <tr className="border-b border-gray-200">
-                      <td className="py-5 px-3 text-left font-semibold text-[#2d4835] text-base md:text-lg whitespace-nowrap" style={{ fontStyle: 'normal', fontFamily: 'sans-serif' }}>10:00-13:00</td>
-                      <td className="py-5 px-2 text-center text-[#2d4835] text-lg">●</td>
+                      <td className="py-5 px-3 text-left font-semibold text-[#5A4D41] text-base md:text-lg whitespace-nowrap" style={{ fontStyle: 'normal', fontFamily: 'sans-serif' }}>10:00-13:00</td>
+                      <td className="py-5 px-2 text-center text-[#5A4D41] text-lg">●</td>
                       <td className="py-5 px-2 text-center text-gray-300 text-lg">−</td>
-                      <td className="py-5 px-2 text-center text-[#2d4835] text-lg">●</td>
-                      <td className="py-5 px-2 text-center text-[#2d4835] text-lg">●</td>
-                      <td className="py-5 px-2 text-center text-[#2d4835] text-lg">●</td>
-                      <td className="py-5 px-2 text-center text-[#2d4835] font-bold">★</td>
-                      <td className="py-5 px-2 pr-3 text-center text-[#2d4835] font-bold">★</td>
+                      <td className="py-5 px-2 text-center text-[#5A4D41] text-lg">●</td>
+                      <td className="py-5 px-2 text-center text-[#5A4D41] text-lg">●</td>
+                      <td className="py-5 px-2 text-center text-[#5A4D41] text-lg">●</td>
+                      <td className="py-5 px-2 text-center text-[#5A4D41] font-bold">★</td>
+                      <td className="py-5 px-2 pr-3 text-center text-[#5A4D41] font-bold">★</td>
                     </tr>
                     <tr className="border-b border-gray-200">
-                      <td className="py-5 px-3 text-left font-semibold text-[#2d4835] text-base md:text-lg whitespace-nowrap" style={{ fontStyle: 'normal', fontFamily: 'sans-serif' }}>14:00-19:00</td>
-                      <td className="py-5 px-2 text-center text-[#2d4835] text-lg">●</td>
+                      <td className="py-5 px-3 text-left font-semibold text-[#5A4D41] text-base md:text-lg whitespace-nowrap" style={{ fontStyle: 'normal', fontFamily: 'sans-serif' }}>14:00-19:00</td>
+                      <td className="py-5 px-2 text-center text-[#5A4D41] text-lg">●</td>
                       <td className="py-5 px-2 text-center text-gray-300 text-lg">−</td>
-                      <td className="py-5 px-2 text-center text-[#2d4835] text-lg">●</td>
-                      <td className="py-5 px-2 text-center text-[#2d4835] text-lg">●</td>
-                      <td className="py-5 px-2 text-center text-[#2d4835] text-lg">●</td>
-                      <td className="py-5 px-2 text-center text-[#2d4835] font-bold">★</td>
-                      <td className="py-5 px-2 pr-3 text-center text-[#2d4835] font-bold">★</td>
+                      <td className="py-5 px-2 text-center text-[#5A4D41] text-lg">●</td>
+                      <td className="py-5 px-2 text-center text-[#5A4D41] text-lg">●</td>
+                      <td className="py-5 px-2 text-center text-[#5A4D41] text-lg">●</td>
+                      <td className="py-5 px-2 text-center text-[#5A4D41] font-bold">★</td>
+                      <td className="py-5 px-2 pr-3 text-center text-[#5A4D41] font-bold">★</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
-              <div className="mt-6 space-y-1 text-sm md:text-base text-[#2d4835] text-center font-sans">
-                <p style={{ fontStyle: 'normal', fontFamily: 'sans-serif' }}><span className="text-[#2d4835] font-bold text-xl">★</span> 土日：9:00-12:00 / 13:00-17:00</p>
-                <p className="font-bold text-[#2d4835] mt-3" style={{ fontFamily: 'sans-serif' }}>休診日：火曜日</p>
+              <div className="mt-6 space-y-1 text-sm md:text-base text-[#5A4D41] text-center font-sans">
+                <p style={{ fontStyle: 'normal', fontFamily: 'sans-serif' }}><span className="text-[#5A4D41] font-bold text-xl">★</span> 土日：9:00-12:00 / 13:00-17:00</p>
+                <p className="font-bold text-[#5A4D41] mt-3" style={{ fontFamily: 'sans-serif' }}>休診日：火曜日</p>
               </div>
             </div>
 
@@ -396,15 +396,16 @@ export default function Home() {
             <div className="mt-12 md:mt-16">
               <div className="text-center mb-6">
                 <div className="inline-block relative">
-                  <span className="text-[#395b45] font-bold tracking-[0.3em] text-xs md:text-sm block mb-3 uppercase opacity-70" style={{ fontFamily: '"Brush Script MT", "Lucida Handwriting", cursive' }}>Doctor</span>
+                  <span className="text-[#8B92AB] font-bold tracking-[0.3em] text-xs md:text-sm block mb-3 uppercase opacity-70" style={{ fontFamily: '"Brush Script MT", "Lucida Handwriting", cursive' }}>Doctor</span>
                   <h2 className="text-4xl md:text-5xl font-bold text-[#5A4D41] font-serif relative">
                     ドクター紹介
-                    <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-transparent via-[#395b45] to-transparent"></div>
+                    <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-transparent via-[#8B92AB] to-transparent"></div>
                   </h2>
                 </div>
               </div>
 
-              <div className="max-w-4xl mx-auto bg-gradient-to-br from-[#e8f2ed] to-white rounded-3xl shadow-lg border border-[#c8ddd0] overflow-hidden">
+              {/* --- Profile Card --- */}
+              <div className="max-w-4xl mx-auto bg-gradient-to-br from-[#FAF8F5] to-white rounded-3xl shadow-lg border border-[#D0D3DE] overflow-hidden">
                 <div className="flex flex-col md:flex-row">
                   {/* Doctor Image */}
                   <div className="w-full md:w-2/5 relative">
@@ -430,38 +431,53 @@ export default function Home() {
 
                     <div className="space-y-4 text-[#5A4D41]">
                       <div>
-                        <h4 className="font-bold text-[#395b45] mb-2 flex items-center gap-2">
-                          <span className="w-1 h-4 bg-[#395b45] rounded-full"></span>
+                        <h4 className="font-bold text-[#5A4D41] mb-2 flex items-center gap-2">
+                          <span className="w-1 h-4 bg-[#8B92AB] rounded-full"></span>
                           経歴
                         </h4>
                         <ul className="text-sm space-y-1 ml-4">
-                          <li>• 大阪大学卒業</li>
-                          <li>• 大手医療法人勤務・研修医指導医を歴任</li>
+                          <li>• 大阪大学歯学部 卒業</li>
+                          <li>• 大手医療法人にて研修医指導医・診療主任を歴任</li>
                           <li>• 都内歯科医院 副院長</li>
                           <li>• Fデンタルオフィス 豊洲プライムスクエア院 開業</li>
                         </ul>
                       </div>
 
                       <div>
-                        <h4 className="font-bold text-[#395b45] mb-2 flex items-center gap-2">
-                          <span className="w-1 h-4 bg-[#395b45] rounded-full"></span>
-                          メッセージ
+                        <h4 className="font-bold text-[#5A4D41] mb-2 flex items-center gap-2">
+                          <span className="w-1 h-4 bg-[#8B92AB] rounded-full"></span>
+                          所属学会
                         </h4>
-                        <p className="text-sm leading-relaxed ml-4">
-                          患者様一人ひとりに寄り添い、お口の健康を通じて笑顔あふれる毎日をサポートいたします。
-                          お子様から大人の方まで、安心して通っていただける医院づくりを心がけています。
+                        <p className="text-sm ml-4">
+                          日本小児歯科学会 / 日本矯正歯科学会 / 日本歯周病学会 / 日本口腔インプラント学会 / 日本審美歯科学会
                         </p>
                       </div>
-                    </div>
-
-                    <div className="mt-6 pt-6 border-t border-[#c8ddd0]">
-                      <p className="text-xs text-[#8D8070]">
-                        日本小児歯科学会 会員 / 日本審美歯科学会 会員
-                      </p>
                     </div>
                   </div>
                 </div>
               </div>
+
+              {/* --- Opening Message --- */}
+              <div className="max-w-4xl mx-auto mt-8">
+                <div className="bg-white rounded-2xl shadow-md border border-[#e0d8cf] p-8 md:p-10">
+                  <h4 className="font-bold text-[#5A4D41] text-lg mb-4 flex items-center gap-2">
+                    <span className="w-1.5 h-5 bg-[#8B92AB] rounded-full"></span>
+                    当院が大切にしていること
+                  </h4>
+                  <div className="space-y-4 text-sm leading-[1.9] text-[#5A4D41]">
+                    <p>
+                      私の父は、30年近く小児矯正に携わってきた歯科医師です。幼い頃からその背中を見て育ち、歯並びや噛み合わせが日々の習慣で大きく変わることを学んできました。当院のコンセプトは「未来のいいお顔を育てる」。これはお子様だけに向けた言葉ではありません。矯正後の後戻り、顔の歪み — その多くは呼吸・姿勢・噛み癖といった習慣に原因があります。お子様の口腔育成から大人の矯正・審美治療まで、習慣へのアプローチを軸に、年齢を問わずお口と表情の健康を整えていく歯科医院です。
+                    </p>
+                    <p>
+                      大阪大学歯学部を卒業後、大規模医療法人にて一般歯科・インプラント・矯正・審美治療など幅広い症例を経験し、研修医指導医も務めました。その中で強く感じたのは、良い治療が患者様に正しく届いていないという現実です。私自身は大学まで野球に打ち込み、噛み合わせや口呼吸がパフォーマンスに直結することも実感してきました。歯並びと全身の健康の関係を、スポーツを頑張るお子様や保護者の方にも届けたいと考えています。
+                    </p>
+                    <p>
+                      父から受け継いだ口腔育成への想い、臨床で培った技術、そして患者様に「伝わる」情報発信力。この3つを軸に、「もっと早く知りたかった」「あの時聞けてよかった」— そう感じていただける歯科医院を目指しています。
+                    </p>
+                  </div>
+                </div>
+              </div>
+
             </div>
 
             <div className="flex justify-center max-w-6xl mx-auto mt-12 md:mt-16">
@@ -577,13 +593,13 @@ export default function Home() {
             {/* Green Triangle Arrows - positioned at bottom of background section */}
             <div className="absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-1/2 z-20 flex flex-col -space-y-2">
               <svg width="40" height="30" viewBox="0 0 40 30" className="mx-auto">
-                <polygon points="5,5 35,5 20,25" fill="#c8ddd0" />
+                <polygon points="5,5 35,5 20,25" fill="#D0D3DE" />
               </svg>
               <svg width="40" height="30" viewBox="0 0 40 30" className="mx-auto">
-                <polygon points="5,5 35,5 20,25" fill="#c8ddd0" opacity="0.7" />
+                <polygon points="5,5 35,5 20,25" fill="#D0D3DE" opacity="0.7" />
               </svg>
               <svg width="40" height="30" viewBox="0 0 40 30" className="mx-auto">
-                <polygon points="5,5 35,5 20,25" fill="#c8ddd0" opacity="0.4" />
+                <polygon points="5,5 35,5 20,25" fill="#D0D3DE" opacity="0.4" />
               </svg>
             </div>
           </div>
@@ -600,7 +616,7 @@ export default function Home() {
                   <p className="text-[#8D8070] text-xs md:text-sm font-bold mb-1">
                     <strong>豊洲駅から徒歩2分の歯医者</strong>
                   </p>
-                  <h2 className="font-black text-[#395b45] text-center" style={{ fontFamily: 'Georgia, "Yu Mincho", "Hiragino Mincho ProN", serif' }}>
+                  <h2 className="font-black text-[#5A4D41] text-center" style={{ fontFamily: 'Georgia, "Yu Mincho", "Hiragino Mincho ProN", serif' }}>
                     <div className="text-[9vw] sm:text-5xl md:text-7xl">Fデンタルオフィス</div>
                     <div className="text-[7vw] sm:text-4xl md:text-5xl mt-1">豊洲プライムスクエア院</div>
                   </h2>
@@ -610,7 +626,7 @@ export default function Home() {
                 </p>
 
                 {/* CTA Button */}
-                <button className="bg-gradient-to-r from-[#395b45] to-[#2d4835] hover:from-[#2d4835] hover:to-[#1f3225] text-white px-8 md:px-12 py-4 md:py-5 rounded-full text-lg md:text-xl font-bold shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center gap-3 mx-auto">
+                <button className="bg-gradient-to-r from-[#8B92AB] to-[#6B7394] hover:from-[#6B7394] hover:to-[#2D8A8A] text-white px-8 md:px-12 py-4 md:py-5 rounded-full text-lg md:text-xl font-bold shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center gap-3 mx-auto">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" strokeWidth="2" />
                     <path d="M8 2 L8 6 M16 2 L16 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
@@ -627,7 +643,7 @@ export default function Home() {
         </section>
 
         {/* --- CTA Section (Between Problem & Features) --- */}
-        <section className="py-12 bg-[#f7f9ee]">
+        <section className="py-12 bg-[#FAFAF8]">
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row justify-center gap-6 max-w-4xl mx-auto">
               {/* Web Reservation */}
@@ -640,7 +656,7 @@ export default function Home() {
               </button>
 
               {/* Phone Reservation */}
-              <a href="tel:03-1234-5678" className="flex-1 bg-white border-4 border-[#395b45] text-[#395b45] hover:bg-[#e8f2ed] py-6 rounded-2xl shadow-lg transform hover:-translate-y-1 transition-all duration-300 flex flex-col items-center justify-center gap-2 group">
+              <a href="tel:03-1234-5678" className="flex-1 bg-white border-2 border-[#D0D3DE] text-[#5A4D41] hover:bg-[#EDEEF3] py-6 rounded-2xl shadow-lg transform hover:-translate-y-1 transition-all duration-300 flex flex-col items-center justify-center gap-2 group">
                 <div className="flex items-center gap-3">
                   <Phone size={32} className="group-hover:scale-110 transition-transform" />
                   <span className="text-2xl font-bold">03-1234-5678</span>
@@ -656,10 +672,10 @@ export default function Home() {
           <div className="container mx-auto px-4 relative z-10">
             <div className="text-center mb-12">
               <div className="inline-block relative">
-                <span className="text-[#395b45] font-bold tracking-[0.3em] text-xs md:text-sm block mb-3 uppercase opacity-70" style={{ fontFamily: '"Brush Script MT", "Lucida Handwriting", cursive' }}>FEATURES</span>
+                <span className="text-[#8B92AB] font-bold tracking-[0.3em] text-xs md:text-sm block mb-3 uppercase opacity-70" style={{ fontFamily: '"Brush Script MT", "Lucida Handwriting", cursive' }}>FEATURES</span>
                 <h2 className="text-4xl md:text-5xl font-bold text-[#5A4D41] font-serif relative">
-                  当院の<span className="text-[#395b45]">5つの特徴</span>
-                  <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-transparent via-[#395b45] to-transparent"></div>
+                  当院の<span className="text-[#8B92AB]">5つの特徴</span>
+                  <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-transparent via-[#8B92AB] to-transparent"></div>
                 </h2>
               </div>
             </div>
@@ -681,27 +697,27 @@ export default function Home() {
                       />
                     </div>
                     {/* Decorative Circle */}
-                    <div className={`absolute -bottom-10 ${index % 2 === 0 ? '-left-10' : '-right-10'} w-40 h-40 bg-[#c8ddd0]/30 rounded-full blur-2xl -z-10`}></div>
+                    <div className={`absolute -bottom-10 ${index % 2 === 0 ? '-left-10' : '-right-10'} w-40 h-40 bg-[#D0D3DE]/30 rounded-full blur-2xl -z-10`}></div>
                   </div>
 
                   {/* Content Side */}
                   <div className="w-full lg:w-1/2 flex flex-col gap-6 relative">
                     {/* Title Section */}
                     <div className="relative">
-                      <span className="text-8xl font-serif text-[#e8f2ed] absolute -top-16 -left-8 -z-10 select-none font-bold" style={{ letterSpacing: '-0.05em' }}>
+                      <span className="text-8xl font-serif text-[#EDEEF3] absolute -top-16 -left-8 -z-10 select-none font-bold" style={{ letterSpacing: '-0.05em' }}>
                         {feature.id}
                       </span>
                       <div className="flex items-start justify-between gap-4">
                         <h3 className="text-2xl md:text-3xl font-bold text-[#5A4D41] leading-tight flex-1">
-                          <span className="block text-base text-[#395b45] font-bold mb-2 tracking-widest">{feature.title}</span>
+                          <span className="block text-base text-[#8B92AB] font-bold mb-2 tracking-widest">{feature.title}</span>
                           <span className="inline-block relative text-3xl md:text-4xl lg:text-5xl" dangerouslySetInnerHTML={{ __html: feature.highlight }}>
                           </span>
-                          <div className="absolute -bottom-1 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#395b45] to-transparent"></div>
+                          <div className="absolute -bottom-1 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#8B92AB] to-transparent"></div>
                         </h3>
                         {feature.id === "02" && (
                           <a
                             href="/kidsortho"
-                            className="flex-shrink-0 mt-8 px-4 py-2 bg-[#395b45] text-white text-sm font-bold rounded-full hover:bg-[#2d4835] transition-colors shadow-md"
+                            className="flex-shrink-0 mt-8 px-4 py-2 bg-[#8B92AB] text-white text-sm font-bold rounded-full hover:bg-[#6B7394] transition-colors shadow-md"
                           >
                             詳細
                           </a>
@@ -732,7 +748,7 @@ export default function Home() {
                     {/* Details Section */}
                     <div className="space-y-4">
                       {feature.details.map((detail, i) => (
-                        <div key={i} className="p-4 bg-white rounded-xl shadow-sm border border-gray-100 group-hover:border-[#c8ddd0] transition-colors duration-300">
+                        <div key={i} className="p-4 bg-white rounded-xl shadow-sm border border-gray-100 group-hover:border-[#D0D3DE] transition-colors duration-300">
                           <p className="text-[#5A4D41] leading-loose text-sm md:text-base font-sans" dangerouslySetInnerHTML={{ __html: detail }}>
                           </p>
                         </div>
@@ -750,10 +766,10 @@ export default function Home() {
           <div className="container mx-auto px-4 relative z-10">
             <div className="text-center mb-8">
               <div className="inline-block relative">
-                <span className="text-[#395b45] font-bold tracking-[0.3em] text-xs md:text-sm block mb-3 uppercase opacity-70" style={{ fontFamily: '"Brush Script MT", "Lucida Handwriting", cursive' }}>Case Studies</span>
+                <span className="text-[#8B92AB] font-bold tracking-[0.3em] text-xs md:text-sm block mb-3 uppercase opacity-70" style={{ fontFamily: '"Brush Script MT", "Lucida Handwriting", cursive' }}>Case Studies</span>
                 <h2 className="text-4xl md:text-5xl font-bold text-[#5A4D41] font-serif relative">
                   症例紹介
-                  <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-transparent via-[#395b45] to-transparent"></div>
+                  <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-transparent via-[#8B92AB] to-transparent"></div>
                 </h2>
               </div>
             </div>
@@ -771,7 +787,7 @@ export default function Home() {
                       {/* Title Section - Centered */}
                       <div className="text-center mb-8 pb-6 border-b border-gray-200">
                         <p className="text-[#8D8070] text-sm mb-2">{caseStudy.patient}</p>
-                        <h3 className="text-2xl md:text-3xl font-bold text-[#395b45]">
+                        <h3 className="text-2xl md:text-3xl font-bold text-[#5A4D41]">
                           {caseStudy.title}
                         </h3>
                       </div>
@@ -796,7 +812,7 @@ export default function Home() {
                         {/* After */}
                         <div className="w-full md:w-[47%]">
                           <div className="mb-2">
-                            <span className="inline-block bg-[#395b45] text-white px-3 py-1 rounded-md font-bold text-xs">
+                            <span className="inline-block bg-[#8B92AB] text-white px-3 py-1 rounded-md font-bold text-xs">
                               After
                             </span>
                           </div>
@@ -804,7 +820,7 @@ export default function Home() {
                             path="/homepage"
                             imageId={caseStudy.afterId}
                             alt={`${caseStudy.title} - After`}
-                            className="w-full aspect-[16/9] object-cover rounded-2xl shadow-lg hover:shadow-xl transition-all border-2 border-[#395b45]/30"
+                            className="w-full aspect-[16/9] object-cover rounded-2xl shadow-lg hover:shadow-xl transition-all border-2 border-[#8B92AB]/30"
                           />
                         </div>
                       </div>
@@ -820,7 +836,7 @@ export default function Home() {
                     key={index}
                     onClick={() => setCurrentCaseIndex(index)}
                     className={`w-3 h-3 rounded-full transition-all duration-300 ${currentCaseIndex === index
-                      ? 'bg-[#395b45] scale-125'
+                      ? 'bg-[#8B92AB] scale-125'
                       : 'bg-gray-300 hover:bg-gray-400'
                       }`}
                   />
@@ -831,7 +847,7 @@ export default function Home() {
               <div className="text-center mt-6">
                 <a
                   href="/case-studies"
-                  className="inline-flex items-center gap-3 bg-gradient-to-r from-[#395b45] to-[#2d4835] hover:from-[#4a6b55] hover:to-[#395b45] text-white px-10 py-5 rounded-full font-bold shadow-lg hover:shadow-xl transition-all duration-300 group"
+                  className="inline-flex items-center gap-3 bg-gradient-to-r from-[#8B92AB] to-[#6B7394] hover:from-[#9BA2B8] hover:to-[#8B92AB] text-white px-10 py-5 rounded-full font-bold shadow-lg hover:shadow-xl transition-all duration-300 group"
                 >
                   <span>すべての症例を見る</span>
                   <div className="bg-white/20 rounded-full p-1 group-hover:translate-x-1 transition-transform">
@@ -844,7 +860,7 @@ export default function Home() {
         </section>
 
         {/* --- CTA Section (Between Case Studies & Facilities) --- */}
-        <section className="py-12 bg-[#f7f9ee]">
+        <section className="py-12 bg-[#FAFAF8]">
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row justify-center gap-6 max-w-4xl mx-auto">
               {/* Web Reservation */}
@@ -857,7 +873,7 @@ export default function Home() {
               </button>
 
               {/* Phone Reservation */}
-              <a href="tel:03-1234-5678" className="flex-1 bg-white border-4 border-[#395b45] text-[#395b45] hover:bg-[#e8f2ed] py-6 rounded-2xl shadow-lg transform hover:-translate-y-1 transition-all duration-300 flex flex-col items-center justify-center gap-2 group">
+              <a href="tel:03-1234-5678" className="flex-1 bg-white border-2 border-[#D0D3DE] text-[#5A4D41] hover:bg-[#EDEEF3] py-6 rounded-2xl shadow-lg transform hover:-translate-y-1 transition-all duration-300 flex flex-col items-center justify-center gap-2 group">
                 <div className="flex items-center gap-3">
                   <Phone size={32} className="group-hover:scale-110 transition-transform" />
                   <span className="text-2xl font-bold">03-1234-5678</span>
@@ -874,10 +890,10 @@ export default function Home() {
             {/* Title */}
             <div className="text-center mb-6">
               <div className="inline-block relative">
-                <span className="text-[#395b45] font-bold tracking-[0.3em] text-xs md:text-sm block mb-3 uppercase opacity-70" style={{ fontFamily: '"Brush Script MT", "Lucida Handwriting", cursive' }}>Facilities</span>
+                <span className="text-[#8B92AB] font-bold tracking-[0.3em] text-xs md:text-sm block mb-3 uppercase opacity-70" style={{ fontFamily: '"Brush Script MT", "Lucida Handwriting", cursive' }}>Facilities</span>
                 <h2 className="text-4xl md:text-5xl font-bold text-[#5A4D41] font-serif relative">
                   院内設備
-                  <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-transparent via-[#395b45] to-transparent"></div>
+                  <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-transparent via-[#8B92AB] to-transparent"></div>
                 </h2>
               </div>
             </div>
@@ -928,7 +944,7 @@ export default function Home() {
             <div className="text-center">
               <a
                 href="/facilities"
-                className="inline-flex items-center gap-3 bg-[#395b45] hover:bg-[#4a6b55] text-white px-10 py-5 rounded-full font-bold shadow-lg hover:shadow-xl transition-all duration-300 group"
+                className="inline-flex items-center gap-3 bg-[#8B92AB] hover:bg-[#9BA2B8] text-white px-10 py-5 rounded-full font-bold shadow-lg hover:shadow-xl transition-all duration-300 group"
               >
                 <span>院内設備を見る</span>
                 <div className="bg-white/20 rounded-full p-1 group-hover:translate-x-1 transition-transform">
@@ -945,7 +961,7 @@ export default function Home() {
           <div className="container mx-auto px-4 relative z-10 max-w-5xl">
             <div className="text-center mb-10">
               <h2 className="text-2xl md:text-3xl font-bold text-[#5A4D41] font-serif inline-block">診療の流れ</h2>
-              <div className="w-16 h-0.5 bg-[#395b45] mx-auto mt-4"></div>
+              <div className="w-16 h-0.5 bg-[#8B92AB] mx-auto mt-4"></div>
             </div>
 
             <div className="bg-white rounded-2xl shadow-lg p-6 md:p-10">
@@ -990,10 +1006,10 @@ export default function Home() {
                 ].map((step, index) => (
                   <div key={index}>
                     {/* 番号 + タイトル */}
-                    <div className="flex items-center gap-2 mb-6 border-b border-[#395b45]/30 pb-3">
+                    <div className="flex items-center gap-2 mb-6 border-b border-[#D0D3DE] pb-3">
                       <div className="relative">
-                        <div className="absolute top-1 left-1/2 -translate-x-1/2 w-6 h-6 bg-[#395b45]/30 rotate-45"></div>
-                        <span className="text-3xl md:text-4xl font-light text-[#395b45] tracking-wider relative z-10">{step.num}</span>
+                        <div className="absolute top-1 left-1/2 -translate-x-1/2 w-6 h-6 bg-[#8B92AB]/20 rotate-45"></div>
+                        <span className="text-3xl md:text-4xl font-light text-[#8B92AB] tracking-wider relative z-10">{step.num}</span>
                       </div>
                       <h4 className="text-lg md:text-xl font-bold text-[#5A4D41] font-serif">{step.title}</h4>
                     </div>
@@ -1026,15 +1042,15 @@ export default function Home() {
             <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-y-8 gap-x-4 max-w-6xl mx-auto">
               {menuItems.map((menu, i) => (
                 <a key={i} href={menu.link} className="flex flex-col items-center group">
-                  <div className="w-20 h-20 md:w-28 md:h-28 bg-white rounded-full shadow-sm border border-gray-100 flex items-center justify-center mb-4 group-hover:shadow-md group-hover:border-[#395b45]/30 transition-all duration-300 group-hover:-translate-y-1 overflow-hidden p-4">
+                  <div className="w-20 h-20 md:w-28 md:h-28 bg-white rounded-full shadow-sm border border-gray-100 flex items-center justify-center mb-4 group-hover:shadow-md group-hover:border-[#8B92AB]/30 transition-all duration-300 group-hover:-translate-y-1 overflow-hidden p-4">
                     {/* @ts-ignore */}
                     {menu.iconImage ? (
                       <img src={menu.iconImage} alt={menu.name} className="w-full h-full object-contain" style={{ backgroundColor: 'white' }} />
                     ) : (
-                      <menu.icon strokeWidth={1.5} className="w-8 h-8 md:w-12 md:h-12 text-[#5A4D41] group-hover:text-[#395b45] transition-colors" />
+                      <menu.icon strokeWidth={1.5} className="w-8 h-8 md:w-12 md:h-12 text-[#5A4D41] group-hover:text-[#8B92AB] transition-colors" />
                     )}
                   </div>
-                  <h4 className="font-bold text-xs md:text-sm text-[#5A4D41] text-center leading-tight group-hover:text-[#395b45] transition-colors">{menu.name}</h4>
+                  <h4 className="font-bold text-xs md:text-sm text-[#5A4D41] text-center leading-tight group-hover:text-[#8B92AB] transition-colors">{menu.name}</h4>
                 </a>
               ))}
             </div>

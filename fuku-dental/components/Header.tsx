@@ -33,9 +33,9 @@ export const Header = () => {
 
     const getCategoryDotColor = (cat: string) => {
         switch (cat) {
-            case 'kids': return 'bg-[#395b45]';
+            case 'kids': return 'bg-[#8B92AB]';
             case 'aesthetic': return 'bg-[#9B89B3]';
-            case 'ortho': return 'bg-[#395b45]';
+            case 'ortho': return 'bg-[#8B92AB]';
             case 'concerns': return 'bg-[#E89B4D]';
             default: return 'bg-gray-400';
         }
@@ -43,16 +43,16 @@ export const Header = () => {
 
     return (
         <>
-            <header className="bg-white/95 backdrop-blur-sm shadow-sm z-40 border-b border-[#c8ddd0] w-full overflow-x-hidden">
+            <header className="bg-white/95 backdrop-blur-sm shadow-sm z-40 border-b border-[#D0D3DE] w-full overflow-x-hidden">
                 <div className="container mx-auto px-4 py-2 md:py-3 flex justify-between items-center max-w-full">
                     {/* Logo Area */}
                     <div className="flex items-center gap-2 md:gap-3">
                         <a href="/" className="flex items-center gap-2 md:gap-3">
-                            <div className="w-10 h-10 md:w-12 md:h-12 bg-[#395b45] rounded-full flex items-center justify-center text-white font-bold text-xl md:text-2xl shadow-md border-2 border-white cursor-pointer">
+                            <div className="w-10 h-10 md:w-12 md:h-12 bg-[#8B92AB] rounded-full flex items-center justify-center text-white font-bold text-xl md:text-2xl shadow-md border-2 border-white cursor-pointer">
                                 ☺︎
                             </div>
                             <div>
-                                <p className="text-[10px] md:text-xs text-[#395b45] font-bold leading-none mb-0.5">豊洲の歯医者</p>
+                                <p className="text-[10px] md:text-xs text-[#8B92AB] font-bold leading-none mb-0.5">豊洲の歯医者</p>
                                 <h1 className="text-sm md:text-lg font-bold text-[#5A4D41] leading-none tracking-wide whitespace-nowrap" style={{ fontFamily: 'Georgia, "Yu Mincho", "Hiragino Mincho ProN", serif' }}>
                                     Fデンタルオフィス 豊洲プライムスクエア院
                                 </h1>
@@ -62,17 +62,17 @@ export const Header = () => {
 
                     {/* Desktop Nav (Hidden in Mobile) */}
                     <nav className="hidden lg:flex items-center gap-5 text-xs xl:text-sm font-bold text-[#8D8070]">
-                        <a href="/" className="hover:text-[#395b45] transition relative group py-2">ホーム</a>
-                        <a href="#" className="hover:text-[#395b45] transition relative group py-2">初めての方へ</a>
-                        <a href="/case-studies" className="hover:text-[#395b45] transition relative group py-2">症例紹介</a>
-                        <a href="/blog" className="hover:text-[#395b45] transition relative group py-2">ブログ・お知らせ</a>
-                        <a href="/facilities" className="hover:text-[#395b45] transition relative group py-2">院内設備</a>
-                        <a href="#" className="hover:text-[#395b45] transition relative group py-2">ドクター紹介</a>
-                        <a href="/price" className="hover:text-[#395b45] transition relative group py-2">料金表</a>
+                        <a href="/" className="hover:text-[#8B92AB] transition relative group py-2">ホーム</a>
+                        <a href="#" className="hover:text-[#8B92AB] transition relative group py-2">初めての方へ</a>
+                        <a href="/case-studies" className="hover:text-[#8B92AB] transition relative group py-2">症例紹介</a>
+                        <a href="/blog" className="hover:text-[#8B92AB] transition relative group py-2">ブログ・お知らせ</a>
+                        <a href="/facilities" className="hover:text-[#8B92AB] transition relative group py-2">院内設備</a>
+                        <a href="#" className="hover:text-[#8B92AB] transition relative group py-2">ドクター紹介</a>
+                        <a href="/price" className="hover:text-[#8B92AB] transition relative group py-2">料金表</a>
 
                         <div className="h-4 w-[1px] bg-gray-300 mx-1"></div>
 
-                        <a href="/kidsortho" className="text-[#395b45] flex items-center gap-1 px-4 py-2 bg-[#e8f2ed] rounded-full transition hover:bg-[#d4e8dc] border border-[#c8ddd0] shadow-sm transform hover:-translate-y-0.5">
+                        <a href="/kidsortho" className="text-[#8B92AB] flex items-center gap-1 px-4 py-2 bg-[#EDEEF3] rounded-full transition hover:bg-[#E0E2EB] border border-[#D0D3DE] shadow-sm transform hover:-translate-y-0.5">
                             <Smile size={16} strokeWidth={2.5} /> こども矯正
                         </a>
                         <a href="/ceramic" className="text-[#9B89B3] flex items-center gap-1 px-4 py-2 bg-[#F3F0F7] rounded-full transition hover:bg-[#EBE5F2] border border-[#E0D6EA] shadow-sm transform hover:-translate-y-0.5">
@@ -87,7 +87,7 @@ export const Header = () => {
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 aria-label="メニュー"
                 aria-expanded={isMenuOpen}
-                className="lg:hidden fixed top-2 right-2 z-[60] p-2 text-[#5A4D41] bg-white/95 backdrop-blur-sm rounded-full shadow-md border border-[#c8ddd0]"
+                className="lg:hidden fixed top-2 right-2 z-[60] p-2 text-[#5A4D41] bg-white/95 backdrop-blur-sm rounded-full shadow-md border border-[#D0D3DE]"
             >
                 {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
@@ -99,7 +99,7 @@ export const Header = () => {
 
                     <div className="py-2">
                         <p className="text-xs font-bold text-gray-400 mb-2">専門サイト</p>
-                        <a href="/kidsortho" className="flex items-center gap-3 py-3 px-4 bg-[#e8f2ed] rounded-xl text-[#395b45] font-bold border border-[#c8ddd0] shadow-sm mb-2">
+                        <a href="/kidsortho" className="flex items-center gap-3 py-3 px-4 bg-[#EDEEF3] rounded-xl text-[#8B92AB] font-bold border border-[#D0D3DE] shadow-sm mb-2">
                             <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-sm"><Smile size={18} /></div>
                             こども矯正サイト
                             <ChevronRight size={18} className="ml-auto" />
@@ -119,7 +119,7 @@ export const Header = () => {
                             className="w-full flex items-center justify-between py-2 font-bold text-[#5A4D41] cursor-pointer select-none"
                         >
                             <div className="flex items-center gap-2">
-                                <span className="w-1 h-4 bg-[#395b45] rounded-full"></span>
+                                <span className="w-1 h-4 bg-[#8B92AB] rounded-full"></span>
                                 診療メニュー一覧
                             </div>
                             {isMobileTreatmentOpen ? <ChevronUp size={18} className="text-gray-400" /> : <ChevronDown size={18} className="text-gray-400" />}
@@ -127,7 +127,7 @@ export const Header = () => {
 
                         <div className={`grid grid-cols-2 gap-2 mt-2 overflow-hidden transition-all duration-300 ${isMobileTreatmentOpen ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'}`}>
                             {treatmentMenuItems.map((item, i) => (
-                                <a key={i} href={item.link} className="flex items-center gap-2 p-2.5 bg-gray-50 hover:bg-[#e8f2ed] rounded-lg border border-gray-100 text-xs font-bold text-[#5A4D41] transition-colors">
+                                <a key={i} href={item.link} className="flex items-center gap-2 p-2.5 bg-gray-50 hover:bg-[#EDEEF3] rounded-lg border border-gray-100 text-xs font-bold text-[#5A4D41] transition-colors">
                                     <span className={`w-2 h-2 rounded-full flex-shrink-0 ${getCategoryDotColor(item.cat)}`}></span>
                                     {item.name}
                                 </a>
@@ -167,10 +167,10 @@ export const Header = () => {
                     <a href="#" className="flex items-center justify-between py-3 border-b border-dashed border-gray-200 font-bold text-[#5A4D41]">アクセス・診療時間 <ChevronRight size={16} className="text-gray-300" /></a>
 
                     <div className="pt-4 space-y-3 pb-20">
-                        <button className="w-full bg-[#395b45] text-white py-4 rounded-full font-bold shadow-[0_4px_0_#2d4835] active:shadow-none active:translate-y-[4px] transition-all flex justify-center items-center gap-2 text-lg">
+                        <button className="w-full bg-[#8B92AB] text-white py-4 rounded-full font-bold shadow-[0_4px_0_#6B7394] active:shadow-none active:translate-y-[4px] transition-all flex justify-center items-center gap-2 text-lg">
                             <Calendar size={22} /> 24時間 WEB予約
                         </button>
-                        <button className="w-full bg-white border-2 border-[#395b45] text-[#395b45] py-4 rounded-full font-bold shadow-sm flex justify-center items-center gap-2 text-lg">
+                        <button className="w-full bg-white border-2 border-[#8B92AB] text-[#8B92AB] py-4 rounded-full font-bold shadow-sm flex justify-center items-center gap-2 text-lg">
                             <Phone size={22} /> 03-1234-5678
                         </button>
                     </div>

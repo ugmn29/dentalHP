@@ -22,7 +22,7 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: "Times New Roman", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif;
+  font-family: var(--font-noto-serif-jp), "Noto Serif JP", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", serif;
 }
 
 @keyframes bounce-slow {
@@ -39,7 +39,7 @@ body {
 }
 
 .brush-underline {
-  background: linear-gradient(transparent 60%, #c8ddd0 60%);
+  background: linear-gradient(transparent 60%, #E0D8CF 60%);
   padding: 0 4px;
   border-radius: 2px;
 }
@@ -69,14 +69,14 @@ body {
   font-size: 1.9em;
   margin: 2.2em 0 0.9em;
   padding-bottom: 0.4em;
-  border-bottom: 3px solid #395b45;
+  border-bottom: 3px solid #8B92AB;
 }
 .article-body h2 {
   font-size: 1.55em;
   margin: 2em 0 0.8em;
   padding: 0.5em 0 0.5em 0.9em;
-  border-left: 5px solid #395b45;
-  background: linear-gradient(90deg, #f0f5f1 0%, transparent 100%);
+  border-left: 5px solid #8B92AB;
+  background: linear-gradient(90deg, #EDEEF3 0%, transparent 100%);
 }
 .article-body h3 {
   font-size: 1.25em;
@@ -91,13 +91,13 @@ body {
   top: 0.55em;
   width: 0.7em;
   height: 0.7em;
-  background: #395b45;
+  background: #8B92AB;
   border-radius: 50%;
 }
 .article-body h4 {
   font-size: 1.1em;
   margin: 1.4em 0 0.5em;
-  color: #395b45;
+  color: #8B92AB;
 }
 
 .article-body p {
@@ -105,21 +105,21 @@ body {
 }
 
 .article-body a {
-  color: #395b45;
+  color: #8B92AB;
   font-weight: 700;
   text-decoration: underline;
   text-underline-offset: 3px;
   text-decoration-thickness: 1.5px;
 }
 .article-body a:hover {
-  color: #2d4835;
+  color: #6B7394;
   text-decoration-thickness: 2.5px;
 }
 
 .article-body strong {
-  color: #395b45;
+  color: #8B92AB;
   font-weight: 700;
-  background: linear-gradient(transparent 65%, #c8ddd0 65%);
+  background: linear-gradient(transparent 65%, #D0D3DE 65%);
   padding: 0 2px;
 }
 
@@ -146,8 +146,8 @@ body {
   top: 0.78em;
   width: 0.55em;
   height: 0.55em;
-  background: #c8ddd0;
-  border: 2px solid #395b45;
+  background: #D0D3DE;
+  border: 2px solid #8B92AB;
   border-radius: 50%;
 }
 .article-body ol { list-style: decimal; }
@@ -155,13 +155,13 @@ body {
   margin: 0.5em 0;
   padding-left: 0.4em;
 }
-.article-body ol > li::marker { color: #395b45; font-weight: 700; }
+.article-body ol > li::marker { color: #8B92AB; font-weight: 700; }
 
 .article-body blockquote {
   margin: 1.6em 0;
   padding: 1em 1.4em;
   background: #f7f4ee;
-  border-left: 4px solid #c8ddd0;
+  border-left: 4px solid #D0D3DE;
   color: #6b5a4a;
   font-style: italic;
   border-radius: 0 8px 8px 0;
@@ -190,20 +190,20 @@ body {
 .article-body hr {
   border: none;
   height: 1px;
-  background: linear-gradient(90deg, transparent, #c8ddd0, transparent);
+  background: linear-gradient(90deg, transparent, #D0D3DE, transparent);
   margin: 2.5em 0;
 }
 
 .article-body code {
-  background: #f0f5f1;
-  color: #395b45;
+  background: #EDEEF3;
+  color: #8B92AB;
   padding: 0.15em 0.45em;
   border-radius: 4px;
   font-size: 0.92em;
   font-family: "SF Mono", Monaco, Consolas, monospace;
 }
 .article-body pre {
-  background: #2d4835;
+  background: #6B7394;
   color: #f7f4ee;
   padding: 1.2em;
   border-radius: 10px;
@@ -229,8 +229,8 @@ body {
   text-align: left;
 }
 .article-body th {
-  background: #f0f5f1;
-  color: #395b45;
+  background: #EDEEF3;
+  color: #8B92AB;
   font-weight: 700;
 }
 .article-body tr:nth-child(even) td { background: #faf8f3; }

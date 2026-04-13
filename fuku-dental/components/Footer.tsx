@@ -39,7 +39,7 @@ export const Footer = () => {
     return (
         <>
             {/* --- Footer --- */}
-            <footer className="bg-[#F5F1ED] text-[#5A4D41] pt-8 pb-20 md:pb-8 relative font-sans" style={{ fontFamily: 'sans-serif' }}>
+            <footer className="bg-[#F5F8F8] text-[#5A4D41] pt-8 pb-20 md:pb-8 relative font-sans" style={{ fontFamily: 'sans-serif' }}>
                 <div className="container mx-auto px-4">
                     {/* Access & Hours Section */}
                     <div className="mb-16">
@@ -51,7 +51,7 @@ export const Footer = () => {
                         <div className="flex flex-col lg:flex-row gap-8 max-w-6xl mx-auto">
                             {/* Map Section */}
                             <div className="w-full lg:w-1/2 space-y-4">
-                                <div className="aspect-video bg-gray-100 rounded-2xl overflow-hidden shadow-lg relative border-2 border-[#E0D5C7]">
+                                <div className="aspect-video bg-gray-100 rounded-2xl overflow-hidden shadow-lg relative border-2 border-[#D0E8E8]">
                                     <iframe
                                         src="https://www.google.com/maps?q=東京都江東区豊洲5-6-36&output=embed"
                                         width="100%"
@@ -77,57 +77,57 @@ export const Footer = () => {
                                     <table className="w-full border-collapse text-base md:text-lg font-sans" style={{ fontWeight: '300' }}>
                                         <thead>
                                             <tr className="bg-white">
-                                                <th className="py-4 px-3 text-left font-medium border-b border-gray-200 text-[#2d4835] w-[30%]">診療時間</th>
-                                                <th className="py-4 px-2 text-center font-medium border-b border-gray-200 text-[#2d4835] w-[10%]">月</th>
-                                                <th className="py-4 px-2 text-center font-medium border-b border-gray-200 text-[#2d4835] w-[10%]">火</th>
-                                                <th className="py-4 px-2 text-center font-medium border-b border-gray-200 text-[#2d4835] w-[10%]">水</th>
-                                                <th className="py-4 px-2 text-center font-medium border-b border-gray-200 text-[#2d4835] w-[10%]">木</th>
-                                                <th className="py-4 px-2 text-center font-medium border-b border-gray-200 text-[#2d4835] w-[10%]">金</th>
-                                                <th className="py-4 px-2 text-center font-medium border-b border-gray-200 text-[#2d4835] w-[10%]">土</th>
-                                                <th className="py-4 px-2 pr-3 text-center font-medium border-b border-gray-200 text-[#2d4835] w-[10%]">日</th>
+                                                <th className="py-4 px-3 text-left font-medium border-b border-gray-200 text-[#5A4D41] w-[30%]">診療時間</th>
+                                                <th className="py-4 px-2 text-center font-medium border-b border-gray-200 text-[#5A4D41] w-[10%]">月</th>
+                                                <th className="py-4 px-2 text-center font-medium border-b border-gray-200 text-[#5A4D41] w-[10%]">火</th>
+                                                <th className="py-4 px-2 text-center font-medium border-b border-gray-200 text-[#5A4D41] w-[10%]">水</th>
+                                                <th className="py-4 px-2 text-center font-medium border-b border-gray-200 text-[#5A4D41] w-[10%]">木</th>
+                                                <th className="py-4 px-2 text-center font-medium border-b border-gray-200 text-[#5A4D41] w-[10%]">金</th>
+                                                <th className="py-4 px-2 text-center font-medium border-b border-gray-200 text-[#5A4D41] w-[10%]">土</th>
+                                                <th className="py-4 px-2 pr-3 text-center font-medium border-b border-gray-200 text-[#5A4D41] w-[10%]">日</th>
                                             </tr>
                                         </thead>
                                         <tbody className="bg-white">
                                             <tr className="border-b border-gray-200">
-                                                <td className="py-5 px-3 text-left font-normal text-[#2d4835] text-base md:text-lg whitespace-nowrap" style={{ fontStyle: 'normal', fontFamily: 'sans-serif', fontWeight: '400' }}>10:00-13:00</td>
-                                                <td className="py-5 px-2 text-center text-[#2d4835] text-lg font-light">●</td>
+                                                <td className="py-5 px-3 text-left font-normal text-[#5A4D41] text-base md:text-lg whitespace-nowrap" style={{ fontStyle: 'normal', fontFamily: 'sans-serif', fontWeight: '400' }}>10:00-13:00</td>
+                                                <td className="py-5 px-2 text-center text-[#5A4D41] text-lg font-light">●</td>
                                                 <td className="py-5 px-2 text-center text-gray-300 text-lg font-light">−</td>
-                                                <td className="py-5 px-2 text-center text-[#2d4835] text-lg font-light">●</td>
-                                                <td className="py-5 px-2 text-center text-[#2d4835] text-lg font-light">●</td>
-                                                <td className="py-5 px-2 text-center text-[#2d4835] text-lg font-light">●</td>
-                                                <td className="py-5 px-2 text-center text-[#2d4835] font-medium">★</td>
-                                                <td className="py-5 px-2 pr-3 text-center text-[#2d4835] font-medium">★</td>
+                                                <td className="py-5 px-2 text-center text-[#5A4D41] text-lg font-light">●</td>
+                                                <td className="py-5 px-2 text-center text-[#5A4D41] text-lg font-light">●</td>
+                                                <td className="py-5 px-2 text-center text-[#5A4D41] text-lg font-light">●</td>
+                                                <td className="py-5 px-2 text-center text-[#5A4D41] font-medium">★</td>
+                                                <td className="py-5 px-2 pr-3 text-center text-[#5A4D41] font-medium">★</td>
                                             </tr>
                                             <tr className="border-b border-gray-200">
-                                                <td className="py-5 px-3 text-left font-normal text-[#2d4835] text-base md:text-lg whitespace-nowrap" style={{ fontStyle: 'normal', fontFamily: 'sans-serif', fontWeight: '400' }}>14:00-19:00</td>
-                                                <td className="py-5 px-2 text-center text-[#2d4835] text-lg font-light">●</td>
+                                                <td className="py-5 px-3 text-left font-normal text-[#5A4D41] text-base md:text-lg whitespace-nowrap" style={{ fontStyle: 'normal', fontFamily: 'sans-serif', fontWeight: '400' }}>14:00-19:00</td>
+                                                <td className="py-5 px-2 text-center text-[#5A4D41] text-lg font-light">●</td>
                                                 <td className="py-5 px-2 text-center text-gray-300 text-lg font-light">−</td>
-                                                <td className="py-5 px-2 text-center text-[#2d4835] text-lg font-light">●</td>
-                                                <td className="py-5 px-2 text-center text-[#2d4835] text-lg font-light">●</td>
-                                                <td className="py-5 px-2 text-center text-[#2d4835] text-lg font-light">●</td>
-                                                <td className="py-5 px-2 text-center text-[#2d4835] font-medium">★</td>
-                                                <td className="py-5 px-2 pr-3 text-center text-[#2d4835] font-medium">★</td>
+                                                <td className="py-5 px-2 text-center text-[#5A4D41] text-lg font-light">●</td>
+                                                <td className="py-5 px-2 text-center text-[#5A4D41] text-lg font-light">●</td>
+                                                <td className="py-5 px-2 text-center text-[#5A4D41] text-lg font-light">●</td>
+                                                <td className="py-5 px-2 text-center text-[#5A4D41] font-medium">★</td>
+                                                <td className="py-5 px-2 pr-3 text-center text-[#5A4D41] font-medium">★</td>
                                             </tr>
                                         </tbody>
                                     </table>
                                 </div>
-                                <div className="mt-6 space-y-1 text-sm md:text-base text-[#2d4835] text-center font-sans font-light">
-                                    <p style={{ fontStyle: 'normal', fontFamily: 'sans-serif', fontWeight: '300' }}><span className="text-[#2d4835] font-medium text-xl">★</span> 土日：9:00-12:00 / 13:00-17:00</p>
-                                    <p className="font-medium text-[#2d4835] mt-3" style={{ fontFamily: 'sans-serif', fontWeight: '500' }}>休診日：火曜日</p>
+                                <div className="mt-6 space-y-1 text-sm md:text-base text-[#5A4D41] text-center font-sans font-light">
+                                    <p style={{ fontStyle: 'normal', fontFamily: 'sans-serif', fontWeight: '300' }}><span className="text-[#5A4D41] font-medium text-xl">★</span> 土日：9:00-12:00 / 13:00-17:00</p>
+                                    <p className="font-medium text-[#5A4D41] mt-3" style={{ fontFamily: 'sans-serif', fontWeight: '500' }}>休診日：火曜日</p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     {/* Footer Links Section */}
-                    <div className="border-t border-[#E0D5C7] pt-4 pb-8">
+                    <div className="border-t border-[#D0E8E8] pt-4 pb-8">
                         <div className="max-w-md mx-auto">
                             {/* SNS Buttons */}
                             <div className="flex gap-4 justify-center mb-8">
-                                <a href="#" className="w-12 h-12 bg-[#E0D5C7] hover:bg-[#395b45] hover:text-white text-[#5A4D41] rounded-full flex items-center justify-center transition shadow-md">
+                                <a href="#" className="w-12 h-12 bg-[#D0E8E8] hover:bg-[#8B92AB] hover:text-white text-[#5A4D41] rounded-full flex items-center justify-center transition shadow-md">
                                     <span className="font-bold text-sm">IG</span>
                                 </a>
-                                <a href="#" className="w-12 h-12 bg-[#E0D5C7] hover:bg-[#395b45] hover:text-white text-[#5A4D41] rounded-full flex items-center justify-center transition shadow-md">
+                                <a href="#" className="w-12 h-12 bg-[#D0E8E8] hover:bg-[#8B92AB] hover:text-white text-[#5A4D41] rounded-full flex items-center justify-center transition shadow-md">
                                     <span className="font-bold text-sm">LN</span>
                                 </a>
                             </div>
@@ -135,18 +135,18 @@ export const Footer = () => {
                             {/* Quick Links */}
                             <p className="font-bold mb-6 text-[#5A4D41] text-left md:text-center">Quick Links</p>
                             <ul className="space-y-3 text-sm text-[#8D8070] font-medium text-left md:text-center">
-                                <li><a href="/" className="hover:text-[#395b45] transition block">ホーム</a></li>
+                                <li><a href="/" className="hover:text-[#8B92AB] transition block">ホーム</a></li>
                                 <li className="pt-2">
                                     <p className="text-xs text-[#B0A69A] mb-2">専門サイト</p>
                                     <ul className="space-y-2 pl-3">
-                                        <li><a href="/kidsortho" className="hover:text-[#395b45] transition block">こども矯正サイト</a></li>
-                                        <li><a href="/ceramic" className="hover:text-[#395b45] transition block">審美歯科サイト</a></li>
+                                        <li><a href="/kidsortho" className="hover:text-[#8B92AB] transition block">こども矯正サイト</a></li>
+                                        <li><a href="/ceramic" className="hover:text-[#8B92AB] transition block">審美歯科サイト</a></li>
                                     </ul>
                                 </li>
                                 <li className="pt-2">
                                     <div
                                         onClick={() => setIsTreatmentMenuOpen(!isTreatmentMenuOpen)}
-                                        className="flex items-center justify-between cursor-pointer hover:text-[#395b45] transition"
+                                        className="flex items-center justify-between cursor-pointer hover:text-[#8B92AB] transition"
                                     >
                                         <span>診療メニュー一覧</span>
                                         {isTreatmentMenuOpen ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
@@ -155,8 +155,8 @@ export const Footer = () => {
                                         {treatmentMenuItems.map((item, i) => {
                                             const Icon = item.icon;
                                             return (
-                                                <a key={i} href={item.link} className="text-xs hover:text-[#395b45] transition flex items-center gap-1.5">
-                                                    <Icon className="text-[#395b45] flex-shrink-0" size={12} />
+                                                <a key={i} href={item.link} className="text-xs hover:text-[#8B92AB] transition flex items-center gap-1.5">
+                                                    <Icon className="text-[#8B92AB] flex-shrink-0" size={12} />
                                                     <span>{item.name}</span>
                                                 </a>
                                             );
@@ -179,17 +179,17 @@ export const Footer = () => {
                                         ))}
                                     </div>
                                 </li>
-                                <li><a href="/case-studies" className="hover:text-[#395b45] transition block">症例紹介</a></li>
-                                <li><a href="#" className="hover:text-[#395b45] transition block">ドクター紹介</a></li>
-                                <li><a href="/price" className="hover:text-[#395b45] transition block">料金表</a></li>
-                                <li><a href="/blog" className="hover:text-[#395b45] transition block">ブログ・お知らせ</a></li>
-                                <li><a href="/facilities" className="hover:text-[#395b45] transition block">院内設備</a></li>
-                                <li><a href="#" className="hover:text-[#395b45] transition block">アクセス・診療時間</a></li>
+                                <li><a href="/case-studies" className="hover:text-[#8B92AB] transition block">症例紹介</a></li>
+                                <li><a href="#" className="hover:text-[#8B92AB] transition block">ドクター紹介</a></li>
+                                <li><a href="/price" className="hover:text-[#8B92AB] transition block">料金表</a></li>
+                                <li><a href="/blog" className="hover:text-[#8B92AB] transition block">ブログ・お知らせ</a></li>
+                                <li><a href="/facilities" className="hover:text-[#8B92AB] transition block">院内設備</a></li>
+                                <li><a href="#" className="hover:text-[#8B92AB] transition block">アクセス・診療時間</a></li>
                             </ul>
                         </div>
                     </div>
 
-                    <div className="border-t border-[#E0D5C7] pt-8 text-center text-xs text-[#B0A69A]">
+                    <div className="border-t border-[#D0E8E8] pt-8 text-center text-xs text-[#B0A69A]">
                         © Fuku Dental Clinic All Rights Reserved.
                     </div>
                 </div>
