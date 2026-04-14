@@ -281,80 +281,78 @@ export default function Home() {
         </section>
 
         {/* --- Doctor Section (v7 Style) --- */}
-        <section className="py-12 sm:py-16 relative bg-[#FAFAF8] w-full overflow-hidden">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6">
-            <div className="text-center mb-8">
-              <span className="font-sans text-xs tracking-widest text-[#8B92AB] uppercase bg-white px-4 py-1 rounded-full shadow-sm">Doctor</span>
-              <h2 className="text-3xl font-serif mt-4">ドクター紹介</h2>
+        <section className="py-16 md:py-24 bg-[#F5F2EE] relative border-y border-[#D8DBE6]/30 overflow-hidden">
+          <div className="absolute top-0 left-0 w-full h-[3px] bg-[#D8DBE6]/50"></div>
+          <div className="max-w-5xl mx-auto px-6">
+            <div className="text-center mb-16 space-y-4">
+              <span className="font-sans text-xs tracking-[0.3em] text-[#8B92AB] uppercase">Doctor</span>
+              <h2 className="text-4xl font-light tracking-widest">ドクター紹介</h2>
             </div>
 
-            {/* --- Profile Card (v7) --- */}
-            <div className="bg-white rounded-[2rem] shadow-card p-6 sm:p-12 border border-[#D8DBE6]/20">
-              <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
-                {/* Photo Left */}
-                <div className="w-full lg:w-1/3 shrink-0 relative">
-                  <div className="aspect-[3/4] rounded-2xl overflow-hidden relative group">
-                    <PageImage
-                      path="/homepage"
-                      imageId="doctor"
-                      alt="院長 福永真大"
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                      />
-                  </div>
+            <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-12 lg:gap-20">
+              {/* Photo */}
+              <div className="relative">
+                <div className="absolute -left-2 -bottom-2 w-full h-full border border-[#D8DBE6] rounded-t-full rounded-b-[4rem] z-0"></div>
+                <div className="rounded-t-full rounded-b-[4rem] overflow-hidden aspect-[3/4] relative z-10 shadow-card border border-[#D8DBE6]/50">
+                  <PageImage
+                    path="/homepage"
+                    imageId="doctor"
+                    alt="院長 福永真大"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
+              </div>
 
-                {/* Info Right */}
-                <div className="w-full lg:w-2/3 flex flex-col justify-start">
-                  <p className="text-sm text-[#5A4D41]/70 tracking-widest mb-2 font-serif">院長</p>
-                  <h3 className="text-3xl sm:text-4xl font-serif mb-2 pb-6 border-b border-[#D8DBE6] border-dashed">
+              {/* Info */}
+              <div className="flex flex-col justify-center space-y-8">
+                <div>
+                  <p className="text-xs text-[#5A4D41]/60 mb-3 tracking-widest font-sans">院長</p>
+                  <h3 className="text-4xl lg:text-5xl mb-4 font-medium flex flex-col sm:flex-row sm:items-end gap-4 border-b border-[#D8DBE6] pb-6">
                     福永　真大
-                    <span className="block mt-2 text-xs font-sans font-normal text-[#5A4D41]/60">Masahiro Fukunaga / 院長・歯科医師</span>
+                    <span className="text-sm font-sans font-light text-[#5A4D41]/70 pb-1">Masahiro Fukunaga / 院長・歯科医師</span>
                   </h3>
+                </div>
 
-                  <div className="space-y-4 mt-6 mb-6">
-                    <div>
-                      <h4 className="font-bold text-[#5A4D41] mb-2 flex items-center gap-2">
-                        <span className="w-1 h-4 bg-[#8B92AB] rounded-full"></span>
-                        経歴
-                      </h4>
-                      <ul className="text-sm space-y-1 ml-4">
-                        <li>• 大阪大学歯学部 卒業</li>
-                        <li>• 大手医療法人にて研修医指導医・診療主任を歴任</li>
-                        <li>• 都内歯科医院 副院長</li>
-                        <li>• Fデンタルオフィス 豊洲プライムスクエア院 開業</li>
-                      </ul>
-                    </div>
-
-                    <div>
-                      <h4 className="font-bold text-[#5A4D41] mb-2 flex items-center gap-2">
-                        <span className="w-1 h-4 bg-[#8B92AB] rounded-full"></span>
-                        所属学会
-                      </h4>
-                      <p className="text-sm ml-4">
-                        日本小児歯科学会 / 日本矯正歯科学会 / 日本歯周病学会 / 日本口腔インプラント学会 / 日本審美歯科学会
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Opening Message (v4 style) */}
-                  <div className="bg-white rounded-2xl shadow-md border border-[#D8DBE6]/30 p-8 md:p-10 mt-auto">
-                    <h4 className="font-bold text-[#5A4D41] text-lg mb-4 flex items-center gap-2">
-                      <span className="w-1.5 h-5 bg-[#8B92AB] rounded-full"></span>
-                      当院が大切にしていること
+                <div className="grid grid-cols-1 gap-8 text-sm">
+                  <div>
+                    <h4 className="font-medium mb-4 flex items-center gap-3 text-lg">
+                      <span className="w-8 h-8 rounded-full bg-[#D8DBE6]/40 flex items-center justify-center text-[#8B92AB] text-sm">🎓</span>
+                      経歴
                     </h4>
-                  <div className="space-y-4 text-sm leading-[1.9] text-[#5A4D41]">
-                    <p>
-                      私の父は、30年近く小児矯正に携わってきた歯科医師です。幼い頃からその背中を見て育ち、歯並びや噛み合わせが日々の習慣で大きく変わることを学んできました。当院のコンセプトは「未来のいいお顔を育てる」。これはお子様だけに向けた言葉ではありません。矯正後の後戻り、顔の歪み — その多くは呼吸・姿勢・噛み癖といった習慣に原因があります。お子様の口腔育成から大人の矯正・審美治療まで、習慣へのアプローチを軸に、年齢を問わずお口と表情の健康を整えていく歯科医院です。
-                    </p>
-                    <p>
-                      大阪大学歯学部を卒業後、大規模医療法人にて一般歯科・インプラント・矯正・審美治療など幅広い症例を経験し、研修医指導医も務めました。その中で強く感じたのは、良い治療が患者様に正しく届いていないという現実です。私自身は大学まで野球に打ち込み、噛み合わせや口呼吸がパフォーマンスに直結することも実感してきました。歯並びと全身の健康の関係を、スポーツを頑張るお子様や保護者の方にも届けたいと考えています。
-                    </p>
-                    <p>
-                      父から受け継いだ口腔育成への想い、臨床で培った技術、そして患者様に「伝わる」情報発信力。この3つを軸に、「もっと早く知りたかった」「あの時聞けてよかった」— そう感じていただける歯科医院を目指しています。
-                    </p>
+                    <ul className="space-y-4 text-[#5A4D41]/80 leading-relaxed font-sans mt-4 ml-4 border-l border-[#D8DBE6] pl-6">
+                      <li className="relative before:content-[''] before:w-2 before:h-2 before:bg-[#D8DBE6] before:rounded-full before:absolute before:-left-[29px] before:top-2">大阪大学歯学部 卒業</li>
+                      <li className="relative before:content-[''] before:w-2 before:h-2 before:bg-[#D8DBE6] before:rounded-full before:absolute before:-left-[29px] before:top-2">大手医療法人にて研修医指導医・診療主任を歴任</li>
+                      <li className="relative before:content-[''] before:w-2 before:h-2 before:bg-[#D8DBE6] before:rounded-full before:absolute before:-left-[29px] before:top-2">都内歯科医院 副院長</li>
+                      <li className="relative before:content-[''] before:w-2 before:h-2 before:bg-[#D8DBE6] before:rounded-full before:absolute before:-left-[29px] before:top-2">Fデンタルオフィス 豊洲プライムスクエア院 開業</li>
+                    </ul>
                   </div>
+
+                  <div>
+                    <h4 className="font-medium mb-4 flex items-center gap-3 text-lg">
+                      <span className="w-8 h-8 rounded-full bg-[#D8DBE6]/40 flex items-center justify-center text-[#8B92AB] text-sm">📜</span>
+                      所属学会
+                    </h4>
+                    <p className="text-[#5A4D41]/80 leading-[2.5] font-sans text-sm bg-white/70 p-6 rounded-[1.5rem] border border-[#D8DBE6]/50 shadow-sm mt-4">
+                      日本小児歯科学会 / 日本矯正歯科学会 / 日本歯周病学会 / 日本口腔インプラント学会 / 日本審美歯科学会
+                    </p>
                   </div>
                 </div>
+              </div>
+            </div>
+
+            {/* Opening Message */}
+            <div className="mt-16 glass-bright p-8 md:p-16 rounded-[2.5rem] shadow-glass relative border border-[#D8DBE6]">
+              <h4 className="text-2xl font-medium mb-8 text-center relative z-10 border-b border-[#D8DBE6] pb-4 max-w-sm mx-auto tracking-wider">当院が大切にしていること</h4>
+              <div className="space-y-6 text-sm md:text-base leading-[2.2] relative z-10 md:px-12 text-[#5A4D41]/90 text-justify">
+                <p>
+                  私の父は、30年近く小児矯正に携わってきた歯科医師です。幼い頃からその背中を見て育ち、歯並びや噛み合わせが日々の習慣で大きく変わることを学んできました。当院のコンセプトは「未来のいいお顔を育てる」。これはお子様だけに向けた言葉ではありません。矯正後の後戻り、顔の歪み — その多くは呼吸・姿勢・噛み癖といった習慣に原因があります。お子様の口腔育成から大人の矯正・審美治療まで、習慣へのアプローチを軸に、年齢を問わずお口と表情の健康を整えていく歯科医院です。
+                </p>
+                <p>
+                  大阪大学歯学部を卒業後、大規模医療法人にて一般歯科・インプラント・矯正・審美治療など幅広い症例を経験し、研修医指導医も務めました。その中で強く感じたのは、良い治療が患者様に正しく届いていないという現実です。私自身は大学まで野球に打ち込み、噛み合わせや口呼吸がパフォーマンスに直結することも実感してきました。歯並びと全身の健康の関係を、スポーツを頑張るお子様や保護者の方にも届けたいと考えています。
+                </p>
+                <p>
+                  父から受け継いだ口腔育成への想い、臨床で培った技術、そして患者様に「伝わる」情報発信力。この3つを軸に、「もっと早く知りたかった」「あの時聞けてよかった」— そう感じていただける歯科医院を目指しています。
+                </p>
               </div>
             </div>
 
