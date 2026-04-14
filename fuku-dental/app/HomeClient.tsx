@@ -203,9 +203,9 @@ export default function Home() {
 
       <main>
         {/* --- Hero Section (v7 Nordic Style) --- */}
-        <section className="relative w-full min-h-[85vh] overflow-hidden bg-[#FAFAF8] flex flex-col items-center justify-center text-center px-4 pt-32 pb-20 sm:pt-40 sm:pb-32">
+        <section className="relative w-full min-h-[70vh] overflow-hidden bg-[#FAFAF8] flex flex-col items-center justify-center text-center px-4 pt-24 pb-12 sm:pt-32 sm:pb-20">
 
-          <div className="inline-block bg-[#D8DBE6]/40 text-[#5A4D41] text-xs px-6 py-2 rounded-full tracking-widest mb-8 border border-[#D8DBE6]">
+          <div className="inline-block bg-[#D8DBE6]/40 text-[#5A4D41] text-xs px-6 py-2 rounded-full tracking-widest mb-4 border border-[#D8DBE6]">
             新規開業のお知らせ
           </div>
 
@@ -217,7 +217,7 @@ export default function Home() {
             2026年7月1日<br className="block sm:hidden" />新規開業
           </h2>
 
-          <div className="mt-8 sm:mt-16 w-full max-w-4xl mx-auto space-y-6">
+          <div className="mt-6 sm:mt-10 w-full max-w-4xl mx-auto space-y-4">
             <p className="hero-subtitle font-sans font-bold text-center w-full whitespace-nowrap">
               豊洲駅から<span className="marker-50 font-black">徒歩2分</span>の歯医者
             </p>
@@ -281,16 +281,16 @@ export default function Home() {
         </section>
 
         {/* --- Doctor Section (v7 Style) --- */}
-        <section className="py-20 sm:py-32 relative bg-[#FAFAF8] w-full overflow-hidden">
+        <section className="py-12 sm:py-16 relative bg-[#FAFAF8] w-full overflow-hidden">
           <div className="max-w-6xl mx-auto px-4 sm:px-6">
-            <div className="text-center mb-16">
+            <div className="text-center mb-8">
               <span className="font-sans text-xs tracking-widest text-[#8B92AB] uppercase bg-white px-4 py-1 rounded-full shadow-sm">Doctor</span>
               <h2 className="text-3xl font-serif mt-4">ドクター紹介</h2>
             </div>
 
             {/* --- Profile Card (v7) --- */}
             <div className="bg-white rounded-[2rem] shadow-card p-6 sm:p-12 border border-[#D8DBE6]/20">
-              <div className="flex flex-col lg:flex-row gap-10 lg:gap-16">
+              <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
                 {/* Photo Left */}
                 <div className="w-full lg:w-1/3 shrink-0 relative">
                   <div className="aspect-[3/4] rounded-2xl overflow-hidden relative group">
@@ -311,7 +311,7 @@ export default function Home() {
                     <span className="block mt-2 text-xs font-sans font-normal text-[#5A4D41]/60">Masahiro Fukunaga / 院長・歯科医師</span>
                   </h3>
 
-                  <div className="space-y-4 mt-8 mb-10">
+                  <div className="space-y-4 mt-6 mb-6">
                     <div>
                       <h4 className="font-bold text-[#5A4D41] mb-2 flex items-center gap-2">
                         <span className="w-1 h-4 bg-[#8B92AB] rounded-full"></span>
@@ -372,7 +372,7 @@ export default function Home() {
         </section>
 
         {/* --- Problem Section (Modern Light Design) --- */}
-        <section className="relative overflow-hidden py-16 md:py-20 bg-gradient-to-b from-[#F5F2EE] to-white">
+        <section className="relative overflow-hidden py-12 md:py-16 bg-gradient-to-b from-[#F5F2EE] to-white">
           {/* Decorative background shapes */}
           <div className="absolute top-10 left-0 w-64 h-64 bg-[#D8DBE6]/20 rounded-full blur-3xl -translate-x-1/2"></div>
           <div className="absolute bottom-10 right-0 w-48 h-48 bg-[#D8DBE6]/15 rounded-full blur-3xl translate-x-1/3"></div>
@@ -492,9 +492,9 @@ export default function Home() {
         </section>
 
         {/* --- Features Section (Refined Zig-Zag) --- */}
-        <section className="pt-12 pb-8 bg-[#FAFAFA] relative overflow-hidden">
+        <section className="pt-8 pb-8 bg-[#FAFAFA] relative overflow-hidden">
           <div className="container mx-auto px-4 relative z-10">
-            <div className="text-center mb-12">
+            <div className="text-center mb-8">
               <div className="inline-block relative">
                 <span className="text-[#8B92AB] font-bold tracking-[0.3em] text-xs md:text-sm block mb-3 uppercase opacity-70" style={{ fontFamily: '"Brush Script MT", "Lucida Handwriting", cursive' }}>FEATURES</span>
                 <h2 className="text-4xl md:text-5xl font-bold text-[#5A4D41] font-serif relative">
