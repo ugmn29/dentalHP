@@ -198,264 +198,150 @@ export default function Home() {
 
 
   return (
-    <div className="min-h-screen bg-[#FAFAF8] font-serif text-[#5A4D41] selection:bg-[#8B92AB] selection:text-white">
+    <div className="min-h-screen bg-[#FAFAF8] font-sans text-[#5A4D41] selection:bg-[#8B92AB] selection:text-white">
       <Header />
 
       <main>
-        {/* --- Hero Section (Image Slider + Text) --- */}
-        <section className="relative w-full h-screen min-h-[600px] overflow-hidden bg-[#FAFAF8]">
-          {/* Opening Announcement - Reduced height */}
-          <div className="relative w-full bg-gradient-to-br from-[#EDEEF3] via-white to-[#EDEEF3] flex items-center justify-center" style={{ height: '50vh' }}>
-            <div className="text-center px-4">
-              <div className="inline-block mb-8">
-                <div className="bg-gradient-to-r from-[#FFD700] to-[#FFA500] text-[#5A4D41] px-10 py-4 rounded-full text-base md:text-lg font-black shadow-xl" style={{ fontFamily: 'sans-serif' }}>
-                  新規開業のお知らせ
-                </div>
-              </div>
-              <p className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#5A4D41] mb-4" style={{ fontFamily: 'sans-serif' }}>
-                0歳から通える歯科医院
-              </p>
-              <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-6" style={{
-                fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif',
-                background: 'linear-gradient(135deg, #5A4D41 0%, #5A4D41 50%, #5A4D41 100%)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text',
-                textShadow: '0 4px 20px rgba(57, 91, 69, 0.3)'
-              }}>
-                2026年7月1日
-              </h2>
-              <p className="text-3xl md:text-4xl lg:text-5xl font-black text-[#5A4D41]" style={{ fontFamily: 'sans-serif' }}>
-                新規開業
-              </p>
-            </div>
+        {/* --- Hero Section (v7 Nordic Style) --- */}
+        <section className="relative w-full min-h-[85vh] overflow-hidden bg-[#FAFAF8] flex flex-col items-center justify-center text-center px-4 pt-32 pb-20 sm:pt-40 sm:pb-32">
 
-            {/* CTA Button - Bottom Right */}
-            <div className="absolute -bottom-8 right-4 md:-bottom-10 md:right-8 z-20 animate-bounce-slow">
-              <a
-                href="#"
-                className="group relative flex items-center gap-3 bg-gradient-to-r from-[#A03F2B] to-[#8B3626] hover:from-[#C04D35] hover:to-[#A03F2B] text-white px-6 py-4 md:px-8 md:py-5 rounded-full shadow-2xl hover:shadow-[0_0_30px_rgba(160,63,43,0.6)] transition-all duration-300 transform hover:scale-105"
-              >
-                <div className="flex items-center gap-2">
-                  <Calendar size={24} className="group-hover:rotate-12 transition-transform" />
-                  <div className="flex flex-col items-start">
-                    <span className="text-xs font-medium opacity-90">24時間受付</span>
-                    <span className="text-base md:text-lg font-bold whitespace-nowrap">WEB予約</span>
-                  </div>
-                </div>
-                <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center group-hover:translate-x-1 transition-transform">
-                  <ChevronRight size={20} />
-                </div>
-
-                {/* Pulsing ring effect */}
-                <div className="absolute inset-0 rounded-full bg-[#A03F2B] opacity-0 group-hover:opacity-20 group-hover:scale-110 transition-all duration-300"></div>
-              </a>
-            </div>
+          <div className="inline-block bg-[#D8DBE6]/40 text-[#5A4D41] text-xs px-6 py-2 rounded-full tracking-widest mb-8 border border-[#D8DBE6]">
+            新規開業のお知らせ
           </div>
 
-          {/* Text Area - Closer to image */}
-          <div className="relative bg-white flex flex-col items-center justify-center px-4 py-8 md:py-12">
-            <div className="max-w-7xl w-full text-center flex items-center justify-center">
-              <h1 className="font-bold leading-tight" style={{ fontFamily: 'serif' }}>
-                <div className="relative inline-block mb-4 md:mb-6 px-4 md:px-8">
-                  <div className="relative z-10 py-4 md:py-6 whitespace-nowrap overflow-x-auto">
-                    <span className="inline-flex items-center justify-center gap-1 md:gap-3 text-[6vw] sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
-                      style={{
-                        fontWeight: '900',
-                        letterSpacing: '0.05em'
-                      }}>
-                      <span className="inline-block bg-gradient-to-br from-[#5A4D41] via-[#5A4D41] to-[#5A4D41] bg-clip-text text-transparent drop-shadow-lg transform hover:scale-105 transition-all duration-300"
-                        style={{
-                          WebkitBackgroundClip: 'text',
-                          WebkitTextFillColor: 'transparent'
-                        }}>
-                        <strong><span className="text-[110%]">豊洲駅</span></strong><span className="text-[85%]">から</span>
-                      </span>
-                      <span className="inline-flex items-center justify-center px-3 md:px-6 py-1 md:py-2 marker-yellow rounded-lg">
-                        <span className="font-black text-[#5A4D41]">
-                          徒歩2分
-                        </span>
-                      </span>
-                      <span className="inline-block bg-gradient-to-br from-[#5A4D41] via-[#5A4D41] to-[#5A4D41] bg-clip-text text-transparent drop-shadow-lg transform hover:scale-105 transition-all duration-300"
-                        style={{
-                          WebkitBackgroundClip: 'text',
-                          WebkitTextFillColor: 'transparent'
-                        }}>
-                        <span className="text-[85%]">の</span><strong><span className="text-[110%]">歯医者</span></strong>
-                      </span>
-                    </span>
-                  </div>
-                  <div className="absolute -inset-4 bg-gradient-to-r from-yellow-400/10 via-[#8B92AB]/20 to-yellow-400/10 rounded-3xl blur-2xl -z-10 animate-pulse"></div>
-                  <div className="absolute -inset-2 bg-gradient-to-r from-transparent via-[#8B92AB]/5 to-transparent rounded-2xl -z-10"></div>
-                </div>
-                <span className="block text-[5.5vw] sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-[#5A4D41] -mt-4 md:-mt-6 font-semibold" style={{ fontStyle: 'normal' }}>
-                  0歳から通える<strong>歯科</strong>・<strong>矯正歯科</strong>
-                </span>
-              </h1>
-            </div>
+          <p className="text-base sm:text-xl font-serif text-[#5A4D41]/80 mb-4 tracking-widest">
+            0歳から通える歯科医院
+          </p>
 
-            {/* Building Location Card */}
-            <div className="mt-6 md:mt-8 w-full md:px-4">
-              <div className="bg-white rounded-xl md:rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <div className="flex items-center p-2 sm:p-3 md:p-4 border-2 border-[#D0D3DE] rounded-xl md:rounded-2xl m-1 md:m-2">
-                  {/* Building Image */}
-                  <div className="flex-shrink-0 w-24 h-24 md:w-32 md:h-32 lg:w-40 lg:h-40">
-                    <img
-                      src="/images/building.avif"
-                      alt="豊洲プライムスクエア"
-                      className="w-full h-full object-cover rounded-lg"
-                    />
-                  </div>
+          <h2 className="hero-heading font-serif font-bold text-[#5A4D41] mb-4 tracking-tight w-full">
+            2026年7月1日<br className="block sm:hidden" />新規開業
+          </h2>
 
-                  {/* Text Content */}
-                  <div className="flex-1 ml-4 md:ml-6">
-                    <h3 className="text-lg md:text-2xl lg:text-3xl font-bold text-[#5A4D41] mb-2 md:mb-3" style={{ fontStyle: 'normal' }}>
-                      豊洲プライムスクエア1階
-                    </h3>
-                    <div className="flex items-center gap-2 text-[#5A4D41]">
-                      <svg
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                        className="flex-shrink-0"
-                      >
-                        <path d="M13.49 5.48c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm-3.6 13.9l1-4.4 2.1 2v6h2v-7.5l-2.1-2 .6-3c1.3 1.5 3.3 2.5 5.5 2.5v-2c-1.9 0-3.5-1-4.3-2.4l-1-1.6c-.4-.6-1-1-1.7-1-.3 0-.5.1-.8.1l-5.2 2.2v4.7h2v-3.4l1.8-.7-1.6 8.1-4.9-1-.4 2 7 1.4z" />
-                      </svg>
-                      <span className="text-sm md:text-base lg:text-lg font-medium" style={{ fontStyle: 'normal' }}>
-                        「豊洲駅6a出口」徒歩2分
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div className="mt-8 sm:mt-16 w-full max-w-4xl mx-auto space-y-6">
+            <p className="hero-subtitle font-sans font-bold flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 w-full">
+              <span>豊洲駅から</span>
+              <span className="marker-50 font-black">徒歩2分</span>
+              <span>の歯医者</span>
+            </p>
+            <h1 className="text-base sm:text-2xl mt-4 font-serif tracking-widest text-[#5A4D41]/80 w-full">
+              0歳から通える歯科・矯正歯科
+            </h1>
           </div>
 
-          <WaveBottom color="fill-[#FAFAFA]" />
         </section>
 
-        {/* --- Special Sites (Limit-Breaking Redesign: Simple & High CTA) --- */}
-        <section className="pt-0 pb-4 bg-[#FAFAF8] relative overflow-hidden">
-          <div className="container mx-auto px-4 relative z-10">
-            {/* Opening Hours Table */}
-            <div className="w-full font-sans">
-              <div className="overflow-x-auto">
-                <table className="w-full border-collapse text-base md:text-lg font-sans">
-                  <thead>
-                    <tr className="bg-white">
-                      <th className="py-4 px-3 text-left font-bold border-b border-gray-200 text-[#5A4D41] w-[30%]">診療時間</th>
-                      <th className="py-4 px-2 text-center font-bold border-b border-gray-200 text-[#5A4D41] w-[10%]">月</th>
-                      <th className="py-4 px-2 text-center font-bold border-b border-gray-200 text-[#5A4D41] w-[10%]">火</th>
-                      <th className="py-4 px-2 text-center font-bold border-b border-gray-200 text-[#5A4D41] w-[10%]">水</th>
-                      <th className="py-4 px-2 text-center font-bold border-b border-gray-200 text-[#5A4D41] w-[10%]">木</th>
-                      <th className="py-4 px-2 text-center font-bold border-b border-gray-200 text-[#5A4D41] w-[10%]">金</th>
-                      <th className="py-4 px-2 text-center font-bold border-b border-gray-200 text-[#5A4D41] w-[10%]">土</th>
-                      <th className="py-4 px-2 pr-3 text-center font-bold border-b border-gray-200 text-[#5A4D41] w-[10%]">日</th>
-                    </tr>
-                  </thead>
-                  <tbody className="bg-white">
-                    <tr className="border-b border-gray-200">
-                      <td className="py-5 px-3 text-left font-semibold text-[#5A4D41] text-base md:text-lg whitespace-nowrap" style={{ fontStyle: 'normal', fontFamily: 'sans-serif' }}>10:00-13:00</td>
-                      <td className="py-5 px-2 text-center text-[#5A4D41] text-lg">●</td>
-                      <td className="py-5 px-2 text-center text-gray-300 text-lg">−</td>
-                      <td className="py-5 px-2 text-center text-[#5A4D41] text-lg">●</td>
-                      <td className="py-5 px-2 text-center text-[#5A4D41] text-lg">●</td>
-                      <td className="py-5 px-2 text-center text-[#5A4D41] text-lg">●</td>
-                      <td className="py-5 px-2 text-center text-[#5A4D41] font-bold">★</td>
-                      <td className="py-5 px-2 pr-3 text-center text-[#5A4D41] font-bold">★</td>
-                    </tr>
-                    <tr className="border-b border-gray-200">
-                      <td className="py-5 px-3 text-left font-semibold text-[#5A4D41] text-base md:text-lg whitespace-nowrap" style={{ fontStyle: 'normal', fontFamily: 'sans-serif' }}>14:00-19:00</td>
-                      <td className="py-5 px-2 text-center text-[#5A4D41] text-lg">●</td>
-                      <td className="py-5 px-2 text-center text-gray-300 text-lg">−</td>
-                      <td className="py-5 px-2 text-center text-[#5A4D41] text-lg">●</td>
-                      <td className="py-5 px-2 text-center text-[#5A4D41] text-lg">●</td>
-                      <td className="py-5 px-2 text-center text-[#5A4D41] text-lg">●</td>
-                      <td className="py-5 px-2 text-center text-[#5A4D41] font-bold">★</td>
-                      <td className="py-5 px-2 pr-3 text-center text-[#5A4D41] font-bold">★</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div className="mt-6 space-y-1 text-sm md:text-base text-[#5A4D41] text-center font-sans">
-                <p style={{ fontStyle: 'normal', fontFamily: 'sans-serif' }}><span className="text-[#5A4D41] font-bold text-xl">★</span> 土日：9:00-12:00 / 13:00-17:00</p>
-                <p className="font-bold text-[#5A4D41] mt-3" style={{ fontFamily: 'sans-serif' }}>休診日：火曜日</p>
-              </div>
+        {/* --- Building & Schedule Section (v7 Style) --- */}
+        <section className="py-12 bg-white relative border-y border-[#D8DBE6]/30 w-full overflow-hidden">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
+            {/* Building Card */}
+            <div className="w-full lg:w-2/5 flex flex-col items-center sm:items-start text-center sm:text-left">
+              <img
+                src="/images/building.avif"
+                alt="豊洲プライムスクエア"
+                className="w-full max-w-[300px] h-auto rounded-3xl object-cover shadow-sm mb-4"
+              />
+              <h3 className="text-xl font-bold font-serif mb-2">豊洲プライムスクエア1階</h3>
+              <p className="text-[#5A4D41]/70 flex items-center justify-center sm:justify-start gap-2 font-sans text-sm">
+                📍 「豊洲駅6a出口」徒歩2分
+              </p>
             </div>
 
-            {/* --- Doctor Introduction (moved here) --- */}
-            <div className="mt-12 md:mt-16">
-              <div className="text-center mb-6">
-                <div className="inline-block relative">
-                  <span className="text-[#8B92AB] font-bold tracking-[0.3em] text-xs md:text-sm block mb-3 uppercase opacity-70" style={{ fontFamily: '"Brush Script MT", "Lucida Handwriting", cursive' }}>Doctor</span>
-                  <h2 className="text-4xl md:text-5xl font-bold text-[#5A4D41] font-serif relative">
-                    ドクター紹介
-                    <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-transparent via-[#8B92AB] to-transparent"></div>
-                  </h2>
-                </div>
+            {/* Schedule Table */}
+            <div className="w-full lg:w-3/5 bg-[#FAFAF8] rounded-2xl p-4 sm:p-6 text-sm font-sans shadow-inner">
+              <table className="w-full text-center table-fixed border-collapse">
+                <thead>
+                  <tr className="border-b border-[#D8DBE6]">
+                    <th className="py-3 font-normal text-[10px] sm:text-xs text-[#5A4D41] bg-white rounded-tl-lg">診療時間</th>
+                    <th className="py-3 font-medium text-xs sm:text-sm">月</th>
+                    <th className="py-3 font-medium text-xs sm:text-sm">火</th>
+                    <th className="py-3 font-medium text-xs sm:text-sm">水</th>
+                    <th className="py-3 font-medium text-xs sm:text-sm">木</th>
+                    <th className="py-3 font-medium text-xs sm:text-sm">金</th>
+                    <th className="py-3 font-medium text-xs sm:text-sm text-[#8B92AB]">土</th>
+                    <th className="py-3 font-medium text-xs sm:text-sm text-[#8B92AB] rounded-tr-lg">日</th>
+                  </tr>
+                </thead>
+                <tbody className="text-base sm:text-lg">
+                  <tr className="border-b border-[#D8DBE6]/50 bg-white">
+                    <td className="py-3 font-medium text-[10px] sm:text-xs">10:00-13:00</td>
+                    <td>●</td><td className="text-[#5A4D41]/20">−</td><td>●</td><td>●</td><td>●</td>
+                    <td className="text-[#8B92AB] text-sm">★</td><td className="text-[#8B92AB] text-sm">★</td>
+                  </tr>
+                  <tr className="bg-white">
+                    <td className="py-3 font-medium text-[10px] sm:text-xs rounded-bl-lg">14:00-19:00</td>
+                    <td>●</td><td className="text-[#5A4D41]/20">−</td><td>●</td><td>●</td><td>●</td>
+                    <td className="text-[#8B92AB] text-sm">★</td><td className="text-[#8B92AB] text-sm rounded-br-lg">★</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div className="mt-4 text-[10px] sm:text-xs text-[#5A4D41]/70 text-right space-y-1 bg-white p-3 rounded-lg">
+                <p>★ 土日：9:00-12:00 / 13:00-17:00</p>
+                <p className="font-bold text-[#8B92AB]">休診日：火曜日</p>
               </div>
+            </div>
+          </div>
+        </section>
 
-              {/* --- Profile Card --- */}
-              <div className="max-w-4xl mx-auto bg-gradient-to-br from-[#FAF8F5] to-white rounded-3xl shadow-lg border border-[#D0D3DE] overflow-hidden">
-                <div className="flex flex-col md:flex-row">
-                  {/* Doctor Image */}
-                  <div className="w-full md:w-2/5 relative">
-                    <div className="aspect-square md:aspect-auto md:h-full relative overflow-hidden">
-                      <PageImage
-                        path="/homepage"
-                        imageId="doctor"
-                        alt="院長 福永真大"
-                        className="w-full h-full object-cover"
+        {/* --- Doctor Section (v7 Style) --- */}
+        <section className="py-20 sm:py-32 relative bg-[#FAFAF8] w-full overflow-hidden">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6">
+            <div className="text-center mb-16">
+              <span className="font-sans text-xs tracking-widest text-[#8B92AB] uppercase bg-white px-4 py-1 rounded-full shadow-sm">Doctor</span>
+              <h2 className="text-3xl font-serif mt-4">ドクター紹介</h2>
+            </div>
+
+            {/* --- Profile Card (v7) --- */}
+            <div className="bg-white rounded-[2rem] shadow-card p-6 sm:p-12 border border-[#D8DBE6]/20">
+              <div className="flex flex-col lg:flex-row gap-10 lg:gap-16">
+                {/* Photo Left */}
+                <div className="w-full lg:w-1/3 shrink-0 relative">
+                  <div className="aspect-[3/4] rounded-2xl overflow-hidden relative group">
+                    <PageImage
+                      path="/homepage"
+                      imageId="doctor"
+                      alt="院長 福永真大"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                       />
-                      <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full">
-                        <p className="text-sm font-bold text-[#5A4D41]">院長</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Doctor Info */}
-                  <div className="w-full md:w-3/5 p-8 md:p-10">
-                    <div className="mb-6">
-                      <h3 className="text-2xl md:text-3xl font-bold text-[#5A4D41] mb-2">福永　真大</h3>
-                      <p className="text-sm text-[#8D8070] font-medium">Masahiro Fukunaga / 院長・歯科医師</p>
-                    </div>
-
-                    <div className="space-y-4 text-[#5A4D41]">
-                      <div>
-                        <h4 className="font-bold text-[#5A4D41] mb-2 flex items-center gap-2">
-                          <span className="w-1 h-4 bg-[#8B92AB] rounded-full"></span>
-                          経歴
-                        </h4>
-                        <ul className="text-sm space-y-1 ml-4">
-                          <li>• 大阪大学歯学部 卒業</li>
-                          <li>• 大手医療法人にて研修医指導医・診療主任を歴任</li>
-                          <li>• 都内歯科医院 副院長</li>
-                          <li>• Fデンタルオフィス 豊洲プライムスクエア院 開業</li>
-                        </ul>
-                      </div>
-
-                      <div>
-                        <h4 className="font-bold text-[#5A4D41] mb-2 flex items-center gap-2">
-                          <span className="w-1 h-4 bg-[#8B92AB] rounded-full"></span>
-                          所属学会
-                        </h4>
-                        <p className="text-sm ml-4">
-                          日本小児歯科学会 / 日本矯正歯科学会 / 日本歯周病学会 / 日本口腔インプラント学会 / 日本審美歯科学会
-                        </p>
-                      </div>
-                    </div>
                   </div>
                 </div>
-              </div>
 
-              {/* --- Opening Message --- */}
-              <div className="max-w-4xl mx-auto mt-8">
-                <div className="bg-white rounded-2xl shadow-md border border-[#e0d8cf] p-8 md:p-10">
-                  <h4 className="font-bold text-[#5A4D41] text-lg mb-4 flex items-center gap-2">
-                    <span className="w-1.5 h-5 bg-[#8B92AB] rounded-full"></span>
-                    当院が大切にしていること
-                  </h4>
+                {/* Info Right */}
+                <div className="w-full lg:w-2/3 flex flex-col justify-start">
+                  <p className="text-sm text-[#5A4D41]/70 tracking-widest mb-2 font-serif">院長</p>
+                  <h3 className="text-3xl sm:text-4xl font-serif mb-2 pb-6 border-b border-[#D8DBE6] border-dashed">
+                    福永　真大
+                    <span className="block mt-2 text-xs font-sans font-normal text-[#5A4D41]/60">Masahiro Fukunaga / 院長・歯科医師</span>
+                  </h3>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8 mb-10">
+                    <div>
+                      <h4 className="font-bold font-sans text-sm mb-3 flex items-center gap-2 text-[#8B92AB]">
+                        🎓 経歴
+                      </h4>
+                      <ul className="space-y-2 text-sm leading-relaxed border-l-2 border-[#D8DBE6] pl-3 font-sans text-[#5A4D41]/80">
+                        <li>大阪大学歯学部 卒業</li>
+                        <li>大手医療法人にて研修医指導医・診療主任を歴任</li>
+                        <li>都内歯科医院 副院長</li>
+                        <li>Fデンタルオフィス 豊洲プライムスクエア院 開業</li>
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h4 className="font-bold font-sans text-sm mb-3 flex items-center gap-2 text-[#8B92AB]">
+                        📜 所属学会
+                      </h4>
+                      <p className="text-sm leading-relaxed font-sans text-[#5A4D41]/80 bg-[#FAFAF8] p-4 rounded-xl border border-[#D8DBE6]/30">
+                        日本小児歯科学会 / 日本矯正歯科学会 / 日本歯周病学会 / 日本口腔インプラント学会 / 日本審美歯科学会
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Opening Message (v7 - inside card) */}
+                  <div className="bg-[#FAFAF8] rounded-2xl p-6 sm:p-8 relative mt-auto border border-[#D8DBE6]/20">
+                    <h4 className="text-lg font-serif font-bold mb-6 text-[#8B92AB] flex items-center gap-3">
+                      <span className="w-1.5 h-1.5 bg-[#8B92AB] rounded-full"></span>
+                      当院が大切にしていること
+                    </h4>
                   <div className="space-y-4 text-sm leading-[1.9] text-[#5A4D41]">
                     <p>
                       私の父は、30年近く小児矯正に携わってきた歯科医師です。幼い頃からその背中を見て育ち、歯並びや噛み合わせが日々の習慣で大きく変わることを学んできました。当院のコンセプトは「未来のいいお顔を育てる」。これはお子様だけに向けた言葉ではありません。矯正後の後戻り、顔の歪み — その多くは呼吸・姿勢・噛み癖といった習慣に原因があります。お子様の口腔育成から大人の矯正・審美治療まで、習慣へのアプローチを軸に、年齢を問わずお口と表情の健康を整えていく歯科医院です。
@@ -467,18 +353,18 @@ export default function Home() {
                       父から受け継いだ口腔育成への想い、臨床で培った技術、そして患者様に「伝わる」情報発信力。この3つを軸に、「もっと早く知りたかった」「あの時聞けてよかった」— そう感じていただける歯科医院を目指しています。
                     </p>
                   </div>
+                  </div>
                 </div>
               </div>
-
             </div>
 
-            <div className="flex justify-center max-w-6xl mx-auto mt-12 md:mt-16">
-              {/* Kids Site Card */}
-              <a href="/kidsortho" className="group relative block shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+            {/* Kids Site Banner */}
+            <div className="mt-16 text-center max-w-4xl mx-auto rounded-[2rem] overflow-hidden shadow-card hover:-translate-y-1 transition-transform duration-500 border border-[#D8DBE6]/30">
+              <a href="/kidsortho" className="block">
                 <img
                   src="/kids-orthodontics-banner.png"
                   alt="豊洲 Fデンタルオフィス こども矯正 小児矯正"
-                  className="w-full h-auto transition-transform duration-700 group-hover:scale-105"
+                  className="w-full h-auto"
                 />
               </a>
             </div>
