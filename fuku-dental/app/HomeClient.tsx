@@ -198,308 +198,350 @@ export default function Home() {
 
 
   return (
-    <div className="min-h-screen bg-[#FAFAF8] font-serif font-light text-[15px] leading-relaxed text-[#5A4D41] selection:bg-[#8B92AB] selection:text-white relative">
+    <div className="min-h-screen bg-[#FAFAF8] font-sans text-[#5A4D41] selection:bg-[#8B92AB] selection:text-white">
       <Header />
 
-      <main className="w-full overflow-hidden">
-        {/* --- Hero Section (v4 Nordic Style) --- */}
-        <section className="relative pt-48 pb-32 flex flex-col items-center justify-center min-h-[90vh] text-center px-4">
+      <main>
+        {/* --- Hero Section (v7 Nordic Style) --- */}
+        <section className="relative w-full min-h-[70vh] overflow-hidden bg-[#FAFAF8] flex flex-col items-center justify-center text-center px-4 pt-24 pb-12 sm:pt-32 sm:pb-20">
 
-          <span className="inline-block bg-[#D8DBE6]/50 text-[#5A4D41] border border-[#D8DBE6] font-sans text-xs px-6 py-2 rounded-full tracking-widest mb-12 shadow-sm">
+          <div className="inline-block bg-[#D8DBE6]/40 text-[#5A4D41] text-xs px-6 py-2 rounded-full tracking-widest mb-4 border border-[#D8DBE6]">
             新規開業のお知らせ
-          </span>
+          </div>
 
-          <h2 className="text-lg md:text-xl text-[#5A4D41]/80 mb-6 tracking-widest">
+          <p className="text-base sm:text-xl font-serif text-[#5A4D41]/80 mb-4 tracking-widest">
             0歳から通える歯科医院
+          </p>
+
+          <h2 className="hero-heading font-serif font-bold text-[#5A4D41] mb-4 tracking-tight w-full">
+            2026年7月1日<br className="block sm:hidden" />新規開業
           </h2>
 
-          <h1 className="text-5xl md:text-8xl font-sans font-medium text-[#5A4D41] mb-6 tracking-tight flex items-baseline justify-center gap-2">
-            2026<span className="text-2xl md:text-4xl font-serif font-light opacity-80">年</span>7<span className="text-2xl md:text-4xl font-serif font-light opacity-80">月</span>1<span className="text-2xl md:text-4xl font-serif font-light opacity-80">日</span>
-          </h1>
-
-          <p className="text-2xl md:text-4xl tracking-[0.2em] mb-24 text-[#8B92AB] font-medium">新規開業</p>
-
-          <div className="max-w-4xl mx-auto space-y-8 relative z-10 w-full flex flex-col items-center">
-            {/* Decorative vertical line */}
-            <div className="w-[1px] h-32 bg-[#D8DBE6] text-center mx-auto mb-12 relative overflow-hidden">
-              <div className="absolute top-0 left-0 w-full h-1/2 bg-[#8B92AB]"></div>
-            </div>
-
-            <p className="text-3xl md:text-5xl font-medium leading-[1.6]">
-              <span className="relative inline-block z-[1] text-4xl md:text-6xl font-bold after:content-[''] after:absolute after:bottom-0 after:left-[-2%] after:w-[104%] after:h-[40%] after:bg-[#D8DBE6] after:opacity-60 after:rounded-sm after:-z-[1]">豊洲駅</span>から<span className="relative inline-block z-[1] text-4xl md:text-6xl font-bold ml-2 after:content-[''] after:absolute after:bottom-0 after:left-[-2%] after:w-[104%] after:h-[40%] after:bg-[#D8DBE6] after:opacity-60 after:rounded-sm after:-z-[1]">徒歩2分</span> の歯医者
+          <div className="mt-6 sm:mt-10 w-full max-w-4xl mx-auto space-y-4">
+            <p className="hero-subtitle font-sans font-bold text-center w-full whitespace-nowrap">
+              豊洲駅から<span className="marker-50 font-black">徒歩2分</span>の歯医者
             </p>
-            <p className="text-2xl md:text-3xl tracking-widest mt-8 text-[#5A4D41]/80">
-              豊洲で0歳から通える歯科・歯医者
-            </p>
+            <h1 className="text-base sm:text-2xl mt-4 font-serif tracking-widest text-[#5A4D41]/80 w-full">
+              0歳から通える歯科・矯正歯科
+            </h1>
           </div>
 
         </section>
 
-        {/* --- Building & Schedule Section (v4 Style) --- */}
-        <section className="py-24 relative">
-          <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            {/* Building Card - Glass Panel */}
-            <div className="bg-white/85 backdrop-blur-[16px] border border-[#D8DBE6] p-4 rounded-[2rem] shadow-[0_20px_40px_-15px_rgba(90,77,65,0.05)] flex flex-col sm:flex-row items-center gap-8 relative overflow-hidden group">
-              <div className="w-full sm:w-1/2 rounded-[1.5rem] overflow-hidden aspect-[4/3] relative border border-[#D8DBE6]/30">
-                <img
-                  src="/images/building.avif"
-                  alt="豊洲プライムスクエア"
-                  className="w-full h-full object-cover grayscale-[30%] transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.03]"
-                />
-              </div>
-              <div className="w-full sm:w-1/2 p-4">
-                <h3 className="text-2xl font-medium mb-4 tracking-wider">豊洲プライムスクエア1階</h3>
-                <p className="text-[#5A4D41]/80 flex items-center gap-2 font-sans">
-                  📍 「豊洲駅6a出口」徒歩2分
-                </p>
-              </div>
+        {/* --- Building & Schedule Section (v7 Style) --- */}
+        <section className="py-12 bg-white relative border-y border-[#D8DBE6]/30 w-full overflow-hidden">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
+            {/* Building Card */}
+            <div className="w-full lg:w-2/5 flex flex-col items-center sm:items-start text-center sm:text-left">
+              <img
+                src="/images/building.avif"
+                alt="豊洲プライムスクエア"
+                className="w-full max-w-[300px] h-auto rounded-3xl object-cover shadow-sm mb-4"
+              />
+              <h3 className="text-xl font-bold font-serif mb-2">豊洲プライムスクエア1階</h3>
+              <p className="text-[#5A4D41]/70 flex items-center justify-center sm:justify-start gap-2 font-sans text-sm">
+                📍 「豊洲駅6a出口」徒歩2分
+              </p>
             </div>
 
             {/* Schedule Table */}
-            <div className="w-full overflow-x-auto">
-              <table className="w-full text-center border-collapse text-sm font-sans tracking-wide">
+            <div className="w-full lg:w-3/5 bg-[#FAFAF8] rounded-2xl p-4 sm:p-6 text-sm font-sans shadow-inner">
+              <table className="w-full text-center table-fixed border-collapse">
                 <thead>
-                  <tr className="border-b border-[#D8DBE6] text-[#5A4D41]/70">
-                    <th className="py-4 font-normal">診療時間</th>
-                    <th className="py-4 font-normal">月</th>
-                    <th className="py-4 font-normal">火</th>
-                    <th className="py-4 font-normal">水</th>
-                    <th className="py-4 font-normal">木</th>
-                    <th className="py-4 font-normal">金</th>
-                    <th className="py-4 font-normal text-[#8B92AB]">土</th>
-                    <th className="py-4 font-normal text-[#8B92AB]">日</th>
+                  <tr className="border-b border-[#D8DBE6]">
+                    <th className="py-3 font-normal text-[10px] sm:text-xs text-[#5A4D41] bg-white rounded-tl-lg">診療時間</th>
+                    <th className="py-3 font-medium text-xs sm:text-sm">月</th>
+                    <th className="py-3 font-medium text-xs sm:text-sm">火</th>
+                    <th className="py-3 font-medium text-xs sm:text-sm">水</th>
+                    <th className="py-3 font-medium text-xs sm:text-sm">木</th>
+                    <th className="py-3 font-medium text-xs sm:text-sm">金</th>
+                    <th className="py-3 font-medium text-xs sm:text-sm text-[#8B92AB]">土</th>
+                    <th className="py-3 font-medium text-xs sm:text-sm text-[#8B92AB] rounded-tr-lg">日</th>
                   </tr>
                 </thead>
-                <tbody className="text-[#5A4D41]/90">
-                  <tr className="border-b border-[#D8DBE6]/50 transition-colors hover:bg-[#D8DBE6]/20">
-                    <td className="py-5 font-medium">10:00-13:00</td>
-                    <td>●</td><td className="text-[#8B92AB]/30">−</td><td>●</td><td>●</td><td>●</td>
-                    <td className="text-[#8B92AB] font-bold">★</td><td className="text-[#8B92AB] font-bold">★</td>
+                <tbody className="text-base sm:text-lg">
+                  <tr className="border-b border-[#D8DBE6]/50 bg-white">
+                    <td className="py-3 font-medium text-[10px] sm:text-xs">10:00-13:00</td>
+                    <td>●</td><td className="text-[#5A4D41]/20">−</td><td>●</td><td>●</td><td>●</td>
+                    <td className="text-[#8B92AB] text-sm">★</td><td className="text-[#8B92AB] text-sm">★</td>
                   </tr>
-                  <tr className="transition-colors hover:bg-[#D8DBE6]/20">
-                    <td className="py-5 font-medium">14:00-19:00</td>
-                    <td>●</td><td className="text-[#8B92AB]/30">−</td><td>●</td><td>●</td><td>●</td>
-                    <td className="text-[#8B92AB] font-bold">★</td><td className="text-[#8B92AB] font-bold">★</td>
+                  <tr className="bg-white">
+                    <td className="py-3 font-medium text-[10px] sm:text-xs rounded-bl-lg">14:00-19:00</td>
+                    <td>●</td><td className="text-[#5A4D41]/20">−</td><td>●</td><td>●</td><td>●</td>
+                    <td className="text-[#8B92AB] text-sm">★</td><td className="text-[#8B92AB] text-sm rounded-br-lg">★</td>
                   </tr>
                 </tbody>
               </table>
-              <div className="mt-6 text-[11px] text-[#5A4D41]/60 flex flex-col items-end space-y-1 font-sans">
+              <div className="mt-4 text-[10px] sm:text-xs text-[#5A4D41]/70 text-right space-y-1 bg-white p-3 rounded-lg">
                 <p>★ 土日：9:00-12:00 / 13:00-17:00</p>
-                <p>休診日：火曜日</p>
+                <p className="font-bold text-[#8B92AB]">休診日：火曜日</p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* --- Doctor Section (v4 Style) --- */}
-        <section className="py-32 bg-[#F5F2EE] relative border-y border-[#D8DBE6]/30 w-full overflow-hidden">
-          {/* Decorative accent line */}
-          <div className="absolute top-0 left-0 w-full h-[3px] bg-[#D8DBE6]/50"></div>
-
-          <div className="max-w-5xl mx-auto px-6">
-            <div className="text-center mb-24 space-y-4">
-              <span className="font-sans text-xs tracking-[0.3em] text-[#8B92AB] uppercase">Doctor</span>
-              <h2 className="text-4xl font-light tracking-widest">ドクター紹介</h2>
+        {/* --- Doctor Section (v7 Style) --- */}
+        <section className="py-12 sm:py-16 relative bg-[#FAFAF8] w-full overflow-hidden">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6">
+            <div className="text-center mb-8">
+              <span className="font-sans text-xs tracking-widest text-[#8B92AB] uppercase bg-white px-4 py-1 rounded-full shadow-sm">Doctor</span>
+              <h2 className="text-3xl font-serif mt-4">ドクター紹介</h2>
             </div>
 
-            {/* --- Profile Grid (v4) --- */}
-            <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-12 lg:gap-20">
-              {/* Photo Left */}
-              <div className="relative">
-                {/* Accent Bar Decoration */}
-                <div className="absolute -right-6 top-12 w-[2px] h-32 bg-[#D8DBE6]"></div>
-                <div className="absolute -left-2 -bottom-2 w-full h-full border border-[#D8DBE6] rounded-t-full rounded-b-[4rem] z-0"></div>
-
-                <div className="rounded-t-full rounded-b-[4rem] overflow-hidden aspect-[3/4] relative z-10 shadow-[0_20px_40px_-15px_rgba(90,77,65,0.05)] border border-[#D8DBE6]/50 group">
-                  <PageImage
-                    path="/homepage"
-                    imageId="doctor"
-                    alt="院長 福永真大"
-                    className="w-full h-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.03]"
-                    />
+            {/* --- Profile Card (v7) --- */}
+            <div className="bg-white rounded-[2rem] shadow-card p-6 sm:p-12 border border-[#D8DBE6]/20">
+              <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
+                {/* Photo Left */}
+                <div className="w-full lg:w-1/3 shrink-0 relative">
+                  <div className="aspect-[3/4] rounded-2xl overflow-hidden relative group">
+                    <PageImage
+                      path="/homepage"
+                      imageId="doctor"
+                      alt="院長 福永真大"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      />
+                  </div>
                 </div>
-              </div>
 
-              {/* Info Right */}
-              <div className="flex flex-col justify-center space-y-12">
-                <div>
-                  <p className="text-xs text-[#5A4D41]/60 mb-3 tracking-widest font-sans">院長</p>
-                  <h3 className="text-4xl lg:text-5xl mb-4 font-medium flex flex-col sm:flex-row sm:items-end gap-4 border-b border-[#D8DBE6] pb-6">
+                {/* Info Right */}
+                <div className="w-full lg:w-2/3 flex flex-col justify-start">
+                  <p className="text-sm text-[#5A4D41]/70 tracking-widest mb-2 font-serif">院長</p>
+                  <h3 className="text-3xl sm:text-4xl font-serif mb-2 pb-6 border-b border-[#D8DBE6] border-dashed">
                     福永　真大
-                    <span className="text-sm font-sans font-light text-[#5A4D41]/70 pb-1">Masahiro Fukunaga / 院長・歯科医師</span>
+                    <span className="block mt-2 text-xs font-sans font-normal text-[#5A4D41]/60">Masahiro Fukunaga / 院長・歯科医師</span>
                   </h3>
-                </div>
 
-                <div className="grid grid-cols-1 gap-10 text-sm">
-                  <div>
-                    <h4 className="font-medium mb-4 flex items-center gap-3 text-lg">
-                      <span className="w-8 h-8 rounded-full bg-[#D8DBE6]/40 flex items-center justify-center text-[#8B92AB]">🎓</span>
-                      経歴
-                    </h4>
-                    <ul className="space-y-4 text-[#5A4D41]/80 leading-relaxed font-sans mt-6 ml-4 border-l border-[#D8DBE6] pl-6">
-                      <li className="relative before:content-[''] before:w-2 before:h-2 before:bg-[#D8DBE6] before:rounded-full before:absolute before:-left-[29px] before:top-2">大阪大学歯学部 卒業</li>
-                      <li className="relative before:content-[''] before:w-2 before:h-2 before:bg-[#D8DBE6] before:rounded-full before:absolute before:-left-[29px] before:top-2">大手医療法人にて研修医指導医・診療主任を歴任</li>
-                      <li className="relative before:content-[''] before:w-2 before:h-2 before:bg-[#D8DBE6] before:rounded-full before:absolute before:-left-[29px] before:top-2">都内歯科医院 副院長</li>
-                      <li className="relative before:content-[''] before:w-2 before:h-2 before:bg-[#D8DBE6] before:rounded-full before:absolute before:-left-[29px] before:top-2">Fデンタルオフィス 豊洲プライムスクエア院 開業</li>
-                    </ul>
+                  <div className="space-y-4 mt-6 mb-6">
+                    <div>
+                      <h4 className="font-bold text-[#5A4D41] mb-2 flex items-center gap-2">
+                        <span className="w-1 h-4 bg-[#8B92AB] rounded-full"></span>
+                        経歴
+                      </h4>
+                      <ul className="text-sm space-y-1 ml-4">
+                        <li>• 大阪大学歯学部 卒業</li>
+                        <li>• 大手医療法人にて研修医指導医・診療主任を歴任</li>
+                        <li>• 都内歯科医院 副院長</li>
+                        <li>• Fデンタルオフィス 豊洲プライムスクエア院 開業</li>
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h4 className="font-bold text-[#5A4D41] mb-2 flex items-center gap-2">
+                        <span className="w-1 h-4 bg-[#8B92AB] rounded-full"></span>
+                        所属学会
+                      </h4>
+                      <p className="text-sm ml-4">
+                        日本小児歯科学会 / 日本矯正歯科学会 / 日本歯周病学会 / 日本口腔インプラント学会 / 日本審美歯科学会
+                      </p>
+                    </div>
                   </div>
 
-                  <div>
-                    <h4 className="font-medium mb-4 flex items-center gap-3 text-lg">
-                      <span className="w-8 h-8 rounded-full bg-[#D8DBE6]/40 flex items-center justify-center text-[#8B92AB]">📜</span>
-                      所属学会
+                  {/* Opening Message (v4 style) */}
+                  <div className="bg-white rounded-2xl shadow-md border border-[#D8DBE6]/30 p-8 md:p-10 mt-auto">
+                    <h4 className="font-bold text-[#5A4D41] text-lg mb-4 flex items-center gap-2">
+                      <span className="w-1.5 h-5 bg-[#8B92AB] rounded-full"></span>
+                      当院が大切にしていること
                     </h4>
-                    <p className="text-[#5A4D41]/80 leading-[2.5] font-sans text-sm bg-white/70 p-6 rounded-[1.5rem] border border-[#D8DBE6]/50 shadow-sm mt-4">
-                      日本小児歯科学会 / 日本矯正歯科学会 / 日本歯周病学会 / 日本口腔インプラント学会 / 日本審美歯科学会
+                  <div className="space-y-4 text-sm leading-[1.9] text-[#5A4D41]">
+                    <p>
+                      私の父は、30年近く小児矯正に携わってきた歯科医師です。幼い頃からその背中を見て育ち、歯並びや噛み合わせが日々の習慣で大きく変わることを学んできました。当院のコンセプトは「未来のいいお顔を育てる」。これはお子様だけに向けた言葉ではありません。矯正後の後戻り、顔の歪み — その多くは呼吸・姿勢・噛み癖といった習慣に原因があります。お子様の口腔育成から大人の矯正・審美治療まで、習慣へのアプローチを軸に、年齢を問わずお口と表情の健康を整えていく歯科医院です。
+                    </p>
+                    <p>
+                      大阪大学歯学部を卒業後、大規模医療法人にて一般歯科・インプラント・矯正・審美治療など幅広い症例を経験し、研修医指導医も務めました。その中で強く感じたのは、良い治療が患者様に正しく届いていないという現実です。私自身は大学まで野球に打ち込み、噛み合わせや口呼吸がパフォーマンスに直結することも実感してきました。歯並びと全身の健康の関係を、スポーツを頑張るお子様や保護者の方にも届けたいと考えています。
+                    </p>
+                    <p>
+                      父から受け継いだ口腔育成への想い、臨床で培った技術、そして患者様に「伝わる」情報発信力。この3つを軸に、「もっと早く知りたかった」「あの時聞けてよかった」— そう感じていただける歯科医院を目指しています。
                     </p>
                   </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-
-            {/* Doctor Message Card - Glass Panel */}
-            <div className="mt-24 bg-white/85 backdrop-blur-[16px] border border-[#D8DBE6] p-8 md:p-16 rounded-[2.5rem] shadow-[0_30px_60px_-20px_rgba(90,77,65,0.08)] relative">
-              <span className="text-[120px] absolute -top-4 -left-4 text-[#D8DBE6]/30 z-0 leading-none font-serif">&ldquo;</span>
-              <h4 className="text-2xl font-medium mb-12 text-center relative z-10 border-b border-[#D8DBE6] pb-4 max-w-sm mx-auto tracking-wider">
-                当院が大切にしていること
-              </h4>
-              <div className="space-y-8 text-sm md:text-base leading-[2.2] relative z-10 md:px-12 text-[#5A4D41]/90 text-justify">
-                <p>
-                  私の父は、30年近く小児矯正に携わってきた歯科医師です。幼い頃からその背中を見て育ち、歯並びや噛み合わせが日々の習慣で大きく変わることを学んできました。当院のコンセプトは「未来のいいお顔を育てる」。これはお子様だけに向けた言葉ではありません。矯正後の後戻り、顔の歪み — その多くは呼吸・姿勢・噛み癖といった習慣に原因があります。お子様の口腔育成から大人の矯正・審美治療まで、習慣へのアプローチを軸に、年齢を問わずお口と表情の健康を整えていく歯科医院です。
-                </p>
-                <p>
-                  大阪大学歯学部を卒業後、大規模医療法人にて一般歯科・インプラント・矯正・審美治療など幅広い症例を経験し、研修医指導医も務めました。その中で強く感じたのは、良い治療が患者様に正しく届いていないという現実です。私自身は大学まで野球に打ち込み、噛み合わせや口呼吸がパフォーマンスに直結することも実感してきました。歯並びと全身の健康の関係を、スポーツを頑張るお子様や保護者の方にも届けたいと考えています。
-                </p>
-                <p>
-                  父から受け継いだ口腔育成への想い、臨床で培った技術、そして患者様に「伝わる」情報発信力。この3つを軸に、「もっと早く知りたかった」「あの時聞けてよかった」— そう感じていただける歯科医院を目指しています。
-                </p>
               </div>
             </div>
 
             {/* Kids Site Banner */}
-            <div className="mt-20 text-center max-w-4xl mx-auto rounded-[2rem] overflow-hidden shadow-[0_20px_40px_-15px_rgba(90,77,65,0.05)] hover:shadow-[0_30px_60px_-20px_rgba(90,77,65,0.08)] transition-all duration-500 border border-[#D8DBE6] bg-white group">
-              <a href="/kidsortho" className="block w-full">
+            <div className="mt-16 text-center max-w-4xl mx-auto rounded-[2rem] overflow-hidden shadow-card hover:-translate-y-1 transition-transform duration-500 border border-[#D8DBE6]/30">
+              <a href="/kidsortho" className="block">
                 <img
                   src="/kids-orthodontics-banner.png"
                   alt="豊洲 Fデンタルオフィス こども矯正 小児矯正"
-                  className="w-full h-auto transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.03]"
+                  className="w-full h-auto"
                 />
               </a>
             </div>
           </div>
         </section>
 
-        {/* --- Problem / Reservation Section (v4 Dark Overlay) --- */}
-        <section className="relative py-32 overflow-hidden flex flex-col items-center justify-center min-h-[60vh] border-b border-[#D8DBE6]/50">
-          {/* Background Image with overlay */}
-          <div className="absolute inset-0 z-0">
-            <img src="/images/problem-bg-v2.jpg" alt="豊洲 歯科 歯医者 お悩み相談" className="w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-[#5A4D41]/85 mix-blend-multiply"></div>
-            <div className="absolute inset-0 bg-gradient-to-b from-[#5A4D41]/90 to-[#5A4D41]/70"></div>
-          </div>
+        {/* --- Problem Section (Modern Light Design) --- */}
+        <section className="relative overflow-hidden py-12 md:py-16 bg-gradient-to-b from-[#F5F2EE] to-white">
+          {/* Decorative background shapes */}
+          <div className="absolute top-10 left-0 w-64 h-64 bg-[#D8DBE6]/20 rounded-full blur-3xl -translate-x-1/2"></div>
+          <div className="absolute bottom-10 right-0 w-48 h-48 bg-[#D8DBE6]/15 rounded-full blur-3xl translate-x-1/3"></div>
 
-          <div className="relative z-10 text-[#FAFAF8] text-center max-w-4xl mx-auto px-6 space-y-12 w-full">
-            <h2 className="text-3xl md:text-5xl font-light tracking-widest mb-16 leading-relaxed">こんなお悩み<br />ありませんか？</h2>
+          <div className="container mx-auto px-4 relative z-10">
+            {/* Title */}
+            <div className="text-center mb-10">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#5A4D41] font-serif">
+                こんなお悩み<br className="md:hidden" />ありませんか？
+              </h2>
+              <div className="w-12 h-0.5 bg-[#D8DBE6] mx-auto mt-4"></div>
+            </div>
 
-            {/* Glass panel problem list */}
-            <div className="bg-white/85 backdrop-blur-[16px] border border-[#D8DBE6]/30 bg-opacity-5 p-10 md:p-14 rounded-[2.5rem] inline-block text-left relative overflow-hidden shadow-2xl" style={{ background: 'rgba(255,255,255,0.05)', backdropFilter: 'blur(16px)', WebkitBackdropFilter: 'blur(16px)' }}>
-              <div className="absolute top-0 right-0 w-32 h-32 bg-[#8B92AB]/20 blur-3xl rounded-full"></div>
+            {/* Problem Cards */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl mx-auto mb-12">
               {[
                 "子供の歯並びが気になる...",
                 "銀歯を白くしたい...",
                 "痛くない治療を受けたい...",
                 "インプラントに興味がある..."
               ].map((problem, i) => (
-                <div key={i} className={`flex items-center gap-6 text-lg md:text-xl font-medium tracking-wider relative z-10 ${i < 3 ? 'border-b border-[#D8DBE6]/20 pb-4 mb-8' : ''}`}>
-                  <span className="text-[#D8DBE6] text-2xl">&#10004;</span>
-                  <p className="text-[#FAFAF8]">
-                    {problem}
-                  </p>
+                <div key={i} className="bg-white/80 backdrop-blur-sm rounded-2xl p-5 shadow-sm border border-[#D8DBE6]/50 hover:shadow-md transition-shadow duration-300">
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 rounded-full bg-[#8B92AB] flex-shrink-0"></div>
+                    <p className="text-[#5A4D41] text-sm md:text-base font-medium">
+                      {problem}
+                    </p>
+                  </div>
                 </div>
               ))}
             </div>
 
-            <div className="pt-16 pb-8 space-y-6">
-              <p className="text-xl mb-6 text-[#D8DBE6] tracking-widest">こんなお悩み全て...</p>
-              <p className="text-lg tracking-widest text-[#8B92AB] bg-white/90 px-6 py-2 rounded-full inline-block font-medium">豊洲駅から徒歩2分の歯医者</p>
-              <h3 className="text-4xl md:text-6xl font-serif mb-4 tracking-wider leading-tight mt-10 text-[#FAFAF8]">
-                Fデンタルオフィス<br />
-                <span className="text-2xl md:text-4xl mt-6 inline-block font-light text-[#D8DBE6]">豊洲プライムスクエア院</span>
-              </h3>
-              <p className="text-2xl mt-12 tracking-widest text-[#D8DBE6]">で解決！</p>
-            </div>
-
-            {/* CTA Banners */}
-            <div className="max-w-2xl mx-auto rounded-[2rem] overflow-hidden shadow-[0_30px_60px_-20px_rgba(90,77,65,0.08)] mt-12 border border-[#D8DBE6]/30 transition-transform duration-500 hover:-translate-y-2">
-              <a href="#" className="block relative w-full pt-[25%] bg-white group hover:bg-[#D8DBE6]/5 transition-colors">
-                <img src="/images/web-reserve-banner-v3.png" alt="豊洲 歯医者 24時間WEB予約受付中 Fデンタルオフィス" className="absolute inset-0 w-full h-full object-cover" />
-              </a>
-            </div>
-
-            <a href="tel:03-1234-5678" className="inline-flex items-center justify-center gap-6 border border-[#D8DBE6]/50 bg-[#5A4D41]/50 backdrop-blur-xl text-white px-10 py-6 rounded-full mx-auto mt-10 hover:bg-[#5A4D41]/80 transition-colors shadow-[0_20px_40px_-15px_rgba(90,77,65,0.05)]">
-              <Phone size={28} className="text-[#D8DBE6]" />
-              <div className="text-left font-sans">
-                <p className="text-3xl font-light tracking-wider">03-1234-5678</p>
-                <p className="text-[11px] text-[#D8DBE6] mt-1">受付時間：平日 10:00-18:30 / 土日 9:00-16:00</p>
+            {/* Arrow */}
+            <div className="flex justify-center mb-8">
+              <div className="flex flex-col items-center gap-1">
+                <div className="w-0.5 h-8 bg-gradient-to-b from-[#D8DBE6] to-[#8B92AB]"></div>
+                <svg width="24" height="12" viewBox="0 0 24 12"><polygon points="2,0 22,0 12,10" fill="#8B92AB" /></svg>
               </div>
-            </a>
+            </div>
+
+            {/* Solution */}
+            <div className="text-center">
+              <p className="text-[#8D8070] text-xs md:text-sm font-bold mb-1">
+                <strong>豊洲駅から徒歩2分の歯医者</strong>
+              </p>
+              <h2 className="font-black text-[#5A4D41] text-center mb-2" style={{ fontFamily: 'Georgia, "Yu Mincho", "Hiragino Mincho ProN", serif' }}>
+                <div className="text-[9vw] sm:text-5xl md:text-7xl">Fデンタルオフィス</div>
+                <div className="text-[7vw] sm:text-4xl md:text-5xl mt-1">豊洲プライムスクエア院</div>
+              </h2>
+              <p className="text-[#5A4D41] text-2xl md:text-3xl font-bold mb-8">
+                で解決！
+              </p>
+          </div>
+          </div>
+
+          {/* CTA in light section */}
+          <div className="bg-white py-8 -mt-1">
+            <div className="container mx-auto px-4">
+              {/* Solution Message */}
+              <div className="text-center">
+                <p className="text-[#5A4D41] text-xl md:text-2xl font-bold mb-4">
+                  こんなお悩み全て...
+                </p>
+                <div className="relative inline-block mb-2">
+                  <p className="text-[#8D8070] text-xs md:text-sm font-bold mb-1">
+                    <strong>豊洲駅から徒歩2分の歯医者</strong>
+                  </p>
+                  <h2 className="font-black text-[#5A4D41] text-center" style={{ fontFamily: 'Georgia, "Yu Mincho", "Hiragino Mincho ProN", serif' }}>
+                    <div className="text-[9vw] sm:text-5xl md:text-7xl">Fデンタルオフィス</div>
+                    <div className="text-[7vw] sm:text-4xl md:text-5xl mt-1">豊洲プライムスクエア院</div>
+                  </h2>
+                </div>
+                <p className="text-[#5A4D41] text-2xl md:text-3xl font-bold mb-8">
+                  で解決！
+                </p>
+
+                {/* CTA Button */}
+                <button className="bg-gradient-to-r from-[#8B92AB] to-[#6B7394] hover:from-[#6B7394] hover:to-[#5A6080] text-white px-8 md:px-12 py-4 md:py-5 rounded-full text-lg md:text-xl font-bold shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center gap-3 mx-auto">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" strokeWidth="2" />
+                    <path d="M8 2 L8 6 M16 2 L16 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                    <path d="M3 10 L21 10" stroke="currentColor" strokeWidth="2" />
+                  </svg>
+                  WEB予約はこちら
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 4 L13 10 L7 16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </button>
+              </div>
+            </div>
           </div>
         </section>
 
-        {/* --- Features Section (v4 Premium Interlocking Cards) --- */}
-        <section className="py-40 relative">
-          <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
-            <div className="text-center mb-32 space-y-4">
-              <span className="font-sans text-xs tracking-[0.3em] text-[#8B92AB] uppercase">Features</span>
-              <h2 className="text-4xl font-light tracking-widest">当院の5つの特徴</h2>
-              <div className="w-16 h-px bg-[#D8DBE6] mx-auto mt-6"></div>
+        {/* --- CTA Section (Between Problem & Features) --- */}
+        <section className="py-12 bg-[#FAFAF8]">
+          <div className="container mx-auto px-4">
+            <div className="flex flex-col md:flex-row justify-center gap-6 max-w-4xl mx-auto">
+              {/* Web Reservation */}
+              <button className="flex-1 shadow-lg transform hover:-translate-y-1 transition-all duration-300 group">
+                <img
+                  src="/images/web-reserve-banner-v3.png"
+                  alt="豊洲 歯医者 24時間WEB予約受付中 Fデンタルオフィス"
+                  className="w-full h-full object-contain rounded-2xl"
+                />
+              </button>
+
+              {/* Phone Reservation */}
+              <a href="tel:03-1234-5678" className="flex-1 bg-white border-2 border-[#D0D3DE] text-[#5A4D41] hover:bg-[#EDEEF3] py-6 rounded-2xl shadow-lg transform hover:-translate-y-1 transition-all duration-300 flex flex-col items-center justify-center gap-2 group">
+                <div className="flex items-center gap-3">
+                  <Phone size={32} className="group-hover:scale-110 transition-transform" />
+                  <span className="text-2xl font-bold">03-1234-5678</span>
+                </div>
+                <p className="text-xs text-[#8D8070]">受付時間：平日 10:00-18:30 / 土日 9:00-16:00</p>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* --- Features Section (Refined Zig-Zag) --- */}
+        <section className="pt-8 pb-8 bg-[#FAFAFA] relative overflow-hidden">
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="text-center mb-8">
+              <div className="inline-block relative">
+                <span className="text-[#8B92AB] font-bold tracking-[0.3em] text-xs md:text-sm block mb-3 uppercase opacity-70" style={{ fontFamily: '"Brush Script MT", "Lucida Handwriting", cursive' }}>FEATURES</span>
+                <h2 className="text-4xl md:text-5xl font-bold text-[#5A4D41] font-serif relative">
+                  当院の<span className="text-[#8B92AB]">5つの特徴</span>
+                  <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-transparent via-[#8B92AB] to-transparent"></div>
+                </h2>
+              </div>
             </div>
 
-            <div className="space-y-0">
+            <div className="space-y-16 max-w-6xl mx-auto">
               {featureHighlights.map((feature, index) => (
                 <div
                   key={feature.id}
-                  className="relative w-full mb-32 lg:mb-40 last:mb-0 group/feat"
+                  className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-12 lg:gap-20 items-start group`}
                 >
-                  {/* Floating Watermark Number */}
-                  <div className={`hidden md:block absolute -top-16 ${index % 2 === 0 ? '-left-8' : '-right-8 text-right w-full'} text-[200px] leading-none font-black text-[#D8DBE6]/30 font-sans z-0 select-none transition-transform duration-1000 ${index % 2 === 0 ? 'group-hover/feat:translate-x-4' : 'group-hover/feat:-translate-x-4'}`}>
-                    {feature.id}
-                  </div>
-
-                  <div className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center relative z-10 w-full`}>
-                    {/* Image Side - 65% width */}
-                    <div className="w-full lg:w-[65%] rounded-[2vw] overflow-hidden shadow-[0_20px_40px_-15px_rgba(90,77,65,0.05)] border border-[#D8DBE6] bg-white aspect-[4/3] shrink-0 group">
+                  {/* Image Side - Hidden on mobile, shown on desktop */}
+                  <div className="hidden lg:block lg:w-1/2 relative">
+                    <div className="relative rounded-[40px] overflow-hidden shadow-2xl transform group-hover:scale-[1.02] transition-transform duration-700 ease-out aspect-[16/9]">
                       <PageImage
                         path="/homepage"
                         imageId={feature.imageId}
                         alt={feature.imageAlt}
-                        className="w-full h-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.03]"
+                        className="w-full h-full object-cover"
                       />
                     </div>
+                    {/* Decorative Circle */}
+                    <div className={`absolute -bottom-10 ${index % 2 === 0 ? '-left-10' : '-right-10'} w-40 h-40 bg-[#D0D3DE]/30 rounded-full blur-2xl -z-10`}></div>
+                  </div>
 
-                    {/* Text Card overlapping image */}
-                    <div className={`w-[92%] lg:w-[45%] ${index % 2 === 0 ? 'lg:-ml-[10%]' : 'lg:-mr-[10%]'} bg-white/95 backdrop-blur-xl border border-[#D8DBE6] p-10 lg:p-16 rounded-[2rem] shadow-[0_30px_60px_-20px_rgba(90,77,65,0.08)] relative z-20 -mt-16 lg:mt-0 group-hover/feat:-translate-y-2 transition-transform duration-700`}>
-                      {/* Mobile watermark */}
-                      <span className={`md:hidden text-6xl font-black text-[#D8DBE6]/40 font-sans absolute top-4 ${index % 2 === 0 ? 'right-8' : 'left-8'} z-0`}>
+                  {/* Content Side */}
+                  <div className="w-full lg:w-1/2 flex flex-col gap-6 relative">
+                    {/* Title Section */}
+                    <div className="relative">
+                      <span className="text-8xl font-serif text-[#EDEEF3] absolute -top-16 -left-8 -z-10 select-none font-bold" style={{ letterSpacing: '-0.05em' }}>
                         {feature.id}
                       </span>
-                      <div className="relative z-10">
-                        <h3 className="text-2xl lg:text-[28px] font-medium text-[#5A4D41] mb-6 leading-[1.6]">
-                          {feature.title}<br />
-                          <span dangerouslySetInnerHTML={{ __html: feature.highlight }}></span>
+                      <div className="flex items-start justify-between gap-4">
+                        <h3 className="text-2xl md:text-3xl font-bold text-[#5A4D41] leading-tight flex-1">
+                          <span className="block text-base text-[#8B92AB] font-bold mb-2 tracking-widest">{feature.title}</span>
+                          <span className="inline-block relative text-3xl md:text-4xl lg:text-5xl" dangerouslySetInnerHTML={{ __html: feature.highlight }}>
+                          </span>
+                          <div className="absolute -bottom-1 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#8B92AB] to-transparent"></div>
                         </h3>
-                        <div className="w-12 h-px bg-[#D8DBE6] mb-8"></div>
-
-                        {/* Details Section */}
-                        {feature.details.map((detail, i) => (
-                          <p key={i} className="text-[13px] lg:text-sm text-[#5A4D41]/80 leading-[2.2] mb-8" dangerouslySetInnerHTML={{ __html: detail }}>
-                          </p>
-                        ))}
-
                         {feature.id === "02" && (
                           <a
                             href="/kidsortho"
-                            className="inline-flex items-center gap-3 bg-[#8B92AB] text-white font-sans text-xs hover:bg-[#8B92AB]/90 transition-colors px-6 py-3 rounded-full shadow-sm"
+                            className="flex-shrink-0 mt-8 px-4 py-2 bg-[#8B92AB] text-white text-sm font-bold rounded-full hover:bg-[#6B7394] transition-colors shadow-md"
                           >
                             詳細
                           </a>
@@ -507,156 +549,249 @@ export default function Home() {
                         {feature.id === "04" && (
                           <a
                             href="/ceramic"
-                            className="inline-flex items-center gap-3 bg-[#8B92AB] text-white font-sans text-xs hover:bg-[#8B92AB]/90 transition-colors px-6 py-3 rounded-full shadow-sm"
+                            className="flex-shrink-0 mt-8 px-4 py-2 bg-[#9B89B3] text-white text-sm font-bold rounded-full hover:bg-[#8B79A3] transition-colors shadow-md"
                           >
                             詳細
                           </a>
                         )}
                       </div>
                     </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
-        {/* --- Case Studies Section (v4 Grid) --- */}
-        <section className="py-32 bg-[#F5F2EE] border-y border-[#D8DBE6]/30 relative overflow-hidden">
-          <div className="max-w-7xl mx-auto px-6 relative z-10">
-            <div className="text-center mb-20 space-y-4">
-              <span className="font-sans text-xs tracking-[0.3em] text-[#8B92AB] uppercase">Case Studies</span>
-              <h2 className="text-4xl font-light tracking-widest">症例紹介</h2>
-              <div className="w-16 h-px bg-[#D8DBE6] mx-auto mt-6"></div>
-            </div>
-
-            {/* Case Study Grid - 2x2 on desktop */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-14">
-              {caseStudies.map((caseStudy, index) => (
-                <div
-                  key={caseStudy.id}
-                  className="bg-white border border-[#D8DBE6] p-8 lg:p-10 rounded-[2.5rem] shadow-[0_20px_40px_-15px_rgba(90,77,65,0.05)] transform transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_30px_60px_-20px_rgba(90,77,65,0.08)]"
-                >
-                  {/* Title Section */}
-                  <div className="flex items-center gap-4 mb-8">
-                    <span className="bg-[#F5F2EE] border border-[#D8DBE6] text-[#5A4D41] font-sans text-[11px] font-medium px-4 py-1.5 rounded-full tracking-widest">{caseStudy.patient}</span>
-                    <h3 className="text-xl font-medium tracking-wide">
-                      {caseStudy.title}
-                    </h3>
-                  </div>
-
-                  {/* Before/After Images */}
-                  <div className="grid grid-cols-2 gap-6">
-                    {/* Before */}
-                    <div className="space-y-3">
-                      <span className="text-[10px] font-sans text-[#D8DBE6] uppercase tracking-[0.2em] font-medium border-b border-[#D8DBE6]/50 pb-1 block">Before</span>
-                      <div className="rounded-[1.5rem] overflow-hidden aspect-[4/3] border border-[#D8DBE6]/30">
+                    {/* Image on Mobile - shown here between title and details */}
+                    <div className="w-full lg:hidden">
+                      <div className="relative rounded-[40px] overflow-hidden shadow-2xl aspect-[16/9]">
                         <PageImage
                           path="/homepage"
-                          imageId={caseStudy.beforeId}
-                          alt={`${caseStudy.title} - Before`}
-                          className="w-full h-full object-cover opacity-80 mix-blend-multiply grayscale-[50%]"
-                        />
-                      </div>
-                    </div>
-
-                    {/* After */}
-                    <div className="space-y-3">
-                      <span className="text-[10px] font-sans text-[#8B92AB] uppercase tracking-[0.2em] font-bold border-b border-[#D8DBE6] pb-1 block">After</span>
-                      <div className="rounded-[1.5rem] overflow-hidden aspect-[4/3] border border-[#D8DBE6]/50 shadow-inner">
-                        <PageImage
-                          path="/homepage"
-                          imageId={caseStudy.afterId}
-                          alt={`${caseStudy.title} - After`}
+                          imageId={feature.imageId}
+                          alt={feature.imageAlt}
                           className="w-full h-full object-cover"
                         />
                       </div>
                     </div>
+
+                    {/* Details Section */}
+                    <div className="space-y-4">
+                      {feature.details.map((detail, i) => (
+                        <div key={i} className="p-4 bg-white rounded-xl shadow-sm border border-gray-100 group-hover:border-[#D0D3DE] transition-colors duration-300">
+                          <p className="text-[#5A4D41] leading-loose text-sm md:text-base font-sans" dangerouslySetInnerHTML={{ __html: detail }}>
+                          </p>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
               ))}
             </div>
+          </div>
+        </section>
 
-            {/* View All Button */}
-            <div className="text-center mt-20">
-              <a
-                href="/case-studies"
-                className="inline-flex items-center gap-3 bg-[#8B92AB] text-white font-sans px-10 py-5 rounded-full shadow-[0_20px_40px_-15px_rgba(90,77,65,0.05)] hover:bg-[#8B92AB]/90 hover:scale-105 transition-all tracking-widest text-[13px]"
-              >
-                <span>すべての症例を見る</span>
-                <ChevronRight size={16} />
-              </a>
+        {/* --- Case Studies Section --- */}
+        <section className="pt-6 pb-8 bg-white relative overflow-hidden">
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="text-center mb-8">
+              <div className="inline-block relative">
+                <span className="text-[#8B92AB] font-bold tracking-[0.3em] text-xs md:text-sm block mb-3 uppercase opacity-70" style={{ fontFamily: '"Brush Script MT", "Lucida Handwriting", cursive' }}>Case Studies</span>
+                <h2 className="text-4xl md:text-5xl font-bold text-[#5A4D41] font-serif relative">
+                  症例紹介
+                  <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-transparent via-[#8B92AB] to-transparent"></div>
+                </h2>
+              </div>
             </div>
 
-            {/* Mid-page CTA Banner Grid */}
-            <div className="mt-32 max-w-5xl mx-auto flex flex-col md:flex-row gap-8">
-              <a href="#" className="flex-1 block relative rounded-[2rem] overflow-hidden shadow-[0_20px_40px_-15px_rgba(90,77,65,0.05)] hover:-translate-y-1 transition-transform group border border-[#D8DBE6]">
-                <img src="/images/web-reserve-banner-v3.png" alt="豊洲 歯医者 24時間WEB予約受付中 Fデンタルオフィス" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-              </a>
-              <a href="tel:03-1234-5678" className="flex-1 bg-white/85 backdrop-blur-[16px] border border-[#D8DBE6] flex flex-col items-center justify-center p-10 rounded-[2rem] shadow-[0_20px_40px_-15px_rgba(90,77,65,0.05)] hover:-translate-y-1 transition-transform group">
-                <Phone size={36} className="text-[#8B92AB] mb-6 group-hover:rotate-[15deg] transition-transform" />
-                <span className="text-4xl font-sans font-light tracking-wider mb-3 text-[#5A4D41]">03-1234-5678</span>
-                <span className="text-[13px] font-sans text-[#D8DBE6] uppercase tracking-widest">お気軽にお電話ください</span>
+            {/* Case Study Slider */}
+            <div className="max-w-6xl mx-auto">
+              <div className="relative overflow-visible min-h-[600px] md:min-h-[550px]">
+                {caseStudies.map((caseStudy, index) => (
+                  <div
+                    key={caseStudy.id}
+                    className={`transition-all duration-700 ${index === currentCaseIndex ? 'opacity-100 relative' : 'opacity-0 absolute inset-0 pointer-events-none'
+                      }`}
+                  >
+                    <div className="bg-[#FAFAFA] rounded-3xl p-6 md:p-10 shadow-xl border border-[#f0f0f0]">
+                      {/* Title Section - Centered */}
+                      <div className="text-center mb-8 pb-6 border-b border-gray-200">
+                        <p className="text-[#8D8070] text-sm mb-2">{caseStudy.patient}</p>
+                        <h3 className="text-2xl md:text-3xl font-bold text-[#5A4D41]">
+                          {caseStudy.title}
+                        </h3>
+                      </div>
+
+                      {/* Before/After Images */}
+                      <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-6">
+                        {/* Before */}
+                        <div className="w-full md:w-[47%]">
+                          <div className="mb-2">
+                            <span className="inline-block bg-gray-600 text-white px-3 py-1 rounded-md font-bold text-xs">
+                              Before
+                            </span>
+                          </div>
+                          <PageImage
+                            path="/homepage"
+                            imageId={caseStudy.beforeId}
+                            alt={`${caseStudy.title} - Before`}
+                            className="w-full aspect-[16/9] object-cover rounded-2xl shadow-lg hover:shadow-xl transition-all"
+                          />
+                        </div>
+
+                        {/* After */}
+                        <div className="w-full md:w-[47%]">
+                          <div className="mb-2">
+                            <span className="inline-block bg-[#8B92AB] text-white px-3 py-1 rounded-md font-bold text-xs">
+                              After
+                            </span>
+                          </div>
+                          <PageImage
+                            path="/homepage"
+                            imageId={caseStudy.afterId}
+                            alt={`${caseStudy.title} - After`}
+                            className="w-full aspect-[16/9] object-cover rounded-2xl shadow-lg hover:shadow-xl transition-all border-2 border-[#8B92AB]/30"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Pagination Dots */}
+              <div className="flex justify-center gap-3 mt-8">
+                {caseStudies.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentCaseIndex(index)}
+                    className={`w-3 h-3 rounded-full transition-all duration-300 ${currentCaseIndex === index
+                      ? 'bg-[#8B92AB] scale-125'
+                      : 'bg-gray-300 hover:bg-gray-400'
+                      }`}
+                  />
+                ))}
+              </div>
+
+              {/* View All Button */}
+              <div className="text-center mt-6">
+                <a
+                  href="/case-studies"
+                  className="inline-flex items-center gap-3 bg-gradient-to-r from-[#8B92AB] to-[#6B7394] hover:from-[#9BA2B8] hover:to-[#8B92AB] text-white px-10 py-5 rounded-full font-bold shadow-lg hover:shadow-xl transition-all duration-300 group"
+                >
+                  <span>すべての症例を見る</span>
+                  <div className="bg-white/20 rounded-full p-1 group-hover:translate-x-1 transition-transform">
+                    <ChevronRight size={20} />
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* --- CTA Section (Between Case Studies & Facilities) --- */}
+        <section className="py-12 bg-[#FAFAF8]">
+          <div className="container mx-auto px-4">
+            <div className="flex flex-col md:flex-row justify-center gap-6 max-w-4xl mx-auto">
+              {/* Web Reservation */}
+              <button className="flex-1 shadow-lg transform hover:-translate-y-1 transition-all duration-300 group">
+                <img
+                  src="/images/web-reserve-banner-v3.png"
+                  alt="豊洲 歯医者 24時間WEB予約受付中 Fデンタルオフィス"
+                  className="w-full h-full object-contain rounded-2xl"
+                />
+              </button>
+
+              {/* Phone Reservation */}
+              <a href="tel:03-1234-5678" className="flex-1 bg-white border-2 border-[#D0D3DE] text-[#5A4D41] hover:bg-[#EDEEF3] py-6 rounded-2xl shadow-lg transform hover:-translate-y-1 transition-all duration-300 flex flex-col items-center justify-center gap-2 group">
+                <div className="flex items-center gap-3">
+                  <Phone size={32} className="group-hover:scale-110 transition-transform" />
+                  <span className="text-2xl font-bold">03-1234-5678</span>
+                </div>
+                <span className="text-sm font-bold">お気軽にお電話ください</span>
               </a>
             </div>
           </div>
         </section>
 
-        {/* --- Facilities Section (v4 Grid with Overlay) --- */}
-        <section className="py-32">
-          <div className="max-w-7xl mx-auto px-6">
-            <div className="text-center mb-24 space-y-4">
-              <span className="font-sans text-xs tracking-[0.3em] text-[#8B92AB] uppercase">Facilities</span>
-              <h2 className="text-4xl font-light tracking-widest">院内設備</h2>
-              <div className="w-16 h-px bg-[#D8DBE6] mx-auto mt-6"></div>
+        {/* --- Facilities Section (New) --- */}
+        <section className="pt-4 pb-8 bg-[#FAFAFA] overflow-hidden">
+          <div className="container mx-auto px-4">
+            {/* Title */}
+            <div className="text-center mb-6">
+              <div className="inline-block relative">
+                <span className="text-[#8B92AB] font-bold tracking-[0.3em] text-xs md:text-sm block mb-3 uppercase opacity-70" style={{ fontFamily: '"Brush Script MT", "Lucida Handwriting", cursive' }}>Facilities</span>
+                <h2 className="text-4xl md:text-5xl font-bold text-[#5A4D41] font-serif relative">
+                  院内設備
+                  <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-transparent via-[#8B92AB] to-transparent"></div>
+                </h2>
+              </div>
             </div>
 
-            {/* Facility Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-              {facilityImages.map((img, index) => (
-                <div key={index} className="rounded-[2.5rem] border border-[#D8DBE6] overflow-hidden aspect-[4/3] group relative shadow-[0_20px_40px_-15px_rgba(90,77,65,0.05)]">
-                  <PageImage
-                    path="/homepage"
-                    imageId={img.imageId}
-                    alt={img.title}
-                    className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 grayscale-[10%] group-hover:grayscale-0"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#5A4D41]/70 via-transparent to-transparent flex items-end p-8 md:p-12">
-                    <p className="text-[#FAFAF8] tracking-widest text-lg font-medium">{img.title}</p>
-                  </div>
+            {/* Carousel */}
+            <div className="relative max-w-2xl mx-auto mb-4 group">
+              <div className="overflow-hidden rounded-[40px] shadow-2xl border-4 border-white aspect-square">
+                <div
+                  className="flex transition-transform duration-1000 ease-in-out h-full"
+                  style={{ transform: `translateX(-${currentFacilitySlide * 100}%)` }}
+                >
+                  {facilityImages.map((img, index) => (
+                    <div key={index} className="w-full flex-shrink-0 h-full relative">
+                      <PageImage
+                        path="/homepage"
+                        imageId={img.imageId}
+                        alt={img.title}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  ))}
                 </div>
-              ))}
+              </div>
+
+              {/* Carousel Indicators */}
+              <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex gap-3 z-10">
+                {facilityImages.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentFacilitySlide(index)}
+                    className={`w-3 h-3 rounded-full transition-all duration-300 ${currentFacilitySlide === index
+                      ? 'bg-white scale-125 shadow-lg'
+                      : 'bg-white/50 hover:bg-white/80'
+                      }`}
+                  />
+                ))}
+              </div>
+            </div>
+
+            {/* Current Slide Title */}
+            <div className="text-center mb-10 h-8">
+              <p className="text-xl md:text-2xl font-bold text-[#5A4D41] transition-opacity duration-500" key={currentFacilitySlide}>
+                {facilityImages[currentFacilitySlide].title}
+              </p>
             </div>
 
             {/* CTA Button */}
-            <div className="text-center mt-20">
+            <div className="text-center">
               <a
                 href="/facilities"
-                className="inline-flex items-center gap-3 bg-white border border-[#D8DBE6] text-[#5A4D41] px-10 py-5 rounded-full shadow-sm hover:bg-[#F5F2EE] hover:shadow-md transition-all tracking-widest text-[13px] font-sans"
+                className="inline-flex items-center gap-3 bg-[#8B92AB] hover:bg-[#9BA2B8] text-white px-10 py-5 rounded-full font-bold shadow-lg hover:shadow-xl transition-all duration-300 group"
               >
                 <span>院内設備を見る</span>
-                <ChevronRight size={16} className="text-[#8B92AB]" />
+                <div className="bg-white/20 rounded-full p-1 group-hover:translate-x-1 transition-transform">
+                  <ChevronRight size={20} />
+                </div>
               </a>
             </div>
           </div>
         </section>
 
 
-        {/* --- Flow Section (v4 Timeline) --- */}
-        <section className="py-32 bg-[#F5F2EE] border-y border-[#D8DBE6]/30">
-          <div className="max-w-4xl mx-auto px-6">
-            <div className="text-center mb-24 space-y-4">
-              <h2 className="text-4xl font-light tracking-widest pb-4">診療の流れ</h2>
-              <div className="w-16 h-px bg-[#D8DBE6] mx-auto mt-6"></div>
+        {/* --- Flow Section --- */}
+        <section className="pt-12 pb-8 bg-[#FAFAFA] relative overflow-hidden">
+          <div className="container mx-auto px-4 relative z-10 max-w-5xl">
+            <div className="text-center mb-10">
+              <h2 className="text-2xl md:text-3xl font-bold text-[#5A4D41] font-serif inline-block">診療の流れ</h2>
+              <div className="w-16 h-0.5 bg-[#8B92AB] mx-auto mt-4"></div>
             </div>
 
-            <div className="relative pl-14 md:pl-24 space-y-28">
-              {/* Timeline vertical line */}
-              <div className="hidden md:block absolute left-[51px] top-0 bottom-0 w-[1px] bg-[#D8DBE6] z-0"></div>
-              <div className="md:hidden absolute left-[31px] top-0 bottom-0 w-[1px] bg-[#D8DBE6] z-0"></div>
-
-              {[
-                {
+            <div className="bg-white rounded-2xl shadow-lg p-6 md:p-10">
+              <div className="space-y-12">
+                {[
+                  {
                     num: "01",
                     title: "ご予約・ご来院",
                     desc: "WEBまたはお電話にてご予約ください。初診の方は問診票の記入がありますので、10分前にお越しください。",
@@ -692,55 +827,59 @@ export default function Home() {
                     desc: "同意いただいたプランに沿って治療を進めます。痛みに配慮し、丁寧な処置を心がけます。",
                     imageId: "step6"
                   }
-                ].map((step, index, arr) => (
-                  <div key={index} className="relative z-10 group">
-                    {/* Timeline dot */}
-                    <div className={`absolute -left-14 md:-left-[4.5rem] top-0 w-14 h-14 rounded-full border flex items-center justify-center font-sans text-lg tracking-wider font-light shadow-sm transition-all duration-300 ${index === arr.length - 1 ? 'bg-[#8B92AB] text-white border-[#8B92AB] shadow-md shadow-[#8B92AB]/20 scale-110' : 'bg-white border-[#D8DBE6] text-[#8B92AB] group-hover:scale-110 group-hover:bg-[#8B92AB] group-hover:text-white'}`}>
-                      {step.num}
+                ].map((step, index) => (
+                  <div key={index}>
+                    {/* 番号 + タイトル */}
+                    <div className="flex items-center gap-2 mb-6 border-b border-[#D0D3DE] pb-3">
+                      <div className="relative">
+                        <div className="absolute top-1 left-1/2 -translate-x-1/2 w-6 h-6 bg-[#8B92AB]/20 rotate-45"></div>
+                        <span className="text-3xl md:text-4xl font-light text-[#8B92AB] tracking-wider relative z-10">{step.num}</span>
+                      </div>
+                      <h4 className="text-lg md:text-xl font-bold text-[#5A4D41] font-serif">{step.title}</h4>
                     </div>
-                    <h4 className={`text-2xl font-medium mb-8 pt-3 tracking-wide ${index === arr.length - 1 ? 'text-[#8B92AB]' : ''}`}>{step.title}</h4>
-                    {/* Image */}
-                    <div className={`bg-white border border-[#D8DBE6] p-3 rounded-[2.5rem] inline-block mb-8 shadow-sm ${index === arr.length - 1 ? 'ring-2 ring-[#8B92AB]/20' : ''}`}>
+                    {/* 画像 */}
+                    <div className="mb-6 rounded-2xl overflow-hidden shadow-md">
                       <PageImage
                         path="/homepage"
                         imageId={step.imageId}
                         alt={step.title}
-                        className={`rounded-[2rem] w-full max-w-md object-cover ${index === arr.length - 1 ? '' : 'grayscale-[20%]'}`}
+                        className="w-full h-56 md:h-72 object-cover"
                       />
                     </div>
-                    {/* Description */}
-                    <p className="text-[#5A4D41]/80 leading-loose max-w-2xl bg-white p-8 rounded-3xl border border-[#D8DBE6] shadow-sm text-sm">{step.desc}</p>
+                    {/* 説明文 */}
+                    <p className="text-[#5A4D41] leading-loose text-sm md:text-base" style={{ fontFamily: 'YuGothic, "Yu Gothic", sans-serif' }}>{step.desc}</p>
                   </div>
                 ))}
+              </div>
             </div>
           </div>
         </section>
 
-        {/* --- Treatment Menu (v4 Circle Icons) --- */}
-        <section className="py-32">
-          <div className="max-w-6xl mx-auto px-6">
-            <div className="text-center mb-24">
-              <h2 className="text-4xl font-light tracking-widest mb-6 border-b border-[#D8DBE6] inline-block pb-4">診療メニュー</h2>
-              <p className="text-[#5A4D41]/60 text-sm mt-4 tracking-widest">あらゆるお口のお悩みに対応いたします</p>
+        {/* --- Treatment Menu (Redesigned) --- */}
+        <section className="pt-2 pb-16 bg-[#F9FAFB] w-full max-w-full overflow-x-hidden">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-2xl md:text-3xl font-bold text-[#5A4D41]">診療メニュー</h2>
+              <p className="text-sm text-[#8D8070] mt-2">あらゆるお口のお悩みに対応いたします</p>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+            <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-y-8 gap-x-4 max-w-6xl mx-auto">
               {menuItems.map((menu, i) => (
-                <a key={i} href={menu.link} className="group flex flex-col items-center bg-white p-6 rounded-[2rem] border border-[#D8DBE6] shadow-sm hover:shadow-[0_30px_60px_-20px_rgba(90,77,65,0.08)] transition-all duration-300 hover:-translate-y-2">
-                  <div className="w-[80px] h-[80px] bg-[#D8DBE6] rounded-full flex items-center justify-center mb-5 group-hover:bg-[#8B92AB] transition-colors duration-300">
+                <a key={i} href={menu.link} className="flex flex-col items-center group">
+                  <div className="w-20 h-20 md:w-28 md:h-28 bg-white rounded-full shadow-sm border border-gray-100 flex items-center justify-center mb-4 group-hover:shadow-md group-hover:border-[#8B92AB]/30 transition-all duration-300 group-hover:-translate-y-1 overflow-hidden p-4">
                     {/* @ts-ignore */}
                     {menu.iconImage ? (
-                      <img src={menu.iconImage} alt={menu.name} className="w-10 opacity-70 mix-blend-multiply group-hover:grayscale group-hover:brightness-200 group-hover:contrast-100 transition-all" />
+                      <img src={menu.iconImage} alt={menu.name} className="w-full h-full object-contain" style={{ backgroundColor: 'white' }} />
                     ) : (
-                      <menu.icon strokeWidth={1.5} className="w-10 h-10 text-[#5A4D41] opacity-70 group-hover:text-white transition-colors" />
+                      <menu.icon strokeWidth={1.5} className="w-8 h-8 md:w-12 md:h-12 text-[#5A4D41] group-hover:text-[#8B92AB] transition-colors" />
                     )}
                   </div>
-                  <strong className="text-[13px] font-medium tracking-wider text-center text-[#5A4D41] group-hover:text-[#8B92AB] transition-colors">{menu.name}</strong>
+                  <h4 className="font-bold text-xs md:text-sm text-[#5A4D41] text-center leading-tight group-hover:text-[#8B92AB] transition-colors">{menu.name}</h4>
                 </a>
               ))}
             </div>
-            <div className="text-center mt-12 text-[11px] text-[#5A4D41]/50 font-sans tracking-[0.2em] uppercase border-t border-[#D8DBE6] pt-6">
-              <p>※ 症例により適切な専門医が担当します</p>
+            <div className="text-center mt-12">
+              <p className="text-xs text-[#8D8070]">※ 症例により適切な専門医が担当します</p>
             </div>
           </div>
         </section>
