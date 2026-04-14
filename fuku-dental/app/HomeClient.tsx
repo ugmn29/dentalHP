@@ -218,10 +218,8 @@ export default function Home() {
           </h2>
 
           <div className="mt-8 sm:mt-16 w-full max-w-4xl mx-auto space-y-6">
-            <p className="hero-subtitle font-sans font-bold flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 w-full">
-              <span>豊洲駅から</span>
-              <span className="marker-50 font-black">徒歩2分</span>
-              <span>の歯医者</span>
+            <p className="hero-subtitle font-sans font-bold text-center w-full whitespace-nowrap">
+              豊洲駅から<span className="marker-50 font-black">徒歩2分</span>の歯医者
             </p>
             <h1 className="text-base sm:text-2xl mt-4 font-serif tracking-widest text-[#5A4D41]/80 w-full">
               0歳から通える歯科・矯正歯科
@@ -313,33 +311,35 @@ export default function Home() {
                     <span className="block mt-2 text-xs font-sans font-normal text-[#5A4D41]/60">Masahiro Fukunaga / 院長・歯科医師</span>
                   </h3>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8 mb-10">
+                  <div className="space-y-4 mt-8 mb-10">
                     <div>
-                      <h4 className="font-bold font-sans text-sm mb-3 flex items-center gap-2 text-[#8B92AB]">
-                        🎓 経歴
+                      <h4 className="font-bold text-[#5A4D41] mb-2 flex items-center gap-2">
+                        <span className="w-1 h-4 bg-[#8B92AB] rounded-full"></span>
+                        経歴
                       </h4>
-                      <ul className="space-y-2 text-sm leading-relaxed border-l-2 border-[#D8DBE6] pl-3 font-sans text-[#5A4D41]/80">
-                        <li>大阪大学歯学部 卒業</li>
-                        <li>大手医療法人にて研修医指導医・診療主任を歴任</li>
-                        <li>都内歯科医院 副院長</li>
-                        <li>Fデンタルオフィス 豊洲プライムスクエア院 開業</li>
+                      <ul className="text-sm space-y-1 ml-4">
+                        <li>• 大阪大学歯学部 卒業</li>
+                        <li>• 大手医療法人にて研修医指導医・診療主任を歴任</li>
+                        <li>• 都内歯科医院 副院長</li>
+                        <li>• Fデンタルオフィス 豊洲プライムスクエア院 開業</li>
                       </ul>
                     </div>
 
                     <div>
-                      <h4 className="font-bold font-sans text-sm mb-3 flex items-center gap-2 text-[#8B92AB]">
-                        📜 所属学会
+                      <h4 className="font-bold text-[#5A4D41] mb-2 flex items-center gap-2">
+                        <span className="w-1 h-4 bg-[#8B92AB] rounded-full"></span>
+                        所属学会
                       </h4>
-                      <p className="text-sm leading-relaxed font-sans text-[#5A4D41]/80 bg-[#FAFAF8] p-4 rounded-xl border border-[#D8DBE6]/30">
+                      <p className="text-sm ml-4">
                         日本小児歯科学会 / 日本矯正歯科学会 / 日本歯周病学会 / 日本口腔インプラント学会 / 日本審美歯科学会
                       </p>
                     </div>
                   </div>
 
-                  {/* Opening Message (v7 - inside card) */}
-                  <div className="bg-[#FAFAF8] rounded-2xl p-6 sm:p-8 relative mt-auto border border-[#D8DBE6]/20">
-                    <h4 className="text-lg font-serif font-bold mb-6 text-[#8B92AB] flex items-center gap-3">
-                      <span className="w-1.5 h-1.5 bg-[#8B92AB] rounded-full"></span>
+                  {/* Opening Message (v4 style) */}
+                  <div className="bg-white rounded-2xl shadow-md border border-[#D8DBE6]/30 p-8 md:p-10 mt-auto">
+                    <h4 className="font-bold text-[#5A4D41] text-lg mb-4 flex items-center gap-2">
+                      <span className="w-1.5 h-5 bg-[#8B92AB] rounded-full"></span>
                       当院が大切にしていること
                     </h4>
                   <div className="space-y-4 text-sm leading-[1.9] text-[#5A4D41]">
@@ -389,16 +389,16 @@ export default function Home() {
             {/* Problem Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl mx-auto mb-12">
               {[
-                { text: "子供の歯並びが気になる...", icon: "😟" },
-                { text: "銀歯を白くしたい...", icon: "✨" },
-                { text: "痛くない治療を受けたい...", icon: "💭" },
-                { text: "インプラントに興味がある...", icon: "🦷" }
+                "子供の歯並びが気になる...",
+                "銀歯を白くしたい...",
+                "痛くない治療を受けたい...",
+                "インプラントに興味がある..."
               ].map((problem, i) => (
                 <div key={i} className="bg-white/80 backdrop-blur-sm rounded-2xl p-5 shadow-sm border border-[#D8DBE6]/50 hover:shadow-md transition-shadow duration-300">
                   <div className="flex items-center gap-3">
-                    <span className="text-2xl">{problem.icon}</span>
+                    <div className="w-2 h-2 rounded-full bg-[#8B92AB] flex-shrink-0"></div>
                     <p className="text-[#5A4D41] text-sm md:text-base font-medium">
-                      {problem.text}
+                      {problem}
                     </p>
                   </div>
                 </div>
