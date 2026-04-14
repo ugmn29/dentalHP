@@ -13,8 +13,21 @@ export default function CaseStudiesPage() {
     ? caseStudies
     : caseStudies.filter(c => c.category === selectedCategory);
 
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'ホーム', item: 'https://fshika.com' },
+      { '@type': 'ListItem', position: 2, name: '症例紹介', item: 'https://fshika.com/case-studies' },
+    ],
+  };
+
   return (
     <div className="min-h-screen bg-[#FDFBF7] font-sans text-[#5A4D41]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <Header />
 
       <main className="pt-2 pb-2">

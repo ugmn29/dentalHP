@@ -43,8 +43,21 @@ export default async function BlogPage() {
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
   );
 
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'ホーム', item: 'https://fshika.com' },
+      { '@type': 'ListItem', position: 2, name: 'ブログ', item: 'https://fshika.com/blog' },
+    ],
+  };
+
   return (
     <div className="min-h-screen bg-[#FDFBF7] font-sans text-[#5A4D41]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <Header />
       <BlogClient posts={allPosts} categories={blogCategories} />
       <Footer />

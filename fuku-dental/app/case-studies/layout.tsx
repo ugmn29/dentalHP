@@ -12,6 +12,14 @@ export const metadata: Metadata = {
     url: 'https://fshika.com/case-studies',
     siteName: 'Fデンタルオフィス 豊洲プライムスクエア院',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: '症例紹介｜豊洲の歯医者Fデンタルオフィス 豊洲プライムスクエア院',
+    description: '豊洲の歯科Fデンタルオフィスの症例紹介。矯正・インプラント・セラミック治療などのビフォーアフターをご覧いただけます。',
+  },
+  alternates: {
+    canonical: 'https://fshika.com/case-studies',
+  },
 };
 
 export default function CaseStudiesLayout({ children }: { children: React.ReactNode }) {

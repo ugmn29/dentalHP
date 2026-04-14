@@ -54,6 +54,13 @@ interface TreatmentLayoutProps {
     pagePath?: string;
 }
 
+const CATEGORY_LABELS: Record<string, { name: string; path: string }> = {
+    general: { name: '一般歯科', path: '/general' },
+    periodontal: { name: '歯周病治療', path: '/periodontal' },
+    surgery: { name: '口腔外科', path: '/surgery' },
+    _implant: { name: 'インプラント', path: '/_implant' },
+};
+
 export const TreatmentLayout: React.FC<TreatmentLayoutProps> = ({
     title,
     titleEn,
@@ -71,8 +78,43 @@ export const TreatmentLayout: React.FC<TreatmentLayoutProps> = ({
     children,
     pagePath
 }) => {
+    const BASE_URL = 'https://fshika.com';
+
+    const breadcrumbItems: { name: string; item: string }[] = [
+        { name: 'ホーム', item: BASE_URL },
+    ];
+
+    if (pagePath) {
+        const segments = pagePath.split('/').filter(Boolean);
+        if (segments.length >= 2) {
+            const categoryKey = segments[0];
+            const category = CATEGORY_LABELS[categoryKey];
+            if (category) {
+                breadcrumbItems.push({ name: category.name, item: `${BASE_URL}${category.path}` });
+            }
+        }
+        breadcrumbItems.push({ name: title, item: `${BASE_URL}${pagePath}` });
+    } else {
+        breadcrumbItems.push({ name: title, item: BASE_URL });
+    }
+
+    const breadcrumbJsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: breadcrumbItems.map((item, index) => ({
+            '@type': 'ListItem',
+            position: index + 1,
+            name: item.name,
+            item: item.item,
+        })),
+    };
+
     return (
         <div className="min-h-screen bg-[#FDFBF7] font-sans text-[#5A4D41] selection:bg-[#FF9F43] selection:text-white">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+            />
             <Header />
 
             <main>

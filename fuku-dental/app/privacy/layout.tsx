@@ -12,6 +12,14 @@ export const metadata: Metadata = {
     url: 'https://fshika.com/privacy',
     siteName: 'Fデンタルオフィス 豊洲プライムスクエア院',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'プライバシーポリシー｜豊洲の歯医者Fデンタルオフィス',
+    description: '豊洲の歯科Fデンタルオフィス 豊洲プライムスクエア院のプライバシーポリシー。個人情報の取り扱いについて。',
+  },
+  alternates: {
+    canonical: 'https://fshika.com/privacy',
+  },
 };
 
 export default function PrivacyLayout({ children }: { children: React.ReactNode }) {

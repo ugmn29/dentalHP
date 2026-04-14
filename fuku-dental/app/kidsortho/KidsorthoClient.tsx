@@ -7,6 +7,15 @@ import { AuthorBio } from '../../components/AuthorBio';
 import { CheckCircle2, ChevronDown, ChevronUp, Calendar, Phone, ArrowRight, ChevronRight, Star, Heart, Shield, Smile, MapPin, Clock, AlertCircle, Home, Coins, Tv, Sparkles, Gem } from 'lucide-react';
 import { PageImage } from '@/components/PageImage';
 
+const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'ホーム', item: 'https://fshika.com' },
+        { '@type': 'ListItem', position: 2, name: '小児矯正', item: 'https://fshika.com/kidsortho' },
+    ],
+};
+
 export default function KidsOrthoPage() {
     // Doctor Message State
     const [isDoctorMessageExpanded, setIsDoctorMessageExpanded] = useState(false);
@@ -143,6 +152,10 @@ export default function KidsOrthoPage() {
 
     return (
         <div className="min-h-screen bg-white text-[#5A4D41]" style={{ fontFamily: '"游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", sans-serif' }}>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+            />
             <Header />
 
             <main>

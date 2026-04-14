@@ -12,6 +12,14 @@ export const metadata: Metadata = {
     url: 'https://fshika.com/blog',
     siteName: 'Fデンタルオフィス 豊洲プライムスクエア院',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: '歯科ブログ・お知らせ｜Fデンタルオフィス 豊洲プライムスクエア院',
+    description: '豊洲の歯医者Fデンタルオフィスの歯科ブログ。歯の健康に関する最新情報やお役立ち記事を配信。',
+  },
+  alternates: {
+    canonical: 'https://fshika.com/blog',
+  },
 };
 
 export default function BlogLayout({ children }: { children: React.ReactNode }) {

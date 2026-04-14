@@ -12,6 +12,14 @@ export const metadata: Metadata = {
     url: 'https://fshika.com/price',
     siteName: 'Fデンタルオフィス 豊洲プライムスクエア院',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: '料金表｜豊洲の歯医者Fデンタルオフィス 豊洲プライムスクエア院',
+    description: '豊洲の歯科Fデンタルオフィスの料金表。矯正・インプラント・セラミック・ホワイトニングなど各治療の費用一覧。',
+  },
+  alternates: {
+    canonical: 'https://fshika.com/price',
+  },
 };
 
 export default function PriceLayout({ children }: { children: React.ReactNode }) {

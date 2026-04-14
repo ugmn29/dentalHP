@@ -217,6 +217,21 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <head>
+        {/* Google Analytics 4 */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-Z0SLHGM3JF"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-Z0SLHGM3JF');
+            `
+          }}
+        />
         {/* Microsoft Clarity */}
         <script
           type="text/javascript"
