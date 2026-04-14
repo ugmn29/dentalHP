@@ -272,7 +272,7 @@ export default function Home() {
                   </tr>
                 </tbody>
               </table>
-              <div className="mt-4 text-[10px] sm:text-xs text-[#5A4D41]/70 text-right space-y-1 bg-white p-3 rounded-lg">
+              <div className="mt-4 text-[10px] sm:text-xs text-[#5A4D41]/70 text-center space-y-1 bg-white p-3 rounded-lg">
                 <p>★ 土日：9:00-12:00 / 13:00-17:00</p>
                 <p className="font-bold text-[#8B92AB]">休診日：火曜日</p>
               </div>
@@ -343,7 +343,7 @@ export default function Home() {
             {/* Opening Message */}
             <div className="mt-16 glass-bright p-8 md:p-16 rounded-[2.5rem] shadow-glass relative border border-[#D8DBE6]">
               <h4 className="text-2xl font-medium mb-8 text-center relative z-10 border-b border-[#D8DBE6] pb-4 max-w-sm mx-auto tracking-wider">当院が大切にしていること</h4>
-              <div className="space-y-6 text-sm md:text-base leading-[2.2] relative z-10 md:px-12 text-[#5A4D41]/90 text-justify">
+              <div className="space-y-4 text-sm leading-[1.9] relative z-10 text-[#5A4D41]">
                 <p>
                   私の父は、30年近く小児矯正に携わってきた歯科医師です。幼い頃からその背中を見て育ち、歯並びや噛み合わせが日々の習慣で大きく変わることを学んできました。当院のコンセプトは「未来のいいお顔を育てる」。これはお子様だけに向けた言葉ではありません。矯正後の後戻り、顔の歪み — その多くは呼吸・姿勢・噛み癖といった習慣に原因があります。お子様の口腔育成から大人の矯正・審美治療まで、習慣へのアプローチを軸に、年齢を問わずお口と表情の健康を整えていく歯科医院です。
                 </p>
@@ -413,6 +413,9 @@ export default function Home() {
 
             {/* Solution */}
             <div className="text-center">
+              <p className="text-[#5A4D41] text-xl md:text-2xl font-bold mb-4">
+                こんなお悩み全て...
+              </p>
               <p className="text-[#8D8070] text-xs md:text-sm font-bold mb-1">
                 <strong>豊洲駅から徒歩2分の歯医者</strong>
               </p>
@@ -423,43 +426,19 @@ export default function Home() {
               <p className="text-[#5A4D41] text-2xl md:text-3xl font-bold mb-8">
                 で解決！
               </p>
-          </div>
-          </div>
 
-          {/* CTA in light section */}
-          <div className="bg-white py-8 -mt-1">
-            <div className="container mx-auto px-4">
-              {/* Solution Message */}
-              <div className="text-center">
-                <p className="text-[#5A4D41] text-xl md:text-2xl font-bold mb-4">
-                  こんなお悩み全て...
-                </p>
-                <div className="relative inline-block mb-2">
-                  <p className="text-[#8D8070] text-xs md:text-sm font-bold mb-1">
-                    <strong>豊洲駅から徒歩2分の歯医者</strong>
-                  </p>
-                  <h2 className="font-black text-[#5A4D41] text-center" style={{ fontFamily: 'Georgia, "Yu Mincho", "Hiragino Mincho ProN", serif' }}>
-                    <div className="text-[9vw] sm:text-5xl md:text-7xl">Fデンタルオフィス</div>
-                    <div className="text-[7vw] sm:text-4xl md:text-5xl mt-1">豊洲プライムスクエア院</div>
-                  </h2>
-                </div>
-                <p className="text-[#5A4D41] text-2xl md:text-3xl font-bold mb-8">
-                  で解決！
-                </p>
-
-                {/* CTA Button */}
-                <button className="bg-gradient-to-r from-[#8B92AB] to-[#6B7394] hover:from-[#6B7394] hover:to-[#5A6080] text-white px-8 md:px-12 py-4 md:py-5 rounded-full text-lg md:text-xl font-bold shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center gap-3 mx-auto">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" strokeWidth="2" />
-                    <path d="M8 2 L8 6 M16 2 L16 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-                    <path d="M3 10 L21 10" stroke="currentColor" strokeWidth="2" />
-                  </svg>
-                  WEB予約はこちら
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7 4 L13 10 L7 16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </button>
-              </div>
+              {/* CTA Button */}
+              <button className="bg-gradient-to-r from-[#8B92AB] to-[#6B7394] hover:from-[#6B7394] hover:to-[#5A6080] text-white px-8 md:px-12 py-4 md:py-5 rounded-full text-lg md:text-xl font-bold shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center gap-3 mx-auto">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" strokeWidth="2" />
+                  <path d="M8 2 L8 6 M16 2 L16 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                  <path d="M3 10 L21 10" stroke="currentColor" strokeWidth="2" />
+                </svg>
+                WEB予約はこちら
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7 4 L13 10 L7 16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </button>
             </div>
           </div>
         </section>
@@ -596,74 +575,55 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Case Study Slider */}
-            <div className="max-w-6xl mx-auto">
-              <div className="relative overflow-visible min-h-[600px] md:min-h-[550px]">
-                {caseStudies.map((caseStudy, index) => (
-                  <div
-                    key={caseStudy.id}
-                    className={`transition-all duration-700 ${index === currentCaseIndex ? 'opacity-100 relative' : 'opacity-0 absolute inset-0 pointer-events-none'
-                      }`}
-                  >
-                    <div className="bg-[#FAFAFA] rounded-3xl p-6 md:p-10 shadow-xl border border-[#f0f0f0]">
-                      {/* Title Section - Centered */}
-                      <div className="text-center mb-8 pb-6 border-b border-gray-200">
-                        <p className="text-[#8D8070] text-sm mb-2">{caseStudy.patient}</p>
-                        <h3 className="text-2xl md:text-3xl font-bold text-[#5A4D41]">
-                          {caseStudy.title}
-                        </h3>
-                      </div>
+            {/* Case Studies - Vertical Stack */}
+            <div className="max-w-4xl mx-auto space-y-8">
+              {caseStudies.map((caseStudy) => (
+                <div key={caseStudy.id} className="bg-[#FAFAFA] rounded-3xl p-6 md:p-10 shadow-xl border border-[#f0f0f0]">
+                  {/* Title Section - Centered */}
+                  <div className="text-center mb-8 pb-6 border-b border-gray-200">
+                    <p className="text-[#8D8070] text-sm mb-2">{caseStudy.patient}</p>
+                    <h3 className="text-2xl md:text-3xl font-bold text-[#5A4D41]">
+                      {caseStudy.title}
+                    </h3>
+                  </div>
 
-                      {/* Before/After Images */}
-                      <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-6">
-                        {/* Before */}
-                        <div className="w-full md:w-[47%]">
-                          <div className="mb-2">
-                            <span className="inline-block bg-gray-600 text-white px-3 py-1 rounded-md font-bold text-xs">
-                              Before
-                            </span>
-                          </div>
-                          <PageImage
-                            path="/homepage"
-                            imageId={caseStudy.beforeId}
-                            alt={`${caseStudy.title} - Before`}
-                            className="w-full aspect-[16/9] object-cover rounded-2xl shadow-lg hover:shadow-xl transition-all"
-                          />
-                        </div>
-
-                        {/* After */}
-                        <div className="w-full md:w-[47%]">
-                          <div className="mb-2">
-                            <span className="inline-block bg-[#8B92AB] text-white px-3 py-1 rounded-md font-bold text-xs">
-                              After
-                            </span>
-                          </div>
-                          <PageImage
-                            path="/homepage"
-                            imageId={caseStudy.afterId}
-                            alt={`${caseStudy.title} - After`}
-                            className="w-full aspect-[16/9] object-cover rounded-2xl shadow-lg hover:shadow-xl transition-all border-2 border-[#8B92AB]/30"
-                          />
-                        </div>
+                  {/* Before/After Images */}
+                  <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-6">
+                    {/* Before */}
+                    <div className="w-full md:w-[47%]">
+                      <div className="mb-2">
+                        <span className="inline-block bg-gray-600 text-white px-3 py-1 rounded-md font-bold text-xs">
+                          Before
+                        </span>
                       </div>
+                      <PageImage
+                        path="/homepage"
+                        imageId={caseStudy.beforeId}
+                        alt={`${caseStudy.title} - Before`}
+                        className="w-full aspect-[16/9] object-cover rounded-2xl shadow-lg hover:shadow-xl transition-all"
+                      />
+                    </div>
+
+                    {/* After */}
+                    <div className="w-full md:w-[47%]">
+                      <div className="mb-2">
+                        <span className="inline-block bg-[#8B92AB] text-white px-3 py-1 rounded-md font-bold text-xs">
+                          After
+                        </span>
+                      </div>
+                      <PageImage
+                        path="/homepage"
+                        imageId={caseStudy.afterId}
+                        alt={`${caseStudy.title} - After`}
+                        className="w-full aspect-[16/9] object-cover rounded-2xl shadow-lg hover:shadow-xl transition-all border-2 border-[#8B92AB]/30"
+                      />
                     </div>
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
+            </div>
 
-              {/* Pagination Dots */}
-              <div className="flex justify-center gap-3 mt-8">
-                {caseStudies.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentCaseIndex(index)}
-                    className={`w-3 h-3 rounded-full transition-all duration-300 ${currentCaseIndex === index
-                      ? 'bg-[#8B92AB] scale-125'
-                      : 'bg-gray-300 hover:bg-gray-400'
-                      }`}
-                  />
-                ))}
-              </div>
+            <div className="max-w-6xl mx-auto">
 
               {/* View All Button */}
               <div className="text-center mt-6">
@@ -706,149 +666,73 @@ export default function Home() {
           </div>
         </section>
 
-        {/* --- Facilities Section (New) --- */}
-        <section className="pt-4 pb-8 bg-[#FAFAFA] overflow-hidden">
-          <div className="container mx-auto px-4">
-            {/* Title */}
-            <div className="text-center mb-6">
-              <div className="inline-block relative">
-                <span className="text-[#8B92AB] font-bold tracking-[0.3em] text-xs md:text-sm block mb-3 uppercase opacity-70" style={{ fontFamily: '"Brush Script MT", "Lucida Handwriting", cursive' }}>Facilities</span>
-                <h2 className="text-4xl md:text-5xl font-bold text-[#5A4D41] font-serif relative">
-                  院内設備
-                  <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-transparent via-[#8B92AB] to-transparent"></div>
-                </h2>
-              </div>
+        {/* --- Facilities Section (v5 style) --- */}
+        <section className="py-16 md:py-20 bg-white w-full overflow-hidden border-t border-[#D8DBE6]">
+          <div className="max-w-7xl mx-auto px-4 md:px-6">
+            <div className="text-center mb-12 md:mb-16 space-y-3 md:space-y-4">
+              <span className="font-sans text-[10px] md:text-xs tracking-[0.3em] text-[#8B92AB] uppercase">Facilities</span>
+              <h2 className="text-3xl md:text-4xl font-light tracking-widest">院内設備</h2>
             </div>
 
-            {/* Carousel */}
-            <div className="relative max-w-2xl mx-auto mb-4 group">
-              <div className="overflow-hidden rounded-[40px] shadow-2xl border-4 border-white aspect-square">
-                <div
-                  className="flex transition-transform duration-1000 ease-in-out h-full"
-                  style={{ transform: `translateX(-${currentFacilitySlide * 100}%)` }}
-                >
-                  {facilityImages.map((img, index) => (
-                    <div key={index} className="w-full flex-shrink-0 h-full relative">
-                      <PageImage
-                        path="/homepage"
-                        imageId={img.imageId}
-                        alt={img.title}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Carousel Indicators */}
-              <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex gap-3 z-10">
-                {facilityImages.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentFacilitySlide(index)}
-                    className={`w-3 h-3 rounded-full transition-all duration-300 ${currentFacilitySlide === index
-                      ? 'bg-white scale-125 shadow-lg'
-                      : 'bg-white/50 hover:bg-white/80'
-                      }`}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6">
+              {facilityImages.map((img, index) => (
+                <div key={index} className="rounded-[1.5rem] md:rounded-[2rem] overflow-hidden aspect-[4/3] group relative shadow-sm border border-[#D8DBE6] w-full">
+                  <PageImage
+                    path="/homepage"
+                    imageId={img.imageId}
+                    alt={img.title}
+                    className="w-full h-full object-cover transition-transform duration-700 md:group-hover:scale-105"
                   />
-                ))}
-              </div>
-            </div>
-
-            {/* Current Slide Title */}
-            <div className="text-center mb-10 h-8">
-              <p className="text-xl md:text-2xl font-bold text-[#5A4D41] transition-opacity duration-500" key={currentFacilitySlide}>
-                {facilityImages[currentFacilitySlide].title}
-              </p>
-            </div>
-
-            {/* CTA Button */}
-            <div className="text-center">
-              <a
-                href="/facilities"
-                className="inline-flex items-center gap-3 bg-[#8B92AB] hover:bg-[#9BA2B8] text-white px-10 py-5 rounded-full font-bold shadow-lg hover:shadow-xl transition-all duration-300 group"
-              >
-                <span>院内設備を見る</span>
-                <div className="bg-white/20 rounded-full p-1 group-hover:translate-x-1 transition-transform">
-                  <ChevronRight size={20} />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#5A4D41]/80 via-transparent to-transparent flex items-end p-6 md:p-8">
+                    <p className="text-white tracking-widest text-sm md:text-base font-medium drop-shadow-md">{img.title}</p>
+                  </div>
                 </div>
+              ))}
+            </div>
+
+            <div className="text-center mt-10 md:mt-12">
+              <a href="/facilities" className="inline-flex items-center gap-2 bg-white border border-[#D8DBE6] text-[#5A4D41] px-6 md:px-8 py-3 md:py-4 rounded-full shadow-sm hover:border-[#8B92AB] hover:text-[#8B92AB] transition-colors tracking-widest text-[13px] md:text-sm">
+                院内設備を見る <ChevronRight size={16} />
               </a>
             </div>
           </div>
         </section>
 
 
-        {/* --- Flow Section --- */}
-        <section className="pt-12 pb-8 bg-[#FAFAFA] relative overflow-hidden">
-          <div className="container mx-auto px-4 relative z-10 max-w-5xl">
-            <div className="text-center mb-10">
-              <h2 className="text-2xl md:text-3xl font-bold text-[#5A4D41] font-serif inline-block">診療の流れ</h2>
-              <div className="w-16 h-0.5 bg-[#8B92AB] mx-auto mt-4"></div>
+        {/* --- Flow Section (v5 style timeline) --- */}
+        <section className="py-16 md:py-20 bg-[#FAFAF8] w-full overflow-hidden border-t border-[#D8DBE6]">
+          <div className="max-w-4xl mx-auto px-4 md:px-6">
+            <div className="text-center mb-16 md:mb-20 space-y-4">
+              <h2 className="text-3xl md:text-4xl font-light tracking-widest border-b border-[#D8DBE6] inline-block pb-4">診療の流れ</h2>
             </div>
 
-            <div className="bg-white rounded-2xl shadow-lg p-6 md:p-10">
-              <div className="space-y-12">
-                {[
-                  {
-                    num: "01",
-                    title: "ご予約・ご来院",
-                    desc: "WEBまたはお電話にてご予約ください。初診の方は問診票の記入がありますので、10分前にお越しください。",
-                    imageId: "スマホで予約する人"
-                  },
-                  {
-                    num: "02",
-                    title: "症状のカウンセリング",
-                    desc: "現在のお悩みや症状について詳しくお伺いします。不安なことや気になることは何でもご相談ください。",
-                    imageId: "受付で挨拶している場面"
-                  },
-                  {
-                    num: "03",
-                    title: "レントゲン撮影",
-                    desc: "お口の状態を正確に把握するため、レントゲン撮影を行います。必要に応じて歯科用CTでの撮影も実施します。",
-                    imageId: "カウンセリングで医師と患者が話している場面"
-                  },
-                  {
-                    num: "04",
-                    title: "歯周病検査、口腔内写真の撮影",
-                    desc: "歯周ポケットの深さを測定し、口腔内写真を撮影します。現在の状態を視覚的に確認いただけます。",
-                    imageId: "治療中の場面"
-                  },
-                  {
-                    num: "05",
-                    title: "治療計画の説明",
-                    desc: "検査結果に基づき、最適な治療プランをご提案します。費用や期間についても詳しくご説明します。",
-                    imageId: "次回予約をしている場面"
-                  },
-                  {
-                    num: "06",
-                    title: "治療開始",
-                    desc: "同意いただいたプランに沿って治療を進めます。痛みに配慮し、丁寧な処置を心がけます。",
-                    imageId: "step6"
-                  }
-                ].map((step, index) => (
-                  <div key={index}>
-                    {/* 番号 + タイトル */}
-                    <div className="flex items-center gap-2 mb-6 border-b border-[#D0D3DE] pb-3">
-                      <div className="relative">
-                        <div className="absolute top-1 left-1/2 -translate-x-1/2 w-6 h-6 bg-[#8B92AB]/20 rotate-45"></div>
-                        <span className="text-3xl md:text-4xl font-light text-[#8B92AB] tracking-wider relative z-10">{step.num}</span>
-                      </div>
-                      <h4 className="text-lg md:text-xl font-bold text-[#5A4D41] font-serif">{step.title}</h4>
-                    </div>
-                    {/* 画像 */}
-                    <div className="mb-6 rounded-2xl overflow-hidden shadow-md">
-                      <PageImage
-                        path="/homepage"
-                        imageId={step.imageId}
-                        alt={step.title}
-                        className="w-full h-56 md:h-72 object-cover"
-                      />
-                    </div>
-                    {/* 説明文 */}
-                    <p className="text-[#5A4D41] leading-loose text-sm md:text-base" style={{ fontFamily: 'YuGothic, "Yu Gothic", sans-serif' }}>{step.desc}</p>
+            <div className="relative pl-10 md:pl-20 space-y-16 md:space-y-20">
+              <div className="absolute left-5 md:left-6 top-0 bottom-0 w-[0.5px] bg-[#D8DBE6] z-0"></div>
+
+              {[
+                { num: "01", title: "ご予約・ご来院", desc: "WEBまたはお電話にてご予約ください。初診の方は問診票の記入がありますので、10分前にお越しください。", imageId: "スマホで予約する人" },
+                { num: "02", title: "症状のカウンセリング", desc: "現在のお悩みや症状について詳しくお伺いします。不安なことや気になることは何でもご相談ください。", imageId: "受付で挨拶している場面" },
+                { num: "03", title: "レントゲン撮影", desc: "お口の状態を正確に把握するため、レントゲン撮影を行います。必要に応じて歯科用CTでの撮影も実施します。", imageId: "カウンセリングで医師と患者が話している場面" },
+                { num: "04", title: "歯周病検査、口腔内写真の撮影", desc: "歯周ポケットの深さを測定し、口腔内写真を撮影します。現在の状態を視覚的に確認いただけます。", imageId: "治療中の場面" },
+                { num: "05", title: "治療計画の説明", desc: "検査結果に基づき、最適な治療プランをご提案します。費用や期間についても詳しくご説明します。", imageId: "次回予約をしている場面" },
+                { num: "06", title: "治療開始", desc: "同意いただいたプランに沿って治療を進めます。痛みに配慮し、丁寧な処置を心がけます。", imageId: "step6" }
+              ].map((step, index, arr) => (
+                <div key={index} className="relative">
+                  <div className={`absolute -left-10 md:-left-20 top-0 w-10 md:w-12 h-10 md:h-12 rounded-full flex items-center justify-center font-sans font-medium z-10 shadow-sm text-sm md:text-base ${index === arr.length - 1 ? 'bg-[#8B92AB] text-white border border-[#8B92AB]' : 'bg-white border border-[#D8DBE6] text-[#8B92AB]'}`}>
+                    {step.num}
                   </div>
-                ))}
-              </div>
+                  <h4 className="text-xl md:text-2xl font-medium mb-4 md:mb-6">{step.title}</h4>
+                  <div className="bg-white p-2 md:p-3 rounded-2xl inline-block mb-4 md:mb-6 shadow-sm border border-[#D8DBE6]">
+                    <PageImage
+                      path="/homepage"
+                      imageId={step.imageId}
+                      alt={step.title}
+                      className="rounded-xl w-full max-w-[280px] md:max-w-xs"
+                    />
+                  </div>
+                  <p className="text-[#5A4D41]/80 leading-[1.8] md:leading-relaxed max-w-2xl bg-white/60 p-5 md:p-6 rounded-2xl border border-[#D8DBE6]/50 shadow-sm text-[13px] md:text-[15px]">{step.desc}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
