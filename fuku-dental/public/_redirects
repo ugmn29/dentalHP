@@ -1,0 +1,10 @@
+# 旧URLから新URLへの301リダイレクト（SEO評価引き継ぎ）
+/prevention /preventive 301
+/about / 301
+/kids/oral-education /oral-education 301
+/kids/* /kids-preventive/:splat 301
+
+# www → non-www 統一（Cloudflare Pagesのカスタムドメイン設定でも対応推奨）
+https://www.fshika.com/* https://fshika.com/:splat 301
+http://www.fshika.com/* https://fshika.com/:splat 301
+http://fshika.com/* https://fshika.com/:splat 301
