@@ -129,7 +129,7 @@ export default function Home() {
       highlight: "保存治療",
       summary: "できる限り削らない・抜かない治療",
       details: [
-        "歯を細かく見れる<span class='font-bold bg-yellow-100'>拡大鏡</span>、より精密に治療できる<span class='font-bold bg-yellow-100'>マイクロスコープ</span>、精密診断を可能にする<span class='font-bold bg-yellow-100'>３Dスキャナー・CT</span>。これらの最新設備と診断力で、<span class='text-[#8B92AB] font-bold'>できる限り削らない・抜かない治療</span>を実現します。"
+        "歯を細かく見れる<span class='font-bold marker-yellow'>拡大鏡</span>、より精密に治療できる<span class='font-bold marker-yellow'>マイクロスコープ</span>、精密診断を可能にする<span class='font-bold marker-yellow'>３Dスキャナー・CT</span>。これらの最新設備と診断力で、<span class='text-[#8B92AB] font-bold'>できる限り削らない・抜かない治療</span>を実現します。"
       ],
       imageId: "feature5",
       imageAlt: "豊洲 歯科 保存治療 削らない治療",
@@ -143,7 +143,7 @@ export default function Home() {
       highlight: "最新<span style='font-size: 0.8em;'>の</span>透明<span style='font-size: 0.8em;'>な</span>治療",
       summary: "<strong>豊洲の歯医者</strong>として、納得して治療を受けていただくために",
       details: [
-        "治療前には必ず<span class='font-bold bg-yellow-100'>口の中の写真</span>を撮影し、現在の状態を一緒に確認します。さらに<span class='font-bold bg-yellow-100'>３Dスキャナー</span>で歯並びを立体的にデータ化し、<span class='font-bold bg-yellow-100'>ペン型カメラ</span>で細部まで拡大して見ることができます。これらの最新機器を使って、<span class='text-[#8B92AB] font-bold'>お口の状態や治療内容を丁寧にわかりやすく説明</span>します。"
+        "治療前には必ず<span class='font-bold marker-yellow'>口の中の写真</span>を撮影し、現在の状態を一緒に確認します。さらに<span class='font-bold marker-yellow'>３Dスキャナー</span>で歯並びを立体的にデータ化し、<span class='font-bold marker-yellow'>ペン型カメラ</span>で細部まで拡大して見ることができます。これらの最新機器を使って、<span class='text-[#8B92AB] font-bold'>お口の状態や治療内容を丁寧にわかりやすく説明</span>します。"
       ],
       imageId: "feature1",
       imageAlt: "豊洲 歯科 透明性のある治療説明",
@@ -157,7 +157,7 @@ export default function Home() {
       highlight: "こども矯正",
       summary: "歯並びの教科書（冊子）",
       details: [
-        "歯並びだけでなく、<span class='text-[#8B92AB] font-bold'>お顔全体の成長</span>を考えた治療を行います。それを補助するために、<span class='font-bold bg-yellow-100'>当院独自の歯ならびの教科書</span>を、来院した子ども患者さん全員にお渡しします。"
+        "歯並びだけでなく、<span class='text-[#8B92AB] font-bold'>お顔全体の成長</span>を考えた治療を行います。それを補助するために、<span class='font-bold marker-yellow'>当院独自の歯ならびの教科書</span>を、来院した子ども患者さん全員にお渡しします。"
       ],
       imageId: "feature2",
       imageAlt: "豊洲 Fデンタルオフィス こども矯正 歯並びの教科書",
@@ -171,7 +171,7 @@ export default function Home() {
       highlight: "個室の診療室",
       summary: "リラックスして治療を受けられる空間",
       details: [
-        "<span class='font-bold bg-yellow-100'>個室</span>でプライバシーを確保。<span class='font-bold bg-yellow-100'>天井テレビ</span>があるため、<span class='text-[#8B92AB] font-bold'>子供が通いやすい環境</span>を整備しています。"
+        "<span class='font-bold marker-yellow'>個室</span>でプライバシーを確保。<span class='font-bold marker-yellow'>天井テレビ</span>があるため、<span class='text-[#8B92AB] font-bold'>子供が通いやすい環境</span>を整備しています。"
       ],
       imageId: "feature3",
       imageAlt: "豊洲 歯医者 個室診療室 天井テレビ",
@@ -185,7 +185,7 @@ export default function Home() {
       highlight: "審美歯科",
       summary: "美しさと機能性を両立した治療",
       details: [
-        "審美歯科で大事なのは、<span class='font-bold bg-yellow-100'>見た目と機能の両立</span>です。それを実現するために、当院では<span class='text-[#8B92AB] font-bold'>精密診療を行える環境</span>を整備しています。"
+        "審美歯科で大事なのは、<span class='font-bold marker-yellow'>見た目と機能の両立</span>です。それを実現するために、当院では<span class='text-[#8B92AB] font-bold'>精密診療を行える環境</span>を整備しています。"
       ],
       imageId: "feature4",
       imageAlt: "豊洲 審美歯科 セラミック治療 ホワイトニング",
@@ -271,18 +271,10 @@ export default function Home() {
                         }}>
                         <strong><span className="text-[110%]">豊洲駅</span></strong><span className="text-[85%]">から</span>
                       </span>
-                      <span className="inline-flex items-center justify-center px-3 md:px-6 py-2 md:py-3 bg-gradient-to-r from-[#FFD700] via-[#FFC107] to-[#FFD700] rounded-2xl shadow-2xl transform hover:scale-110 hover:rotate-2 transition-all duration-300 relative overflow-hidden"
-                        style={{
-                          boxShadow: '0 8px 32px rgba(255, 193, 7, 0.5), inset 0 2px 8px rgba(255,255,255,0.6)'
-                        }}>
-                        <span className="relative z-10 font-black"
-                          style={{
-                            color: '#5A4D41',
-                            textShadow: '0 2px 4px rgba(255,255,255,0.3)'
-                          }}>
+                      <span className="inline-flex items-center justify-center px-3 md:px-6 py-1 md:py-2 marker-yellow rounded-lg">
+                        <span className="font-black text-[#5A4D41]">
                           徒歩2分
                         </span>
-                        <div className="absolute inset-0 bg-gradient-to-t from-transparent via-white/20 to-transparent animate-pulse"></div>
                       </span>
                       <span className="inline-block bg-gradient-to-br from-[#5A4D41] via-[#5A4D41] to-[#5A4D41] bg-clip-text text-transparent drop-shadow-lg transform hover:scale-105 transition-all duration-300"
                         style={{
@@ -297,7 +289,7 @@ export default function Home() {
                   <div className="absolute -inset-2 bg-gradient-to-r from-transparent via-[#8B92AB]/5 to-transparent rounded-2xl -z-10"></div>
                 </div>
                 <span className="block text-[5.5vw] sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-[#5A4D41] -mt-4 md:-mt-6 font-semibold" style={{ fontStyle: 'normal' }}>
-                  <strong>豊洲</strong>で0歳から通える<strong>歯科</strong>・<strong>歯医者</strong>
+                  0歳から通える<strong>歯科</strong>・<strong>矯正歯科</strong>
                 </span>
               </h1>
             </div>
@@ -493,119 +485,65 @@ export default function Home() {
           </div>
         </section>
 
-        {/* --- Problem Section (Image Background Style) --- */}
-        <section className="relative overflow-hidden pt-24 md:pt-32">
-          {/* Cloud-shaped Speech Bubble with Title - Positioned above background */}
-          <div className="relative z-20 flex justify-center mt-[-100px] md:mt-[-120px] mb-[-140px] md:mb-[-160px]">
-            <div className="relative">
-              {/* Cloud SVG Background - Original Shape & Centered */}
-              <svg
-                className="w-[120%] md:w-full max-w-4xl md:max-w-6xl flex-shrink-0 -ml-[10%] md:ml-0"
-                viewBox="0 0 500 280"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                {/* Main cloud shape */}
-                <g transform="translate(50, 40)" id="cloudShape">
-                  {/* Left puff */}
-                  <circle cx="80" cy="120" r="70" fill="white" />
-                  {/* Left-center puff */}
-                  <circle cx="150" cy="90" r="75" fill="white" />
-                  {/* Center-top puff */}
-                  <circle cx="220" cy="70" r="65" fill="white" />
-                  {/* Right-center puff */}
-                  <circle cx="280" cy="90" r="70" fill="white" />
-                  {/* Right puff */}
-                  <circle cx="340" cy="115" r="65" fill="white" />
-                  {/* Bottom fill */}
-                  <rect x="80" y="120" width="260" height="50" fill="white" />
-                  {/* Center large puff */}
-                  <circle cx="210" cy="115" r="80" fill="white" />
-                </g>
+        {/* --- Problem Section (Modern Light Design) --- */}
+        <section className="relative overflow-hidden py-16 md:py-20 bg-gradient-to-b from-[#F5F2EE] to-white">
+          {/* Decorative background shapes */}
+          <div className="absolute top-10 left-0 w-64 h-64 bg-[#D8DBE6]/20 rounded-full blur-3xl -translate-x-1/2"></div>
+          <div className="absolute bottom-10 right-0 w-48 h-48 bg-[#D8DBE6]/15 rounded-full blur-3xl translate-x-1/3"></div>
 
-                {/* Drop shadow filter */}
-                <defs>
-                  <filter id="cloudShadow" x="-50%" y="-50%" width="200%" height="200%">
-                    <feGaussianBlur in="SourceAlpha" stdDeviation="8" />
-                    <feOffset dx="0" dy="10" result="offsetblur" />
-                    <feComponentTransfer>
-                      <feFuncA type="linear" slope="0.3" />
-                    </feComponentTransfer>
-                    <feMerge>
-                      <feMergeNode />
-                      <feMergeNode in="SourceGraphic" />
-                    </feMerge>
-                  </filter>
-                </defs>
-
-                <g filter="url(#cloudShadow)">
-                  <use href="#cloudShape" />
-                </g>
-
-                {/* Speech bubble tail - two circles */}
-                <circle cx="250" cy="230" r="16" fill="white" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.2))" />
-                <circle cx="270" cy="250" r="10" fill="white" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.2))" />
-              </svg>
-
-              {/* Text overlay - Fixed size */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <h2 className="text-2xl md:text-3xl font-bold text-[#5A4D41] text-center leading-relaxed px-12">
-                  こんなお悩み<br />ありませんか？
-                </h2>
-              </div>
-            </div>
-          </div>
-
-          {/* Upper Part: Background Image with Problems */}
-          <div className="relative mt-12">
-            {/* Background Image with Overlay */}
-            <div className="absolute inset-0 z-0">
-              <img
-                src="/images/problem-bg-v2.jpg"
-                alt="豊洲 歯科 歯医者 お悩み相談"
-                className="w-full h-full object-cover object-[50%_30%]"
-              />
-              <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/60"></div>
-              {/* Bottom Gradient for Transition */}
-              <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent via-transparent to-gray-100"></div>
+          <div className="container mx-auto px-4 relative z-10">
+            {/* Title */}
+            <div className="text-center mb-10">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#5A4D41] font-serif">
+                こんなお悩み<br className="md:hidden" />ありませんか？
+              </h2>
+              <div className="w-12 h-0.5 bg-[#D8DBE6] mx-auto mt-4"></div>
             </div>
 
-            {/* Content */}
-            <div className="relative z-10 container mx-auto px-4 pt-24 md:pt-32 pb-12 md:pb-16">
-
-              {/* Problems List */}
-              <div className="max-w-2xl mx-auto space-y-6 pb-2">
-                {[
-                  "子供の歯並びが気になる...",
-                  "銀歯を白くしたい...",
-                  "痛くない治療を受けたい...",
-                  "インプラントに興味がある..."
-                ].map((problem, i) => (
-                  <div key={i} className="flex items-center gap-4">
-                    <div className="w-2 h-2 rounded-full bg-white flex-shrink-0"></div>
-                    <p className="text-white text-lg md:text-xl font-bold drop-shadow-lg">
-                      {problem}
+            {/* Problem Cards */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl mx-auto mb-12">
+              {[
+                { text: "子供の歯並びが気になる...", icon: "😟" },
+                { text: "銀歯を白くしたい...", icon: "✨" },
+                { text: "痛くない治療を受けたい...", icon: "💭" },
+                { text: "インプラントに興味がある...", icon: "🦷" }
+              ].map((problem, i) => (
+                <div key={i} className="bg-white/80 backdrop-blur-sm rounded-2xl p-5 shadow-sm border border-[#D8DBE6]/50 hover:shadow-md transition-shadow duration-300">
+                  <div className="flex items-center gap-3">
+                    <span className="text-2xl">{problem.icon}</span>
+                    <p className="text-[#5A4D41] text-sm md:text-base font-medium">
+                      {problem.text}
                     </p>
                   </div>
-                ))}
+                </div>
+              ))}
+            </div>
+
+            {/* Arrow */}
+            <div className="flex justify-center mb-8">
+              <div className="flex flex-col items-center gap-1">
+                <div className="w-0.5 h-8 bg-gradient-to-b from-[#D8DBE6] to-[#8B92AB]"></div>
+                <svg width="24" height="12" viewBox="0 0 24 12"><polygon points="2,0 22,0 12,10" fill="#8B92AB" /></svg>
               </div>
             </div>
 
-            {/* Green Triangle Arrows - positioned at bottom of background section */}
-            <div className="absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-1/2 z-20 flex flex-col -space-y-2">
-              <svg width="40" height="30" viewBox="0 0 40 30" className="mx-auto">
-                <polygon points="5,5 35,5 20,25" fill="#D0D3DE" />
-              </svg>
-              <svg width="40" height="30" viewBox="0 0 40 30" className="mx-auto">
-                <polygon points="5,5 35,5 20,25" fill="#D0D3DE" opacity="0.7" />
-              </svg>
-              <svg width="40" height="30" viewBox="0 0 40 30" className="mx-auto">
-                <polygon points="5,5 35,5 20,25" fill="#D0D3DE" opacity="0.4" />
-              </svg>
-            </div>
+            {/* Solution */}
+            <div className="text-center">
+              <p className="text-[#8D8070] text-xs md:text-sm font-bold mb-1">
+                <strong>豊洲駅から徒歩2分の歯医者</strong>
+              </p>
+              <h2 className="font-black text-[#5A4D41] text-center mb-2" style={{ fontFamily: 'Georgia, "Yu Mincho", "Hiragino Mincho ProN", serif' }}>
+                <div className="text-[9vw] sm:text-5xl md:text-7xl">Fデンタルオフィス</div>
+                <div className="text-[7vw] sm:text-4xl md:text-5xl mt-1">豊洲プライムスクエア院</div>
+              </h2>
+              <p className="text-[#5A4D41] text-2xl md:text-3xl font-bold mb-8">
+                で解決！
+              </p>
+          </div>
           </div>
 
-          {/* Lower Part: Light Gray Background with Solution */}
-          <div className="bg-gray-100 py-12 md:py-16 -mt-1">
+          {/* CTA in light section */}
+          <div className="bg-white py-8 -mt-1">
             <div className="container mx-auto px-4">
               {/* Solution Message */}
               <div className="text-center">
@@ -626,7 +564,7 @@ export default function Home() {
                 </p>
 
                 {/* CTA Button */}
-                <button className="bg-gradient-to-r from-[#8B92AB] to-[#6B7394] hover:from-[#6B7394] hover:to-[#2D8A8A] text-white px-8 md:px-12 py-4 md:py-5 rounded-full text-lg md:text-xl font-bold shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center gap-3 mx-auto">
+                <button className="bg-gradient-to-r from-[#8B92AB] to-[#6B7394] hover:from-[#6B7394] hover:to-[#5A6080] text-white px-8 md:px-12 py-4 md:py-5 rounded-full text-lg md:text-xl font-bold shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center gap-3 mx-auto">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" strokeWidth="2" />
                     <path d="M8 2 L8 6 M16 2 L16 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
