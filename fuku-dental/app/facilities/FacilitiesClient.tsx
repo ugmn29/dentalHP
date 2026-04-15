@@ -115,7 +115,7 @@ export default function FacilitiesPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#FDFBF7] font-sans text-[#5A4D41]">
+    <div className="min-h-screen bg-[#FDFBF7] font-sans text-[#5A4D41] overflow-x-hidden" style={{ wordBreak: 'normal', overflowWrap: 'anywhere' }}>
       <Header />
 
       <main className="py-2">

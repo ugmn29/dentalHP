@@ -31,7 +31,7 @@ export default function ImplantAboutPage() {
   return (
     <>
       <Header />
-      <main className="min-h-screen bg-gradient-to-b from-white to-[#FDFBF7]">
+      <main className="min-h-screen bg-gradient-to-b from-white to-[#FDFBF7] overflow-x-hidden" style={{ wordBreak: 'normal', overflowWrap: 'anywhere' }}>
         {/* Breadcrumb */}
         <div className="bg-white border-b">
           <div className="container mx-auto px-4 py-3">

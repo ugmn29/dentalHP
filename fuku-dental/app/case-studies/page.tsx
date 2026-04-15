@@ -23,7 +23,7 @@ export default function CaseStudiesPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#FDFBF7] font-sans text-[#5A4D41]">
+    <div className="min-h-screen bg-[#FDFBF7] font-sans text-[#5A4D41] overflow-x-hidden" style={{ wordBreak: 'normal', overflowWrap: 'anywhere' }}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}

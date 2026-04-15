@@ -392,7 +392,7 @@ export default function ImplantMainPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <Header />
-      <main>
+      <main className="overflow-x-hidden" style={{ wordBreak: 'normal', overflowWrap: 'anywhere' }}>
         <HeroCarousel />
         <PageImage path="/implant" alt="豊洲のインプラント治療" />
         <IntroSection />

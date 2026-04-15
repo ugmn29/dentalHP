@@ -32,7 +32,7 @@ export default function PeriodontalPage() {
 
 
     return (
-        <div className="min-h-screen bg-white font-sans text-[#4A4A4A]">
+        <div className="min-h-screen bg-white font-sans text-[#4A4A4A] overflow-x-hidden" style={{ wordBreak: 'normal', overflowWrap: 'anywhere' }}>
             <Header />
 
             <main>

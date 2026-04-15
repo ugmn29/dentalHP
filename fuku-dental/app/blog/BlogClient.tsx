@@ -18,7 +18,7 @@ export default function BlogClient({ posts, categories }: Props) {
       : posts.filter((p) => p.category === selectedCategory);
 
   return (
-    <main className="pt-0 pb-2">
+    <main className="pt-0 pb-2 overflow-x-hidden" style={{ wordBreak: 'normal', overflowWrap: 'anywhere' }}>
       {/* Page Header */}
       <section className="bg-gradient-to-b from-white to-[#FDFBF7] pt-2 pb-2 md:pt-2 md:pb-2">
         <div className="container mx-auto px-4">

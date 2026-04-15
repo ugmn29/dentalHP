@@ -10,7 +10,7 @@ import { PageImage } from '@/components/PageImage';
 const WisdomToothPage = () => {
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white overflow-x-hidden" style={{ wordBreak: 'normal', overflowWrap: 'anywhere' }}>
       <Header />
 
       {/* Hero Section */}

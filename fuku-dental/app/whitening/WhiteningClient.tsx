@@ -29,7 +29,7 @@ export default function WhiteningPage() {
   return (
     <>
       <Header />
-      <main className="min-h-screen bg-white font-sans text-[#4A4A4A]">
+      <main className="min-h-screen bg-white font-sans text-[#4A4A4A] overflow-x-hidden" style={{ wordBreak: 'normal', overflowWrap: 'anywhere' }}>
         {/* Hero Section - Image Slider + Text */}
         <section className="relative w-full overflow-hidden bg-white">
           {/* Image Slider */}

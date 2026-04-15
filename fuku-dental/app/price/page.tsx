@@ -148,7 +148,7 @@ export default function PricePage() {
     };
 
     return (
-        <div className="min-h-screen bg-[#FDFBF7] text-[#5A4D41] selection:bg-[#FF9F43] selection:text-white" style={{ fontFamily: '"Hiragino Mincho ProN", "YuMincho", "Yu Mincho", "游明朝体", "Noto Serif JP", serif', lineHeight: '1.8' }}>
+        <div className="min-h-screen bg-[#FDFBF7] text-[#5A4D41] selection:bg-[#FF9F43] selection:text-white overflow-x-hidden" style={{ fontFamily: '"Hiragino Mincho ProN", "YuMincho", "Yu Mincho", "游明朝体", "Noto Serif JP", serif', lineHeight: '1.8', wordBreak: 'normal', overflowWrap: 'anywhere' }}>
             <Header />
 
             <main>
