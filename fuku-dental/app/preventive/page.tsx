@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: '予防歯科・定期検診｜豊洲の歯医者 Fデンタルオフィス',
+    title: '予防歯科・定期検診｜豊洲の歯医者 Fデンタルオフィス 豊洲プライムスクエア院',
     description: '豊洲駅徒歩2分。PMTCと定期検診で虫歯・歯周病を予防。',
   },
   alternates: {

@@ -721,7 +721,7 @@ export default function CrossBiteDetailPage() {
                 <h2 className="text-3xl md:text-4xl font-bold text-[#5A4D41] mb-4">お子様の噛み合わせが交差していませんか？</h2>
                 <p className="text-lg md:text-xl text-[#8D8070] leading-relaxed">
                   交叉咬合（クロスバイト）は早期治療が極めて重要です。<br />
-                  豊洲の歯科・Fデンタルオフィスで、まずは無料カウンセリングにお越しください。
+                  豊洲の歯科・Fデンタルオフィス 豊洲プライムスクエア院で、まずは無料カウンセリングにお越しください。
                 </p>
               </div>
 

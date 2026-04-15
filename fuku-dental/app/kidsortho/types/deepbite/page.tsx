@@ -721,7 +721,7 @@ export default function DeepBiteDetailPage() {
                 <h2 className="text-3xl md:text-4xl font-bold text-[#5A4D41] mb-4">お子様の噛み合わせが深いことが気になりませんか？</h2>
                 <p className="text-lg md:text-xl text-[#8D8070] leading-relaxed">
                   過蓋咬合（ディープバイト）は早期治療が効果的です。<br />
-                  豊洲の歯医者・Fデンタルオフィスで、まずは無料カウンセリングにお越しください。
+                  豊洲の歯医者・Fデンタルオフィス 豊洲プライムスクエア院で、まずは無料カウンセリングにお越しください。
                 </p>
               </div>
 

@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'ホワイトニング｜豊洲の歯医者 Fデンタルオフィス',
+    title: 'ホワイトニング｜豊洲の歯医者 Fデンタルオフィス 豊洲プライムスクエア院',
     description: '豊洲駅徒歩2分。オフィス・ホームホワイトニング対応。',
   },
   alternates: {

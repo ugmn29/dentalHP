@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: '根管治療（歯の神経治療）｜豊洲 Fデンタルオフィス',
+    title: '根管治療（歯の神経治療）｜豊洲 Fデンタルオフィス 豊洲プライムスクエア院',
     description: '豊洲駅徒歩2分。マイクロスコープ使用の精密根管治療で歯を残します。',
   },
   alternates: {

@@ -106,7 +106,7 @@ export default function CeramicPage() {
                                     審美性と機能性のセラミック治療
                                 </span>
                                 <span className="block text-sm md:text-base text-[#8D8070] mt-3 md:mt-5 font-normal tracking-normal">
-                                    豊洲駅徒歩2分・Fデンタルオフィスのセラミック専門治療
+                                    豊洲駅徒歩2分・Fデンタルオフィス 豊洲プライムスクエア院のセラミック専門治療
                                 </span>
                             </h1>
                             <PageImage path="/ceramic" alt="審美性と機能性のセラミック治療" />

@@ -630,7 +630,7 @@ export default function UnderbiteDetailPage() {
                 <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#5A4D41] mb-4">お子様の受け口が気になりませんか？</h2>
                 <p className="text-lg md:text-xl text-[#8D8070] leading-loose">
                   下顎前突（受け口）は3〜5歳からの超早期治療が最も効果的です。<br />
-                  豊洲の歯医者・Fデンタルオフィスへ、3歳児検診で指摘されたらすぐにご相談ください。
+                  豊洲の歯医者・Fデンタルオフィス 豊洲プライムスクエア院へ、3歳児検診で指摘されたらすぐにご相談ください。
                 </p>
               </div>
 

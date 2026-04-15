@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: '歯周病の予防・メンテナンス｜Fデンタルオフィス',
+    title: '歯周病の予防・メンテナンス｜Fデンタルオフィス 豊洲プライムスクエア院',
     description: '歯周病の予防とメンテナンス。定期的なクリーニングで再発を防止。',
   },
   alternates: {

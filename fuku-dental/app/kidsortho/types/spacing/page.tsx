@@ -585,7 +585,7 @@ export default function SpacingDetailPage() {
                 <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#5A4D41] mb-4">お子様の前歯に隙間が気になりませんか？</h2>
                 <p className="text-lg md:text-xl text-[#8D8070] leading-loose">
                   空隙歯列は早期治療で効果的に改善できます。<br />
-                  豊洲の歯医者・Fデンタルオフィスで、まずは無料カウンセリングにお越しください。
+                  豊洲の歯医者・Fデンタルオフィス 豊洲プライムスクエア院で、まずは無料カウンセリングにお越しください。
                 </p>
               </div>
 

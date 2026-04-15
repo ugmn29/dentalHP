@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: '親知らず抜歯｜豊洲の歯医者 Fデンタルオフィス',
+    title: '親知らず抜歯｜豊洲の歯医者 Fデンタルオフィス 豊洲プライムスクエア院',
     description: '豊洲駅徒歩2分。難抜歯にも対応。痛みを最小限に抑えた親知らず抜歯。',
   },
   alternates: {

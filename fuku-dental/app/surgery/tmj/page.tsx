@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: '顎関節症・歯ぎしり治療｜豊洲 Fデンタルオフィス',
+    title: '顎関節症・歯ぎしり治療｜豊洲 Fデンタルオフィス 豊洲プライムスクエア院',
     description: '豊洲駅徒歩2分。顎関節症・歯ぎしり・食いしばりの治療。',
   },
   alternates: {

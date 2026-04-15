@@ -105,7 +105,7 @@ export default function KidsPreventivePage() {
                                     こども歯科・予防
                                 </span>
                                 <span className="block text-sm md:text-base text-[#8D8070] mt-3 md:mt-5 font-normal tracking-normal">
-                                    豊洲駅徒歩2分・Fデンタルオフィスのこども専門予防歯科
+                                    豊洲駅徒歩2分・Fデンタルオフィス 豊洲プライムスクエア院のこども専門予防歯科
                                 </span>
                             </h1>
                             <PageImage path="/kids-preventive" alt="こども歯科・予防" />

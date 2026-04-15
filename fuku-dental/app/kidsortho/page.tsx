@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'こども矯正（小児矯正）｜豊洲の歯科医院 Fデンタルオフィス',
+    title: 'こども矯正（小児矯正）｜豊洲の歯科医院 Fデンタルオフィス 豊洲プライムスクエア院',
     description: '豊洲駅徒歩2分。成長期を活かした小児矯正。無料相談受付中。',
   },
   alternates: {

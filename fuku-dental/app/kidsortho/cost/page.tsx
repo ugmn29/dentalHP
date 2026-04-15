@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'こども矯正の費用・料金｜Fデンタルオフィス',
+    title: 'こども矯正の費用・料金｜Fデンタルオフィス 豊洲プライムスクエア院',
     description: 'こども矯正の費用を詳しく解説。',
   },
   alternates: {

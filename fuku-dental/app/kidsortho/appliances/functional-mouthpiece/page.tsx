@@ -550,7 +550,7 @@ export default function FunctionalMouthpiecePage() {
                             <div className="text-center mb-8">
                                 <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#5A4D41] mb-4">お子さまに最適な装置を無料でご提案</h2>
                                 <p className="text-lg md:text-xl text-[#8D8070] leading-loose font-sans">
-                                    機能的マウスピース装置が適しているか、豊洲の歯医者・Fデンタルオフィスの無料相談でご確認ください
+                                    機能的マウスピース装置が適しているか、豊洲の歯医者・Fデンタルオフィス 豊洲プライムスクエア院の無料相談でご確認ください
                                 </p>
                             </div>
 

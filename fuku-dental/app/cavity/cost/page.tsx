@@ -12,7 +12,7 @@ import {
 
 export const metadata: Metadata = {
   title: '虫歯治療の費用 | 保険診療・自費診療の料金目安 | Fデンタルオフィス 豊洲プライムスクエア院',
-  description: '豊洲の歯医者 Fデンタルオフィスが虫歯治療にかかる費用を詳しく解説。保険適用の治療費、自費診療の料金、医療費控除について。コンポジットレジン、インレー、クラウン、根管治療の費用目安をご紹介します。',
+  description: '豊洲の歯医者 Fデンタルオフィス 豊洲プライムスクエア院が虫歯治療にかかる費用を詳しく解説。保険適用の治療費、自費診療の料金、医療費控除について。コンポジットレジン、インレー、クラウン、根管治療の費用目安をご紹介します。',
   keywords: '虫歯治療,費用,料金,保険診療,自費診療,医療費控除,セラミック,銀歯,詰め物,被せ物',
   openGraph: {
     title: '虫歯治療の費用 | 保険診療・自費診療の料金目安 | Fデンタルオフィス 豊洲プライムスクエア院',
@@ -65,7 +65,7 @@ export default function CostPage() {
               <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
               <p className="text-lg md:text-xl text-[#5A4D41] leading-relaxed">
                 保険診療と自費診療の料金目安を詳しく解説<br />
-                <span className="text-base text-[#8D8070] mt-2 inline-block">豊洲駅すぐのFデンタルオフィスが治療内容別の費用・医療費控除について解説</span>
+                <span className="text-base text-[#8D8070] mt-2 inline-block">豊洲駅すぐのFデンタルオフィス 豊洲プライムスクエア院が治療内容別の費用・医療費控除について解説</span>
               </p>
             </div>
           </div>

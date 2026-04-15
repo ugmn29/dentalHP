@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: '院内設備・施設紹介｜豊洲 Fデンタルオフィス',
+    title: '院内設備・施設紹介｜豊洲 Fデンタルオフィス 豊洲プライムスクエア院',
     description: '豊洲プライムスクエア1階。最新設備完備の歯科医院。',
   },
   alternates: {

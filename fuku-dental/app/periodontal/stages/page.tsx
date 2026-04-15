@@ -57,7 +57,7 @@ export default function PeriodontalStagesPage() {
               </p>
               <p className="text-lg text-[#8D8070] leading-relaxed">
                 歯周病は段階的に進行します。<br />
-                豊洲の歯科 Fデンタルオフィスが各段階の症状と治療法を解説します
+                豊洲の歯科 Fデンタルオフィス 豊洲プライムスクエア院が各段階の症状と治療法を解説します
               </p>
             </div>
           </div>

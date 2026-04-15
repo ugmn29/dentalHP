@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: '口腔外科｜豊洲の歯医者 Fデンタルオフィス',
+    title: '口腔外科｜豊洲の歯医者 Fデンタルオフィス 豊洲プライムスクエア院',
     description: '豊洲駅徒歩2分。口腔外科の治療対応。',
   },
   alternates: {

@@ -518,7 +518,7 @@ export default function Home() {
                 <strong>豊洲駅から徒歩2分の歯医者</strong>
               </p>
               <h2 className="font-black text-[#5A4D41] text-center mb-2" style={{ fontFamily: 'Georgia, "Yu Mincho", "Hiragino Mincho ProN", serif' }}>
-                <div className="text-[9vw] sm:text-5xl md:text-7xl">Fデンタルオフィス</div>
+                <div className="text-[9vw] sm:text-5xl md:text-7xl">Fデンタルオフィス 豊洲プライムスクエア院</div>
                 <div className="text-[7vw] sm:text-4xl md:text-5xl mt-1">豊洲プライムスクエア院</div>
               </h2>
               <p className="text-[#5A4D41] text-2xl md:text-3xl font-bold mb-8">

@@ -302,7 +302,7 @@ export default function KidsOrthoPage() {
                                 まずはお気軽にご相談ください
                             </h2>
                             <div className="w-full h-2 bg-[#FFE44D] rounded-full -mt-2"></div>
-                            <p className="text-sm text-[#8D8070] mt-4">豊洲駅徒歩2分のFデンタルオフィスでは、こども矯正の無料相談を実施しています</p>
+                            <p className="text-sm text-[#8D8070] mt-4">豊洲駅徒歩2分のFデンタルオフィス 豊洲プライムスクエア院では、こども矯正の無料相談を実施しています</p>
                         </div>
 
                         {/* Check items */}
@@ -410,7 +410,7 @@ export default function KidsOrthoPage() {
                         <div className="flex items-center justify-center mb-8 gap-1 sm:gap-2 md:gap-4 px-2">
                             <div className="text-2xl sm:text-3xl md:text-5xl text-[#C5A572] font-bold flex-shrink-0">【</div>
                             <h3 className="text-[13px] sm:text-base md:text-2xl font-bold text-[#C5A572] text-center break-keep">
-                                Fデンタルオフィス<span className="text-[11px] sm:text-sm md:text-2xl block sm:inline"> 豊洲プライムスクエア院</span>
+                                Fデンタルオフィス 豊洲プライムスクエア院<span className="text-[11px] sm:text-sm md:text-2xl block sm:inline"> 豊洲プライムスクエア院</span>
                             </h3>
                             <div className="text-2xl sm:text-3xl md:text-5xl text-[#C5A572] font-bold flex-shrink-0">】</div>
                         </div>
@@ -1055,7 +1055,7 @@ export default function KidsOrthoPage() {
                             <h2 className="text-3xl md:text-4xl font-bold text-[#5A4D41] font-serif mb-4">
                                 料金について
                             </h2>
-                            <p className="text-[#8D8070]">豊洲の歯科 Fデンタルオフィスの小児矯正料金 ※表示価格はすべて税込です</p>
+                            <p className="text-[#8D8070]">豊洲の歯科 Fデンタルオフィス 豊洲プライムスクエア院の小児矯正料金 ※表示価格はすべて税込です</p>
                         </div>
 
                         {/* Price Table */}
@@ -1552,7 +1552,7 @@ export default function KidsOrthoPage() {
                             <h2 className="text-2xl md:text-3xl font-bold text-[#5A4D41]">
                                 よくあるご質問
                             </h2>
-                            <p className="text-sm text-[#8D8070] mt-3">豊洲の歯医者 Fデンタルオフィスに寄せられるこども矯正のよくあるご質問</p>
+                            <p className="text-sm text-[#8D8070] mt-3">豊洲の歯医者 Fデンタルオフィス 豊洲プライムスクエア院に寄せられるこども矯正のよくあるご質問</p>
                         </div>
                         <div className="space-y-6">
                             {faqs.map((faq, index) => (
@@ -1591,7 +1591,7 @@ export default function KidsOrthoPage() {
 
                                 {/* Main Message */}
                                 <h2 className="text-xl md:text-2xl font-bold text-[#5A4D41] mb-6 leading-relaxed px-4">
-                                    Fデンタルオフィスへ<br />
+                                    Fデンタルオフィス 豊洲プライムスクエア院へ<br />
                                     まずはお気軽にご相談ください
                                 </h2>
 

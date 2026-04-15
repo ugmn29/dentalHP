@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'セラミック治療｜豊洲の歯医者 Fデンタルオフィス',
+    title: 'セラミック治療｜豊洲の歯医者 Fデンタルオフィス 豊洲プライムスクエア院',
     description: '豊洲駅徒歩2分。銀歯をセラミックに。審美性と耐久性を両立。',
   },
   alternates: {

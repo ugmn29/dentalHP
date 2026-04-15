@@ -42,7 +42,7 @@ export default function OvercomingFearPage() {
                         <PageImage path="/kids-preventive/overcoming-fear" imageId="歯医者克服ステップアップ4段階図" alt="子供の歯医者嫌い克服法" />
                         <p className="text-lg md:text-xl leading-relaxed opacity-95">
                             泣いて嫌がるお子様も、正しいアプローチで必ず克服できます。<br />
-                            豊洲駅徒歩2分のFデンタルオフィスのステップアップ方式で、歯医者を「怖くない場所」に
+                            豊洲駅徒歩2分のFデンタルオフィス 豊洲プライムスクエア院のステップアップ方式で、歯医者を「怖くない場所」に
                         </p>
                     </div>
                 </div>

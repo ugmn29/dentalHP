@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'こども歯科・小児予防歯科｜豊洲の歯科医院 Fデンタルオフィス',
+    title: 'こども歯科・小児予防歯科｜豊洲の歯科医院 Fデンタルオフィス 豊洲プライムスクエア院',
     description: '豊洲駅徒歩2分。0歳からのこども歯科。',
   },
   alternates: {

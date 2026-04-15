@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: '０歳からの口育・口腔教育｜豊洲 Fデンタルオフィス',
+    title: '０歳からの口育・口腔教育｜豊洲 Fデンタルオフィス 豊洲プライムスクエア院',
     description: '豊洲駅徒歩2分。０歳からはじめる口育を解説。',
   },
   alternates: {

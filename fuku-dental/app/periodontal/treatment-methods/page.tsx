@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: '歯周病の治療方法｜Fデンタルオフィス',
+    title: '歯周病の治療方法｜Fデンタルオフィス 豊洲プライムスクエア院',
     description: 'スケーリングから再生療法まで歯周病の治療方法を解説。',
   },
   alternates: {

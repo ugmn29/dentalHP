@@ -20,7 +20,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'セラミック治療の症例紹介｜Before & After｜Fデンタルオフィス 豊洲プライムスクエア院',
-  description: '豊洲の歯医者 Fデンタルオフィスによるセラミック治療の症例写真をご紹介。前歯・奥歯のビフォーアフターで治療効果をご確認いただけます。実際の患者様の声も掲載しています。',
+  description: '豊洲の歯医者 Fデンタルオフィス 豊洲プライムスクエア院によるセラミック治療の症例写真をご紹介。前歯・奥歯のビフォーアフターで治療効果をご確認いただけます。実際の患者様の声も掲載しています。',
   keywords: 'セラミック,症例,ビフォーアフター,Before,After,実績,治療例,患者の声',
   openGraph: {
     title: 'セラミック治療の症例紹介｜Before & After｜Fデンタルオフィス 豊洲プライムスクエア院',
@@ -70,7 +70,7 @@ export default function CeramicCaseStudiesPage() {
                 Before & After
               </p>
               <p className="text-lg opacity-90">
-                豊洲駅すぐのFデンタルオフィスの実際の治療例をご覧いただき、<br />
+                豊洲駅すぐのFデンタルオフィス 豊洲プライムスクエア院の実際の治療例をご覧いただき、<br />
                 セラミック治療の効果を実感してください
               </p>
             </div>
