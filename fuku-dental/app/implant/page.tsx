@@ -394,7 +394,6 @@ export default function ImplantMainPage() {
       <Header />
       <main className="overflow-x-hidden" style={{ wordBreak: 'normal', overflowWrap: 'anywhere' }}>
         <HeroCarousel />
-        <PageImage path="/implant" alt="豊洲のインプラント治療" />
         <IntroSection />
         <ProblemGrid />
         <ConsultationSection />

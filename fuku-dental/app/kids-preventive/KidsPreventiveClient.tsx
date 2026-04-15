@@ -108,7 +108,6 @@ export default function KidsPreventivePage() {
                                     豊洲駅徒歩2分・Fデンタルオフィス 豊洲プライムスクエア院のこども専門予防歯科
                                 </span>
                             </h1>
-                            <PageImage path="/kids-preventive" alt="こども歯科・予防" />
                         </div>
                     </div>
                 </section>

@@ -186,7 +186,6 @@ export default function KidsOrthoPage() {
                                         <span>矯</span>
                                         <span>正</span>
                                     </h1>
-                                    <PageImage path="/kidsortho" alt="こども矯正" />
                                 </div>
 
                                 {/* Strip 2: お顔を育てる */}

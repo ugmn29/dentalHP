@@ -109,7 +109,6 @@ export default function CeramicPage() {
                                     豊洲駅徒歩2分・Fデンタルオフィス 豊洲プライムスクエア院のセラミック専門治療
                                 </span>
                             </h1>
-                            <PageImage path="/ceramic" alt="審美性と機能性のセラミック治療" />
                         </div>
                     </div>
                 </section>
