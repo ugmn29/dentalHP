@@ -28,7 +28,7 @@ export default function CeramicPage() {
     }, [heroImages.length]);
 
     return (
-        <div className="min-h-screen bg-white font-serif text-[#4A4A4A]">
+        <div className="min-h-screen bg-white font-serif text-[#4A4A4A] overflow-x-hidden" style={{ wordBreak: 'normal', overflowWrap: 'anywhere' }}>
             <Header />
 
             <main>
@@ -80,9 +80,9 @@ export default function CeramicPage() {
                     <div className="relative bg-white flex flex-col items-center justify-start px-4 pt-8 pb-6 md:pb-8">
                         <div className="max-w-7xl w-full text-center flex items-center justify-center">
                             <h1 className="font-bold leading-tight font-serif mb-0">
-                                <div className="relative inline-block mb-2 md:mb-4 px-4 md:px-8">
-                                    <div className="relative z-10 py-2 md:py-4 whitespace-nowrap overflow-x-auto">
-                                        <span className="inline-flex items-center justify-center gap-1 md:gap-3 text-[6vw] sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif"
+                                <div className="relative inline-block mb-2 md:mb-4 px-2 md:px-8">
+                                    <div className="relative z-10 py-2 md:py-4">
+                                        <span className="flex flex-wrap items-center justify-center gap-x-1 md:gap-x-3 text-[7vw] sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif"
                                               style={{
                                                   fontWeight: '900',
                                                   letterSpacing: '0.05em'
