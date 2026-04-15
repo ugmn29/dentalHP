@@ -423,7 +423,7 @@ export default function Home() {
             {/* Opening Message */}
             <div className="mt-16 glass-bright p-8 md:p-16 rounded-[2.5rem] shadow-glass relative border border-[#D8DBE6]">
               <h4 className="text-2xl font-medium mb-8 text-center relative z-10 border-b border-[#D8DBE6] pb-4 max-w-sm mx-auto tracking-wider">当院が大切にしていること</h4>
-              <div className="space-y-4 text-sm leading-[1.9] relative z-10 text-[#5A4D41]" style={{ wordBreak: 'keep-all', overflowWrap: 'break-word', lineBreak: 'strict' }}>
+              <div className="space-y-4 text-sm leading-[1.9] relative z-10 text-[#5A4D41]" style={{ wordBreak: 'normal', overflowWrap: 'break-word', lineBreak: 'auto' }}>
                 <p>
                   私の父は、30年近く小児矯正に携わってきた歯科医師です。幼い頃からその背中を見て育ち、歯並びや噛み合わせが日々の習慣で大きく変わることを学んできました。当院のコンセプトは「未来のいいお顔を育てる」。これはお子様だけに向けた言葉ではありません。矯正後の後戻り、顔の歪み — その多くは呼吸・姿勢・噛み癖といった習慣に原因があります。お子様の口腔育成から大人の矯正・審美治療まで、習慣へのアプローチを軸に、年齢を問わずお口と表情の健康を整えていく歯科医院です。
                 </p>
@@ -500,14 +500,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* その お悩みに！ band */}
-            <div className="max-w-3xl mx-auto mb-10 relative">
-              <div className="bg-gradient-to-r from-[#EDEEF3] via-[#D8DBE6] to-[#EDEEF3] rounded-2xl py-4 px-6 text-center shadow-sm">
-                <p className="text-[#5A4D41] text-base md:text-xl font-bold tracking-wider">
-                  その <span className="text-[#8B92AB] text-2xl md:text-3xl mx-2">4</span> 大お悩みに！
-                </p>
-              </div>
-            </div>
 
             {/* Arrow */}
             <div className="flex justify-center mb-8">
@@ -822,10 +814,10 @@ export default function Home() {
                 { num: "04", title: "歯周病検査、口腔内写真の撮影", desc: "歯周ポケットの深さを測定し、口腔内写真を撮影します。現在の状態を視覚的に確認いただけます。", imageId: "治療中の場面" },
                 { num: "05", title: "治療計画の説明", desc: "検査結果に基づき、最適な治療プランをご提案します。費用や期間についても詳しくご説明します。", imageId: "次回予約をしている場面" },
                 { num: "06", title: "治療開始", desc: "同意いただいたプランに沿って治療を進めます。痛みに配慮し、丁寧な処置を心がけます。", imageId: "治療中の場面" }
-              ].map((step, index, arr) => (
+              ].map((step, index) => (
                 <div key={index} className="relative">
                   <div className="flex items-center gap-4 mb-4 md:mb-6">
-                    <div className={`absolute -left-10 md:-left-20 w-10 md:w-12 h-10 md:h-12 rounded-full flex items-center justify-center font-sans font-medium z-10 shadow-sm text-sm md:text-base ${index === arr.length - 1 ? 'bg-[#8B92AB] text-white border border-[#8B92AB]' : 'bg-white border border-[#D8DBE6] text-[#8B92AB]'}`}>
+                    <div className="absolute -left-10 md:-left-20 w-10 md:w-12 h-10 md:h-12 rounded-full flex items-center justify-center font-sans font-medium z-10 shadow-sm text-sm md:text-base bg-white border border-[#D8DBE6] text-[#8B92AB]">
                       {step.num}
                     </div>
                     <h4 className="text-xl md:text-2xl font-medium">{step.title}</h4>
