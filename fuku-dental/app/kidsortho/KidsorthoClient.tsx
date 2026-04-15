@@ -151,7 +151,7 @@ export default function KidsOrthoPage() {
     ];
 
     return (
-        <div className="min-h-screen bg-white text-[#5A4D41]" style={{ fontFamily: '"游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", sans-serif' }}>
+        <div className="min-h-screen bg-white text-[#5A4D41] overflow-x-hidden" style={{ fontFamily: '"游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", sans-serif' }}>
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
@@ -407,12 +407,12 @@ export default function KidsOrthoPage() {
                         </div>
 
                         {/* Clinic Name with Brackets */}
-                        <div className="flex items-center justify-center mb-8 gap-2 md:gap-4">
-                            <div className="text-3xl md:text-5xl text-[#C5A572] font-bold">【</div>
-                            <h3 className="text-base md:text-2xl font-bold text-[#C5A572] whitespace-nowrap">
-                                Fデンタルオフィス <span className="text-sm md:text-2xl">豊洲プライムスクエア院</span>
+                        <div className="flex items-center justify-center mb-8 gap-1 sm:gap-2 md:gap-4 px-2">
+                            <div className="text-2xl sm:text-3xl md:text-5xl text-[#C5A572] font-bold flex-shrink-0">【</div>
+                            <h3 className="text-[13px] sm:text-base md:text-2xl font-bold text-[#C5A572] text-center break-keep">
+                                Fデンタルオフィス<span className="text-[11px] sm:text-sm md:text-2xl block sm:inline"> 豊洲プライムスクエア院</span>
                             </h3>
-                            <div className="text-3xl md:text-5xl text-[#C5A572] font-bold">】</div>
+                            <div className="text-2xl sm:text-3xl md:text-5xl text-[#C5A572] font-bold flex-shrink-0">】</div>
                         </div>
 
                         {/* Images Grid */}
@@ -517,7 +517,7 @@ export default function KidsOrthoPage() {
                         {/* Title Banner */}
                         <div className="mb-10">
                             <div className="relative bg-[#C5A572] py-6 px-4 md:px-8 shadow-lg overflow-hidden" style={{ borderRadius: '60px 60px 50px 50px' }}>
-                                <h2 className="text-xl md:text-3xl font-bold text-white text-center relative z-10 whitespace-nowrap">
+                                <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-white text-center relative z-10">
                                     こんな不安はありませんか？
                                 </h2>
                                 <p className="text-white/80 text-xs md:text-sm text-center relative z-10 mt-2">豊洲の歯医者として多くのお子さまを診てきた当院に寄せられるご不安です</p>
