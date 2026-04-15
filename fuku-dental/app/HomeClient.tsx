@@ -103,12 +103,8 @@ export default function Home() {
     { name: "口臭治療", cat: "general", link: "/general/bad-breath", icon: Wind, iconImage: "/images/icons/10_口腔外科.png" },
     { name: "むしば治療", cat: "general", link: "/cavity", icon: Search, iconImage: "/images/icons/01_虫歯治療.png" },
     { name: "根管治療", cat: "general", link: "/root-canal", icon: Activity, iconImage: "/images/icons/03_根管治療.png" },
-    { name: "歯周病治療", cat: "general", link: "/periodontal", icon: Layers, iconImage: "/images/icons/02_歯周病治療.png" },
-    { name: "親知らず抜歯", cat: "surgery", link: "/wisdom", icon: Scissors, iconImage: "/images/icons/04_親知らず.png" },
     { name: "歯の外傷・急患", cat: "concerns", link: "/concerns/trauma", icon: AlertCircle, iconImage: "/images/icons/10_口腔外科.png" },
-    { name: "歯ぎしり・食いしばり", cat: "concerns", link: "/concerns/bruxism", icon: Moon, iconImage: "/images/icons/09_歯ぎしり.png" },
     { name: "顎関節症", cat: "concerns", link: "/concerns/tmj", icon: Zap, iconImage: "/images/icons/11_噛み合わせ.png" },
-    { name: "口腔外科・トラブル", cat: "concerns", link: "/concerns/oral-surgery", icon: Stethoscope, iconImage: "/images/icons/10_口腔外科.png" },
   ];
 
   const getCategoryColor = (cat: string) => {
@@ -280,6 +276,89 @@ export default function Home() {
           </div>
         </section>
 
+        {/* --- Access Guide (Building Approach) --- */}
+        <section className="py-12 md:py-16 bg-[#FAFAF8] w-full overflow-hidden">
+          <div className="max-w-5xl mx-auto px-4 md:px-6">
+            <div className="text-center mb-8 md:mb-10">
+              <p className="text-[#8B92AB] font-sans text-xs tracking-[0.3em] uppercase mb-2">Access</p>
+              <h2 className="text-2xl md:text-3xl font-serif tracking-wider text-[#5A4D41]">入口までのご案内</h2>
+              <p className="text-xs md:text-sm text-[#5A4D41]/70 mt-3">豊洲駅6a出口から当院まで、矢印に沿ってお越しください</p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 items-stretch">
+              {/* Step 1: 駅出口 */}
+              <div className="bg-white rounded-2xl p-5 shadow-sm border border-[#D8DBE6]/50 flex flex-col">
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="w-8 h-8 rounded-full bg-[#8B92AB] text-white flex items-center justify-center text-sm font-bold">1</span>
+                  <h3 className="font-bold text-[#5A4D41] text-sm md:text-base">豊洲駅 6a出口を出る</h3>
+                </div>
+                <div className="aspect-[4/3] rounded-xl overflow-hidden bg-[#EDEEF3] border border-[#D8DBE6]/50 flex items-center justify-center">
+                  <span className="text-[#8B92AB] text-xs">通路写真（準備中）</span>
+                </div>
+                <p className="text-xs text-[#5A4D41]/70 mt-3 leading-relaxed">
+                  6a出口を出て直進してください
+                </p>
+              </div>
+
+              {/* Arrow */}
+              <div className="hidden md:flex items-center justify-center">
+                <svg width="80" height="40" viewBox="0 0 80 40" className="text-[#8B92AB]">
+                  <line x1="5" y1="20" x2="65" y2="20" stroke="currentColor" strokeWidth="2" strokeDasharray="4 4"/>
+                  <polygon points="60,10 75,20 60,30" fill="currentColor"/>
+                </svg>
+              </div>
+              <div className="flex md:hidden items-center justify-center py-1">
+                <svg width="30" height="40" viewBox="0 0 30 40" className="text-[#8B92AB]">
+                  <line x1="15" y1="5" x2="15" y2="30" stroke="currentColor" strokeWidth="2" strokeDasharray="4 4"/>
+                  <polygon points="5,25 25,25 15,38" fill="currentColor"/>
+                </svg>
+              </div>
+
+              {/* Step 2: 通路 */}
+              <div className="bg-white rounded-2xl p-5 shadow-sm border border-[#D8DBE6]/50 flex flex-col">
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="w-8 h-8 rounded-full bg-[#8B92AB] text-white flex items-center justify-center text-sm font-bold">2</span>
+                  <h3 className="font-bold text-[#5A4D41] text-sm md:text-base">通路を進む</h3>
+                </div>
+                <div className="aspect-[4/3] rounded-xl overflow-hidden bg-[#EDEEF3] border border-[#D8DBE6]/50 flex items-center justify-center">
+                  <span className="text-[#8B92AB] text-xs">通路写真（準備中）</span>
+                </div>
+                <p className="text-xs text-[#5A4D41]/70 mt-3 leading-relaxed">
+                  プライムスクエアの通路を進みます
+                </p>
+              </div>
+
+              {/* Arrow (to building) */}
+              <div className="hidden md:col-span-3 md:flex items-center justify-center py-2">
+                <svg width="30" height="40" viewBox="0 0 30 40" className="text-[#8B92AB]">
+                  <line x1="15" y1="5" x2="15" y2="30" stroke="currentColor" strokeWidth="2" strokeDasharray="4 4"/>
+                  <polygon points="5,25 25,25 15,38" fill="currentColor"/>
+                </svg>
+              </div>
+              <div className="flex md:hidden items-center justify-center py-1">
+                <svg width="30" height="40" viewBox="0 0 30 40" className="text-[#8B92AB]">
+                  <line x1="15" y1="5" x2="15" y2="30" stroke="currentColor" strokeWidth="2" strokeDasharray="4 4"/>
+                  <polygon points="5,25 25,25 15,38" fill="currentColor"/>
+                </svg>
+              </div>
+
+              {/* Step 3: 入口到着 */}
+              <div className="md:col-span-3 bg-gradient-to-r from-[#EDEEF3] to-[#D8DBE6]/40 rounded-2xl p-5 md:p-6 shadow-sm border border-[#D8DBE6]/50 flex flex-col md:flex-row items-center gap-4 md:gap-6">
+                <span className="w-10 h-10 rounded-full bg-[#8B92AB] text-white flex items-center justify-center text-base font-bold flex-shrink-0">3</span>
+                <div className="flex-1 text-center md:text-left">
+                  <h3 className="font-bold text-[#5A4D41] text-base md:text-lg mb-1">Fデンタルオフィス 豊洲プライムスクエア院 到着</h3>
+                  <p className="text-xs md:text-sm text-[#5A4D41]/70">豊洲プライムスクエア1階の奥にございます</p>
+                </div>
+                <img
+                  src="/images/building.avif"
+                  alt="Fデンタルオフィス 入口"
+                  className="w-24 h-24 md:w-28 md:h-28 object-cover rounded-xl shadow-sm flex-shrink-0"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* --- Doctor Section (v7 Style) --- */}
         <section className="py-16 md:py-24 bg-[#F5F2EE] relative border-y border-[#D8DBE6]/30 overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-[3px] bg-[#D8DBE6]/50"></div>
@@ -321,8 +400,9 @@ export default function Home() {
                     </h4>
                     <ul className="space-y-4 text-[#5A4D41]/80 leading-relaxed font-sans mt-4 ml-4 border-l border-[#D8DBE6] pl-6">
                       <li className="relative before:content-[''] before:w-2 before:h-2 before:bg-[#D8DBE6] before:rounded-full before:absolute before:-left-[29px] before:top-2">大阪大学歯学部 卒業</li>
-                      <li className="relative before:content-[''] before:w-2 before:h-2 before:bg-[#D8DBE6] before:rounded-full before:absolute before:-left-[29px] before:top-2">大手医療法人にて研修医指導医・診療主任を歴任</li>
-                      <li className="relative before:content-[''] before:w-2 before:h-2 before:bg-[#D8DBE6] before:rounded-full before:absolute before:-left-[29px] before:top-2">都内歯科医院 副院長</li>
+                      <li className="relative before:content-[''] before:w-2 before:h-2 before:bg-[#D8DBE6] before:rounded-full before:absolute before:-left-[29px] before:top-2">医療法人同仁会ワタナベ歯科医院にて研修医指導医・診療主任を歴任</li>
+                      <li className="relative before:content-[''] before:w-2 before:h-2 before:bg-[#D8DBE6] before:rounded-full before:absolute before:-left-[29px] before:top-2">駒沢公園通り西垣歯科・矯正歯科 副院長</li>
+                      <li className="relative before:content-[''] before:w-2 before:h-2 before:bg-[#D8DBE6] before:rounded-full before:absolute before:-left-[29px] before:top-2">小児歯科部門の立ち上げ</li>
                       <li className="relative before:content-[''] before:w-2 before:h-2 before:bg-[#D8DBE6] before:rounded-full before:absolute before:-left-[29px] before:top-2">Fデンタルオフィス 豊洲プライムスクエア院 開業</li>
                     </ul>
                   </div>
@@ -343,12 +423,12 @@ export default function Home() {
             {/* Opening Message */}
             <div className="mt-16 glass-bright p-8 md:p-16 rounded-[2.5rem] shadow-glass relative border border-[#D8DBE6]">
               <h4 className="text-2xl font-medium mb-8 text-center relative z-10 border-b border-[#D8DBE6] pb-4 max-w-sm mx-auto tracking-wider">当院が大切にしていること</h4>
-              <div className="space-y-4 text-sm leading-[1.9] relative z-10 text-[#5A4D41]">
+              <div className="space-y-4 text-sm leading-[1.9] relative z-10 text-[#5A4D41]" style={{ wordBreak: 'keep-all', overflowWrap: 'break-word', lineBreak: 'strict' }}>
                 <p>
                   私の父は、30年近く小児矯正に携わってきた歯科医師です。幼い頃からその背中を見て育ち、歯並びや噛み合わせが日々の習慣で大きく変わることを学んできました。当院のコンセプトは「未来のいいお顔を育てる」。これはお子様だけに向けた言葉ではありません。矯正後の後戻り、顔の歪み — その多くは呼吸・姿勢・噛み癖といった習慣に原因があります。お子様の口腔育成から大人の矯正・審美治療まで、習慣へのアプローチを軸に、年齢を問わずお口と表情の健康を整えていく歯科医院です。
                 </p>
                 <p>
-                  大阪大学歯学部を卒業後、大規模医療法人にて一般歯科・インプラント・矯正・審美治療など幅広い症例を経験し、研修医指導医も務めました。その中で強く感じたのは、良い治療が患者様に正しく届いていないという現実です。私自身は大学まで野球に打ち込み、噛み合わせや口呼吸がパフォーマンスに直結することも実感してきました。歯並びと全身の健康の関係を、スポーツを頑張るお子様や保護者の方にも届けたいと考えています。
+                  大阪大学歯学部を卒業後、医療法人同仁会ワタナベ歯科医院にて一般歯科・インプラント・矯正・審美治療など幅広い症例を経験し、研修医指導医も務めました。その中で強く感じたのは、良い治療が患者様に正しく届いていないという現実です。私自身は大学まで野球に打ち込み、噛み合わせや口呼吸がパフォーマンスに直結することも実感してきました。歯並びと全身の健康の関係を、スポーツを頑張るお子様や保護者の方にも届けたいと考えています。
                 </p>
                 <p>
                   父から受け継いだ口腔育成への想い、臨床で培った技術、そして患者様に「伝わる」情報発信力。この3つを軸に、「もっと早く知りたかった」「あの時聞けてよかった」— そう感じていただける歯科医院を目指しています。
@@ -377,30 +457,56 @@ export default function Home() {
 
           <div className="container mx-auto px-4 relative z-10">
             {/* Title */}
-            <div className="text-center mb-10">
-              <h2 className="text-3xl md:text-4xl font-bold text-[#5A4D41] font-serif">
-                こんなお悩み<br className="md:hidden" />ありませんか？
+            <div className="text-center mb-12">
+              <p className="text-[#8B92AB] font-sans text-xs tracking-[0.3em] uppercase mb-3">Concerns</p>
+              <h2 className="text-2xl md:text-3xl font-serif tracking-wider text-[#5A4D41]">
+                お口のこんな<span className="marker-yellow font-bold">&ldquo;お悩み&rdquo;</span><br className="md:hidden" />ありませんか？
               </h2>
-              <div className="w-12 h-0.5 bg-[#D8DBE6] mx-auto mt-4"></div>
             </div>
 
-            {/* Problem Cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl mx-auto mb-12">
-              {[
-                "子供の歯並びが気になる...",
-                "銀歯を白くしたい...",
-                "痛くない治療を受けたい...",
-                "インプラントに興味がある..."
-              ].map((problem, i) => (
-                <div key={i} className="bg-white/80 backdrop-blur-sm rounded-2xl p-5 shadow-sm border border-[#D8DBE6]/50 hover:shadow-md transition-shadow duration-300">
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 rounded-full bg-[#8B92AB] flex-shrink-0"></div>
-                    <p className="text-[#5A4D41] text-sm md:text-base font-medium">
-                      {problem}
-                    </p>
-                  </div>
+            {/* Illustration + Problem List */}
+            <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-12 items-center mb-12">
+              {/* Illustration */}
+              <div className="md:col-span-2 flex justify-center">
+                <div className="relative w-48 sm:w-56 md:w-full aspect-square max-w-[280px]">
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#D8DBE6]/40 to-[#EDEEF3] rounded-full"></div>
+                  <img
+                    src="/images/problem-bg-v2.jpg"
+                    alt="豊洲 歯医者 お悩み相談"
+                    className="relative w-full h-full object-cover rounded-full shadow-lg border-4 border-white"
+                  />
                 </div>
-              ))}
+              </div>
+
+              {/* Problem List */}
+              <div className="md:col-span-3">
+                <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-6 md:p-8 shadow-md border border-[#D8DBE6]/40">
+                  <ul className="space-y-4">
+                    {[
+                      "子供の歯並びが気になる...",
+                      "銀歯を白くしたい...",
+                      "痛くない治療を受けたい...",
+                      "インプラントに興味がある..."
+                    ].map((problem, i) => (
+                      <li key={i} className="flex items-start gap-3 pb-3 border-b border-[#D8DBE6]/40 last:border-0 last:pb-0">
+                        <span className="flex-shrink-0 w-6 h-6 rounded-full bg-[#8B92AB] text-white flex items-center justify-center text-xs font-bold mt-0.5">✓</span>
+                        <p className="text-[#5A4D41] text-sm md:text-base font-medium leading-relaxed">
+                          {problem}
+                        </p>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* その お悩みに！ band */}
+            <div className="max-w-3xl mx-auto mb-10 relative">
+              <div className="bg-gradient-to-r from-[#EDEEF3] via-[#D8DBE6] to-[#EDEEF3] rounded-2xl py-4 px-6 text-center shadow-sm">
+                <p className="text-[#5A4D41] text-base md:text-xl font-bold tracking-wider">
+                  その <span className="text-[#8B92AB] text-2xl md:text-3xl mx-2">4</span> 大お悩みに！
+                </p>
+              </div>
             </div>
 
             {/* Arrow */}
@@ -715,13 +821,15 @@ export default function Home() {
                 { num: "03", title: "レントゲン撮影", desc: "お口の状態を正確に把握するため、レントゲン撮影を行います。必要に応じて歯科用CTでの撮影も実施します。", imageId: "カウンセリングで医師と患者が話している場面" },
                 { num: "04", title: "歯周病検査、口腔内写真の撮影", desc: "歯周ポケットの深さを測定し、口腔内写真を撮影します。現在の状態を視覚的に確認いただけます。", imageId: "治療中の場面" },
                 { num: "05", title: "治療計画の説明", desc: "検査結果に基づき、最適な治療プランをご提案します。費用や期間についても詳しくご説明します。", imageId: "次回予約をしている場面" },
-                { num: "06", title: "治療開始", desc: "同意いただいたプランに沿って治療を進めます。痛みに配慮し、丁寧な処置を心がけます。", imageId: "step6" }
+                { num: "06", title: "治療開始", desc: "同意いただいたプランに沿って治療を進めます。痛みに配慮し、丁寧な処置を心がけます。", imageId: "治療中の場面" }
               ].map((step, index, arr) => (
                 <div key={index} className="relative">
-                  <div className={`absolute -left-10 md:-left-20 top-0 w-10 md:w-12 h-10 md:h-12 rounded-full flex items-center justify-center font-sans font-medium z-10 shadow-sm text-sm md:text-base ${index === arr.length - 1 ? 'bg-[#8B92AB] text-white border border-[#8B92AB]' : 'bg-white border border-[#D8DBE6] text-[#8B92AB]'}`}>
-                    {step.num}
+                  <div className="flex items-center gap-4 mb-4 md:mb-6">
+                    <div className={`absolute -left-10 md:-left-20 w-10 md:w-12 h-10 md:h-12 rounded-full flex items-center justify-center font-sans font-medium z-10 shadow-sm text-sm md:text-base ${index === arr.length - 1 ? 'bg-[#8B92AB] text-white border border-[#8B92AB]' : 'bg-white border border-[#D8DBE6] text-[#8B92AB]'}`}>
+                      {step.num}
+                    </div>
+                    <h4 className="text-xl md:text-2xl font-medium">{step.title}</h4>
                   </div>
-                  <h4 className="text-xl md:text-2xl font-medium mb-4 md:mb-6">{step.title}</h4>
                   <div className="bg-white p-2 md:p-3 rounded-2xl inline-block mb-4 md:mb-6 shadow-sm border border-[#D8DBE6]">
                     <PageImage
                       path="/homepage"

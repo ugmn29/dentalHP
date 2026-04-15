@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { MapPin, Phone, Calendar, ChevronDown, ChevronUp } from 'lucide-react';
 import { WaveTop } from './Wave';
 import { GiTooth } from 'react-icons/gi';
-import { FaBaby, FaChild, FaShieldAlt, FaStar, FaSmile, FaSun } from 'react-icons/fa';
+import { FaBaby, FaChild, FaShieldAlt, FaStar, FaSmile, FaSun, FaInstagram, FaYoutube, FaTiktok } from 'react-icons/fa';
 import { MdBuild, MdLocalHospital } from 'react-icons/md';
 import { BiWind } from 'react-icons/bi';
 
@@ -124,11 +124,32 @@ export const Footer = () => {
                         <div className="max-w-md mx-auto">
                             {/* SNS Buttons */}
                             <div className="flex gap-4 justify-center mb-8">
-                                <a href="#" className="w-12 h-12 bg-[#D0E8E8] hover:bg-[#8B92AB] hover:text-white text-[#5A4D41] rounded-full flex items-center justify-center transition shadow-md">
-                                    <span className="font-bold text-sm">IG</span>
+                                <a
+                                    href="https://www.instagram.com/f.dentaloffice.toyosu"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="Instagram"
+                                    className="w-12 h-12 bg-[#D0E8E8] hover:bg-[#8B92AB] hover:text-white text-[#5A4D41] rounded-full flex items-center justify-center transition shadow-md"
+                                >
+                                    <FaInstagram size={20} />
                                 </a>
-                                <a href="#" className="w-12 h-12 bg-[#D0E8E8] hover:bg-[#8B92AB] hover:text-white text-[#5A4D41] rounded-full flex items-center justify-center transition shadow-md">
-                                    <span className="font-bold text-sm">LN</span>
+                                <a
+                                    href="https://www.youtube.com/@tadanodentist"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="YouTube"
+                                    className="w-12 h-12 bg-[#D0E8E8] hover:bg-[#8B92AB] hover:text-white text-[#5A4D41] rounded-full flex items-center justify-center transition shadow-md"
+                                >
+                                    <FaYoutube size={20} />
+                                </a>
+                                <a
+                                    href="https://www.tiktok.com/@subtadanodentist"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="TikTok"
+                                    className="w-12 h-12 bg-[#D0E8E8] hover:bg-[#8B92AB] hover:text-white text-[#5A4D41] rounded-full flex items-center justify-center transition shadow-md"
+                                >
+                                    <FaTiktok size={18} />
                                 </a>
                             </div>
 
