@@ -151,7 +151,7 @@ export default function KidsOrthoPage() {
     ];
 
     return (
-        <div className="min-h-screen bg-white text-[#5A4D41] overflow-x-hidden" style={{ fontFamily: '"游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", sans-serif' }}>
+        <div className="min-h-screen bg-white text-[#5A4D41] overflow-x-hidden" style={{ fontFamily: '"游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", sans-serif', wordBreak: 'normal', overflowWrap: 'anywhere' }}>
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
@@ -874,7 +874,7 @@ export default function KidsOrthoPage() {
                                             <path d="M7 12L10 15L17 8" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
                                         </svg>
                                     </div>
-                                    <p className="text-base md:text-lg text-[#5A4D41] flex-1 leading-7">
+                                    <p className="text-base md:text-lg text-[#5A4D41] flex-1 leading-7 min-w-0" style={{ wordBreak: 'normal', overflowWrap: 'anywhere' }}>
                                         <span className="font-bold" style={{ textDecoration: 'underline', textDecorationColor: '#FFE44D', textDecorationThickness: '4px', textUnderlineOffset: '3px' }}>こども矯正の実績と専門知識のある医師が診る</span>こと
                                     </p>
                                 </div>
@@ -887,7 +887,7 @@ export default function KidsOrthoPage() {
                                             <path d="M7 12L10 15L17 8" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
                                         </svg>
                                     </div>
-                                    <p className="text-base md:text-lg text-[#5A4D41] flex-1 leading-7">
+                                    <p className="text-base md:text-lg text-[#5A4D41] flex-1 leading-7 min-w-0" style={{ wordBreak: 'normal', overflowWrap: 'anywhere' }}>
                                         <span className="font-bold" style={{ textDecoration: 'underline', textDecorationColor: '#FFE44D', textDecorationThickness: '4px', textUnderlineOffset: '3px' }}>お子様の成長段階に応じた治療時期の提案</span>があること
                                     </p>
                                 </div>
@@ -900,7 +900,7 @@ export default function KidsOrthoPage() {
                                             <path d="M7 12L10 15L17 8" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
                                         </svg>
                                     </div>
-                                    <p className="text-base md:text-lg text-[#5A4D41] flex-1 leading-7">
+                                    <p className="text-base md:text-lg text-[#5A4D41] flex-1 leading-7 min-w-0" style={{ wordBreak: 'normal', overflowWrap: 'anywhere' }}>
                                         <span className="font-bold" style={{ textDecoration: 'underline', textDecorationColor: '#FFE44D', textDecorationThickness: '4px', textUnderlineOffset: '3px' }}>歯を並べるだけではなく、歯並びが悪くなった原因にもアプローチする</span>こと
                                     </p>
                                 </div>
@@ -913,7 +913,7 @@ export default function KidsOrthoPage() {
                                             <path d="M7 12L10 15L17 8" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
                                         </svg>
                                     </div>
-                                    <p className="text-base md:text-lg text-[#5A4D41] flex-1 leading-7">
+                                    <p className="text-base md:text-lg text-[#5A4D41] flex-1 leading-7 min-w-0" style={{ wordBreak: 'normal', overflowWrap: 'anywhere' }}>
                                         <span className="font-bold" style={{ textDecoration: 'underline', textDecorationColor: '#FFE44D', textDecorationThickness: '4px', textUnderlineOffset: '3px' }}>治療費用や支払い方法について丁寧に説明</span>してくれること
                                     </p>
                                 </div>
