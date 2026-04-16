@@ -17,6 +17,8 @@ const breadcrumbJsonLd = {
 };
 
 export default function KidsOrthoPage() {
+    const [isMessageExpanded, setIsMessageExpanded] = useState(false);
+
     const features = [
         {
             id: "01",
@@ -754,7 +756,12 @@ export default function KidsOrthoPage() {
                                     beforeId: "case-hanntaikougou-before",
                                     afterId: "case-hanntaikougou-after",
                                     description: "早期の小児矯正により、反対咬合を改善しました。",
-                                    patient: "小児"
+                                    patient: "小児",
+                                    treatment: "小児矯正（第1期治療）",
+                                    cost: "330,000円〜550,000円（税込）",
+                                    duration: "約1〜2年（治療期間）／月1回の通院",
+                                    risks: "装置による痛み・違和感、発音のしづらさ、むし歯・歯肉炎リスク、まれに後戻りの可能性",
+                                    insurance: "自由診療（保険適用外）"
                                 },
                                 {
                                     id: 2,
@@ -762,7 +769,12 @@ export default function KidsOrthoPage() {
                                     beforeId: "case-deppa-before",
                                     afterId: "case-deppa-after",
                                     description: "小児矯正により、出っ歯（上顎前突）を改善しました。",
-                                    patient: "小児"
+                                    patient: "小児",
+                                    treatment: "小児矯正（第1期治療）",
+                                    cost: "330,000円〜550,000円（税込）",
+                                    duration: "約1〜2年（治療期間）／月1回の通院",
+                                    risks: "装置による痛み・違和感、発音のしづらさ、むし歯・歯肉炎リスク、まれに後戻りの可能性",
+                                    insurance: "自由診療（保険適用外）"
                                 },
                                 {
                                     id: 3,
@@ -770,7 +782,12 @@ export default function KidsOrthoPage() {
                                     beforeId: "case-kamiaase-before",
                                     afterId: "case-kamiaase-after",
                                     description: "矯正治療で歯並びと深い噛み合わせをバランスよく整えました。",
-                                    patient: "小児"
+                                    patient: "小児",
+                                    treatment: "小児矯正（第1期・第2期治療）",
+                                    cost: "550,000円〜880,000円（税込）",
+                                    duration: "約2〜3年（治療期間）／月1回の通院",
+                                    risks: "装置による痛み・違和感、発音のしづらさ、むし歯・歯肉炎リスク、歯根吸収、まれに後戻りの可能性",
+                                    insurance: "自由診療（保険適用外）"
                                 }
                             ].map((caseStudy) => (
                                 <div key={caseStudy.id} className="bg-[#FFF9F0] rounded-3xl p-6 md:p-10 shadow-xl border border-[#FFE5CC]">
@@ -827,12 +844,41 @@ export default function KidsOrthoPage() {
                                         </div>
                                     </div>
 
-                                    <p className="text-sm text-[#5A4D41] text-center mt-6 leading-relaxed">
+                                    <p className="text-sm text-[#5A4D41] text-center mt-6 mb-6 leading-relaxed">
                                         {caseStudy.description}
                                     </p>
+
+                                    {/* 医療広告ガイドライン情報 */}
+                                    <div className="bg-white rounded-2xl p-5 md:p-6 border border-[#FFE5CC]">
+                                        <dl className="space-y-3 text-xs md:text-sm text-[#5A4D41]">
+                                            <div className="flex flex-col md:flex-row md:gap-4">
+                                                <dt className="font-bold text-[#8B6F47] md:w-28 flex-shrink-0">治療内容</dt>
+                                                <dd>{caseStudy.treatment}</dd>
+                                            </div>
+                                            <div className="flex flex-col md:flex-row md:gap-4">
+                                                <dt className="font-bold text-[#8B6F47] md:w-28 flex-shrink-0">費用</dt>
+                                                <dd>{caseStudy.cost}</dd>
+                                            </div>
+                                            <div className="flex flex-col md:flex-row md:gap-4">
+                                                <dt className="font-bold text-[#8B6F47] md:w-28 flex-shrink-0">治療期間・回数</dt>
+                                                <dd>{caseStudy.duration}</dd>
+                                            </div>
+                                            <div className="flex flex-col md:flex-row md:gap-4">
+                                                <dt className="font-bold text-[#8B6F47] md:w-28 flex-shrink-0">保険適用</dt>
+                                                <dd>{caseStudy.insurance}</dd>
+                                            </div>
+                                            <div className="flex flex-col md:flex-row md:gap-4">
+                                                <dt className="font-bold text-[#8B6F47] md:w-28 flex-shrink-0">主なリスク・副作用</dt>
+                                                <dd className="leading-relaxed">{caseStudy.risks}</dd>
+                                            </div>
+                                        </dl>
+                                    </div>
                                 </div>
                             ))}
                         </div>
+                        <p className="text-xs text-[#8D8070] text-center mt-6 max-w-3xl mx-auto leading-relaxed">
+                            ※ 掲載している症例は一例です。治療効果・期間・費用は患者様の症状により異なります。詳細はカウンセリングでご説明いたします。
+                        </p>
                     </div>
                 </section>
 
@@ -902,7 +948,7 @@ export default function KidsOrthoPage() {
                             {/* Dotted separator */}
                             <div className="border-t-2 border-dotted border-[#C5A572] mb-8"></div>
 
-                            {/* Opening Message */}
+                            {/* Opening Message - Accordion */}
                             <div>
                                 <h4 className="font-bold text-[#8B6F47] text-lg mb-4 flex items-center gap-2">
                                     <span className="w-1.5 h-5 bg-[#C5A572] rounded-full"></span>
@@ -910,14 +956,33 @@ export default function KidsOrthoPage() {
                                 </h4>
                                 <div className="space-y-4 text-sm md:text-base leading-[1.9] text-[#5A4D41]">
                                     <p>
-                                        私の父は、30年近く小児矯正に携わってきた歯科医師です。幼い頃からその背中を見て育ち、歯並びや噛み合わせが日々の習慣で大きく変わることを学んできました。当院のコンセプトは「未来のいいお顔を育てる」。これはお子様だけに向けた言葉ではありません。矯正後の後戻り、顔の歪み — その多くは呼吸・姿勢・噛み癖といった習慣に原因があります。ただ、多くの医院ではこれを伝えていない、あるいは軽視しているケースが多いのが現状です。そのため、先にお伝えしたような後戻りが起きたり、大人になってから「やはり駄目だった」という事態が起きてしまいます。お子様の口腔育成から大人の矯正・審美治療まで、習慣へのアプローチを軸に、年齢を問わずお口と表情の健康を整えていく歯科医院です。
+                                        私の父は、30年近く小児矯正に携わってきた歯科医師です。幼い頃からその背中を見て育ち、歯並びや噛み合わせが日々の習慣で大きく変わることを学んできました。当院のコンセプトは「未来のいいお顔を育てる」。
                                     </p>
-                                    <p>
-                                        大阪大学歯学部を卒業後、医療法人同仁会ワタナベ歯科医院にて一般歯科・インプラント・矯正・審美治療など幅広い症例を経験し、研修医指導医も務めました。その中で強く感じたのは、良い治療が患者様に正しく届いていないという現実です。私自身は大学まで野球に打ち込み、噛み合わせや口呼吸がパフォーマンスに直結することも実感してきました。歯並びと全身の健康の関係を、スポーツを頑張るお子様や保護者の方にも届けたいと考えています。
-                                    </p>
-                                    <p>
-                                        父から受け継いだ口腔育成への想い、臨床で培った技術、そして患者様に「伝わる」情報発信力。この3つを軸に、「もっと早く知りたかった」「あの時聞けてよかった」— そう感じていただける歯科医院を目指しています。
-                                    </p>
+                                    {isMessageExpanded && (
+                                        <>
+                                            <p>
+                                                これはお子様だけに向けた言葉ではありません。矯正後の後戻り、顔の歪み — その多くは呼吸・姿勢・噛み癖といった習慣に原因があります。ただ、多くの医院ではこれを伝えていない、あるいは軽視しているケースが多いのが現状です。そのため、先にお伝えしたような後戻りが起きたり、大人になってから「やはり駄目だった」という事態が起きてしまいます。お子様の口腔育成から大人の矯正・審美治療まで、習慣へのアプローチを軸に、年齢を問わずお口と表情の健康を整えていく歯科医院です。
+                                            </p>
+                                            <p>
+                                                大阪大学歯学部を卒業後、医療法人同仁会ワタナベ歯科医院にて一般歯科・インプラント・矯正・審美治療など幅広い症例を経験し、研修医指導医も務めました。その中で強く感じたのは、良い治療が患者様に正しく届いていないという現実です。私自身は大学まで野球に打ち込み、噛み合わせや口呼吸がパフォーマンスに直結することも実感してきました。歯並びと全身の健康の関係を、スポーツを頑張るお子様や保護者の方にも届けたいと考えています。
+                                            </p>
+                                            <p>
+                                                父から受け継いだ口腔育成への想い、臨床で培った技術、そして患者様に「伝わる」情報発信力。この3つを軸に、「もっと早く知りたかった」「あの時聞けてよかった」— そう感じていただける歯科医院を目指しています。
+                                            </p>
+                                        </>
+                                    )}
+                                </div>
+                                <div className="text-center mt-6">
+                                    <button
+                                        onClick={() => setIsMessageExpanded(!isMessageExpanded)}
+                                        className="inline-flex items-center gap-2 bg-[#8B6F47] hover:bg-[#6D5E52] text-white px-8 py-3 rounded-full font-bold text-sm md:text-base shadow-lg transition-all"
+                                    >
+                                        {isMessageExpanded ? (
+                                            <>閉じる <ChevronUp size={18} /></>
+                                        ) : (
+                                            <>続きを読む <ChevronDown size={18} /></>
+                                        )}
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -1220,6 +1285,36 @@ export default function KidsOrthoPage() {
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* --- FAQ Section --- */}
+                <section className="py-8 md:py-12 bg-white">
+                    <div className="container mx-auto px-4 max-w-3xl">
+                        <div className="text-center mb-12">
+                            <h2 className="text-2xl md:text-3xl font-bold text-[#5A4D41]">
+                                よくあるご質問
+                            </h2>
+                            <p className="text-sm text-[#8D8070] mt-3">豊洲の歯医者 Fデンタルオフィス 豊洲プライムスクエア院に寄せられるこども矯正のよくあるご質問</p>
+                        </div>
+                        <div className="space-y-6">
+                            {faqs.map((faq, index) => (
+                                <div key={index} className="bg-white rounded-2xl border border-gray-100 p-6">
+                                    <div className="mb-4">
+                                        <div className="flex items-start gap-4">
+                                            <span className="text-[#C5A572] text-xl font-bold">Q.</span>
+                                            <p className="font-bold text-[#5A4D41] leading-relaxed pt-1">{faq.q}</p>
+                                        </div>
+                                    </div>
+                                    <div className="border-t border-dashed border-gray-100 pt-4 bg-gray-50/50 -mx-6 -mb-6 px-6 pb-6 rounded-b-2xl">
+                                        <div className="flex items-start gap-4">
+                                            <span className="text-[#C5A572] text-xl font-bold">A.</span>
+                                            <p className="text-[#8D8070] leading-relaxed text-sm pt-1">{faq.a}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </section>
@@ -1623,36 +1718,6 @@ export default function KidsOrthoPage() {
                                     <ArrowRight size={16} />
                                 </div>
                             </a>
-                        </div>
-                    </div>
-                </section>
-
-                {/* --- FAQ Section --- */}
-                <section className="py-2 md:py-2 bg-white">
-                    <div className="container mx-auto px-4 max-w-3xl">
-                        <div className="text-center mb-12">
-                            <h2 className="text-2xl md:text-3xl font-bold text-[#5A4D41]">
-                                よくあるご質問
-                            </h2>
-                            <p className="text-sm text-[#8D8070] mt-3">豊洲の歯医者 Fデンタルオフィス 豊洲プライムスクエア院に寄せられるこども矯正のよくあるご質問</p>
-                        </div>
-                        <div className="space-y-6">
-                            {faqs.map((faq, index) => (
-                                <div key={index} className="bg-white rounded-2xl border border-gray-100 p-6">
-                                    <div className="mb-4">
-                                        <div className="flex items-start gap-4">
-                                            <span className="text-[#C5A572] text-xl font-bold">Q.</span>
-                                            <p className="font-bold text-[#5A4D41] leading-relaxed pt-1">{faq.q}</p>
-                                        </div>
-                                    </div>
-                                    <div className="border-t border-dashed border-gray-100 pt-4 bg-gray-50/50 -mx-6 -mb-6 px-6 pb-6 rounded-b-2xl">
-                                        <div className="flex items-start gap-4">
-                                            <span className="text-[#C5A572] text-xl font-bold">A.</span>
-                                            <p className="text-[#8D8070] leading-relaxed text-sm pt-1">{faq.a}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
                         </div>
                     </div>
                 </section>
