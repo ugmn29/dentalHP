@@ -93,6 +93,40 @@ export function PageImage({ path, imageId = 'hero', alt, className = '' }: PageI
 
   // 画像が存在する場合
   if (!hasError && !uploaded) {
+    // Dev modeでは既存画像の上に置き換えオーバーレイを追加
+    if (isDev) {
+      return (
+        <div
+          onDragOver={(e) => { e.preventDefault(); setIsDragging(true); }}
+          onDragLeave={() => setIsDragging(false)}
+          onDrop={handleDrop}
+          className={`relative group ${isDragging ? 'ring-4 ring-[#8B92AB]' : ''}`}
+        >
+          <img
+            src={src}
+            alt={alt}
+            className={className || 'w-full h-auto rounded-lg'}
+            onError={() => setHasError(true)}
+          />
+          <label className="absolute inset-0 cursor-pointer opacity-0 hover:opacity-100 bg-black/50 transition-opacity flex flex-col items-center justify-center text-white rounded-lg">
+            <input
+              type="file"
+              accept="image/*"
+              onChange={handleFileSelect}
+              className="hidden"
+            />
+            <div className="text-3xl mb-1">🔄</div>
+            <p className="text-sm font-medium">画像を入れ替え</p>
+            <p className="text-xs opacity-80 mt-1">ドロップまたはクリック</p>
+          </label>
+          {isDragging && (
+            <div className="absolute inset-0 bg-[#8B92AB]/30 rounded-lg flex items-center justify-center pointer-events-none">
+              <span className="text-white font-bold">ドロップして入れ替え</span>
+            </div>
+          )}
+        </div>
+      );
+    }
     return (
       <img
         src={src}

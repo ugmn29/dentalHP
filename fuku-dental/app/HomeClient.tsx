@@ -171,6 +171,20 @@ export default function Home() {
     },
     {
       id: "04",
+      title: "見た目と機能まで見る",
+      highlight: "審美歯科",
+      summary: "美しさと噛み合わせを両立した治療",
+      details: [
+        "審美歯科で大事なのは、<span class='font-bold marker-yellow'>見た目と機能の両立</span>です。ただ白くするだけでなく、<span class='text-[#8B92AB] font-bold'>噛み合わせや顔貌とのバランス</span>まで考慮した精密な審美治療を提供します。"
+      ],
+      imageId: "feature4",
+      imageAlt: "豊洲 審美歯科 セラミック治療 ホワイトニング",
+      icon: Sparkles,
+      color: "from-purple-100 to-pink-100",
+      iconColor: "text-purple-500"
+    },
+    {
+      id: "05",
       title: "天井テレビ付き",
       highlight: "個室の診療室",
       summary: "リラックスして治療を受けられる空間",
@@ -184,18 +198,18 @@ export default function Home() {
       iconColor: "text-orange-500"
     },
     {
-      id: "05",
-      title: "「後悔しない」ための",
-      highlight: "審美歯科",
-      summary: "美しさと機能性を両立した治療",
+      id: "06",
+      title: "見た目も変える",
+      highlight: "生活習慣指導",
+      summary: "歯並びの根本原因にアプローチ",
       details: [
-        "審美歯科で大事なのは、<span class='font-bold marker-yellow'>見た目と機能の両立</span>です。それを実現するために、当院では<span class='text-[#8B92AB] font-bold'>精密診療を行える環境</span>を整備しています。"
+        "歯並びや噛み合わせの乱れは、<span class='font-bold marker-yellow'>呼吸・姿勢・食べ方</span>などの生活習慣が原因であることが少なくありません。当院では治療だけでなく、<span class='text-[#8B92AB] font-bold'>習慣を見直すことで見た目も変える生活習慣指導</span>を行い、根本からの改善を目指します。"
       ],
-      imageId: "feature4",
-      imageAlt: "豊洲 審美歯科 セラミック治療 ホワイトニング",
-      icon: Sparkles,
-      color: "from-purple-100 to-pink-100",
-      iconColor: "text-purple-500"
+      imageId: "feature6",
+      imageAlt: "豊洲 歯科 生活習慣指導 口腔育成",
+      icon: HeartPulse,
+      color: "from-emerald-100 to-teal-100",
+      iconColor: "text-emerald-500"
     },
   ];
 
@@ -571,7 +585,7 @@ export default function Home() {
           <div className="container mx-auto px-4 relative z-10">
             <div className="text-center mb-12 space-y-4">
               <span className="font-sans text-xs tracking-[0.3em] text-[#8B92AB] uppercase">Features</span>
-              <h2 className="text-4xl font-light tracking-widest">当院の5つの特徴</h2>
+              <h2 className="text-4xl font-light tracking-widest">当院の6つの特徴</h2>
             </div>
 
             <div className="space-y-16 max-w-6xl mx-auto">
@@ -681,9 +695,9 @@ export default function Home() {
                   </div>
 
                   {/* Before/After Images */}
-                  <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-6">
+                  <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-4">
                     {/* Before */}
-                    <div className="w-full md:w-[47%]">
+                    <div className="w-full md:w-[44%]">
                       <div className="mb-2">
                         <span className="inline-block bg-gray-600 text-white px-3 py-1 rounded-md font-bold text-xs">
                           Before
@@ -697,8 +711,20 @@ export default function Home() {
                       />
                     </div>
 
+                    {/* Arrow */}
+                    <div className="flex-shrink-0 flex items-center justify-center">
+                      <svg width="32" height="32" viewBox="0 0 32 32" className="text-[#8B92AB] hidden md:block">
+                        <line x1="4" y1="16" x2="24" y2="16" stroke="currentColor" strokeWidth="2" />
+                        <polygon points="22,10 30,16 22,22" fill="currentColor" />
+                      </svg>
+                      <svg width="32" height="32" viewBox="0 0 32 32" className="text-[#8B92AB] md:hidden">
+                        <line x1="16" y1="4" x2="16" y2="24" stroke="currentColor" strokeWidth="2" />
+                        <polygon points="10,22 22,22 16,30" fill="currentColor" />
+                      </svg>
+                    </div>
+
                     {/* After */}
-                    <div className="w-full md:w-[47%]">
+                    <div className="w-full md:w-[44%]">
                       <div className="mb-2">
                         <span className="inline-block bg-[#8B92AB] text-white px-3 py-1 rounded-md font-bold text-xs">
                           After
