@@ -1,5 +1,5 @@
 'use client';
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 
 const IMAGE_SERVER = 'http://localhost:3002';
 const isDev = process.env.NODE_ENV === 'development';
@@ -18,6 +18,20 @@ export function PageImage({ path, imageId = 'hero', alt, className = '' }: PageI
   const [uploading, setUploading] = useState(false);
   const [uploaded, setUploaded] = useState(false);
   const src = `/images/pages${path}/${imageId}.jpg`;
+
+  // Dev mode: proactively check if image exists so dropzone appears reliably
+  useEffect(() => {
+    if (!isDev) return;
+    let cancelled = false;
+    fetch(src, { method: 'HEAD' })
+      .then((res) => {
+        if (!cancelled && !res.ok) setHasError(true);
+      })
+      .catch(() => {
+        if (!cancelled) setHasError(true);
+      });
+    return () => { cancelled = true; };
+  }, [src]);
 
   const handleUpload = useCallback(async (file: File) => {
     setUploading(true);

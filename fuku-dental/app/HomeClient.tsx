@@ -49,27 +49,27 @@ export default function Home() {
   const caseStudies = [
     {
       id: 1,
-      title: "前歯の隙間改善",
+      title: "反対咬合の改善",
       beforeId: "case1-before",
       afterId: "case1-after",
-      description: "マウスピース矯正で、目立たずに短期間で隙間を改善しました。",
-      patient: "20代 女性"
+      description: "早期の小児矯正により、反対咬合を改善しました。",
+      patient: "小児"
     },
     {
       id: 2,
-      title: "銀歯をセラミックに",
+      title: "歯並びと噛み合わせの深さの改善",
       beforeId: "case2-before",
       afterId: "case2-after",
-      description: "古い銀歯をセラミックに置き換え、自然な見た目を取り戻しました。",
-      patient: "30代 男性"
+      description: "矯正治療で歯並びと深い噛み合わせをバランスよく整えました。",
+      patient: "小児"
     },
     {
       id: 3,
-      title: "ホワイトニング",
+      title: "前歯のセラミック",
       beforeId: "case3-before",
       afterId: "case3-after",
-      description: "オフィスホワイトニングで、1回の施術で透明感のある白さに。",
-      patient: "20代 女性"
+      description: "前歯をセラミックで修復し、自然で美しい見た目を取り戻しました。",
+      patient: "30代 女性"
     },
     {
       id: 4,
@@ -292,8 +292,13 @@ export default function Home() {
                   <span className="w-8 h-8 rounded-full bg-[#8B92AB] text-white flex items-center justify-center text-sm font-bold">1</span>
                   <h3 className="font-bold text-[#5A4D41] text-sm md:text-base">豊洲駅 6a出口を出る</h3>
                 </div>
-                <div className="aspect-[4/3] rounded-xl overflow-hidden bg-[#EDEEF3] border border-[#D8DBE6]/50 flex items-center justify-center">
-                  <span className="text-[#8B92AB] text-xs">通路写真（準備中）</span>
+                <div className="aspect-[4/3] rounded-xl overflow-hidden bg-[#EDEEF3] border border-[#D8DBE6]/50">
+                  <PageImage
+                    path="/homepage"
+                    imageId="access-step1"
+                    alt="豊洲駅6a出口"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <p className="text-xs text-[#5A4D41]/70 mt-3 leading-relaxed">
                   6a出口を出て直進してください
@@ -320,8 +325,13 @@ export default function Home() {
                   <span className="w-8 h-8 rounded-full bg-[#8B92AB] text-white flex items-center justify-center text-sm font-bold">2</span>
                   <h3 className="font-bold text-[#5A4D41] text-sm md:text-base">通路を進む</h3>
                 </div>
-                <div className="aspect-[4/3] rounded-xl overflow-hidden bg-[#EDEEF3] border border-[#D8DBE6]/50 flex items-center justify-center">
-                  <span className="text-[#8B92AB] text-xs">通路写真（準備中）</span>
+                <div className="aspect-[4/3] rounded-xl overflow-hidden bg-[#EDEEF3] border border-[#D8DBE6]/50">
+                  <PageImage
+                    path="/homepage"
+                    imageId="access-step2"
+                    alt="プライムスクエア通路"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <p className="text-xs text-[#5A4D41]/70 mt-3 leading-relaxed">
                   プライムスクエアの通路を進みます
@@ -404,6 +414,7 @@ export default function Home() {
                       <li className="relative before:content-[''] before:w-2 before:h-2 before:bg-[#D8DBE6] before:rounded-full before:absolute before:-left-[29px] before:top-2">駒沢公園通り西垣歯科・矯正歯科 副院長</li>
                       <li className="relative before:content-[''] before:w-2 before:h-2 before:bg-[#D8DBE6] before:rounded-full before:absolute before:-left-[29px] before:top-2">小児歯科部門の立ち上げ</li>
                       <li className="relative before:content-[''] before:w-2 before:h-2 before:bg-[#D8DBE6] before:rounded-full before:absolute before:-left-[29px] before:top-2">Fデンタルオフィス 豊洲プライムスクエア院 開業</li>
+                      <li className="relative before:content-[''] before:w-2 before:h-2 before:bg-[#D8DBE6] before:rounded-full before:absolute before:-left-[29px] before:top-2">咬合育成研究会監修 生活習慣改善アプリの開発</li>
                     </ul>
                   </div>
 
@@ -456,47 +467,30 @@ export default function Home() {
           <div className="absolute bottom-10 right-0 w-48 h-48 bg-[#D8DBE6]/15 rounded-full blur-3xl translate-x-1/3"></div>
 
           <div className="container mx-auto px-4 relative z-10">
-            {/* Title */}
-            <div className="text-center mb-12">
-              <p className="text-[#8B92AB] font-sans text-xs tracking-[0.3em] uppercase mb-3">Concerns</p>
-              <h2 className="text-2xl md:text-3xl font-serif tracking-wider text-[#5A4D41]">
-                お口のこんな<span className="marker-yellow font-bold">&ldquo;お悩み&rdquo;</span><br className="md:hidden" />ありませんか？
-              </h2>
+            {/* Title - Doctor style */}
+            <div className="text-center mb-12 space-y-4">
+              <span className="font-sans text-xs tracking-[0.3em] text-[#8B92AB] uppercase">Concerns</span>
+              <h2 className="text-4xl font-light tracking-widest">こんなお悩み<br className="md:hidden" />ありませんか？</h2>
             </div>
 
-            {/* Illustration + Problem List */}
-            <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-12 items-center mb-12">
-              {/* Illustration */}
-              <div className="md:col-span-2 flex justify-center">
-                <div className="relative w-48 sm:w-56 md:w-full aspect-square max-w-[280px]">
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#D8DBE6]/40 to-[#EDEEF3] rounded-full"></div>
-                  <img
-                    src="/images/problem-bg-v2.jpg"
-                    alt="豊洲 歯医者 お悩み相談"
-                    className="relative w-full h-full object-cover rounded-full shadow-lg border-4 border-white"
-                  />
-                </div>
-              </div>
-
-              {/* Problem List */}
-              <div className="md:col-span-3">
-                <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-6 md:p-8 shadow-md border border-[#D8DBE6]/40">
-                  <ul className="space-y-4">
-                    {[
-                      "子供の歯並びが気になる...",
-                      "銀歯を白くしたい...",
-                      "痛くない治療を受けたい...",
-                      "インプラントに興味がある..."
-                    ].map((problem, i) => (
-                      <li key={i} className="flex items-start gap-3 pb-3 border-b border-[#D8DBE6]/40 last:border-0 last:pb-0">
-                        <span className="flex-shrink-0 w-6 h-6 rounded-full bg-[#8B92AB] text-white flex items-center justify-center text-xs font-bold mt-0.5">✓</span>
-                        <p className="text-[#5A4D41] text-sm md:text-base font-medium leading-relaxed">
-                          {problem}
-                        </p>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+            {/* Problem List - centered, no image */}
+            <div className="max-w-2xl mx-auto mb-12">
+              <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-6 md:p-8 shadow-md border border-[#D8DBE6]/40">
+                <ul className="space-y-4">
+                  {[
+                    "子供の歯並びが気になる...",
+                    "銀歯を白くしたい...",
+                    "痛くない治療を受けたい...",
+                    "インプラントに興味がある..."
+                  ].map((problem, i) => (
+                    <li key={i} className="flex items-start gap-3 pb-3 border-b border-[#D8DBE6]/40 last:border-0 last:pb-0">
+                      <span className="flex-shrink-0 w-6 h-6 rounded-full bg-[#8B92AB] text-white flex items-center justify-center text-xs font-bold mt-0.5">✓</span>
+                      <p className="text-[#5A4D41] text-sm md:text-base font-medium leading-relaxed">
+                        {problem}
+                      </p>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
 
@@ -509,21 +503,19 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Solution */}
+            {/* Solution - Doctor style typography */}
             <div className="text-center">
-              <p className="text-[#5A4D41] text-xl md:text-2xl font-bold mb-4">
+              <p className="font-sans text-xs tracking-[0.3em] text-[#8B92AB] uppercase mb-4">Solution</p>
+              <p className="text-lg md:text-xl font-light tracking-widest text-[#5A4D41] mb-4">
                 こんなお悩み全て...
               </p>
-              <p className="text-[#8D8070] text-xs md:text-sm font-bold mb-1">
-                <strong>豊洲駅から徒歩2分の歯医者</strong>
+              <p className="text-[#8D8070] text-xs md:text-sm mb-2 tracking-wider">
+                豊洲駅から徒歩2分の歯医者
               </p>
-              <h2 className="font-black text-[#5A4D41] text-center mb-2" style={{ fontFamily: 'Georgia, "Yu Mincho", "Hiragino Mincho ProN", serif' }}>
-                <div className="text-[9vw] sm:text-5xl md:text-7xl">Fデンタルオフィス 豊洲プライムスクエア院</div>
-                <div className="text-[7vw] sm:text-4xl md:text-5xl mt-1">豊洲プライムスクエア院</div>
+              <h2 className="text-[#5A4D41] text-center mb-8 font-light tracking-widest text-2xl sm:text-3xl md:text-4xl">
+                Fデンタルオフィス 豊洲プライムスクエア院
+                <span className="block text-base md:text-lg mt-3 text-[#8B92AB] tracking-[0.3em]">で解決！</span>
               </h2>
-              <p className="text-[#5A4D41] text-2xl md:text-3xl font-bold mb-8">
-                で解決！
-              </p>
 
               {/* CTA Button */}
               <button className="bg-gradient-to-r from-[#8B92AB] to-[#6B7394] hover:from-[#6B7394] hover:to-[#5A6080] text-white px-8 md:px-12 py-4 md:py-5 rounded-full text-lg md:text-xl font-bold shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center gap-3 mx-auto">
@@ -569,14 +561,9 @@ export default function Home() {
         {/* --- Features Section (Refined Zig-Zag) --- */}
         <section className="pt-8 pb-8 bg-[#FAFAFA] relative overflow-hidden">
           <div className="container mx-auto px-4 relative z-10">
-            <div className="text-center mb-8">
-              <div className="inline-block relative">
-                <span className="text-[#8B92AB] font-bold tracking-[0.3em] text-xs md:text-sm block mb-3 uppercase opacity-70" style={{ fontFamily: '"Brush Script MT", "Lucida Handwriting", cursive' }}>FEATURES</span>
-                <h2 className="text-4xl md:text-5xl font-bold text-[#5A4D41] font-serif relative">
-                  当院の<span className="text-[#8B92AB]">5つの特徴</span>
-                  <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-transparent via-[#8B92AB] to-transparent"></div>
-                </h2>
-              </div>
+            <div className="text-center mb-12 space-y-4">
+              <span className="font-sans text-xs tracking-[0.3em] text-[#8B92AB] uppercase">Features</span>
+              <h2 className="text-4xl font-light tracking-widest">当院の5つの特徴</h2>
             </div>
 
             <div className="space-y-16 max-w-6xl mx-auto">
