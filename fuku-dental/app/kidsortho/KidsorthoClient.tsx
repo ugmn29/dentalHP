@@ -17,13 +17,6 @@ const breadcrumbJsonLd = {
 };
 
 export default function KidsOrthoPage() {
-    // Doctor Message State
-    const [isDoctorMessageExpanded, setIsDoctorMessageExpanded] = useState(false);
-
-    const toggleDoctorMessage = () => {
-        setIsDoctorMessageExpanded(!isDoctorMessageExpanded);
-    };
-
     const features = [
         {
             id: "01",
@@ -745,6 +738,104 @@ export default function KidsOrthoPage() {
                     </div>
                 </section>
 
+                {/* --- Case Studies Section --- */}
+                <section className="py-12 md:py-16 bg-white relative overflow-hidden">
+                    <div className="container mx-auto px-4 relative z-10">
+                        <div className="text-center mb-12 space-y-4">
+                            <span className="font-sans text-xs tracking-[0.3em] text-[#C5A572] uppercase">Case Studies</span>
+                            <h2 className="text-4xl font-light tracking-widest text-[#5A4D41]">症例紹介</h2>
+                        </div>
+
+                        <div className="max-w-4xl mx-auto space-y-8">
+                            {[
+                                {
+                                    id: 1,
+                                    title: "反対咬合の改善",
+                                    beforeId: "case-hanntaikougou-before",
+                                    afterId: "case-hanntaikougou-after",
+                                    description: "早期の小児矯正により、反対咬合を改善しました。",
+                                    patient: "小児"
+                                },
+                                {
+                                    id: 2,
+                                    title: "出っ歯からの改善",
+                                    beforeId: "case-deppa-before",
+                                    afterId: "case-deppa-after",
+                                    description: "小児矯正により、出っ歯（上顎前突）を改善しました。",
+                                    patient: "小児"
+                                },
+                                {
+                                    id: 3,
+                                    title: "歯並びと噛み合わせの深さの改善",
+                                    beforeId: "case-kamiaase-before",
+                                    afterId: "case-kamiaase-after",
+                                    description: "矯正治療で歯並びと深い噛み合わせをバランスよく整えました。",
+                                    patient: "小児"
+                                }
+                            ].map((caseStudy) => (
+                                <div key={caseStudy.id} className="bg-[#FFF9F0] rounded-3xl p-6 md:p-10 shadow-xl border border-[#FFE5CC]">
+                                    {/* Title Section */}
+                                    <div className="text-center mb-8 pb-6 border-b border-[#FFE5CC]">
+                                        <p className="text-[#8D8070] text-sm mb-2">{caseStudy.patient}</p>
+                                        <h3 className="text-2xl md:text-3xl font-bold text-[#5A4D41]">
+                                            {caseStudy.title}
+                                        </h3>
+                                    </div>
+
+                                    {/* Before / Arrow / After */}
+                                    <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-4">
+                                        {/* Before */}
+                                        <div className="w-full md:w-[44%]">
+                                            <div className="mb-2">
+                                                <span className="inline-block bg-gray-600 text-white px-3 py-1 rounded-md font-bold text-xs">
+                                                    Before
+                                                </span>
+                                            </div>
+                                            <PageImage
+                                                path="/kidsortho"
+                                                imageId={caseStudy.beforeId}
+                                                alt={`${caseStudy.title} - Before`}
+                                                className="w-full aspect-[16/9] object-cover rounded-2xl shadow-lg"
+                                            />
+                                        </div>
+
+                                        {/* Arrow */}
+                                        <div className="flex-shrink-0 flex items-center justify-center">
+                                            <svg width="32" height="32" viewBox="0 0 32 32" className="text-[#C5A572] hidden md:block">
+                                                <line x1="4" y1="16" x2="24" y2="16" stroke="currentColor" strokeWidth="2" />
+                                                <polygon points="22,10 30,16 22,22" fill="currentColor" />
+                                            </svg>
+                                            <svg width="32" height="32" viewBox="0 0 32 32" className="text-[#C5A572] md:hidden">
+                                                <line x1="16" y1="4" x2="16" y2="24" stroke="currentColor" strokeWidth="2" />
+                                                <polygon points="10,22 22,22 16,30" fill="currentColor" />
+                                            </svg>
+                                        </div>
+
+                                        {/* After */}
+                                        <div className="w-full md:w-[44%]">
+                                            <div className="mb-2">
+                                                <span className="inline-block bg-[#C5A572] text-white px-3 py-1 rounded-md font-bold text-xs">
+                                                    After
+                                                </span>
+                                            </div>
+                                            <PageImage
+                                                path="/kidsortho"
+                                                imageId={caseStudy.afterId}
+                                                alt={`${caseStudy.title} - After`}
+                                                className="w-full aspect-[16/9] object-cover rounded-2xl shadow-lg border-2 border-[#C5A572]/30"
+                                            />
+                                        </div>
+                                    </div>
+
+                                    <p className="text-sm text-[#5A4D41] text-center mt-6 leading-relaxed">
+                                        {caseStudy.description}
+                                    </p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
                 {/* --- Doctor Introduction Section --- */}
                 <section className="py-6 md:py-8 bg-[#FFF9F0]">
                     <div className="container mx-auto px-4 max-w-3xl">
@@ -778,49 +869,56 @@ export default function KidsOrthoPage() {
                                         福永　真大
                                     </h3>
                                 </div>
+                                <p className="text-sm text-[#8D8070]">Masahiro Fukunaga / 院長・歯科医師</p>
+                            </div>
 
-                                <div className="space-y-2 text-[#5A4D41]">
-                                    <p className="text-base md:text-lg">大阪大学卒業</p>
-                                    <p className="text-base md:text-lg">大手医療法人勤務・研修医指導医を歴任</p>
-                                    <p className="text-base md:text-lg">都内歯科医院 副院長</p>
-                                </div>
+                            {/* Career */}
+                            <div className="mb-8">
+                                <h4 className="font-bold text-[#8B6F47] mb-3 flex items-center gap-2">
+                                    <span className="w-1 h-4 bg-[#C5A572] rounded-full"></span>
+                                    経歴
+                                </h4>
+                                <ul className="text-base text-[#5A4D41] space-y-2 ml-4">
+                                    <li>• 大阪大学歯学部 卒業</li>
+                                    <li>• 医療法人同仁会ワタナベ歯科医院にて研修医指導医・診療主任を歴任</li>
+                                    <li>• 駒沢公園通り西垣歯科・矯正歯科 副院長</li>
+                                    <li>• 小児歯科部門の立ち上げ</li>
+                                    <li>• Fデンタルオフィス 豊洲プライムスクエア院 開業</li>
+                                    <li>• 咬合育成研究会監修 生活習慣改善アプリの開発</li>
+                                </ul>
+                            </div>
+
+                            {/* Affiliations */}
+                            <div className="mb-8">
+                                <h4 className="font-bold text-[#8B6F47] mb-3 flex items-center gap-2">
+                                    <span className="w-1 h-4 bg-[#C5A572] rounded-full"></span>
+                                    所属学会
+                                </h4>
+                                <p className="text-base text-[#5A4D41] ml-4">
+                                    日本小児歯科学会 / 日本矯正歯科学会 / 日本歯周病学会 / 日本口腔インプラント学会 / 日本審美歯科学会
+                                </p>
                             </div>
 
                             {/* Dotted separator */}
                             <div className="border-t-2 border-dotted border-[#C5A572] mb-8"></div>
 
-                            {/* Doctor Message */}
-                            <div className="space-y-4 text-[#5A4D41] mb-8">
-                                <p className="text-base md:text-lg leading-relaxed">
-                                    豊洲で小児矯正を専門的に行う歯科医師として、患者様一人ひとりに寄り添い、お口の健康を通じて笑顔あふれる毎日をサポートいたします。
-                                </p>
-                                <p className="text-base md:text-lg leading-relaxed">
-                                    お子様から大人の方まで、安心して通っていただける医院づくりを心がけています。
-                                </p>
-
-                                {isDoctorMessageExpanded && (
-                                    <>
-                                        <p className="text-base md:text-lg leading-relaxed">
-                                            特にお子様の矯正治療においては、成長期を活かした最適なタイミングでの治療が重要です。お子様の将来のために、今できることを一緒に考えていきましょう。
-                                        </p>
-                                        <p className="text-base md:text-lg leading-relaxed">
-                                            当院では、一人ひとりのお子様の成長段階に合わせた、最適な治療プランをご提案いたします。まずはお気軽にご相談ください。
-                                        </p>
-                                        <p className="text-base md:text-lg leading-relaxed">
-                                            日本小児歯科学会会員、日本審美歯科学会会員として、常に最新の知識と技術を取り入れながら、お子様の笑顔あふれる未来のために全力でサポートいたします。
-                                        </p>
-                                    </>
-                                )}
-                            </div>
-
-                            {/* Read More Button */}
-                            <div className="text-center">
-                                <button
-                                    onClick={toggleDoctorMessage}
-                                    className="bg-[#8B6F47] hover:bg-[#6D5E52] text-white px-8 py-3 rounded-full font-bold text-base md:text-lg shadow-lg transition-all"
-                                >
-                                    {isDoctorMessageExpanded ? '閉じる' : '続きを読む'}
-                                </button>
+                            {/* Opening Message */}
+                            <div>
+                                <h4 className="font-bold text-[#8B6F47] text-lg mb-4 flex items-center gap-2">
+                                    <span className="w-1.5 h-5 bg-[#C5A572] rounded-full"></span>
+                                    当院が大切にしていること
+                                </h4>
+                                <div className="space-y-4 text-sm md:text-base leading-[1.9] text-[#5A4D41]">
+                                    <p>
+                                        私の父は、30年近く小児矯正に携わってきた歯科医師です。幼い頃からその背中を見て育ち、歯並びや噛み合わせが日々の習慣で大きく変わることを学んできました。当院のコンセプトは「未来のいいお顔を育てる」。これはお子様だけに向けた言葉ではありません。矯正後の後戻り、顔の歪み — その多くは呼吸・姿勢・噛み癖といった習慣に原因があります。ただ、多くの医院ではこれを伝えていない、あるいは軽視しているケースが多いのが現状です。そのため、先にお伝えしたような後戻りが起きたり、大人になってから「やはり駄目だった」という事態が起きてしまいます。お子様の口腔育成から大人の矯正・審美治療まで、習慣へのアプローチを軸に、年齢を問わずお口と表情の健康を整えていく歯科医院です。
+                                    </p>
+                                    <p>
+                                        大阪大学歯学部を卒業後、医療法人同仁会ワタナベ歯科医院にて一般歯科・インプラント・矯正・審美治療など幅広い症例を経験し、研修医指導医も務めました。その中で強く感じたのは、良い治療が患者様に正しく届いていないという現実です。私自身は大学まで野球に打ち込み、噛み合わせや口呼吸がパフォーマンスに直結することも実感してきました。歯並びと全身の健康の関係を、スポーツを頑張るお子様や保護者の方にも届けたいと考えています。
+                                    </p>
+                                    <p>
+                                        父から受け継いだ口腔育成への想い、臨床で培った技術、そして患者様に「伝わる」情報発信力。この3つを軸に、「もっと早く知りたかった」「あの時聞けてよかった」— そう感じていただける歯科医院を目指しています。
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
