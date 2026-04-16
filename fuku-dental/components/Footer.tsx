@@ -25,8 +25,9 @@ export const Footer = () => {
         { name: "口臭治療", link: "/general/bad-breath", icon: BiWind },
         { name: "むしば治療", link: "/cavity", icon: MdLocalHospital },
         { name: "根管治療", link: "/root-canal", icon: GiTooth },
-        { name: "歯周病治療", link: "/periodontal", icon: MdLocalHospital },
-        { name: "親知らず抜歯", link: "/wisdom", icon: GiTooth },
+        // 一旦非表示（復活時はコメント解除）
+        // { name: "歯周病治療", link: "/periodontal", icon: MdLocalHospital },
+        // { name: "親知らず抜歯", link: "/wisdom", icon: GiTooth },
     ];
 
     const concernsItems = [

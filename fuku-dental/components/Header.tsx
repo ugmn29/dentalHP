@@ -21,8 +21,9 @@ export const Header = () => {
         { name: "口臭治療", cat: "general", link: "/general/bad-breath" },
         { name: "むしば治療", cat: "general", link: "/cavity" },
         { name: "根管治療", cat: "general", link: "/root-canal" },
-        { name: "歯周病治療", cat: "general", link: "/periodontal" },
-        { name: "親知らず抜歯", cat: "surgery", link: "/wisdom" },
+        // 一旦非表示（復活時はコメント解除）
+        // { name: "歯周病治療", cat: "general", link: "/periodontal" },
+        // { name: "親知らず抜歯", cat: "surgery", link: "/wisdom" },
     ];
 
     const concernsItems = [
