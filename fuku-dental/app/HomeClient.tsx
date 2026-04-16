@@ -129,7 +129,7 @@ export default function Home() {
   const featureHighlights = [
     {
       id: "01",
-      title: "歯を「最大限残す」",
+      title: "「できるだけ削らない」",
       highlight: "保存治療",
       summary: "できる限り削らない・抜かない治療",
       details: [
@@ -143,8 +143,8 @@ export default function Home() {
     },
     {
       id: "02",
-      title: "すべて見せる、わかりやすい",
-      highlight: "最新<span style='font-size: 0.8em;'>の</span>透明<span style='font-size: 0.8em;'>な</span>治療",
+      title: "「見える」から安心できる",
+      highlight: "治療説明",
       summary: "<strong>豊洲の歯医者</strong>として、納得して治療を受けていただくために",
       details: [
         "治療前には必ず<span class='font-bold marker-yellow'>口の中の写真</span>を撮影し、現在の状態を一緒に確認します。さらに<span class='font-bold marker-yellow'>３Dスキャナー</span>で歯並びを立体的にデータ化し、<span class='font-bold marker-yellow'>ペン型カメラ</span>で細部まで拡大して見ることができます。これらの最新機器を使って、<span class='text-[#8B92AB] font-bold'>お口の状態や治療内容を丁寧にわかりやすく説明</span>します。"
@@ -157,7 +157,7 @@ export default function Home() {
     },
     {
       id: "03",
-      title: "「お顔」も育てる",
+      title: "歯だけでなく「お顔」も育てる",
       highlight: "こども矯正",
       summary: "歯並びの教科書（冊子）",
       details: [
@@ -185,8 +185,8 @@ export default function Home() {
     },
     {
       id: "05",
-      title: "天井テレビ付き",
-      highlight: "個室の診療室",
+      title: "お子様もリラックス",
+      highlight: "天井テレビ付き個室",
       summary: "リラックスして治療を受けられる空間",
       details: [
         "<span class='font-bold marker-yellow'>個室</span>でプライバシーを確保。<span class='font-bold marker-yellow'>天井テレビ</span>があるため、<span class='text-[#8B92AB] font-bold'>子供が通いやすい環境</span>を整備しています。"
