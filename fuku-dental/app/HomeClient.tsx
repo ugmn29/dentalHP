@@ -57,33 +57,41 @@ export default function Home() {
     },
     {
       id: 2,
-      title: "歯並びと噛み合わせの深さの改善",
+      title: "出っ歯からの改善",
       beforeId: "case2-before",
       afterId: "case2-after",
-      description: "矯正治療で歯並びと深い噛み合わせをバランスよく整えました。",
+      description: "小児矯正により、出っ歯（上顎前突）を改善しました。",
       patient: "小児"
     },
     {
       id: 3,
-      title: "前歯のセラミック",
+      title: "歯並びと噛み合わせの深さの改善",
       beforeId: "case3-before",
       afterId: "case3-after",
+      description: "矯正治療で歯並びと深い噛み合わせをバランスよく整えました。",
+      patient: "小児"
+    },
+    {
+      id: 4,
+      title: "前歯のセラミック",
+      beforeId: "case4-before",
+      afterId: "case4-after",
       description: "前歯をセラミックで修復し、自然で美しい見た目を取り戻しました。",
       patient: "30代 女性"
     },
     {
-      id: 4,
+      id: 5,
       title: "インプラント治療",
-      beforeId: "case4-before",
-      afterId: "case4-after",
+      beforeId: "case5-before",
+      afterId: "case5-after",
       description: "失った歯をインプラントで復元し、しっかり噛めるようになりました。",
       patient: "50代 男性"
     },
     {
-      id: 5,
+      id: 6,
       title: "全顎的なセラミック修復",
-      beforeId: "case5-before",
-      afterId: "case5-after",
+      beforeId: "case6-before",
+      afterId: "case6-after",
       description: "上下の歯を全顎的にセラミックで修復し、噛み合わせと審美性を同時に改善しました。",
       patient: "40代 男性"
     }
