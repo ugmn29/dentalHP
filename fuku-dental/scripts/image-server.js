@@ -12,9 +12,23 @@
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
 
 const PORT = 3002;
 const PUBLIC_DIR = path.join(__dirname, '..', 'public', 'images', 'pages');
+const REPO_DIR = path.join(__dirname, '..');
+
+function autoCommitAndPush(filePath) {
+  try {
+    const relativePath = path.relative(REPO_DIR, filePath);
+    execSync(`git add "${relativePath}"`, { cwd: REPO_DIR });
+    execSync(`git commit -m "画像追加: ${relativePath}"`, { cwd: REPO_DIR });
+    execSync('git push origin main', { cwd: REPO_DIR });
+    console.log(`  ✓ 自動デプロイ完了: ${relativePath}`);
+  } catch (e) {
+    console.log(`  ⚠ 自動デプロイ失敗（手動でpushしてください）: ${e.message}`);
+  }
+}
 
 function sanitizePath(inputPath) {
   return inputPath.replace(/\.\./g, '').replace(/[^a-zA-Z0-9\-\/]/g, '');
@@ -165,10 +179,15 @@ const server = http.createServer(async (req, res) => {
       fs.mkdirSync(targetDir, { recursive: true });
       fs.writeFileSync(targetFile, file.data);
 
+      console.log(`  画像保存: ${targetFile}`);
+
       sendJson(res, 200, {
         success: true,
         path: `/images/pages${safePath}/${safeImageId}.jpg`,
       });
+
+      // 自動でgit commit & push
+      autoCommitAndPush(targetFile);
     } catch (error) {
       console.error('Upload error:', error);
       sendJson(res, 500, { error: 'Upload failed' });
