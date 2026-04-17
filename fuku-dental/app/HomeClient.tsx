@@ -108,9 +108,9 @@ export default function Home() {
 
   const menuItems = [
     { name: "こども矯正", cat: "kids", link: "/kidsortho", icon: Smile, iconImage: "/images/icons/05_矯正歯科.png" },
-    { name: "０歳からの口育", cat: "kids", link: "/kids/oral-education", icon: Baby, iconImage: "/images/icons/12_小児歯科.png" },
-    { name: "こども歯科・予防", cat: "kids", link: "/kids/preventive", icon: ShieldCheck, iconImage: "/images/icons/12_小児歯科.png" },
-    { name: "セラミック治療", cat: "aesthetic", link: "/aesthetic/ceramic", icon: Gem, iconImage: "/images/icons/14_審美歯科.png" },
+    { name: "０歳からの口育", cat: "kids", link: "/oral-education", icon: Baby, iconImage: "/images/icons/12_小児歯科.png" },
+    { name: "こども歯科・予防", cat: "kids", link: "/kids-preventive", icon: ShieldCheck, iconImage: "/images/icons/12_小児歯科.png" },
+    { name: "セラミック治療", cat: "aesthetic", link: "/ceramic", icon: Gem, iconImage: "/images/icons/14_審美歯科.png" },
     { name: "マウスピース矯正", cat: "ortho", link: "/mouthpiece", icon: Smile, iconImage: "/images/icons/06_マウスピース矯正.png" },
     { name: "矯正歯科", cat: "ortho", link: "/orthodontics", icon: Sparkles, iconImage: "/images/icons/05_矯正歯科.png" },
     { name: "インプラント", cat: "general", link: "/implant", icon: ArrowDownToLine, iconImage: "/images/icons/07_インプラント.png" },

@@ -14,8 +14,8 @@ export const Footer = () => {
 
     const treatmentMenuItems = [
         { name: "こども矯正", link: "/kidsortho", icon: FaChild },
-        { name: "０歳からの口育", link: "/kids/oral-education", icon: FaBaby },
-        { name: "こども歯科・予防", link: "/kids/preventive", icon: FaShieldAlt },
+        { name: "０歳からの口育", link: "/oral-education", icon: FaBaby },
+        { name: "こども歯科・予防", link: "/kids-preventive", icon: FaShieldAlt },
         { name: "セラミック治療", link: "/ceramic", icon: FaStar },
         { name: "マウスピース矯正", link: "/mouthpiece", icon: FaSmile },
         { name: "矯正歯科", link: "/orthodontics", icon: MdBuild },
