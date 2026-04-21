@@ -17,7 +17,7 @@ import RecruitFooter from './components/Footer';
 
 export default function RecruitClient() {
   return (
-    <>
+    <div style={{ overflowX: 'hidden' }}>
       <RecruitHeader />
       <main>
         <Hero />
@@ -34,6 +34,6 @@ export default function RecruitClient() {
         <Entry />
       </main>
       <RecruitFooter />
-    </>
+    </div>
   );
 }

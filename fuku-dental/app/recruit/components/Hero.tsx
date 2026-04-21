@@ -92,25 +92,6 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="hero-marquee" aria-hidden="true">
-        <div className="marquee-track">
-          {Array.from({length:3}).map((_,k) => (
-            <span key={k} className="marquee-group">
-              <span>ここでしか学べないことが、あります</span>
-              <span>★</span>
-              <span>口腔育成</span>
-              <span>★</span>
-              <span>SNSマーケティング</span>
-              <span>★</span>
-              <span>テクノロジー</span>
-              <span>★</span>
-              <span>ブランディング</span>
-              <span>★</span>
-            </span>
-          ))}
-        </div>
-      </div>
-
       <div className="hero-footer">
         <div className="hero-foot-item">
           <div className="hero-foot-label">Opening</div>
