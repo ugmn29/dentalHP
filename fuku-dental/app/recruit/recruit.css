@@ -1343,3 +1343,21 @@ html[data-dark="1"] .year-body { background: var(--white); }
   padding: 48px;
   position: relative; z-index: 1;
 }
+
+/* ============ Mobile overflow fixes ============ */
+@media (max-width: 700px) {
+  /* 募集要項の職種タブを縦積みに */
+  .role-tabs { grid-template-columns: 1fr; }
+  /* 成長タイムラインの年切替を縦積みに */
+  .year-switch { grid-template-columns: 1fr; }
+  .year-btn-y, .year-btn-sub { white-space: normal; }
+  /* フッター背景の装飾テキスト（大きな斜体）を非表示 */
+  .site-footer::before { display: none; }
+  /* エントリーフォームの余白を調整 */
+  .entry-form-wide { padding: 24px; }
+  /* 画像・埋め込みなどが見切れないように保険 */
+  img, svg, iframe, video { max-width: 100%; }
+}
+@media (max-width: 480px) {
+  .hero-ctas .btn-primary, .hero-ctas .btn-ghost { width: 100%; justify-content: center; }
+}
