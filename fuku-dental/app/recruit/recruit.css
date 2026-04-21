@@ -1365,6 +1365,32 @@ html[data-dark="1"] .year-body { background: var(--white); }
   .philosophy { padding: 80px var(--gutter); }
   /* セクション全体のpaddingも縮小 */
   .section { padding: 80px var(--gutter); }
+  .message, .requirements, .career, .whyus, .growth-path { padding: 80px var(--gutter); }
+  .honest, .entry { padding: 80px var(--gutter); }
+  .site-footer { padding: 60px var(--gutter) 28px; }
+  /* 各種カード類のpaddingを縮小 */
+  .whyus-card { padding: 28px 20px; }
+  .whyus-note { padding: 20px 22px; }
+  .gs-card { padding: 28px 20px; }
+  .career-card { padding: 28px 20px; }
+  .match-block { padding: 24px 20px; }
+  .benefits-mini { padding: 24px 20px; }
+  .entry-form { padding: 24px 20px; }
+  .value-card { padding: 24px 20px; }
+  .voice-card { padding: 28px 20px; }
+  .number-cell { padding: 28px 20px; }
+  .year-body { padding: 28px 20px; }
+  /* 横スクロールする可能性のある要素に保険 */
+  .section, .vmv-block, .vmv-grid, .vmv-card, .values-grid,
+  .honest-match, .honest-grid, .career-grid, .career-ladder,
+  .req-table, .benefits-mini, .entry-form, .entry-grid-v2,
+  .whyus-grid, .whyus-card, .growth-supports-grid, .timeline,
+  .footer-cols { min-width: 0; }
+  /* テキストの強制折り返し */
+  .vmv-big, .section-title, .hero-copy, .numbers-title,
+  .message-title, .honest-tag {
+    word-break: break-word; overflow-wrap: anywhere;
+  }
 }
 @media (max-width: 480px) {
   .hero-ctas .btn-primary, .hero-ctas .btn-ghost { width: 100%; justify-content: center; }
