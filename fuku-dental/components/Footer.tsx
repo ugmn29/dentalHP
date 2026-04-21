@@ -206,6 +206,7 @@ export const Footer = () => {
                                 <li><a href="/price" className="hover:text-[#8B92AB] transition block">料金表</a></li>
                                 <li><a href="/blog" className="hover:text-[#8B92AB] transition block">ブログ・お知らせ</a></li>
                                 <li><a href="/facilities" className="hover:text-[#8B92AB] transition block">院内設備</a></li>
+                                <li><a href="/recruit" className="hover:text-[#8B92AB] transition block">採用情報</a></li>
                                 <li><a href="#" className="hover:text-[#8B92AB] transition block">アクセス・診療時間</a></li>
                             </ul>
                         </div>

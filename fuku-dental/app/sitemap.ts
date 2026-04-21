@@ -145,6 +145,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // 案内ページ
     { url: '/price', priority: 0.7, changeFrequency: 'monthly' as const },
     { url: '/privacy', priority: 0.4, changeFrequency: 'yearly' as const },
+
+    // 採用情報
+    { url: '/recruit', priority: 0.8, changeFrequency: 'monthly' as const },
   ];
 
   return pages.map((page) => ({

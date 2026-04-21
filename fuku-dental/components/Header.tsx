@@ -70,6 +70,7 @@ export const Header = () => {
                         <a href="/facilities" className="hover:text-[#8B92AB] transition relative group py-2">院内設備</a>
                         <a href="#" className="hover:text-[#8B92AB] transition relative group py-2">ドクター紹介</a>
                         <a href="/price" className="hover:text-[#8B92AB] transition relative group py-2">料金表</a>
+                        <a href="/recruit" className="hover:text-[#8B92AB] transition relative group py-2">採用情報</a>
 
                         <div className="h-4 w-[1px] bg-gray-300 mx-1"></div>
 
@@ -165,6 +166,7 @@ export const Header = () => {
                     <a href="/price" className="flex items-center justify-between py-3 border-b border-dashed border-gray-200 font-bold text-[#5A4D41]">料金表 <ChevronRight size={16} className="text-gray-300" /></a>
                     <a href="/blog" className="flex items-center justify-between py-3 border-b border-dashed border-gray-200 font-bold text-[#5A4D41]">ブログ・お知らせ <ChevronRight size={16} className="text-gray-300" /></a>
                     <a href="/facilities" className="flex items-center justify-between py-3 border-b border-dashed border-gray-200 font-bold text-[#5A4D41]">院内設備 <ChevronRight size={16} className="text-gray-300" /></a>
+                    <a href="/recruit" className="flex items-center justify-between py-3 border-b border-dashed border-gray-200 font-bold text-[#5A4D41]">採用情報 <ChevronRight size={16} className="text-gray-300" /></a>
                     <a href="#" className="flex items-center justify-between py-3 border-b border-dashed border-gray-200 font-bold text-[#5A4D41]">アクセス・診療時間 <ChevronRight size={16} className="text-gray-300" /></a>
 
                     <div className="pt-4 space-y-3 pb-20">
