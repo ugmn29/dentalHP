@@ -1357,7 +1357,17 @@ html[data-dark="1"] .year-body { background: var(--white); }
   .entry-form-wide { padding: 24px; }
   /* 画像・埋め込みなどが見切れないように保険 */
   img, svg, iframe, video { max-width: 100%; }
+  /* 経営理念・ミッションのカードpaddingを縮小 */
+  .vmv-card { padding: 28px 20px; }
+  .vmv-block { padding: 40px 0; }
+  .vmv-translate { padding: 16px; grid-template-columns: 24px 1fr; gap: 10px; }
+  .vmv-translate.small { padding: 14px; }
+  .philosophy { padding: 80px var(--gutter); }
+  /* セクション全体のpaddingも縮小 */
+  .section { padding: 80px var(--gutter); }
 }
 @media (max-width: 480px) {
   .hero-ctas .btn-primary, .hero-ctas .btn-ghost { width: 100%; justify-content: center; }
+  .vmv-big { font-size: clamp(24px, 7vw, 42px); }
+  .vmv-marker-label { font-size: 11px; }
 }
