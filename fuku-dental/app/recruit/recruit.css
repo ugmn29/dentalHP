@@ -1397,3 +1397,31 @@ html[data-dark="1"] .year-body { background: var(--white); }
   .vmv-big { font-size: clamp(24px, 7vw, 42px); }
   .vmv-marker-label { font-size: 11px; }
 }
+
+/* LINE CTA and vmv-translate mobile fixes */
+@media (max-width: 560px) {
+  /* LINE CTAボタンを縦積み＆文字サイズ調整 */
+  .cta-line {
+    grid-template-columns: 48px 1fr;
+    gap: 14px;
+    padding: 20px 18px;
+  }
+  .cta-line-icon { width: 48px; height: 48px; border-radius: 12px; }
+  .cta-line-icon svg { width: 28px; height: 28px; }
+  .cta-line-title { font-size: 18px; margin-bottom: 4px; line-height: 1.35; word-break: break-word; }
+  .cta-line-label { font-size: 11px; margin-bottom: 4px; }
+  .cta-line-sub { font-size: 12px; line-height: 1.6; }
+  .cta-line-arrow { display: none; }
+  .cta-line-body { grid-column: 2; min-width: 0; }
+
+  /* あなたへ/あなたがここで…のtranslateブロック */
+  .vmv-translate { padding: 14px; grid-template-columns: 20px 1fr; gap: 8px; min-width: 0; }
+  .vmv-translate.small { padding: 12px; }
+  .vmv-translate p, .vmv-translate strong { min-width: 0; word-break: break-word; overflow-wrap: anywhere; }
+  .vmv-translate p { font-size: 12px; line-height: 1.8; }
+  .vmv-translate-arrow { font-size: 16px; }
+
+  /* 他のエントリーセクション要素も小さめに */
+  .entry-alt-list, .entry-alt-item { min-width: 0; }
+  .entry-alt-value { word-break: break-all; }
+}
