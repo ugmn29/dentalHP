@@ -14,6 +14,7 @@ import Honest from './components/Honest';
 import FAQ from './components/FAQ';
 import Entry from './components/Entry';
 import RecruitFooter from './components/Footer';
+import FloatingLine from './components/FloatingLine';
 
 export default function RecruitClient() {
   return (
@@ -34,6 +35,7 @@ export default function RecruitClient() {
         <Entry />
       </main>
       <RecruitFooter />
+      <FloatingLine />
     </div>
   );
 }
