@@ -24,53 +24,6 @@ export default function Career() {
           <p>○評価：15,000円 ／ △評価：10,000円 ／ ×評価：0円。専門スキルと共通行動の両方を見ます。</p>
         </div>
       </div>
-
-      <div className="career-ladder">
-        <h3 className="ladder-title">キャリアパスの例</h3>
-        <div className="ladder">
-          <div className="ladder-step">
-            <div className="ladder-label">Start</div>
-            <div className="ladder-title-s">スタッフ</div>
-            <div className="ladder-desc">基本給 230,000円〜</div>
-          </div>
-          <div className="ladder-arrow">→</div>
-          <div className="ladder-step">
-            <div className="ladder-label">+ 5,000円</div>
-            <div className="ladder-title-s">副チーフ</div>
-            <div className="ladder-desc">後輩指導・教育の中心に</div>
-          </div>
-          <div className="ladder-arrow">→</div>
-          <div className="ladder-step">
-            <div className="ladder-label">+ 10,000円</div>
-            <div className="ladder-title-s">チーフ</div>
-            <div className="ladder-desc">診療運営の要としてチームを束ねる</div>
-          </div>
-          <div className="ladder-arrow">→</div>
-          <div className="ladder-step accent">
-            <div className="ladder-label">将来</div>
-            <div className="ladder-title-s">分院立ち上げ・<br/>教育責任者など</div>
-            <div className="ladder-desc">「口腔育成を世界へ」の中核メンバーに</div>
-          </div>
-        </div>
-      </div>
-
-      <div className="growth-pillars">
-        <div className="growth-head">成長をサポートする仕組み</div>
-        <div className="growth-list">
-          <div className="growth-item">
-            <div className="growth-no">01</div>
-            <div className="growth-text"><strong>セミナー費用補助 50%</strong>（医院承認分）。外部で学びたいことは遠慮なく申請してください。</div>
-          </div>
-          <div className="growth-item">
-            <div className="growth-no">02</div>
-            <div className="growth-text"><strong>院内バイブル・専門書</strong>を常備。自己研鑽は評価項目にも入っています。</div>
-          </div>
-          <div className="growth-item">
-            <div className="growth-no">03</div>
-            <div className="growth-text"><strong>院長に直接相談できる</strong>文化。不満や疑問はミーティングかLINEで即共有。</div>
-          </div>
-        </div>
-      </div>
     </section>
   );
 }

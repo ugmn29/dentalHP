@@ -1,44 +1,4 @@
-import { useState } from 'react';
-
 export default function GrowthPath() {
-  const [activeYear, setActiveYear] = useState(1);
-
-  const years = [
-    {
-      y: 1,
-      label: '1年後',
-      title: '基礎が「体に入る」',
-      points: [
-        '13のValueが判断の軸になり、日々の業務で自然と実践できる',
-        '担当業務を一人で回せるようになり、後輩にも教えられる',
-        'SNS・口腔育成の現場に参加し、医院の発信に貢献している',
-        '院長との1on1・6ヶ月評価で、次の目標が明確になっている',
-      ],
-    },
-    {
-      y: 3,
-      label: '3年後',
-      title: '「強み」が立ち上がる',
-      points: [
-        '口腔育成・SNS・テクノロジー・ブランディングから、自分の専門を持つ',
-        '認定資格や専門領域の研修を通じて、他院で通用するスキルが身につく',
-        '新人の教育係や、医院運営の一部を任される立場になっている',
-        '院外セミナーへの参加・登壇など、社外での発信経験も積める',
-      ],
-    },
-    {
-      y: 5,
-      label: '5年後',
-      title: '「次の景色」が見える',
-      points: [
-        '医院の中核メンバーとして、経営・採用・教育に深く関わる',
-        '口腔育成の専門家として、院外でも教える側に回っている',
-        '独立、分院展開、海外挑戦など、次のキャリアの選択肢が開ける',
-        '「ここで学んだこと」を自分の言葉で語れるようになっている',
-      ],
-    },
-  ];
-
   const supports = [
     {
       n: '01',
@@ -95,43 +55,6 @@ export default function GrowthPath() {
               </div>
               <h4 className="gs-title">{s.title}</h4>
               <p className="gs-body">{s.body}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div className="growth-timeline">
-        <div className="year-switch">
-          {years.map((y) => (
-            <button
-              key={y.y}
-              className={`year-btn ${activeYear === y.y ? 'active' : ''}`}
-              onClick={() => setActiveYear(y.y)}
-            >
-              <span className="year-btn-y">{y.label}</span>
-              <span className="year-btn-sub">{y.y} year{y.y > 1 ? 's' : ''} later</span>
-            </button>
-          ))}
-        </div>
-
-        <div className="year-body">
-          {years.filter(y => y.y === activeYear).map((y) => (
-            <div key={y.y} className="year-content">
-              <div className="year-left">
-                <div className="year-big">
-                  <span className="year-big-n">{y.y}</span>
-                  <span className="year-big-u">year{y.y > 1 ? 's' : ''}</span>
-                </div>
-                <div className="year-title-big">{y.title}</div>
-              </div>
-              <ul className="year-points">
-                {y.points.map((p, i) => (
-                  <li key={i}>
-                    <span className="year-point-no">{String(i+1).padStart(2,'0')}</span>
-                    <span className="year-point-text">{p}</span>
-                  </li>
-                ))}
-              </ul>
             </div>
           ))}
         </div>

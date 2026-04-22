@@ -66,33 +66,6 @@ export default function Entry() {
             <div className="cta-line-arrow" aria-hidden="true">→</div>
           </a>
 
-          <div className="entry-alt-head">
-            <span>or —</span>
-            <span>他の連絡方法</span>
-          </div>
-
-          <div className="entry-alt-list">
-            <div className="entry-alt-item">
-              <div className="entry-alt-label">メール</div>
-              <div className="entry-alt-value">
-                <a href="mailto:recruit@fshika.com">recruit@fshika.com</a>
-              </div>
-              <div className="entry-alt-sub">履歴書・職務経歴書の送付はこちら</div>
-            </div>
-            <div className="entry-alt-item">
-              <div className="entry-alt-label">電話</div>
-              <div className="entry-alt-value">
-                <a href="tel:03-1234-5678">03-1234-5678</a>
-              </div>
-              <div className="entry-alt-sub">受付時間：平日 10:00-18:30 / 土日 9:00-16:00</div>
-            </div>
-            <div className="entry-alt-item">
-              <div className="entry-alt-label">所在地</div>
-              <div className="entry-alt-value">東京都江東区豊洲5-6-36<br/>豊洲プライムスクエア1階</div>
-              <div className="entry-alt-sub">豊洲駅 6a出口 徒歩2分</div>
-            </div>
-          </div>
-
           <button type="button" className="entry-form-toggle" onClick={() => setShowForm(v => !v)}>
             {showForm ? '— フォームを閉じる' : '+ フォームから送る場合はこちら'}
           </button>
