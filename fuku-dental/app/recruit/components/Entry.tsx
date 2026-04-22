@@ -3,7 +3,7 @@ import { useState } from 'react';
 const LINE_URL = 'https://lin.ee/7d04P9x';
 
 export default function Entry() {
-  const [role, setRole] = useState('歯科衛生士');
+  const [role, setRole] = useState<'歯科衛生士' | '歯科助手・受付'>('歯科衛生士');
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
@@ -77,7 +77,7 @@ export default function Entry() {
           <div className="form-row">
             <label>希望職種</label>
             <div className="chip-group">
-              {['歯科衛生士', '歯科助手', '受付'].map(r => (
+              {(['歯科衛生士', '歯科助手・受付'] as const).map(r => (
                 <button key={r} type="button" className={`chip ${role === r ? 'active' : ''}`} onClick={() => setRole(r)}>{r}</button>
               ))}
             </div>

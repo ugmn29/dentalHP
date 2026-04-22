@@ -689,7 +689,7 @@ html[data-dark="1"] .philosophy { background: var(--paper-2); }
 /* ============ Requirements ============ */
 .requirements { background: var(--white); padding: 120px var(--gutter); }
 html[data-dark="1"] .requirements { background: var(--paper-2); }
-.role-tabs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); margin: 48px 0 48px; }
+.role-tabs { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); margin: 48px 0 48px; }
 .role-tab { background: var(--paper); padding: 28px; display: flex; flex-direction: column; gap: 6px; transition: background .25s; text-align: left; }
 .role-tab:hover { background: var(--white); }
 .role-tab.active { background: var(--accent); color: var(--paper); }

@@ -1,6 +1,6 @@
 import { useState, ReactNode } from 'react';
 
-type RoleKey = 'DH' | 'DA' | 'RP';
+type RoleKey = 'DH' | 'DA';
 
 export default function Requirements() {
   const [role, setRole] = useState<RoleKey>('DH');
@@ -12,16 +12,14 @@ export default function Requirements() {
       highlight: ['初診P1〜SPTまで責任を持つ担当制', 'インビザライン・ワイヤー矯正の経験可', '歩合：メインテ・WH 10%'],
     },
     DA: {
-      label: '歯科助手',
-      sub: 'Dental Assistant',
+      label: '歯科助手・受付',
+      sub: 'Dental Assistant / Receptionist',
       basic: '230,000円',
-      highlight: ['診療補助 + 受付 + 秘書 + 広報まで幅広く', 'SNS・ホームページ運用も任せます', '歩合：物販 2% / 家族紹介・口コミ 500円/件'],
-    },
-    RP: {
-      label: '受付',
-      sub: 'Receptionist',
-      basic: '230,000円',
-      highlight: ['初診カウンセリングの入口を担う重要な役割', '電話対応・予約管理・会計まで', '歩合：カウンセリング成約 / 矯正検査誘導など'],
+      highlight: [
+        '診療補助・受付・秘書・SNS/広報まで幅広く',
+        '初診カウンセリングと電話対応で医院の入口を担う',
+        '歩合：物販 2% / カウンセリング成約 / 家族紹介・口コミ 500円/件',
+      ],
     },
   };
   const r = roles[role];
