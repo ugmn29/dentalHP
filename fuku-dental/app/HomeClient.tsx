@@ -464,33 +464,38 @@ export default function Home() {
 
             {/* Opening Message */}
             <div className="mt-16 glass-bright p-8 md:p-16 rounded-[2.5rem] shadow-glass relative border border-[#D8DBE6]">
-              <button
-                type="button"
-                onClick={() => setIsMessageOpen(v => !v)}
-                aria-expanded={isMessageOpen}
-                className="w-full flex items-center justify-center gap-3 text-2xl font-medium mb-2 text-center relative z-10 border-b border-[#D8DBE6] pb-4 max-w-sm mx-auto tracking-wider hover:opacity-75 transition"
-              >
-                <h4 className="m-0">当院が大切にしていること</h4>
-                <ChevronDown
-                  size={22}
-                  className={`text-[#8B92AB] transition-transform duration-300 ${isMessageOpen ? 'rotate-180' : ''}`}
-                />
-              </button>
-              <div
-                className={`overflow-hidden transition-[max-height,opacity] duration-500 ease-in-out ${
-                  isMessageOpen ? 'max-h-[3000px] opacity-100 mt-6' : 'max-h-0 opacity-0'
-                }`}
-              >
-                <div className="space-y-4 text-sm leading-[1.9] relative z-10 text-[#5A4D41]" style={{ wordBreak: 'normal', overflowWrap: 'break-word', lineBreak: 'auto' }}>
-                  <p>
-                    私の父は、30年近く小児矯正に携わってきた歯科医師です。幼い頃からその背中を見て育ち、歯並びや噛み合わせが日々の習慣で大きく変わることを学んできました。当院のコンセプトは「未来のいいお顔を育てる」。これはお子様だけに向けた言葉ではありません。矯正後の後戻り、顔の歪み — その多くは呼吸・姿勢・噛み癖といった習慣に原因があります。ただ、多くの医院ではこれを伝えていない、あるいは軽視しているケースが多いのが現状です。そのため、先にお伝えしたような後戻りが起きたり、大人になってから「やはり駄目だった」という事態が起きてしまいます。お子様の口腔育成から大人の矯正・審美治療まで、習慣へのアプローチを軸に、年齢を問わずお口と表情の健康を整えていく歯科医院です。
-                  </p>
-                  <p>
-                    大阪大学歯学部を卒業後、医療法人同仁会ワタナベ歯科医院にて一般歯科・インプラント・矯正・審美治療など幅広い症例を経験し、研修医指導医も務めました。その中で強く感じたのは、良い治療が患者様に正しく届いていないという現実です。私自身は大学まで野球に打ち込み、噛み合わせや口呼吸がパフォーマンスに直結することも実感してきました。歯並びと全身の健康の関係を、スポーツを頑張るお子様や保護者の方にも届けたいと考えています。
-                  </p>
-                  <p>
-                    父から受け継いだ口腔育成への想い、臨床で培った技術、そして患者様に「伝わる」情報発信力。この3つを軸に、「もっと早く知りたかった」「あの時聞けてよかった」— そう感じていただける歯科医院を目指しています。
-                  </p>
+              <h4 className="text-2xl font-medium mb-8 text-center relative z-10 border-b border-[#D8DBE6] pb-4 max-w-sm mx-auto tracking-wider">当院が大切にしていること</h4>
+              <div className="space-y-4 text-sm leading-[1.9] relative z-10 text-[#5A4D41]" style={{ wordBreak: 'normal', overflowWrap: 'break-word', lineBreak: 'auto' }}>
+                <p>
+                  私の父は、30年近く小児矯正に携わってきた歯科医師です。幼い頃からその背中を見て育ち、歯並びや噛み合わせが日々の習慣で大きく変わることを学んできました。当院のコンセプトは「未来のいいお顔を育てる」。これはお子様だけに向けた言葉ではありません。矯正後の後戻り、顔の歪み — その多くは呼吸・姿勢・噛み癖といった習慣に原因があります。ただ、多くの医院ではこれを伝えていない、あるいは軽視しているケースが多いのが現状です。そのため、先にお伝えしたような後戻りが起きたり、大人になってから「やはり駄目だった」という事態が起きてしまいます。お子様の口腔育成から大人の矯正・審美治療まで、習慣へのアプローチを軸に、年齢を問わずお口と表情の健康を整えていく歯科医院です。
+                </p>
+                <div
+                  className={`overflow-hidden transition-[max-height,opacity] duration-500 ease-in-out ${
+                    isMessageOpen ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'
+                  }`}
+                >
+                  <div className="space-y-4 pt-4">
+                    <p>
+                      大阪大学歯学部を卒業後、医療法人同仁会ワタナベ歯科医院にて一般歯科・インプラント・矯正・審美治療など幅広い症例を経験し、研修医指導医も務めました。その中で強く感じたのは、良い治療が患者様に正しく届いていないという現実です。私自身は大学まで野球に打ち込み、噛み合わせや口呼吸がパフォーマンスに直結することも実感してきました。歯並びと全身の健康の関係を、スポーツを頑張るお子様や保護者の方にも届けたいと考えています。
+                    </p>
+                    <p>
+                      父から受け継いだ口腔育成への想い、臨床で培った技術、そして患者様に「伝わる」情報発信力。この3つを軸に、「もっと早く知りたかった」「あの時聞けてよかった」— そう感じていただける歯科医院を目指しています。
+                    </p>
+                  </div>
+                </div>
+                <div className="pt-4 flex justify-center">
+                  <button
+                    type="button"
+                    onClick={() => setIsMessageOpen(v => !v)}
+                    aria-expanded={isMessageOpen}
+                    className="inline-flex items-center gap-2 text-sm font-medium text-[#8B92AB] hover:text-[#6B7394] transition border border-[#D8DBE6] rounded-full px-5 py-2 bg-white/60"
+                  >
+                    <span>{isMessageOpen ? '閉じる' : '続きを読む（経歴・想い）'}</span>
+                    <ChevronDown
+                      size={16}
+                      className={`transition-transform duration-300 ${isMessageOpen ? 'rotate-180' : ''}`}
+                    />
+                  </button>
                 </div>
               </div>
             </div>
