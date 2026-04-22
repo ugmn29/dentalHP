@@ -1,4 +1,8 @@
+import { useState } from 'react';
+
 export default function Philosophy() {
+  const [valuesOpen, setValuesOpen] = useState(false);
+
   const values = [
     { n: '01', title: '「知らなかった」をなくす', body: '徹底した見える化と説明で、患者様が不利益を被らないようにする。', group: 'a' },
     { n: '02', title: '患者様の自己決定を支える', body: '押し売りではなく、納得の上で最善の治療を選べるようサポートする。', group: 'a' },
@@ -27,12 +31,6 @@ export default function Philosophy() {
           ここから<em>育て</em>、<br/>
           社会にインパクトを<em>与える</em>。
         </p>
-        <div className="vmv-translate">
-          <span className="vmv-translate-arrow">→</span>
-          <p>
-            <strong>あなたへ：</strong>これは、Fデンタルオフィスが社会に残したい「かたち」です。あなたには、この景色を一緒に作る仲間として加わってほしいと考えています。
-          </p>
-        </div>
       </div>
 
       <div className="vmv-grid">
@@ -42,13 +40,6 @@ export default function Philosophy() {
             <span className="vmv-marker-label">Mission / 使命</span>
           </div>
           <p>「知らなかった」をなくし、すべての患者様が<strong>自分の意思で最善の治療を選べる</strong>歯科医院をつくる。</p>
-          <p className="vmv-sub">来てくれたすべての人が「ここに来て良かった」と思える場所であり続ける。</p>
-          <div className="vmv-translate small">
-            <span className="vmv-translate-arrow">→</span>
-            <p>
-              <strong>あなたがここで生み出せる価値：</strong>丁寧な説明と対話で、患者様に「このスタッフに担当してもらえてよかった」と言ってもらえる仕事ができます。
-            </p>
-          </div>
         </div>
         <div className="vmv-card">
           <div className="vmv-marker small">
@@ -57,17 +48,9 @@ export default function Philosophy() {
           </div>
           <ol className="vmv-list">
             <li>0歳からの口腔育成で、一生涯の顔と健康の土台をつくる</li>
-            <li>診療技術・発信・テクノロジーの掛け合わせで、誰も真似できない歯科医療を実現する</li>
-            <li>口腔育成において日本一になり、そのノウハウを世界へ届ける</li>
-            <li>口腔から健康な子どもを増やし、医療・教育・社会全体に変革をもたらす</li>
-            <li>すべての世代に「納得の医療」を届ける</li>
+            <li>診療・発信・テクノロジーの掛け合わせで、誰も真似できない歯科医療を実現する</li>
+            <li>口腔育成で日本一になり、そのノウハウを世界へ届ける</li>
           </ol>
-          <div className="vmv-translate small">
-            <span className="vmv-translate-arrow">→</span>
-            <p>
-              <strong>あなたが見られる景色：</strong>口腔育成・SNS・テクノロジーを主軸に、「日本一」「世界へ」を本気で目指す医院の成長過程を、最前線で体験できます。
-            </p>
-          </div>
         </div>
       </div>
 
@@ -78,20 +61,32 @@ export default function Philosophy() {
             <span className="vmv-marker-label">Value / 13の価値観</span>
           </div>
         </div>
-        <div className="values-grid">
-          {values.map((v) => (
-            <div key={v.n} className={`value-card group-${v.group}`}>
-              <div className="value-num">{v.n}</div>
-              <div className="value-title">{v.title}</div>
-              <div className="value-body">{v.body}</div>
+        <button
+          type="button"
+          className="values-toggle"
+          onClick={() => setValuesOpen(v => !v)}
+          aria-expanded={valuesOpen}
+        >
+          {valuesOpen ? '− 13の価値観を閉じる' : '+ 13の価値観をすべて見る'}
+        </button>
+        {valuesOpen && (
+          <>
+            <div className="values-grid">
+              {values.map((v) => (
+                <div key={v.n} className={`value-card group-${v.group}`}>
+                  <div className="value-num">{v.n}</div>
+                  <div className="value-title">{v.title}</div>
+                  <div className="value-body">{v.body}</div>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-        <div className="values-legend">
-          <span><i className="dot-a"/>患者様に対して</span>
-          <span><i className="dot-b"/>仲間に対して</span>
-          <span><i className="dot-c"/>自分自身に対して</span>
-        </div>
+            <div className="values-legend">
+              <span><i className="dot-a"/>患者様に対して</span>
+              <span><i className="dot-b"/>仲間に対して</span>
+              <span><i className="dot-c"/>自分自身に対して</span>
+            </div>
+          </>
+        )}
       </div>
     </section>
   );

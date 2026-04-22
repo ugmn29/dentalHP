@@ -514,7 +514,19 @@ html[data-dark="1"] .philosophy { background: var(--paper-2); }
   font-size: 13px; color: var(--gold);
 }
 
-.values-head { margin-bottom: 40px; }
+.values-head { margin-bottom: 24px; }
+.values-toggle {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 14px 22px;
+  background: var(--paper);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  font-family: var(--font-sans); font-size: 14px; font-weight: 600;
+  letter-spacing: .02em;
+  transition: background .2s, border-color .2s;
+  margin-bottom: 32px;
+}
+.values-toggle:hover { background: var(--white); border-color: var(--accent); }
 .values-intro { font-size: 14px; color: var(--ink-2); line-height: 2; margin: 16px 0 0; }
 .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
 @media (max-width: 880px) { .values-grid { grid-template-columns: repeat(2, 1fr); } }
