@@ -792,7 +792,7 @@ export default function TreatmentMethodsPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="/contact"
+                  href="/#contact"
                   className="inline-block bg-white text-[#C5A572] px-8 py-4 rounded-full font-bold hover:bg-[#FDFBF7] transition-all duration-300 shadow-lg hover:shadow-xl"
                 >
                   ご予約・お問い合わせ

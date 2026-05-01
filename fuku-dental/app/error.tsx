@@ -77,17 +77,17 @@ export default function Error({
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link
-              href="/reserve"
+              href="/#contact"
               className="text-[#395b45] hover:underline font-medium"
             >
               お問い合わせフォーム
             </Link>
             <span className="hidden sm:inline text-gray-300">|</span>
             <a
-              href="tel:0123-45-6789"
+              href="tel:03-6204-2876"
               className="text-[#395b45] hover:underline font-medium"
             >
-              お電話: 0123-45-6789
+              お電話: 03-6204-2876
             </a>
           </div>
         </div>

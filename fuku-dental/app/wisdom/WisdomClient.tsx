@@ -684,13 +684,13 @@ const WisdomToothPage = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/contact"
+                href="/#contact"
                 className="inline-block bg-white text-[#8B7355] px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-colors duration-300 shadow-lg"
               >
                 ご予約・お問い合わせ
               </Link>
               <Link
-                href="/treatments"
+                href="/"
                 className="inline-block bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-[#8B7355] transition-colors duration-300"
               >
                 その他の診療内容

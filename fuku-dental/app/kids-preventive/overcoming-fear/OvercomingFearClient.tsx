@@ -830,14 +830,14 @@ export default function OvercomingFearPage() {
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <a
-                                href="tel:0120-xxx-xxx"
+                                href="tel:03-6204-2876"
                                 className="inline-flex items-center justify-center gap-2 bg-white text-[#395b45] px-8 py-4 rounded-full font-bold hover:bg-[#FDFBF7] transition-colors shadow-lg"
                             >
                                 <Phone size={20} />
                                 電話で予約
                             </a>
                             <a
-                                href="/contact"
+                                href="/#contact"
                                 className="inline-flex items-center justify-center gap-2 bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-[#395b45] transition-colors"
                             >
                                 <Calendar size={20} />

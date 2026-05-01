@@ -112,7 +112,7 @@ export function DirectorMessageSection() {
 
             <div className="mt-10">
               <Link
-                href="/about/director"
+                href="/"
                 className="inline-flex items-center gap-2 px-8 py-4 bg-[#248cc4] text-white rounded-full font-bold text-lg hover:bg-[#1f7aa8] transition-colors"
               >
                 院長挨拶

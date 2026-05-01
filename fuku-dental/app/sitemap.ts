@@ -10,9 +10,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: '', priority: 1.0, changeFrequency: 'daily' as const },
 
     // 静的ページ
-    { url: '/about', priority: 0.9, changeFrequency: 'monthly' as const },
-    { url: '/contact', priority: 0.9, changeFrequency: 'monthly' as const },
     { url: '/cases', priority: 0.8, changeFrequency: 'weekly' as const },
+    { url: '/case-studies', priority: 0.8, changeFrequency: 'weekly' as const },
+    { url: '/blog', priority: 0.8, changeFrequency: 'weekly' as const },
 
     // インプラント（トピッククラスター）
     { url: '/implant', priority: 0.9, changeFrequency: 'weekly' as const },
@@ -148,6 +148,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // 採用情報
     { url: '/recruit', priority: 0.8, changeFrequency: 'monthly' as const },
+
+    // 追加ページ（孤立解消）
+    { url: '/cavity/stages', priority: 0.7, changeFrequency: 'monthly' as const },
+    { url: '/concerns/bruxism', priority: 0.7, changeFrequency: 'weekly' as const },
+    { url: '/concerns/tmj', priority: 0.7, changeFrequency: 'weekly' as const },
+    { url: '/kids-preventive/brushing', priority: 0.6, changeFrequency: 'monthly' as const },
+    { url: '/kids-preventive/fluoride', priority: 0.6, changeFrequency: 'monthly' as const },
+    { url: '/preventive/cost', priority: 0.7, changeFrequency: 'monthly' as const },
+    { url: '/preventive/fluoride', priority: 0.7, changeFrequency: 'monthly' as const },
   ];
 
   return pages.map((page) => ({

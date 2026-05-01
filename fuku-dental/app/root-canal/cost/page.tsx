@@ -631,14 +631,14 @@ export default function RootCanalCostPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/contact"
+                href="/#contact"
                 className="inline-flex items-center justify-center bg-white text-[#C5A572] px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-50 transition-colors shadow-lg"
               >
                 ご予約・ご相談
                 <ArrowRight className="w-6 h-6 ml-2" />
               </Link>
               <a
-                href="tel:0120-xxx-xxx"
+                href="tel:03-6204-2876"
                 className="inline-flex items-center justify-center bg-white/20 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/30 transition-colors border-2 border-white"
               >
                 お電話でのご予約

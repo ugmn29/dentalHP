@@ -49,7 +49,7 @@ export default function WhiteningComparisonPage() {
             </p>
 
             <a
-              href="/contact"
+              href="/#contact"
               className="inline-flex items-center gap-2 bg-white text-pink-600 px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
             >
               無料カウンセリング予約
@@ -720,7 +720,7 @@ export default function WhiteningComparisonPage() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
-                href="/contact"
+                href="/#contact"
                 className="group bg-white text-pink-600 px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center gap-2"
               >
                 無料カウンセリング予約

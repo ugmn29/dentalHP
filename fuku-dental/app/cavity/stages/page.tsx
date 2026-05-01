@@ -500,7 +500,7 @@ export default function CavityStagesPage() {
                 3〜6ヶ月ごとの検診をお勧めします。
               </p>
               <a
-                href="/contact"
+                href="/#contact"
                 className="inline-block bg-white text-[#C5A572] font-bold py-4 px-8 rounded-full hover:bg-gray-50 transition-colors shadow-lg"
               >
                 ご予約・お問い合わせ

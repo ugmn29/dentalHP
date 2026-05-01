@@ -835,14 +835,14 @@ export default function CeramicCaseStudiesPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
-                  href="/contact"
+                  href="/#contact"
                   className="inline-flex items-center justify-center bg-white text-indigo-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-indigo-50 transition-colors shadow-lg"
                 >
                   無料相談を予約する
                   <ArrowRight className="w-6 h-6 ml-2" />
                 </Link>
                 <Link
-                  href="tel:0312345678"
+                  href="tel:03-6204-2876"
                   className="inline-flex items-center justify-center bg-indigo-700 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-indigo-800 transition-colors border-2 border-white"
                 >
                   電話で相談する

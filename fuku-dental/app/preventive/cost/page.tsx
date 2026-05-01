@@ -458,7 +458,7 @@ export default function PreventiveCostPage() {
                 長期的な健康投資として、予防歯科を始めませんか。
               </p>
               <a
-                href="/contact"
+                href="/#contact"
                 className="inline-block bg-white text-[#C5A572] font-bold py-4 px-8 rounded-full hover:bg-gray-50 transition-colors shadow-lg"
               >
                 ご予約・お問い合わせ

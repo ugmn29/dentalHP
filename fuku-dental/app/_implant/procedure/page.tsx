@@ -331,7 +331,7 @@ export default function ImplantProcedurePage() {
                 無料カウンセリングで個別に詳しくご説明します
               </p>
               <Link
-                href="/contact"
+                href="/#contact"
                 className="inline-flex items-center justify-center bg-white text-blue-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-blue-50 transition-colors shadow-lg"
               >
                 無料相談を予約する

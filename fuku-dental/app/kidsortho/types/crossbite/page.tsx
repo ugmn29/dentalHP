@@ -762,7 +762,7 @@ export default function CrossBiteDetailPage() {
                       <p className="text-sm text-[#8D8070]">平日 9:00〜18:00</p>
                     </div>
                   </div>
-                  <p className="text-3xl font-bold text-[#E67A2E] mb-3">045-XXX-XXXX</p>
+                  <p className="text-3xl font-bold text-[#E67A2E] mb-3">03-6204-2876</p>
                   <p className="text-sm text-[#8D8070]">
                     「こども矯正の相談」とお伝えください
                   </p>
@@ -771,7 +771,7 @@ export default function CrossBiteDetailPage() {
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
-                  href="/contact"
+                  href="/#contact"
                   className="inline-flex items-center justify-center gap-2 bg-[#E67A2E] hover:bg-[#D66A28] text-white font-bold py-4 px-8 rounded-full transition-all transform hover:scale-105 shadow-xl"
                 >
                   <Calendar size={20} />

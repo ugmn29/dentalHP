@@ -418,7 +418,7 @@ export default function CrowdingDetailPage() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                   <Link
-                    href="/contact"
+                    href="/#contact"
                     className="bg-white text-[#C5A572] hover:bg-gray-50 px-8 py-4 rounded-full font-bold flex items-center gap-2 transition-all shadow-md hover:shadow-lg group w-full sm:w-auto justify-center"
                   >
                     <Calendar className="w-5 h-5" />
@@ -426,7 +426,7 @@ export default function CrowdingDetailPage() {
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </Link>
                   <a
-                    href="tel:045-XXX-XXXX"
+                    href="tel:03-6204-2876"
                     className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 px-8 py-4 rounded-full font-bold flex items-center gap-2 transition-all border border-white/30 w-full sm:w-auto justify-center"
                   >
                     <Phone className="w-5 h-5" />

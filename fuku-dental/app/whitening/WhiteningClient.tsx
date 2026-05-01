@@ -54,7 +54,7 @@ export default function WhiteningPage() {
             {/* CTA Button - Bottom Right */}
             <div className="absolute -bottom-8 right-4 md:-bottom-10 md:right-8 z-20 animate-bounce-slow">
               <a
-                href="/contact"
+                href="/#contact"
                 className="group relative flex items-center gap-3 bg-gradient-to-r from-[#9B89B3] to-[#8B7AA3] hover:from-[#AB99C3] hover:to-[#9B89B3] text-white px-6 py-4 md:px-8 md:py-5 rounded-full shadow-2xl hover:shadow-[0_0_30px_rgba(155,137,179,0.6)] transition-all duration-300 transform hover:scale-105"
               >
                 <div className="flex items-center gap-2">
@@ -755,7 +755,7 @@ export default function WhiteningPage() {
                         あなたに最適なプランをご提案します
                       </p>
                       <a
-                        href="/contact"
+                        href="/#contact"
                         className="inline-flex items-center text-white text-sm font-medium bg-white/20 backdrop-blur-sm px-4 py-2 rounded-lg hover:bg-white/30 transition-colors"
                       >
                         今すぐ予約
@@ -781,7 +781,7 @@ export default function WhiteningPage() {
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center max-w-2xl mx-auto">
               <a
-                href="/contact"
+                href="/#contact"
                 className="bg-[#C5A572] hover:bg-[#B59562] text-white px-8 py-5 rounded-full font-bold shadow-lg transition-all flex items-center justify-center gap-3 text-lg flex-1 group"
               >
                 <Calendar className="group-hover:rotate-12 transition" />

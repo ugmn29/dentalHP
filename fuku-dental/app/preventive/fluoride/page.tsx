@@ -458,7 +458,7 @@ export default function FluoridePage() {
                 定期的な塗布で、健康な歯を長く維持できます。
               </p>
               <a
-                href="/contact"
+                href="/#contact"
                 className="inline-block bg-white text-[#C5A572] font-bold py-4 px-8 rounded-full hover:bg-gray-50 transition-colors shadow-lg"
               >
                 ご予約・お問い合わせ

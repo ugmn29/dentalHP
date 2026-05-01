@@ -49,7 +49,7 @@ export function ConsultationSection() {
             <div className="absolute left-[20px] right-[20px] top-[547.86px] space-y-[10px] flex flex-col items-center">
               {/* 電話ボタン */}
               <Link
-                href="tel:045-370-7222"
+                href="tel:03-6204-2876"
                 className="w-[195px] h-[57.19px] flex flex-col items-center justify-center rounded-sm"
                 style={{
                   background: 'linear-gradient(to top, #8f7a26, #aa912d)',
@@ -61,14 +61,14 @@ export function ConsultationSection() {
                 <div className="flex items-center gap-2">
                   <Phone className="w-[16px] h-[16px] text-white" fill="white" />
                   <div className="text-white text-[21.5px] font-bold tracking-[1.28px] leading-[32.17px]" style={{ fontFamily: 'Times New Roman, serif' }}>
-                    045-370-7222
+                    03-6204-2876
                   </div>
                 </div>
               </Link>
 
               {/* WEB予約ボタン */}
               <Link
-                href="/contact"
+                href="/#contact"
                 className="w-[195px] h-[57.19px] flex flex-col items-center justify-center rounded-sm relative"
                 style={{
                   background: 'linear-gradient(to top, #113161, #174180)',
@@ -118,14 +118,14 @@ export function ConsultationSection() {
             </p>
             <div className="flex gap-4 justify-center">
               <Link
-                href="tel:045-370-7222"
+                href="tel:03-6204-2876"
                 className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-b from-[#aa912d] to-[#8f7a26] text-white rounded-lg font-bold text-lg hover:opacity-90 transition-opacity"
               >
                 <Phone className="w-5 h-5" />
-                045-370-7222
+                03-6204-2876
               </Link>
               <Link
-                href="/contact"
+                href="/#contact"
                 className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-b from-[#174180] to-[#113161] text-white rounded-lg font-bold text-lg hover:opacity-90 transition-opacity"
               >
                 <Calendar className="w-5 h-5" />

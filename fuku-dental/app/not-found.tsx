@@ -74,7 +74,7 @@ export default function NotFound() {
         {/* Contact Info */}
         <div className="mt-8 p-6 bg-gray-50 rounded-lg">
           <p className="text-sm text-gray-600 mb-2">お電話でのお問い合わせ</p>
-          <p className="text-2xl font-bold text-[#5A4D41]">0123-45-6789</p>
+          <p className="text-2xl font-bold text-[#5A4D41]">03-6204-2876</p>
           <p className="text-xs text-gray-500 mt-2">
             平日 10:00-18:30 / 土日 9:00-16:00（火曜・祝日休診）
           </p>
