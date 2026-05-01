@@ -144,11 +144,11 @@ export default function Home() {
               <p className="hero__date">2026.07.01 NEW OPEN</p>
 
               <div className="hero__ctas">
-                <a className="hero__cta" href="/#contact">
+                <span className="hero__cta hero__cta--disabled" aria-disabled="true" title="WEB予約は準備中です">
                   <Calendar size={16} />
                   <span>WEB予約はこちら</span>
-                  <span className="hero__cta-arrow" aria-hidden="true">→</span>
-                </a>
+                  <span className="hero__cta-badge">準備中</span>
+                </span>
                 <a className="hero__cta hero__cta--ghost" href="tel:03-6204-2876">
                   <Phone size={16} />
                   <span>03-6204-2876</span>
@@ -545,16 +545,16 @@ export default function Home() {
               WEBまたはお電話にて、お気軽にご予約ください。
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
-              <a
-                href="https://www.metricool.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-10 py-5 text-sm font-medium tracking-widest rounded-full transition"
-                style={{ background: '#fff', color: ACCENT_DARK }}
+              <span
+                aria-disabled="true"
+                title="WEB予約は準備中です"
+                className="inline-flex items-center justify-center gap-2 px-10 py-5 text-sm font-medium tracking-widest rounded-full"
+                style={{ background: '#ffffff80', color: ACCENT_DARK, cursor: 'not-allowed' }}
               >
                 <Calendar size={16} />
                 24時間 WEB予約
-              </a>
+                <span className="ml-1 text-[10px] tracking-normal px-2 py-0.5 rounded-full" style={{ background: '#FFFFFF40', color: '#fff' }}>準備中</span>
+              </span>
               <a
                 href="tel:03-6204-2876"
                 className="inline-flex items-center justify-center gap-2 px-10 py-5 text-sm font-medium tracking-widest rounded-full transition"
@@ -571,17 +571,17 @@ export default function Home() {
         </section>
       </main>
 
-      {/* ============ 固定CTA（右下浮きボタン）— デスクトップのみ ============ */}
-      <a
-        href="/#contact"
-        className="hidden md:inline-flex fixed right-6 bottom-6 z-50 items-center gap-2 px-6 py-3.5 text-sm font-medium rounded-full transition"
-        style={{ background: ACCENT_DARK, color: '#fff', boxShadow: '0 10px 28px rgba(10,138,133,0.35), 0 2px 6px rgba(0,0,0,0.12)' }}
-        onMouseOver={e => (e.currentTarget.style.background = ACCENT_DEEP)}
-        onMouseOut={e => (e.currentTarget.style.background = ACCENT_DARK)}
+      {/* ============ 固定CTA（右下浮きボタン）— デスクトップのみ・準備中 ============ */}
+      <span
+        aria-disabled="true"
+        title="WEB予約は準備中です"
+        className="hidden md:inline-flex fixed right-6 bottom-6 z-50 items-center gap-2 px-6 py-3.5 text-sm font-medium rounded-full"
+        style={{ background: ACCENT_DARK, color: '#fff', boxShadow: '0 10px 28px rgba(10,138,133,0.25), 0 2px 6px rgba(0,0,0,0.12)', opacity: 0.75, cursor: 'not-allowed' }}
       >
         <Calendar size={16} />
         WEB予約
-      </a>
+        <span className="text-[9px] tracking-normal px-1.5 py-0.5 rounded-full ml-0.5" style={{ background: '#FFFFFF30' }}>準備中</span>
+      </span>
 
       <Footer />
     </div>

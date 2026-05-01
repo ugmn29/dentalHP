@@ -186,9 +186,10 @@ export const Footer = () => {
                     <Phone size={18} />
                     <span className="text-[10px] font-medium tracking-wider">電話予約</span>
                 </a>
-                <a href="/#contact" className="flex-[1.5] flex items-center justify-center transition" style={{ background: ACCENT_DARK, color: '#fff' }}>
+                <span aria-disabled="true" title="WEB予約は準備中です" className="flex-[1.5] flex items-center justify-center gap-2" style={{ background: ACCENT_DARK, color: '#fff', opacity: 0.75, cursor: 'not-allowed' }}>
                     <span className="text-sm font-medium tracking-wider">24時間 WEB予約</span>
-                </a>
+                    <span className="text-[10px] tracking-normal px-1.5 py-0.5 rounded-full" style={{ background: '#FFFFFF30' }}>準備中</span>
+                </span>
             </div>
         </>
     );
