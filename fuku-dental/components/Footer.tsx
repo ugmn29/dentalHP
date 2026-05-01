@@ -1,233 +1,193 @@
 "use client";
 
-import React, { useState } from 'react';
-import { MapPin, Phone, Calendar, ChevronDown, ChevronUp } from 'lucide-react';
-import { WaveTop } from './Wave';
-import { GiTooth } from 'react-icons/gi';
-import { FaBaby, FaChild, FaShieldAlt, FaStar, FaSmile, FaSun, FaInstagram, FaYoutube, FaTiktok } from 'react-icons/fa';
-import { MdBuild, MdLocalHospital } from 'react-icons/md';
-import { BiWind } from 'react-icons/bi';
+import { Phone } from 'lucide-react';
+import { FaInstagram, FaYoutube, FaTiktok } from 'react-icons/fa';
+
+// 新デザイン用カラートークン（HomeClientと同期）
+const ACCENT = '#0abab5';        // Bright Tiffany blue (decorative)
+const ACCENT_DARK = '#0a8a85';   // Button/CTA bg (white text safe)
+const PAGE_BG = '#FAFAF7';
+const SURFACE = '#FFFFFF';
+const TEXT = '#2C2C2A';
+const TEXT_MUTED = '#6B6B68';
+const LINE = '#E6E3DC';
+
+const treatmentLinks = [
+    { name: "こども矯正", link: "/kidsortho" },
+    { name: "０歳からの口育", link: "/oral-education" },
+    { name: "こども歯科・予防", link: "/kids-preventive" },
+    { name: "セラミック治療", link: "/ceramic" },
+    { name: "マウスピース矯正", link: "/mouthpiece" },
+    { name: "矯正歯科", link: "/orthodontics" },
+    { name: "インプラント", link: "/implant" },
+    { name: "ホワイトニング", link: "/whitening" },
+    { name: "予防歯科", link: "/preventive" },
+    { name: "口臭治療", link: "/general/bad-breath" },
+    { name: "むしば治療", link: "/cavity" },
+    { name: "根管治療", link: "/root-canal" },
+];
+
+const aboutLinks = [
+    { name: "症例紹介", link: "/case-studies" },
+    { name: "院内設備", link: "/facilities" },
+    { name: "料金表", link: "/price" },
+    { name: "ブログ・お知らせ", link: "/blog" },
+    { name: "採用情報", link: "/recruit" },
+];
 
 export const Footer = () => {
-    const [isTreatmentMenuOpen, setIsTreatmentMenuOpen] = useState(true);
-    const [isConcernsMenuOpen, setIsConcernsMenuOpen] = useState(false);
-
-    const treatmentMenuItems = [
-        { name: "こども矯正", link: "/kidsortho", icon: FaChild },
-        { name: "０歳からの口育", link: "/oral-education", icon: FaBaby },
-        { name: "こども歯科・予防", link: "/kids-preventive", icon: FaShieldAlt },
-        { name: "セラミック治療", link: "/ceramic", icon: FaStar },
-        { name: "マウスピース矯正", link: "/mouthpiece", icon: FaSmile },
-        { name: "矯正歯科", link: "/orthodontics", icon: MdBuild },
-        { name: "インプラント", link: "/implant", icon: GiTooth },
-        { name: "ホワイトニング", link: "/whitening", icon: FaSun },
-        { name: "予防歯科", link: "/preventive", icon: FaShieldAlt },
-        { name: "口臭治療", link: "/general/bad-breath", icon: BiWind },
-        { name: "むしば治療", link: "/cavity", icon: MdLocalHospital },
-        { name: "根管治療", link: "/root-canal", icon: GiTooth },
-        // 一旦非表示（復活時はコメント解除）
-        // { name: "歯周病治療", link: "/periodontal", icon: MdLocalHospital },
-        // { name: "親知らず抜歯", link: "/wisdom", icon: GiTooth },
-    ];
-
-    const concernsItems = [
-        { name: "歯の外傷・急患", link: "/concerns/trauma" },
-        { name: "歯ぎしり・食いしばり", link: "/concerns/bruxism" },
-        { name: "顎関節症", link: "/concerns/tmj" },
-        { name: "口腔外科・トラブル", link: "/concerns/oral-surgery" },
-    ];
-
     return (
         <>
-            {/* --- Footer --- */}
-            <footer className="bg-[#F5F8F8] text-[#5A4D41] pt-8 pb-20 md:pb-8 relative font-sans" style={{ fontFamily: 'sans-serif' }}>
-                <div className="container mx-auto px-4">
-                    {/* Access & Hours Section */}
-                    <div className="mb-16">
-                        <div className="text-center mb-10">
-                            <h2 className="text-2xl md:text-3xl font-bold text-[#5A4D41] mb-2">アクセス・診療時間</h2>
-                            <p className="text-sm text-[#8D8070]">Access & Office Hours</p>
+            <footer className="font-sans" style={{ background: PAGE_BG, color: TEXT, borderTop: `1px solid ${LINE}` }}>
+                {/* ===== Section 1: Access & Schedule ===== */}
+                <div className="max-w-6xl mx-auto px-5 pt-20 md:pt-24 pb-16">
+                    <div className="text-center mb-12">
+                        <p className="text-[11px] tracking-[0.3em] mb-4" style={{ color: ACCENT_DARK }}>ACCESS</p>
+                        <h2 className="font-serif text-3xl md:text-4xl font-light" style={{ color: TEXT }}>アクセス・診療時間</h2>
+                    </div>
+
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+                        {/* Map + NAP */}
+                        <div>
+                            <div className="aspect-video rounded-2xl overflow-hidden" style={{ border: `1px solid ${LINE}` }}>
+                                <iframe
+                                    src="https://www.google.com/maps?q=東京都江東区豊洲5-6-36&output=embed"
+                                    width="100%" height="100%" style={{ border: 0 }}
+                                    allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"
+                                />
+                            </div>
+                            <div className="mt-6">
+                                <p className="font-serif text-lg mb-2" style={{ color: TEXT }}>Fデンタルオフィス 豊洲プライムスクエア院</p>
+                                <p className="text-sm leading-[2]" style={{ color: TEXT_MUTED }}>
+                                    〒135-0061 東京都江東区豊洲5-6-36<br />
+                                    豊洲プライムスクエア1階<br />
+                                    <span style={{ color: ACCENT_DARK }}>●</span> 豊洲駅 6a出口 徒歩2分 / 提携駐車場あり
+                                </p>
+                                <a href="tel:03-6204-2876" className="inline-flex items-center gap-2 mt-4 text-sm font-medium" style={{ color: ACCENT_DARK }}>
+                                    <Phone size={16} />
+                                    03-6204-2876
+                                </a>
+                            </div>
                         </div>
 
-                        <div className="flex flex-col lg:flex-row gap-8 max-w-6xl mx-auto">
-                            {/* Map Section */}
-                            <div className="w-full lg:w-1/2 space-y-4">
-                                <div className="aspect-video bg-gray-100 rounded-2xl overflow-hidden shadow-lg relative border-2 border-[#D0E8E8]">
-                                    <iframe
-                                        src="https://www.google.com/maps?q=東京都江東区豊洲5-6-36&output=embed"
-                                        width="100%"
-                                        height="100%"
-                                        style={{ border: 0 }}
-                                        allowFullScreen={true}
-                                        loading="lazy"
-                                        referrerPolicy="no-referrer-when-downgrade"
-                                    ></iframe>
-                                </div>
-                                <div className="px-2">
-                                    <p className="font-bold text-[#5A4D41] text-lg mb-1" style={{ fontFamily: 'Georgia, "Yu Mincho", "Hiragino Mincho ProN", serif' }}>Fデンタルオフィス 豊洲プライムスクエア院</p>
-                                    <p className="text-sm text-[#8D8070]">
-                                        〒135-0061 東京都江東区豊洲5-6-36 豊洲プライムスクエア1階<br />
-                                        豊洲駅 徒歩2分 / 提携駐車場あり
-                                    </p>
-                                </div>
-                            </div>
-
-                            {/* Hours Table */}
-                            <div className="w-full lg:w-1/2 font-sans">
-                                <div className="overflow-x-auto">
-                                    <table className="w-full border-collapse text-base md:text-lg font-sans" style={{ fontWeight: '300' }}>
-                                        <thead>
-                                            <tr className="bg-white">
-                                                <th className="py-4 px-3 text-left font-medium border-b border-gray-200 text-[#5A4D41] w-[30%]">診療時間</th>
-                                                <th className="py-4 px-2 text-center font-medium border-b border-gray-200 text-[#5A4D41] w-[10%]">月</th>
-                                                <th className="py-4 px-2 text-center font-medium border-b border-gray-200 text-[#5A4D41] w-[10%]">火</th>
-                                                <th className="py-4 px-2 text-center font-medium border-b border-gray-200 text-[#5A4D41] w-[10%]">水</th>
-                                                <th className="py-4 px-2 text-center font-medium border-b border-gray-200 text-[#5A4D41] w-[10%]">木</th>
-                                                <th className="py-4 px-2 text-center font-medium border-b border-gray-200 text-[#5A4D41] w-[10%]">金</th>
-                                                <th className="py-4 px-2 text-center font-medium border-b border-gray-200 text-[#5A4D41] w-[10%]">土</th>
-                                                <th className="py-4 px-2 pr-3 text-center font-medium border-b border-gray-200 text-[#5A4D41] w-[10%]">日</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody className="bg-white">
-                                            <tr className="border-b border-gray-200">
-                                                <td className="py-5 px-3 text-left font-normal text-[#5A4D41] text-base md:text-lg whitespace-nowrap" style={{ fontStyle: 'normal', fontFamily: 'sans-serif', fontWeight: '400' }}>10:00-13:00</td>
-                                                <td className="py-5 px-2 text-center text-[#5A4D41] text-lg font-light">●</td>
-                                                <td className="py-5 px-2 text-center text-gray-300 text-lg font-light">−</td>
-                                                <td className="py-5 px-2 text-center text-[#5A4D41] text-lg font-light">●</td>
-                                                <td className="py-5 px-2 text-center text-[#5A4D41] text-lg font-light">●</td>
-                                                <td className="py-5 px-2 text-center text-[#5A4D41] text-lg font-light">●</td>
-                                                <td className="py-5 px-2 text-center text-[#5A4D41] font-medium">★</td>
-                                                <td className="py-5 px-2 pr-3 text-center text-[#5A4D41] font-medium">★</td>
-                                            </tr>
-                                            <tr className="border-b border-gray-200">
-                                                <td className="py-5 px-3 text-left font-normal text-[#5A4D41] text-base md:text-lg whitespace-nowrap" style={{ fontStyle: 'normal', fontFamily: 'sans-serif', fontWeight: '400' }}>14:00-19:00</td>
-                                                <td className="py-5 px-2 text-center text-[#5A4D41] text-lg font-light">●</td>
-                                                <td className="py-5 px-2 text-center text-gray-300 text-lg font-light">−</td>
-                                                <td className="py-5 px-2 text-center text-[#5A4D41] text-lg font-light">●</td>
-                                                <td className="py-5 px-2 text-center text-[#5A4D41] text-lg font-light">●</td>
-                                                <td className="py-5 px-2 text-center text-[#5A4D41] text-lg font-light">●</td>
-                                                <td className="py-5 px-2 text-center text-[#5A4D41] font-medium">★</td>
-                                                <td className="py-5 px-2 pr-3 text-center text-[#5A4D41] font-medium">★</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <div className="mt-6 space-y-1 text-sm md:text-base text-[#5A4D41] text-center font-sans font-light">
-                                    <p style={{ fontStyle: 'normal', fontFamily: 'sans-serif', fontWeight: '300' }}><span className="text-[#5A4D41] font-medium text-xl">★</span> 土日：9:00-12:00 / 13:00-17:00</p>
-                                    <p className="font-medium text-[#5A4D41] mt-3" style={{ fontFamily: 'sans-serif', fontWeight: '500' }}>休診日：火曜日</p>
-                                </div>
+                        {/* Schedule */}
+                        <div className="rounded-2xl p-6 md:p-8" style={{ background: SURFACE, border: `1px solid ${LINE}` }}>
+                            <h3 className="font-serif text-xl mb-6 text-center" style={{ color: TEXT }}>診療時間</h3>
+                            <table className="w-full text-center table-fixed border-collapse text-sm">
+                                <thead>
+                                    <tr style={{ borderBottom: `1px solid ${LINE}` }}>
+                                        <th className="py-3 font-normal text-xs" style={{ color: TEXT_MUTED }}>診療時間</th>
+                                        <th className="py-3 font-medium" style={{ color: TEXT }}>月</th>
+                                        <th className="py-3 font-medium" style={{ color: TEXT }}>火</th>
+                                        <th className="py-3 font-medium" style={{ color: TEXT }}>水</th>
+                                        <th className="py-3 font-medium" style={{ color: TEXT }}>木</th>
+                                        <th className="py-3 font-medium" style={{ color: TEXT }}>金</th>
+                                        <th className="py-3 font-medium" style={{ color: ACCENT_DARK }}>土</th>
+                                        <th className="py-3 font-medium" style={{ color: ACCENT_DARK }}>日</th>
+                                    </tr>
+                                </thead>
+                                <tbody className="text-base">
+                                    <tr style={{ borderBottom: `1px solid ${LINE}` }}>
+                                        <td className="py-4 text-xs" style={{ color: TEXT_MUTED }}>10:00–13:00</td>
+                                        <td>●</td><td style={{ opacity: 0.2 }}>−</td><td>●</td><td>●</td><td>●</td>
+                                        <td className="text-sm" style={{ color: ACCENT_DARK }}>★</td>
+                                        <td className="text-sm" style={{ color: ACCENT_DARK }}>★</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="py-4 text-xs" style={{ color: TEXT_MUTED }}>14:00–19:00</td>
+                                        <td>●</td><td style={{ opacity: 0.2 }}>−</td><td>●</td><td>●</td><td>●</td>
+                                        <td className="text-sm" style={{ color: ACCENT_DARK }}>★</td>
+                                        <td className="text-sm" style={{ color: ACCENT_DARK }}>★</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div className="mt-5 text-xs space-y-1 text-center" style={{ color: TEXT_MUTED }}>
+                                <p>★ 土日：9:00–12:00 / 13:00–17:00</p>
+                                <p style={{ color: ACCENT_DARK, fontWeight: 600 }}>休診日：火曜日</p>
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    {/* Footer Links Section */}
-                    <div className="border-t border-[#D0E8E8] pt-4 pb-8">
-                        <div className="max-w-md mx-auto">
-                            {/* SNS Buttons */}
-                            <div className="flex gap-4 justify-center mb-8">
-                                <a
-                                    href="https://www.instagram.com/f.dentaloffice.toyosu"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    aria-label="Instagram"
-                                    className="w-12 h-12 bg-[#D0E8E8] hover:bg-[#8B92AB] hover:text-white text-[#5A4D41] rounded-full flex items-center justify-center transition shadow-md"
-                                >
-                                    <FaInstagram size={20} />
-                                </a>
-                                <a
-                                    href="https://www.youtube.com/@tadanodentist"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    aria-label="YouTube"
-                                    className="w-12 h-12 bg-[#D0E8E8] hover:bg-[#8B92AB] hover:text-white text-[#5A4D41] rounded-full flex items-center justify-center transition shadow-md"
-                                >
-                                    <FaYoutube size={20} />
-                                </a>
-                                <a
-                                    href="https://www.tiktok.com/@subtadanodentist"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    aria-label="TikTok"
-                                    className="w-12 h-12 bg-[#D0E8E8] hover:bg-[#8B92AB] hover:text-white text-[#5A4D41] rounded-full flex items-center justify-center transition shadow-md"
-                                >
-                                    <FaTiktok size={18} />
-                                </a>
-                            </div>
-
-                            {/* Quick Links */}
-                            <p className="font-bold mb-6 text-[#5A4D41] text-left md:text-center">Quick Links</p>
-                            <ul className="space-y-3 text-sm text-[#8D8070] font-medium text-left md:text-center">
-                                <li><a href="/" className="hover:text-[#8B92AB] transition block">ホーム</a></li>
-                                <li className="pt-2">
-                                    <p className="text-xs text-[#B0A69A] mb-2">専門サイト</p>
-                                    <ul className="space-y-2 pl-3">
-                                        <li><a href="/kidsortho" className="hover:text-[#8B92AB] transition block">こども矯正サイト</a></li>
-                                        <li><a href="/ceramic" className="hover:text-[#8B92AB] transition block">審美歯科サイト</a></li>
-                                    </ul>
-                                </li>
-                                <li className="pt-2">
-                                    <div
-                                        onClick={() => setIsTreatmentMenuOpen(!isTreatmentMenuOpen)}
-                                        className="flex items-center justify-between cursor-pointer hover:text-[#8B92AB] transition"
-                                    >
-                                        <span>診療メニュー一覧</span>
-                                        {isTreatmentMenuOpen ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
-                                    </div>
-                                    <div className={`grid grid-cols-2 gap-x-3 gap-y-2 mt-2 pl-3 overflow-hidden transition-all duration-300 ${isTreatmentMenuOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}>
-                                        {treatmentMenuItems.map((item, i) => {
-                                            const Icon = item.icon;
-                                            return (
-                                                <a key={i} href={item.link} className="text-xs hover:text-[#8B92AB] transition flex items-center gap-1.5">
-                                                    <Icon className="text-[#8B92AB] flex-shrink-0" size={12} />
-                                                    <span>{item.name}</span>
-                                                </a>
-                                            );
-                                        })}
-                                    </div>
-                                </li>
-                                <li className="pt-2">
-                                    <div
-                                        onClick={() => setIsConcernsMenuOpen(!isConcernsMenuOpen)}
-                                        className="flex items-center justify-between cursor-pointer hover:text-[#E67A2E] transition"
-                                    >
-                                        <span>お悩み相談</span>
-                                        {isConcernsMenuOpen ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
-                                    </div>
-                                    <div className={`grid grid-cols-2 gap-x-3 gap-y-2 mt-2 pl-3 overflow-hidden transition-all duration-300 ${isConcernsMenuOpen ? 'max-h-[300px] opacity-100' : 'max-h-0 opacity-0'}`}>
-                                        {concernsItems.map((item, i) => (
-                                            <a key={i} href={item.link} className="text-xs hover:text-[#E67A2E] transition block">
+                {/* ===== Section 2: Site Links ===== */}
+                <div style={{ borderTop: `1px solid ${LINE}` }}>
+                    <div className="max-w-6xl mx-auto px-5 py-14 md:py-16">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-14">
+                            <div>
+                                <p className="text-[11px] tracking-[0.3em] mb-5" style={{ color: ACCENT_DARK }}>TREATMENT</p>
+                                <ul className="space-y-3">
+                                    {treatmentLinks.map((item) => (
+                                        <li key={item.link}>
+                                            <a href={item.link} className="text-sm transition" style={{ color: TEXT_MUTED }} onMouseOver={e => (e.currentTarget.style.color = ACCENT_DARK)} onMouseOut={e => (e.currentTarget.style.color = TEXT_MUTED)}>
                                                 {item.name}
                                             </a>
-                                        ))}
-                                    </div>
-                                </li>
-                                <li><a href="/case-studies" className="hover:text-[#8B92AB] transition block">症例紹介</a></li>
-                                <li><a href="#" className="hover:text-[#8B92AB] transition block">ドクター紹介</a></li>
-                                <li><a href="/price" className="hover:text-[#8B92AB] transition block">料金表</a></li>
-                                <li><a href="/blog" className="hover:text-[#8B92AB] transition block">ブログ・お知らせ</a></li>
-                                <li><a href="/facilities" className="hover:text-[#8B92AB] transition block">院内設備</a></li>
-                                <li><a href="/recruit" className="hover:text-[#8B92AB] transition block">採用情報</a></li>
-                                <li><a href="#" className="hover:text-[#8B92AB] transition block">アクセス・診療時間</a></li>
-                            </ul>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+
+                            <div>
+                                <p className="text-[11px] tracking-[0.3em] mb-5" style={{ color: TEXT_MUTED }}>ABOUT</p>
+                                <ul className="space-y-3">
+                                    <li>
+                                        <a href="/" className="text-sm transition" style={{ color: TEXT_MUTED }} onMouseOver={e => (e.currentTarget.style.color = ACCENT_DARK)} onMouseOut={e => (e.currentTarget.style.color = TEXT_MUTED)}>ホーム</a>
+                                    </li>
+                                    {aboutLinks.map((item) => (
+                                        <li key={item.link}>
+                                            <a href={item.link} className="text-sm transition" style={{ color: TEXT_MUTED }} onMouseOver={e => (e.currentTarget.style.color = ACCENT_DARK)} onMouseOut={e => (e.currentTarget.style.color = TEXT_MUTED)}>
+                                                {item.name}
+                                            </a>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+
+                            <div>
+                                <p className="text-[11px] tracking-[0.3em] mb-5" style={{ color: TEXT_MUTED }}>FOLLOW</p>
+                                <div className="flex gap-3 mb-6">
+                                    <a href="https://www.instagram.com/f.dentaloffice.toyosu" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
+                                        className="w-10 h-10 rounded-full flex items-center justify-center transition" style={{ border: `1px solid ${LINE}`, color: TEXT }}
+                                        onMouseOver={e => { e.currentTarget.style.background = ACCENT_DARK; e.currentTarget.style.color = '#fff'; e.currentTarget.style.borderColor = ACCENT_DARK; }}
+                                        onMouseOut={e => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = TEXT; e.currentTarget.style.borderColor = LINE; }}>
+                                        <FaInstagram size={16} />
+                                    </a>
+                                    <a href="https://www.youtube.com/@tadanodentist" target="_blank" rel="noopener noreferrer" aria-label="YouTube"
+                                        className="w-10 h-10 rounded-full flex items-center justify-center transition" style={{ border: `1px solid ${LINE}`, color: TEXT }}
+                                        onMouseOver={e => { e.currentTarget.style.background = ACCENT_DARK; e.currentTarget.style.color = '#fff'; e.currentTarget.style.borderColor = ACCENT_DARK; }}
+                                        onMouseOut={e => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = TEXT; e.currentTarget.style.borderColor = LINE; }}>
+                                        <FaYoutube size={16} />
+                                    </a>
+                                    <a href="https://www.tiktok.com/@subtadanodentist" target="_blank" rel="noopener noreferrer" aria-label="TikTok"
+                                        className="w-10 h-10 rounded-full flex items-center justify-center transition" style={{ border: `1px solid ${LINE}`, color: TEXT }}
+                                        onMouseOver={e => { e.currentTarget.style.background = ACCENT_DARK; e.currentTarget.style.color = '#fff'; e.currentTarget.style.borderColor = ACCENT_DARK; }}
+                                        onMouseOut={e => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = TEXT; e.currentTarget.style.borderColor = LINE; }}>
+                                        <FaTiktok size={14} />
+                                    </a>
+                                </div>
+                                <p className="text-xs leading-[2]" style={{ color: TEXT_MUTED }}>
+                                    最新情報・症例・院内の様子は<br />SNSで発信しています。
+                                </p>
+                            </div>
                         </div>
                     </div>
+                </div>
 
-                    <div className="border-t border-[#D0E8E8] pt-8 text-center text-xs text-[#B0A69A]">
+                {/* ===== Bottom: Copyright ===== */}
+                <div style={{ borderTop: `1px solid ${LINE}` }}>
+                    <div className="max-w-6xl mx-auto px-5 py-6 text-center text-xs" style={{ color: TEXT_MUTED }}>
                         © Fuku Dental Clinic All Rights Reserved.
                     </div>
                 </div>
             </footer>
 
-            {/* --- Sticky Bottom Tabs (Mobile & Tablet) --- */}
-            <div className="fixed bottom-0 left-0 right-0 z-50 flex md:hidden h-[70px] shadow-[0_-4px_20px_rgba(0,0,0,0.1)]">
-                {/* Phone Tab */}
-                <a href="tel:03-1234-5678" className="flex-1 bg-white/95 backdrop-blur-sm text-[#8D8070] flex flex-col items-center justify-center gap-1 border-t border-gray-200 hover:bg-gray-50 transition group">
-                    <Phone size={20} className="group-hover:scale-110 transition text-[#5A4D41]" />
-                    <span className="text-[10px] font-bold">電話予約</span>
+            {/* ===== Sticky Bottom Tabs (Mobile) ===== */}
+            <div className="fixed bottom-0 left-0 right-0 z-40 flex md:hidden h-[64px]" style={{ borderTop: `1px solid ${LINE}` }}>
+                <a href="tel:03-6204-2876" className="flex-1 flex flex-col items-center justify-center gap-1 transition" style={{ background: SURFACE, color: TEXT }}>
+                    <Phone size={18} />
+                    <span className="text-[10px] font-medium tracking-wider">電話予約</span>
                 </a>
-                {/* Web Reserve Tab */}
-                <a href="#" className="flex-[1.5] bg-[#A03F2B] text-white flex items-center justify-center hover:opacity-95 transition group">
-                    <span className="text-lg font-bold">24時間WEB予約</span>
+                <a href="/#contact" className="flex-[1.5] flex items-center justify-center transition" style={{ background: ACCENT_DARK, color: '#fff' }}>
+                    <span className="text-sm font-medium tracking-wider">24時間 WEB予約</span>
                 </a>
             </div>
         </>

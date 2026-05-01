@@ -1,0 +1,237 @@
+/* ============================================================
+   ヒーローセクション スタイル — Pattern B（画像と文字を分離）
+   PC: 左に画像 / 右に文字 の2カラム
+   モバイル: 上に画像 / 下に文字 の縦積み
+   ============================================================ */
+
+.hero {
+  /* ▼ 調整可能な変数 ▼ */
+  --hero-bg: url("/images/hero-bg.png");
+  --hero-image-position: 50% center;
+  --hero-font-serif: "Noto Serif JP", "游明朝", "Yu Mincho", "ヒラギノ明朝 ProN", serif;
+  --hero-font-latin: "Cormorant Garamond", serif;
+  --hero-text: #2C2C2A;
+  --hero-overline: #6B6B68;
+  --hero-accent: #0a8a85;
+  --hero-cta-bg: #0a8a85;
+  --hero-cta-text: #ffffff;
+  --hero-content-bg: #FAFAF7;
+  /* ▲ 調整可能な変数 ▲ */
+
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100svh;
+  background-color: var(--hero-content-bg);
+  font-family: var(--hero-font-serif);
+  color: var(--hero-text);
+  font-feature-settings: "palt" 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+}
+
+/* === Image Side === */
+.hero__image-area {
+  position: relative;
+  overflow: hidden;
+  min-height: 50vh;
+}
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  background-image: var(--hero-bg);
+  background-size: cover;
+  background-position: var(--hero-image-position);
+  background-repeat: no-repeat;
+  animation: heroKenBurns 24s ease-out infinite alternate;
+}
+@keyframes heroKenBurns {
+  from { transform: scale(1.00); }
+  to   { transform: scale(1.05); }
+}
+
+/* === Content Side === */
+.hero__content-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(2rem, 5vw, 4.5rem) clamp(2rem, 5vw, 4rem);
+  background-color: var(--hero-content-bg);
+}
+
+.hero__content {
+  width: 100%;
+  max-width: 540px;
+  text-align: left;
+}
+
+.hero__overline {
+  font-size: clamp(0.85rem, 1vw, 1rem);
+  letter-spacing: 0.5em;
+  text-indent: 0.5em;
+  color: var(--hero-overline);
+  margin: 0 0 clamp(1.2rem, 2.4vw, 1.8rem);
+  font-weight: 400;
+  opacity: 0;
+  animation: heroFadeUp 1s ease-out 0.2s forwards;
+}
+
+.hero__title {
+  font-size: clamp(1.7rem, 3.4vw, 3rem);
+  line-height: 1.65;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  margin: 0 0 clamp(1.5rem, 2.4vw, 1.8rem);
+  opacity: 0;
+  animation: heroFadeUp 1.2s ease-out 0.6s forwards;
+}
+.hero__title-line { display: block; }
+.hero__title-accent {
+  color: var(--hero-accent);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.hero__seo {
+  font-size: clamp(0.95rem, 1.15vw, 1.15rem);
+  color: var(--hero-text);
+  letter-spacing: 0.08em;
+  margin: 0 0 clamp(1rem, 2vw, 1.4rem);
+  line-height: 1.95;
+  font-weight: 500;
+  opacity: 0;
+  animation: heroFadeUp 1.1s ease-out 0.4s forwards;
+}
+
+.hero__date {
+  font-family: var(--hero-font-latin);
+  font-size: clamp(1rem, 1.5vw, 1.35rem);
+  color: var(--hero-accent);
+  letter-spacing: 0.2em;
+  margin: 0 0 clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 400;
+  font-style: italic;
+  opacity: 0;
+  animation: heroFadeUp 1s ease-out 0.7s forwards;
+}
+
+.hero__ctas {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  align-items: stretch;
+  opacity: 0;
+  animation: heroFadeUp 1s ease-out 0.85s forwards;
+}
+@media (min-width: 480px) {
+  .hero__ctas { flex-direction: row; gap: 0.9rem; align-items: center; }
+}
+
+.hero__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55em;
+  padding: 0.95em 1.8em;
+  background: var(--hero-cta-bg);
+  color: var(--hero-cta-text);
+  text-decoration: none;
+  font-family: var(--hero-font-serif);
+  font-size: clamp(0.85rem, 0.95vw, 0.92rem);
+  letter-spacing: 0.2em;
+  text-indent: 0.2em;
+  border-radius: 999px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.3s ease;
+  box-shadow: 0 6px 20px -10px rgba(10, 138, 133, 0.45);
+  white-space: nowrap;
+}
+.hero__cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px -10px rgba(10, 138, 133, 0.55);
+  background: #066b67;
+}
+.hero__cta-arrow { display: inline-block; transition: transform 0.3s ease; }
+.hero__cta:hover .hero__cta-arrow { transform: translateX(4px); }
+
+.hero__cta--ghost {
+  background: transparent;
+  color: var(--hero-text);
+  border: 1px solid var(--hero-text);
+  box-shadow: none;
+}
+.hero__cta--ghost:hover {
+  background: var(--hero-text);
+  color: #fff;
+  box-shadow: none;
+}
+
+/* === Scroll Indicator (image side, bottom) === */
+.hero__scroll {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  color: #ffffff;
+  font-family: var(--hero-font-latin);
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  opacity: 0;
+  animation: heroFadeUp 1s ease-out 1s forwards;
+  text-align: center;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+}
+.hero__scroll-line {
+  display: block;
+  width: 1px;
+  height: 32px;
+  margin: 0.5rem auto 0;
+  background: #ffffff;
+  transform-origin: top;
+  animation: heroScrollLine 2.2s ease-in-out infinite;
+}
+@keyframes heroScrollLine {
+  0%, 100% { transform: scaleY(0.3); opacity: 0.3; }
+  50%      { transform: scaleY(1);   opacity: 1;   }
+}
+
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* === Responsive === */
+@media (max-width: 1024px) {
+  .hero {
+    grid-template-columns: 1fr;
+    grid-template-rows: 50vh 1fr;
+    min-height: auto;
+  }
+  .hero__image-area { min-height: 50vh; }
+  .hero__content-area {
+    padding: clamp(2.5rem, 6vw, 4rem) clamp(1.8rem, 6vw, 3rem) clamp(3rem, 7vw, 5rem);
+  }
+  .hero__content { max-width: 100%; text-align: center; }
+  .hero__ctas { align-items: center; }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    grid-template-rows: 42vh 1fr;
+  }
+  .hero__image-area { min-height: 42vh; }
+  .hero__title {
+    font-size: clamp(1.4rem, 6vw, 1.95rem);
+    line-height: 1.85;
+  }
+  .hero__scroll { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__bg, .hero__overline, .hero__title, .hero__seo, .hero__date,
+  .hero__ctas, .hero__scroll, .hero__scroll-line {
+    animation: none !important; opacity: 1 !important; transform: none !important;
+  }
+}

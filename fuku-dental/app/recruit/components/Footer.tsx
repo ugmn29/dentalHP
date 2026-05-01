@@ -27,7 +27,7 @@ export default function RecruitFooter() {
           <div className="footer-col">
             <div className="footer-col-head">お問い合わせ</div>
             <div>recruit@fshika.com</div>
-            <div>03-1234-5678</div>
+            <div>03-6204-2876</div>
             <div className="muted">平日 10:00-18:30 / 土日 9:00-16:00</div>
           </div>
         </div>

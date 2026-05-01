@@ -49,8 +49,8 @@ export const Header = () => {
                     {/* Logo Area */}
                     <div className="flex items-center gap-2 md:gap-3">
                         <a href="/" className="flex items-center gap-2 md:gap-3">
-                            <div className="w-10 h-10 md:w-12 md:h-12 bg-[#8B92AB] rounded-full flex items-center justify-center text-white font-bold text-xl md:text-2xl shadow-md border-2 border-white cursor-pointer">
-                                ☺︎
+                            <div className="w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden shadow-md border-2 border-white cursor-pointer flex-shrink-0">
+                                <img src="/icon.png" alt="Fデンタルオフィス 豊洲プライムスクエア院 ロゴ" className="w-full h-full object-cover" />
                             </div>
                             <div>
                                 <p className="text-[10px] md:text-xs text-[#8B92AB] font-bold leading-none mb-0.5">豊洲の歯医者</p>
@@ -174,7 +174,7 @@ export const Header = () => {
                             <Calendar size={22} /> 24時間 WEB予約
                         </button>
                         <button className="w-full bg-white border-2 border-[#8B92AB] text-[#8B92AB] py-4 rounded-full font-bold shadow-sm flex justify-center items-center gap-2 text-lg">
-                            <Phone size={22} /> 03-1234-5678
+                            <Phone size={22} /> 03-6204-2876
                         </button>
                     </div>
                 </div>
