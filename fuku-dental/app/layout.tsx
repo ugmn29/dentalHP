@@ -67,9 +67,8 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  alternates: {
-    canonical: "https://fshika.com",
-  },
+  // alternates.canonical はルート(/)以外に継承されると下層ページが全てトップページの重複扱いになる。
+  // ルートページのcanonicalはapp/page.tsxで個別に設定済み。下層ページは各自metadataで定義。
   icons: {
     icon: [
       { url: '/icon-16.png', sizes: '16x16', type: 'image/png' },
