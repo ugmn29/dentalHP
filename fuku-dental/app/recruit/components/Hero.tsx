@@ -10,7 +10,6 @@ export default function Hero() {
     { no: '01', en: 'Oral Myofunctional Care', ja: '口腔育成' },
     { no: '02', en: 'SNS Marketing', ja: 'SNSマーケティング' },
     { no: '03', en: 'Dental Technology', ja: 'テクノロジー活用' },
-    { no: '04', en: 'Branding & Assistant', ja: '秘書・ブランディング' },
   ];
 
   const [activePillar, setActivePillar] = useState(0);
@@ -43,8 +42,8 @@ export default function Hero() {
 
           <p className="hero-lead">
             豊洲駅から徒歩2分、2026年7月開業。<br/>
-            口腔育成・SNS・テクノロジー・ブランディング。<br/>
-            <strong>一般的な歯科医院では経験できない4領域</strong>に、<br/>
+            口腔育成・SNS・テクノロジー活用。<br/>
+            <strong>一般的な歯科医院では経験できない3領域</strong>に、<br/>
             スタッフ全員で挑む医院です。
           </p>
 
@@ -61,9 +60,9 @@ export default function Hero() {
           <div className="hero-pillars">
             <div className="hero-pillars-stripe">
               <span>F</span>
-              <span>Four Things You Learn Here</span>
+              <span>Three Things You Learn Here</span>
               <span className="hp-dot">●</span>
-              <span>{String(activePillar + 1).padStart(2, '0')} / 04</span>
+              <span>{String(activePillar + 1).padStart(2, '0')} / 03</span>
             </div>
 
             <div className="hero-pillars-list">

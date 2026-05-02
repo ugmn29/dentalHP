@@ -18,11 +18,6 @@ export default function Career() {
           <h3>3段階の明快な基準</h3>
           <p>例：「挨拶」「後輩教育」「失敗時の対応」など、すべて<strong>具体的な行動</strong>で定義されています。好き嫌いでは評価しません。</p>
         </div>
-        <div className="career-card">
-          <div className="career-num">+ 15,000円</div>
-          <h3>衛生士評価手当</h3>
-          <p>○評価：15,000円 ／ △評価：10,000円 ／ ×評価：0円。専門スキルと共通行動の両方を見ます。</p>
-        </div>
       </div>
     </section>
   );

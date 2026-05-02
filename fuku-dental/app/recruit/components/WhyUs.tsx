@@ -27,32 +27,10 @@ export default function WhyUs() {
       body: '口腔内スキャナー、AI診断補助、自動化された電子カルテ、業務効率化のためのツール群。「新しいことを覚えるのが楽しい」と思える方にとっては、毎日がアップデートです。テクノロジーと診療をかけ合わせた、次世代の歯科医療を一緒に作ります。',
       tags: ['口腔内スキャナー', 'AI活用', '電子カルテ', '業務自動化']
     },
-    {
-      no: '04',
-      en: 'Assistant & Branding',
-      ja: '秘書業務・ブランディング',
-      tag: '経営視点が育つ',
-      lead: '診療の枠を超えて、医院経営とブランディングに関わるチャンスがあります。',
-      body: '院長秘書的な業務、外部との連絡調整、イベント企画、ブランド設計への参画など。「医院を一緒に育てる」ポジションで働きたい方に、他では得られない経験を用意しています。',
-      tags: ['秘書業務', '広報', 'イベント', 'ブランディング']
-    },
   ];
 
   return (
     <section id="why-us" className="section whyus" data-screen-label="WhyUs">
-      <div className="whyus-head">
-        <div className="eyebrow">Why Choose Us</div>
-        <h2 className="section-title huge">
-          ここでしか<br/>
-          <em>学べないこと</em>が、<br/>
-          あります。
-        </h2>
-        <p className="section-intro">
-          一般的な歯科医院では経験できない4つの領域が、Fデンタルオフィスにはあります。<br/>
-          <strong>「診療スキルだけでは終わらないキャリアを築きたい」</strong>方に、ぜひ読んでいただきたいです。
-        </p>
-      </div>
-
       <div className="whyus-grid">
         {pillars.map((p, i) => (
           <article key={i} className="whyus-card">
@@ -71,11 +49,6 @@ export default function WhyUs() {
             </div>
           </article>
         ))}
-      </div>
-
-      <div className="whyus-note">
-        <div className="whyus-note-mark">※</div>
-        <p>これらは「いつかやりたい」ではなく、<strong>開業初日から取り組む柱</strong>です。関わる度合いは役割や希望に応じて調整しますが、どのポジションの方にも、必ず関わる機会があります。</p>
       </div>
     </section>
   );
