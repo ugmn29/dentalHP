@@ -1287,7 +1287,7 @@ export default function BruxismPage() {
                 24時間 WEB予約
               </a>
               <a
-                href="tel:03-1234-5678"
+                href="tel:03-6204-2876"
                 className="bg-transparent border-2 border-white hover:bg-white/10 text-white px-8 py-5 rounded-full font-bold transition-all flex items-center justify-center gap-3 text-lg flex-1"
               >
                 お電話でのご予約

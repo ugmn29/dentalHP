@@ -39,9 +39,9 @@ const TraumaPage = () => {
 
           {/* Emergency Contact */}
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a href="tel:03-1234-5678" className="bg-white text-[#E74C3C] px-8 py-4 rounded-full font-bold text-lg shadow-2xl hover:bg-gray-100 transition flex items-center gap-2">
+            <a href="tel:03-6204-2876" className="bg-white text-[#E74C3C] px-8 py-4 rounded-full font-bold text-lg shadow-2xl hover:bg-gray-100 transition flex items-center gap-2">
               <Phone size={24} />
-              緊急連絡：03-1234-5678
+              緊急連絡：03-6204-2876
             </a>
             <a href="#emergency-guide" className="bg-yellow-400 text-gray-900 px-8 py-4 rounded-full font-bold text-lg shadow-2xl hover:bg-yellow-300 transition flex items-center gap-2">
               <Clock size={24} />
@@ -931,13 +931,13 @@ const TraumaPage = () => {
               </h3>
               <div className="ml-0 md:ml-12">
                 <p className="text-[#8D8070] leading-relaxed mb-4">
-                  はい。緊急時は当院の緊急連絡先（03-1234-5678）にお電話ください。歯の外傷は時間との勝負ですので、迅速に対応いたします。
+                  はい。緊急時は当院の緊急連絡先（03-6204-2876）にお電話ください。歯の外傷は時間との勝負ですので、迅速に対応いたします。
                 </p>
                 <div className="bg-red-50 border-l-4 border-[#E74C3C] p-4 rounded-r-lg">
                   <p className="text-sm font-semibold text-[#5A4D41] mb-2">緊急連絡先</p>
                   <div className="flex items-center gap-3 text-[#E74C3C] font-bold text-lg">
                     <Phone size={20} />
-                    <span>03-1234-5678</span>
+                    <span>03-6204-2876</span>
                   </div>
                   <p className="text-xs text-[#8D8070] mt-2">24時間365日対応可能</p>
                 </div>
@@ -1084,11 +1084,11 @@ const TraumaPage = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8">
-            <a href="tel:03-1234-5678" className="bg-white text-[#E74C3C] px-10 py-5 rounded-full font-bold text-xl shadow-2xl hover:bg-gray-100 transition flex items-center gap-3 transform hover:scale-105">
+            <a href="tel:03-6204-2876" className="bg-white text-[#E74C3C] px-10 py-5 rounded-full font-bold text-xl shadow-2xl hover:bg-gray-100 transition flex items-center gap-3 transform hover:scale-105">
               <Phone size={28} />
               <div className="text-left">
                 <p className="text-xs opacity-70">緊急連絡</p>
-                <p>03-1234-5678</p>
+                <p>03-6204-2876</p>
               </div>
             </a>
             <a href="#" className="bg-yellow-400 text-gray-900 px-10 py-5 rounded-full font-bold text-xl shadow-2xl hover:bg-yellow-300 transition flex items-center gap-3 transform hover:scale-105">

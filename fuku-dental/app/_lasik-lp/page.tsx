@@ -26,7 +26,7 @@ export default function LasikLPPage() {
             </button>
             <div className="flex items-center gap-2">
               <span className="text-[#151f2b] text-lg font-medium">Tel.</span>
-              <span className="text-[#151f2b] text-2xl font-bold tracking-wider">042-851-7171</span>
+              <span className="text-[#151f2b] text-2xl font-bold tracking-wider">03-6204-2876</span>
             </div>
           </div>
 

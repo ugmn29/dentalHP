@@ -148,6 +148,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // 採用情報
     { url: '/recruit', priority: 0.8, changeFrequency: 'monthly' as const },
+    { url: '/recruit/privacy', priority: 0.5, changeFrequency: 'yearly' as const },
 
     // 追加ページ（孤立解消）
     { url: '/cavity/stages', priority: 0.7, changeFrequency: 'monthly' as const },

@@ -619,7 +619,7 @@ export default function CavityPage() {
                             </button>
                             <button className="bg-transparent border-2 border-[#C5A572] hover:bg-[#C5A572]/10 text-white px-8 py-5 rounded-full font-bold transition-all flex items-center justify-center gap-3 text-lg flex-1">
                                 <Phone className="text-[#C5A572]" />
-                                03-1234-5678
+                                03-6204-2876
                             </button>
                         </div>
 

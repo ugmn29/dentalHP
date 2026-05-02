@@ -39,7 +39,7 @@ export function ImplantCTA({
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="tel:03-1234-5678"
+            href="tel:03-6204-2876"
             className={`inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full font-bold text-lg transition-all ${
               isBlue
                 ? 'bg-white text-[#248cc4] hover:bg-gray-100 shadow-lg'
@@ -47,7 +47,7 @@ export function ImplantCTA({
             }`}
           >
             <Phone size={20} />
-            03-1234-5678
+            03-6204-2876
           </a>
           <a
             href="#"

@@ -161,10 +161,10 @@ export default function BlogClient({ posts, categories }: Props) {
                 <span>WEB予約</span>
               </a>
               <a
-                href="tel:03-1234-5678"
+                href="tel:03-6204-2876"
                 className="inline-flex items-center justify-center gap-2 bg-white hover:bg-gray-50 text-[#395b45] border-2 border-[#395b45] px-8 py-4 rounded-full font-bold shadow-lg hover:shadow-xl transition-all duration-300"
               >
-                <span>📞 03-1234-5678</span>
+                <span>📞 03-6204-2876</span>
               </a>
             </div>
           </div>

@@ -419,10 +419,10 @@ export default function QAContent() {
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <a
-                href="tel:03-1234-5678"
+                href="tel:03-6204-2876"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-[#395b45] border-2 border-[#395b45] rounded-full font-bold hover:bg-[#395b45] hover:text-white transition-all"
               >
-                03-1234-5678
+                03-6204-2876
               </a>
               <a
                 href="#"

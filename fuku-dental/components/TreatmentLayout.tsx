@@ -508,7 +508,7 @@ export const TreatmentLayout: React.FC<TreatmentLayoutProps> = ({
                             </button>
                             <button className="bg-white hover:bg-gray-50 text-[#5A4D41] border-2 border-[#E0D6EA] px-8 py-4 rounded-full font-bold shadow-sm transition-all flex items-center justify-center gap-2 text-lg group min-w-[240px]">
                                 <Phone className="text-[#FF9F43] group-hover:scale-110 transition" />
-                                03-1234-5678
+                                03-6204-2876
                             </button>
                         </div>
                     </div>
