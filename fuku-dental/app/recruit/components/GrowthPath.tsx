@@ -60,14 +60,6 @@ export default function GrowthPath() {
         </div>
       </div>
 
-      <div className="growth-promise">
-        <div className="growth-promise-mark">&quot;</div>
-        <p>
-          <span>才能で差がつく職場にはしません。</span><br/>
-          <span>仕組みで、</span><em>必ず成長できる</em><span>環境にします。</span>
-        </p>
-        <div className="growth-promise-sign">— 院長 福永 真大</div>
-      </div>
     </section>
   );
 }
