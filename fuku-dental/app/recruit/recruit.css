@@ -1,31 +1,31 @@
 /* ============ Fonts ============ */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&family=Noto+Serif+JP:wght@400;500;600;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&display=swap');
 
-/* ============ Theme tokens ============ */
+/* ============ Theme tokens (Top page統一: Tiffany blue palette) ============ */
 :root {
-  --ink: #151a22;
-  --ink-2: #3a414d;
-  --ink-3: #6b7382;
-  --line: #e2dfd7;
-  --line-2: #efeeea;
-  --paper: #f8f5ec;
-  --paper-2: #f0ece0;
+  --ink: #2C2C2A;
+  --ink-2: #6B6B68;
+  --ink-3: #8D8070;
+  --line: #E6E3DC;
+  --line-2: #EFEDE7;
+  --paper: #FAFAF7;
+  --paper-2: #F5F2EE;
   --white: #ffffff;
-  --accent: #0f2a3f;
-  --accent-deep: #0a1c2c;
-  --gold: #b88a3a;
-  --gold-soft: #d9b676;
-  --gold-glow: rgba(184,138,58,0.18);
+  --accent: #0a8a85;
+  --accent-deep: #066b67;
+  --gold: #0abab5;
+  --gold-soft: #5fc7c2;
+  --gold-glow: rgba(10,138,133,0.18);
   --danger: #8b3a3a;
-  --ph-bg: #e5e0d1;
-  --ph-stripe: #d9d2bd;
-  --ph-text: #8a8472;
+  --ph-bg: #ECE9E2;
+  --ph-stripe: #DCD8CF;
+  --ph-text: #8D8070;
   --radius: 0px;
   --content: 1200px;
   --gutter: clamp(20px, 4vw, 64px);
-  --font-sans: 'Noto Sans JP', system-ui, sans-serif;
-  --font-serif: 'Noto Serif JP', serif;
-  --font-display: 'Fraunces', 'Noto Serif JP', serif;
+  --font-sans: var(--font-noto-sans-jp), 'Noto Sans JP', system-ui, sans-serif;
+  --font-serif: var(--font-noto-serif-jp), 'Noto Serif JP', serif;
+  --font-display: var(--font-shippori-mincho), 'Noto Serif JP', serif;
 }
 
 html[data-theme="forest"] {

@@ -1,6 +1,7 @@
 'use client';
 
-import RecruitHeader from './components/Header';
+import { Header } from '../../components/Header';
+import { Footer } from '../../components/Footer';
 import Hero from './components/Hero';
 import WhyUs from './components/WhyUs';
 import GrowthPath from './components/GrowthPath';
@@ -13,13 +14,12 @@ import Career from './components/Career';
 import Honest from './components/Honest';
 import FAQ from './components/FAQ';
 import Entry from './components/Entry';
-import RecruitFooter from './components/Footer';
 import FloatingLine from './components/FloatingLine';
 
 export default function RecruitClient() {
   return (
     <div style={{ overflowX: 'hidden' }}>
-      <RecruitHeader />
+      <Header />
       <main>
         <Hero />
         <WhyUs />
@@ -34,7 +34,7 @@ export default function RecruitClient() {
         <FAQ />
         <Entry />
       </main>
-      <RecruitFooter />
+      <Footer />
       <FloatingLine />
     </div>
   );

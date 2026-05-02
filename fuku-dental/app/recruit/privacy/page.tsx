@@ -1,17 +1,17 @@
 "use client";
 
 import React from 'react';
-import RecruitHeader from '../components/Header';
-import RecruitFooter from '../components/Footer';
+import { Header } from '../../../components/Header';
+import { Footer } from '../../../components/Footer';
 
 export default function RecruitPrivacyPage() {
   return (
     <div className="min-h-screen bg-white font-sans text-[#4A4A4A]">
-      <RecruitHeader />
+      <Header />
 
       <main className="container mx-auto px-4 py-16 max-w-4xl">
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-[#2d4835] mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-[#0a8a85] mb-4">
             プライバシーポリシー
           </h1>
           <p className="text-gray-600">採用応募者向け 個人情報保護方針</p>
@@ -25,7 +25,7 @@ export default function RecruitPrivacyPage() {
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-bold text-[#2d4835] mb-4 pb-2 border-b-2 border-[#395b45]">
+            <h2 className="text-2xl font-bold text-[#0a8a85] mb-4 pb-2 border-b-2 border-[#0a8a85]">
               1. 取得する個人情報
             </h2>
             <p className="text-gray-700 leading-relaxed">
@@ -34,7 +34,7 @@ export default function RecruitPrivacyPage() {
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-bold text-[#2d4835] mb-4 pb-2 border-b-2 border-[#395b45]">
+            <h2 className="text-2xl font-bold text-[#0a8a85] mb-4 pb-2 border-b-2 border-[#0a8a85]">
               2. 利用目的
             </h2>
             <p className="text-gray-700 leading-relaxed">
@@ -43,7 +43,7 @@ export default function RecruitPrivacyPage() {
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-bold text-[#2d4835] mb-4 pb-2 border-b-2 border-[#395b45]">
+            <h2 className="text-2xl font-bold text-[#0a8a85] mb-4 pb-2 border-b-2 border-[#0a8a85]">
               3. 第三者への提供
             </h2>
             <p className="text-gray-700 leading-relaxed">
@@ -52,7 +52,7 @@ export default function RecruitPrivacyPage() {
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-bold text-[#2d4835] mb-4 pb-2 border-b-2 border-[#395b45]">
+            <h2 className="text-2xl font-bold text-[#0a8a85] mb-4 pb-2 border-b-2 border-[#0a8a85]">
               4. 保管期間
             </h2>
             <ul className="list-disc list-inside space-y-2 text-gray-700 ml-4">
@@ -62,7 +62,7 @@ export default function RecruitPrivacyPage() {
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-bold text-[#2d4835] mb-4 pb-2 border-b-2 border-[#395b45]">
+            <h2 className="text-2xl font-bold text-[#0a8a85] mb-4 pb-2 border-b-2 border-[#0a8a85]">
               5. 開示・訂正・削除等の請求
             </h2>
             <p className="text-gray-700 leading-relaxed">
@@ -71,15 +71,15 @@ export default function RecruitPrivacyPage() {
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-bold text-[#2d4835] mb-4 pb-2 border-b-2 border-[#395b45]">
+            <h2 className="text-2xl font-bold text-[#0a8a85] mb-4 pb-2 border-b-2 border-[#0a8a85]">
               6. お問い合わせ窓口
             </h2>
-            <div className="bg-[#FAFAFA] p-6 rounded-lg border border-[#395b45]/20">
+            <div className="bg-[#FAFAFA] p-6 rounded-lg border border-[#0a8a85]/20">
               <div className="space-y-2 text-gray-700">
-                <p className="font-semibold text-[#2d4835]">Fデンタルオフィス 豊洲プライムスクエア院</p>
+                <p className="font-semibold text-[#0a8a85]">Fデンタルオフィス 豊洲プライムスクエア院</p>
                 <p>住所: 〒135-0061 東京都江東区豊洲5-6-36 豊洲プライムスクエア1階</p>
-                <p>電話: <a href="tel:03-6204-2876" className="text-[#395b45] underline">03-6204-2876</a></p>
-                <p>メール: <a href="mailto:recruit@fshika.com" className="text-[#395b45] underline">recruit@fshika.com</a></p>
+                <p>電話: <a href="tel:03-6204-2876" className="text-[#0a8a85] underline">03-6204-2876</a></p>
+                <p>メール: <a href="mailto:recruit@fshika.com" className="text-[#0a8a85] underline">recruit@fshika.com</a></p>
               </div>
             </div>
           </section>
@@ -92,7 +92,7 @@ export default function RecruitPrivacyPage() {
         </div>
       </main>
 
-      <RecruitFooter />
+      <Footer />
     </div>
   );
 }
