@@ -1,6 +1,5 @@
 export default function Numbers() {
   const items = [
-    { n: '120', unit: '日', label: '年間休日', sub: '祝日・年末年始含む' },
     { n: '30', unit: '分/日', label: '平均残業', sub: '固定残業代内に収まる設計' },
     { n: '100', unit: '%', label: 'マニュアル完備', sub: '入職初日から迷わず動ける' },
     { n: '6', unit: 'ヶ月', label: '評価サイクル', sub: '○△×の明確な基準' },

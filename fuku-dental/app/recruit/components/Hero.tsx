@@ -104,10 +104,6 @@ export default function Hero() {
           <div className="hero-foot-label">Roles</div>
           <div className="hero-foot-value">衛生士／助手／受付</div>
         </div>
-        <div className="hero-foot-item">
-          <div className="hero-foot-label">Annual Holidays</div>
-          <div className="hero-foot-value">約120日</div>
-        </div>
       </div>
     </section>
   );
