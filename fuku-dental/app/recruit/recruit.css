@@ -570,6 +570,13 @@ html[data-dark="1"] .philosophy { background: var(--paper-2); }
   background: repeating-linear-gradient(135deg, var(--ph-bg) 0 14px, var(--ph-stripe) 14px 15px);
   position: relative; display: grid; place-items: center;
 }
+.message-portrait {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
 .message-placeholder .ph-tag {
   position: absolute; top: 16px; left: 16px;
   font-family: 'Courier New', monospace;

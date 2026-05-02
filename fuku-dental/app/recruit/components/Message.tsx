@@ -3,10 +3,12 @@ export default function Message() {
     <section id="message" className="section message" data-screen-label="Message">
       <div className="message-grid">
         <div className="message-visual">
-          <div className="message-placeholder">
-            <div className="ph-tag">[ Portrait ]</div>
-            <div className="ph-text">院長ポートレート</div>
-          </div>
+          <img
+            src="/images/recruit/director.png"
+            alt="院長 福永 真大"
+            className="message-portrait"
+            loading="lazy"
+          />
           <div className="message-caption">
             <div className="message-caption-name">院長 福永 真大</div>
             <div className="message-caption-en">Masahiro Fukunaga, DDS</div>
