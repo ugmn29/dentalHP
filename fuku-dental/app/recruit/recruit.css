@@ -827,6 +827,11 @@ html[data-dark="1"] .career { background: var(--paper-2); }
 .faq-item.open .faq-q-chev { color: var(--accent); }
 .faq-a { display: grid; grid-template-columns: 40px 1fr 40px; gap: 16px; padding: 0 0 28px; font-size: 14px; line-height: 2; color: var(--ink-2); animation: fadein .3s ease; }
 .faq-a-marker { font-family: var(--font-display); font-style: italic; font-size: 22px; color: var(--gold); font-weight: 400; }
+.faq-a-text { min-width: 0; overflow-wrap: anywhere; word-break: break-word; }
+.faq-q-text { min-width: 0; overflow-wrap: anywhere; word-break: break-word; }
+@media (max-width: 700px) {
+  .faq-a, .faq-q { grid-template-columns: 32px 1fr 32px; gap: 10px; }
+}
 @keyframes fadein { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: translateY(0); } }
 
 /* ============ Entry ============ */
