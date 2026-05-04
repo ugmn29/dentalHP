@@ -4,6 +4,20 @@ import { useState, useCallback, useEffect } from 'react';
 const IMAGE_SERVER = 'http://localhost:3002';
 const isDev = process.env.NODE_ENV === 'development';
 
+const fallbackImages: Record<string, string> = {
+  '/homepage/feature1': '/images/pages/homepage/カウンセリングで医師と患者が話している場面.jpg',
+  '/homepage/feature2': '/images/pages/kidsortho/親子が歯科医師と相談している場面.jpg',
+  '/homepage/feature3': '/images/pages/homepage/治療中の場面.jpg',
+  '/homepage/feature4': '/images/pages/homepage/治療中の場面.jpg',
+  '/homepage/feature5': '/images/pages/homepage/治療中の場面.jpg',
+  '/homepage/feature6': '/images/pages/homepage/カウンセリングで医師と患者が話している場面.jpg',
+  '/homepage/doctor': '/images/recruit/director.png',
+  '/homepage/facility1': '/images/pages/homepage/受付で挨拶している場面.jpg',
+  '/homepage/facility2': '/images/hero-bg.png',
+  '/homepage/facility3': '/images/pages/kidsortho/子供がレントゲン撮影をしている場面.jpg',
+  '/homepage/facility4': '/images/pages/kidsortho/笑顔の子供が歯を見せている場面.jpg',
+};
+
 interface PageImageProps {
   path: string;
   imageId?: string;
@@ -18,20 +32,23 @@ export function PageImage({ path, imageId = 'hero', alt, className = '' }: PageI
   const [uploading, setUploading] = useState(false);
   const [uploaded, setUploaded] = useState(false);
   const src = `/images/pages${path}/${imageId}.jpg`;
+  const fallbackSrc = fallbackImages[`${path}/${imageId}`];
+  const displaySrc = fallbackSrc || src;
 
   // Dev mode: proactively check if image exists so dropzone appears reliably
   useEffect(() => {
     if (!isDev) return;
+    if (fallbackSrc) return;
     let cancelled = false;
     fetch(src, { method: 'HEAD' })
       .then((res) => {
-        if (!cancelled && !res.ok) setHasError(true);
+        if (!cancelled) setHasError(!res.ok);
       })
       .catch(() => {
         if (!cancelled) setHasError(true);
       });
     return () => { cancelled = true; };
-  }, [src]);
+  }, [fallbackSrc, src]);
 
   const handleUpload = useCallback(async (file: File) => {
     setUploading(true);
@@ -92,7 +109,7 @@ export function PageImage({ path, imageId = 'hero', alt, className = '' }: PageI
   }
 
   // 画像が存在する場合
-  if (!hasError && !uploaded) {
+  if ((!hasError || fallbackSrc) && !uploaded) {
     // Dev modeでは既存画像の上に置き換えオーバーレイを追加
     if (isDev) {
       return (
@@ -103,7 +120,7 @@ export function PageImage({ path, imageId = 'hero', alt, className = '' }: PageI
           className={`relative group ${isDragging ? 'ring-4 ring-[#8B92AB]' : ''}`}
         >
           <img
-            src={src}
+            src={displaySrc}
             alt={alt}
             className={className || 'w-full h-auto rounded-lg'}
             onError={() => setHasError(true)}
@@ -129,7 +146,7 @@ export function PageImage({ path, imageId = 'hero', alt, className = '' }: PageI
     }
     return (
       <img
-        src={src}
+        src={displaySrc}
         alt={alt}
         className={className || 'w-full h-auto rounded-lg'}
         onError={() => setHasError(true)}
