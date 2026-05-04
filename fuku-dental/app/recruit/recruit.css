@@ -1433,6 +1433,23 @@ html[data-dark="1"] .year-body { background: var(--white); }
   .vmv-marker-label { font-size: 11px; }
 }
 
+/* ============ Mobile right-edge overflow guard ============
+   Grid/flex items default to min-width: auto, which equals their
+   content's min-content size. On narrow viewports that prevents the
+   item from shrinking below its content and pushes the card past the
+   right edge. Force these items to be allowed to shrink. */
+.gs-card,
+.message-visual, .message-body, .message-quotes > li,
+.honest-col, .honest-reason, .honest-reason-text,
+.whyus-card, .vmv-card, .value-card, .voice-card,
+.career-card, .match-block, .number-cell,
+.req-row, .req-val,
+.hero-grid > *, .hero-pillars, .hero-pillars-list, .hp-row, .hp-labels,
+.entry-grid > *, .entry-grid-v2 > *,
+.footer-inner > *, .footer-cols > * {
+  min-width: 0;
+}
+
 /* ============ Floating LINE button (bottom-right) ============ */
 .floating-line {
   position: fixed;
@@ -1496,4 +1513,178 @@ html[data-dark="1"] .year-body { background: var(--white); }
   /* 他のエントリーセクション要素も小さめに */
   .entry-alt-list, .entry-alt-item { min-width: 0; }
   .entry-alt-value { word-break: break-all; }
+}
+
+/* ============ Recruit mobile polish ============ */
+@media (max-width: 700px) {
+  .site-header-inner {
+    padding: 10px 14px;
+    gap: 10px;
+  }
+  .brand {
+    min-width: 0;
+    flex: 1;
+  }
+  .brand-mark {
+    width: 34px;
+    height: 34px;
+    flex: 0 0 34px;
+  }
+  .brand-text {
+    min-width: 0;
+  }
+  .brand-sub,
+  .brand-name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .btn-entry-header {
+    display: none;
+  }
+  .hero {
+    padding-top: 96px;
+  }
+  .hero::before {
+    display: none;
+  }
+  .hero-grid {
+    gap: 36px;
+    min-height: auto;
+  }
+  .hero-meta {
+    max-width: 100%;
+    flex-wrap: wrap;
+    row-gap: 4px;
+    margin-bottom: 28px;
+    font-size: 10px;
+    letter-spacing: .12em;
+  }
+  .hero-copy,
+  .hero-copy-learn {
+    font-size: clamp(40px, 13vw, 64px);
+    line-height: 1.08;
+    margin-bottom: 32px;
+  }
+  .hero-lead {
+    font-size: 14px;
+    line-height: 2;
+    margin-bottom: 32px;
+  }
+  .hero-ctas {
+    width: 100%;
+  }
+  .hero-ctas .btn-primary,
+  .hero-ctas .btn-ghost {
+    min-height: 56px;
+    padding: 14px 18px;
+  }
+  .hero-pillars {
+    width: 100%;
+  }
+  .hero-pillars-stripe,
+  .hero-pillars-foot {
+    flex-wrap: wrap;
+    gap: 8px;
+    letter-spacing: .08em;
+  }
+  .hero-pillars-stripe .hp-dot {
+    margin-left: 0;
+  }
+  .hp-row {
+    grid-template-columns: 42px minmax(0, 1fr) 20px;
+    gap: 10px;
+    padding: 18px 16px;
+  }
+  .hp-row.active {
+    padding-left: 18px;
+  }
+  .hp-en,
+  .hp-ja,
+  .hero-foot-value,
+  .req-val,
+  .year-point-text,
+  .gs-title,
+  .whyus-ja,
+  .entry-alt-value,
+  .footer-col a,
+  .footer-col div {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+  .hp-ja {
+    font-size: 18px;
+  }
+  .hero-footer {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 24px 0;
+  }
+  .hero-foot-item {
+    padding: 0 0 0 16px;
+  }
+  .day-switch {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+  }
+  .day-switch button {
+    padding: 12px 10px;
+  }
+  .timeline-item {
+    grid-template-columns: 58px 22px minmax(0, 1fr);
+    gap: 8px;
+  }
+  .timeline-dot {
+    width: 22px;
+  }
+  .timeline-time {
+    font-size: 15px;
+  }
+  .year-points li {
+    grid-template-columns: 40px minmax(0, 1fr);
+    gap: 10px;
+  }
+  .sign-block,
+  .voice-caption,
+  .whyus-note,
+  .growth-item,
+  .honest-reason,
+  .footer-brand {
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 560px) {
+  .recruit-page {
+    padding-bottom: 156px;
+  }
+  .floating-line {
+    left: 14px;
+    right: 14px;
+    bottom: 78px;
+    justify-content: center;
+    max-width: calc(100vw - 28px);
+  }
+  .floating-line-text {
+    white-space: normal;
+  }
+  .section-title,
+  .section-title.huge,
+  .numbers-title,
+  .philo-statement,
+  .message-title,
+  .growth-promise p {
+    letter-spacing: 0;
+  }
+  .section-title {
+    font-size: clamp(30px, 10vw, 42px);
+  }
+  .hero-copy,
+  .hero-copy-learn {
+    font-size: clamp(38px, 12.5vw, 54px);
+  }
+  .cta-line {
+    width: 100%;
+  }
 }

@@ -26,7 +26,7 @@ export default function Hero() {
             <span className="hero-dot" />
             <span>Recruit 2026</span>
             <span className="hero-meta-sep">/</span>
-            <span>2026.07 新規開業</span>
+            <span>2026.07 開業予定</span>
           </div>
 
           <h1 className="hero-copy hero-copy-learn">
@@ -41,7 +41,7 @@ export default function Hero() {
           </h1>
 
           <p className="hero-lead">
-            豊洲駅から徒歩2分、2026年7月開業。<br/>
+            豊洲駅から徒歩2分、2026年7月開業予定。<br/>
             口腔育成・SNS・テクノロジー活用。<br/>
             <strong>一般的な歯科医院では経験できない3領域</strong>に、<br/>
             スタッフ全員で挑む医院です。

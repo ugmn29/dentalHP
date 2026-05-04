@@ -9,7 +9,7 @@ export default function Honest() {
       <div className="honest-grid">
         <div className="honest-col">
           <p className="honest-lead">
-            この医院は2026年7月に開業したばかりです。<br/>
+            この医院は2026年7月に開業予定です。<br/>
             業務フロー・シフト・ルールなど、日々の運営の中で<strong>変更が生じることがあります。</strong>
           </p>
           <p>

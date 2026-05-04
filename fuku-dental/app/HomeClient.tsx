@@ -146,7 +146,7 @@ export default function Home() {
                 <span className="hero__title-line">ここから<span className="hero__title-accent">《育てる》</span>。</span>
               </p>
 
-              <p className="hero__date">2026.07.01 NEW OPEN</p>
+              <p className="hero__date">2026.07.01 開院予定</p>
 
               <div className="hero__ctas">
                 <a className="hero__cta" href={WEB_RESERVATION_URL || '#'} target={WEB_RESERVATION_URL ? '_blank' : undefined} rel={WEB_RESERVATION_URL ? 'noopener noreferrer' : undefined}>
@@ -542,7 +542,7 @@ export default function Home() {
             </h2>
             {/* 内覧会日程確定後にコメント解除：
             <p className="text-sm mb-8" style={{ color: '#FFFFFFCC' }}>
-              2026.06.XX(金) – 06.XX(日) 開業前プレビュー
+              2026年7月1日 開院予定 / 開院前相談 受付準備中
             </p>
             */}
             <p className="text-sm leading-[2] mb-10" style={{ color: '#FFFFFFCC' }}>

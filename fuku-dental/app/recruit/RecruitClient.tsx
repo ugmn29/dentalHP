@@ -18,7 +18,7 @@ import FloatingLine from './components/FloatingLine';
 
 export default function RecruitClient() {
   return (
-    <div style={{ overflowX: 'hidden' }}>
+    <div className="recruit-page" style={{ overflowX: 'hidden' }}>
       <Header />
       <main>
         <Hero />
