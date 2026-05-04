@@ -90,133 +90,157 @@ export default function RootLayout({
   // LocalBusiness構造化データ（JSON-LD）
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "Dentist",
-    "name": "Fデンタルオフィス 豊洲プライムスクエア院",
-    "image": "https://fshika.com/images/building.avif",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "豊洲5-6-36 豊洲プライムスクエア1階",
-      "addressLocality": "江東区",
-      "addressRegion": "東京都",
-      "postalCode": "135-0061",
-      "addressCountry": "JP"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 35.652121,
-      "longitude": 139.797686
-    },
-    "url": "https://fshika.com",
-    "priceRange": "¥¥-¥¥¥",
-    "openingHoursSpecification": [
+    "@graph": [
       {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Wednesday", "Thursday", "Friday"],
-        "opens": "10:00",
-        "closes": "19:00"
+        "@type": "WebSite",
+        "@id": "https://fshika.com/#website",
+        "url": "https://fshika.com",
+        "name": "Fデンタルオフィス 豊洲プライムスクエア院",
+        "alternateName": [
+          "Fデンタルオフィス",
+          "Fデンタルオフィス豊洲"
+        ],
+        "inLanguage": "ja"
       },
       {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Saturday", "Sunday"],
-        "opens": "09:00",
-        "closes": "17:00"
+        "@type": "Dentist",
+        "@id": "https://fshika.com/#dentist",
+        "name": "Fデンタルオフィス 豊洲プライムスクエア院",
+        "url": "https://fshika.com",
+        "telephone": "+81-3-6204-2876",
+        "image": "https://fshika.com/images/building.avif",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "豊洲5-6-36 豊洲プライムスクエア1階",
+          "addressLocality": "江東区",
+          "addressRegion": "東京都",
+          "postalCode": "135-0061",
+          "addressCountry": "JP"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 35.652121,
+          "longitude": 139.797686
+        },
+        "priceRange": "¥¥-¥¥¥",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Wednesday", "Thursday", "Friday"],
+            "opens": "10:00",
+            "closes": "19:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Saturday", "Sunday"],
+            "opens": "09:00",
+            "closes": "17:00"
+          }
+        ],
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "江東区"
+          },
+          {
+            "@type": "City",
+            "name": "豊洲"
+          }
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "診療メニュー",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "インプラント治療"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "矯正歯科・こども矯正"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "小児歯科"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "歯周病治療"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "根管治療"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "ホワイトニング"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "セラミック治療"
+              }
+            }
+          ]
+        },
+        "description": "Fデンタルオフィス 豊洲プライムスクエア院では、科学的根拠に基づいた精密治療を提供。インプラント、矯正歯科、小児歯科、歯周病治療、根管治療など、幅広い診療に対応しています。",
+        "founder": {
+          "@type": "Person",
+          "name": "福永 真大",
+          "jobTitle": "院長・歯科医師",
+          "image": "https://fshika.com/images/recruit/director.png",
+          "description": "矯正歯科専門医。東京歯科大学歯学部卒業。日本矯正歯科学会認定医として、科学的根拠に基づいた精密な矯正治療を提供。",
+          "credential": "歯科医師免許",
+          "memberOf": [
+            {
+              "@type": "Organization",
+              "name": "日本矯正歯科学会"
+            },
+            {
+              "@type": "Organization",
+              "name": "日本小児歯科学会"
+            },
+            {
+              "@type": "Organization",
+              "name": "日本歯周病学会"
+            },
+            {
+              "@type": "Organization",
+              "name": "日本口腔インプラント学会"
+            }
+          ]
+        },
+        "employee": [
+          {
+            "@type": "Person",
+            "name": "福永 真大",
+            "jobTitle": "院長・歯科医師",
+            "credential": "歯科医師免許",
+            "knowsAbout": ["矯正歯科", "小児歯科", "予防歯科", "審美歯科"]
+          }
+        ],
+        "sameAs": []
       }
-    ],
-    "areaServed": [
-      {
-        "@type": "City",
-        "name": "江東区"
-      },
-      {
-        "@type": "City",
-        "name": "豊洲"
-      }
-    ],
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "診療メニュー",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "インプラント治療"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "矯正歯科・こども矯正"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "歯周病治療"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "根管治療"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "ホワイトニング"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "セラミック治療"
-          }
-        }
-      ]
-    },
-    "description": "Fデンタルオフィス 豊洲プライムスクエア院では、科学的根拠に基づいた精密治療を提供。インプラント、矯正歯科、歯周病治療、根管治療など、幅広い診療に対応しています。",
-    "founder": {
-      "@type": "Person",
-      "name": "福永 真大",
-      "jobTitle": "院長・歯科医師",
-      "image": "https://fshika.com/images/recruit/director.png",
-      "description": "矯正歯科専門医。東京歯科大学歯学部卒業。日本矯正歯科学会認定医として、科学的根拠に基づいた精密な矯正治療を提供。",
-      "credential": "歯科医師免許",
-      "memberOf": [
-        {
-          "@type": "Organization",
-          "name": "日本矯正歯科学会"
-        },
-        {
-          "@type": "Organization",
-          "name": "日本小児歯科学会"
-        },
-        {
-          "@type": "Organization",
-          "name": "日本歯周病学会"
-        },
-        {
-          "@type": "Organization",
-          "name": "日本口腔インプラント学会"
-        }
-      ]
-    },
-    "employee": [
-      {
-        "@type": "Person",
-        "name": "福永 真大",
-        "jobTitle": "院長・歯科医師",
-        "credential": "歯科医師免許",
-        "knowsAbout": ["矯正歯科", "小児歯科", "予防歯科", "審美歯科"]
-      }
-    ],
-    "sameAs": []
+    ]
   };
 
   return (
