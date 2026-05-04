@@ -6,7 +6,6 @@ Allow: /
 
 # クロールしないディレクトリ
 Disallow: /api/
-Disallow: /_next/
 Disallow: /admin/
 
 # サイトマップの場所

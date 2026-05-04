@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://fshika.com/images/og-image.jpg",
+        url: "https://fshika.com/images/hero-bg.png",
         width: 1200,
         height: 630,
         alt: "Fデンタルオフィス 豊洲プライムスクエア院",
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "豊洲駅から2分の歯医者｜個室完備・0歳から対応・土日診療｜Fデンタルオフィス 豊洲プライムスクエア院",
     description: "豊洲駅6a出口から徒歩2分、豊洲プライムスクエア1階。こども矯正・インプラント・セラミック治療など幅広く対応。",
-    images: ["https://fshika.com/images/og-image.jpg"],
+    images: ["https://fshika.com/images/hero-bg.png"],
   },
   robots: {
     index: true,
@@ -92,7 +92,7 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Dentist",
     "name": "Fデンタルオフィス 豊洲プライムスクエア院",
-    "image": "https://fshika.com/images/clinic-photo.jpg",
+    "image": "https://fshika.com/images/building.avif",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "豊洲5-6-36 豊洲プライムスクエア1階",
@@ -185,7 +185,7 @@ export default function RootLayout({
       "@type": "Person",
       "name": "福永 真大",
       "jobTitle": "院長・歯科医師",
-      "image": "https://fshika.com/images/doctor-profile.jpg",
+      "image": "https://fshika.com/images/recruit/director.png",
       "description": "矯正歯科専門医。東京歯科大学歯学部卒業。日本矯正歯科学会認定医として、科学的根拠に基づいた精密な矯正治療を提供。",
       "credential": "歯科医師免許",
       "memberOf": [
