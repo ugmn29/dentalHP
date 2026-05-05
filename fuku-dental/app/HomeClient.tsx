@@ -79,7 +79,7 @@ export default function Home() {
     { imageId: "facility2", title: "プライバシーに配慮した全室個室診療室" },
     { imageId: "feature3", title: "お子様も安心の天井テレビ付き診療室" },
     { imageId: "facility3", title: "正確な診断を可能にする歯科用CT" },
-    { imageId: "facility4", title: "お子様も退屈しないキッズスペース" },
+    { imageId: "facility4", title: "お子様連れにも配慮した診療環境" },
   ];
 
   // 3つの約束（旧6特徴のジグザグ画像+テキストデザインを踏襲）
@@ -482,7 +482,7 @@ export default function Home() {
               <h2 className="font-serif text-3xl md:text-4xl font-light" style={{ color: TEXT }}>院内設備</h2>
               <p className="text-sm leading-[2.1] mt-6 max-w-xl mx-auto" style={{ color: TEXT_MUTED }}>
                 豊洲駅徒歩2分の歯科医院。<br />
-                広々とした待合室・全室個室・歯科用CT・キッズスペース完備
+                広々とした待合室・全室個室・歯科用CTを備えた診療環境
               </p>
             </div>
 
