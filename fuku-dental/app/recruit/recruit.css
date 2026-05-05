@@ -1657,12 +1657,15 @@ html[data-dark="1"] .year-body { background: var(--white); }
 
 @media (max-width: 560px) {
   .recruit-page {
-    padding-bottom: 156px;
+    padding-bottom: 96px;
+  }
+  .recruit-page > .fixed.bottom-0.left-0.right-0 {
+    display: none !important;
   }
   .floating-line {
     left: 14px;
     right: 14px;
-    bottom: 78px;
+    bottom: 14px;
     justify-content: center;
     max-width: calc(100vw - 28px);
   }
