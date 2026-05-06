@@ -18,6 +18,9 @@ export const metadata: Metadata = {
   title: 'お口ポカン（口呼吸）が引き起こす病気リスク｜Fデンタルオフィス 豊洲プライムスクエア院',
   description: '口呼吸が原因で起こる8つの病気リスク。アデノイド顔貌、睡眠時無呼吸症候群、集中力低下など、今すぐ対策が必要な理由を詳しく解説します。',
   keywords: '口呼吸,お口ポカン,病気,リスク,アデノイド顔貌,睡眠時無呼吸,集中力低下,小児矯正',
+  alternates: {
+    canonical: 'https://fshika.com/kidsortho/mouth-breathing-risks',
+  },
   openGraph: {
     title: 'お口ポカン（口呼吸）が引き起こす病気リスク｜Fデンタルオフィス 豊洲プライムスクエア院',
     description: '口呼吸が原因で起こる8つの病気リスク。アデノイド顔貌、睡眠時無呼吸症候群、集中力低下など、今すぐ対策が必要な理由を詳しく解説します。',

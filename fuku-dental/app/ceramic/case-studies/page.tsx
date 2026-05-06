@@ -22,6 +22,9 @@ export const metadata: Metadata = {
   title: 'セラミック治療の症例紹介｜Before & After｜Fデンタルオフィス 豊洲プライムスクエア院',
   description: '豊洲の歯医者 Fデンタルオフィス 豊洲プライムスクエア院によるセラミック治療の症例写真をご紹介。前歯・奥歯のビフォーアフターで治療効果をご確認いただけます。実際の患者様の声も掲載しています。',
   keywords: 'セラミック,症例,ビフォーアフター,Before,After,実績,治療例,患者の声',
+  alternates: {
+    canonical: 'https://fshika.com/ceramic/case-studies',
+  },
   openGraph: {
     title: 'セラミック治療の症例紹介｜Before & After｜Fデンタルオフィス 豊洲プライムスクエア院',
     description: 'セラミック治療の症例写真をご紹介。前歯・奥歯のビフォーアフターで治療効果をご確認いただけます。',

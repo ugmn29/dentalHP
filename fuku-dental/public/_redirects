@@ -3,6 +3,7 @@
 /about / 301
 /kids/oral-education /oral-education 301
 /kids/* /kids-preventive/:splat 301
+/images/kidsortho/training/posture-improvement-hero /images/kidsortho/training/posture-improvement-hero.jpg 301
 
 # www → non-www 統一（Cloudflare Pagesのカスタムドメイン設定でも対応推奨）
 https://www.fshika.com/* https://fshika.com/:splat 301

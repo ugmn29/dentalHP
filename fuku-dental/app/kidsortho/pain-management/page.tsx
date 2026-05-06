@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   title: 'こども矯正は痛い？｜痛みの期間と対処法を詳しく解説｜Fデンタルオフィス 豊洲プライムスクエア院',
   description: 'こども矯正の痛みはいつまで続く？痛みの種類別対処法（冷やす・鎮痛剤・食事の工夫）と、緊急時の連絡先を詳しく解説します。',
   keywords: '痛み,痛み対処,鎮痛剤,こども矯正,小児矯正,ワイヤー,プレオルソ,緊急対応,痛い',
+  alternates: {
+    canonical: 'https://fshika.com/kidsortho/pain-management',
+  },
   openGraph: {
     title: 'こども矯正は痛い？｜痛みの期間と対処法を詳しく解説｜Fデンタルオフィス 豊洲プライムスクエア院',
     description: 'こども矯正の痛みはいつまで続く？痛みの種類別対処法（冷やす・鎮痛剤・食事の工夫）と、緊急時の連絡先を詳しく解説します。',

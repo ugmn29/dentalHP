@@ -18,6 +18,9 @@ export const metadata: Metadata = {
   title: '自宅でできるMFT｜あいうべ体操とボタンプル完全ガイド｜Fデンタルオフィス 豊洲プライムスクエア院',
   description: '口腔筋機能療法（MFT）の2大トレーニング。あいうべ体操とボタンプルの正しいやり方、効果が出る期間、注意点を動画付きで詳しく解説します。',
   keywords: 'MFT,口腔筋機能療法,あいうべ体操,ボタンプル,小児矯正,トレーニング',
+  alternates: {
+    canonical: 'https://fshika.com/kidsortho/mft-training',
+  },
   openGraph: {
     title: '自宅でできるMFT｜あいうべ体操とボタンプル完全ガイド｜Fデンタルオフィス 豊洲プライムスクエア院',
     description: '口腔筋機能療法（MFT）の2大トレーニング。あいうべ体操とボタンプルの正しいやり方、効果が出る期間、注意点を詳しく解説します。',

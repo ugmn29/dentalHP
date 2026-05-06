@@ -15,6 +15,9 @@ export const metadata: Metadata = {
   title: 'クリーニング・PMTC｜専門的な歯のクリーニングで虫歯・歯周病予防｜Fデンタルオフィス 豊洲プライムスクエア院',
   description: '豊洲の歯医者 Fデンタルオフィス 豊洲プライムスクエア院の歯科衛生士による専門的なPMTCで、普段の歯磨きでは落としきれないバイオフィルムや着色を除去。虫歯・歯周病のリスクを大幅に軽減します。',
   keywords: 'PMTC,クリーニング,歯のクリーニング,専門的歯面清掃,虫歯予防,歯周病予防,予防歯科',
+  alternates: {
+    canonical: 'https://fshika.com/preventive/cleaning',
+  },
   openGraph: {
     title: 'クリーニング・PMTC｜専門的な歯のクリーニングで虫歯・歯周病予防｜Fデンタルオフィス 豊洲プライムスクエア院',
     description: '歯科衛生士による専門的なPMTCで、普段の歯磨きでは落としきれないバイオフィルムや着色を除去。虫歯・歯周病のリスクを大幅に軽減します。',

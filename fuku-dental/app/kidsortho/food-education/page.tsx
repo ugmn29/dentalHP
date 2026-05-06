@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   title: '顎を育てる食育レシピ｜よく噛む食事で歯並び改善｜Fデンタルオフィス 豊洲プライムスクエア院',
   description: '硬い食べ物を前歯で噛みちぎる練習で、顎の発達を促進。スルメ・ナッツ・ニンジンスティックなど、家庭でできる食育レシピを紹介します。',
   keywords: '食育,顎の発達,咀嚼力,歯並び,小児矯正,硬い食べ物,よく噛む,レシピ',
+  alternates: {
+    canonical: 'https://fshika.com/kidsortho/food-education',
+  },
   openGraph: {
     title: '顎を育てる食育レシピ｜よく噛む食事で歯並び改善｜Fデンタルオフィス 豊洲プライムスクエア院',
     description: '硬い食べ物を前歯で噛みちぎる練習で、顎の発達を促進。スルメ・ナッツ・ニンジンスティックなど、家庭でできる食育レシピを紹介します。',

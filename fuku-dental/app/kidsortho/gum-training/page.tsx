@@ -17,6 +17,9 @@ export const metadata: Metadata = {
   title: 'ガムトレーニング完全手順｜咬合力と顎の発達を促進｜Fデンタルオフィス 豊洲プライムスクエア院',
   description: 'キシリトールガムを使った咬合力強化トレーニング。片側10回ずつ噛む正しいやり方、効果が出る期間、注意点を詳しく解説します。',
   keywords: 'ガムトレーニング,咬合力,顎の発達,小児矯正,キシリトールガム',
+  alternates: {
+    canonical: 'https://fshika.com/kidsortho/gum-training',
+  },
   openGraph: {
     title: 'ガムトレーニング完全手順｜咬合力と顎の発達を促進｜Fデンタルオフィス 豊洲プライムスクエア院',
     description: 'キシリトールガムを使った咬合力強化トレーニング。片側10回ずつ噛む正しいやり方、効果が出る期間、注意点を詳しく解説します。',

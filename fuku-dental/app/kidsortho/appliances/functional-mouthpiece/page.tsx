@@ -12,6 +12,9 @@ export const metadata: Metadata = {
     title: 'プレオルソ・マイオブレース・T4K・EFラインの比較｜どれがいい？費用と効果の違い｜Fデンタルオフィス 豊洲プライムスクエア院',
     description: '機能的マウスピース装置（プレオルソ・マイオブレース・T4K・EFライン）の違いを徹底比較。どれを選べばいい？費用・効果・適応症例の違いをわかりやすく解説します。',
     keywords: 'プレオルソ,マイオブレース,T4K,EFライン,機能的マウスピース,こども矯正,小児矯正,費用,比較,選び方',
+    alternates: {
+        canonical: 'https://fshika.com/kidsortho/appliances/functional-mouthpiece',
+    },
     openGraph: {
         title: 'プレオルソ・マイオブレース・T4K・EFラインの比較｜どれがいい？費用と効果の違い｜Fデンタルオフィス 豊洲プライムスクエア院',
         description: '機能的マウスピース装置（プレオルソ・マイオブレース・T4K・EFライン）の違いを徹底比較。費用・効果・適応症例の違いをわかりやすく解説します。',

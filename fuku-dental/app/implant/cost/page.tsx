@@ -32,6 +32,9 @@ export const metadata: Metadata = {
     'インプラント 保証',
     'インプラント 分割払い',
   ],
+  alternates: {
+    canonical: 'https://fshika.com/implant/cost',
+  },
   openGraph: {
     title: 'インプラントの費用・料金｜明確な料金体系で安心｜Fデンタルオフィス 豊洲プライムスクエア院',
     description: 'インプラント治療の費用・料金一覧。1本¥330,000〜。カウンセリング無料。医療費控除対象。クレジットカード・デンタルローン対応。10年保証制度あり。',
