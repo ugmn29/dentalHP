@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from 'react';
+import React from 'react';
 import { Phone, Calendar, ChevronDown, ChevronRight } from 'lucide-react';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
@@ -43,8 +43,6 @@ const TEXT_MUTED = '#6B6B68';    // secondary text
 const LINE = '#E6E3DC';          // hairline divider
 
 export default function Home() {
-  const [isMessageOpen, setIsMessageOpen] = useState(false);
-
   // 症例3点（厳選）
   const caseStudies = [
     {
@@ -335,45 +333,61 @@ export default function Home() {
               </div>
 
               <div>
-                <h3 className="font-serif text-2xl md:text-3xl leading-[1.7] mb-6" style={{ color: TEXT }}>
-                  対症療法ではなく、<br />
-                  <span style={{ color: ACCENT_DARK, fontStyle: 'italic' }}>原因療法</span>を。
-                </h3>
-                <p className="text-sm md:text-base leading-[2.1]" style={{ color: TEXT_MUTED }}>
-                  私が大切にしているのは、<strong style={{ color: TEXT }}>「症状を治す」のではなく「原因を取り除く」</strong>という考え方です。<br />
-                  父は30年近く小児矯正に携わってきた歯科医師で、その背中から、症状の奥にある根本原因に向き合うことの大切さを学びました。<br />
-                  お子様の口腔育成から大人の矯正・審美治療まで、原因にアプローチする<strong style={{ color: TEXT }}>根本治療</strong>を軸に、年齢を問わずお口と表情の健康を整えていく豊洲の歯科医院です。
-                </p>
+                <div className="mb-7 pb-6" style={{ borderBottom: `1px solid ${LINE}` }}>
+                  <p className="text-xs tracking-[0.22em] mb-2" style={{ color: TEXT_MUTED }}>DIRECTOR / DENTIST</p>
+                  <h3 className="font-serif text-2xl md:text-3xl" style={{ color: TEXT }}>
+                    福永 真大
+                  </h3>
+                  <p className="text-xs md:text-sm mt-2" style={{ color: TEXT_MUTED }}>
+                    Masahiro Fukunaga / 院長・歯科医師
+                  </p>
+                </div>
 
-                <div
-                  className={`overflow-hidden transition-[max-height,opacity] duration-500 ease-in-out ${isMessageOpen ? 'max-h-[2000px] opacity-100 mt-6' : 'max-h-0 opacity-0'}`}
-                >
+                <div className="grid grid-cols-1 lg:grid-cols-[1.35fr_1fr] gap-5 mb-8">
+                  <div className="rounded-2xl p-5 md:p-6" style={{ background: SURFACE, border: `1px solid ${LINE}` }}>
+                    <p className="text-xs tracking-[0.22em] font-medium mb-4" style={{ color: ACCENT_DARK }}>CAREER</p>
+                    <ul className="space-y-2.5 text-sm md:text-[15px] leading-[1.9]" style={{ color: TEXT_MUTED }}>
+                      {[
+                        '大阪大学歯学部 卒業',
+                        '医療法人同仁会ワタナベ歯科医院 勤務',
+                        '一般歯科・インプラント・矯正・審美治療など幅広い症例を経験',
+                        '研修医指導医を担当',
+                        '駒沢公園通り西垣歯科・矯正歯科 副院長、小児矯正部門の立ち上げ',
+                        'Fデンタルオフィス 豊洲プライムスクエア院 開業',
+                      ].map((item) => (
+                        <li key={item} className="flex gap-2.5">
+                          <span className="mt-[0.7em] h-1.5 w-1.5 rounded-full flex-shrink-0" style={{ background: ACCENT_DARK }} />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="rounded-2xl p-5 md:p-6" style={{ background: SURFACE, border: `1px solid ${LINE}` }}>
+                    <p className="text-xs tracking-[0.22em] font-medium mb-4" style={{ color: ACCENT_DARK }}>ACADEMIC SOCIETY</p>
+                    <p className="text-sm md:text-[15px] leading-[2]" style={{ color: TEXT_MUTED }}>
+                      日本小児歯科学会 / 日本矯正歯科学会 / 日本歯周病学会 / 日本口腔インプラント学会 / 日本審美歯科学会
+                    </p>
+                  </div>
+                </div>
+
+                <div className="rounded-2xl p-6 md:p-8" style={{ background: ACCENT_BG, border: `1px solid ${LINE}` }}>
+                  <h3 className="font-serif text-2xl md:text-3xl leading-[1.7] mb-5" style={{ color: TEXT }}>
+                    対症療法ではなく、<br />
+                    <span style={{ color: ACCENT_DARK, fontStyle: 'italic' }}>原因療法</span>を。
+                  </h3>
                   <div className="space-y-5 text-sm md:text-base leading-[2.1]" style={{ color: TEXT_MUTED }}>
+                    <p>
+                      私が大切にしているのは、<strong style={{ color: TEXT }}>「症状を治す」のではなく「原因を取り除く」</strong>という考え方です。父は30年近く小児矯正に携わってきた歯科医師で、その背中から、症状の奥にある根本原因に向き合うことの大切さを学びました。
+                    </p>
                     <p>
                       大阪大学歯学部を卒業後、医療法人同仁会ワタナベ歯科医院にて一般歯科・インプラント・矯正・審美治療など幅広い症例を経験し、研修医指導医も務めました。私自身は大学まで野球に打ち込み、噛み合わせや口呼吸がパフォーマンスに直結することも実感してきました。
                     </p>
                     <p>
-                      父から受け継いだ口腔育成への想い、臨床で培った技術、そして患者様に「伝わる」情報発信力。この3つを軸に、「もっと早く知りたかった」と思っていただける歯科医院を目指しています。
+                      父から受け継いだ口腔育成への想い、臨床で培った技術、そして患者様に「伝わる」情報発信力。この3つを軸に、お子様の口腔育成から大人の矯正・審美治療まで、原因にアプローチする<strong style={{ color: TEXT }}>根本治療</strong>を提供します。
                     </p>
-                    <div className="pt-2">
-                      <p className="text-xs mb-2" style={{ color: TEXT_MUTED }}>所属学会・資格</p>
-                      <p className="text-sm" style={{ color: TEXT_MUTED }}>
-                        日本小児歯科学会 / 日本矯正歯科学会 / 日本歯周病学会 / 日本口腔インプラント学会 / 日本審美歯科学会
-                      </p>
-                    </div>
                   </div>
                 </div>
-
-                <button
-                  type="button"
-                  onClick={() => setIsMessageOpen(v => !v)}
-                  aria-expanded={isMessageOpen}
-                  className="inline-flex items-center gap-2 mt-6 text-sm font-medium transition"
-                  style={{ color: ACCENT_DARK }}
-                >
-                  {isMessageOpen ? '閉じる' : '続きを読む（経歴・所属学会）'}
-                  <ChevronDown size={16} className={`transition-transform duration-300 ${isMessageOpen ? 'rotate-180' : ''}`} />
-                </button>
               </div>
             </div>
           </div>
