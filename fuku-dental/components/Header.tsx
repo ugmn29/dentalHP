@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
-import { Phone, Calendar, Menu, X, Smile, Sparkles, ChevronRight, ChevronUp, ChevronDown } from 'lucide-react';
+import { Phone, Calendar, Menu, X, ChevronRight, ChevronUp, ChevronDown } from 'lucide-react';
 
 export const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -74,11 +74,11 @@ export const Header = () => {
 
                         <div className="h-4 w-[1px] bg-gray-300 mx-1"></div>
 
-                        <a href="/kidsortho" className="text-[#395b45] flex items-center gap-1.5 px-4 py-2 bg-[#F6F2EA] rounded-full transition hover:bg-[#EFE7DA] border border-[#D8CDBD] shadow-sm transform hover:-translate-y-0.5">
-                            <Smile size={16} strokeWidth={2.25} /> こども矯正サイト
+                        <a href="/kidsortho" className="text-[#395b45] flex items-center px-4 py-2 bg-[#F6F2EA] rounded-full transition hover:bg-[#EFE7DA] border border-[#D8CDBD] shadow-sm transform hover:-translate-y-0.5">
+                            こども矯正サイト
                         </a>
-                        <a href="/ceramic" className="text-[#8D6F2F] flex items-center gap-1.5 px-4 py-2 bg-[#F8F3E8] rounded-full transition hover:bg-[#F0E5D0] border border-[#DCCB9E] shadow-sm transform hover:-translate-y-0.5">
-                            <Sparkles size={16} strokeWidth={2.25} /> 審美歯科サイト
+                        <a href="/ceramic" className="text-[#8D6F2F] flex items-center px-4 py-2 bg-[#F8F3E8] rounded-full transition hover:bg-[#F0E5D0] border border-[#DCCB9E] shadow-sm transform hover:-translate-y-0.5">
+                            審美歯科サイト
                         </a>
                     </nav>
                 </div>
@@ -102,12 +102,10 @@ export const Header = () => {
                     <div className="py-2">
                         <p className="text-xs font-bold text-gray-400 mb-2">専門サイト</p>
                         <a href="/kidsortho" className="flex items-center gap-3 py-3 px-4 bg-[#F6F2EA] rounded-xl text-[#395b45] font-bold border border-[#D8CDBD] shadow-sm mb-2">
-                            <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-sm"><Smile size={18} /></div>
                             こども矯正サイト
                             <ChevronRight size={18} className="ml-auto" />
                         </a>
                         <a href="/ceramic" className="flex items-center gap-3 py-3 px-4 bg-[#F8F3E8] rounded-xl text-[#8D6F2F] font-bold border border-[#DCCB9E] shadow-sm">
-                            <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-sm"><Sparkles size={18} /></div>
                             審美歯科サイト
                             <ChevronRight size={18} className="ml-auto" />
                         </a>
