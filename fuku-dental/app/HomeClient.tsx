@@ -234,10 +234,6 @@ export default function Home() {
                 <p className="text-sm md:text-base mt-1" style={{ color: TEXT_MUTED }}>矯正しても、いつの間にか戻ってしまう。</p>
               </div>
               <div>
-                <p className="font-serif text-lg md:text-2xl leading-[1.9]">歯が折れた・欠けた。</p>
-                <p className="text-sm md:text-base mt-1" style={{ color: TEXT_MUTED }}>噛み合わせが、少しずつ歪んでいく。</p>
-              </div>
-              <div>
                 <p className="font-serif text-lg md:text-2xl leading-[1.9]">歯が変色してきた。</p>
                 <p className="text-sm md:text-base mt-1" style={{ color: TEXT_MUTED }}>ホワイトニングしても、また色が戻ってしまう。</p>
               </div>
