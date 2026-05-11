@@ -6,7 +6,7 @@ import { PageImage } from '@/components/PageImage';
 const heroSlides = [
   {
     title: '"いつまでも\n自分の歯のように噛める"を\n追究したインプラント治療',
-    features: ['完全個室\n完備', '難症例にも\n対応'],
+    features: ['プライバシーに\n配慮', '難症例にも\n対応'],
     imageId: 'hero-slide1',
   },
   {

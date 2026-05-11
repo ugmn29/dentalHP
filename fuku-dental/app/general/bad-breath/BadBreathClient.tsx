@@ -58,7 +58,7 @@ export default function BadBreathPage() {
                     id: "03",
                     title: "Privacy First",
                     highlight: "プライバシーへの配慮",
-                    summary: "完全個室の診療室で、周りを気にせず安心してご相談いただけます。",
+                    summary: "プライバシーに配慮した診療室で、周りを気にせず安心してご相談いただけます。",
                     details: [
                         "他の患者様と顔を合わせにくい動線設計",
                         "防音に配慮した個室カウンセリングルーム",
