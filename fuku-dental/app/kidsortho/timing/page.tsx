@@ -87,7 +87,7 @@ export default function KidsOrthoTimingPage() {
                                     顎の成長を利用できる時期に治療を始めることで、無理なく歯並びを整えられます。
                                 </p>
                                 <p>
-                                    <span className="font-bold bg-yellow-100">早期治療により、2期治療（80〜120万円）が不要になる可能性が高まります</span>。
+                                    <span className="font-bold bg-yellow-100">早期治療により、将来的な負担を抑えられる可能性が高まります</span>。
                                     また、痛みが少なく、お子さまの心理的・身体的負担を最小限に抑えられます。
                                 </p>
                                 <p className="font-bold bg-white p-6 rounded-2xl shadow-sm border border-[#C5A572]/10">
@@ -201,7 +201,7 @@ export default function KidsOrthoTimingPage() {
                                             </p>
                                         </div>
                                         <p>
-                                            <span className="font-bold bg-yellow-100">費用：30〜80万円（1期治療済みの場合は30〜60万円）</span><br />
+                                            <span className="font-bold bg-yellow-100">費用：¥132,000〜¥660,000</span><br />
                                             <span className="font-bold bg-yellow-100">期間：2〜3年（1期治療済みの場合は1〜2年）</span>
                                         </p>
                                         <p className="text-sm text-gray-600">
@@ -256,7 +256,7 @@ export default function KidsOrthoTimingPage() {
                                     </h4>
                                     <div className="space-y-4 text-[#5A4D41] leading-loose font-sans">
                                         <p>
-                                            <strong>費用：</strong>1期治療10〜70万円 → 2期治療のみ80〜120万円<br />
+                                            <strong>費用：</strong>小児矯正は¥132,000〜¥660,000<br />
                                             <strong>期間：</strong>1期1〜2年 → 2期のみ2〜3年<br />
                                             思春期に長期間装置をつける心理的負担も増大します。
                                         </p>

@@ -394,7 +394,7 @@ export default function CeramicPage() {
                                 <p>
                                     セラミック治療の料金は、<span className="font-bold bg-yellow-100">選択する種類（インレー、クラウン、ベニア）や材料（e.max、ジルコニアなど）</span>によって異なります。
                                     当院では、事前に明確な費用をお伝えし、追加料金の心配なく治療を受けていただけます。
-                                    また、<span className="text-[#2E8B57] font-bold">デンタルローンや各種クレジットカード</span>もご利用いただけます。
+                                    また、<span className="text-[#2E8B57] font-bold">各種クレジットカードや銀行振り込み</span>もご利用いただけます。
                                 </p>
                             </div>
                             <div className="text-center">
@@ -533,13 +533,12 @@ export default function CeramicPage() {
                                 <div className="mb-12 last:mb-0">
                                     <h3 className="text-xl font-bold text-[#5A4D41] mb-6 flex items-center gap-3">
                                         <span className="w-1.5 h-6 bg-[#C5A572]"></span>
-                                        詰め物（インレー）
+                                        インレー・アンレー
                                     </h3>
                                     <div className="space-y-4">
                                         {[
-                                            { name: "CAD In", price: "¥44,000" },
-                                            { name: "emax In", price: "¥66,000" },
-                                            { name: "Gold In", price: "¥77,000" }
+                                            { name: "e-max", price: "¥77,000" },
+                                            { name: "ゴールド", price: "¥110,000" }
                                         ].map((item, index) => (
                                             <div key={index} className="flex justify-between items-center border-b border-gray-100 pb-3 last:border-0">
                                                 <span className="font-medium text-[#5A4D41]">{item.name}</span>
@@ -553,14 +552,14 @@ export default function CeramicPage() {
                                 <div>
                                     <h3 className="text-xl font-bold text-[#5A4D41] mb-6 flex items-center gap-3">
                                         <span className="w-1.5 h-6 bg-[#C5A572]"></span>
-                                        被せ物（クラウン）
+                                        補綴
                                     </h3>
                                     <div className="space-y-4">
                                         {[
-                                            { name: "CAD Cr", price: "¥66,000" },
-                                            { name: "Zr Cr", price: "¥110,000" },
-                                            { name: "PFZ", price: "¥132,000" },
-                                            { name: "Gold Cr", price: "¥121,000" }
+                                            { name: "プレミアムセラミック（PFZ）", price: "¥176,000" },
+                                            { name: "ジルコニア", price: "¥143,000" },
+                                            { name: "ハイブリッド", price: "¥143,000" },
+                                            { name: "ゴールド", price: "¥220,000" }
                                         ].map((item, index) => (
                                             <div key={index} className="flex justify-between items-center border-b border-gray-100 pb-3 last:border-0">
                                                 <span className="font-medium text-[#5A4D41]">{item.name}</span>

@@ -139,7 +139,7 @@ export default function CeramicVsMetalPage() {
                   <div className="grid md:grid-cols-3 gap-4 p-4 bg-[#FDFBF7] rounded-xl">
                     <div className="font-semibold text-[#5A4D41]">初期費用</div>
                     <div className="text-center">
-                      <span className="text-orange-600 font-bold text-xl">5〜15万円</span>
+                      <span className="text-orange-600 font-bold text-xl">¥77,000〜¥220,000</span>
                       <p className="text-xs text-gray-600 mt-1">（自費診療）</p>
                     </div>
                     <div className="text-center">
@@ -214,8 +214,8 @@ export default function CeramicVsMetalPage() {
                   </h4>
                   <div className="space-y-4 text-[#5A4D41] leading-loose">
                     <p>
-                      <span className="font-bold bg-yellow-100">セラミックは5〜15万円（自費診療）</span>で、初期費用は高めです。
-                      インレーが5〜6万円、クラウンが10〜15万円程度です。
+                      <span className="font-bold bg-yellow-100">セラミックは¥77,000〜¥220,000（自費診療）</span>で、初期費用は高めです。
+                      インレー・アンレーは¥77,000〜¥110,000、補綴は¥143,000〜¥220,000です。
                     </p>
                     <p>
                       <span className="text-[#2E8B57] font-bold">銀歯は3千〜1万円（保険適用・3割負担）</span>で、初期費用は安いです。

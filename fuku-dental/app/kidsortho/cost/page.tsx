@@ -3,11 +3,11 @@ export { default } from './KidsorthoCostClient';
 
 export const metadata: Metadata = {
   title: 'こども矯正の費用・料金｜Fデンタルオフィス 豊洲プライムスクエア院',
-  description: '豊洲のこども矯正（小児矯正）の費用について詳しく解説。1期・2期治療の料金目安、分割払い対応など。子供の矯正費用が気になる方はお気軽にご相談ください。',
+  description: '豊洲のこども矯正（小児矯正）の費用・料金表です。検査、相談、調整料、プレオルソ、拡大床、マウスピース、ワイヤー矯正の費用を掲載しています。',
   keywords: 'こども矯正 費用,小児矯正 料金,子供 矯正 費用,1期治療 費用,豊洲 矯正歯科',
   openGraph: {
     title: 'こども矯正の費用・料金｜Fデンタルオフィス 豊洲プライムスクエア院',
-    description: 'こども矯正の費用を詳しく解説。1期・2期治療の料金・分割払い対応など。',
+    description: 'こども矯正の料金表。検査、相談、調整料、プレオルソ、拡大床、マウスピース、ワイヤー矯正の費用を掲載。',
     type: 'website',
     locale: 'ja_JP',
     url: 'https://fshika.com/kidsortho/cost',

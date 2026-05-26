@@ -131,7 +131,7 @@ export default function KidsOrthoPage() {
             q: "費用はどのくらいかかりますか？",
             a: (
                 <>
-                    1期治療の目安は<span className="border-b-2 border-[#FFD700]">11〜66万円程度</span>です。詳しくは料金表をご覧ください。<span className="border-b-2 border-[#FFD700]">デンタルローンもご利用いただけます</span>。
+                    こども矯正の費用は<span className="border-b-2 border-[#FFD700]">¥132,000〜¥660,000</span>です。詳しくは料金表をご覧ください。<span className="border-b-2 border-[#FFD700]">デンタルローンもご利用いただけます</span>。
                 </>
             )
         },
@@ -594,7 +594,7 @@ export default function KidsOrthoPage() {
                                     矯正治療の来院回数と費用が気になります。
                                 </p>
                                 <p className="text-lg md:text-xl text-[#C5A572] font-bold mt-4">
-                                    来院回数は多くて月に1回30分未満、費用は、¥110,000〜となります。
+                                    来院回数は多くて月に1回30分未満、費用は、¥132,000〜となります。
                                 </p>
                                 <p className="text-sm md:text-base text-[#5A4D41] mb-0 mt-4">
                                     こどもの矯正治療は、お子様の年齢や歯並びの状態によって治療期間や費用が異なります。<span className="border-b-2 border-[#FFD700]">初回相談時に、お子様の状態を診査した上で、詳しい治療計画と費用についてご説明いたします</span>。また、お支払い方法についてもご相談を承ります。
@@ -758,7 +758,7 @@ export default function KidsOrthoPage() {
                                     description: "早期の小児矯正により、反対咬合を改善しました。",
                                     patient: "小児",
                                     treatment: "小児矯正（第1期治療）",
-                                    cost: "330,000円〜550,000円（税込）",
+                                    cost: "132,000円〜660,000円（税込）",
                                     duration: "約1〜2年（治療期間）／月1回の通院",
                                     risks: "装置による痛み・違和感、発音のしづらさ、むし歯・歯肉炎リスク、まれに後戻りの可能性",
                                     insurance: "自由診療（保険適用外）"
@@ -771,7 +771,7 @@ export default function KidsOrthoPage() {
                                     description: "小児矯正により、出っ歯（上顎前突）を改善しました。",
                                     patient: "小児",
                                     treatment: "小児矯正（第1期治療）",
-                                    cost: "330,000円〜550,000円（税込）",
+                                    cost: "132,000円〜660,000円（税込）",
                                     duration: "約1〜2年（治療期間）／月1回の通院",
                                     risks: "装置による痛み・違和感、発音のしづらさ、むし歯・歯肉炎リスク、まれに後戻りの可能性",
                                     insurance: "自由診療（保険適用外）"
@@ -784,7 +784,7 @@ export default function KidsOrthoPage() {
                                     description: "矯正治療で歯並びと深い噛み合わせをバランスよく整えました。",
                                     patient: "小児",
                                     treatment: "小児矯正（第1期・第2期治療）",
-                                    cost: "550,000円〜880,000円（税込）",
+                                    cost: "132,000円〜660,000円（税込）",
                                     duration: "約2〜3年（治療期間）／月1回の通院",
                                     risks: "装置による痛み・違和感、発音のしづらさ、むし歯・歯肉炎リスク、歯根吸収、まれに後戻りの可能性",
                                     insurance: "自由診療（保険適用外）"
@@ -1271,7 +1271,7 @@ export default function KidsOrthoPage() {
                                         <div className="text-sm text-gray-500 mt-1">透明なマウスピースで目立たず矯正できます。</div>
                                     </div>
                                     <div className="w-full md:w-[30%] text-left md:text-right">
-                                        <span className="font-bold text-lg text-[#008000]">¥660,000</span>
+                                        <span className="font-bold text-lg text-[#008000]">¥595,000</span>
                                     </div>
                                 </div>
 
@@ -1558,7 +1558,7 @@ export default function KidsOrthoPage() {
                                 <div>
                                     <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-l-4 border-[#C5A572] py-3 px-4 mb-4">1期治療</h4>
                                     <p className="text-[#5A4D41] leading-loose mb-3">
-                                        <span className="font-bold bg-yellow-100">11〜66万円</span>が目安です。
+                                        <span className="font-bold bg-yellow-100">¥132,000〜¥660,000</span>が目安です。
                                         検査・診断料、装置代、調整費、保定装置まで<span className="text-[#C5A572] font-bold">すべて含まれたトータルフィー制</span>を採用しています。
                                     </p>
                                     <a href="/kidsortho/cost" className="text-[#C5A572] font-bold hover:underline inline-flex items-center gap-1 text-sm">
@@ -1568,8 +1568,8 @@ export default function KidsOrthoPage() {
                                 <div>
                                     <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-l-4 border-[#C5A572] py-3 px-4 mb-4">2期治療（仕上げの矯正）</h4>
                                     <p className="text-[#5A4D41] leading-loose mb-3">
-                                        <span className="font-bold bg-yellow-100">30〜80万円</span>が目安です。
-                                        1期治療を受けた方は<span className="text-[#C5A572] font-bold">30〜60万円</span>で、未受診の方より費用を抑えられます。デンタルローンもご利用いただけます。
+                                        <span className="font-bold bg-yellow-100">¥595,000〜¥660,000</span>が目安です。
+                                        装置の種類により費用が異なります。デンタルローンもご利用いただけます。
                                     </p>
                                     <a href="/kidsortho/cost" className="text-[#C5A572] font-bold hover:underline inline-flex items-center gap-1 text-sm">
                                         詳しくはこちら →

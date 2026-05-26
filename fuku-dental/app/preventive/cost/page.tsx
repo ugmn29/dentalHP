@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Link from 'next/link';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
@@ -34,9 +35,9 @@ export default function PreventiveCostPage() {
           <div className="container mx-auto px-4 py-4">
             <div className="flex items-center gap-2 text-sm text-[#8D8070]">
               <Home size={16} />
-              <a href="/" className="hover:text-[#C5A572] transition-colors">ホーム</a>
+              <Link href="/" className="hover:text-[#C5A572] transition-colors">ホーム</Link>
               <ChevronRight size={16} />
-              <a href="/preventive" className="hover:text-[#C5A572] transition-colors">予防歯科</a>
+              <Link href="/preventive" className="hover:text-[#C5A572] transition-colors">予防歯科</Link>
               <ChevronRight size={16} />
               <span className="text-[#C5A572] font-medium">予防歯科の費用</span>
             </div>
@@ -87,7 +88,7 @@ export default function PreventiveCostPage() {
                       </li>
                       <li className="flex items-start">
                         <CheckCircle2 className="w-5 h-5 text-[#C5A572] mr-3 flex-shrink-0 mt-0.5" />
-                        <span><strong>インプラント1本：</strong>約30万円〜50万円（歯を失った場合）</span>
+                        <span><strong>インプラント1本：</strong>¥495,000〜¥595,000（歯を失った場合）</span>
                       </li>
                     </ul>
                   </div>
@@ -165,7 +166,7 @@ export default function PreventiveCostPage() {
                       </li>
                       <li className="flex items-start">
                         <CheckCircle2 className="w-5 h-5 text-[#C5A572] mr-3 flex-shrink-0 mt-0.5" />
-                        <span><strong>PMTC（自費診療の場合）：</strong>約5,000円〜10,000円</span>
+                        <span><strong>エアフロー：</strong>¥8,800</span>
                       </li>
                       <li className="flex items-start">
                         <CheckCircle2 className="w-5 h-5 text-[#C5A572] mr-3 flex-shrink-0 mt-0.5" />
@@ -175,7 +176,7 @@ export default function PreventiveCostPage() {
                   </div>
                   <div className="bg-blue-50 p-4 rounded-xl border border-blue-200">
                     <p className="text-sm">
-                      <strong>自費診療との違い：</strong>保険適用のPMTCは歯周病治療の一環として行う場合に限られます。より徹底的なクリーニングや着色除去を希望される場合は、自費診療（約5,000円〜10,000円）となります。
+                      <strong>自費診療との違い：</strong>保険適用のPMTCは歯周病治療の一環として行う場合に限られます。より徹底的な着色除去を希望される場合は、エアフロー（¥8,800）をご案内します。
                     </p>
                   </div>
                 </div>
@@ -251,7 +252,7 @@ export default function PreventiveCostPage() {
                   </div>
                   <div className="bg-purple-50 p-4 rounded-xl border border-purple-200">
                     <p className="text-sm">
-                      <strong>長期的な費用削減効果：</strong>虫歯や歯周病で歯を失うと、ブリッジ（約3万円〜）、入れ歯（約1万円〜10万円）、インプラント（約30万円〜50万円）などの高額な治療が必要になります。予防歯科は最もコストパフォーマンスの高い健康投資です。
+                      <strong>長期的な費用削減効果：</strong>虫歯や歯周病で歯を失うと、ブリッジや入れ歯、インプラント（¥495,000〜¥595,000）などの治療が必要になることがあります。予防歯科は最もコストパフォーマンスの高い健康投資です。
                     </p>
                   </div>
                 </div>
@@ -357,7 +358,7 @@ export default function PreventiveCostPage() {
                   </div>
                   <div className="text-[#8D8070] leading-relaxed">
                     <p className="mb-3">
-                      <strong className="text-[#C5A572]">A.</strong> <span className="font-bold">はい、確実に削減になります</span>。例えば、虫歯を1本治療すると5,000円〜数万円（被せ物が必要な場合）、歯周病治療は数万円、インプラントは1本30万円以上かかります。
+                      <strong className="text-[#C5A572]">A.</strong> <span className="font-bold">はい、確実に削減になります</span>。例えば、虫歯や歯周病が進行すると治療費が大きくなるため、定期的な予防管理が大切です。
                     </p>
                     <p className="text-sm bg-yellow-50 p-4 rounded-lg">
                       一方、年間の予防費用は1〜2万円程度です。虫歯や歯周病を防ぐことで、将来的に数十万円の治療費を節約できる可能性があります。また、歯を失うリスクも大幅に減らせます。
@@ -460,12 +461,12 @@ export default function PreventiveCostPage() {
                 透明性のある料金体系で、安心して予防ケアを受けていただけます。<br />
                 長期的な健康投資として、予防歯科を始めませんか。
               </p>
-              <a
+              <Link
                 href="/#contact"
                 className="inline-block bg-white text-[#C5A572] font-bold py-4 px-8 rounded-full hover:bg-gray-50 transition-colors shadow-lg"
               >
                 ご予約・お問い合わせ
-              </a>
+              </Link>
             </div>
           </div>
         </section>

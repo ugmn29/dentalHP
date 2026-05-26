@@ -307,7 +307,7 @@ export default function UnderbiteNaturalCurePage() {
                   </div>
                   <div className="bg-orange-50 p-4 rounded-lg">
                     <p className="text-sm text-gray-700">
-                      <span className="font-bold text-[#C5A572]">費用：</span>10〜15万円程度
+                      <span className="font-bold text-[#C5A572]">費用：</span>¥132,000〜
                     </p>
                     <p className="text-sm text-gray-700 mt-1">
                       <span className="font-bold text-[#C5A572]">期間：</span>6ヶ月〜1年
@@ -334,7 +334,7 @@ export default function UnderbiteNaturalCurePage() {
                   </div>
                   <div className="bg-orange-50 p-4 rounded-lg">
                     <p className="text-sm text-gray-700">
-                      <span className="font-bold text-[#C5A572]">費用：</span>8〜12万円程度
+                      <span className="font-bold text-[#C5A572]">費用：</span>¥132,000
                     </p>
                     <p className="text-sm text-gray-700 mt-1">
                       <span className="font-bold text-[#C5A572]">期間：</span>1〜2年
@@ -362,7 +362,7 @@ export default function UnderbiteNaturalCurePage() {
                   <ul className="space-y-2 text-sm text-gray-700">
                     <li className="flex items-start gap-2">
                       <span className="text-green-600 mt-1">✓</span>
-                      <span>費用が安い（10〜15万円 vs 手術200〜300万円）</span>
+                      <span>費用を抑えやすい</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-green-600 mt-1">✓</span>
@@ -401,7 +401,7 @@ export default function UnderbiteNaturalCurePage() {
                       顎の骨を切断して位置を調整する<span className="font-bold text-red-600">手術</span>が必要になります。
                     </p>
                     <p>
-                      <span className="font-bold text-[#C5A572]">費用：</span>200〜300万円（保険適用でも約30万円）<br />
+                      <span className="font-bold text-[#C5A572]">費用：</span>症例により異なります<br />
                       <span className="font-bold text-[#C5A572]">入院：</span>約2週間
                     </p>
                   </div>

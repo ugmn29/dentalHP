@@ -385,7 +385,7 @@ export default function PreventiveCleaningPage() {
                       <strong className="text-[#C5A572]">A.</strong> 基本的なスケーリング（歯石除去）は<span className="font-bold">保険適用</span>で受けられます。費用は1,500円〜2,500円程度（3割負担の場合）です。
                     </p>
                     <p className="text-sm bg-yellow-50 p-4 rounded-lg">
-                      一方、PMTCは保険適用外となる場合もあり、その場合は自費で5,000円〜10,000円程度かかります。ただし、歯周病治療の一環として行う場合は保険適用となることもありますので、詳しくは受診時にご案内いたします。
+                      一方、自費のクリーニングとしてエアフローを行う場合は¥8,800です。ただし、歯周病治療の一環として行う場合は保険適用となることもありますので、詳しくは受診時にご案内いたします。
                     </p>
                   </div>
                 </div>

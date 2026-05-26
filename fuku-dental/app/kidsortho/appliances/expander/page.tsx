@@ -739,14 +739,14 @@ export default function ExpanderPage() {
                                     </h3>
                                     <div className="pl-11">
                                         <p className="text-[#8D8070] leading-relaxed mb-4">
-                                            当院では1期治療全体（拡大床含む）で35〜45万円です。トータルフィー制度のため、治療途中で追加費用が発生することはありません。詳しくは費用ページをご覧ください。
+                                            当院の拡大床は¥495,000です。詳しくは費用ページをご覧ください。
                                         </p>
                                         <div className="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-r-lg">
                                             <p className="text-sm font-bold text-blue-900 mb-2">費用の内訳</p>
                                             <ul className="space-y-2 text-sm text-[#5A4D41]">
                                                 <li className="flex items-start gap-2">
                                                     <span className="text-blue-600">•</span>
-                                                    <span><strong>1期治療費：</strong>35〜45万円（拡大床含む）</span>
+                                                    <span><strong>拡大床：</strong>¥495,000</span>
                                                 </li>
                                                 <li className="flex items-start gap-2">
                                                     <span className="text-blue-600">•</span>

@@ -420,7 +420,7 @@ export default function CrossBiteDetailPage() {
                         <TrendingUp size={18} className="text-blue-500" />
                         <span className="font-bold text-[#5A4D41] text-sm">費用</span>
                       </div>
-                      <p className="text-[#8D8070] text-sm">30〜50万円程度<br /><span className="text-xs">（調整料：1回3,000〜5,000円程度）</span></p>
+                      <p className="text-[#8D8070] text-sm">¥495,000〜¥660,000<br /><span className="text-xs">（装置により異なります）</span></p>
                     </div>
                   </div>
                 </div>
@@ -441,7 +441,7 @@ export default function CrossBiteDetailPage() {
                         <TrendingUp size={18} className="text-yellow-600" />
                         <span className="font-bold text-[#5A4D41] text-sm">費用</span>
                       </div>
-                      <p className="text-[#8D8070] text-sm">40〜80万円程度<br /><span className="text-xs">（1期治療から継続の場合は減額あり）</span></p>
+                      <p className="text-[#8D8070] text-sm">¥595,000〜¥660,000<br /><span className="text-xs">（装置により異なります）</span></p>
                     </div>
                   </div>
                 </div>

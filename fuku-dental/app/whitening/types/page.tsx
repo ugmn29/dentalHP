@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
@@ -29,14 +30,14 @@ export default function WhiteningTypesPage() {
       <div className="bg-white border-b">
         <div className="container mx-auto px-4 py-3">
           <div className="flex items-center text-sm text-gray-600">
-            <a href="/" className="hover:text-[#C5A572] flex items-center">
+            <Link href="/" className="hover:text-[#C5A572] flex items-center">
               <Home className="w-4 h-4 mr-1" />
               ホーム
-            </a>
+            </Link>
             <ChevronRight className="w-4 h-4 mx-2" />
-            <a href="/whitening" className="hover:text-[#C5A572]">
+            <Link href="/whitening" className="hover:text-[#C5A572]">
               ホワイトニング
-            </a>
+            </Link>
             <ChevronRight className="w-4 h-4 mx-2" />
             <span className="text-[#C5A572]">ホワイトニングの種類</span>
           </div>
@@ -147,13 +148,13 @@ export default function WhiteningTypesPage() {
                 <div className="grid md:grid-cols-4 gap-4 p-4 bg-white rounded-xl">
                   <div className="font-semibold text-[#5A4D41]">費用目安</div>
                   <div className="text-center">
-                    <span className="text-gray-700 font-bold">3〜6万円</span>
+                    <span className="text-gray-700 font-bold">¥36,300〜¥110,000</span>
                   </div>
                   <div className="text-center">
-                    <span className="text-green-600 font-bold">2〜4万円</span>
+                    <span className="text-green-600 font-bold">¥38,500</span>
                   </div>
                   <div className="text-center">
-                    <span className="text-gray-700 font-bold">5〜10万円</span>
+                    <span className="text-gray-700 font-bold">¥66,000</span>
                   </div>
                 </div>
 
@@ -228,7 +229,7 @@ export default function WhiteningTypesPage() {
                       {[
                         "知覚過敏が起きやすい",
                         "色戻りが比較的早い（3〜6ヶ月）",
-                        "費用がやや高い（3〜6万円）",
+                        "費用は¥36,300〜¥110,000",
                         "施術中に痛みを感じることがある"
                       ].map((item, i) => (
                         <li key={i} className="flex items-start">
@@ -280,7 +281,7 @@ export default function WhiteningTypesPage() {
                         "知覚過敏が起きにくい",
                         "色戻りしにくい（6〜12ヶ月持続）",
                         "自然で透明感のある白さになる",
-                        "費用がリーズナブル（2〜4万円）"
+                        "費用は¥38,500"
                       ].map((item, i) => (
                         <li key={i} className="flex items-start">
                           <CheckCircle2 className="w-5 h-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
@@ -365,7 +366,7 @@ export default function WhiteningTypesPage() {
                     <h5 className="font-bold text-[#5A4D41] mb-3">デメリット</h5>
                     <ul className="space-y-2">
                       {[
-                        "費用が最も高い（5〜10万円）",
+                        "費用は¥66,000",
                         "通院回数が増える（2〜4回）",
                         "自宅でのケアも必要",
                         "トータルの時間がかかる"
@@ -640,13 +641,13 @@ export default function WhiteningTypesPage() {
               ご希望をお聞かせください
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
+              <Link
                 href="/#contact"
                 className="inline-flex items-center justify-center bg-white text-[#C5A572] px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-50 transition-colors shadow-lg"
               >
                 無料カウンセリング予約
                 <ArrowRight className="w-6 h-6 ml-2" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>

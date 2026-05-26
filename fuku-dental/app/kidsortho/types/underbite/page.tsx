@@ -306,7 +306,7 @@ export default function UnderbiteDetailPage() {
                   </div>
                   <div>
                     <span className="font-bold text-[#5A4D41] block mb-2">費用</span>
-                    <p className="text-sm">10〜20万円程度<br /><span className="text-xs">（調整料：1回3,000〜5,000円程度）</span></p>
+                    <p className="text-sm">¥132,000〜<br /><span className="text-xs">（装置により異なります）</span></p>
                   </div>
                 </div>
               </div>
@@ -321,7 +321,7 @@ export default function UnderbiteDetailPage() {
                   </div>
                   <div>
                     <span className="font-bold text-[#5A4D41] block mb-2">費用</span>
-                    <p className="text-sm">35〜60万円程度<br /><span className="text-xs">（調整料：1回3,000〜5,000円程度）</span></p>
+                    <p className="text-sm">¥495,000〜¥660,000<br /><span className="text-xs">（装置により異なります）</span></p>
                   </div>
                 </div>
               </div>
@@ -336,7 +336,7 @@ export default function UnderbiteDetailPage() {
                   </div>
                   <div>
                     <span className="font-bold text-[#5A4D41] block mb-2">費用</span>
-                    <p className="text-sm">40〜80万円程度<br /><span className="text-xs">（1期治療から継続の場合は減額あり）</span></p>
+                    <p className="text-sm">¥595,000〜¥660,000<br /><span className="text-xs">（装置により異なります）</span></p>
                   </div>
                 </div>
               </div>

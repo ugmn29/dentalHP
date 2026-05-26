@@ -540,7 +540,7 @@ export default function WhiteningDurationPage() {
                         </li>
                         <li className="flex items-start">
                           <CheckCircle2 className="w-5 h-5 text-[#2E8B57] mr-3 flex-shrink-0 mt-0.5" />
-                          <span><span className="font-bold">費用：</span>1回 ¥15,000〜</span>
+                          <span><span className="font-bold">費用：</span>オフィスホワイトニング ¥36,300</span>
                         </li>
                         <li className="flex items-start">
                           <CheckCircle2 className="w-5 h-5 text-[#2E8B57] mr-3 flex-shrink-0 mt-0.5" />
@@ -568,7 +568,7 @@ export default function WhiteningDurationPage() {
                         </li>
                         <li className="flex items-start">
                           <CheckCircle2 className="w-5 h-5 text-[#2E8B57] mr-3 flex-shrink-0 mt-0.5" />
-                          <span><span className="font-bold">費用：</span>追加ジェル ¥5,000/2本</span>
+                          <span><span className="font-bold">費用：</span>ホームホワイトニング ¥38,500</span>
                         </li>
                         <li className="flex items-start">
                           <CheckCircle2 className="w-5 h-5 text-[#2E8B57] mr-3 flex-shrink-0 mt-0.5" />
@@ -709,7 +709,7 @@ export default function WhiteningDurationPage() {
                       <strong className="text-[#C5A572]">A.</strong> <span className="font-bold">ホームホワイトニングでのタッチアップ</span>が最もコスパの良い方法です。
                     </p>
                     <p className="text-sm bg-yellow-50 p-4 rounded-lg">
-                      初回にマウスピースを作成すれば、その後は追加ジェル（¥5,000/2本）のみで月に1〜2回タッチアップできます。オフィスでのタッチアップ（¥15,000〜/回）と比べて経済的で、自宅で手軽にできるのがメリットです。
+                      ホームホワイトニングは¥38,500、オフィスホワイトニングは¥36,300です。ご自宅で継続しやすい方法を選べるのがメリットです。
                     </p>
                   </div>
                 </div>

@@ -278,7 +278,7 @@ export default function KidsOrthoDurationPage() {
                                             </li>
                                             <li className="flex items-start gap-2">
                                                 <CheckCircle className="w-4 h-4 text-[#395b45] flex-shrink-0 mt-0.5" />
-                                                <span>費用も抑えられる（30〜60万円）</span>
+                                                <span>費用も確認しやすい（¥132,000〜¥660,000）</span>
                                             </li>
                                         </ul>
                                     </div>
@@ -300,7 +300,7 @@ export default function KidsOrthoDurationPage() {
                                             </li>
                                             <li className="flex items-start gap-2">
                                                 <AlertCircle className="w-4 h-4 text-red-600 flex-shrink-0 mt-0.5" />
-                                                <span>費用が高額（60〜80万円）</span>
+                                                <span>費用が高額（¥595,000〜¥660,000）</span>
                                             </li>
                                         </ul>
                                     </div>

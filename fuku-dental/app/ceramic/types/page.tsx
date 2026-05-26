@@ -125,7 +125,7 @@ export default function CeramicTypesPage() {
                     </div>
 
                     <p className="mt-4">
-                      <span className="font-bold text-[#C5A572]">目安費用：</span>40,000円〜60,000円/1本
+                      <span className="font-bold text-[#C5A572]">目安費用：</span>e-max ¥77,000、ゴールド ¥110,000
                     </p>
                   </div>
                 </div>
@@ -167,7 +167,7 @@ export default function CeramicTypesPage() {
                     </div>
 
                     <p className="mt-4">
-                      <span className="font-bold text-[#C5A572]">目安費用：</span>50,000円〜70,000円/1本
+                      <span className="font-bold text-[#C5A572]">目安費用：</span>e-max ¥77,000、ゴールド ¥110,000
                     </p>
                   </div>
                 </div>
@@ -214,7 +214,7 @@ export default function CeramicTypesPage() {
                     </div>
 
                     <p className="mt-4">
-                      <span className="font-bold text-[#C5A572]">目安費用：</span>80,000円〜150,000円/1本
+                      <span className="font-bold text-[#C5A572]">目安費用：</span>¥143,000〜¥220,000/1本
                     </p>
                   </div>
                 </div>
@@ -278,7 +278,7 @@ export default function CeramicTypesPage() {
                     </div>
 
                     <p className="mt-4">
-                      <span className="font-bold text-[#C5A572]">目安費用：</span>80,000円〜120,000円/1本
+                      <span className="font-bold text-[#C5A572]">目安費用：</span>料金表をご確認ください
                     </p>
                   </div>
                 </div>
@@ -513,13 +513,13 @@ export default function CeramicTypesPage() {
                       <li className="flex items-start">
                         <ArrowRight className="w-5 h-5 text-[#C5A572] mr-3 flex-shrink-0 mt-0.5" />
                         <div>
-                          <span className="font-semibold">最安：</span>インレー（4〜6万円）
+                          <span className="font-semibold">最安：</span>e-max（¥77,000）
                         </div>
                       </li>
                       <li className="flex items-start">
                         <ArrowRight className="w-5 h-5 text-[#C5A572] mr-3 flex-shrink-0 mt-0.5" />
                         <div>
-                          <span className="font-semibold">次点：</span>アンレー（5〜7万円）
+                          <span className="font-semibold">次点：</span>ゴールド（¥110,000）
                         </div>
                       </li>
                     </ul>
@@ -572,7 +572,7 @@ export default function CeramicTypesPage() {
                       <ul className="space-y-1 text-sm text-[#8D8070]">
                         <li>• 部分的な詰め物</li>
                         <li>• 削る量が少ない</li>
-                        <li>• 費用：4〜6万円</li>
+                        <li>• 費用：¥77,000</li>
                       </ul>
                     </div>
                     <div className="bg-[#FDFBF7] p-4 rounded-lg">
@@ -580,7 +580,7 @@ export default function CeramicTypesPage() {
                       <ul className="space-y-1 text-sm text-[#8D8070]">
                         <li>• 歯全体の被せ物</li>
                         <li>• 削る量が多い</li>
-                        <li>• 費用：8〜15万円</li>
+                        <li>• 費用：¥143,000〜¥220,000</li>
                       </ul>
                     </div>
                   </div>
@@ -632,7 +632,7 @@ export default function CeramicTypesPage() {
                       <li>• 治療範囲：部分的（中程度）</li>
                       <li>• 咬頭部分を含む</li>
                       <li>• 強度と審美性のバランスが良い</li>
-                      <li>• 費用：5〜7万円</li>
+                      <li>• 費用：¥77,000〜¥110,000</li>
                     </ul>
                   </div>
                 </div>

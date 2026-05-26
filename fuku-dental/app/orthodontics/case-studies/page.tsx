@@ -214,7 +214,7 @@ export default function OrthodonticsCaseStudiesPage() {
                       <Coins className="w-5 h-5 text-blue-600 mr-3 mt-1 flex-shrink-0" />
                       <div>
                         <div className="font-semibold text-gray-900">費用</div>
-                        <div className="text-gray-600">¥900,000（審美ブラケット）</div>
+                        <div className="text-gray-600">¥880,000（ワイヤー）</div>
                       </div>
                     </div>
                   </div>

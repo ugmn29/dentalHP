@@ -203,16 +203,16 @@ export default function ChinCapPage() {
                                 <div className="space-y-4">
                                     <div className="flex items-baseline gap-3">
                                         <span className="text-[#8D8070] font-sans">全国の歯科医院での平均的な費用：</span>
-                                        <span className="text-3xl font-bold text-blue-700">¥350,000〜¥500,000</span>
+                                        <span className="text-3xl font-bold text-blue-700">¥132,000〜¥660,000</span>
                                         <span className="text-gray-600">（税込）</span>
                                     </div>
                                     <p className="text-sm text-[#5A4D41] leading-relaxed font-sans">
-                                        チンキャップは通常、1期治療（小児矯正）の一環として使用されます。多くの歯科医院では、チンキャップ単体ではなく、拡大床やその他の装置を組み合わせた総合的な小児矯正治療として提供されているため、費用は35万円〜50万円程度が一般的です。
+                                        チンキャップは通常、1期治療（小児矯正）の一環として使用されます。装置の組み合わせにより費用が異なります。
                                     </p>
                                     <div className="bg-white p-4 rounded-lg">
                                         <p className="text-sm text-[#5A4D41] font-sans">
                                             <span className="font-bold text-blue-700">地域差・医院差：</span>
-                                            都市部の専門医院では50万円〜70万円、地方の一般歯科では30万円〜45万円程度と、地域や医院の専門性によって費用が異なります。
+                                            当院の小児矯正料金は料金表に掲載しています。
                                         </p>
                                     </div>
                                 </div>

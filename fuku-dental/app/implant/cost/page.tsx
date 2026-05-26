@@ -5,6 +5,7 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
 import { PageImage } from '@/components/PageImage';
+import { getPriceCategory } from '@/data/price-list';
 import {
   CreditCard,
   Calculator,
@@ -21,7 +22,7 @@ import {
 export const metadata: Metadata = {
   title: 'インプラントの費用・料金｜明確な料金体系で安心｜Fデンタルオフィス 豊洲プライムスクエア院',
   description:
-    'インプラント治療の費用・料金一覧ページです。1本¥330,000〜。カウンセリング無料。医療費控除の対象。クレジットカード・デンタルローン対応。10年保証制度あり。明確な料金体系で安心して治療を始められます。',
+    'インプラント治療の費用・料金一覧ページです。簡単なケースは¥495,000、難症例は¥595,000。医療費控除の対象。クレジットカード・デンタルローン対応。',
   keywords: [
     'インプラント 費用',
     'インプラント 料金',
@@ -37,7 +38,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'インプラントの費用・料金｜明確な料金体系で安心｜Fデンタルオフィス 豊洲プライムスクエア院',
-    description: 'インプラント治療の費用・料金一覧。1本¥330,000〜。カウンセリング無料。医療費控除対象。クレジットカード・デンタルローン対応。10年保証制度あり。',
+    description: 'インプラント治療の費用・料金一覧。簡単なケースは¥495,000、難症例は¥595,000。医療費控除対象。',
     type: 'website',
     locale: 'ja_JP',
     url: 'https://fshika.com/implant/cost',
@@ -46,37 +47,21 @@ export const metadata: Metadata = {
 };
 
 /* ─── 料金一覧テーブル ─── */
-const priceItems = [
-  { name: 'カウンセリング', price: '無料', highlight: true },
-  { name: 'CT撮影・診断', price: '¥11,000' },
-  { name: 'インプラント埋入（1本）', price: '¥220,000' },
-  { name: 'アバットメント', price: '¥55,000' },
-  { name: '上部構造（セラミック）', price: '¥110,000〜¥165,000' },
-  { name: 'サージカルガイド', price: '¥55,000' },
-  { name: '静脈内鎮静法', price: '¥77,000' },
-  { name: '骨造成（GBR法）', price: '¥55,000〜' },
-  { name: '骨造成（サイナスリフト）', price: '¥165,000〜' },
-];
+const priceItems = getPriceCategory('implant')?.items ?? [];
 
 /* ─── ケース別費用 ─── */
 const caseEstimates = [
   {
-    label: '1本の場合',
-    price: '¥330,000〜¥440,000程度',
-    description: 'インプラント埋入＋アバットメント＋上部構造の合計',
-    note: '最も一般的なケースです',
+    label: '簡単',
+    price: '¥495,000',
+    description: '基本的なインプラント治療の総額',
+    note: '基本的なケースです',
   },
   {
-    label: '2本の場合',
-    price: '¥660,000〜¥880,000程度',
-    description: '2本分の合計費用の目安',
-    note: '隣接する歯の場合の目安です',
-  },
-  {
-    label: 'All-on-4',
-    price: '¥2,200,000〜',
-    description: '4本のインプラントで全顎を支える治療',
-    note: '多くの歯を失った方向けの治療法です',
+    label: '難症例',
+    price: '¥595,000',
+    description: '難症例のインプラント治療の総額',
+    note: '骨量など条件が複雑なケースです',
   },
 ];
 
@@ -152,7 +137,7 @@ export default function ImplantCostPage() {
               </h2>
               <div className="space-y-4 text-[#5A4D41] leading-loose max-w-3xl mx-auto">
                 <p>
-                  インプラント治療の費用は<span className="bg-yellow-100 font-bold">1本あたり約33万円〜44万円程度</span>（税込）です。
+                  インプラント治療の費用は<span className="bg-yellow-100 font-bold">簡単なケースで¥495,000、難症例で¥595,000</span>（税込）です。
                 </p>
                 <p>
                   自費診療のため保険は適用されませんが、<span className="text-[#395b45] font-bold">医療費控除の対象</span>となり、確定申告で税金の一部が還付されます。
@@ -172,7 +157,7 @@ export default function ImplantCostPage() {
                 料金一覧
               </h2>
               <p className="text-gray-500 text-sm">
-                インプラント治療に関わる各項目の料金です（税込表示）
+                インプラント治療の料金です（税込表示）
               </p>
             </div>
 
@@ -194,22 +179,16 @@ export default function ImplantCostPage() {
                       <tr
                         key={i}
                         className={`border-b border-gray-100 last:border-b-0 ${
-                          item.highlight
-                            ? 'bg-[#FF9F43]/5'
-                            : i % 2 === 1
-                              ? 'bg-gray-50/50'
-                              : 'bg-white'
+                          i % 2 === 1
+                            ? 'bg-gray-50/50'
+                            : 'bg-white'
                         }`}
                       >
                         <td className="px-6 py-4 text-[#5A4D41] font-medium text-sm md:text-base">
                           {item.name}
                         </td>
                         <td
-                          className={`px-6 py-4 text-right font-bold text-sm md:text-base ${
-                            item.highlight
-                              ? 'text-[#FF9F43] text-lg'
-                              : 'text-[#2d4835]'
-                          }`}
+                          className="px-6 py-4 text-right font-bold text-sm md:text-base text-[#2d4835]"
                         >
                           {item.price}
                         </td>
@@ -221,7 +200,7 @@ export default function ImplantCostPage() {
             </div>
 
             <p className="text-xs text-gray-400 mt-4 text-center">
-              ※ 症例により費用は異なります。詳しくはカウンセリング時にご説明いたします。
+              ※ 詳しくはカウンセリング時にご説明いたします。
             </p>
           </div>
         </div>
@@ -234,7 +213,7 @@ export default function ImplantCostPage() {
                 ケース別費用の目安
               </h2>
               <p className="text-gray-500 text-sm">
-                失った歯の本数や治療法による費用の目安です
+                治療内容による費用の目安です
               </p>
             </div>
 
@@ -263,7 +242,7 @@ export default function ImplantCostPage() {
             <div className="mt-6 bg-[#395b45]/5 rounded-xl p-4 flex items-start gap-3">
               <Info className="w-5 h-5 text-[#395b45] flex-shrink-0 mt-0.5" />
               <p className="text-sm text-[#5A4D41] leading-relaxed">
-                ※ 症例により費用は異なります。骨造成や静脈内鎮静法が必要な場合は、別途費用がかかります。正確な費用は精密検査後にお見積もりをお出しいたします。
+                ※ 詳しくは精密検査後にお見積もりをお出しいたします。
               </p>
             </div>
           </div>
@@ -326,7 +305,7 @@ export default function ImplantCostPage() {
                   </thead>
                   <tbody>
                     <tr className="border-b border-gray-100">
-                      <td className="px-4 py-3 text-[#5A4D41]">¥330,000</td>
+                      <td className="px-4 py-3 text-[#5A4D41]">¥495,000</td>
                       <td className="px-4 py-3 text-center text-[#5A4D41]">
                         36回
                       </td>
@@ -335,7 +314,7 @@ export default function ImplantCostPage() {
                       </td>
                     </tr>
                     <tr className="border-b border-gray-100">
-                      <td className="px-4 py-3 text-[#5A4D41]">¥440,000</td>
+                      <td className="px-4 py-3 text-[#5A4D41]">¥595,000</td>
                       <td className="px-4 py-3 text-center text-[#5A4D41]">
                         48回
                       </td>
@@ -344,7 +323,7 @@ export default function ImplantCostPage() {
                       </td>
                     </tr>
                     <tr>
-                      <td className="px-4 py-3 text-[#5A4D41]">¥660,000</td>
+                      <td className="px-4 py-3 text-[#5A4D41]">¥990,000</td>
                       <td className="px-4 py-3 text-center text-[#5A4D41]">
                         84回
                       </td>

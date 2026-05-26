@@ -381,7 +381,7 @@ export default function IVSedationPage() {
               <h3 className="text-xl font-bold text-[#2d4835] mb-6 text-center">静脈内鎮静法の費用</h3>
               <div className="space-y-4 text-[#5A4D41] leading-loose">
                 <p className="text-center">
-                  <span className="text-2xl font-bold text-[#2d4835]">55,000円〜77,000円</span>
+                  <span className="text-2xl font-bold text-[#2d4835]">99,000円</span>
                   <span className="text-sm ml-2">（税込）</span>
                 </p>
                 <p className="text-sm text-center">

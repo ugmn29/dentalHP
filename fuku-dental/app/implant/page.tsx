@@ -252,27 +252,15 @@ function PriceOverview() {
         <div className="bg-white rounded-xl border border-gray-100 p-6 md:p-8 shadow-sm">
           <div className="space-y-4">
             <div className="flex justify-between items-center py-3 border-b border-gray-100">
-              <span className="text-[#5A4D41] font-medium">カウンセリング</span>
-              <span className="text-[#395b45] font-bold text-lg">無料</span>
+              <span className="text-[#5A4D41] font-medium">インプラント（簡単）</span>
+              <span className="text-[#395b45] font-bold text-lg">¥495,000</span>
             </div>
             <div className="flex justify-between items-center py-3 border-b border-gray-100">
-              <span className="text-[#5A4D41] font-medium">CT撮影・診断</span>
-              <span className="text-[#5A4D41]">¥11,000〜</span>
-            </div>
-            <div className="flex justify-between items-center py-3 border-b border-gray-100">
-              <span className="text-[#5A4D41] font-medium">インプラント1本（税込）</span>
-              <span className="text-[#395b45] font-bold text-lg">¥330,000〜</span>
-            </div>
-            <div className="flex justify-between items-center py-3 border-b border-gray-100">
-              <span className="text-[#5A4D41] font-medium">骨造成（必要な場合）</span>
-              <span className="text-[#5A4D41]">¥55,000〜</span>
-            </div>
-            <div className="flex justify-between items-center py-3">
-              <span className="text-[#5A4D41] font-medium">静脈内鎮静法</span>
-              <span className="text-[#5A4D41]">¥77,000〜</span>
+              <span className="text-[#5A4D41] font-medium">インプラント（難症例）</span>
+              <span className="text-[#395b45] font-bold text-lg">¥595,000</span>
             </div>
           </div>
-          <p className="text-xs text-gray-400 mt-4">※ 症例により費用は異なります。詳しくはカウンセリング時にご説明いたします。</p>
+          <p className="text-xs text-gray-400 mt-4">※ 詳しくはカウンセリング時にご説明いたします。</p>
         </div>
         <div className="mt-6">
           <Link

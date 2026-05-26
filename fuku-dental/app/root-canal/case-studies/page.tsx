@@ -212,7 +212,7 @@ export default function RootCanalCaseStudiesPage() {
                         <DollarSign className="h-5 w-5 text-purple-600 mr-2" />
                         費用
                       </div>
-                      <p className="text-gray-700">約120,000円（自費・マイクロスコープ使用）</p>
+                      <p className="text-gray-700">22,000円（自費）</p>
                     </div>
                     <div className="bg-gray-50 rounded-lg p-4">
                       <div className="flex items-center text-gray-900 font-bold mb-2">
@@ -364,7 +364,7 @@ export default function RootCanalCaseStudiesPage() {
                         <DollarSign className="h-5 w-5 text-orange-600 mr-2" />
                         費用
                       </div>
-                      <p className="text-gray-700">約80,000円（自費）</p>
+                      <p className="text-gray-700">22,000円（自費）</p>
                     </div>
                     <div className="bg-gray-50 rounded-lg p-4">
                       <div className="flex items-center text-gray-900 font-bold mb-2">
@@ -440,7 +440,7 @@ export default function RootCanalCaseStudiesPage() {
                         <DollarSign className="h-5 w-5 text-indigo-600 mr-2" />
                         費用
                       </div>
-                      <p className="text-gray-700">約150,000円（自費・マイクロスコープ使用）</p>
+                      <p className="text-gray-700">22,000円（自費）</p>
                     </div>
                     <div className="bg-gray-50 rounded-lg p-4">
                       <div className="flex items-center text-gray-900 font-bold mb-2">

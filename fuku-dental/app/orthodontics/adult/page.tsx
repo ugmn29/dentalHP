@@ -328,7 +328,7 @@ export default function OrthodonticsAdultPage() {
                   <div className="bg-green-50 rounded-xl p-4">
                     <div className="flex justify-between items-center mb-2">
                       <span className="text-sm text-gray-600">費用</span>
-                      <span className="font-bold text-gray-900">¥800,000〜</span>
+                      <span className="font-bold text-gray-900">¥440,000〜¥880,000</span>
                     </div>
                     <div className="flex justify-between items-center">
                       <span className="text-sm text-gray-600">期間</span>
@@ -377,7 +377,7 @@ export default function OrthodonticsAdultPage() {
                   <div className="bg-purple-50 rounded-xl p-4">
                     <div className="flex justify-between items-center mb-2">
                       <span className="text-sm text-gray-600">費用</span>
-                      <span className="font-bold text-gray-900">¥1,200,000〜</span>
+                      <span className="font-bold text-gray-900">要相談</span>
                     </div>
                     <div className="flex justify-between items-center">
                       <span className="text-sm text-gray-600">期間</span>

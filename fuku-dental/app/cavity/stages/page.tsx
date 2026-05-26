@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Link from 'next/link';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
@@ -34,9 +35,9 @@ export default function CavityStagesPage() {
           <div className="container mx-auto px-4 py-4">
             <div className="flex items-center gap-2 text-sm text-[#8D8070]">
               <Home size={16} />
-              <a href="/" className="hover:text-[#C5A572] transition-colors">ホーム</a>
+              <Link href="/" className="hover:text-[#C5A572] transition-colors">ホーム</Link>
               <ChevronRight size={16} />
-              <a href="/cavity" className="hover:text-[#C5A572] transition-colors">虫歯治療</a>
+              <Link href="/cavity" className="hover:text-[#C5A572] transition-colors">虫歯治療</Link>
               <ChevronRight size={16} />
               <span className="text-[#C5A572] font-medium">虫歯の進行段階</span>
             </div>
@@ -293,7 +294,7 @@ export default function CavityStagesPage() {
                   </div>
                   <div className="bg-purple-50 p-4 rounded-xl border border-purple-200">
                     <p className="text-sm">
-                      <strong>歯を失うリスク：</strong>根の先に膿が溜まると顎の骨を溶かし、全身の健康にも悪影響を及ぼします。抜歯後は、インプラント（30万円〜）、ブリッジ（数万円〜）、入れ歯などの治療が必要になります。
+                      <strong>歯を失うリスク：</strong>根の先に膿が溜まると顎の骨を溶かし、全身の健康にも悪影響を及ぼします。抜歯後は、インプラント（¥495,000〜¥595,000）、ブリッジ、入れ歯などの治療が必要になります。
                     </p>
                   </div>
                 </div>
@@ -502,12 +503,12 @@ export default function CavityStagesPage() {
                 痛みが出る前の定期検診が、歯を守る鍵です。<br />
                 3〜6ヶ月ごとの検診をお勧めします。
               </p>
-              <a
+              <Link
                 href="/#contact"
                 className="inline-block bg-white text-[#C5A572] font-bold py-4 px-8 rounded-full hover:bg-gray-50 transition-colors shadow-lg"
               >
                 ご予約・お問い合わせ
-              </a>
+              </Link>
             </div>
           </div>
         </section>
