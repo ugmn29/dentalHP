@@ -96,21 +96,21 @@ export default function RootCanalCaseStudiesPage() {
                 <div className="bg-blue-50 rounded-xl p-6 mb-6">
                   <h3 className="text-xl font-bold text-gray-900 mb-4">患者様情報</h3>
                   <div className="grid md:grid-cols-2 gap-4 text-gray-700">
-                    <div className="flex items-center">
-                      <span className="font-bold w-24">年齢・性別</span>
-                      <span>40代・女性</span>
+                    <div className="flex min-w-0 items-start gap-2">
+                      <span className="w-20 shrink-0 font-bold sm:w-24">年齢・性別</span>
+                      <span className="min-w-0 flex-1 break-words">40代・女性</span>
                     </div>
-                    <div className="flex items-center">
-                      <span className="font-bold w-24">主訴</span>
-                      <span>右上奥歯の強い痛み</span>
+                    <div className="flex min-w-0 items-start gap-2">
+                      <span className="w-20 shrink-0 font-bold sm:w-24">主訴</span>
+                      <span className="min-w-0 flex-1 break-words">右上奥歯の強い痛み</span>
                     </div>
-                    <div className="flex items-center">
-                      <span className="font-bold w-24">診断</span>
-                      <span>歯髄炎（神経の炎症）</span>
+                    <div className="flex min-w-0 items-start gap-2">
+                      <span className="w-20 shrink-0 font-bold sm:w-24">診断</span>
+                      <span className="min-w-0 flex-1 break-words">歯髄炎（神経の炎症）</span>
                     </div>
-                    <div className="flex items-center">
-                      <span className="font-bold w-24">対象歯</span>
-                      <span>右上第一大臼歯</span>
+                    <div className="flex min-w-0 items-start gap-2">
+                      <span className="w-20 shrink-0 font-bold sm:w-24">対象歯</span>
+                      <span className="min-w-0 flex-1 break-words">右上第一大臼歯</span>
                     </div>
                   </div>
                 </div>
@@ -172,21 +172,21 @@ export default function RootCanalCaseStudiesPage() {
                 <div className="bg-purple-50 rounded-xl p-6 mb-6">
                   <h3 className="text-xl font-bold text-gray-900 mb-4">患者様情報</h3>
                   <div className="grid md:grid-cols-2 gap-4 text-gray-700">
-                    <div className="flex items-center">
-                      <span className="font-bold w-24">年齢・性別</span>
-                      <span>50代・男性</span>
+                    <div className="flex min-w-0 items-start gap-2">
+                      <span className="w-20 shrink-0 font-bold sm:w-24">年齢・性別</span>
+                      <span className="min-w-0 flex-1 break-words">50代・男性</span>
                     </div>
-                    <div className="flex items-center">
-                      <span className="font-bold w-24">主訴</span>
-                      <span>左下奥歯の腫れと違和感</span>
+                    <div className="flex min-w-0 items-start gap-2">
+                      <span className="w-20 shrink-0 font-bold sm:w-24">主訴</span>
+                      <span className="min-w-0 flex-1 break-words">左下奥歯の腫れと違和感</span>
                     </div>
-                    <div className="flex items-center">
-                      <span className="font-bold w-24">診断</span>
-                      <span>根尖性歯周炎（根の先の炎症）</span>
+                    <div className="flex min-w-0 items-start gap-2">
+                      <span className="w-20 shrink-0 font-bold sm:w-24">診断</span>
+                      <span className="min-w-0 flex-1 break-words">根尖性歯周炎（根の先の炎症）</span>
                     </div>
-                    <div className="flex items-center">
-                      <span className="font-bold w-24">対象歯</span>
-                      <span>左下第二大臼歯</span>
+                    <div className="flex min-w-0 items-start gap-2">
+                      <span className="w-20 shrink-0 font-bold sm:w-24">対象歯</span>
+                      <span className="min-w-0 flex-1 break-words">左下第二大臼歯</span>
                     </div>
                   </div>
                 </div>
@@ -248,21 +248,21 @@ export default function RootCanalCaseStudiesPage() {
                 <div className="bg-green-50 rounded-xl p-6 mb-6">
                   <h3 className="text-xl font-bold text-gray-900 mb-4">患者様情報</h3>
                   <div className="grid md:grid-cols-2 gap-4 text-gray-700">
-                    <div className="flex items-center">
-                      <span className="font-bold w-24">年齢・性別</span>
-                      <span>30代・女性</span>
+                    <div className="flex min-w-0 items-start gap-2">
+                      <span className="w-20 shrink-0 font-bold sm:w-24">年齢・性別</span>
+                      <span className="min-w-0 flex-1 break-words">30代・女性</span>
                     </div>
-                    <div className="flex items-center">
-                      <span className="font-bold w-24">主訴</span>
-                      <span>左上前歯の違和感</span>
+                    <div className="flex min-w-0 items-start gap-2">
+                      <span className="w-20 shrink-0 font-bold sm:w-24">主訴</span>
+                      <span className="min-w-0 flex-1 break-words">左上前歯の違和感</span>
                     </div>
-                    <div className="flex items-center">
-                      <span className="font-bold w-24">診断</span>
-                      <span>根尖病巣（根の先の膿の袋）</span>
+                    <div className="flex min-w-0 items-start gap-2">
+                      <span className="w-20 shrink-0 font-bold sm:w-24">診断</span>
+                      <span className="min-w-0 flex-1 break-words">根尖病巣（根の先の膿の袋）</span>
                     </div>
-                    <div className="flex items-center">
-                      <span className="font-bold w-24">対象歯</span>
-                      <span>左上中切歯（前歯）</span>
+                    <div className="flex min-w-0 items-start gap-2">
+                      <span className="w-20 shrink-0 font-bold sm:w-24">対象歯</span>
+                      <span className="min-w-0 flex-1 break-words">左上中切歯（前歯）</span>
                     </div>
                   </div>
                 </div>
@@ -324,21 +324,21 @@ export default function RootCanalCaseStudiesPage() {
                 <div className="bg-orange-50 rounded-xl p-6 mb-6">
                   <h3 className="text-xl font-bold text-gray-900 mb-4">患者様情報</h3>
                   <div className="grid md:grid-cols-2 gap-4 text-gray-700">
-                    <div className="flex items-center">
-                      <span className="font-bold w-24">年齢・性別</span>
-                      <span>60代・男性</span>
+                    <div className="flex min-w-0 items-start gap-2">
+                      <span className="w-20 shrink-0 font-bold sm:w-24">年齢・性別</span>
+                      <span className="min-w-0 flex-1 break-words">60代・男性</span>
                     </div>
-                    <div className="flex items-center">
-                      <span className="font-bold w-24">主訴</span>
-                      <span>右上前歯の歯茎の腫れ</span>
+                    <div className="flex min-w-0 items-start gap-2">
+                      <span className="w-20 shrink-0 font-bold sm:w-24">主訴</span>
+                      <span className="min-w-0 flex-1 break-words">右上前歯の歯茎の腫れ</span>
                     </div>
-                    <div className="flex items-center">
-                      <span className="font-bold w-24">診断</span>
-                      <span>根尖病巣（再治療困難なケース）</span>
+                    <div className="flex min-w-0 items-start gap-2">
+                      <span className="w-20 shrink-0 font-bold sm:w-24">診断</span>
+                      <span className="min-w-0 flex-1 break-words">根尖病巣（再治療困難なケース）</span>
                     </div>
-                    <div className="flex items-center">
-                      <span className="font-bold w-24">対象歯</span>
-                      <span>右上側切歯（前歯）</span>
+                    <div className="flex min-w-0 items-start gap-2">
+                      <span className="w-20 shrink-0 font-bold sm:w-24">対象歯</span>
+                      <span className="min-w-0 flex-1 break-words">右上側切歯（前歯）</span>
                     </div>
                   </div>
                 </div>
@@ -400,21 +400,21 @@ export default function RootCanalCaseStudiesPage() {
                 <div className="bg-indigo-50 rounded-xl p-6 mb-6">
                   <h3 className="text-xl font-bold text-gray-900 mb-4">患者様情報</h3>
                   <div className="grid md:grid-cols-2 gap-4 text-gray-700">
-                    <div className="flex items-center">
-                      <span className="font-bold w-24">年齢・性別</span>
-                      <span>35代・男性</span>
+                    <div className="flex min-w-0 items-start gap-2">
+                      <span className="w-20 shrink-0 font-bold sm:w-24">年齢・性別</span>
+                      <span className="min-w-0 flex-1 break-words">35代・男性</span>
                     </div>
-                    <div className="flex items-center">
-                      <span className="font-bold w-24">主訴</span>
-                      <span>右下奥歯の激痛</span>
+                    <div className="flex min-w-0 items-start gap-2">
+                      <span className="w-20 shrink-0 font-bold sm:w-24">主訴</span>
+                      <span className="min-w-0 flex-1 break-words">右下奥歯の激痛</span>
                     </div>
-                    <div className="flex items-center">
-                      <span className="font-bold w-24">診断</span>
-                      <span>歯髄炎（根管が4本ある複雑なケース）</span>
+                    <div className="flex min-w-0 items-start gap-2">
+                      <span className="w-20 shrink-0 font-bold sm:w-24">診断</span>
+                      <span className="min-w-0 flex-1 break-words">歯髄炎（根管が4本ある複雑なケース）</span>
                     </div>
-                    <div className="flex items-center">
-                      <span className="font-bold w-24">対象歯</span>
-                      <span>右下第一大臼歯</span>
+                    <div className="flex min-w-0 items-start gap-2">
+                      <span className="w-20 shrink-0 font-bold sm:w-24">対象歯</span>
+                      <span className="min-w-0 flex-1 break-words">右下第一大臼歯</span>
                     </div>
                   </div>
                 </div>
