@@ -11,9 +11,9 @@ const fallbackImages: Record<string, string> = {
   '/homepage/feature4': '/images/pages/homepage/治療中の場面.jpg',
   '/homepage/feature5': '/images/pages/homepage/治療中の場面.jpg',
   '/homepage/feature6': '/images/pages/homepage/カウンセリングで医師と患者が話している場面.jpg',
-  '/homepage/doctor': '/images/recruit/director.png',
+  '/homepage/doctor': '/images/recruit/director.webp',
   '/homepage/facility1': '/images/pages/homepage/受付で挨拶している場面.jpg',
-  '/homepage/facility2': '/images/hero-bg.png',
+  '/homepage/facility2': '/images/hero-bg.webp',
   '/homepage/facility3': '/images/pages/kidsortho/子供がレントゲン撮影をしている場面.jpg',
   '/homepage/facility4': '/images/pages/homepage/カウンセリングで医師と患者が話している場面.jpg',
   '/facilities/facility4': '/images/pages/homepage/カウンセリングで医師と患者が話している場面.jpg',
@@ -25,21 +25,21 @@ const fallbackImages: Record<string, string> = {
   '/facilities/pain-care': '/images/pages/homepage/治療中の場面.jpg',
   '/facilities/ceiling-tv': '/images/pages/homepage/治療中の場面.jpg',
   '/facilities/counseling': '/images/pages/homepage/カウンセリングで医師と患者が話している場面.jpg',
-  '/kidsortho/mouth-breathing-risks/口呼吸と鼻呼吸の顔の発達比較': '/images/diagrams-ai/oral-growth-breathing.png',
-  '/kidsortho/timing/歯の生え変わりと治療開始ベストタイミング': '/images/diagrams-ai/kidsortho-timing.png',
-  '/kidsortho/mft-training/あいうべ体操4ステップの口の形': '/images/diagrams-ai/mft-training-flow.png',
-  '/kidsortho/posture-improvement/良い姿勢と悪い姿勢の比較図': '/images/diagrams-ai/posture-breath-bite.png',
-  '/cavity/stages/C0からC4の虫歯進行段階の歯断面図': '/images/diagrams-ai/cavity-stages.png',
-  '/cavity/treatment-methods/虫歯治療法別の歯断面図': '/images/diagrams-ai/cavity-treatment-comparison.png',
-  '/root-canal/types/根管治療3種類の歯断面図解': '/images/diagrams-ai/root-canal-steps.png',
-  '/orthodontics/types/hero': '/images/diagrams-ai/orthodontic-types.png',
-  '/mouthpiece/feature1': '/images/diagrams-ai/mouthpiece-flow.png',
-  '/ceramic/types/hero': '/images/diagrams-ai/ceramic-materials.png',
-  '/implant/インプラント3層構造の断面図': '/images/diagrams-ai/implant-structure.png',
-  '/implant/comparison/インプラントと入れ歯とブリッジの比較図': '/images/diagrams-ai/implant-comparison.png',
-  '/periodontal/stages/歯周病の進行段階図': '/images/diagrams-ai/periodontal-stages.png',
-  '/whitening/types/ホワイトニング3種類の比較図': '/images/diagrams-ai/whitening-types.png',
-  '/general/bad-breath/feature1': '/images/diagrams-ai/bad-breath-causes.png',
+  '/kidsortho/mouth-breathing-risks/口呼吸と鼻呼吸の顔の発達比較': '/images/diagrams-ai/oral-growth-breathing.webp',
+  '/kidsortho/timing/歯の生え変わりと治療開始ベストタイミング': '/images/diagrams-ai/kidsortho-timing.webp',
+  '/kidsortho/mft-training/あいうべ体操4ステップの口の形': '/images/diagrams-ai/mft-training-flow.webp',
+  '/kidsortho/posture-improvement/良い姿勢と悪い姿勢の比較図': '/images/diagrams-ai/posture-breath-bite.webp',
+  '/cavity/stages/C0からC4の虫歯進行段階の歯断面図': '/images/diagrams-ai/cavity-stages.webp',
+  '/cavity/treatment-methods/虫歯治療法別の歯断面図': '/images/diagrams-ai/cavity-treatment-comparison.webp',
+  '/root-canal/types/根管治療3種類の歯断面図解': '/images/diagrams-ai/root-canal-steps.webp',
+  '/orthodontics/types/hero': '/images/diagrams-ai/orthodontic-types.webp',
+  '/mouthpiece/feature1': '/images/diagrams-ai/mouthpiece-flow.webp',
+  '/ceramic/types/hero': '/images/diagrams-ai/ceramic-materials.webp',
+  '/implant/インプラント3層構造の断面図': '/images/diagrams-ai/implant-structure.webp',
+  '/implant/comparison/インプラントと入れ歯とブリッジの比較図': '/images/diagrams-ai/implant-comparison.webp',
+  '/periodontal/stages/歯周病の進行段階図': '/images/diagrams-ai/periodontal-stages.webp',
+  '/whitening/types/ホワイトニング3種類の比較図': '/images/diagrams-ai/whitening-types.webp',
+  '/general/bad-breath/feature1': '/images/diagrams-ai/bad-breath-causes.webp',
 };
 
 interface PageImageProps {
@@ -47,9 +47,10 @@ interface PageImageProps {
   imageId?: string;
   alt: string;
   className?: string;
+  priority?: boolean;
 }
 
-export function PageImage({ path, imageId = 'hero', alt, className = '' }: PageImageProps) {
+export function PageImage({ path, imageId = 'hero', alt, className = '', priority = false }: PageImageProps) {
   const [hasError, setHasError] = useState(false);
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
   const [isDragging, setIsDragging] = useState(false);
@@ -58,6 +59,9 @@ export function PageImage({ path, imageId = 'hero', alt, className = '' }: PageI
   const src = `/images/pages${path}/${imageId}.jpg`;
   const fallbackSrc = fallbackImages[`${path}/${imageId}`];
   const displaySrc = fallbackSrc || src;
+  const imageLoading = priority ? 'eager' : 'lazy';
+  const imageFetchPriority = priority ? 'high' : 'auto';
+  const imageTitle = alt || undefined;
 
   // Dev mode: proactively check if image exists so dropzone appears reliably
   useEffect(() => {
@@ -121,6 +125,10 @@ export function PageImage({ path, imageId = 'hero', alt, className = '' }: PageI
         <img
           src={previewUrl}
           alt={alt}
+          title={imageTitle}
+          loading={imageLoading}
+          decoding="async"
+          fetchPriority={imageFetchPriority}
           className={className || 'w-full h-auto rounded-lg'}
         />
         {uploading && (
@@ -146,6 +154,10 @@ export function PageImage({ path, imageId = 'hero', alt, className = '' }: PageI
           <img
             src={displaySrc}
             alt={alt}
+            title={imageTitle}
+            loading={imageLoading}
+            decoding="async"
+            fetchPriority={imageFetchPriority}
             className={className || 'w-full h-auto rounded-lg'}
             onError={() => setHasError(true)}
           />
@@ -172,6 +184,10 @@ export function PageImage({ path, imageId = 'hero', alt, className = '' }: PageI
       <img
         src={displaySrc}
         alt={alt}
+        title={imageTitle}
+        loading={imageLoading}
+        decoding="async"
+        fetchPriority={imageFetchPriority}
         className={className || 'w-full h-auto rounded-lg'}
         onError={() => setHasError(true)}
       />

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { Phone, Calendar, Menu, X, ChevronRight, ChevronUp, ChevronDown } from 'lucide-react';
 
 export const Header = () => {
@@ -47,39 +48,39 @@ export const Header = () => {
             <header className="bg-white/95 backdrop-blur-sm shadow-sm z-40 border-b border-[#E8E0D4] w-full overflow-x-hidden">
                 <div className="container mx-auto px-4 py-2 md:py-3 flex justify-between items-center max-w-full">
                     {/* Logo Area */}
-                    <div className="flex items-center gap-2 md:gap-3">
-                        <a href="/" className="flex items-center gap-2 md:gap-3">
+                    <div className="flex min-w-0 items-center gap-2 md:gap-3">
+                        <Link href="/" className="flex min-w-0 items-center gap-2 md:gap-3">
                             <div className="w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden shadow-md border-2 border-white cursor-pointer flex-shrink-0">
-                                <img src="/icon.png" alt="Fデンタルオフィス 豊洲プライムスクエア院 ロゴ" className="w-full h-full object-cover" />
+                                <img src="/icon.png" alt="Fデンタルオフィス 豊洲プライムスクエア院 ロゴ" loading="eager" decoding="async" fetchPriority="high" className="w-full h-full object-cover" />
                             </div>
-                            <div>
+                            <div className="min-w-0 pr-12 lg:pr-0">
                                 <p className="text-[10px] md:text-xs text-[#8D8070] font-bold leading-none mb-0.5">豊洲の歯医者</p>
-                                <h1 className="text-sm md:text-lg font-bold text-[#5A4D41] leading-none tracking-wide whitespace-nowrap" style={{ fontFamily: 'Georgia, "Yu Mincho", "Hiragino Mincho ProN", serif' }}>
+                                <h1 className="max-w-[calc(100vw-8.5rem)] text-[12px] sm:text-sm md:text-lg font-bold text-[#5A4D41] leading-tight tracking-wide md:max-w-none md:whitespace-nowrap" style={{ fontFamily: 'Georgia, "Yu Mincho", "Hiragino Mincho ProN", serif' }}>
                                     Fデンタルオフィス 豊洲プライムスクエア院
                                 </h1>
                             </div>
-                        </a>
+                        </Link>
                     </div>
 
                     {/* Desktop Nav (Hidden in Mobile) */}
                     <nav className="hidden lg:flex items-center gap-5 text-xs xl:text-sm font-bold text-[#8D8070]">
-                        <a href="/" className="hover:text-[#395b45] transition relative group py-2">ホーム</a>
+                        <Link href="/" className="hover:text-[#395b45] transition relative group py-2">ホーム</Link>
                         <a href="#" className="hover:text-[#395b45] transition relative group py-2">初めての方へ</a>
-                        <a href="/case-studies" className="hover:text-[#395b45] transition relative group py-2">症例紹介</a>
-                        <a href="/blog" className="hover:text-[#395b45] transition relative group py-2">ブログ・お知らせ</a>
-                        <a href="/facilities" className="hover:text-[#395b45] transition relative group py-2">院内設備</a>
+                        <Link href="/case-studies" className="hover:text-[#395b45] transition relative group py-2">症例紹介</Link>
+                        <Link href="/blog" className="hover:text-[#395b45] transition relative group py-2">ブログ・お知らせ</Link>
+                        <Link href="/facilities" className="hover:text-[#395b45] transition relative group py-2">院内設備</Link>
                         <a href="#" className="hover:text-[#395b45] transition relative group py-2">ドクター紹介</a>
-                        <a href="/price" className="hover:text-[#395b45] transition relative group py-2">料金表</a>
-                        <a href="/recruit" className="hover:text-[#395b45] transition relative group py-2">採用情報</a>
+                        <Link href="/price" className="hover:text-[#395b45] transition relative group py-2">料金表</Link>
+                        <Link href="/recruit" className="hover:text-[#395b45] transition relative group py-2">採用情報</Link>
 
                         <div className="h-4 w-[1px] bg-gray-300 mx-1"></div>
 
-                        <a href="/kidsortho" className="text-[#395b45] flex items-center px-4 py-2 bg-[#F6F2EA] rounded-full transition hover:bg-[#EFE7DA] border border-[#D8CDBD] shadow-sm transform hover:-translate-y-0.5">
+                        <Link href="/kidsortho" className="text-[#395b45] flex items-center px-4 py-2 bg-[#F6F2EA] rounded-full transition hover:bg-[#EFE7DA] border border-[#D8CDBD] shadow-sm transform hover:-translate-y-0.5">
                             こども矯正サイト
-                        </a>
-                        <a href="/ceramic" className="text-[#8D6F2F] flex items-center px-4 py-2 bg-[#F8F3E8] rounded-full transition hover:bg-[#F0E5D0] border border-[#DCCB9E] shadow-sm transform hover:-translate-y-0.5">
+                        </Link>
+                        <Link href="/ceramic" className="text-[#8D6F2F] flex items-center px-4 py-2 bg-[#F8F3E8] rounded-full transition hover:bg-[#F0E5D0] border border-[#DCCB9E] shadow-sm transform hover:-translate-y-0.5">
                             審美歯科サイト
-                        </a>
+                        </Link>
                     </nav>
                 </div>
             </header>
@@ -97,18 +98,18 @@ export const Header = () => {
             {/* Mobile Nav Drawer (Moved outside header to avoid clipping) */}
             {isMenuOpen && (
                 <div className="lg:hidden bg-white/95 backdrop-blur-md px-4 py-6 space-y-4 shadow-xl fixed top-0 left-0 w-full h-screen z-50 animate-fade-in-down overflow-y-auto pt-20">
-                    <a href="/" className="flex items-center justify-between py-3 border-b border-dashed border-gray-200 font-bold text-[#5A4D41]">ホーム <ChevronRight size={16} className="text-gray-300" /></a>
+                    <Link href="/" className="flex items-center justify-between py-3 border-b border-dashed border-gray-200 font-bold text-[#5A4D41]">ホーム <ChevronRight size={16} className="text-gray-300" /></Link>
 
                     <div className="py-2">
                         <p className="text-xs font-bold text-gray-400 mb-2">専門サイト</p>
-                        <a href="/kidsortho" className="flex items-center gap-3 py-3 px-4 bg-[#F6F2EA] rounded-xl text-[#395b45] font-bold border border-[#D8CDBD] shadow-sm mb-2">
+                        <Link href="/kidsortho" className="flex items-center gap-3 py-3 px-4 bg-[#F6F2EA] rounded-xl text-[#395b45] font-bold border border-[#D8CDBD] shadow-sm mb-2">
                             こども矯正サイト
                             <ChevronRight size={18} className="ml-auto" />
-                        </a>
-                        <a href="/ceramic" className="flex items-center gap-3 py-3 px-4 bg-[#F8F3E8] rounded-xl text-[#8D6F2F] font-bold border border-[#DCCB9E] shadow-sm">
+                        </Link>
+                        <Link href="/ceramic" className="flex items-center gap-3 py-3 px-4 bg-[#F8F3E8] rounded-xl text-[#8D6F2F] font-bold border border-[#DCCB9E] shadow-sm">
                             審美歯科サイト
                             <ChevronRight size={18} className="ml-auto" />
-                        </a>
+                        </Link>
                     </div>
 
                     {/* --- 診療メニュー（開閉式） --- */}
@@ -127,10 +128,10 @@ export const Header = () => {
 
                         <div className={`grid grid-cols-2 gap-2 mt-2 overflow-hidden transition-all duration-300 ${isMobileTreatmentOpen ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'}`}>
                             {treatmentMenuItems.map((item, i) => (
-                                <a key={i} href={item.link} className="flex items-center gap-2 p-2.5 bg-[#FDFBF7] hover:bg-[#F6F2EA] rounded-lg border border-[#E8E0D4] text-xs font-bold text-[#5A4D41] transition-colors">
+                                <Link key={i} href={item.link} className="flex items-center gap-2 p-2.5 bg-[#FDFBF7] hover:bg-[#F6F2EA] rounded-lg border border-[#E8E0D4] text-xs font-bold text-[#5A4D41] transition-colors">
                                     <span className={`w-2 h-2 rounded-full flex-shrink-0 ${getCategoryDotColor(item.cat)}`}></span>
                                     {item.name}
-                                </a>
+                                </Link>
                             ))}
                         </div>
                     </div>
@@ -151,20 +152,20 @@ export const Header = () => {
 
                         <div className={`grid grid-cols-1 gap-2 mt-2 overflow-hidden transition-all duration-300 ${isMobileConcernsOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}>
                             {concernsItems.map((item, i) => (
-                                <a key={i} href={item.link} className="flex items-center gap-2 p-2.5 bg-[#FFF4E6] hover:bg-[#FFE9CC] rounded-lg border border-[#FFE0B2] text-xs font-bold text-[#E89B4D] transition-colors">
+                                <Link key={i} href={item.link} className="flex items-center gap-2 p-2.5 bg-[#FFF4E6] hover:bg-[#FFE9CC] rounded-lg border border-[#FFE0B2] text-xs font-bold text-[#E89B4D] transition-colors">
                                     <span className={`w-2 h-2 rounded-full flex-shrink-0 ${getCategoryDotColor(item.cat)}`}></span>
                                     {item.name}
-                                </a>
+                                </Link>
                             ))}
                         </div>
                     </div>
 
-                    <a href="/case-studies" className="flex items-center justify-between py-3 border-b border-dashed border-gray-200 font-bold text-[#5A4D41]">症例紹介 <ChevronRight size={16} className="text-gray-300" /></a>
+                    <Link href="/case-studies" className="flex items-center justify-between py-3 border-b border-dashed border-gray-200 font-bold text-[#5A4D41]">症例紹介 <ChevronRight size={16} className="text-gray-300" /></Link>
                     <a href="#" className="flex items-center justify-between py-3 border-b border-dashed border-gray-200 font-bold text-[#5A4D41]">ドクター紹介 <ChevronRight size={16} className="text-gray-300" /></a>
-                    <a href="/price" className="flex items-center justify-between py-3 border-b border-dashed border-gray-200 font-bold text-[#5A4D41]">料金表 <ChevronRight size={16} className="text-gray-300" /></a>
-                    <a href="/blog" className="flex items-center justify-between py-3 border-b border-dashed border-gray-200 font-bold text-[#5A4D41]">ブログ・お知らせ <ChevronRight size={16} className="text-gray-300" /></a>
-                    <a href="/facilities" className="flex items-center justify-between py-3 border-b border-dashed border-gray-200 font-bold text-[#5A4D41]">院内設備 <ChevronRight size={16} className="text-gray-300" /></a>
-                    <a href="/recruit" className="flex items-center justify-between py-3 border-b border-dashed border-gray-200 font-bold text-[#5A4D41]">採用情報 <ChevronRight size={16} className="text-gray-300" /></a>
+                    <Link href="/price" className="flex items-center justify-between py-3 border-b border-dashed border-gray-200 font-bold text-[#5A4D41]">料金表 <ChevronRight size={16} className="text-gray-300" /></Link>
+                    <Link href="/blog" className="flex items-center justify-between py-3 border-b border-dashed border-gray-200 font-bold text-[#5A4D41]">ブログ・お知らせ <ChevronRight size={16} className="text-gray-300" /></Link>
+                    <Link href="/facilities" className="flex items-center justify-between py-3 border-b border-dashed border-gray-200 font-bold text-[#5A4D41]">院内設備 <ChevronRight size={16} className="text-gray-300" /></Link>
+                    <Link href="/recruit" className="flex items-center justify-between py-3 border-b border-dashed border-gray-200 font-bold text-[#5A4D41]">採用情報 <ChevronRight size={16} className="text-gray-300" /></Link>
                     <a href="#" className="flex items-center justify-between py-3 border-b border-dashed border-gray-200 font-bold text-[#5A4D41]">アクセス・診療時間 <ChevronRight size={16} className="text-gray-300" /></a>
 
                     <div className="pt-4 space-y-3 pb-20">

@@ -73,7 +73,9 @@ export default function LasikLPPage() {
             <div className="aspect-square relative">
               <img
                 src="http://localhost:3845/assets/1971d027b10ea2a726bb3779c47ebb8742423dfa.png"
-                alt=""
+                alt="厚生労働省認可のレーザー機器"
+                loading="lazy"
+                decoding="async"
                 className="absolute inset-0 w-full h-full object-cover rounded-[12px]"
               />
               <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-1.5 md:p-2">
@@ -87,7 +89,9 @@ export default function LasikLPPage() {
             <div className="aspect-square relative">
               <img
                 src="http://localhost:3845/assets/45a4807839379da160e04856bcad5fa99ffd5423.png"
-                alt=""
+                alt="年間手術実績3,000件以上の執刀医"
+                loading="lazy"
+                decoding="async"
                 className="absolute inset-0 w-full h-full object-cover rounded-[12px]"
               />
               <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-1.5 md:p-2">
@@ -105,7 +109,9 @@ export default function LasikLPPage() {
             <div className="aspect-square relative">
               <img
                 src="http://localhost:3845/assets/d0758385ab46070272bdee0e1e1838e7ae98c3bb.png"
-                alt=""
+                alt="両眼約10分の手術時間"
+                loading="lazy"
+                decoding="async"
                 className="absolute inset-0 w-full h-full object-cover rounded-[12px]"
               />
               <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-1.5 md:p-2">
@@ -123,7 +129,9 @@ export default function LasikLPPage() {
             <div className="aspect-square relative">
               <img
                 src="http://localhost:3845/assets/b119b7253cdb6c7ce386eff3b0dc80b34bf0ef96.png"
-                alt=""
+                alt="LenSxを併用した次世代型レーシック"
+                loading="lazy"
+                decoding="async"
                 className="absolute inset-0 w-full h-full object-cover rounded-[12px]"
               />
               <div className="absolute inset-0 flex flex-col items-center justify-center text-center leading-tight p-1.5 md:p-2">
@@ -207,7 +215,9 @@ export default function LasikLPPage() {
                 <div className="relative">
                   <img
                     src="http://localhost:3845/assets/c38924eb9c4250549885f7741a6e296090bf4f21.png"
-                    alt=""
+                    alt="Wavefront Optimizedの背景画像"
+                    loading="lazy"
+                    decoding="async"
                     className="absolute inset-0 w-full h-full object-cover opacity-30"
                   />
 
@@ -275,7 +285,9 @@ export default function LasikLPPage() {
         <section className="relative py-2 md:py-2 lg:py-2 overflow-hidden">
           <img
             src="http://localhost:3845/assets/b19dfda40dbd48bb93d657dba78954596e5b7cc8.png"
-            alt=""
+            alt="年間手術実績セクションの背景画像"
+            loading="lazy"
+            decoding="async"
             className="absolute inset-0 w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black bg-opacity-50"></div>
@@ -483,7 +495,9 @@ export default function LasikLPPage() {
         <section className="relative py-2 md:py-2 lg:py-2 overflow-hidden">
           <img
             src="http://localhost:3845/assets/b19dfda40dbd48bb93d657dba78954596e5b7cc8.png"
-            alt=""
+            alt="院長挨拶セクションの背景画像"
+            loading="lazy"
+            decoding="async"
             className="absolute inset-0 w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black bg-opacity-60"></div>

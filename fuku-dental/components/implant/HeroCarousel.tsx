@@ -44,8 +44,9 @@ export function HeroCarousel() {
           <PageImage
             path="/implant"
             imageId={s.imageId}
-            alt=""
+            alt={s.title.replace(/\n/g, ' ')}
             className="absolute inset-0 w-full h-full object-cover"
+            priority={i === 0}
           />
           <div className="absolute inset-0 bg-black/30" />
         </div>

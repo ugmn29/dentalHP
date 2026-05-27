@@ -282,7 +282,7 @@ function ReasonCard({ reason, index }: { reason: ReasonItem; index: number }) {
             <PageImage
               path="/implant"
               imageId={reason.imageId}
-              alt=""
+              alt={reason.title}
               className="absolute h-[99.99%] left-0 max-w-none top-[0.01%] w-full object-cover"
             />
           </div>

@@ -106,7 +106,7 @@ export function ProblemGrid() {
         <PageImage
           path="/implant"
           imageId="bg-problems"
-          alt=""
+          alt="インプラント治療でよくある不安の背景画像"
           className="absolute inset-0 w-full h-full object-cover"
         />
         {/* オーバーレイ */}

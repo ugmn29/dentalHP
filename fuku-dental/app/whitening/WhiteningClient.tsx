@@ -1,5 +1,6 @@
 "use client";
 
+import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
@@ -46,6 +47,7 @@ export default function WhiteningPage() {
                   imageId={image.imageId}
                   alt={image.alt}
                   className="w-full h-full object-cover"
+                  priority={index === 0}
                 />
                 <div className="absolute inset-0 bg-black/20"></div>
               </div>
@@ -53,7 +55,7 @@ export default function WhiteningPage() {
 
             {/* CTA Button - Bottom Right */}
             <div className="absolute -bottom-8 right-4 md:-bottom-10 md:right-8 z-20 animate-bounce-slow">
-              <a
+              <Link
                 href="/#contact"
                 className="group relative flex items-center gap-3 bg-gradient-to-r from-[#9B89B3] to-[#8B7AA3] hover:from-[#AB99C3] hover:to-[#9B89B3] text-white px-6 py-4 md:px-8 md:py-5 rounded-full shadow-2xl hover:shadow-[0_0_30px_rgba(155,137,179,0.6)] transition-all duration-300 transform hover:scale-105"
               >
@@ -70,7 +72,7 @@ export default function WhiteningPage() {
 
                 {/* Pulsing ring effect */}
                 <div className="absolute inset-0 rounded-full bg-[#9B89B3] opacity-0 group-hover:opacity-20 group-hover:scale-110 transition-all duration-300"></div>
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -177,9 +179,8 @@ export default function WhiteningPage() {
             <div className="mt-12">
               <a href="https://apo-toolboxes.stransa.co.jp/user/web/babordc4ba29b/reservations" target="_blank" rel="noopener noreferrer" className="block">
                 <img
-                  src="/images/web-reservation-banner.png"
-                  alt="Web予約"
-                  className="w-full max-w-2xl mx-auto rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+                  src="/images/web-reservation-banner.webp"
+                  alt="Web予約" loading="lazy" decoding="async" className="w-full max-w-2xl mx-auto rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
                 />
               </a>
             </div>
@@ -754,13 +755,13 @@ export default function WhiteningPage() {
                       <p className="text-sm text-blue-100 mb-3">
                         あなたに最適なプランをご提案します
                       </p>
-                      <a
+                      <Link
                         href="/#contact"
                         className="inline-flex items-center text-white text-sm font-medium bg-white/20 backdrop-blur-sm px-4 py-2 rounded-lg hover:bg-white/30 transition-colors"
                       >
                         今すぐ予約
                         <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -780,13 +781,13 @@ export default function WhiteningPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center max-w-2xl mx-auto">
-              <a
+              <Link
                 href="/#contact"
                 className="bg-[#C5A572] hover:bg-[#B59562] text-white px-8 py-5 rounded-full font-bold shadow-lg transition-all flex items-center justify-center gap-3 text-lg flex-1 group"
               >
                 <Calendar className="group-hover:rotate-12 transition" />
                 無料カウンセリング予約
-              </a>
+              </Link>
             </div>
 
             <div className="flex items-center justify-center gap-6 text-sm text-[#F0EAE0] mt-8">

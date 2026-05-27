@@ -1,5 +1,6 @@
 "use client";
 
+import Link from 'next/link';
 import { Phone } from 'lucide-react';
 import { FaInstagram, FaYoutube, FaTiktok } from 'react-icons/fa';
 
@@ -8,7 +9,6 @@ import { FaInstagram, FaYoutube, FaTiktok } from 'react-icons/fa';
 const WEB_RESERVATION_URL = "";
 
 // 新デザイン用カラートークン（HomeClientと同期）
-const ACCENT = '#0abab5';        // Bright Tiffany blue (decorative)
 const ACCENT_DARK = '#0a8a85';   // Button/CTA bg (white text safe)
 const PAGE_BG = '#FAFAF7';
 const SURFACE = '#FFFFFF';
@@ -122,9 +122,9 @@ export const Footer = () => {
                                 <ul className="space-y-3">
                                     {treatmentLinks.map((item) => (
                                         <li key={item.link}>
-                                            <a href={item.link} className="text-sm transition" style={{ color: TEXT_MUTED }} onMouseOver={e => (e.currentTarget.style.color = ACCENT_DARK)} onMouseOut={e => (e.currentTarget.style.color = TEXT_MUTED)}>
+                                            <Link href={item.link} className="text-sm transition" style={{ color: TEXT_MUTED }} onMouseOver={e => (e.currentTarget.style.color = ACCENT_DARK)} onMouseOut={e => (e.currentTarget.style.color = TEXT_MUTED)}>
                                                 {item.name}
-                                            </a>
+                                            </Link>
                                         </li>
                                     ))}
                                 </ul>
@@ -134,13 +134,13 @@ export const Footer = () => {
                                 <p className="text-[11px] tracking-[0.3em] mb-5" style={{ color: TEXT_MUTED }}>ABOUT</p>
                                 <ul className="space-y-3">
                                     <li>
-                                        <a href="/" className="text-sm transition" style={{ color: TEXT_MUTED }} onMouseOver={e => (e.currentTarget.style.color = ACCENT_DARK)} onMouseOut={e => (e.currentTarget.style.color = TEXT_MUTED)}>ホーム</a>
+                                        <Link href="/" className="text-sm transition" style={{ color: TEXT_MUTED }} onMouseOver={e => (e.currentTarget.style.color = ACCENT_DARK)} onMouseOut={e => (e.currentTarget.style.color = TEXT_MUTED)}>ホーム</Link>
                                     </li>
                                     {aboutLinks.map((item) => (
                                         <li key={item.link}>
-                                            <a href={item.link} className="text-sm transition" style={{ color: TEXT_MUTED }} onMouseOver={e => (e.currentTarget.style.color = ACCENT_DARK)} onMouseOut={e => (e.currentTarget.style.color = TEXT_MUTED)}>
+                                            <Link href={item.link} className="text-sm transition" style={{ color: TEXT_MUTED }} onMouseOver={e => (e.currentTarget.style.color = ACCENT_DARK)} onMouseOut={e => (e.currentTarget.style.color = TEXT_MUTED)}>
                                                 {item.name}
-                                            </a>
+                                            </Link>
                                         </li>
                                     ))}
                                 </ul>
@@ -185,8 +185,8 @@ export const Footer = () => {
             </footer>
 
             {/* ===== Sticky Bottom Tabs (Mobile) ===== */}
-            <div className="fixed bottom-0 left-0 right-0 z-40 flex md:hidden h-[64px]" style={{ borderTop: `1px solid ${LINE}` }}>
-                <a href="tel:03-6204-2876" className="flex-1 flex flex-col items-center justify-center gap-1 transition" style={{ background: SURFACE, color: TEXT }}>
+            <div className="fixed bottom-0 left-0 right-0 z-40 flex md:hidden h-[64px] max-w-full overflow-hidden" style={{ borderTop: `1px solid ${LINE}` }}>
+                <a href="tel:03-6204-2876" className="min-w-0 flex-1 flex flex-col items-center justify-center gap-1 transition" style={{ background: SURFACE, color: TEXT }}>
                     <Phone size={18} />
                     <span className="text-[10px] font-medium tracking-wider">電話予約</span>
                 </a>
@@ -194,10 +194,10 @@ export const Footer = () => {
                     href={WEB_RESERVATION_URL || '#'}
                     target={WEB_RESERVATION_URL ? '_blank' : undefined}
                     rel={WEB_RESERVATION_URL ? 'noopener noreferrer' : undefined}
-                    className="flex-[1.5] flex items-center justify-center transition"
+                    className="min-w-0 flex-[1.5] flex items-center justify-center px-2 transition"
                     style={{ background: ACCENT_DARK, color: '#fff' }}
                 >
-                    <span className="text-sm font-medium tracking-wider">24時間 WEB予約</span>
+                    <span className="truncate text-xs font-medium tracking-wider sm:text-sm">24時間 WEB予約</span>
                 </a>
             </div>
         </>

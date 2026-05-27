@@ -24,6 +24,12 @@ html, body {
   max-width: 100vw;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   background: #FAFAF8;
   color: #5A4D41;
@@ -36,6 +42,16 @@ body {
 /* Serif font for headings */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-shippori-mincho), "Shippori Mincho", "Hiragino Mincho ProN", "Yu Mincho", serif;
+  overflow-wrap: anywhere;
+  line-break: strict;
+}
+
+p, li, dt, dd, a, button, span {
+  min-width: 0;
+}
+
+p, li, dd {
+  overflow-wrap: anywhere;
 }
 
 /* Yellow markers */
@@ -98,6 +114,17 @@ section {
 img {
   max-width: 100%;
   height: auto;
+}
+
+svg,
+video,
+canvas,
+iframe {
+  max-width: 100%;
+}
+
+.container {
+  max-width: min(100%, 1280px);
 }
 
 @keyframes bounce-slow {

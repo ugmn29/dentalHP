@@ -82,10 +82,10 @@ export default function PricePage() {
                 </section>
 
                 <div className="container mx-auto px-4 py-8 md:py-2 max-w-7xl">
-                    <div className="flex flex-col lg:flex-row gap-12 relative">
+                    <div className="relative flex min-w-0 max-w-full flex-col gap-12 lg:flex-row">
 
                         {/* Sidebar Navigation (Sticky on Desktop) */}
-                        <aside className="lg:w-64 flex-shrink-0">
+                        <aside className="w-full min-w-0 max-w-full flex-shrink-0 lg:w-64">
                             <div className="sticky top-24 space-y-2 hidden lg:block">
                                 <p className="font-bold text-[#6B6B68] text-xs uppercase tracking-wider mb-4 px-4">Menu</p>
                                 {categories.map((cat) => (
@@ -117,12 +117,12 @@ export default function PricePage() {
                             </div>
 
                             {/* Mobile Navigation (Horizontal Scroll) */}
-                            <div className="lg:hidden overflow-x-auto pb-4 -mx-4 px-4 scrollbar-hide flex gap-2 sticky top-[60px] z-40 bg-[#FAFAF7]/95 backdrop-blur-sm py-2 border-b border-[#E6E3DC]">
+                            <div className="lg:hidden w-full max-w-[calc(100vw-2rem)] overflow-x-auto pb-4 scrollbar-hide flex gap-2 sticky top-[60px] z-40 bg-[#FAFAF7]/95 backdrop-blur-sm py-2 border-b border-[#E6E3DC]">
                                 {categories.map((cat) => (
                                     <button
                                         key={cat.id}
                                         onClick={() => scrollToSection(cat.id)}
-                                        className={`whitespace-nowrap px-4 py-2 rounded-full font-bold text-sm border transition-colors ${activeSection === cat.id
+                                        className={`shrink-0 whitespace-nowrap px-4 py-2 rounded-full font-bold text-sm border transition-colors ${activeSection === cat.id
                                             ? 'bg-[#0a8a85] text-white border-[#0a8a85]'
                                             : 'bg-white text-[#6B6B68] border-[#E6E3DC]'
                                             }`}
@@ -134,12 +134,12 @@ export default function PricePage() {
                         </aside>
 
                         {/* Main Content */}
-                        <div className="flex-1 space-y-6">
+                        <div className="w-full min-w-0 max-w-[calc(100vw-2rem)] flex-1 space-y-6 lg:max-w-none">
 
                             {/* Introduction */}
-                            <div className="bg-white p-6 md:p-10 rounded-3xl shadow-sm border border-[#E6E3DC]">
+                            <div className="w-full max-w-full bg-white p-6 md:p-10 rounded-3xl shadow-sm border border-[#E6E3DC]">
                                 <h2 className="text-xl font-bold mb-4 text-[#2C2C2A]">治療費について</h2>
-                                <p className="text-[#6B6B68] leading-relaxed text-sm md:text-base">
+                                <p className="text-[#6B6B68] leading-relaxed text-sm md:text-base break-words">
                                     当院の料金一覧です。<span className="font-bold text-[#2C2C2A]">※表示価格はすべて税込です</span><br />
                                     患者様一人ひとりのお口の状態やご希望に合わせて、最適な治療プランをご提案させていただきます。<br />
                                     費用についてご不明な点がございましたら、カウンセリング時にご遠慮なくご相談ください。
@@ -186,14 +186,14 @@ export default function PricePage() {
                                         </div>
                                     )}
                                     {categoryLinks[cat.id] && (
-                                        <div className="mt-4 flex flex-wrap gap-2">
+                                        <div className="mt-4 flex max-w-full flex-wrap gap-2">
                                             {categoryLinks[cat.id].map((link) => (
                                                 <Link
                                                     key={`${cat.id}-${link.href}`}
                                                     href={link.href}
-                                                    className="inline-flex items-center gap-1.5 rounded-full border border-[#0a8a85]/25 bg-white px-4 py-2 text-sm font-bold text-[#0a8a85] transition-colors hover:bg-[#0abab5]/10"
+                                                    className="inline-flex max-w-full items-center gap-1.5 rounded-full border border-[#0a8a85]/25 bg-white px-4 py-2 text-sm font-bold text-[#0a8a85] transition-colors hover:bg-[#0abab5]/10"
                                                 >
-                                                    {link.label}
+                                                    <span className="min-w-0 break-words">{link.label}</span>
                                                     <ChevronRight size={14} />
                                                 </Link>
                                             ))}

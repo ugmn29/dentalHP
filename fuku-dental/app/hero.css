@@ -6,7 +6,7 @@
 
 .hero {
   /* ▼ 調整可能な変数 ▼ */
-  --hero-bg: url("/images/hero-bg.png");
+  --hero-bg: url("/images/hero-bg.webp");
   --hero-image-position: 50% center;
   --hero-font-serif: "Noto Serif JP", "游明朝", "Yu Mincho", "ヒラギノ明朝 ProN", serif;
   --hero-font-latin: "Cormorant Garamond", serif;

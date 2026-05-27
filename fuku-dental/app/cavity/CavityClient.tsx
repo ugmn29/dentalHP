@@ -184,9 +184,8 @@ export default function CavityPage() {
                         <div className="mt-12">
                             <a href="https://apo-toolboxes.stransa.co.jp/user/web/babordc4ba29b/reservations" target="_blank" rel="noopener noreferrer" className="block">
                                 <img
-                                    src="/images/web-reservation-banner.png"
-                                    alt="Web予約"
-                                    className="w-full max-w-2xl mx-auto rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+                                    src="/images/web-reservation-banner.webp"
+                                    alt="Web予約" loading="lazy" decoding="async" className="w-full max-w-2xl mx-auto rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
                                 />
                             </a>
                         </div>

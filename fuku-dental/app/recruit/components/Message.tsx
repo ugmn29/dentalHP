@@ -4,10 +4,11 @@ export default function Message() {
       <div className="message-grid">
         <div className="message-visual">
           <img
-            src="/images/recruit/director.png"
+            src="/images/recruit/director.webp"
             alt="院長 福永 真大"
             className="message-portrait"
             loading="lazy"
+            decoding="async"
           />
           <div className="message-caption">
             <div className="message-caption-name">院長 福永 真大</div>
