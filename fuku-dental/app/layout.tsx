@@ -31,30 +31,30 @@ const shipporiMincho = Shippori_Mincho({
 });
 
 export const metadata: Metadata = {
-  title: "豊洲駅から2分の歯医者｜個室完備・0歳から対応・土日診療｜Fデンタルオフィス 豊洲プライムスクエア院",
-  description: "豊洲駅6a出口から徒歩2分、豊洲プライムスクエア1階の歯医者「Fデンタルオフィス 豊洲プライムスクエア院」。こども矯正・セラミック治療・インプラント・マウスピース矯正など幅広く対応。豊洲の地域密着型歯科医院として、丁寧なカウンセリングと最新の治療技術をご提供します。",
-  keywords: "豊洲 歯医者,歯医者 豊洲,豊洲 歯科,歯科 豊洲,豊洲 矯正歯科,矯正歯科 豊洲,豊洲駅 歯医者,豊洲プライムスクエア,こども矯正,インプラント,セラミック,ホワイトニング,江東区 歯医者",
+  title: "豊洲の歯科・歯医者｜豊洲駅徒歩2分・0歳から対応｜Fデンタルオフィス 豊洲プライムスクエア院",
+  description: "豊洲駅6a出口から徒歩2分、豊洲プライムスクエア1階の歯科医院・歯医者「Fデンタルオフィス 豊洲プライムスクエア院」。小児歯科・こども矯正・予防歯科・セラミック治療・インプラント・マウスピース矯正など幅広く対応します。",
+  keywords: "豊洲 歯科,豊洲 歯医者,歯科 豊洲,歯医者 豊洲,豊洲 矯正歯科,矯正歯科 豊洲,豊洲駅 歯科,豊洲駅 歯医者,豊洲プライムスクエア,こども矯正,インプラント,セラミック,ホワイトニング,江東区 歯科",
   openGraph: {
-    title: "豊洲駅から2分の歯医者｜個室完備・0歳から対応・土日診療｜Fデンタルオフィス 豊洲プライムスクエア院",
-    description: "豊洲駅6a出口から徒歩2分、豊洲プライムスクエア1階。こども矯正・インプラント・セラミック治療など幅広く対応。豊洲の地域密着型歯科医院。",
+    title: "豊洲の歯科・歯医者｜豊洲駅徒歩2分・0歳から対応｜Fデンタルオフィス 豊洲プライムスクエア院",
+    description: "豊洲駅6a出口から徒歩2分、豊洲プライムスクエア1階。小児歯科・こども矯正・予防歯科・インプラント・セラミック治療など幅広く対応。",
     url: "https://fshika.com",
     siteName: "Fデンタルオフィス 豊洲プライムスクエア院",
     locale: "ja_JP",
     type: "website",
     images: [
       {
-        url: "https://fshika.com/images/hero-bg.png",
+        url: "https://fshika.com/images/og/homepage.png",
         width: 1200,
         height: 630,
-        alt: "Fデンタルオフィス 豊洲プライムスクエア院",
+        alt: "Fデンタルオフィス 豊洲プライムスクエア院の精密診断と治療説明",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "豊洲駅から2分の歯医者｜個室完備・0歳から対応・土日診療｜Fデンタルオフィス 豊洲プライムスクエア院",
-    description: "豊洲駅6a出口から徒歩2分、豊洲プライムスクエア1階。こども矯正・インプラント・セラミック治療など幅広く対応。",
-    images: ["https://fshika.com/images/hero-bg.png"],
+    title: "豊洲の歯科・歯医者｜豊洲駅徒歩2分・0歳から対応｜Fデンタルオフィス 豊洲プライムスクエア院",
+    description: "豊洲駅6a出口から徒歩2分。小児歯科・こども矯正・予防歯科・インプラント・セラミック治療など幅広く対応。",
+    images: ["https://fshika.com/images/og/homepage.png"],
   },
   robots: {
     index: true,
@@ -98,7 +98,9 @@ export default function RootLayout({
         "name": "Fデンタルオフィス 豊洲プライムスクエア院",
         "alternateName": [
           "Fデンタルオフィス",
-          "Fデンタルオフィス豊洲"
+          "Fデンタルオフィス豊洲",
+          "豊洲の歯科 Fデンタルオフィス",
+          "豊洲の歯医者 Fデンタルオフィス"
         ],
         "inLanguage": "ja"
       },
@@ -202,30 +204,30 @@ export default function RootLayout({
             }
           ]
         },
-        "description": "Fデンタルオフィス 豊洲プライムスクエア院では、科学的根拠に基づいた精密治療を提供。インプラント、矯正歯科、小児歯科、歯周病治療、根管治療など、幅広い診療に対応しています。",
+        "description": "豊洲駅徒歩2分の歯科医院・歯医者、Fデンタルオフィス 豊洲プライムスクエア院では、科学的根拠に基づいた精密治療を提供。インプラント、矯正歯科、小児歯科、予防歯科、歯周病治療、根管治療など、幅広い診療に対応しています。",
         "founder": {
           "@type": "Person",
           "name": "福永 真大",
           "jobTitle": "院長・歯科医師",
-          "image": "https://fshika.com/images/recruit/director.png",
-          "description": "矯正歯科専門医。東京歯科大学歯学部卒業。日本矯正歯科学会認定医として、科学的根拠に基づいた精密な矯正治療を提供。",
+          "image": "https://fshika.com/images/pages/homepage/%E8%B1%8A%E6%B4%B2%20%E6%AD%AF%E5%8C%BB%E8%80%85.png",
+          "description": "大阪大学歯学部卒業。一般歯科・インプラント・矯正・審美治療など幅広い症例経験をもとに、科学的根拠に基づいた診療を提供。",
           "credential": "歯科医師免許",
+          "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "大阪大学歯学部"
+          },
           "memberOf": [
-            {
-              "@type": "Organization",
-              "name": "日本矯正歯科学会"
-            },
             {
               "@type": "Organization",
               "name": "日本小児歯科学会"
             },
             {
               "@type": "Organization",
-              "name": "日本歯周病学会"
+              "name": "日本矯正歯科学会"
             },
             {
               "@type": "Organization",
-              "name": "日本口腔インプラント学会"
+              "name": "日本審美歯科学会"
             }
           ]
         },
@@ -235,6 +237,10 @@ export default function RootLayout({
             "name": "福永 真大",
             "jobTitle": "院長・歯科医師",
             "credential": "歯科医師免許",
+            "alumniOf": {
+              "@type": "CollegeOrUniversity",
+              "name": "大阪大学歯学部"
+            },
             "knowsAbout": ["矯正歯科", "小児歯科", "予防歯科", "審美歯科"]
           }
         ],

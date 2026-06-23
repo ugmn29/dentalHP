@@ -1,35 +1,31 @@
 "use client";
 
 import React from 'react';
+import Image from 'next/image';
 import { Phone, Calendar, ChevronDown, ChevronRight } from 'lucide-react';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
+import { ClinicHoursTable } from '@/components/ClinicHoursTable';
 import { PageImage } from '@/components/PageImage';
-import './hero.css';
+import { WEB_RESERVATION_URL } from '@/lib/reservation';
 
-// 診療メニュー（14リンク・SEO内部リンク維持用）
+// 診療メニュー（SEO内部リンク維持用）
 const menuItems = [
-  { name: "こども矯正", link: "/kidsortho", iconImage: "/images/icons/05_矯正歯科.png" },
-  { name: "０歳からの口育", link: "/oral-education", iconImage: "/images/icons/12_小児歯科.png" },
-  { name: "こども歯科・予防", link: "/kids-preventive", iconImage: "/images/icons/12_小児歯科.png" },
-  { name: "セラミック治療", link: "/ceramic", iconImage: "/images/icons/14_審美歯科.png" },
-  { name: "マウスピース矯正", link: "/mouthpiece", iconImage: "/images/icons/06_マウスピース矯正.png" },
-  { name: "矯正歯科", link: "/orthodontics", iconImage: "/images/icons/05_矯正歯科.png" },
-  { name: "インプラント", link: "/implant", iconImage: "/images/icons/07_インプラント.png" },
-  { name: "ホワイトニング", link: "/whitening", iconImage: "/images/icons/15_ホワイトニング.png" },
-  { name: "予防歯科", link: "/preventive", iconImage: "/images/icons/13_予防歯科.png" },
-  { name: "口臭治療", link: "/general/bad-breath", iconImage: "/images/icons/10_口腔外科.png" },
-  { name: "むしば治療", link: "/cavity", iconImage: "/images/icons/01_虫歯治療.png" },
-  { name: "根管治療", link: "/root-canal", iconImage: "/images/icons/03_根管治療.png" },
-  { name: "歯の外傷・急患", link: "/concerns/trauma", iconImage: "/images/icons/10_口腔外科.png" },
-  { name: "顎関節症", link: "/concerns/tmj", iconImage: "/images/icons/11_噛み合わせ.png" },
+  { name: "こども矯正", link: "/kidsortho", iconImage: "/images/icons-transparent/05_矯正歯科.png" },
+  { name: "0歳からのこども歯科・予防", link: "/oral-education", iconImage: "/images/icons-transparent/12_小児歯科.png" },
+  { name: "セラミック治療", link: "/ceramic", iconImage: "/images/icons-transparent/14_審美歯科.png" },
+  { name: "マウスピース矯正", link: "/mouthpiece", iconImage: "/images/icons-transparent/06_マウスピース矯正.png" },
+  { name: "ワイヤー矯正", link: "/orthodontics", iconImage: "/images/icons-transparent/05_矯正歯科.png" },
+  { name: "インプラント", link: "/implant", iconImage: "/images/icons-transparent/07_インプラント.png" },
+  { name: "ホワイトニング", link: "/whitening", iconImage: "/images/icons-transparent/15_ホワイトニング.png" },
+  { name: "予防歯科", link: "/preventive", iconImage: "/images/icons-transparent/13_予防歯科.png" },
+  { name: "口臭治療", link: "/general/bad-breath", iconImage: "/images/icons-transparent/10_口腔外科.png" },
+  { name: "むしば治療", link: "/cavity", iconImage: "/images/icons-transparent/01_虫歯治療.png" },
+  { name: "精密根管治療", link: "/root-canal", iconImage: "/images/icons-transparent/03_根管治療.png" },
+  { name: "歯の外傷・急患", link: "/concerns/trauma", iconImage: "/images/icons-transparent/10_口腔外科.png" },
+  { name: "顎関節症", link: "/concerns/tmj", iconImage: "/images/icons-transparent/11_噛み合わせ.png" },
 ];
 
-
-// ===== 外部予約システムURL =====
-// TODO: 外部予約サービスのURLが決定したら、ここに記入する
-// （例: const WEB_RESERVATION_URL = "https://example.com/booking";）
-const WEB_RESERVATION_URL = "";
 
 // ===== Homepage-only color tokens (does not affect other pages) =====
 const ACCENT = '#0abab5';        // Bright Tiffany blue (decorative use: text/icons/lines)
@@ -41,6 +37,55 @@ const SURFACE = '#FFFFFF';
 const TEXT = '#2C2C2A';          // primary text (not pure black)
 const TEXT_MUTED = '#6B6B68';    // secondary text
 const LINE = '#E6E3DC';          // hairline divider
+
+const approachItems = [
+  {
+    title: "虫歯になりやすい。",
+    description: "何度治しても、繰り返してしまう。",
+    image: "/images/pages/homepage/approach-cavity.webp",
+    alt: "虫歯になりやすい歯のイラスト",
+  },
+  {
+    title: "歯並びが悪い。",
+    description: "矯正しても、いつの間にか戻ってしまう。",
+    image: "/images/pages/homepage/approach-alignment.webp",
+    alt: "歯並びが悪い状態のイラスト",
+  },
+  {
+    title: "歯が変色してきた。",
+    description: "ホワイトニングしても、また色が戻ってしまう。",
+    image: "/images/pages/homepage/approach-discoloration.webp",
+    alt: "歯の変色を示すイラスト",
+  },
+] as const;
+
+const accessRouteImages = [
+  {
+    src: "/images/pages/homepage/access-route/route-step-1.webp",
+    alt: "豊洲プライムスクエアへ進みます",
+    height: 1000,
+  },
+  {
+    src: "/images/pages/homepage/access-route/route-step-2.webp",
+    alt: "VOLVO横を進み、入口へ向かいます",
+    height: 1065,
+  },
+  {
+    src: "/images/pages/homepage/access-route/route-step-3.webp",
+    alt: "こちらの入口から館内へ入ります",
+    height: 985,
+  },
+  {
+    src: "/images/pages/homepage/access-route/route-step-4.webp",
+    alt: "館内に入り、そのまま通路を進みます",
+    height: 1035,
+  },
+  {
+    src: "/images/pages/homepage/access-route/route-step-5.webp",
+    alt: "セブン-イレブンの右奥に当院があります",
+    height: 1060,
+  },
+] as const;
 
 export default function Home() {
   // 症例3点（厳選）
@@ -87,7 +132,7 @@ export default function Home() {
       title: "原因から考える",
       highlight: "根本解決",
       body: "症状ではなく、その奥にある原因に目を向けます。呼吸・姿勢・食習慣・噛み癖など、歯並びや噛み合わせの根本原因にアプローチする、豊洲の歯科医院です。",
-      imageId: "feature6",
+      image: "/images/pages/homepage/promise-root-cause-photo.png",
       imageAlt: "豊洲 歯科 生活習慣指導 口腔育成",
     },
     {
@@ -96,7 +141,7 @@ export default function Home() {
       title: "削らない保存治療",
       highlight: "精密診断",
       body: "拡大鏡・マイクロスコープ・3Dスキャナー・歯科用CTで精密診断。豊洲の歯医者として、できる限り削らない・抜かない治療を実現します。",
-      imageId: "feature5",
+      image: "/images/pages/homepage/promise-preservation-photo.png",
       imageAlt: "豊洲 歯科 保存治療 削らない治療",
     },
     {
@@ -105,7 +150,7 @@ export default function Home() {
       title: "伝わる治療説明",
       highlight: "見える治療",
       body: "口腔内写真・3Dスキャナー・ペン型カメラで、お口の状態を一緒に確認。ご納得いただいてから治療を開始する、豊洲の歯科医院の方針です。",
-      imageId: "feature1",
+      image: "/images/pages/homepage/promise-explanation-photo.png",
       imageAlt: "豊洲 歯科 透明性のある治療説明",
     },
   ];
@@ -115,44 +160,70 @@ export default function Home() {
       <Header />
 
       <main>
-        {/* ============ Section 1: Hero — Pattern B（画像と文字を分離） ============ */}
-        <section className="hero" aria-label="豊洲の歯医者 ヒーローセクション">
-          {/* === 画像エリア === */}
-          <div className="hero__image-area">
-            <div className="hero__bg" role="img" aria-label="新しい歯科医院の内装" />
-            <div className="hero__scroll" aria-hidden="true">
-              SCROLL
-              <span className="hero__scroll-line" />
-            </div>
-          </div>
-
-          {/* === コンテンツエリア === */}
-          <div className="hero__content-area">
-            <div className="hero__content">
-              <p className="hero__overline">豊洲の歯医者</p>
-
-              {/* H1: SEOキーワード入り（視覚的に小さく、意味的にh1） */}
-              <h1 className="hero__seo">
-                豊洲駅徒歩2分の歯科・矯正歯科<br />
-                0歳から通える歯医者・小児歯科
+        {/* ============ Section 1: Hero（下層ページ共通トーン） ============ */}
+        <section className="py-8 md:py-10 bg-[#FDFBF7] overflow-hidden" aria-label="豊洲の歯科・歯医者 ヒーローセクション">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto text-center">
+              <p className="text-[11px] md:text-xs tracking-[0.34em] mb-4 font-medium" style={{ color: ACCENT_DARK }}>
+                TOYOSU DENTAL CLINIC
+              </p>
+              <h1 className="text-4xl md:text-6xl font-bold mb-5 text-[#5A4D41] font-serif leading-[1.35]">
+                豊洲の歯科・歯医者
               </h1>
-
-              {/* 視覚的タグライン（h2扱い、ビジュアル重視） */}
-              <p className="hero__title">
-                <span className="hero__title-line">未来の美しいお顔を、</span>
-                <span className="hero__title-line">ここから<span className="hero__title-accent">《育てる》</span>。</span>
+              <p className="text-xl md:text-3xl font-serif leading-[1.8] mb-7" style={{ color: TEXT }}>
+                未来の美しいお顔を、<br className="sm:hidden" />
+                ここから<span style={{ color: ACCENT_DARK }}>育てる</span>。
               </p>
 
-              <p className="hero__date">2026.07.01 開院予定</p>
+              <div className="mx-auto mb-8 w-full max-w-5xl overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-[#E6E3DC]">
+                <Image
+                  src="/images/pages/homepage/promise-explanation-photo.png"
+                  alt="豊洲の歯科 Fデンタルオフィス 豊洲プライムスクエア院の精密診断と治療説明"
+                  width={1586}
+                  height={992}
+                  priority
+                  sizes="(min-width: 768px) 960px, 100vw"
+                  className="h-auto w-full"
+                />
+              </div>
 
-              <div className="hero__ctas">
-                <a className="hero__cta" href={WEB_RESERVATION_URL || '#'} target={WEB_RESERVATION_URL ? '_blank' : undefined} rel={WEB_RESERVATION_URL ? 'noopener noreferrer' : undefined}>
-                  <Calendar size={16} />
+              <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8" />
+              <p className="text-base md:text-xl leading-relaxed max-w-3xl mx-auto mb-6" style={{ color: TEXT }}>
+                豊洲駅徒歩2分。0歳からの小児歯科・こども矯正から、予防歯科、審美治療、インプラントまで幅広く対応する歯科医院です。
+              </p>
+              <p className="text-sm md:text-base leading-relaxed max-w-3xl mx-auto mb-8" style={{ color: TEXT_MUTED }}>
+                丁寧な説明と精密診断を大切にし、症状だけでなく原因に向き合う治療を行います。
+              </p>
+
+              <div className="flex flex-wrap justify-center gap-3 mb-8" aria-label="医院の特徴">
+                {['豊洲駅徒歩2分', '土日診療', '0歳から対応'].map((item) => (
+                  <span
+                    key={item}
+                    className="inline-flex min-h-10 items-center rounded-full px-5 text-sm font-bold tracking-wide"
+                    style={{ background: '#EEF8F7', color: ACCENT_DARK }}
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
+
+              <div className="flex flex-col sm:flex-row justify-center gap-3">
+                <a
+                  className="inline-flex min-h-14 items-center justify-center gap-2 rounded-full px-8 text-sm font-bold tracking-widest text-white shadow-sm transition hover:-translate-y-0.5"
+                  style={{ background: ACCENT_DARK }}
+                  href={WEB_RESERVATION_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Calendar size={18} />
                   <span>WEB予約はこちら</span>
-                  <span className="hero__cta-arrow" aria-hidden="true">→</span>
                 </a>
-                <a className="hero__cta hero__cta--ghost" href="tel:03-6204-2876">
-                  <Phone size={16} />
+                <a
+                  className="inline-flex min-h-14 items-center justify-center gap-2 rounded-full border px-8 text-sm font-bold tracking-widest transition hover:-translate-y-0.5"
+                  style={{ borderColor: TEXT, color: TEXT }}
+                  href="tel:03-6204-2876"
+                >
+                  <Phone size={18} />
                   <span>03-6204-2876</span>
                 </a>
               </div>
@@ -162,53 +233,65 @@ export default function Home() {
 
         {/* ============ Section 2: 建物・診療時間（フル） ============ */}
         <section className="py-16 md:py-20" style={{ background: SURFACE, borderTop: `1px solid ${LINE}`, borderBottom: `1px solid ${LINE}` }}>
-          <div className="max-w-5xl mx-auto px-5 flex flex-col lg:flex-row gap-10 lg:gap-14 items-center">
-            <div className="w-full lg:w-2/5 flex flex-col items-center sm:items-start text-center sm:text-left">
-              <img
-                src="/images/building.avif"
-                alt="豊洲プライムスクエア"
-                className="w-full max-w-[320px] h-auto rounded-2xl object-cover mb-5"
-                style={{ border: `1px solid ${LINE}` }}
-              />
-              <h3 className="text-xl font-serif mb-2" style={{ color: TEXT }}>豊洲プライムスクエア1階</h3>
-              <p className="text-sm flex items-center gap-2" style={{ color: TEXT_MUTED }}>
-                <span style={{ color: ACCENT_DARK }}>●</span>
-                豊洲駅 6a出口 徒歩2分
-              </p>
-            </div>
+          <div className="max-w-5xl mx-auto px-5">
+            <div className="grid gap-10 lg:grid-cols-[0.82fr_1.18fr] lg:gap-14 lg:items-start">
+              <div className="w-full flex flex-col items-center sm:items-start text-center sm:text-left">
+                <div
+                  className="relative mb-5 aspect-[4/3] w-full max-w-[320px] overflow-hidden rounded-2xl bg-white"
+                  style={{ border: `1px solid ${LINE}` }}
+                >
+                  <Image
+                    src="/images/building.avif"
+                    alt="豊洲プライムスクエア"
+                    fill
+                    sizes="(min-width: 1024px) 320px, min(320px, calc(100vw - 2.5rem))"
+                    className="object-contain object-center p-2"
+                    loading="lazy"
+                  />
+                </div>
+                <h3 className="text-xl font-serif mb-2" style={{ color: TEXT }}>豊洲プライムスクエア1階</h3>
+                <p className="text-sm flex items-center gap-2" style={{ color: TEXT_MUTED }}>
+                  <span style={{ color: ACCENT_DARK }}>●</span>
+                  豊洲駅 6a出口 徒歩2分
+                </p>
+              </div>
 
-            <div className="w-full lg:w-3/5 rounded-2xl p-5 sm:p-6 text-sm" style={{ background: PAGE_BG, border: `1px solid ${LINE}` }}>
-              <table className="w-full text-center table-fixed border-collapse">
-                <thead>
-                  <tr style={{ borderBottom: `1px solid ${LINE}` }}>
-                    <th className="py-3 font-normal text-[10px] sm:text-xs" style={{ color: TEXT_MUTED }}>診療時間</th>
-                    <th className="py-3 font-medium text-xs sm:text-sm" style={{ color: TEXT }}>月</th>
-                    <th className="py-3 font-medium text-xs sm:text-sm" style={{ color: TEXT }}>火</th>
-                    <th className="py-3 font-medium text-xs sm:text-sm" style={{ color: TEXT }}>水</th>
-                    <th className="py-3 font-medium text-xs sm:text-sm" style={{ color: TEXT }}>木</th>
-                    <th className="py-3 font-medium text-xs sm:text-sm" style={{ color: TEXT }}>金</th>
-                    <th className="py-3 font-medium text-xs sm:text-sm" style={{ color: ACCENT_DARK }}>土</th>
-                    <th className="py-3 font-medium text-xs sm:text-sm" style={{ color: ACCENT_DARK }}>日</th>
-                  </tr>
-                </thead>
-                <tbody className="text-base sm:text-lg">
-                  <tr style={{ borderBottom: `1px solid ${LINE}` }}>
-                    <td className="py-3 text-[10px] sm:text-xs" style={{ color: TEXT_MUTED }}>10:00–13:00</td>
-                    <td>●</td><td style={{ opacity: 0.2 }}>−</td><td>●</td><td>●</td><td>●</td>
-                    <td className="text-sm" style={{ color: ACCENT_DARK }}>★</td>
-                    <td className="text-sm" style={{ color: ACCENT_DARK }}>★</td>
-                  </tr>
-                  <tr>
-                    <td className="py-3 text-[10px] sm:text-xs" style={{ color: TEXT_MUTED }}>14:00–19:00</td>
-                    <td>●</td><td style={{ opacity: 0.2 }}>−</td><td>●</td><td>●</td><td>●</td>
-                    <td className="text-sm" style={{ color: ACCENT_DARK }}>★</td>
-                    <td className="text-sm" style={{ color: ACCENT_DARK }}>★</td>
-                  </tr>
-                </tbody>
-              </table>
-              <div className="mt-4 text-[11px] text-center space-y-1" style={{ color: TEXT_MUTED }}>
-                <p>★ 土日：9:00–12:00 / 13:00–17:00</p>
-                <p style={{ color: ACCENT_DARK, fontWeight: 600 }}>休診日：火曜日</p>
+              <div className="order-3 w-full lg:order-2">
+                <ClinicHoursTable />
+              </div>
+
+              <div className="order-2 lg:order-3 lg:col-span-2">
+                <div className="mb-5 text-center sm:text-left">
+                  <p className="text-[11px] tracking-[0.3em] mb-2" style={{ color: ACCENT_DARK }}>ACCESS GUIDE</p>
+                  <h3 className="font-serif text-2xl md:text-3xl font-light" style={{ color: TEXT }}>
+                    写真で見るアクセス
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed" style={{ color: TEXT_MUTED }}>
+                    豊洲プライムスクエア入口から院内までの位置を、写真でご確認いただけます。
+                  </p>
+                </div>
+
+                <div className="w-full md:overflow-x-auto md:pb-3" style={{ scrollbarWidth: 'none' }}>
+                  <div className="grid gap-4 md:flex md:snap-x md:snap-mandatory md:items-start">
+                    {accessRouteImages.map((image) => (
+                      <figure
+                        key={image.src}
+                        className="w-full overflow-hidden rounded-2xl bg-white shadow-sm ring-1 md:w-[390px] md:shrink-0 md:snap-center"
+                        style={{ '--tw-ring-color': LINE } as React.CSSProperties}
+                      >
+                        <Image
+                          src={image.src}
+                          alt={image.alt}
+                          width={1122}
+                          height={image.height}
+                          sizes="(min-width: 768px) 390px, calc(100vw - 2.5rem)"
+                          className="block h-auto w-full"
+                          loading="lazy"
+                        />
+                      </figure>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -223,19 +306,22 @@ export default function Home() {
               <span style={{ color: ACCENT_DARK, fontStyle: 'italic' }}>どう育てる</span>のか。
             </h2>
 
-            <div className="space-y-7 mb-14 md:mb-16" style={{ color: TEXT }}>
-              <div>
-                <p className="font-serif text-lg md:text-2xl leading-[1.9]">虫歯になりやすい。</p>
-                <p className="text-sm md:text-base mt-1" style={{ color: TEXT_MUTED }}>何度治しても、繰り返してしまう。</p>
-              </div>
-              <div>
-                <p className="font-serif text-lg md:text-2xl leading-[1.9]">歯並びが悪い。</p>
-                <p className="text-sm md:text-base mt-1" style={{ color: TEXT_MUTED }}>矯正しても、いつの間にか戻ってしまう。</p>
-              </div>
-              <div>
-                <p className="font-serif text-lg md:text-2xl leading-[1.9]">歯が変色してきた。</p>
-                <p className="text-sm md:text-base mt-1" style={{ color: TEXT_MUTED }}>ホワイトニングしても、また色が戻ってしまう。</p>
-              </div>
+            <div className="grid gap-9 md:grid-cols-3 md:gap-6 mb-14 md:mb-16" style={{ color: TEXT }}>
+              {approachItems.map((item) => (
+                <div key={item.title} className="flex flex-col items-center text-center">
+                  <div className="mb-4 h-32 w-32 md:h-40 md:w-40 overflow-hidden rounded-[28px] bg-white shadow-sm ring-1 ring-[#E6E3DC]">
+                    <img
+                      src={item.image}
+                      alt={item.alt}
+                      className="h-full w-full object-cover"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <p className="font-serif text-lg md:text-xl leading-[1.8]">{item.title}</p>
+                  <p className="text-sm md:text-[15px] mt-1 leading-relaxed" style={{ color: TEXT_MUTED }}>{item.description}</p>
+                </div>
+              ))}
             </div>
 
             <p className="text-sm md:text-base leading-[2.2] max-w-xl mx-auto mb-8" style={{ color: TEXT_MUTED }}>
@@ -245,8 +331,8 @@ export default function Home() {
             </p>
 
             <p className="text-sm md:text-base leading-[2.2] max-w-xl mx-auto" style={{ color: TEXT }}>
-              私たちは、対症療法ではなく、<br />
-              原因にアプローチする<span style={{ color: ACCENT_DARK, fontWeight: 600 }}>根本治療</span>を行う、豊洲の歯科医院です。
+              豊洲で歯科医院をお探しの方へ。<br />
+              私たちは、対症療法ではなく、原因にアプローチする<span style={{ color: ACCENT_DARK, fontWeight: 600 }}>根本治療</span>を行う、豊洲の歯科・歯医者です。
             </p>
 
             <div className="mt-14 flex flex-col items-center gap-3">
@@ -269,15 +355,15 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
               <a href="/kidsortho" className="group block rounded-2xl overflow-hidden transition" style={{ background: PAGE_BG, border: `1px solid ${LINE}` }}>
                 <div className="aspect-[4/3] overflow-hidden">
-                  <PageImage path="/homepage" imageId="feature2" alt="お子様の歯並びを案じる保護者の方へ" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                  <PageImage path="/homepage" imageId="feature2" alt="0歳から高校生までのお子様の歯並びを案じる保護者の方へ" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 </div>
                 <div className="p-7 md:p-9">
                   <p className="text-[10px] tracking-[0.3em] mb-3" style={{ color: ACCENT_DARK }}>FOR PARENTS</p>
                   <h3 className="font-serif text-xl md:text-2xl mb-3" style={{ color: TEXT }}>
-                    お子様の歯並びを案じる<br className="hidden sm:block" />保護者の方へ
+                    0歳から高校生までの、<br className="hidden sm:block" />お子様の歯並びを案じる保護者の方へ
                   </h3>
                   <p className="text-sm leading-[2] mb-5" style={{ color: TEXT_MUTED }}>
-                    豊洲の小児歯科として、0歳からの口育・こども矯正・MFTに対応。<br className="hidden md:block" />お顔の成長期に、一生もののお口の土台を一緒に育てます。
+                    豊洲の小児歯科として、0歳からのこども歯科・予防・こども矯正・MFTに対応。<br className="hidden md:block" />お顔の成長期に、一生もののお口の土台を一緒に育てます。
                   </p>
                   <span className="inline-flex items-center gap-1 text-sm font-medium" style={{ color: ACCENT_DARK }}>
                     こども矯正・口育を見る
@@ -344,11 +430,11 @@ export default function Home() {
                     <ul className="space-y-2.5 text-sm md:text-[15px] leading-[1.9]" style={{ color: TEXT_MUTED }}>
                       {[
                         '大阪大学歯学部 卒業',
-                        '医療法人同仁会ワタナベ歯科医院 勤務',
-                        '一般歯科・インプラント・矯正・審美治療など幅広い症例を経験',
-                        '研修医指導医を担当',
-                        '駒沢公園通り西垣歯科・矯正歯科 副院長、小児矯正部門の立ち上げ',
+                        '医療法人同仁会ワタナベ歯科医院にて研修医指導医・診療主任を歴任',
+                        '駒沢公園通り西垣歯科・矯正歯科 副院長',
+                        '小児歯科部門の立ち上げ',
                         'Fデンタルオフィス 豊洲プライムスクエア院 開業',
+                        '咬合育成研究会監修 生活習慣改善アプリの開発',
                       ].map((item) => (
                         <li key={item} className="flex gap-2.5">
                           <span className="mt-[0.7em] h-1.5 w-1.5 rounded-full flex-shrink-0" style={{ background: ACCENT_DARK }} />
@@ -359,9 +445,9 @@ export default function Home() {
                   </div>
 
                   <div className="rounded-2xl p-5 md:p-6" style={{ background: SURFACE, border: `1px solid ${LINE}` }}>
-                    <p className="text-xs tracking-[0.22em] font-medium mb-4" style={{ color: ACCENT_DARK }}>ACADEMIC SOCIETY</p>
+                    <p className="text-xs tracking-[0.22em] font-medium mb-4" style={{ color: ACCENT_DARK }}>所属学会・資格</p>
                     <p className="text-sm md:text-[15px] leading-[2]" style={{ color: TEXT_MUTED }}>
-                      日本小児歯科学会 / 日本矯正歯科学会 / 日本歯周病学会 / 日本口腔インプラント学会 / 日本審美歯科学会
+                      日本小児歯科学会 / 日本矯正歯科学会 / 日本審美歯科学会 / 歯科医師免許
                     </p>
                   </div>
                 </div>
@@ -405,7 +491,14 @@ export default function Home() {
                   {/* Image side (desktop) */}
                   <div className="hidden lg:block lg:w-1/2 relative">
                     <div className="relative rounded-[32px] overflow-hidden aspect-[16/10] transition-transform duration-700 ease-out group-hover:scale-[1.02]" style={{ border: `1px solid ${LINE}` }}>
-                      <PageImage path="/homepage" imageId={p.imageId} alt={p.imageAlt} className="w-full h-full object-cover" />
+                      <Image
+                        src={p.image}
+                        alt={p.imageAlt}
+                        fill
+                        sizes="50vw"
+                        className="object-cover"
+                        loading="lazy"
+                      />
                     </div>
                     <div className={`absolute -bottom-8 ${i % 2 === 0 ? '-left-8' : '-right-8'} w-32 h-32 rounded-full blur-2xl -z-10`} style={{ background: `${ACCENT}20` }} />
                   </div>
@@ -426,8 +519,15 @@ export default function Home() {
 
                     {/* Image (mobile, between title and body) */}
                     <div className="w-full lg:hidden">
-                      <div className="rounded-[24px] overflow-hidden aspect-[16/10]" style={{ border: `1px solid ${LINE}` }}>
-                        <PageImage path="/homepage" imageId={p.imageId} alt={p.imageAlt} className="w-full h-full object-cover" />
+                      <div className="relative rounded-[24px] overflow-hidden aspect-[16/10]" style={{ border: `1px solid ${LINE}` }}>
+                        <Image
+                          src={p.image}
+                          alt={p.imageAlt}
+                          fill
+                          sizes="calc(100vw - 2.5rem)"
+                          className="object-cover"
+                          loading="lazy"
+                        />
                       </div>
                     </div>
 
@@ -457,7 +557,7 @@ export default function Home() {
                   <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-4">
                     <div className="w-full md:w-[44%]">
                       <span className="inline-block px-3 py-1 rounded text-xs font-medium mb-2" style={{ background: '#F0F0EE', color: TEXT_MUTED }}>Before</span>
-                      <PageImage path="/homepage" imageId={cs.beforeId} alt={`${cs.title} - Before`} className="w-full aspect-[16/9] object-cover rounded-xl" />
+                      <PageImage path="/homepage" imageId={cs.beforeId} alt={`${cs.title} - Before`} className="w-full aspect-[3/2] object-contain bg-[#F7F2EA] rounded-xl" />
                     </div>
                     <div className="flex-shrink-0">
                       <ChevronRight size={28} style={{ color: ACCENT_DARK }} className="hidden md:block" />
@@ -466,7 +566,7 @@ export default function Home() {
                     <div className="w-full md:w-[44%]">
                       <span className="inline-block px-3 py-1 rounded text-xs font-medium mb-2" style={{ background: ACCENT_DARK, color: '#fff' }}>After</span>
                       <div className="rounded-xl overflow-hidden" style={{ border: `1px solid ${ACCENT}33` }}>
-                        <PageImage path="/homepage" imageId={cs.afterId} alt={`${cs.title} - After`} className="w-full aspect-[16/9] object-cover" />
+                        <PageImage path="/homepage" imageId={cs.afterId} alt={`${cs.title} - After`} className="w-full aspect-[3/2] object-contain bg-[#F7F2EA]" />
                       </div>
                     </div>
                   </div>
@@ -532,7 +632,7 @@ export default function Home() {
               {menuItems.map((m) => (
                 <a key={m.link} href={m.link} className="flex flex-col items-center group">
                   <div className="w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center mb-3 overflow-hidden p-3 transition" style={{ background: PAGE_BG, border: `1px solid ${LINE}` }}>
-                    <img src={m.iconImage} alt={m.name} className="w-full h-full object-contain" />
+                    <img src={m.iconImage} alt={m.name} className="w-full h-full object-contain" loading="lazy" decoding="async" />
                   </div>
                   <h3 className="text-[11px] md:text-xs font-medium text-center leading-tight transition" style={{ color: TEXT }}>{m.name}</h3>
                 </a>
@@ -560,9 +660,9 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
               <a
-                href={WEB_RESERVATION_URL || '#'}
-                target={WEB_RESERVATION_URL ? '_blank' : undefined}
-                rel={WEB_RESERVATION_URL ? 'noopener noreferrer' : undefined}
+                href={WEB_RESERVATION_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-10 py-5 text-sm font-medium tracking-widest rounded-full transition"
                 style={{ background: '#fff', color: ACCENT_DARK }}
               >
@@ -587,9 +687,9 @@ export default function Home() {
 
       {/* ============ 固定CTA（右下浮きボタン）— デスクトップのみ ============ */}
       <a
-        href={WEB_RESERVATION_URL || '#'}
-        target={WEB_RESERVATION_URL ? '_blank' : undefined}
-        rel={WEB_RESERVATION_URL ? 'noopener noreferrer' : undefined}
+        href={WEB_RESERVATION_URL}
+        target="_blank"
+        rel="noopener noreferrer"
         className="hidden md:inline-flex fixed right-6 bottom-6 z-50 items-center gap-2 px-6 py-3.5 text-sm font-medium rounded-full transition"
         style={{ background: ACCENT_DARK, color: '#fff', boxShadow: '0 10px 28px rgba(10,138,133,0.35), 0 2px 6px rgba(0,0,0,0.12)' }}
         onMouseOver={e => (e.currentTarget.style.background = ACCENT_DEEP)}
