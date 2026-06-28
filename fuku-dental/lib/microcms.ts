@@ -1,20 +1,63 @@
-import { createClient } from "microcms-js-sdk";
+type MicroCMSConfig = {
+  serviceDomain: string;
+  apiKey: string;
+};
 
-// microCMS クライアント（環境変数がない場合はnull）
-// フォールバック: MICROCMS_SERVICE_DOMAIN が無ければ NEXT_PUBLIC_ 版を使う
-const serviceDomain =
-  process.env.MICROCMS_SERVICE_DOMAIN ||
-  process.env.NEXT_PUBLIC_MICROCMS_SERVICE_DOMAIN ||
-  "";
-const apiKey =
-  process.env.MICROCMS_API_KEY ||
-  process.env.NEXT_PUBLIC_MICROCMS_API_KEY ||
-  "";
+function getMicroCMSConfig(): MicroCMSConfig | null {
+  const serviceDomain =
+    process.env.MICROCMS_SERVICE_DOMAIN ||
+    process.env.NEXT_PUBLIC_MICROCMS_SERVICE_DOMAIN ||
+    "";
+  const apiKey =
+    process.env.MICROCMS_API_KEY ||
+    process.env.NEXT_PUBLIC_MICROCMS_API_KEY ||
+    "";
 
-const client =
-  serviceDomain && apiKey
-    ? createClient({ serviceDomain, apiKey })
-    : null;
+  if (!serviceDomain || !apiKey) return null;
+  return { serviceDomain, apiKey };
+}
+
+function getMicroCMSCacheBust(): string {
+  const buildMarker =
+    process.env.CF_PAGES_COMMIT_SHA ||
+    process.env.CF_PAGES_URL ||
+    process.env.NEXT_PUBLIC_BUILD_ID ||
+    "local";
+
+  return `${buildMarker}-${Date.now()}`;
+}
+
+function withMicroCMSCacheBust(
+  params: URLSearchParams = new URLSearchParams()
+): URLSearchParams {
+  params.set("cacheBust", getMicroCMSCacheBust());
+  return params;
+}
+
+async function fetchMicroCMS<T>(
+  endpointPath: string,
+  params: URLSearchParams = new URLSearchParams()
+): Promise<T | null> {
+  const config = getMicroCMSConfig();
+  if (!config) return null;
+
+  const requestParams = withMicroCMSCacheBust(params);
+  const search = requestParams.toString();
+  const url = `https://${config.serviceDomain}.microcms.io/api/v1/${endpointPath}${
+    search ? `?${search}` : ""
+  }`;
+
+  const res = await fetch(url, {
+    headers: { "X-MICROCMS-API-KEY": config.apiKey },
+    cache: "no-store",
+  });
+
+  if (!res.ok) {
+    throw new Error(`microCMS fetch failed: ${endpointPath} ${res.status}`);
+  }
+
+  return (await res.json()) as T;
+}
 
 // microCMS の記事型
 export interface MicroCMSArticle {
@@ -49,17 +92,8 @@ export async function getArticles(
   offset: number = 0,
   category?: string
 ): Promise<MicroCMSListResponse<MicroCMSArticle>> {
-  const activeServiceDomain =
-    process.env.MICROCMS_SERVICE_DOMAIN ||
-    process.env.NEXT_PUBLIC_MICROCMS_SERVICE_DOMAIN ||
-    "";
-  const activeApiKey =
-    process.env.MICROCMS_API_KEY ||
-    process.env.NEXT_PUBLIC_MICROCMS_API_KEY ||
-    "";
-
-  if (!activeServiceDomain || !activeApiKey) {
-    return { contents: [], totalCount: 0, offset: 0, limit };
+  if (!getMicroCMSConfig()) {
+    return { contents: [], totalCount: 0, offset, limit };
   }
 
   const filters =
@@ -72,20 +106,18 @@ export async function getArticles(
       limit: String(limit),
       offset: String(offset),
       orders: "-publishedDate,-publishedAt",
-      cacheBust: String(Date.now()),
     });
     if (filters) params.set("filters", filters);
 
-    const res = await fetch(
-      `https://${activeServiceDomain}.microcms.io/api/v1/articles?${params.toString()}`,
-      { headers: { "X-MICROCMS-API-KEY": activeApiKey } }
+    const data = await fetchMicroCMS<
+      MicroCMSListResponse<MicroCMSArticle>
+    >("articles", params);
+    return (
+      data ?? { contents: [], totalCount: 0, offset, limit }
     );
-    if (!res.ok) throw new Error(`microCMS fetch failed: ${res.status}`);
-    const data = (await res.json()) as MicroCMSListResponse<MicroCMSArticle>;
-    return data;
   } catch (error) {
     console.error("microCMS fetch error:", error);
-    return { contents: [], totalCount: 0, offset: 0, limit };
+    return { contents: [], totalCount: 0, offset, limit };
   }
 }
 
@@ -93,27 +125,27 @@ export async function getArticles(
 export async function getArticleBySlug(
   slug: string
 ): Promise<MicroCMSArticle | null> {
-  if (!client) return null;
+  if (!getMicroCMSConfig()) return null;
 
   try {
     // まずslugフィールドで検索
-    const data = await client.getList<MicroCMSArticle>({
-      endpoint: "articles",
-      queries: {
+    const data = await fetchMicroCMS<
+      MicroCMSListResponse<MicroCMSArticle>
+    >(
+      "articles",
+      new URLSearchParams({
         filters: `slug[equals]${slug}`,
-        limit: 1,
-      },
-    });
-    if (data.contents.length > 0) {
+        limit: "1",
+      })
+    );
+    if (data?.contents.length) {
       return data.contents[0];
     }
 
     // 見つからなければIDで取得
-    const article = await client.get<MicroCMSArticle>({
-      endpoint: "articles",
-      contentId: slug,
-    });
-    return article;
+    return await fetchMicroCMS<MicroCMSArticle>(
+      `articles/${encodeURIComponent(slug)}`
+    );
   } catch {
     return null;
   }
@@ -121,17 +153,19 @@ export async function getArticleBySlug(
 
 // 全記事のslug一覧を取得（静的パス生成用）
 export async function getAllArticleSlugs(): Promise<string[]> {
-  if (!client) return [];
+  if (!getMicroCMSConfig()) return [];
 
   try {
-    const data = await client.getList<MicroCMSArticle>({
-      endpoint: "articles",
-      queries: {
-        limit: 100,
-        fields: ["id", "slug"],
-      },
-    });
-    return data.contents.map((article) => article.slug || article.id);
+    const data = await fetchMicroCMS<
+      MicroCMSListResponse<MicroCMSArticle>
+    >(
+      "articles",
+      new URLSearchParams({
+        limit: "100",
+        fields: "id,slug",
+      })
+    );
+    return data?.contents.map((article) => article.slug || article.id) ?? [];
   } catch {
     return [];
   }

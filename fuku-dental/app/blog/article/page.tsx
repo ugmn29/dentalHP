@@ -42,9 +42,15 @@ function ArticleContent() {
       return;
     }
 
-    fetch(`https://${serviceDomain}.microcms.io/api/v1/articles/${id}`, {
-      headers: { 'X-MICROCMS-API-KEY': apiKey },
-    })
+    const params = new URLSearchParams({ cacheBust: String(Date.now()) });
+
+    fetch(
+      `https://${serviceDomain}.microcms.io/api/v1/articles/${encodeURIComponent(id)}?${params.toString()}`,
+      {
+        headers: { 'X-MICROCMS-API-KEY': apiKey },
+        cache: 'no-store',
+      }
+    )
       .then((res) => {
         if (!res.ok) throw new Error('記事が見つかりません');
         return res.json();

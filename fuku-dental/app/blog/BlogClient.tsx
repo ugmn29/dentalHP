@@ -55,6 +55,7 @@ export default function BlogClient({ posts, categories }: Props) {
 
     fetch(`https://${serviceDomain}.microcms.io/api/v1/articles?${params.toString()}`, {
       headers: { 'X-MICROCMS-API-KEY': apiKey },
+      cache: 'no-store',
     })
       .then((res) => {
         if (!res.ok) throw new Error('microCMS articles fetch failed');
