@@ -4,7 +4,11 @@ import React, { useState, useEffect } from 'react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { PageImage } from '@/components/PageImage';
+import { FeatureSection } from '@/components/FeatureSection';
 import { CheckCircle2, ArrowRight, Calendar, Phone, Plus, Minus, ChevronRight, AlertCircle } from 'lucide-react';
+import { ReservationCta } from '@/components/ReservationCta';
+import { FaqSection } from '@/components/FaqSection';
+import { WEB_RESERVATION_URL } from '@/lib/reservation';
 
 export default function OralSurgeryPage() {
     const [currentHeroSlide, setCurrentHeroSlide] = useState(0);
@@ -54,7 +58,7 @@ export default function OralSurgeryPage() {
                         {/* CTA Button - Bottom Right */}
                         <div className="absolute -bottom-8 right-4 md:-bottom-10 md:right-8 z-20 animate-bounce-slow">
                             <a
-                                href="https://apo-toolboxes.stransa.co.jp/user/web/babordc4ba29b/reservations"
+                                href={WEB_RESERVATION_URL}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="group relative flex items-center gap-3 bg-gradient-to-r from-[#9B89B3] to-[#8B7AA3] hover:from-[#AB99C3] hover:to-[#9B89B3] text-white px-6 py-4 md:px-8 md:py-5 rounded-full shadow-2xl hover:shadow-[0_0_30px_rgba(155,137,179,0.6)] transition-all duration-300 transform hover:scale-105"
@@ -158,7 +162,7 @@ export default function OralSurgeryPage() {
                                             path="/concerns/oral-surgery"
                                             imageId={item.imageId}
                                             alt={item.title}
-                                            className="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-700"
+                                            className="w-full aspect-[3/2] object-contain bg-[#F7F2EA] transform group-hover:scale-105 transition-transform duration-700"
                                         />
                                         <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500"></div>
                                         <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-4 py-1 rounded-full">
@@ -177,7 +181,7 @@ export default function OralSurgeryPage() {
 
                         {/* Web予約バナー */}
                         <div className="mt-12">
-                            <a href="https://apo-toolboxes.stransa.co.jp/user/web/babordc4ba29b/reservations" target="_blank" rel="noopener noreferrer" className="block">
+                            <a href={WEB_RESERVATION_URL} target="_blank" rel="noopener noreferrer" className="block">
                                 <img
                                     src="/images/web-reservation-banner.webp"
                                     alt="Web予約" loading="lazy" decoding="async" className="w-full max-w-2xl mx-auto rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
@@ -187,114 +191,16 @@ export default function OralSurgeryPage() {
                     </div>
                 </section>
 
-                {/* Features Section */}
-                <section className="pt-8 pb-2 bg-white overflow-hidden">
-                    <div className="container mx-auto px-4">
-                        <div className="text-center mb-12">
-                            <span className="text-[#C5A572] font-bold tracking-[0.2em] text-sm block mb-2">FEATURES</span>
-                            <h2 className="text-4xl md:text-5xl font-bold text-[#5A4D41] font-serif">
-                                当院<span className="text-[0.75em]">の</span><span className="text-[#C5A572]">口腔外科</span>
-                            </h2>
-                        </div>
-
-                        <div className="space-y-12 max-w-5xl mx-auto">
-                            {[
-                                {
-                                    id: "01",
-                                    title: "Pathology",
-                                    highlight: "粘膜疾患の診断",
-                                    summary: "口内炎やできものなど、お口の粘膜の病気を専門的に診断します。",
-                                    details: [
-                                        "なかなか治らない口内炎の鑑別診断",
-                                        "口腔がんの早期発見・早期対応"
-                                    ],
-                                    imageId: "feature1"
-                                },
-                                {
-                                    id: "02",
-                                    title: "Minor Surgery",
-                                    highlight: "良性腫瘍・嚢胞の摘出",
-                                    summary: "お口の中のできものや膿の袋を、日帰り手術で摘出します。",
-                                    details: [
-                                        "局所麻酔下での安全な手術",
-                                        "術後の痛みや腫れに配慮した丁寧な処置"
-                                    ],
-                                    imageId: "feature2"
-                                },
-                                {
-                                    id: "03",
-                                    title: "Hospital Link",
-                                    highlight: "高次医療機関との連携",
-                                    summary: "大学病院レベルの治療が必要な場合は、速やかに専門機関を紹介します。",
-                                    details: [
-                                        "口腔がんや重篤な全身疾患がある場合の連携体制",
-                                        "紹介状の作成とスムーズな予約手配"
-                                    ],
-                                    imageId: "feature3"
-                                },
-                                {
-                                    id: "04",
-                                    title: "Second Opinion",
-                                    highlight: "セカンドオピニオン対応",
-                                    summary: "他院での診断や治療方針について、専門的な立場からアドバイスします。",
-                                    details: [
-                                        "抜歯が必要と言われたが残したいなどのご相談",
-                                        "現在の治療方針に不安がある方の相談"
-                                    ],
-                                    imageId: "feature4"
-                                }
-                            ].map((feature, index) => (
-                                <div key={feature.id} className="flex flex-col group">
-                                    {/* Title Area - Title Left, Number Alternating */}
-                                    <div className="relative h-24 flex items-center mb-0">
-                                        {/* Large Gradient Number */}
-                                        <span
-                                            className={`absolute top-[20%] -translate-y-1/2 block text-[8rem] md:text-[11rem] leading-[0.8] font-serif text-transparent bg-clip-text bg-gradient-to-b from-[#C5A572] via-[#E5C592] to-transparent select-none opacity-60 scale-x-[0.85] tracking-tighter ${index % 2 === 0 ? 'left-[-1rem] origin-left' : 'right-0 origin-right'}`}
-                                        >
-                                            {feature.id}
-                                        </span>
-
-                                        {/* Title - Always Left */}
-                                        <div className="relative z-10 w-full text-left pl-4">
-                                            <h3 className="text-3xl md:text-4xl font-bold text-[#5A4D41] leading-tight tracking-wide font-serif">
-                                                {feature.highlight}
-                                            </h3>
-                                        </div>
-                                    </div>
-
-                                    {/* Image Area */}
-                                    <div className="w-full mb-8 relative">
-                                        <div className="relative rounded-[30px] overflow-hidden shadow-lg border-2 border-white">
-                                            <PageImage
-                                                path="/concerns/oral-surgery"
-                                                imageId={feature.imageId}
-                                                alt={feature.highlight}
-                                                className="w-full h-auto aspect-[16/9] object-cover"
-                                            />
-                                            <div className="absolute inset-0 bg-gradient-to-t from-[#C5A572]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-                                        </div>
-                                    </div>
-
-                                    {/* Text Area - Always Left Aligned */}
-                                    <div className="max-w-3xl text-left">
-                                        <p className="text-[#C5A572] font-bold tracking-widest mb-2 uppercase text-xs">{feature.title}</p>
-                                        <p className="text-lg text-[#8D8070] mb-6 leading-relaxed font-medium">
-                                            {feature.summary}
-                                        </p>
-                                        <div className="grid gap-3 text-left bg-[#FDFBF7] p-6 rounded-2xl border border-[#C5A572]/10">
-                                            {feature.details.map((detail, i) => (
-                                                <div key={i} className="flex items-start gap-3">
-                                                    <CheckCircle2 size={18} className="text-[#C5A572] flex-shrink-0 mt-0.5" />
-                                                    <span className="text-[#5A4D41] font-medium text-sm md:text-base">{detail}</span>
-                                                </div>
-                                            ))}
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </section>
+                <FeatureSection
+                    title="当院の口腔外科"
+                    pagePath="/concerns/oral-surgery"
+                    features={[
+                        { id: "01", title: "Pathology", highlight: "粘膜疾患の診断", summary: "口内炎やできものなど、お口の粘膜の病気を専門的に診断します。", details: ["なかなか治らない口内炎の鑑別診断", "口腔がんの早期発見・早期対応"], imageId: "feature1" },
+                        { id: "02", title: "Minor Surgery", highlight: "良性腫瘍・嚢胞の摘出", summary: "お口の中のできものや膿の袋を、日帰り手術で摘出します。", details: ["局所麻酔下での安全な手術", "術後の痛みや腫れに配慮した丁寧な処置"], imageId: "feature2" },
+                        { id: "03", title: "Hospital Link", highlight: "高次医療機関との連携", summary: "大学病院レベルの治療が必要な場合は、速やかに専門機関を紹介します。", details: ["重篤な疾患が疑われる場合の連携体制", "紹介状の作成とスムーズな予約手配"], imageId: "feature3" },
+                        { id: "04", title: "Second Opinion", highlight: "セカンドオピニオン対応", summary: "他院での診断や治療方針について、専門的な立場からアドバイスします。", details: ["抜歯が必要と言われたが残したいなどのご相談", "現在の治療方針に不安がある方の相談"], imageId: "feature4" },
+                    ]}
+                />
 
                 {/* Lead & What is Section */}
                 <section className="py-2 bg-[#FDFBF7]">
@@ -544,15 +450,9 @@ export default function OralSurgeryPage() {
                 </section>
 
                 {/* FAQ Section */}
-                <section className="py-2 bg-[#FDFBF7]">
-                    <div className="container mx-auto px-4 max-w-4xl">
-                        <div className="text-center mb-16">
-                            <p className="text-[#C5A572] tracking-[0.2em] font-bold mb-2">Q&A</p>
-                            <h2 className="text-3xl md:text-4xl font-bold text-[#5A4D41] font-serif">よくあるご質問</h2>
-                        </div>
-
-                        <div className="space-y-6">
-                            {[
+                <FaqSection
+                  title="よくあるご質問"
+                  items={[
                                 {
                                     q: "口内炎がなかなか治りません。受診した方がいいですか？",
                                     a: "はい、2週間以上治らない口内炎は、単なる口内炎ではなく、他の病気（口腔がんなど）の可能性があります。痛みがなくても、早めに受診してください。"
@@ -565,48 +465,11 @@ export default function OralSurgeryPage() {
                                     q: "手術は入院が必要ですか？",
                                     a: "当院で行う手術は、基本的にすべて局所麻酔下での日帰り手術です。入院が必要な全身麻酔の手術などは、大学病院をご紹介します。"
                                 }
-                            ].map((faq, index) => (
-                                <div key={index} className="border-b border-[#F0EAE0] pb-6">
-                                    <h3 className="text-lg font-bold text-[#5A4D41] mb-3 flex items-start gap-4">
-                                        <span className="text-[#C5A572] font-serif italic text-2xl leading-none">Q.</span>
-                                        {faq.q}
-                                    </h3>
-                                    <div className="pl-10">
-                                        <p className="text-[#8D8070] leading-relaxed">{faq.a}</p>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </section>
+                            ]}
+                />
 
-                {/* CTA Section */}
-                <section className="py-2 bg-[#5A4D41] text-white">
-                    <div className="container mx-auto px-4 text-center">
-                        <h2 className="text-3xl md:text-4xl font-bold mb-8 font-serif">
-                            お口の気になる症状、<br className="md:hidden" />まずはご相談ください
-                        </h2>
-                        <p className="text-[#F0EAE0] mb-12">
-                            少しでも気になることがあれば、お気軽にお問い合わせください。
-                        </p>
+                <ReservationCta />
 
-                        <div className="flex flex-col sm:flex-row gap-6 justify-center max-w-2xl mx-auto">
-                            <a
-                                href="https://apo-toolboxes.stransa.co.jp/user/web/babordc4ba29b/reservations"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="bg-[#C5A572] hover:bg-[#B59562] text-white px-8 py-5 rounded-full font-bold shadow-lg transition-all flex items-center justify-center gap-3 text-lg flex-1 group"
-                            >
-                                <Calendar className="group-hover:rotate-12 transition" />
-                                24時間 WEB予約
-                            </a>
-                            <button className="bg-transparent border-2 border-[#C5A572] hover:bg-[#C5A572]/10 text-white px-8 py-5 rounded-full font-bold transition-all flex items-center justify-center gap-3 text-lg flex-1">
-                                <Phone className="text-[#C5A572]" />
-                                03-6204-2876
-                            </button>
-                        </div>
-                    </div>
-                </section>
             </main>
 
             <Footer />

@@ -6,6 +6,8 @@ import Link from "next/link";
 import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
 import { PageImage } from '@/components/PageImage';
+import { FeatureSection } from '@/components/FeatureSection';
+import { ReservationCta } from '@/components/ReservationCta';
 
 const WisdomToothPage = () => {
 
@@ -547,58 +549,16 @@ const WisdomToothPage = () => {
         </div>
       </section>
 
-      {/* Clinic Features */}
-      <section className="pt-2 md:pt-2 pb-2 px-4 bg-gradient-to-b from-gray-50 to-white">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <span className="text-[#8B7355] font-bold tracking-[0.2em] text-sm block mb-2">OUR FEATURES</span>
-            <h2 className="text-4xl md:text-5xl font-bold text-[#5A4D41] font-serif mb-4">
-              当院<span className="text-[0.75em]">の</span><span className="text-[#8B7355]">特徴</span>
-            </h2>
-            <p className="text-gray-600">
-              安全性<span className="text-[0.75em]">と</span>快適性<span className="text-[0.75em]">を</span>追求<span className="text-[0.75em]">した</span>治療体制
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                imageId: "feature1",
-                title: "CTによる精密診断",
-                description: "<span class='font-bold bg-yellow-100'>3次元CT画像で神経や血管の位置をミリ単位で把握</span>。<span class='text-[#395b45] font-bold'>安全な抜歯計画を立て、リスクを最小化</span>します。"
-              },
-              {
-                imageId: "feature2",
-                title: "痛みへの配慮",
-                description: "<span class='font-bold bg-yellow-100'>表面麻酔、極細針の使用、麻酔液の温度管理</span>など、<span class='text-[#395b45] font-bold'>麻酔から痛みを軽減する工夫</span>を徹底しています。"
-              },
-              {
-                imageId: "feature3",
-                title: "経験豊富な医師による安全な抜歯",
-                description: "多くの抜歯経験を持つ医師が、<span class='text-[#395b45] font-bold'>丁寧かつ迅速に処置</span>。<span class='text-[#395b45] font-bold'>難症例にも対応できる技術と経験</span>があります。"
-              }
-            ].map((feature, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 border-2 border-gray-100 hover:border-[#8B7355] overflow-hidden"
-              >
-                <div className="aspect-[16/9]">
-                  <PageImage
-                    path="/wisdom"
-                    imageId={feature.imageId}
-                    alt={feature.title}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-800 mb-3 text-center" dangerouslySetInnerHTML={{ __html: feature.title }}></h3>
-                  <p className="text-gray-700 leading-relaxed text-center" dangerouslySetInnerHTML={{ __html: feature.description }}></p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <FeatureSection
+        title="当院の特徴"
+        lead="安全性と快適性を追求した治療体制"
+        pagePath="/wisdom"
+        features={[
+          { no: "01", label: "Diagnosis", title: "CTによる精密診断", bodyHtml: "<span class='font-bold bg-yellow-100'>3次元CT画像で神経や血管の位置を把握</span>し、安全な抜歯計画を立てます。", imageId: "feature1" },
+          { no: "02", label: "Pain Care", title: "痛みへの配慮", bodyHtml: "表面麻酔、極細針、麻酔液の温度管理など、麻酔から痛みを軽減する工夫を行います。", imageId: "feature2" },
+          { no: "03", label: "Experience", title: "経験豊富な医師による安全な抜歯", bodyHtml: "難症例にも対応できる技術と経験を活かし、丁寧かつ迅速な処置を心がけます。", imageId: "feature3" },
+        ]}
+      />
 
       {/* FAQ Section */}
       <section className="pt-8 pb-2 md:pb-2 px-4 bg-gray-50">
@@ -669,36 +629,8 @@ const WisdomToothPage = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-6 md:py-6 px-4 bg-gradient-to-r from-[#8B7355] to-[#A0826D]">
-        <div className="max-w-4xl mx-auto text-center text-white">
-          <div>
-            <span className="text-white/90 font-bold tracking-[0.2em] text-sm block mb-3">CONTACT US</span>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 font-serif">
-              親知らず<span className="text-[0.75em]">でお</span>悩<span className="text-[0.75em]">みの</span>方<span className="text-[0.75em]">は</span>、<br className="md:hidden" />
-              まずご相談<span className="text-[0.75em]">ください</span>
-            </h2>
-            <p className="text-lg md:text-xl mb-8 opacity-90">
-              CT検査<span className="text-[0.75em]">と</span>丁寧<span className="text-[0.75em]">な</span>説明<span className="text-[0.75em]">で</span>、<br className="md:hidden" />
-              不安<span className="text-[0.75em]">を</span>安心<span className="text-[0.75em]">に</span>変<span className="text-[0.75em]">えます</span>
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/#contact"
-                className="inline-block bg-white text-[#8B7355] px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-colors duration-300 shadow-lg"
-              >
-                ご予約・お問い合わせ
-              </Link>
-              <Link
-                href="/"
-                className="inline-block bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-[#8B7355] transition-colors duration-300"
-              >
-                その他の診療内容
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ReservationCta />
+
 
       <Footer />
     </div>

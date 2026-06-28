@@ -1,0 +1,13 @@
+# macOS / local build artifacts
+.DS_Store
+.next/
+tmp/
+
+# Local assistant/tooling config
+.claude/
+.codex/
+.mcp.json
+fuku-dental/.claude/
+
+.aidesigner/*
+!.aidesigner/.gitkeep

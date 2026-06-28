@@ -1,21 +1,83 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Calendar, ChevronRight } from 'lucide-react';
 import type { BlogPost } from './page';
+import { ReservationCta } from '@/components/ReservationCta';
 
 interface Props {
   posts: BlogPost[];
   categories: string[];
 }
 
+type MicroCMSArticle = {
+  id: string;
+  title?: string;
+  body?: string;
+  excerpt?: string;
+  thumbnail?: { url?: string };
+  category?: string[];
+  slug?: string;
+  publishedDate?: string;
+  publishedAt?: string;
+};
+
+function articleToPost(article: MicroCMSArticle): BlogPost {
+  const plainBody = (article.body || '').replace(/<[^>]+>/g, '');
+  return {
+    id: article.id,
+    title: article.title || '無題',
+    category: Array.isArray(article.category)
+      ? article.category[0] || 'お知らせ'
+      : 'お知らせ',
+    date: article.publishedDate || article.publishedAt?.split('T')[0] || '',
+    thumbnail: article.thumbnail?.url,
+    summary: article.excerpt || (plainBody ? plainBody.slice(0, 100) + '...' : ''),
+    slug: article.slug || article.id,
+    source: 'microcms',
+  };
+}
+
 export default function BlogClient({ posts, categories }: Props) {
   const [selectedCategory, setSelectedCategory] = useState('全て');
+  const [runtimePosts, setRuntimePosts] = useState(posts);
+
+  useEffect(() => {
+    const serviceDomain = process.env.NEXT_PUBLIC_MICROCMS_SERVICE_DOMAIN || '';
+    const apiKey = process.env.NEXT_PUBLIC_MICROCMS_API_KEY || '';
+    if (!serviceDomain || !apiKey) return;
+
+    const params = new URLSearchParams({
+      limit: '50',
+      orders: '-publishedDate,-publishedAt',
+      cacheBust: String(Date.now()),
+    });
+
+    fetch(`https://${serviceDomain}.microcms.io/api/v1/articles?${params.toString()}`, {
+      headers: { 'X-MICROCMS-API-KEY': apiKey },
+    })
+      .then((res) => {
+        if (!res.ok) throw new Error('microCMS articles fetch failed');
+        return res.json();
+      })
+      .then((data) => {
+        const nextPosts = (data.contents || [])
+          .map(articleToPost)
+          .sort(
+            (a: BlogPost, b: BlogPost) =>
+              new Date(b.date).getTime() - new Date(a.date).getTime()
+          );
+        if (nextPosts.length > 0) setRuntimePosts(nextPosts);
+      })
+      .catch((error) => {
+        console.error('microCMS runtime fetch error:', error);
+      });
+  }, []);
 
   const filteredPosts =
     selectedCategory === '全て'
-      ? posts
-      : posts.filter((p) => p.category === selectedCategory);
+      ? runtimePosts
+      : runtimePosts.filter((p) => p.category === selectedCategory);
 
   return (
     <main className="pt-0 pb-2 overflow-x-hidden" style={{ wordBreak: 'normal', overflowWrap: 'anywhere' }}>
@@ -133,36 +195,8 @@ export default function BlogClient({ posts, categories }: Props) {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-8 bg-gradient-to-b from-[#FDFBF7] to-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center bg-white rounded-xl p-8 md:p-10 shadow-sm border border-[#E8E0D4]">
-            <h2 className="text-2xl md:text-3xl font-bold text-[#5A4D41] mb-4 font-serif">
-              お気軽にご相談ください
-            </h2>
-            <p className="text-[#8D8070] mb-8">
-              ご不明な点やご相談がございましたら、
-              <br />
-              お気軽にお問い合わせください。
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="#"
-                className="inline-flex items-center justify-center gap-2 bg-[#395b45] hover:bg-[#2d4835] text-white px-8 py-4 rounded-full font-bold shadow-sm transition-colors duration-200"
-              >
-                <Calendar size={20} />
-                <span>WEB予約</span>
-              </a>
-              <a
-                href="tel:03-6204-2876"
-                className="inline-flex items-center justify-center gap-2 bg-white hover:bg-[#FDFBF7] text-[#395b45] border border-[#395b45] px-8 py-4 rounded-full font-bold shadow-sm transition-colors duration-200"
-              >
-                <span>📞 03-6204-2876</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ReservationCta />
+
     </main>
   );
 }

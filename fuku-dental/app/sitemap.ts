@@ -10,9 +10,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: '', priority: 1.0, changeFrequency: 'daily' as const },
 
     // 静的ページ
-    { url: '/cases', priority: 0.8, changeFrequency: 'weekly' as const },
     { url: '/case-studies', priority: 0.8, changeFrequency: 'weekly' as const },
     { url: '/blog', priority: 0.8, changeFrequency: 'weekly' as const },
+    { url: '/doctor', priority: 0.7, changeFrequency: 'monthly' as const },
+    { url: '/access', priority: 0.7, changeFrequency: 'monthly' as const },
 
     // インプラント（トピッククラスター）
     { url: '/implant', priority: 0.9, changeFrequency: 'weekly' as const },
@@ -28,7 +29,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: '/orthodontics/cost', priority: 0.8, changeFrequency: 'monthly' as const },
     { url: '/orthodontics/duration', priority: 0.8, changeFrequency: 'monthly' as const },
     { url: '/orthodontics/adult', priority: 0.8, changeFrequency: 'monthly' as const },
-    { url: '/orthodontics/case-studies', priority: 0.7, changeFrequency: 'weekly' as const },
 
     // 根管治療（トピッククラスター）
     { url: '/root-canal', priority: 0.9, changeFrequency: 'weekly' as const },
@@ -36,7 +36,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: '/root-canal/cost', priority: 0.8, changeFrequency: 'monthly' as const },
     { url: '/root-canal/pain', priority: 0.8, changeFrequency: 'monthly' as const },
     { url: '/root-canal/duration', priority: 0.8, changeFrequency: 'monthly' as const },
-    { url: '/root-canal/case-studies', priority: 0.7, changeFrequency: 'weekly' as const },
 
     // 歯周病治療（トピッククラスター）
     { url: '/periodontal', priority: 0.9, changeFrequency: 'weekly' as const },
@@ -44,7 +43,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: '/periodontal/treatment-methods', priority: 0.8, changeFrequency: 'monthly' as const },
     { url: '/periodontal/prevention', priority: 0.8, changeFrequency: 'monthly' as const },
     { url: '/periodontal/cost', priority: 0.8, changeFrequency: 'monthly' as const },
-    { url: '/periodontal/case-studies', priority: 0.7, changeFrequency: 'weekly' as const },
 
     // ホワイトニング
     { url: '/whitening', priority: 0.8, changeFrequency: 'weekly' as const },
@@ -60,7 +58,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: '/ceramic/cost', priority: 0.7, changeFrequency: 'monthly' as const },
     { url: '/ceramic/vs-metal', priority: 0.7, changeFrequency: 'monthly' as const },
     { url: '/ceramic/longevity', priority: 0.7, changeFrequency: 'monthly' as const },
-    { url: '/ceramic/case-studies', priority: 0.6, changeFrequency: 'weekly' as const },
 
     // こども矯正（トピッククラスター）
     { url: '/kidsortho', priority: 0.9, changeFrequency: 'weekly' as const },
@@ -92,15 +89,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // マウスピース矯正
     { url: '/mouthpiece', priority: 0.8, changeFrequency: 'weekly' as const },
 
-    // 口腔教育・口育
-    { url: '/oral-education', priority: 0.7, changeFrequency: 'weekly' as const },
+    // 0歳からのこども歯科・予防
+    { url: '/oral-education', priority: 0.8, changeFrequency: 'weekly' as const },
     { url: '/oral-education/bad-alignment', priority: 0.6, changeFrequency: 'monthly' as const },
     { url: '/oral-education/mouth-breathing', priority: 0.6, changeFrequency: 'monthly' as const },
     { url: '/oral-education/open-mouth', priority: 0.6, changeFrequency: 'monthly' as const },
-
-    // こども予防歯科
-    { url: '/kids-preventive', priority: 0.8, changeFrequency: 'weekly' as const },
-    { url: '/kids-preventive/overcoming-fear', priority: 0.7, changeFrequency: 'monthly' as const },
 
     // インプラント追加ページ
     { url: '/implant/about', priority: 0.7, changeFrequency: 'monthly' as const },
@@ -154,15 +147,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: '/cavity/stages', priority: 0.7, changeFrequency: 'monthly' as const },
     { url: '/concerns/bruxism', priority: 0.7, changeFrequency: 'weekly' as const },
     { url: '/concerns/tmj', priority: 0.7, changeFrequency: 'weekly' as const },
-    { url: '/kids-preventive/brushing', priority: 0.6, changeFrequency: 'monthly' as const },
-    { url: '/kids-preventive/fluoride', priority: 0.6, changeFrequency: 'monthly' as const },
     { url: '/preventive/cost', priority: 0.7, changeFrequency: 'monthly' as const },
     { url: '/preventive/fluoride', priority: 0.7, changeFrequency: 'monthly' as const },
   ];
 
   return pages.map((page) => ({
     url: `${baseUrl}${page.url}`,
-    lastModified: new Date(),
     changeFrequency: page.changeFrequency,
     priority: page.priority,
   }));

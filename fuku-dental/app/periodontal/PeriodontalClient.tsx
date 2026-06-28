@@ -7,6 +7,9 @@ import { AuthorBio } from '../../components/AuthorBio';
 import { CheckCircle2, ArrowRight, Calendar, ChevronRight } from 'lucide-react';
 import Image from "next/image";
 import { PageImage } from '@/components/PageImage';
+import { FeatureSection } from '@/components/FeatureSection';
+import { FaqSection } from '@/components/FaqSection';
+import { WEB_RESERVATION_URL } from '@/lib/reservation';
 
 export default function PeriodontalPage() {
     const [currentHeroSlide, setCurrentHeroSlide] = useState(0);
@@ -46,7 +49,7 @@ export default function PeriodontalPage() {
                             </div>
                         ))}
                         <div className="absolute -bottom-8 right-4 md:-bottom-10 md:right-8 z-20 animate-bounce-slow">
-                            <a href="https://apo-toolboxes.stransa.co.jp/user/web/babordc4ba29b/reservations" target="_blank" rel="noopener noreferrer" className="group relative flex items-center gap-3 bg-gradient-to-r from-[#9B89B3] to-[#8B7AA3] hover:from-[#AB99C3] hover:to-[#9B89B3] text-white px-6 py-4 md:px-8 md:py-5 rounded-full shadow-2xl hover:shadow-[0_0_30px_rgba(155,137,179,0.6)] transition-all duration-300 transform hover:scale-105">
+                            <a href={WEB_RESERVATION_URL} target="_blank" rel="noopener noreferrer" className="group relative flex items-center gap-3 bg-gradient-to-r from-[#9B89B3] to-[#8B7AA3] hover:from-[#AB99C3] hover:to-[#9B89B3] text-white px-6 py-4 md:px-8 md:py-5 rounded-full shadow-2xl hover:shadow-[0_0_30px_rgba(155,137,179,0.6)] transition-all duration-300 transform hover:scale-105">
                                 <div className="flex items-center gap-2">
                                     <Calendar size={24} className="group-hover:rotate-12 transition-transform" />
                                     <div className="flex flex-col items-start">
@@ -113,7 +116,7 @@ export default function PeriodontalPage() {
                                             path="/periodontal"
                                             imageId={`case${index + 1}`}
                                             alt={c.title}
-                                            className="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-700"
+                                            className="w-full aspect-[3/2] object-contain bg-[#F7F2EA] transform group-hover:scale-105 transition-transform duration-700"
                                         />
                                         <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500"></div>
                                         <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-4 py-1 rounded-full">
@@ -132,58 +135,24 @@ export default function PeriodontalPage() {
 
                         {/* Web予約バナー */}
                         <div className="mt-12">
-                            <a href="https://apo-toolboxes.stransa.co.jp/user/web/babordc4ba29b/reservations" target="_blank" rel="noopener noreferrer" className="block">
+                            <a href={WEB_RESERVATION_URL} target="_blank" rel="noopener noreferrer" className="block">
                                 <img src="/images/web-reservation-banner.webp" alt="Web予約" loading="lazy" decoding="async" className="w-full max-w-2xl mx-auto rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300" />
                             </a>
                         </div>
                     </div>
                 </section>
 
-                {/* Features Section */}
-                <section className="pt-8 pb-8 bg-white overflow-hidden">
-                    <div className="container mx-auto px-4">
-                        <div className="text-center mb-12">
-                            <span className="text-[#C5A572] font-bold tracking-[0.2em] text-sm block mb-2">FEATURES</span>
-                            <h2 className="text-4xl md:text-5xl font-bold text-[#5A4D41] font-serif">
-                                当院<span className="text-[0.75em]">の</span><span className="text-[#C5A572]">特徴</span>
-                            </h2>
-                        </div>
-
-                        <div className="space-y-12 max-w-5xl mx-auto">
-                            {[
-                                { id: "01", title: "Visual Explanation", highlight: "口腔内カメラでよりわかりやすく", summary: "<span class='font-bold bg-yellow-100'>口腔内カメラ</span>でお口の中を撮影し、<span class='font-bold bg-yellow-100'>モニターに映しながら現状をご説明</span>します。磨き残しや歯周病の進行具合を<span class='text-[#395b45] font-bold'>目で見て確認できる</span>ため、納得して治療を受けていただけます。", details: [], imageId: "feature1" },
-                                { id: "02", title: "Plaque Visualization", highlight: "染め出しでより見やすく", summary: "<span class='font-bold bg-yellow-100'>染め出し液</span>を使って、普段磨けていない箇所を赤く着色します。<span class='text-[#395b45] font-bold'>どこに磨き残しがあるのかが一目でわかる</span>ため、効果的なブラッシング改善につながります。", details: [], imageId: "feature2" },
-                                { id: "03", title: "Individual Guidance", highlight: "個別のブラッシング指導", summary: "患者様ごとにお口の状態や磨き残しの癖は異なります。当院では、<span class='font-bold bg-yellow-100'>歯科衛生士がお一人おひとりに最適な磨き方や歯ブラシの選び方を丁寧に指導</span>いたします。<span class='text-[#395b45] font-bold'>継続的なサポートで習慣化を促進</span>します。", details: [], imageId: "feature3" },
-                                { id: "04", title: "Lifestyle Approach", highlight: "生活習慣からのアプローチ", summary: "<span class='font-bold bg-yellow-100'>喫煙・ストレス・食生活</span>など、歯周病に影響する生活習慣もヒアリング。お口の中だけでなく、<span class='text-[#395b45] font-bold'>根本的な原因にアプローチし、全身の健康を考えた総合的なサポート</span>を行います。", details: [], imageId: "食事喫煙ストレスなど歯周病リスク因子のインフォグラフィック" },
-                                { id: "05", title: "Reminder System", highlight: "予防を習慣化するサポート", summary: "「気づいたら1年以上歯医者に行ってない」を防ぐため、<span class='font-bold bg-yellow-100'>検診時期をLINEやメールでお知らせ</span>。患者様ごとに最適な間隔を設定し、<span class='text-[#395b45] font-bold'>予防を習慣化</span>します。", details: [], imageId: "リコールはがきやLINE通知のリマインドイメージ" }
-                            ].map((feature, index) => (
-                                <div key={feature.id} className="flex flex-col group">
-                                    <div className="relative">
-                                        <span className="text-8xl font-serif text-[#C5A572]/15 absolute -top-16 -left-8 z-0 select-none font-bold" style={{ letterSpacing: '-0.05em' }}>
-                                            {feature.id}
-                                        </span>
-                                        <div className="flex items-start justify-between gap-4">
-                                            <h3 className="text-3xl md:text-4xl font-bold text-[#5A4D41] leading-tight tracking-wide font-serif inline-block relative flex-1">
-                                                <span dangerouslySetInnerHTML={{ __html: feature.highlight.replace(/(の|を|に|が|は|と|へ|から|より|で|や)/g, '<span class="text-[0.75em]">$1</span>') }} />
-                                                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#C5A572] via-[#C5A572] to-transparent"></div>
-                                            </h3>
-                                        </div>
-                                    </div>
-                                    <div className="w-full mb-8 relative">
-                                        <div className="relative rounded-[30px] overflow-hidden shadow-lg border-2 border-white">
-                                            <PageImage path="/periodontal" imageId={feature.imageId} alt={feature.highlight} className="w-full h-auto aspect-[16/9] object-cover" />
-                                            <div className="absolute inset-0 bg-gradient-to-t from-[#C5A572]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <p className="text-base md:text-lg text-[#5A4D41] leading-loose font-sans" dangerouslySetInnerHTML={{ __html: feature.summary }}>
-                                        </p>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </section>
+                <FeatureSection
+                    title="当院の特徴"
+                    pagePath="/periodontal"
+                    features={[
+                        { id: "01", title: "Visual Explanation", highlight: "口腔内カメラでよりわかりやすく", summary: "お口の状態をモニターで見ながら、歯周病の進行や磨き残しをわかりやすく説明します。", details: [], imageId: "feature1" },
+                        { id: "02", title: "Plaque Visualization", highlight: "染め出しでより見やすく", summary: "染め出し液で磨き残しを可視化し、効果的なブラッシング改善につなげます。", details: [], imageId: "feature2" },
+                        { id: "03", title: "Individual Guidance", highlight: "個別のブラッシング指導", summary: "歯科衛生士が一人ひとりのお口に合わせて、磨き方や歯ブラシの選び方を指導します。", details: [], imageId: "feature3" },
+                        { id: "04", title: "Lifestyle Approach", highlight: "生活習慣からのアプローチ", summary: "喫煙・ストレス・食生活なども含め、歯周病の根本原因にアプローチします。", details: [], imageId: "食事喫煙ストレスなど歯周病リスク因子のインフォグラフィック" },
+                        { id: "05", title: "Reminder System", highlight: "予防を習慣化するサポート", summary: "検診時期をお知らせし、治療後のメンテナンスを継続しやすくします。", details: [], imageId: "リコールはがきやLINE通知のリマインドイメージ" },
+                    ]}
+                />
 
                 {/* Lead & Information Section */}
                 <section className="py-2 bg-[#FDFBF7]">
@@ -327,73 +296,17 @@ export default function PeriodontalPage() {
                 </section>
 
                 {/* FAQ */}
-                <section className="pt-8 pb-2 md:pb-2 bg-white">
-                    <div className="container mx-auto px-4">
-                        <div className="max-w-4xl mx-auto">
-                            <div className="text-center mb-12">
-                                <h2 className="text-3xl md:text-4xl font-bold text-[#5A4D41] font-serif">よくある質問</h2>
-                                <div className="w-16 h-0.5 bg-[#C5A572] mx-auto mt-4"></div>
-                            </div>
-
-                            <div className="space-y-6">
-                                {[
+                <FaqSection
+                  title="よくある質問"
+                  items={[
                                     { q: "歯周病は治りますか?", a: "早期(歯肉炎)であれば完治します。進行した場合は、症状を改善し進行を止めることが目標となります。定期的なメンテナンスが重要です。" },
                                     { q: "痛みがなくても歯周病の可能性はありますか?", a: "はい、歯周病は初期段階では痛みがほとんどありません。「沈黙の病気」と呼ばれるため、定期検診での早期発見が大切です。" },
                                     { q: "治療は何回くらい通う必要がありますか?", a: "軽度なら2〜3回の通院で改善することもありますが、進行度により異なります。検査後に治療計画をご説明いたします。" },
                                     { q: "歯周病は全身疾患と関係がありますか?", a: "はい、糖尿病、心疾患、誤嚥性肺炎などとの関連が報告されています。お口の健康は全身の健康につながります。" }
-                                ].map((faq, index) => (
-                                    <div key={index} className="bg-white rounded-xl shadow-md border border-gray-200 p-6">
-                                        <div className="mb-4">
-                                            <div className="flex items-center gap-3 mb-3">
-                                                <span className="w-8 h-8 bg-[#C5A572] rounded-full flex items-center justify-center text-white text-sm flex-shrink-0">Q{index + 1}</span>
-                                                <h3 className="font-bold text-[#5A4D41] text-lg">{faq.q}</h3>
-                                            </div>
-                                        </div>
-                                        <div className="text-[#8D8070] leading-relaxed">
-                                            <p>
-                                                <strong className="text-[#C5A572]">A.</strong> {faq.a}
-                                            </p>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                                ]}
+                />
 
-                {/* CTA */}
-                <section className="py-2 bg-[#5A4D41] text-white">
-                    <div className="container mx-auto px-4 text-center">
-                        <h2 className="text-3xl md:text-4xl font-bold mb-8 font-serif">
-                            歯周病かも?と思ったら<br className="md:hidden" />お気軽にご相談ください
-                        </h2>
-                        <p className="text-[#F0EAE0] mb-12 text-lg">
-                            まずは無料カウンセリングで、あなたに最適な治療プランをご提案します
-                        </p>
 
-                        <div className="flex flex-col sm:flex-row gap-6 justify-center max-w-2xl mx-auto">
-                            <a href="https://apo-toolboxes.stransa.co.jp/user/web/babordc4ba29b/reservations" target="_blank" rel="noopener noreferrer" className="bg-[#C5A572] hover:bg-[#B59562] text-white px-8 py-5 rounded-full font-bold shadow-lg transition-all flex items-center justify-center gap-3 text-lg flex-1 group">
-                                <Calendar className="group-hover:rotate-12 transition" />
-                                無料カウンセリング予約
-                            </a>
-                        </div>
-
-                        <div className="flex items-center justify-center gap-6 text-sm text-[#F0EAE0] mt-8">
-                            <div className="flex items-center gap-2">
-                                <CheckCircle2 className="w-5 h-5" />
-                                <span>無料カウンセリング</span>
-                            </div>
-                            <div className="flex items-center gap-2">
-                                <CheckCircle2 className="w-5 h-5" />
-                                <span>丁寧な診察</span>
-                            </div>
-                            <div className="flex items-center gap-2">
-                                <CheckCircle2 className="w-5 h-5" />
-                                <span>明瞭な料金</span>
-                            </div>
-                        </div>
-                    </div>
-                </section>
                 {/* 監修者情報 */}
                 <div className="container mx-auto px-4 pt-2 pb-16">
                     <AuthorBio />

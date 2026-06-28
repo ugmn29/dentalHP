@@ -6,6 +6,8 @@ import { Footer } from '../../components/Footer';
 import { AuthorBio } from '../../components/AuthorBio';
 import { PageImage } from '@/components/PageImage';
 import { CheckCircle2, ArrowRight, Calendar, Phone, ChevronRight } from 'lucide-react';
+import { FaqSection } from '@/components/FaqSection';
+import { WEB_RESERVATION_URL } from '@/lib/reservation';
 
 export default function KidsPreventivePage() {
     const [currentHeroSlide, setCurrentHeroSlide] = useState(0);
@@ -55,7 +57,9 @@ export default function KidsPreventivePage() {
                         {/* CTA Button - Bottom Right */}
                         <div className="absolute -bottom-8 right-4 md:-bottom-10 md:right-8 z-20 animate-bounce-slow">
                             <a
-                                href="#"
+                                href={WEB_RESERVATION_URL}
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="group relative flex items-center gap-3 bg-gradient-to-r from-[#395b45] to-[#2d4835] hover:from-[#4a6c56] hover:to-[#395b45] text-white px-6 py-4 md:px-8 md:py-5 rounded-full shadow-2xl hover:shadow-[0_0_30px_rgba(57,91,69,0.6)] transition-all duration-300 transform hover:scale-105"
                             >
                                 <div className="flex items-center gap-2">
@@ -452,15 +456,9 @@ export default function KidsPreventivePage() {
                 </section>
 
                 {/* FAQ Section */}
-                <section className="pt-8 pb-8 bg-[#FDFBF7]">
-                    <div className="container mx-auto px-4 max-w-4xl">
-                        <div className="text-center mb-16">
-                            <p className="text-[#C5A572] tracking-[0.2em] font-bold mb-2">Q&A</p>
-                            <h2 className="text-3xl md:text-4xl font-bold text-[#5A4D41] font-serif">よくあるご質問</h2>
-                        </div>
-
-                        <div className="space-y-6">
-                            {[
+                <FaqSection
+                  title="よくあるご質問"
+                  items={[
                                 {
                                     q: "何歳から通えばいいですか？",
                                     a: "歯が生え始めたら（生後6ヶ月頃〜）通院可能です。早い段階からフッ素塗布などの予防管理を始めることで、虫歯ゼロのお口を目指せます。"
@@ -473,49 +471,10 @@ export default function KidsPreventivePage() {
                                     q: "フッ素は体に害はありませんか？",
                                     a: "歯科医院で使用するフッ素は安全な濃度に調整されており、用法用量を守れば体に害はありません。むしろ歯を強くする必須のミネラルです。"
                                 }
-                            ].map((faq, index) => (
-                                <div key={index} className="border-b border-[#F0EAE0] pb-6">
-                                    <h3 className="text-lg font-bold text-[#5A4D41] mb-3 flex items-start gap-4">
-                                        <span className="text-[#C5A572] font-serif italic text-2xl leading-none">Q.</span>
-                                        {faq.q}
-                                    </h3>
-                                    <div className="pl-10">
-                                        <p className="text-[#8D8070] leading-relaxed">{faq.a}</p>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </section>
+                            ]}
+                />
 
-                {/* CTA Section */}
-                <section className="py-2 bg-[#5A4D41] text-white">
-                    <div className="container mx-auto px-4 text-center">
-                        <h2 className="text-3xl md:text-4xl font-bold mb-8 font-serif">
-                            まずは一度、<br className="md:hidden" />お気軽にご相談ください
-                        </h2>
-                        <p className="text-[#F0EAE0] mb-12">
-                            お子様一人ひとりに合わせた最適な予防プランをご提案いたします。
-                        </p>
 
-                        <div className="flex flex-col sm:flex-row gap-6 justify-center max-w-2xl mx-auto">
-                            <button className="bg-[#C5A572] hover:bg-[#B59562] text-white px-8 py-5 rounded-full font-bold shadow-lg transition-all flex items-center justify-center gap-3 text-lg flex-1 group">
-                                <Calendar className="group-hover:rotate-12 transition" />
-                                24時間 WEB予約
-                            </button>
-                            <button className="bg-transparent border-2 border-[#C5A572] hover:bg-[#C5A572]/10 text-white px-8 py-5 rounded-full font-bold transition-all flex items-center justify-center gap-3 text-lg flex-1">
-                                <Phone className="text-[#C5A572]" />
-                                03-6204-2876
-                            </button>
-                        </div>
-
-                        <div className="mt-12">
-                            <a href="/price" className="inline-flex items-center gap-2 text-[#C5A572] hover:text-[#E5C592] transition-colors border-b border-[#C5A572] pb-1">
-                                料金表を見る <ArrowRight size={16} />
-                            </a>
-                        </div>
-                    </div>
-                </section>
                 {/* 監修者情報 */}
                 <div className="container mx-auto px-4 pt-2 pb-16">
                     <AuthorBio />

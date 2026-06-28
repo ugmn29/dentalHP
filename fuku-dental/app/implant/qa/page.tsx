@@ -6,6 +6,8 @@ import { AuthorBio } from '@/components/AuthorBio';
 import QAContent from './QAContent';
 import { PageImage } from '@/components/PageImage';
 import { Home, ChevronRight, ArrowRight } from 'lucide-react';
+import { RelatedPagesSection } from '@/components/RelatedPagesSection';
+import { implantRelatedPages } from '@/data/related-pages';
 
 export const metadata: Metadata = {
   title: 'インプラントQ&A よくある質問 | Fデンタルオフィス 豊洲プライムスクエア院',
@@ -139,36 +141,12 @@ export default function ImplantQAPage() {
           <div className="container mx-auto px-4 max-w-5xl">
             <div className="bg-white rounded-2xl p-8 border border-gray-100">
               <h3 className="text-xl font-bold text-[#2d4835] mb-6 text-center">インプラント治療についてもっと詳しく</h3>
-              <div className="grid md:grid-cols-2 gap-4">
-                <Link
-                  href="/implant/about"
-                  className="flex items-center justify-between p-4 bg-[#FDFBF7] hover:bg-gray-50 rounded-xl border border-gray-100 transition-colors group"
-                >
-                  <span className="font-medium text-[#2d4835]">インプラントとは</span>
-                  <ArrowRight className="w-5 h-5 text-[#395b45] group-hover:translate-x-1 transition-transform" />
-                </Link>
-                <Link
-                  href="/implant/comparison"
-                  className="flex items-center justify-between p-4 bg-[#FDFBF7] hover:bg-gray-50 rounded-xl border border-gray-100 transition-colors group"
-                >
-                  <span className="font-medium text-[#2d4835]">入れ歯・ブリッジとの比較</span>
-                  <ArrowRight className="w-5 h-5 text-[#395b45] group-hover:translate-x-1 transition-transform" />
-                </Link>
-                <Link
-                  href="/implant/flow"
-                  className="flex items-center justify-between p-4 bg-[#FDFBF7] hover:bg-gray-50 rounded-xl border border-gray-100 transition-colors group"
-                >
-                  <span className="font-medium text-[#2d4835]">治療の流れ</span>
-                  <ArrowRight className="w-5 h-5 text-[#395b45] group-hover:translate-x-1 transition-transform" />
-                </Link>
-                <Link
-                  href="/implant/cost"
-                  className="flex items-center justify-between p-4 bg-[#FDFBF7] hover:bg-gray-50 rounded-xl border border-gray-100 transition-colors group"
-                >
-                  <span className="font-medium text-[#2d4835]">費用について</span>
-                  <ArrowRight className="w-5 h-5 text-[#395b45] group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </div>
+              <RelatedPagesSection
+                title="インプラント治療についてもっと詳しく"
+                items={implantRelatedPages}
+                currentPath="/implant/qa"
+                className="rounded-2xl"
+              />
             </div>
           </div>
         </section>

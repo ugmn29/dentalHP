@@ -61,7 +61,7 @@ export default function AvoidRegretPage() {
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#5A4D41] font-serif">
                 小児矯正で後悔しないために
               </h1>
-              <PageImage path="/kidsortho/avoid-regret" imageId="治療した場合としなかった場合の歯並び比較" alt="小児矯正で後悔しないために" />
+              <PageImage path="/kidsortho/avoid-regret" imageId="治療した場合としなかった場合の歯並び比較" alt="小児矯正で後悔しないために" className="mx-auto mb-8 aspect-[16/9] w-full kidsortho-hero-image-card rounded-3xl border border-[#E6E0D6] bg-white object-contain p-3 shadow-lg" />
               <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
 
 
@@ -530,34 +530,7 @@ export default function AvoidRegretPage() {
           </div>
         </section>
 
-        {/* CTA */}
-        <section className="py-2 bg-gradient-to-r from-[#C5A572] to-[#B8935A] text-white">
-          <div className="container mx-auto px-4 pb-16">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 font-serif">
-                後悔しない小児矯正を始めましょう
-              </h2>
-              <p className="text-xl mb-8 text-white/90 font-sans">
-                豊洲で小児矯正をお考えなら、豊洲駅徒歩2分の当院へ。納得してから治療を開始できます
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="/#contact"
-                  className="inline-flex items-center justify-center bg-white text-[#C5A572] px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-50 transition-colors shadow-lg"
-                >
-                  無料相談を予約する
-                  <ArrowRight className="w-6 h-6 ml-2" />
-                </Link>
-                <Link
-                  href="tel:03-6204-2876"
-                  className="inline-flex items-center justify-center bg-white/20 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/30 transition-colors border-2 border-white"
-                >
-                  電話で相談する
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
+
       </main>
       <Footer />
     </>

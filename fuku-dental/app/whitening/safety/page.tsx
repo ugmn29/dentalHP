@@ -5,6 +5,8 @@ import { AuthorBio } from '@/components/AuthorBio';
 import { PageImage } from '@/components/PageImage';
 import { ArrowRight, CheckCircle, Shield, X, AlertCircle, Info, Home, ChevronRight } from 'lucide-react';
 import type { Metadata } from 'next';
+import { RelatedPagesSection } from '@/components/RelatedPagesSection';
+import { whiteningRelatedPages } from '@/data/related-pages';
 
 export const metadata: Metadata = {
   title: 'ホワイトニングの安全性・副作用｜知覚過敏などのリスクと対策｜Fデンタルオフィス 豊洲プライムスクエア院',
@@ -626,79 +628,13 @@ export default function WhiteningSafetyPage() {
         </div>
       </section>
 
-      {/* 関連ページ */}
-      <section className="py-2 bg-[#FDFBF7]">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-[#5A4D41] font-serif">関連ページ</h2>
-              <div className="w-16 h-0.5 bg-[#C5A572] mx-auto mt-4"></div>
-            </div>
+      <RelatedPagesSection
+        title="関連ページ"
+        items={whiteningRelatedPages}
+        currentPath="/whitening/safety"
+      />
 
-            <div className="grid md:grid-cols-3 gap-6">
-              <a href="/whitening" className="group bg-white p-6 rounded-2xl border-2 border-[#C5A572]/20 hover:border-[#C5A572]/40 hover:shadow-lg transition-all">
-                <h3 className="text-xl font-bold text-[#5A4D41] font-serif mb-4">ホワイトニングTOP</h3>
-                <p className="text-[#8D8070] mb-4">
-                  ホワイトニング全般について
-                </p>
-                <div className="flex items-center text-[#C5A572] font-semibold group-hover:translate-x-2 transition-transform">
-                  詳しく見る <ArrowRight className="w-5 h-5 ml-2" />
-                </div>
-              </a>
 
-              <a href="/whitening/types" className="group bg-white p-6 rounded-2xl border-2 border-[#C5A572]/20 hover:border-[#C5A572]/40 hover:shadow-lg transition-all">
-                <h3 className="text-xl font-bold text-[#5A4D41] font-serif mb-4">ホワイトニングの種類</h3>
-                <p className="text-[#8D8070] mb-4">
-                  3つの方法を徹底比較
-                </p>
-                <div className="flex items-center text-[#C5A572] font-semibold group-hover:translate-x-2 transition-transform">
-                  詳しく見る <ArrowRight className="w-5 h-5 ml-2" />
-                </div>
-              </a>
-
-              <a href="/whitening/duration" className="group bg-white p-6 rounded-2xl border-2 border-[#C5A572]/20 hover:border-[#C5A572]/40 hover:shadow-lg transition-all">
-                <h3 className="text-xl font-bold text-[#5A4D41] font-serif mb-4">効果の持続期間</h3>
-                <p className="text-[#8D8070] mb-4">
-                  白さを長持ちさせるコツ
-                </p>
-                <div className="flex items-center text-[#C5A572] font-semibold group-hover:translate-x-2 transition-transform">
-                  詳しく見る <ArrowRight className="w-5 h-5 ml-2" />
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-2 bg-gradient-to-r from-[#D4AF37] to-[#C5A028] text-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 font-serif">
-              安全性を最優先に<br />
-              あなたに最適なホワイトニングを
-            </h2>
-            <p className="text-xl mb-8 text-white/90">
-              無料カウンセリングで、リスクや不安を解消してから施術できます
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/#contact"
-                className="inline-flex items-center justify-center bg-white text-[#C5A572] px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-50 transition-colors shadow-lg"
-              >
-                無料相談を予約する
-                <ArrowRight className="w-6 h-6 ml-2" />
-              </a>
-              <a
-                href="tel:03-6204-2876"
-                className="inline-flex items-center justify-center bg-white/20 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/30 transition-colors border-2 border-white"
-              >
-                電話で相談する
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
                 {/* 監修者情報 */}
                 <div className="container mx-auto px-4 pt-2 pb-16">
                     <AuthorBio />

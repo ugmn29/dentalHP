@@ -46,6 +46,12 @@ h1, h2, h3, h4, h5, h6 {
   line-break: strict;
 }
 
+/* Hamburger drawer typography is fixed independently from page-level font styles. */
+.hamburger-mincho-menu,
+.hamburger-mincho-menu :where(a, button, p, span, div) {
+  font-family: var(--font-shippori-mincho), var(--font-noto-serif-jp), "Shippori Mincho", "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", "YuMincho", serif !important;
+}
+
 p, li, dt, dd, a, button, span {
   min-width: 0;
 }
@@ -287,6 +293,10 @@ iframe {
   font-size: 0.88em;
   color: #8D8070;
   margin-top: 0.6em;
+}
+
+.kidsortho-hero-image-card {
+  max-width: 768px;
 }
 
 .article-body hr {

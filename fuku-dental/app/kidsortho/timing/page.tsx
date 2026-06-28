@@ -7,6 +7,8 @@ import { ArrowRight, Home, ChevronRight, CheckCircle, AlertCircle } from 'lucide
 import { KidsOrthoImage } from '@/components/KidsOrthoImage';
 import { PageImage } from '@/components/PageImage';
 import Link from 'next/link';
+import { RelatedPagesSection } from '@/components/RelatedPagesSection';
+import { kidsOrthoRelatedPages } from '@/data/related-pages';
 
 export const metadata: Metadata = {
   title: '小児矯正を始める時期｜何歳から？ベストタイミング｜Fデンタルオフィス 豊洲プライムスクエア院',
@@ -55,7 +57,7 @@ export default function KidsOrthoTimingPage() {
                             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#5A4D41] font-serif">
                                 「様子を見ましょう」は信じていい？<br />ベストタイミング
                             </h1>
-                            <PageImage path="/kidsortho/timing" imageId="歯の生え変わりと治療開始ベストタイミング" alt="小児矯正のベストタイミング" />
+                            <PageImage path="/kidsortho/timing" imageId="歯の生え変わりと治療開始ベストタイミング" alt="小児矯正のベストタイミング" className="mx-auto mb-8 aspect-[16/9] w-full kidsortho-hero-image-card rounded-3xl border border-[#E6E0D6] bg-white object-contain p-3 shadow-lg" />
                             <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
 
 
@@ -357,83 +359,18 @@ export default function KidsOrthoTimingPage() {
                     </div>
                 </section>
 
-                {/* 関連ページ */}
-                <section className="py-2 bg-white">
-                    <div className="container mx-auto px-4">
-                        <div className="max-w-6xl mx-auto">
-                            <div className="text-center mb-12">
-                                <h2 className="text-3xl md:text-4xl font-bold text-[#5A4D41] font-serif">関連ページ</h2>
-                                <div className="w-16 h-0.5 bg-[#C5A572] mx-auto mt-4"></div>
-                            </div>
-
-                            <div className="grid md:grid-cols-3 gap-6">
-                                <Link href="/kidsortho/types" className="group bg-white p-6 rounded-2xl border-2 border-[#C5A572]/20 hover:border-[#C5A572]/40 hover:shadow-lg transition-all">
-                                    <h3 className="text-xl font-bold text-[#5A4D41] font-serif mb-4">不正咬合の種類</h3>
-                                    <p className="text-[#8D8070] mb-4">
-                                        7つのタイプとその特徴を詳しく解説
-                                    </p>
-                                    <div className="flex items-center text-[#C5A572] font-semibold group-hover:translate-x-2 transition-transform">
-                                        詳しく見る <ArrowRight className="w-5 h-5 ml-2" />
-                                    </div>
-                                </Link>
-
-                                <Link href="/kidsortho/duration" className="group bg-white p-6 rounded-2xl border-2 border-[#C5A572]/20 hover:border-[#C5A572]/40 hover:shadow-lg transition-all">
-                                    <h3 className="text-xl font-bold text-[#5A4D41] font-serif mb-4">治療期間</h3>
-                                    <p className="text-[#8D8070] mb-4">
-                                        こども矯正にかかる期間と治療の流れ
-                                    </p>
-                                    <div className="flex items-center text-[#C5A572] font-semibold group-hover:translate-x-2 transition-transform">
-                                        詳しく見る <ArrowRight className="w-5 h-5 ml-2" />
-                                    </div>
-                                </Link>
-
-                                <Link href="/kidsortho/cost" className="group bg-white p-6 rounded-2xl border-2 border-[#C5A572]/20 hover:border-[#C5A572]/40 hover:shadow-lg transition-all">
-                                    <h3 className="text-xl font-bold text-[#5A4D41] font-serif mb-4">費用について</h3>
-                                    <p className="text-[#8D8070] mb-4">
-                                        こども矯正にかかる費用と支払い方法
-                                    </p>
-                                    <div className="flex items-center text-[#C5A572] font-semibold group-hover:translate-x-2 transition-transform">
-                                        詳しく見る <ArrowRight className="w-5 h-5 ml-2" />
-                                    </div>
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                <RelatedPagesSection
+                  title="関連ページ"
+                  items={kidsOrthoRelatedPages}
+                  currentPath="/kidsortho/timing"
+                />
 
                 {/* 監修者情報 */}
                 <div className="container mx-auto px-4 pt-2 pb-16">
                     <AuthorBio />
                 </div>
 
-                {/* CTA */}
-                <section className="py-2 bg-gradient-to-r from-[#C5A572] to-[#B8935A] text-white">
-                    <div className="container mx-auto px-4">
-                        <div className="max-w-4xl mx-auto text-center">
-                            <h2 className="text-3xl md:text-4xl font-bold mb-6 font-serif">
-                                お子さまの歯並び、今がベストタイミング
-                            </h2>
-                            <p className="text-xl mb-8 text-white/90">
-                                豊洲で小児矯正をお考えなら、豊洲駅徒歩2分の当院へ。無料相談で、お子さまに最適な治療開始時期をアドバイスします
-                            </p>
-                            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                                <Link
-                                    href="/#contact"
-                                    className="inline-flex items-center justify-center bg-white text-[#C5A572] px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-50 transition-colors shadow-lg"
-                                >
-                                    無料相談を予約する
-                                    <ArrowRight className="w-6 h-6 ml-2" />
-                                </Link>
-                                <Link
-                                    href="tel:03-6204-2876"
-                                    className="inline-flex items-center justify-center bg-white/20 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/30 transition-colors border-2 border-white"
-                                >
-                                    電話で相談する
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+
             </main>
             <Footer />
         </>

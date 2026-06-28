@@ -60,7 +60,7 @@ export default function GumTrainingPage() {
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#5A4D41] font-serif">
                 ガムトレーニング完全手順
               </h1>
-              <PageImage path="/kidsortho/gum-training" imageId="ガムトレーニング3ステップ手順" alt="ガムトレーニング完全手順" />
+              <PageImage path="/kidsortho/gum-training" imageId="ガムトレーニング3ステップ手順" alt="ガムトレーニング完全手順" className="mx-auto mb-8 aspect-[16/9] w-full kidsortho-hero-image-card rounded-3xl border border-[#E6E0D6] bg-white object-contain p-3 shadow-lg" />
               <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
 
 
@@ -414,38 +414,7 @@ export default function GumTrainingPage() {
           </div>
         </section>
 
-        {/* CTA */}
-        <section className="py-2 bg-[#FDFBF7]">
-          <div className="container mx-auto px-4 pb-16">
-            <div className="max-w-4xl mx-auto">
-              <div className="bg-gradient-to-br from-[#FDFBF7] to-[#FFF9F0] rounded-xl p-8 md:p-12">
-                <div className="text-center mb-8">
-                  <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#5A4D41] mb-4">ガムトレーニングで顎の発達を促進</h2>
-                  <p className="text-lg md:text-xl text-[#8D8070] leading-loose font-sans">
-                    豊洲で小児矯正をお考えなら、豊洲駅徒歩2分の当院へ。装置とトレーニングの併用で、効果的な矯正治療を
-                  </p>
-                </div>
 
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link
-                    href="/#contact"
-                    className="inline-flex items-center justify-center gap-2 bg-[#C5A572] hover:bg-[#B39562] text-white font-bold py-4 px-8 rounded-full transition-all transform hover:scale-105 shadow-lg"
-                  >
-                    無料相談を予約する
-                    <ArrowRight size={20} />
-                  </Link>
-                  <Link
-                    href="/kidsortho"
-                    className="inline-flex items-center justify-center gap-2 bg-[#5A4D41] hover:bg-[#4A3D31] text-white font-bold py-4 px-8 rounded-full transition-all border-2 border-[#5A4D41]"
-                  >
-                    <span>こども矯正トップへ</span>
-                    <ArrowRight size={20} />
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
       </main>
       <Footer />
     </>

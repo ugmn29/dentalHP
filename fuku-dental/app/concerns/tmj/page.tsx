@@ -5,6 +5,7 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
 import { CheckCircle2, AlertTriangle, Calendar, ChevronRight } from 'lucide-react';
+import { WEB_RESERVATION_URL } from '@/lib/reservation';
 
 export default function TMJPage() {
   return (
@@ -38,7 +39,7 @@ export default function TMJPage() {
             {/* WEB予約ボタン */}
             <div className="flex justify-center mt-12">
               <a
-                href="https://apo-toolboxes.stransa.co.jp/user/web/babordc4ba29b/reservations"
+                href={WEB_RESERVATION_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group relative flex items-center gap-3 bg-white text-[#9B89B3] px-8 py-5 rounded-full shadow-2xl hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] transition-all duration-300 transform hover:scale-105"
@@ -1083,43 +1084,7 @@ export default function TMJPage() {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-2 bg-gradient-to-br from-[#5A4D41] to-[#6A5D51] text-white">
-          <div className="container mx-auto px-4 text-center max-w-4xl">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              顎の痛み・音・違和感を<br className="md:hidden" />そのままにしないでください
-            </h2>
-            <p className="text-lg mb-4 text-white/90">
-              早期治療が、早期改善の鍵です。<br />
-              症状が軽いうちに適切な治療を開始することで、慢性化を防ぎ、QOLを守ることができます。
-            </p>
-            <p className="text-white/80 mb-12">
-              まずはお気軽にご相談ください。エビデンスに基づいた最適な治療法をご提案いたします。
-            </p>
 
-            <div className="flex flex-col sm:flex-row gap-6 justify-center max-w-2xl mx-auto">
-              <a
-                href="https://apo-toolboxes.stransa.co.jp/user/web/babordc4ba29b/reservations"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group bg-[#9B89B3] hover:bg-[#AB99C3] text-white px-8 py-5 rounded-full font-bold shadow-2xl transition-all flex items-center justify-center gap-3 text-lg flex-1"
-              >
-                <Calendar size={24} className="group-hover:rotate-12 transition-transform" />
-                <div className="flex flex-col items-start">
-                  <span className="text-xs">24時間受付</span>
-                  <span className="text-lg font-bold">WEB予約</span>
-                </div>
-              </a>
-            </div>
-
-            <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center text-sm">
-              <a href="/concerns/bruxism" className="flex items-center gap-2 text-[#9B89B3] bg-white hover:bg-gray-100 px-6 py-3 rounded-full transition-colors font-bold">
-                関連ページ：歯ぎしり・食いしばり
-                <ChevronRight size={16} />
-              </a>
-            </div>
-          </div>
-        </section>
                 {/* 監修者情報 */}
                 <div className="container mx-auto px-4 pt-2 pb-16">
                     <AuthorBio />

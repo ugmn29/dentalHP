@@ -1,5 +1,6 @@
 import React from 'react';
 import { Phone, Calendar } from 'lucide-react';
+import { WEB_RESERVATION_URL } from '@/lib/reservation';
 
 interface ImplantCTAProps {
   title?: string;
@@ -50,7 +51,9 @@ export function ImplantCTA({
             03-6204-2876
           </a>
           <a
-            href="#"
+            href={WEB_RESERVATION_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className={`inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full font-bold text-lg transition-all ${
               isBlue
                 ? 'bg-[#FF9F43] text-white hover:bg-[#e8903c] shadow-lg'

@@ -816,37 +816,7 @@ export default function OvercomingFearPage() {
                 </div>
             </section>
 
-            {/* CTA Section */}
-            <section className="py-2 bg-gradient-to-br from-[#395b45] via-[#4a6c56] to-[#2d4835] text-white">
-                <div className="container mx-auto px-4">
-                    <div className="max-w-3xl mx-auto text-center">
-                        <h2 className="text-3xl md:text-4xl font-bold mb-6 font-serif">
-                            歯医者嫌いのお子様も<br />
-                            安心してお任せください
-                        </h2>
-                        <p className="text-lg mb-8 leading-relaxed opacity-95">
-                            当院は「無理やり治療しない」ことを約束します。<br />
-                            お子様のペースで、一緒に頑張りましょう。
-                        </p>
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <a
-                                href="tel:03-6204-2876"
-                                className="inline-flex items-center justify-center gap-2 bg-white text-[#395b45] px-8 py-4 rounded-full font-bold hover:bg-[#FDFBF7] transition-colors shadow-lg"
-                            >
-                                <Phone size={20} />
-                                電話で予約
-                            </a>
-                            <a
-                                href="/#contact"
-                                className="inline-flex items-center justify-center gap-2 bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-[#395b45] transition-colors"
-                            >
-                                <Calendar size={20} />
-                                WEB予約
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
+
                 {/* 監修者情報 */}
                 <div className="container mx-auto px-4 pt-2 pb-16">
                     <AuthorBio />

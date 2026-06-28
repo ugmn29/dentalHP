@@ -7,6 +7,8 @@ import { AlertCircle, CheckCircle, ArrowRight, Users, Clock, TrendingUp, Shield,
 import { KidsOrthoImage } from '@/components/KidsOrthoImage';
 import { PageImage } from '@/components/PageImage';
 import Link from 'next/link';
+import { RelatedPagesSection } from '@/components/RelatedPagesSection';
+import { kidsOrthoRelatedPages } from '@/data/related-pages';
 
 export const metadata: Metadata = {
   title: '子供の不正咬合の種類｜歯並びタイプ別解説｜Fデンタルオフィス 豊洲プライムスクエア院',
@@ -55,7 +57,7 @@ export default function KidsOrthoTypesPage() {
                             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#5A4D41] font-serif">
                                 こどもの不正咬合の種類
                             </h1>
-                            <PageImage path="/kidsortho/types" imageId="7種類の不正咬合一覧の歯列図" alt="こどもの不正咬合の種類" />
+                            <PageImage path="/kidsortho/types" imageId="7種類の不正咬合一覧の歯列図" alt="こどもの不正咬合の種類" className="mx-auto mb-8 aspect-[16/9] w-full kidsortho-hero-image-card rounded-3xl border border-[#E6E0D6] bg-white object-contain p-3 shadow-lg" />
                             <div className="w-24 h-1 bg-[#E67A2E] mx-auto mb-8"></div>
 
 
@@ -745,78 +747,13 @@ export default function KidsOrthoTypesPage() {
                     </div>
                 </section>
 
-                {/* 関連ページ */}
-                <section className="py-2 bg-[#FDFBF7]">
-                    <div className="container mx-auto px-4">
-                        <div className="max-w-6xl mx-auto">
-                            <div className="text-center mb-12">
-                                <h2 className="text-3xl md:text-4xl font-bold text-[#5A4D41] font-serif">関連ページ</h2>
-                                <div className="w-16 h-0.5 bg-[#E67A2E] mx-auto mt-4"></div>
-                            </div>
+                <RelatedPagesSection
+                  title="関連ページ"
+                  items={kidsOrthoRelatedPages}
+                  currentPath="/kidsortho/types"
+                />
 
-                            <div className="grid md:grid-cols-3 gap-6">
-                                <Link href="/kidsortho/timing" className="group bg-white p-6 rounded-2xl border-2 border-[#E67A2E]/20 hover:border-[#E67A2E]/40 hover:shadow-lg transition-all">
-                                    <h3 className="text-xl font-bold text-[#5A4D41] font-serif mb-4">いつから始めるべきか</h3>
-                                    <p className="text-[#8D8070] mb-4 font-sans">
-                                        こども矯正を始める最適なタイミング
-                                    </p>
-                                    <div className="flex items-center text-[#E67A2E] font-semibold group-hover:translate-x-2 transition-transform font-sans">
-                                        詳しく見る <ArrowRight className="w-5 h-5 ml-2" />
-                                    </div>
-                                </Link>
 
-                                <Link href="/kidsortho/duration" className="group bg-white p-6 rounded-2xl border-2 border-[#E67A2E]/20 hover:border-[#E67A2E]/40 hover:shadow-lg transition-all">
-                                    <h3 className="text-xl font-bold text-[#5A4D41] font-serif mb-4">治療期間</h3>
-                                    <p className="text-[#8D8070] mb-4 font-sans">
-                                        こども矯正にかかる期間と治療の流れ
-                                    </p>
-                                    <div className="flex items-center text-[#E67A2E] font-semibold group-hover:translate-x-2 transition-transform font-sans">
-                                        詳しく見る <ArrowRight className="w-5 h-5 ml-2" />
-                                    </div>
-                                </Link>
-
-                                <Link href="/kidsortho/appliances" className="group bg-white p-6 rounded-2xl border-2 border-[#E67A2E]/20 hover:border-[#E67A2E]/40 hover:shadow-lg transition-all">
-                                    <h3 className="text-xl font-bold text-[#5A4D41] font-serif mb-4">使用する装置</h3>
-                                    <p className="text-[#8D8070] mb-4 font-sans">
-                                        こども矯正で使用する様々な装置
-                                    </p>
-                                    <div className="flex items-center text-[#E67A2E] font-semibold group-hover:translate-x-2 transition-transform font-sans">
-                                        詳しく見る <ArrowRight className="w-5 h-5 ml-2" />
-                                    </div>
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                {/* CTA */}
-                <section className="py-2 bg-gradient-to-r from-[#E67A2E] to-[#D66A28] text-white">
-                    <div className="container mx-auto px-4">
-                        <div className="max-w-4xl mx-auto text-center">
-                            <h2 className="text-3xl md:text-4xl font-bold mb-6 font-serif">
-                                お子さまの歯並びが気になったら
-                            </h2>
-                            <p className="text-xl mb-8 text-white/90 font-sans">
-                                豊洲の歯医者として、まずは無料相談でお子さまの不正咬合のタイプと最適な治療時期を確認いたします
-                            </p>
-                            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                                <Link
-                                    href="/#contact"
-                                    className="inline-flex items-center justify-center bg-white text-[#E67A2E] px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-50 transition-colors shadow-lg"
-                                >
-                                    無料相談を予約する
-                                    <ArrowRight className="w-6 h-6 ml-2" />
-                                </Link>
-                                <Link
-                                    href="tel:03-6204-2876"
-                                    className="inline-flex items-center justify-center bg-white/20 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/30 transition-colors border-2 border-white"
-                                >
-                                    電話で相談する
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
-                </section>
                 {/* 監修者情報 */}
                 <div className="container mx-auto px-4 pt-2 pb-16">
                     <AuthorBio />

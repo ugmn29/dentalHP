@@ -40,7 +40,7 @@ export default function KidsOrthoCostPage() {
                             <h1 className="text-4xl md:text-5xl font-serif font-bold mb-6 text-[#5A4D41]">
                                 こども矯正の費用
                             </h1>
-                            <PageImage path="/kidsortho/cost" imageId="こども矯正の費用内訳円グラフ" alt="こども矯正の費用" />
+                            <PageImage path="/kidsortho/cost" imageId="こども矯正の費用内訳円グラフ" alt="こども矯正の費用" className="mx-auto mb-8 aspect-[16/9] w-full kidsortho-hero-image-card rounded-3xl border border-[#E6E0D6] bg-white object-contain p-3 shadow-lg" />
                             <div className="w-16 h-0.5 bg-[#C5A572] mx-auto my-8"></div>
                             <p className="text-lg text-[#8D8070] leading-relaxed font-sans">
                                 表示価格はすべて税込です。

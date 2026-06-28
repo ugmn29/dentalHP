@@ -19,7 +19,7 @@ const categoryLinks: Record<string, { label: string; href: string }[]> = {
     'kids-ortho': [{ label: '小児矯正の装置を見る', href: '/kidsortho/appliances' }],
     'adult-ortho': [{ label: '矯正装置の種類を見る', href: '/orthodontics/types' }],
     implant: [{ label: 'インプラントの説明を見る', href: '/implant/about' }],
-    'root-canal': [{ label: '根管治療の種類を見る', href: '/root-canal/types' }],
+    'root-canal': [{ label: '精密根管治療の種類を見る', href: '/root-canal/types' }],
     surgery: [
         { label: '虫歯治療で歯を残す方法を見る', href: '/cavity/treatment-methods' },
         { label: '歯周病で歯を残す治療を見る', href: '/periodontal/treatment-methods' },

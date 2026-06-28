@@ -604,39 +604,7 @@ export default function ImplantCaseStudiesPage() {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-2">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-3xl shadow-2xl p-12">
-              <Star className="w-16 h-16 mx-auto mb-6 text-yellow-300" />
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                あなたに最適なインプラント治療をご提案します
-              </h2>
-              <p className="text-xl text-purple-100 mb-8 leading-relaxed">
-                無料カウンセリングで、あなたのお悩みや疑問に丁寧にお答えします。<br />
-                CT撮影による精密診断と、詳しい治療計画をご説明いたします。
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="/#contact"
-                  className="inline-flex items-center justify-center bg-white text-purple-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-purple-50 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
-                >
-                  無料カウンセリング予約
-                  <ChevronRight className="ml-2 w-5 h-5" />
-                </Link>
-                <a
-                  href="tel:03-6204-2876"
-                  className="inline-flex items-center justify-center bg-purple-500 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-purple-400 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
-                >
-                  📞 お電話でのご予約
-                </a>
-              </div>
-              <p className="mt-6 text-sm text-purple-200">
-                ※無料カウンセリングは完全予約制です。お気軽にお問い合わせください。
-              </p>
-            </div>
-          </div>
-        </section>
+
                 {/* 監修者情報 */}
                 <div className="container mx-auto px-4 pt-2 pb-16">
                     <AuthorBio />

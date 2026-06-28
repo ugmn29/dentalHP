@@ -6,6 +6,8 @@ import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
 import { PageImage } from '@/components/PageImage';
 import { ChevronRight, CheckCircle, Users, Heart, Briefcase, Calendar, TrendingUp, Shield } from 'lucide-react';
+import { RelatedPagesSection } from '@/components/RelatedPagesSection';
+import { orthodonticsRelatedPages } from '@/data/related-pages';
 
 export const metadata: Metadata = {
   title: '大人の矯正治療｜何歳からでも始められる歯列矯正｜Fデンタルオフィス 豊洲プライムスクエア院',
@@ -628,123 +630,13 @@ export default function OrthodonticsAdultPage() {
           </div>
         </section>
 
-        {/* Related Pages */}
-        <section className="py-2 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">
-              矯正治療について、さらに詳しく
-            </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <Link
-                href="/orthodontics"
-                className="bg-white border-2 border-amber-200 rounded-xl shadow-md p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group"
-              >
-                <div className="flex items-center justify-between mb-3">
-                  <h3 className="font-bold text-lg text-gray-900 group-hover:text-amber-600 transition-colors">
-                    矯正歯科について
-                  </h3>
-                  <ChevronRight className="w-5 h-5 text-amber-600 group-hover:translate-x-1 transition-transform" />
-                </div>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  矯正治療の特徴や当院の強みをご紹介
-                </p>
-              </Link>
+        <RelatedPagesSection
+          title="関連ページ"
+          items={orthodonticsRelatedPages}
+          currentPath="/orthodontics/adult"
+        />
 
-              <Link
-                href="/orthodontics/types"
-                className="bg-white border-2 border-amber-200 rounded-xl shadow-md p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group"
-              >
-                <div className="flex items-center justify-between mb-3">
-                  <h3 className="font-bold text-lg text-gray-900 group-hover:text-amber-600 transition-colors">
-                    矯正治療の種類
-                  </h3>
-                  <ChevronRight className="w-5 h-5 text-amber-600 group-hover:translate-x-1 transition-transform" />
-                </div>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  ワイヤー・マウスピース・裏側矯正の比較
-                </p>
-              </Link>
 
-              <Link
-                href="/orthodontics/cost"
-                className="bg-white border-2 border-amber-200 rounded-xl shadow-md p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group"
-              >
-                <div className="flex items-center justify-between mb-3">
-                  <h3 className="font-bold text-lg text-gray-900 group-hover:text-amber-600 transition-colors">
-                    矯正治療の費用
-                  </h3>
-                  <ChevronRight className="w-5 h-5 text-amber-600 group-hover:translate-x-1 transition-transform" />
-                </div>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  料金プランや支払い方法について
-                </p>
-              </Link>
-
-              <Link
-                href="/orthodontics/duration"
-                className="bg-white border-2 border-amber-200 rounded-xl shadow-md p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group"
-              >
-                <div className="flex items-center justify-between mb-3">
-                  <h3 className="font-bold text-lg text-gray-900 group-hover:text-amber-600 transition-colors">
-                    治療期間について
-                  </h3>
-                  <ChevronRight className="w-5 h-5 text-amber-600 group-hover:translate-x-1 transition-transform" />
-                </div>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  矯正治療にかかる期間と通院頻度
-                </p>
-              </Link>
-
-              <Link
-                href="/orthodontics/case-studies"
-                className="bg-white border-2 border-amber-200 rounded-xl shadow-md p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group"
-              >
-                <div className="flex items-center justify-between mb-3">
-                  <h3 className="font-bold text-lg text-gray-900 group-hover:text-amber-600 transition-colors">
-                    症例紹介
-                  </h3>
-                  <ChevronRight className="w-5 h-5 text-amber-600 group-hover:translate-x-1 transition-transform" />
-                </div>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  実際の治療例と患者様の声
-                </p>
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-2 bg-gradient-to-r from-amber-600 to-yellow-600">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div className="bg-white/10 backdrop-blur-sm text-white rounded-3xl shadow-2xl p-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                今からでも遅くない。理想の笑顔を手に入れましょう
-              </h2>
-              <p className="text-xl text-amber-100 mb-8 leading-relaxed">
-                年齢を理由に諦める必要はありません。<br />
-                無料カウンセリングで、あなたに最適な矯正プランをご提案します。
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="/#contact"
-                  className="inline-flex items-center justify-center bg-white text-amber-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-amber-50 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
-                >
-                  無料カウンセリング予約
-                  <ChevronRight className="ml-2 w-5 h-5" />
-                </Link>
-                <a
-                  href="tel:03-6204-2876"
-                  className="inline-flex items-center justify-center bg-amber-500 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-amber-400 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
-                >
-                  📞 お電話でのご予約
-                </a>
-              </div>
-              <p className="mt-6 text-sm text-amber-200">
-                ※無料カウンセリングは完全予約制です。お気軽にお問い合わせください。
-              </p>
-            </div>
-          </div>
-        </section>
                 {/* 監修者情報 */}
                 <div className="container mx-auto px-4 pt-2 pb-16">
                     <AuthorBio />

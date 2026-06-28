@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Noto_Serif_JP, Noto_Sans_JP, Shippori_Mincho } from "next/font/google";
+import { AnalyticsTracker } from "@/components/AnalyticsTracker";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -31,11 +32,11 @@ const shipporiMincho = Shippori_Mincho({
 });
 
 export const metadata: Metadata = {
-  title: "豊洲の歯科・歯医者｜豊洲駅徒歩2分・0歳から対応｜Fデンタルオフィス 豊洲プライムスクエア院",
-  description: "豊洲駅6a出口から徒歩2分、豊洲プライムスクエア1階の歯科医院・歯医者「Fデンタルオフィス 豊洲プライムスクエア院」。小児歯科・こども矯正・予防歯科・セラミック治療・インプラント・マウスピース矯正など幅広く対応します。",
+  title: "豊洲の歯医者｜豊洲駅徒歩2分・豊洲プライムスクエア1階｜Fデンタルオフィス",
+  description: "豊洲駅6a出口から徒歩2分、豊洲プライムスクエア1階の歯医者「Fデンタルオフィス 豊洲プライムスクエア院」。小児歯科・こども矯正・予防歯科・セラミック治療・インプラント・マウスピース矯正など幅広く対応します。",
   keywords: "豊洲 歯科,豊洲 歯医者,歯科 豊洲,歯医者 豊洲,豊洲 矯正歯科,矯正歯科 豊洲,豊洲駅 歯科,豊洲駅 歯医者,豊洲プライムスクエア,こども矯正,インプラント,セラミック,ホワイトニング,江東区 歯科",
   openGraph: {
-    title: "豊洲の歯科・歯医者｜豊洲駅徒歩2分・0歳から対応｜Fデンタルオフィス 豊洲プライムスクエア院",
+    title: "豊洲の歯医者｜豊洲駅徒歩2分・豊洲プライムスクエア1階｜Fデンタルオフィス",
     description: "豊洲駅6a出口から徒歩2分、豊洲プライムスクエア1階。小児歯科・こども矯正・予防歯科・インプラント・セラミック治療など幅広く対応。",
     url: "https://fshika.com",
     siteName: "Fデンタルオフィス 豊洲プライムスクエア院",
@@ -52,7 +53,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "豊洲の歯科・歯医者｜豊洲駅徒歩2分・0歳から対応｜Fデンタルオフィス 豊洲プライムスクエア院",
+    title: "豊洲の歯医者｜豊洲駅徒歩2分・豊洲プライムスクエア1階｜Fデンタルオフィス",
     description: "豊洲駅6a出口から徒歩2分。小児歯科・こども矯正・予防歯科・インプラント・セラミック治療など幅広く対応。",
     images: ["https://fshika.com/images/og/homepage.png"],
   },
@@ -204,7 +205,7 @@ export default function RootLayout({
             }
           ]
         },
-        "description": "豊洲駅徒歩2分の歯科医院・歯医者、Fデンタルオフィス 豊洲プライムスクエア院では、科学的根拠に基づいた精密治療を提供。インプラント、矯正歯科、小児歯科、予防歯科、歯周病治療、根管治療など、幅広い診療に対応しています。",
+        "description": "豊洲駅徒歩2分、豊洲プライムスクエア1階の歯医者、Fデンタルオフィス 豊洲プライムスクエア院では、科学的根拠に基づいた精密治療を提供。インプラント、矯正歯科、小児歯科、予防歯科、歯周病治療、根管治療など、幅広い診療に対応しています。",
         "founder": {
           "@type": "Person",
           "name": "福永 真大",
@@ -288,6 +289,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${notoSerifJP.variable} ${notoSansJP.variable} ${shipporiMincho.variable} antialiased`}
       >
+        <AnalyticsTracker />
         {children}
       </body>
     </html>

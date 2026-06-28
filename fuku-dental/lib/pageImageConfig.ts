@@ -155,7 +155,6 @@ export const pageImageSlots: CategoryConfig[] = [
       { path: '/ceramic/types', label: 'セラミックの種類', slots: ['hero'] },
       { path: '/ceramic/longevity', label: 'セラミックの寿命', slots: ['hero'] },
       { path: '/ceramic/vs-metal', label: 'セラミック vs 金属', slots: ['hero'] },
-      { path: '/ceramic/case-studies', label: 'セラミック症例', slots: ['hero'] },
     ],
   },
   {
@@ -175,7 +174,6 @@ export const pageImageSlots: CategoryConfig[] = [
       { path: '/orthodontics/cost', label: '矯正の費用', slots: ['hero'] },
       { path: '/orthodontics/types', label: '矯正の種類', slots: ['hero'] },
       { path: '/orthodontics/duration', label: '矯正の期間', slots: ['hero'] },
-      { path: '/orthodontics/case-studies', label: '矯正の症例', slots: ['hero'] },
     ],
   },
   {
@@ -193,7 +191,6 @@ export const pageImageSlots: CategoryConfig[] = [
       { path: '/periodontal/cost', label: '歯周病の費用', slots: ['hero', 'feature1', 'feature2', 'feature3', 'feature4'] },
       { path: '/periodontal/prevention', label: '歯周病の予防', slots: ['hero', 'feature1', 'feature2', 'feature3', 'feature4'] },
       { path: '/periodontal/treatment-methods', label: '歯周病の治療法', slots: ['hero', 'feature1', 'feature2', 'feature3', 'feature4'] },
-      { path: '/periodontal/case-studies', label: '歯周病の症例', slots: ['hero', 'feature1', 'feature2', 'feature3', 'feature4', 'feature5'] },
     ],
   },
   {
@@ -233,7 +230,6 @@ export const pageImageSlots: CategoryConfig[] = [
       { path: '/root-canal/duration', label: '根管治療の期間', slots: ['hero'] },
       { path: '/root-canal/pain', label: '根管治療の痛み', slots: ['hero'] },
       { path: '/root-canal/types', label: '根管治療の種類', slots: ['hero'] },
-      { path: '/root-canal/case-studies', label: '根管治療の症例', slots: ['hero'] },
     ],
   },
   {
@@ -271,29 +267,18 @@ export const pageImageSlots: CategoryConfig[] = [
     ],
   },
   {
-    category: 'こども予防',
-    pages: [
-      {
-        path: '/kids-preventive',
-        label: 'こども予防トップ',
-        slots: [
-          'hero', 'hero-slide1', 'hero-slide2', 'hero-slide3',
-          'feature1', 'feature2', 'feature3', 'feature4',
-          'step1', 'step2', 'step3', 'step4', 'step5',
-        ],
-      },
-      { path: '/kids-preventive/overcoming-fear', label: '歯医者嫌い克服', slots: ['hero'] },
-    ],
-  },
-  {
-    category: '食育・口腔教育',
+    category: '0歳からのこども歯科・予防',
     pages: [
       {
         path: '/oral-education',
-        label: '食育・口腔教育トップ',
+        label: '0歳からのこども歯科・予防トップ',
         slots: [
           'hero-slide1', 'hero-slide2', 'hero-slide3',
-          'feature1', 'feature2', 'feature3', 'feature4',
+          '医師と親子が対面で話している場面',
+          '口腔内写真撮影と態癖チェック',
+          '子供がトレーニング中で衛生士が見守る場面',
+          '笑顔の子供とGoodサイン',
+          '子供が風船やシャボン玉で遊んでいるイラスト',
           'step1', 'step2', 'step3', 'step4',
         ],
       },
@@ -327,7 +312,7 @@ export const pageImageSlots: CategoryConfig[] = [
     category: '症例・設備',
     pages: [
       {
-        path: '/cases',
+        path: '/case-studies',
         label: '症例紹介',
         slots: [
           'case1-before', 'case1-after', 'case2-before', 'case2-after',

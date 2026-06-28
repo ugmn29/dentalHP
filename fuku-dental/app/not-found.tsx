@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { Metadata } from 'next'
+import { WEB_RESERVATION_URL } from '@/lib/reservation'
 
 export const metadata: Metadata = {
   title: 'ページが見つかりません | Fデンタルオフィス 豊洲プライムスクエア院',
@@ -37,12 +38,14 @@ export default function NotFound() {
           >
             トップページへ
           </Link>
-          <Link
-            href="/#contact"
+          <a
+            href={WEB_RESERVATION_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-white text-[#E67A2E] px-8 py-4 rounded-lg font-bold border-2 border-[#E67A2E] hover:bg-[#E67A2E] hover:text-white transition-colors shadow-lg"
           >
             ご予約・お問い合わせ
-          </Link>
+          </a>
         </div>
 
         {/* Quick Links */}

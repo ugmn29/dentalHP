@@ -3,9 +3,7 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
 import { KidsOrthoImage } from '@/components/KidsOrthoImage';
-import { PageImage } from '@/components/PageImage';
-import { ArrowRight, CheckCircle, AlertCircle, Calendar, Heart, TrendingUp, Clock, DollarSign, Users, Wrench, Home, ChevronRight } from 'lucide-react';
-import Link from 'next/link';
+import { ApplianceDetailHero } from '@/components/kidsortho/ApplianceDetailHero';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -31,40 +29,23 @@ export default function FunctionalMouthpiecePage() {
             <Header />
             <main className="bg-[#FDFBF7]" style={{ fontFamily: '"游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", sans-serif' }}>
                 {/* Hero Section */}
-                <section className="bg-[#FDFBF7] py-8 md:py-12">
-                    <div className="container mx-auto px-4">
-                        <div className="max-w-4xl mx-auto">
-                            {/* パンくずリスト */}
-                            <div className="flex items-center gap-2 mb-8 text-sm text-[#8D8070]">
-                                <Link href="/" className="hover:text-[#C5A572] transition-colors flex items-center">
-                                    <Home className="w-4 h-4 mr-1" />
-                                    ホーム
-                                </Link>
-                                <ChevronRight size={14} />
-                                <Link href="/kidsortho" className="hover:text-[#C5A572] transition-colors">こども矯正</Link>
-                                <ChevronRight size={14} />
-                                <Link href="/kidsortho/appliances" className="hover:text-[#C5A572] transition-colors">装置一覧</Link>
-                                <ChevronRight size={14} />
-                                <span className="text-[#C5A572] font-bold">機能的マウスピース装置</span>
-                            </div>
-
-                            <div className="mb-6">
-                                <p className="text-[#C5A572] font-bold text-sm mb-2">機能的マウスピース装置</p>
-                                <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[#5A4D41] mb-3">
-                                    プレオルソ・マイオブレース・T4K・EFラインの比較｜どれがいい？費用と効果の違い
-                                </h1>
-                                <PageImage path="/kidsortho/appliances/functional-mouthpiece" alt="機能的マウスピース装置の比較" />
-                                <div className="w-16 h-0.5 bg-[#C5A572] mb-6"></div>
-                            </div>
-
-
-                            <p className="text-sm text-[#8D8070] mt-3">豊洲の矯正歯科が各装置の違いを徹底比較</p>
-                            <p className="text-base md:text-lg leading-loose text-[#8D8070] font-sans mt-4 mb-8">
-                                プレオルソ・T4K・マイオブレースなど、柔らかいシリコン製のマウスピースで口呼吸・舌癖を改善しながら歯並びを整える治療法です
-                            </p>
-                        </div>
-                    </div>
-                </section>
+                <ApplianceDetailHero
+                    label="機能的マウスピース装置"
+                    title="プレオルソ・マイオブレース等"
+                    accent="口呼吸・舌癖から整える装置"
+                    lead="プレオルソ・T4K・マイオブレースなど、柔らかいシリコン製のマウスピースで口呼吸・舌癖を改善しながら歯並びを整える治療法です。"
+                    imagePath="/kidsortho/appliances/functional-mouthpiece"
+                    imageAlt="機能的マウスピース装置の比較"
+                    current="機能的マウスピース装置"
+                    showBreadcrumb
+                    facts={[
+                        { label: '装置タイプ', value: 'マウスピース' },
+                        { label: '目的', value: '舌癖・口呼吸改善' },
+                        { label: '素材', value: 'やわらかい素材' },
+                        { label: '特徴', value: '取り外し式' },
+                    ]}
+                    point="歯を動かすだけでなく、お口の筋肉や舌の使い方を整えることを重視します。"
+                />
 
                 {/* Main Content */}
                 <div className="container mx-auto px-4 py-2 pb-16">
@@ -548,33 +529,7 @@ export default function FunctionalMouthpiecePage() {
                             </div>
                         </section>
 
-                        {/* CTA Section */}
-                        <section className="bg-[#FDFBF7] rounded-xl p-8 md:p-12">
-                            <div className="text-center mb-8">
-                                <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#5A4D41] mb-4">お子さまに最適な装置を無料でご提案</h2>
-                                <p className="text-lg md:text-xl text-[#8D8070] leading-loose font-sans">
-                                    機能的マウスピース装置が適しているか、豊洲の歯医者・Fデンタルオフィス 豊洲プライムスクエア院の無料相談でご確認ください
-                                </p>
-                            </div>
 
-                            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                                <Link
-                                    href="/#contact"
-                                    className="inline-flex items-center justify-center gap-2 bg-[#C5A572] hover:bg-[#B39562] text-white font-bold py-4 px-8 rounded-full transition-all transform hover:scale-105 shadow-lg"
-                                >
-                                    <Calendar size={20} />
-                                    <span>無料カウンセリング予約</span>
-                                    <ArrowRight size={20} />
-                                </Link>
-                                <Link
-                                    href="/kidsortho/appliances"
-                                    className="inline-flex items-center justify-center gap-2 bg-[#5A4D41] hover:bg-[#4A3D31] text-white font-bold py-4 px-8 rounded-full transition-all border-2 border-[#5A4D41]"
-                                >
-                                    <span>装置一覧に戻る</span>
-                                    <ArrowRight size={20} />
-                                </Link>
-                            </div>
-                        </section>
                     </div>
                 </div>
 

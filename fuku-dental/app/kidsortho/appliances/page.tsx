@@ -3,10 +3,11 @@ import type { Metadata } from 'next';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
-import { Wrench, ArrowRight, CheckCircle, AlertCircle, Clock, Heart, Shield, TrendingUp, Users, Home, ChevronRight } from 'lucide-react';
-import { KidsOrthoImage } from '@/components/KidsOrthoImage';
+import { ArrowRight, CheckCircle, Home, ChevronRight } from 'lucide-react';
 import { PageImage } from '@/components/PageImage';
 import Link from 'next/link';
+import { RelatedPagesSection } from '@/components/RelatedPagesSection';
+import { kidsOrthoRelatedPages } from '@/data/related-pages';
 
 export const metadata: Metadata = {
   title: '小児矯正の装置一覧｜種類と特徴を比較｜Fデンタルオフィス 豊洲プライムスクエア院',
@@ -36,7 +37,7 @@ export default function KidsOrthoAppliancesPage() {
             removable: true,
             color: "from-[#8E7CC3] to-[#7E6CB3]",
             borderColor: "border-[#8E7CC3]",
-            imageId: "preortho",
+            imageId: "preortho-blue",
             shortDesc: "マウスピース型の筋機能訓練装置",
             features: [
                 "柔らかいシリコン製で違和感が少ない",
@@ -192,7 +193,7 @@ export default function KidsOrthoAppliancesPage() {
             removable: false,
             color: "from-[#4A7C59] to-[#3A6C49]",
             borderColor: "border-[#4A7C59]",
-            imageId: "quad-helix",
+            imageId: "quad-helix-illustration",
             shortDesc: "固定式の顎拡大装置（上顎専用）",
             features: [
                 "上顎を効率的に横に広げる",
@@ -338,28 +339,64 @@ export default function KidsOrthoAppliancesPage() {
                 </div>
 
                 {/* Hero Section */}
-                <section className="py-6 md:py-6 bg-[#FDFBF7]">
+                <section className="py-8 md:py-12 bg-[#FDFBF7]">
                     <div className="container mx-auto px-4">
-                        <div className="max-w-4xl mx-auto text-center">
-                            <h1 className="text-4xl md:text-5xl font-serif font-bold mb-6 text-[#5A4D41]">
-                                こども矯正で使用する装置
-                            </h1>
-                            <PageImage path="/kidsortho/appliances" alt="こども矯正で使用する装置" />
-                            <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
-                            <p className="text-xl md:text-2xl mb-4 text-[#5A4D41] font-sans font-medium">
-                                お子さまに最適な矯正装置をご提案
-                            </p>
-                            <p className="text-sm text-[#8D8070] mb-4">豊洲の矯正歯科が各装置の特徴を詳しく解説</p>
-                            <p className="text-lg text-[#8D8070] font-sans leading-relaxed">
-                                1期治療（小児矯正）では、顎の成長を利用した様々な装置を使用します。<br className="hidden md:block" />
-                                お子さまの年齢・症状・生活スタイルに合わせて、最も効果的な装置を選択します。
-                            </p>
+                        <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(420px,520px)] lg:items-center">
+                            <div>
+                                <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#E6D8C5] bg-white/80 px-4 py-2 text-sm font-bold text-[#8B6F47] shadow-sm">
+                                    <CheckCircle className="h-4 w-4 text-[#C5A572]" />
+                                    豊洲の矯正歯科が装置の特徴を解説
+                                </div>
+                                <h1 className="font-serif text-3xl font-bold leading-[1.35] text-[#5A4D41] md:text-5xl">
+                                    こども矯正で
+                                    <span className="mt-3 block text-2xl text-[#C5A572] md:text-4xl">
+                                        使用する装置
+                                    </span>
+                                </h1>
+                                <p className="mt-5 max-w-2xl text-base leading-8 text-[#7E7469] md:text-lg">
+                                    1期治療（小児矯正）では、顎の成長を利用した様々な装置を使用します。お子さまの年齢・症状・生活スタイルに合わせて、最も効果的な装置を選択します。
+                                </p>
+
+                                <div className="mt-7 grid grid-cols-3 gap-3 sm:max-w-xl">
+                                    {['プレオルソ', '拡大床', '機能的装置'].map((item) => (
+                                        <div key={item} className="rounded-2xl border border-[#E6D8C5] bg-white px-3 py-4 text-center text-sm font-bold text-[#5A4D41] shadow-sm">
+                                            {item}
+                                        </div>
+                                    ))}
+                                </div>
+
+                                <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                                    <Link
+                                        href="/kidsortho"
+                                        className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#0a8a85] px-6 py-3 text-sm font-bold text-white shadow-lg shadow-[#0a8a85]/15 transition hover:bg-[#087a76]"
+                                    >
+                                        こども矯正の相談へ
+                                        <ArrowRight className="h-4 w-4" />
+                                    </Link>
+                                    <a
+                                        href="#appliance-list"
+                                        className="inline-flex min-h-12 items-center justify-center rounded-full border border-[#C5A572]/50 bg-white px-6 py-3 text-sm font-bold text-[#8B6F47] transition hover:bg-[#FFF9F0]"
+                                    >
+                                        装置一覧を見る
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div className="overflow-hidden rounded-[28px] border border-[#E6D8C5] bg-white p-3 shadow-xl shadow-[#C5A572]/10">
+                                <PageImage
+                                    path="/kidsortho/appliances"
+                                    imageId="appliances-overview"
+                                    alt="小児矯正で使用する装置を並べたイメージ"
+                                    className="aspect-[16/11] w-full rounded-[20px] object-cover"
+                                    priority
+                                />
+                            </div>
                         </div>
                     </div>
                 </section>
 
                 {/* 装置選択の3つのポイント */}
-                <section className="py-6 md:py-6 bg-[#FDFBF7]">
+                <section id="appliance-list" className="py-6 md:py-6 bg-[#FDFBF7]">
                     <div className="container mx-auto px-4">
                         <div className="max-w-5xl mx-auto">
                             <div className="text-center mb-12">
@@ -422,6 +459,15 @@ export default function KidsOrthoAppliancesPage() {
                                         <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 pb-2 border-b-2 border-[#C5A572]">
                                             {index + 1}. {appliance.name}
                                         </h4>
+
+                                        <div className="mb-5 max-w-2xl overflow-hidden rounded-2xl border border-[#E6E0D6] bg-[#FDFBF7] shadow-sm">
+                                            <PageImage
+                                                path="/kidsortho/appliances"
+                                                imageId={appliance.imageId}
+                                                alt={`${appliance.name}のイラスト`}
+                                                className="w-full aspect-[16/10] object-cover"
+                                            />
+                                        </div>
 
                                         {appliance.usedInClinic && (
                                             <div className="inline-flex items-center gap-2 bg-[#C5A572] text-white px-4 py-2 rounded-full text-sm font-sans font-bold mb-4">
@@ -506,7 +552,7 @@ export default function KidsOrthoAppliancesPage() {
                             </div>
 
                             <div className="space-y-4 text-[#5A4D41] leading-loose max-w-3xl mx-auto mb-12">
-                                {appliances.filter(a => a.usedInClinic).map((appliance, index) => (
+                                {appliances.filter(a => a.usedInClinic).map((appliance) => (
                                     <div key={appliance.id} className="border-l-4 border-[#C5A572] pl-4">
                                         <h3 className="text-xl font-serif font-bold text-[#5A4D41] mb-2">{appliance.name}</h3>
                                         <p className="font-sans mb-2">
@@ -773,78 +819,13 @@ export default function KidsOrthoAppliancesPage() {
                     </div>
                 </section>
 
-                {/* 関連ページ */}
-                <section className="py-2 bg-white">
-                    <div className="container mx-auto px-4">
-                        <div className="max-w-6xl mx-auto">
-                            <div className="text-center mb-12">
-                                <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#5A4D41]">関連ページ</h2>
-                                <div className="w-16 h-0.5 bg-[#C5A572] mx-auto mt-4"></div>
-                            </div>
+                <RelatedPagesSection
+                  title="関連ページ"
+                  items={kidsOrthoRelatedPages}
+                  currentPath="/kidsortho/appliances"
+                />
 
-                            <div className="grid md:grid-cols-3 gap-6">
-                                <Link href="/kidsortho/types" className="group bg-white p-6 rounded-2xl border-2 border-[#C5A572]/20 hover:border-[#C5A572]/40 hover:shadow-lg transition-all">
-                                    <h3 className="text-xl font-serif font-bold text-[#5A4D41] mb-4">不正咬合の種類</h3>
-                                    <p className="text-[#8D8070] font-sans mb-4">
-                                        7つのタイプとその特徴を詳しく解説
-                                    </p>
-                                    <div className="flex items-center text-[#C5A572] font-sans font-semibold group-hover:translate-x-2 transition-transform">
-                                        詳しく見る <ArrowRight className="w-5 h-5 ml-2" />
-                                    </div>
-                                </Link>
 
-                                <Link href="/kidsortho/timing" className="group bg-white p-6 rounded-2xl border-2 border-[#C5A572]/20 hover:border-[#C5A572]/40 hover:shadow-lg transition-all">
-                                    <h3 className="text-xl font-serif font-bold text-[#5A4D41] mb-4">いつから始めるべきか</h3>
-                                    <p className="text-[#8D8070] font-sans mb-4">
-                                        こども矯正を始める最適なタイミング
-                                    </p>
-                                    <div className="flex items-center text-[#C5A572] font-sans font-semibold group-hover:translate-x-2 transition-transform">
-                                        詳しく見る <ArrowRight className="w-5 h-5 ml-2" />
-                                    </div>
-                                </Link>
-
-                                <Link href="/kidsortho/cost" className="group bg-white p-6 rounded-2xl border-2 border-[#C5A572]/20 hover:border-[#C5A572]/40 hover:shadow-lg transition-all">
-                                    <h3 className="text-xl font-serif font-bold text-[#5A4D41] mb-4">費用について</h3>
-                                    <p className="text-[#8D8070] font-sans mb-4">
-                                        こども矯正にかかる費用と支払い方法
-                                    </p>
-                                    <div className="flex items-center text-[#C5A572] font-sans font-semibold group-hover:translate-x-2 transition-transform">
-                                        詳しく見る <ArrowRight className="w-5 h-5 ml-2" />
-                                    </div>
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                {/* CTA */}
-                <section className="py-2 bg-gradient-to-r from-[#C5A572] to-[#B39562] text-white">
-                    <div className="container mx-auto px-4">
-                        <div className="max-w-4xl mx-auto text-center">
-                            <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6">
-                                お子さまに最適な装置を専門医がご提案
-                            </h2>
-                            <p className="text-xl mb-8 font-sans text-white/90">
-                                豊洲の歯医者として、症状・年齢・生活スタイルに合わせて最も効果的な装置をオーダーメイドでご提案します
-                            </p>
-                            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                                <Link
-                                    href="/#contact"
-                                    className="inline-flex items-center justify-center bg-white text-[#C5A572] px-8 py-4 rounded-full font-sans font-bold text-lg hover:bg-gray-50 transition-colors shadow-lg"
-                                >
-                                    無料相談を予約する
-                                    <ArrowRight className="w-6 h-6 ml-2" />
-                                </Link>
-                                <Link
-                                    href="tel:03-6204-2876"
-                                    className="inline-flex items-center justify-center bg-white/20 text-white px-8 py-4 rounded-full font-sans font-bold text-lg hover:bg-white/30 transition-colors border-2 border-white"
-                                >
-                                    電話で相談する
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
-                </section>
                 {/* 監修者情報 */}
                 <div className="container mx-auto px-4 pt-2 pb-16">
                     <AuthorBio />

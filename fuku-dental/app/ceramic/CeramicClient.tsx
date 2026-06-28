@@ -1,131 +1,92 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
 import { Header } from '../../components/Header';
 import { Footer } from '../../components/Footer';
 import { AuthorBio } from '../../components/AuthorBio';
 import { PageImage } from '@/components/PageImage';
-import { WaveBottom } from '../../components/Wave';
-import { CheckCircle2, ArrowRight, Calendar, Phone, Plus, Minus, ChevronRight } from 'lucide-react';
+import { RelatedPagesSection } from '@/components/RelatedPagesSection';
+import { ceramicRelatedPages } from '@/data/related-pages';
+import { ArrowRight, Calendar, Phone, ChevronRight } from 'lucide-react';
+import { FaqSection } from '@/components/FaqSection';
+import { WEB_RESERVATION_URL } from '@/lib/reservation';
 
 export default function CeramicPage() {
-    const [currentHeroSlide, setCurrentHeroSlide] = useState(0);
-
-    // Hero slider images
-    const heroImages = [
-        { imageId: "hero-slide1", alt: "豊洲の歯科 セラミック治療" },
-        { imageId: "hero-slide2", alt: "豊洲の歯医者 審美セラミック" },
-        { imageId: "hero-slide3", alt: "豊洲 セラミッククラウン・インレー治療" },
+    const caseStudies = [
+        {
+            title: "前歯のセラミック",
+            label: "Case.01",
+            patient: "セラミック修復",
+            beforeId: "ceramic-before",
+            afterId: "ceramic-after",
+            desc: "前歯をセラミックで修復し、自然で美しい見た目を取り戻しました。",
+        },
+        {
+            title: "全顎的な補綴治療",
+            label: "Case.02",
+            patient: "補綴治療",
+            beforeId: "zengaku-before",
+            afterId: "zengaku-after",
+            desc: "お口全体の見た目と噛み合わせのバランスを整え、自然な口元へ改善しました。",
+        },
     ];
-
-    // Hero image slider logic
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentHeroSlide((prev) => (prev + 1) % heroImages.length);
-        }, 5000); // Switch every 5 seconds
-
-        return () => clearInterval(interval);
-    }, [heroImages.length]);
 
     return (
         <div className="min-h-screen bg-white font-serif text-[#4A4A4A] overflow-x-hidden" style={{ wordBreak: 'normal', overflowWrap: 'anywhere' }}>
             <Header />
 
             <main>
-                {/* Hero Section - Image Slider + Text */}
-                <section className="relative w-full overflow-hidden bg-white">
-                    {/* Image Slider - Reduced height */}
-                    <div className="relative w-full" style={{ height: '50vh' }}>
-                        {heroImages.map((image, index) => (
-                            <div
-                                key={index}
-                                className={`absolute inset-0 transition-opacity duration-1000 ${
-                                    index === currentHeroSlide ? 'opacity-100' : 'opacity-0'
-                                }`}
-                            >
-                                <PageImage
-                                    path="/ceramic"
-                                    imageId={image.imageId}
-                                    alt={image.alt}
-                                    className="w-full h-full object-cover"
-                                />
-                                <div className="absolute inset-0 bg-black/20"></div>
+                {/* Hero Section */}
+                <section className="relative isolate min-h-[680px] overflow-hidden bg-[#FDFBF7] md:min-h-[760px] lg:min-h-[820px]">
+                    <picture className="absolute inset-0 -z-10 block h-full w-full">
+                        <source media="(max-width: 767px)" srcSet="/images/pages/ceramic/generated/hero-ceramic-05-baked-mobile-v2.webp" />
+                        <img
+                            src="/images/pages/ceramic/generated/hero-ceramic-05-baked-desktop.webp"
+                            alt="精密な技術で理想の白さを目指すセラミック治療"
+                            className="h-full w-full object-cover object-top md:object-center"
+                            loading="eager"
+                            decoding="async"
+                            fetchPriority="high"
+                        />
+                    </picture>
+                    <h1 className="sr-only">精密な技術で、理想の白さを。セラミック治療</h1>
+                    <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-[#FDFBF7]/95 via-[#FDFBF7]/60 to-transparent md:h-56" />
+                    <div className="relative z-10 mx-auto flex min-h-[680px] w-full max-w-7xl items-end justify-center px-5 pb-8 md:min-h-[760px] md:justify-start md:px-8 md:pb-40 lg:min-h-[820px] lg:pb-44">
+                        <div className="w-full max-w-xl">
+                            <div className="flex flex-col items-center justify-center gap-3 sm:flex-row md:justify-start">
+                                <a
+                                    href={WEB_RESERVATION_URL}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="group inline-flex min-h-14 w-full max-w-[320px] items-center justify-center gap-3 rounded-full bg-[#0a8a85] px-7 py-4 text-white shadow-xl shadow-[#0a8a85]/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#087a76] sm:w-auto"
+                                >
+                                    <Calendar size={22} className="flex-shrink-0" />
+                                    <span className="whitespace-nowrap text-base font-bold">24時間 WEB予約</span>
+                                    <ChevronRight size={20} className="transition-transform group-hover:translate-x-1" />
+                                </a>
+                                <a
+                                    href="tel:03-6204-2876"
+                                    className="inline-flex min-h-14 w-full max-w-[320px] items-center justify-center gap-2 rounded-full border border-[#C5A572]/40 bg-white/80 px-6 py-4 text-[#5A4D41] shadow-sm backdrop-blur transition-colors hover:bg-white sm:w-auto"
+                                >
+                                    <Phone size={20} className="flex-shrink-0 text-[#C5A572]" />
+                                    <span className="whitespace-nowrap text-base font-bold">電話で相談</span>
+                                </a>
                             </div>
-                        ))}
-
-                        {/* CTA Button - Bottom Right */}
-                        <div className="absolute -bottom-8 right-4 md:-bottom-10 md:right-8 z-20 animate-bounce-slow">
-                            <a
-                                href="#"
-                                className="group relative flex items-center gap-3 bg-gradient-to-r from-[#9B89B3] to-[#8B7AA3] hover:from-[#AB99C3] hover:to-[#9B89B3] text-white px-6 py-4 md:px-8 md:py-5 rounded-full shadow-2xl hover:shadow-[0_0_30px_rgba(155,137,179,0.6)] transition-all duration-300 transform hover:scale-105"
-                            >
-                                <div className="flex items-center gap-2">
-                                    <Calendar size={24} className="group-hover:rotate-12 transition-transform" />
-                                    <div className="flex flex-col items-start">
-                                        <span className="text-xs font-medium opacity-90">24時間受付</span>
-                                        <span className="text-base md:text-lg font-bold whitespace-nowrap">WEB予約</span>
-                                    </div>
-                                </div>
-                                <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center group-hover:translate-x-1 transition-transform">
-                                    <ChevronRight size={20} />
-                                </div>
-
-                                {/* Pulsing ring effect */}
-                                <div className="absolute inset-0 rounded-full bg-[#9B89B3] opacity-0 group-hover:opacity-20 group-hover:scale-110 transition-all duration-300"></div>
-                            </a>
-                        </div>
-                    </div>
-
-                    {/* Text Area - Closer to image */}
-                    <div className="relative bg-white flex flex-col items-center justify-start px-4 pt-8 pb-6 md:pb-8">
-                        <div className="max-w-7xl w-full text-center flex items-center justify-center">
-                            <h1 className="font-bold leading-tight font-serif mb-0">
-                                <div className="relative inline-block mb-2 md:mb-4 px-2 md:px-8">
-                                    <div className="relative z-10 py-2 md:py-4">
-                                        <span className="flex flex-wrap items-center justify-center gap-x-1 md:gap-x-3 text-[7vw] sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif"
-                                              style={{
-                                                  fontWeight: '900',
-                                                  letterSpacing: '0.05em'
-                                              }}>
-                                            <span className="inline-block text-[#2d2d2d]">
-                                                一生ものの、
-                                            </span>
-                                            <span className="inline-block bg-gradient-to-br from-[#D4AF37] via-[#F4E3B2] to-[#C5A028] bg-clip-text text-transparent drop-shadow-lg transform hover:scale-105 transition-all duration-300"
-                                                  style={{
-                                                      WebkitBackgroundClip: 'text',
-                                                      WebkitTextFillColor: 'transparent'
-                                                  }}>
-                                                <span className="text-[120%]">美しい歯</span><span className="text-[85%]">を</span>
-                                            </span>
-                                        </span>
-                                    </div>
-                                    <div className="absolute -inset-4 bg-gradient-to-r from-[#D4AF37]/10 via-[#F4E3B2]/20 to-[#D4AF37]/10 rounded-3xl blur-2xl -z-10 animate-pulse"></div>
-                                    <div className="absolute -inset-2 bg-gradient-to-r from-transparent via-[#D4AF37]/5 to-transparent rounded-2xl -z-10"></div>
-                                </div>
-                                <span className="block text-[5.5vw] sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-[#5A4D41] mt-1 md:mt-4 mb-0 pb-0 leading-none font-semibold font-serif">
-                                    審美性と機能性のセラミック治療
-                                </span>
-                                <span className="block text-sm md:text-base text-[#8D8070] mt-3 md:mt-5 font-normal tracking-normal">
-                                    豊洲駅徒歩2分・Fデンタルオフィス 豊洲プライムスクエア院のセラミック専門治療
-                                </span>
-                            </h1>
                         </div>
                     </div>
                 </section>
 
                 {/* Concept Message Section */}
-                <section className="pt-6 md:pt-2 pb-2 md:pb-2 bg-[#FDFBF7] relative overflow-hidden">
-                    <div className="absolute inset-0 opacity-5">
-                        <div className="absolute inset-0 bg-[radial-gradient(#C5A572_1px,transparent_1px)] [background-size:20px_20px]"></div>
-                    </div>
-                    <div className="container mx-auto px-4 relative z-10 text-center">
-                        <p className="text-[#C5A572] tracking-[0.4em] font-medium mb-6 text-xs md:text-sm uppercase font-serif">
-                            FEATURES OF PREMIUM CERAMIC
+                <section className="bg-[#FDFBF7] px-4 py-10 md:py-14">
+                    <div className="mx-auto max-w-3xl text-center">
+                        <p className="mb-3 text-xs font-bold tracking-[0.18em] text-[#C5A572] md:text-sm">
+                            CERAMIC TREATMENT
                         </p>
-                        <h2 className="text-2xl md:text-3xl font-medium text-[#5A4D41] font-serif leading-loose tracking-widest">
-                            Fデンタルオフィス 豊洲プライムスクエア院のセラミック治療は<br />
-                            これまでのものと違います
+                        <h2 className="font-serif text-2xl font-semibold leading-relaxed text-[#5A4D41] md:text-3xl">
+                            精密に仕上げるセラミック治療
                         </h2>
+                        <p className="mx-auto mt-4 max-w-2xl text-sm leading-8 text-[#8D8070] md:text-base">
+                            見た目の美しさと噛み合わせまで考え、自然に長く使える歯を目指します。
+                        </p>
                     </div>
                 </section>
 
@@ -137,41 +98,44 @@ export default function CeramicPage() {
                             <h2 className="text-3xl md:text-4xl font-bold text-[#5A4D41] font-serif">症例紹介</h2>
                         </div>
 
-                        <div className="grid md:grid-cols-3 gap-8">
-                            {[
-                                {
-                                    title: "Case.01",
-                                    desc: "前歯の変色と隙間を、ラミネートベニアで自然な白さと整った歯並びに改善しました。",
-                                    imageId: "case1"
-                                },
-                                {
-                                    title: "Case.02",
-                                    desc: "銀歯をオールセラミッククラウンに交換し、透明感のある美しい口元を実現しました。",
-                                    imageId: "case2"
-                                },
-                                {
-                                    title: "Case.03",
-                                    desc: "古くなった被せ物をジルコニアセラミックでやり直し、歯茎の黒ずみも解消しました。",
-                                    imageId: "case3"
-                                }
-                            ].map((item, index) => (
-                                <div key={index} className="group cursor-pointer">
-                                    <div className="relative overflow-hidden rounded-2xl mb-6 shadow-lg">
-                                        <PageImage
-                                            path="/ceramic"
-                                            imageId={item.imageId}
-                                            alt={item.title}
-                                            className="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-700"
-                                        />
-                                        <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500"></div>
-                                        <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-4 py-1 rounded-full">
-                                            <span className="text-[#C5A572] font-serif font-bold">{item.title}</span>
+                        <div className="grid gap-8 md:grid-cols-2">
+                            {caseStudies.map((item) => (
+                                <div key={item.label} className="rounded-2xl border border-[#E6E3DC] bg-[#FAFAF7] p-5 shadow-sm transition-shadow duration-300 hover:shadow-lg md:p-6">
+                                    <div className="mb-5 border-b border-[#E6E3DC] pb-4 text-center">
+                                        <p className="mb-1 text-xs font-bold tracking-[0.22em] text-[#C5A572]">{item.label}</p>
+                                        <h3 className="font-serif text-xl font-bold text-[#5A4D41] md:text-2xl">
+                                            {item.title}
+                                        </h3>
+                                        <p className="mt-1 text-xs text-[#8D8070]">{item.patient}</p>
+                                    </div>
+
+                                    <div className="grid gap-4 sm:grid-cols-2">
+                                        <div>
+                                            <span className="mb-2 inline-block rounded bg-[#F0F0EE] px-3 py-1 text-xs font-medium text-[#8D8070]">
+                                                Before
+                                            </span>
+                                            <PageImage
+                                                path="/homepage"
+                                                imageId={item.beforeId}
+                                                alt={`${item.title} - Before`}
+                                                className="w-full aspect-[3/2] object-contain bg-[#F7F2EA] rounded-xl"
+                                            />
+                                        </div>
+
+                                        <div>
+                                            <span className="mb-2 inline-block rounded bg-[#C5A572] px-3 py-1 text-xs font-medium text-white">
+                                                After
+                                            </span>
+                                            <PageImage
+                                                path="/homepage"
+                                                imageId={item.afterId}
+                                                alt={`${item.title} - After`}
+                                                className="w-full aspect-[3/2] object-contain bg-[#F7F2EA] rounded-xl"
+                                            />
                                         </div>
                                     </div>
-                                    <h3 className="text-lg font-bold text-[#5A4D41] mb-3 group-hover:text-[#C5A572] transition-colors">
-                                        {item.desc.substring(0, 15)}...
-                                    </h3>
-                                    <p className="text-[#8D8070] text-sm leading-relaxed">
+
+                                    <p className="mt-5 text-sm leading-relaxed text-[#8D8070]">
                                         {item.desc}
                                     </p>
                                 </div>
@@ -179,14 +143,14 @@ export default function CeramicPage() {
                         </div>
 
                         <div className="text-center mt-12">
-                            <a href="#" className="inline-flex items-center gap-2 text-[#C5A572] hover:text-[#B59562] transition-colors border-b border-[#C5A572] pb-1 font-medium">
+                            <a href="/case-studies#ceramic" className="inline-flex items-center gap-2 text-[#C5A572] hover:text-[#B59562] transition-colors border-b border-[#C5A572] pb-1 font-medium">
                                 もっと症例を見る <ArrowRight size={16} />
                             </a>
                         </div>
 
                         {/* Web予約バナー */}
                         <div className="mt-12">
-                            <a href="https://apo-toolboxes.stransa.co.jp/user/web/babordc4ba29b/reservations" target="_blank" rel="noopener noreferrer" className="block">
+                            <a href={WEB_RESERVATION_URL} target="_blank" rel="noopener noreferrer" className="block">
                                 <img
                                     src="/images/web-reservation-banner.webp"
                                     alt="Web予約" loading="lazy" decoding="async" className="w-full max-w-2xl mx-auto rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
@@ -196,107 +160,77 @@ export default function CeramicPage() {
                     </div>
                 </section>
 
-                {/* Features (CHARM) Section - Refined Zig-Zag */}
-                <section className="pt-8 pb-8 bg-white overflow-hidden">
-                    <div className="container mx-auto px-4">
-                        <div className="text-center mb-12">
-                            <span className="text-[#C5A572] font-bold tracking-[0.2em] text-sm block mb-2">FEATURES</span>
-                            <h2 className="text-4xl md:text-5xl font-bold text-[#5A4D41] font-serif">
-                                当院<span className="text-[0.75em]">の</span><span className="text-[#C5A572]">特徴</span>
+                {/* Features Section - top page layout */}
+                <section className="relative overflow-hidden px-5 py-24 md:py-32 bg-[#FDFBF7]">
+                    <div className="max-w-6xl mx-auto">
+                        <div className="text-center mb-16 md:mb-20">
+                            <p className="text-[11px] tracking-[0.3em] mb-4 text-[#C5A572]">FEATURES</p>
+                            <h2 className="font-serif text-3xl md:text-4xl font-light text-[#5A4D41]">
+                                当院の特徴
                             </h2>
                         </div>
 
-                        <div className="space-y-12 max-w-5xl mx-auto">
-                            {[
+                        <div className="space-y-20 md:space-y-28">
+	                            {[
+	                                {
+	                                    no: "01",
+	                                    label: "Comprehensive Care",
+	                                    title: "あらゆる症例に対応",
+	                                    highlight: "総合的な審美治療",
+	                                    body: "矯正治療・ホワイトニング・虫歯治療などを当院で一貫して行えるため、歯並び・色・形・噛み合わせまで総合的に整え、より自然で美しい仕上がりを目指せます。",
+	                                    imageId: "feature4",
+	                                    imageAlt: "セラミック治療 矯正治療 ホワイトニング 虫歯治療まで総合対応",
+	                                },
+	                                {
+	                                    no: "02",
+	                                    label: "Expert Technician",
+	                                    title: "熟練技工士との連携",
+	                                    highlight: "精密な仕上がり",
+	                                    body: "審美歯科に精通した熟練の歯科技工士と連携し、色・形・透明感まで細かく共有して、精密で美しいセラミックを製作します。歯科医師と技工士が密に連携し、オーダーメイドの高品質な仕上がりを目指します。",
+	                                    imageId: "feature5",
+	                                    imageAlt: "セラミック治療 熟練技工士との連携",
+	                                },
                                 {
-                                    id: "01",
-                                    title: "Natural Beauty",
-                                    highlight: "天然歯のような美しさ",
-                                    summary: "セラミックは<span class='font-bold bg-yellow-100'>天然歯に近い透明感と光沢</span>を持ち、周囲の歯と自然に調和します。",
-                                    details: [
-                                        "豊富な色調から、患者様の歯に合った色を選択できるため、<span class='text-[#395b45] font-bold'>見た目が自然で美しい仕上がり</span>になります。また、<span class='font-bold bg-yellow-100'>変色しにくい</span>特性により、<span class='text-[#395b45] font-bold'>長期間美しさをキープ</span>できます。"
-                                    ],
-                                    imageId: "feature1"
-                                },
-                                {
-                                    id: "02",
-                                    title: "Expert Technician",
-                                    highlight: "熟練技工士との連携",
-                                    summary: "審美歯科に精通した<span class='font-bold bg-yellow-100'>熟練の歯科技工士</span>と連携し、精密で美しいセラミックを製作します。",
-                                    details: [
-                                        "豊富な経験を持つ技工士が<span class='font-bold bg-yellow-100'>オーダーメイド</span>で製作し、歯科医師と技工士の密な連携による<span class='text-[#395b45] font-bold'>高品質な仕上がり</span>を実現します。"
-                                    ],
-                                    imageId: "feature2"
-                                },
-                                {
-                                    id: "03",
-                                    title: "Digital Impression",
-                                    highlight: "デジタル印象で負担軽減",
-                                    summary: "従来のシリコン材料による歯型取りを大幅に削減。<span class='font-bold bg-yellow-100'>口腔内スキャナー</span>で快適に型取りを行います。",
-                                    details: [
-                                        "<span class='text-[#395b45] font-bold'>不快な歯型取りの時間を大幅に短縮</span>し、<span class='font-bold bg-yellow-100'>高精度なデジタルデータ</span>で<span class='text-[#395b45] font-bold'>精密な被せ物を製作</span>できます。"
-                                    ],
-                                    imageId: "feature3"
-                                },
-                                {
-                                    id: "04",
-                                    title: "Comprehensive Care",
-                                    highlight: "総合治療でやり直しを防ぐ",
-                                    summary: "<span class='font-bold bg-yellow-100'>むし歯・歯周病・噛み合わせ</span>を総合的に診断し、<span class='text-[#395b45] font-bold'>長持ちする治療</span>を実現します。",
-                                    details: [
-                                        "<span class='font-bold bg-yellow-100'>土台となる歯や歯周組織を整えてから治療</span>することで、<span class='text-[#395b45] font-bold'>将来的なやり直しを防ぎ、長期的な健康</span>を守ります。"
-                                    ],
-                                    imageId: "feature4"
-                                },
-                                {
-                                    id: "05",
-                                    title: "Patient First",
-                                    highlight: "ご希望に合わせた治療",
-                                    summary: "患者様のご希望を丁寧にお聞きし、<span class='text-[#395b45] font-bold'>最適な治療プラン</span>をご提案します。",
-                                    details: [
-                                        "<span class='font-bold bg-yellow-100'>保険診療と自費診療の違いやメリット・デメリット</span>を分かりやすくご説明し、<span class='text-[#395b45] font-bold'>押し売りは一切せず、患者様ご自身で納得して選択できる環境</span>を提供します。"
-                                    ],
-                                    imageId: "feature5"
-                                }
-                            ].map((feature, index) => (
-                                <div key={feature.id} className="flex flex-col mb-16 lg:mb-24 relative">
-                                    {/* Title Section with Number */}
-                                    <div className="relative">
-                                        {/* Large Background Number */}
-                                        <span className="text-8xl font-serif text-[#C5A572]/15 absolute -top-16 -left-8 z-0 select-none font-bold" style={{ letterSpacing: '-0.05em' }}>
-                                            {feature.id}
-                                        </span>
+                                    no: "03",
+                                    label: "Digital Impression",
+                                    title: "デジタル印象で負担軽減",
+                                    highlight: "快適な型取り",
+	                                    body: "従来のシリコン材料による歯型取りを大幅に削減し、口腔内スキャナーで快適に型取りを行います。不快な時間を短縮し、高精度なデジタルデータで精密な被せ物を製作できます。",
+	                                    imageId: "feature1",
+	                                    imageAlt: "セラミック治療 デジタル印象",
+	                                },
+	                            ].map((feature, index) => (
+                                <div
+                                    key={feature.no}
+                                    className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-10 lg:gap-16 items-start group`}
+                                >
+                                    <div className="hidden lg:block lg:w-1/2 relative">
+                                        <div className="relative rounded-[32px] overflow-hidden aspect-[16/10] transition-transform duration-700 ease-out group-hover:scale-[1.02] border border-[#E6E3DC]">
+                                            <PageImage path="/homepage" imageId={feature.imageId} alt={feature.imageAlt} className="w-full h-full object-cover" />
+                                        </div>
+                                        <div className={`absolute -bottom-8 ${index % 2 === 0 ? '-left-8' : '-right-8'} w-32 h-32 rounded-full blur-2xl -z-10 bg-[#C5A572]/20`} />
+                                    </div>
 
-                                        {/* Title */}
-                                        <div className="flex items-start justify-between gap-4">
-                                            <h3 className="text-3xl md:text-4xl font-bold text-[#5A4D41] leading-tight tracking-wide font-serif inline-block relative">
-                                                <span dangerouslySetInnerHTML={{ __html: feature.highlight.replace(/(の|を|に|が|は|と|へ|から|より|で|や)/g, '<span class="text-[0.75em]">$1</span>') }} />
-                                                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#C5A572] via-[#C5A572] to-transparent"></div>
+                                    <div className="w-full lg:w-1/2 flex flex-col gap-6 relative">
+                                        <div className="relative">
+                                            <span className="font-serif absolute -top-12 -left-2 select-none pointer-events-none text-[7rem] text-[#C5A572]/10 font-semibold leading-none tracking-[-0.05em]">
+                                                {feature.no}
+                                            </span>
+                                            <p className="text-[11px] tracking-[0.25em] mb-3 relative text-[#C5A572]">{feature.label}</p>
+                                            <h3 className="font-serif relative text-[#5A4D41]">
+                                                <span className="block text-base font-medium mb-2 tracking-widest text-[#8D8070]">{feature.highlight}</span>
+                                                <span className="block text-3xl md:text-4xl lg:text-5xl leading-[1.3]">{feature.title}</span>
+                                                <span className="block w-16 h-px mt-5 bg-[#C5A572]" />
                                             </h3>
                                         </div>
-                                    </div>
 
-                                    {/* Image */}
-                                    <div className="w-full relative group mb-8">
-                                        <div className="relative rounded-[30px] overflow-hidden shadow-2xl border-4 border-white transform transition-all duration-500 group-hover:shadow-[0_20px_60px_rgba(197,165,114,0.3)]">
-                                            <PageImage
-                                                path="/ceramic"
-                                                imageId={feature.imageId}
-                                                alt={feature.highlight}
-                                                className="w-full h-auto aspect-[16/9] object-cover transition-transform duration-700 group-hover:scale-105"
-                                            />
-                                            <div className="absolute inset-0 bg-gradient-to-t from-[#C5A572]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                        <div className="w-full lg:hidden">
+                                            <div className="rounded-[24px] overflow-hidden aspect-[16/10] border border-[#E6E3DC]">
+                                                <PageImage path="/homepage" imageId={feature.imageId} alt={feature.imageAlt} className="w-full h-full object-cover" />
+                                            </div>
                                         </div>
-                                    </div>
 
-                                    {/* Text Content */}
-                                    <div>
-                                        <p className="text-base md:text-lg text-[#5A4D41] leading-loose font-serif">
-                                            <span dangerouslySetInnerHTML={{ __html: feature.summary }} />
-                                            {feature.details.map((detail, i) => (
-                                                <span key={i} dangerouslySetInnerHTML={{ __html: detail }} />
-                                            ))}
-                                        </p>
+                                        <p className="text-sm md:text-base leading-[2.1] text-[#8D8070]">{feature.body}</p>
                                     </div>
                                 </div>
                             ))}
@@ -537,7 +471,7 @@ export default function CeramicPage() {
                                     <div className="space-y-4">
                                         {[
                                             { name: "e-max", price: "¥77,000" },
-                                            { name: "ゴールド", price: "¥110,000" }
+                                            { name: "ゴールド", price: "¥132,000" }
                                         ].map((item, index) => (
                                             <div key={index} className="flex justify-between items-center border-b border-gray-100 pb-3 last:border-0">
                                                 <span className="font-medium text-[#5A4D41]">{item.name}</span>
@@ -555,7 +489,7 @@ export default function CeramicPage() {
                                     </h3>
                                     <div className="space-y-4">
                                         {[
-                                            { name: "プレミアムセラミック（PFZ）", price: "¥176,000" },
+                                            { name: "ジルコニアセラミック", price: "¥176,000" },
                                             { name: "ジルコニア", price: "¥143,000" },
                                             { name: "ハイブリッド", price: "¥143,000" },
                                             { name: "ゴールド", price: "¥220,000" }
@@ -601,15 +535,9 @@ export default function CeramicPage() {
                 </section>
 
                 {/* FAQ Section */}
-                <section className="pt-8 pb-8 bg-[#FDFBF7]">
-                    <div className="container mx-auto px-4 max-w-4xl">
-                        <div className="text-center mb-16">
-                            <p className="text-[#C5A572] tracking-[0.2em] font-bold mb-2">Q&A</p>
-                            <h2 className="text-3xl md:text-4xl font-bold text-[#5A4D41] font-serif">よくあるご質問</h2>
-                        </div>
-
-                        <div className="space-y-6">
-                            {[
+                <FaqSection
+                  title="よくあるご質問"
+                  items={[
                                 {
                                     q: "保険の白い歯（CAD/CAM冠）と何が違いますか？",
                                     a: "保険の白い歯はプラスチックを含んでいるため、経年劣化で変色したり、強度が低く割れやすかったりします。セラミックは変色せず、汚れも付きにくく、美しさと耐久性に優れています。"
@@ -622,122 +550,23 @@ export default function CeramicPage() {
                                     q: "保証はありますか？",
                                     a: "当院では、自費診療の詰め物・被せ物に保証期間を設けています（定期検診を受けていただくことが条件となります）。詳しくはスタッフにお尋ねください。"
                                 }
-                            ].map((faq, index) => (
-                                <div key={index} className="border-b border-[#F0EAE0] pb-6">
-                                    <h3 className="text-lg font-bold text-[#5A4D41] mb-3 flex items-start gap-4">
-                                        <span className="text-[#C5A572] font-serif italic text-2xl leading-none">Q.</span>
-                                        {faq.q}
-                                    </h3>
-                                    <div className="pl-10">
-                                        <p className="text-[#8D8070] leading-relaxed">{faq.a}</p>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </section>
+                            ]}
+                />
+
+                {/* セラミック治療について詳しく知る */}
+                <RelatedPagesSection
+                    title="セラミック治療について詳しく知る"
+                    description="各トピックの詳細ページで、より深く理解していただけます"
+                    items={ceramicRelatedPages}
+                    currentPath="/ceramic"
+                />
 
                 {/* 監修者情報 */}
                 <div className="container mx-auto px-4 pt-2 pb-16">
                     <AuthorBio />
                 </div>
 
-                {/* セラミック治療について詳しく知る */}
-                <section className="py-2 bg-white">
-                    <div className="container mx-auto px-4 max-w-6xl">
-                        <div className="text-center mb-16">
-                            <p className="text-[#C5A572] tracking-[0.2em] font-bold mb-2 uppercase">MORE INFORMATION</p>
-                            <h2 className="text-3xl md:text-4xl font-bold text-[#5A4D41] font-serif mb-4">
-                                セラミック治療について詳しく知る
-                            </h2>
-                            <p className="text-[#8D8070]">
-                                各トピックの詳細ページで、より深く理解していただけます
-                            </p>
-                        </div>
 
-                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                            {[
-                                {
-                                    title: "セラミックの種類",
-                                    description: "e-max、ジルコニア、ジルコニアセラミックなど、各種類の特徴を詳しく解説",
-                                    link: "/ceramic/types",
-                                    icon: "📋"
-                                },
-                                {
-                                    title: "料金・費用",
-                                    description: "詳しい料金表と、お支払い方法、医療費控除について",
-                                    link: "/ceramic/cost",
-                                    icon: "💰"
-                                },
-                                {
-                                    title: "セラミックvs銀歯",
-                                    description: "セラミックと銀歯の違いを徹底比較。メリット・デメリットを解説",
-                                    link: "/ceramic/vs-metal",
-                                    icon: "⚖️"
-                                },
-                                {
-                                    title: "寿命・耐久性",
-                                    description: "セラミックはどのくらい持つ？長持ちさせるためのケア方法",
-                                    link: "/ceramic/longevity",
-                                    icon: "⏱️"
-                                },
-                                {
-                                    title: "症例紹介",
-                                    description: "実際の治療例をビフォーアフター写真とともにご紹介",
-                                    link: "/ceramic/case-studies",
-                                    icon: "📸"
-                                }
-                            ].map((item, index) => (
-                                <a
-                                    key={index}
-                                    href={item.link}
-                                    className="group bg-gradient-to-br from-[#FDFBF7] to-white rounded-3xl p-8 shadow-lg border-2 border-[#C5A572]/10 hover:border-[#C5A572] hover:shadow-xl transition-all transform hover:-translate-y-1"
-                                >
-                                    <div className="text-4xl mb-4">{item.icon}</div>
-                                    <h3 className="text-xl font-bold text-[#5A4D41] mb-3 font-serif group-hover:text-[#C5A572] transition-colors">
-                                        {item.title}
-                                    </h3>
-                                    <p className="text-[#8D8070] text-sm leading-relaxed mb-4">
-                                        {item.description}
-                                    </p>
-                                    <div className="flex items-center gap-2 text-[#C5A572] font-bold text-sm group-hover:gap-3 transition-all">
-                                        <span>詳しく見る</span>
-                                        <ArrowRight size={16} />
-                                    </div>
-                                </a>
-                            ))}
-                        </div>
-                    </div>
-                </section>
-
-                {/* CTA Section */}
-                <section className="py-2 bg-[#5A4D41] text-white">
-                    <div className="container mx-auto px-4 text-center">
-                        <h2 className="text-3xl md:text-4xl font-bold mb-8 font-serif">
-                            まずは一度、<br className="md:hidden" />お気軽にご相談ください
-                        </h2>
-                        <p className="text-[#F0EAE0] mb-12">
-                            患者様一人ひとりに合わせた最適な治療プランをご提案いたします。
-                        </p>
-
-                        <div className="flex flex-col sm:flex-row gap-6 justify-center max-w-2xl mx-auto">
-                            <button className="bg-[#C5A572] hover:bg-[#B59562] text-white px-8 py-5 rounded-full font-bold shadow-lg transition-all flex items-center justify-center gap-3 text-lg flex-1 group">
-                                <Calendar className="group-hover:rotate-12 transition" />
-                                24時間 WEB予約
-                            </button>
-                            <button className="bg-transparent border-2 border-[#C5A572] hover:bg-[#C5A572]/10 text-white px-8 py-5 rounded-full font-bold transition-all flex items-center justify-center gap-3 text-lg flex-1">
-                                <Phone className="text-[#C5A572]" />
-                                03-6204-2876
-                            </button>
-                        </div>
-
-                        <div className="mt-12">
-                            <a href="/price" className="inline-flex items-center gap-2 text-[#C5A572] hover:text-[#E5C592] transition-colors border-b border-[#C5A572] pb-1">
-                                料金表を見る <ArrowRight size={16} />
-                            </a>
-                        </div>
-                    </div>
-                </section>
             </main>
 
             <Footer />

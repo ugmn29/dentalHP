@@ -3,8 +3,8 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
 import { KidsOrthoImage } from '@/components/KidsOrthoImage';
-import { PageImage } from '@/components/PageImage';
-import { ArrowRight, CheckCircle, AlertCircle, Calendar, Heart, TrendingUp, Clock, DollarSign, Users, Wrench, Home, ChevronRight } from 'lucide-react';
+import { ApplianceDetailHero } from '@/components/kidsortho/ApplianceDetailHero';
+import { CheckCircle, AlertCircle, Home, ChevronRight } from 'lucide-react';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 
@@ -50,25 +50,22 @@ export default function FunctionalAppliancePage() {
 
             <main className="bg-[#FDFBF7]" style={{ fontFamily: '"游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", sans-serif' }}>
                 {/* Hero Section */}
-                <section className="bg-[#FDFBF7] py-6 md:py-6">
-                    <div className="container mx-auto px-4">
-                        <div className="max-w-4xl mx-auto">
-                            <div className="mb-6">
-                                <p className="text-[#C5A572] font-bold text-sm mb-2">機能的矯正装置</p>
-                                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#5A4D41] mb-3" style={{ fontFamily: '"游明朝", "Yu Mincho", YuMincho, "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", serif' }}>
-                                    機能的矯正装置（バイオネーター・FKO）｜効果・費用・治療期間を詳しく解説
-                                </h1>
-                                <PageImage path="/kidsortho/appliances/functional" alt="機能的矯正装置の効果・費用・治療期間" />
-                                <div className="w-16 h-0.5 bg-[#C5A572] mb-6"></div>
-                            </div>
-
-
-                            <p className="text-base md:text-lg leading-loose text-[#8D8070] font-sans mt-6 mb-8">
-                                バイオネーター・FKOなど、筋肉の力を利用して顎の成長をコントロールし、骨格的な問題を改善する装置です
-                            </p>
-                        </div>
-                    </div>
-                </section>
+                <ApplianceDetailHero
+                    label="機能的矯正装置"
+                    title="バイオネーター・FKO"
+                    accent="顎の成長バランスを整える装置"
+                    lead="バイオネーター・FKOなど、筋肉の力を利用して顎の成長をコントロールし、骨格的な問題を改善する装置です。"
+                    imagePath="/kidsortho/appliances/functional"
+                    imageAlt="機能的矯正装置の効果・費用・治療期間"
+                    current="機能的矯正装置"
+                    facts={[
+                        { label: '装置タイプ', value: '取り外し式' },
+                        { label: '目的', value: '顎の誘導' },
+                        { label: '対象', value: '成長期向け' },
+                        { label: '特徴', value: '筋機能を活用' },
+                    ]}
+                    point="下顎の位置や口まわりの筋肉の力を利用し、顎の成長方向をコントロールします。"
+                />
 
                 {/* 機能的矯正装置とは */}
                 <section className="py-2 bg-[#FDFBF7]">
@@ -545,39 +542,7 @@ export default function FunctionalAppliancePage() {
                     </div>
                 </section>
 
-                {/* CTA Section */}
-                <section className="py-2 bg-[#FDFBF7]">
-                    <div className="container mx-auto px-4">
-                        <div className="max-w-4xl mx-auto">
-                            <div className="text-center mb-8">
-                                <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#5A4D41] mb-4">
-                                    お子さまの顎のバランスを早期に整えましょう
-                                </h2>
-                                <p className="text-lg md:text-xl text-[#8D8070] leading-loose font-sans">
-                                    機能的矯正装置が適しているか、まずは無料相談でご確認ください
-                                </p>
-                            </div>
 
-                            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-                                <Link
-                                    href="/#contact"
-                                    className="inline-flex items-center justify-center gap-2 bg-[#C5A572] hover:bg-[#B39562] text-white font-bold py-4 px-8 rounded-full transition-all transform hover:scale-105 shadow-lg"
-                                >
-                                    <Calendar size={20} />
-                                    <span>無料カウンセリング予約</span>
-                                    <ArrowRight size={20} />
-                                </Link>
-                                <Link
-                                    href="/kidsortho/appliances"
-                                    className="inline-flex items-center justify-center gap-2 bg-[#5A4D41] hover:bg-[#4A3D31] text-white font-bold py-4 px-8 rounded-full transition-all border-2 border-[#5A4D41]"
-                                >
-                                    <span>装置一覧に戻る</span>
-                                    <ArrowRight size={20} />
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
-                </section>
                 {/* 監修者情報 */}
                 <div className="container mx-auto px-4 pt-2 pb-16">
                     <AuthorBio />

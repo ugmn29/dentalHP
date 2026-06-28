@@ -3,25 +3,28 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { Phone, Calendar, Menu, X, ChevronRight, ChevronUp, ChevronDown } from 'lucide-react';
+import { WEB_RESERVATION_URL } from '@/lib/reservation';
 
 export const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isMobileTreatmentOpen, setIsMobileTreatmentOpen] = useState(false);
     const [isMobileConcernsOpen, setIsMobileConcernsOpen] = useState(false);
+    const menuFontStyle: React.CSSProperties = {
+        fontFamily: 'var(--font-shippori-mincho), var(--font-noto-serif-jp), "Shippori Mincho", "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", "YuMincho", serif',
+    };
 
     const treatmentMenuItems = [
         { name: "こども矯正", cat: "kids", link: "/kidsortho" },
-        { name: "０歳からの口育", cat: "kids", link: "/oral-education" },
-        { name: "こども歯科・予防", cat: "kids", link: "/kids-preventive" },
+        { name: "0歳からのこども歯科・予防", cat: "kids", link: "/oral-education" },
         { name: "セラミック治療", cat: "aesthetic", link: "/ceramic" },
         { name: "マウスピース矯正", cat: "ortho", link: "/mouthpiece" },
-        { name: "矯正歯科", cat: "ortho", link: "/orthodontics" },
+        { name: "ワイヤー矯正", cat: "ortho", link: "/orthodontics" },
         { name: "インプラント", cat: "general", link: "/implant" },
         { name: "ホワイトニング", cat: "aesthetic", link: "/whitening" },
         { name: "予防歯科", cat: "general", link: "/preventive" },
         { name: "口臭治療", cat: "general", link: "/general/bad-breath" },
         { name: "むしば治療", cat: "general", link: "/cavity" },
-        { name: "根管治療", cat: "general", link: "/root-canal" },
+        { name: "精密根管治療", cat: "general", link: "/root-canal" },
         // 一旦非表示（復活時はコメント解除）
         // { name: "歯周病治療", cat: "general", link: "/periodontal" },
         // { name: "親知らず抜歯", cat: "surgery", link: "/wisdom" },
@@ -46,42 +49,21 @@ export const Header = () => {
     return (
         <>
             <header className="bg-white/95 backdrop-blur-sm shadow-sm z-40 border-b border-[#E8E0D4] w-full overflow-x-hidden">
-                <div className="container mx-auto px-4 py-2 md:py-3 flex justify-between items-center max-w-full">
+                <div className="container mx-auto px-3 sm:px-4 py-2 md:py-3 flex items-center max-w-full">
                     {/* Logo Area */}
-                    <div className="flex min-w-0 items-center gap-2 md:gap-3">
-                        <Link href="/" className="flex min-w-0 items-center gap-2 md:gap-3">
-                            <div className="w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden shadow-md border-2 border-white cursor-pointer flex-shrink-0">
+                    <div className="flex min-w-0 flex-1 items-center gap-2 md:gap-3">
+                        <Link href="/" className="flex min-w-0 flex-1 items-center gap-2 md:gap-3">
+                            <div className="w-9 h-9 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full overflow-hidden shadow-md border-2 border-white cursor-pointer flex-shrink-0">
                                 <img src="/icon.png" alt="Fデンタルオフィス 豊洲プライムスクエア院 ロゴ" loading="eager" decoding="async" fetchPriority="high" className="w-full h-full object-cover" />
                             </div>
-                            <div className="min-w-0 pr-12 lg:pr-0">
+                            <div className="min-w-0 flex-1 pr-12 lg:pr-0">
                                 <p className="text-[10px] md:text-xs text-[#8D8070] font-bold leading-none mb-0.5">豊洲の歯医者</p>
-                                <h1 className="max-w-[calc(100vw-8.5rem)] text-[12px] sm:text-sm md:text-lg font-bold text-[#5A4D41] leading-tight tracking-wide md:max-w-none md:whitespace-nowrap" style={{ fontFamily: 'Georgia, "Yu Mincho", "Hiragino Mincho ProN", serif' }}>
+                                <h1 className="max-w-[calc(100vw-7.5rem)] truncate whitespace-nowrap text-[11px] sm:text-sm md:max-w-none md:text-lg font-bold text-[#5A4D41] leading-tight tracking-wide" style={{ fontFamily: 'Georgia, "Yu Mincho", "Hiragino Mincho ProN", serif' }}>
                                     Fデンタルオフィス 豊洲プライムスクエア院
                                 </h1>
                             </div>
                         </Link>
                     </div>
-
-                    {/* Desktop Nav (Hidden in Mobile) */}
-                    <nav className="hidden lg:flex items-center gap-5 text-xs xl:text-sm font-bold text-[#8D8070]">
-                        <Link href="/" className="hover:text-[#395b45] transition relative group py-2">ホーム</Link>
-                        <a href="#" className="hover:text-[#395b45] transition relative group py-2">初めての方へ</a>
-                        <Link href="/case-studies" className="hover:text-[#395b45] transition relative group py-2">症例紹介</Link>
-                        <Link href="/blog" className="hover:text-[#395b45] transition relative group py-2">ブログ・お知らせ</Link>
-                        <Link href="/facilities" className="hover:text-[#395b45] transition relative group py-2">院内設備</Link>
-                        <a href="#" className="hover:text-[#395b45] transition relative group py-2">ドクター紹介</a>
-                        <Link href="/price" className="hover:text-[#395b45] transition relative group py-2">料金表</Link>
-                        <Link href="/recruit" className="hover:text-[#395b45] transition relative group py-2">採用情報</Link>
-
-                        <div className="h-4 w-[1px] bg-gray-300 mx-1"></div>
-
-                        <Link href="/kidsortho" className="text-[#395b45] flex items-center px-4 py-2 bg-[#F6F2EA] rounded-full transition hover:bg-[#EFE7DA] border border-[#D8CDBD] shadow-sm transform hover:-translate-y-0.5">
-                            こども矯正サイト
-                        </Link>
-                        <Link href="/ceramic" className="text-[#8D6F2F] flex items-center px-4 py-2 bg-[#F8F3E8] rounded-full transition hover:bg-[#F0E5D0] border border-[#DCCB9E] shadow-sm transform hover:-translate-y-0.5">
-                            審美歯科サイト
-                        </Link>
-                    </nav>
                 </div>
             </header>
 
@@ -90,14 +72,14 @@ export const Header = () => {
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 aria-label="メニュー"
                 aria-expanded={isMenuOpen}
-                className="lg:hidden fixed top-2 right-2 z-[60] p-2 text-[#5A4D41] bg-white/95 backdrop-blur-sm rounded-full shadow-md border border-[#E8E0D4]"
+                className="fixed top-2 right-2 md:right-6 z-[60] p-2 text-[#5A4D41] bg-white/95 backdrop-blur-sm rounded-full shadow-md border border-[#E8E0D4]"
             >
                 {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
 
             {/* Mobile Nav Drawer (Moved outside header to avoid clipping) */}
             {isMenuOpen && (
-                <div className="lg:hidden bg-white/95 backdrop-blur-md px-4 py-6 space-y-4 shadow-xl fixed top-0 left-0 w-full h-screen z-50 animate-fade-in-down overflow-y-auto pt-20">
+                <div className="hamburger-mincho-menu bg-white/95 backdrop-blur-md px-4 py-6 space-y-4 shadow-xl fixed top-0 left-0 md:left-auto right-0 w-full md:max-w-md h-screen z-50 animate-fade-in-down overflow-y-auto pt-20" style={menuFontStyle}>
                     <Link href="/" className="flex items-center justify-between py-3 border-b border-dashed border-gray-200 font-bold text-[#5A4D41]">ホーム <ChevronRight size={16} className="text-gray-300" /></Link>
 
                     <div className="py-2">
@@ -161,17 +143,22 @@ export const Header = () => {
                     </div>
 
                     <Link href="/case-studies" className="flex items-center justify-between py-3 border-b border-dashed border-gray-200 font-bold text-[#5A4D41]">症例紹介 <ChevronRight size={16} className="text-gray-300" /></Link>
-                    <a href="#" className="flex items-center justify-between py-3 border-b border-dashed border-gray-200 font-bold text-[#5A4D41]">ドクター紹介 <ChevronRight size={16} className="text-gray-300" /></a>
+                    <Link href="/doctor" className="flex items-center justify-between py-3 border-b border-dashed border-gray-200 font-bold text-[#5A4D41]">ドクター紹介 <ChevronRight size={16} className="text-gray-300" /></Link>
                     <Link href="/price" className="flex items-center justify-between py-3 border-b border-dashed border-gray-200 font-bold text-[#5A4D41]">料金表 <ChevronRight size={16} className="text-gray-300" /></Link>
                     <Link href="/blog" className="flex items-center justify-between py-3 border-b border-dashed border-gray-200 font-bold text-[#5A4D41]">ブログ・お知らせ <ChevronRight size={16} className="text-gray-300" /></Link>
                     <Link href="/facilities" className="flex items-center justify-between py-3 border-b border-dashed border-gray-200 font-bold text-[#5A4D41]">院内設備 <ChevronRight size={16} className="text-gray-300" /></Link>
                     <Link href="/recruit" className="flex items-center justify-between py-3 border-b border-dashed border-gray-200 font-bold text-[#5A4D41]">採用情報 <ChevronRight size={16} className="text-gray-300" /></Link>
-                    <a href="#" className="flex items-center justify-between py-3 border-b border-dashed border-gray-200 font-bold text-[#5A4D41]">アクセス・診療時間 <ChevronRight size={16} className="text-gray-300" /></a>
+                    <Link href="/access" className="flex items-center justify-between py-3 border-b border-dashed border-gray-200 font-bold text-[#5A4D41]">アクセス・診療時間 <ChevronRight size={16} className="text-gray-300" /></Link>
 
                     <div className="pt-4 space-y-3 pb-20">
-                        <button className="w-full bg-[#395b45] text-white py-4 rounded-full font-bold shadow-[0_4px_0_#2d4835] active:shadow-none active:translate-y-[4px] transition-all flex justify-center items-center gap-2 text-lg">
+                        <a
+                            href={WEB_RESERVATION_URL}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-full bg-[#395b45] text-white py-4 rounded-full font-bold shadow-[0_4px_0_#2d4835] active:shadow-none active:translate-y-[4px] transition-all flex justify-center items-center gap-2 text-lg"
+                        >
                             <Calendar size={22} /> 24時間 WEB予約
-                        </button>
+                        </a>
                         <button className="w-full bg-white border-2 border-[#395b45] text-[#395b45] py-4 rounded-full font-bold shadow-sm flex justify-center items-center gap-2 text-lg">
                             <Phone size={22} /> 03-6204-2876
                         </button>

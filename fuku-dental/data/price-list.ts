@@ -21,7 +21,7 @@ export const priceCategories: PriceCategory[] = [
     id: 'anterior-prosthetics',
     title: '前歯補綴',
     items: [
-      { name: 'プレミアムセラミック（PFZ）', price: '¥176,000' },
+      { name: 'ジルコニアセラミック', price: '¥176,000' },
       { name: 'ジルコニア', price: '¥143,000' },
     ],
   },
@@ -39,7 +39,7 @@ export const priceCategories: PriceCategory[] = [
     title: 'インレー・アンレー',
     items: [
       { name: 'e-max', price: '¥77,000' },
-      { name: 'ゴールド', price: '¥110,000' },
+      { name: 'ゴールド', price: '¥132,000' },
     ],
   },
   {
@@ -85,7 +85,7 @@ export const priceCategories: PriceCategory[] = [
   },
   {
     id: 'root-canal',
-    title: '根管治療',
+    title: '精密根管治療',
     items: [
       { name: '前歯', price: '¥22,000' },
       { name: '小臼歯', price: '¥22,000' },
@@ -104,11 +104,11 @@ export const priceCategories: PriceCategory[] = [
     id: 'whitening',
     title: 'ホワイトニング',
     items: [
-      { name: 'オフィスホワイトニング３回', price: '¥110,000' },
+      { name: 'オフィスホワイトニング３回', price: '¥99,000' },
       { name: 'オフィスホワイトニング＋ホームホワイトニング', price: '¥66,000' },
-      { name: 'ホームホワイトニング', price: '¥38,500' },
-      { name: 'オフィスホワイトニング', price: '¥36,300' },
-      { name: 'ウォーキングブリーチ', price: '¥33,000' },
+      { name: 'ホームホワイトニング', price: '¥36,500' },
+      { name: 'オフィスホワイトニング', price: '¥36,500' },
+      { name: 'ウォーキングブリーチ', price: '¥44,000' },
     ],
   },
   {

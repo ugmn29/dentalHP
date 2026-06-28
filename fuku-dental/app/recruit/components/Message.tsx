@@ -4,7 +4,7 @@ export default function Message() {
       <div className="message-grid">
         <div className="message-visual">
           <img
-            src="/images/recruit/director.webp"
+            src="/images/pages/homepage/豊洲-歯科-院長-福永真大.webp"
             alt="院長 福永 真大"
             className="message-portrait"
             loading="lazy"

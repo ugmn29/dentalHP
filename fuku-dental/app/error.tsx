@@ -2,6 +2,7 @@
 
 import { useEffect } from 'react'
 import Link from 'next/link'
+import { WEB_RESERVATION_URL } from '@/lib/reservation'
 
 export default function Error({
   error,
@@ -76,12 +77,14 @@ export default function Error({
             問題が解決しない場合は、お手数ですが以下の方法でお問い合わせください
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link
-              href="/#contact"
+            <a
+              href={WEB_RESERVATION_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-[#395b45] hover:underline font-medium"
             >
               お問い合わせフォーム
-            </Link>
+            </a>
             <span className="hidden sm:inline text-gray-300">|</span>
             <a
               href="tel:03-6204-2876"

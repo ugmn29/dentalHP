@@ -4,8 +4,12 @@ import React, { useState } from 'react';
 import { Header } from '../../components/Header';
 import { Footer } from '../../components/Footer';
 import { AuthorBio } from '../../components/AuthorBio';
-import { CheckCircle2, ChevronDown, ChevronUp, Calendar, Phone, ArrowRight, ChevronRight, Star, Heart, Shield, Smile, MapPin, Clock, AlertCircle, Home, Coins, Tv, Sparkles, Gem } from 'lucide-react';
+import { CheckCircle2, ChevronDown, ChevronUp, Calendar, Phone, ArrowRight, ChevronRight, Smile, Home, Coins, Tv, Sparkles } from 'lucide-react';
 import { PageImage } from '@/components/PageImage';
+import { ClinicHoursTable } from '@/components/ClinicHoursTable';
+import { getPriceCategory } from '@/data/price-list';
+import { FaqSection } from '@/components/FaqSection';
+import { WEB_RESERVATION_URL } from '@/lib/reservation';
 
 const breadcrumbJsonLd = {
     '@context': 'https://schema.org',
@@ -14,6 +18,17 @@ const breadcrumbJsonLd = {
         { '@type': 'ListItem', position: 1, name: 'ホーム', item: 'https://fshika.com' },
         { '@type': 'ListItem', position: 2, name: '小児矯正', item: 'https://fshika.com/kidsortho' },
     ],
+};
+
+const kidsOrthoPrices = getPriceCategory('kids-ortho');
+const kidsOrthoPriceDescriptions: Record<string, string> = {
+    '検査': '初回検査は無料です。',
+    '相談': '矯正相談は無料です。',
+    '調整料': '毎回の調整料は無料です。',
+    'プレオルソ+付加装置': 'プレオルソと必要な付加装置を含みます。',
+    '拡大床': '顎を広げて歯が並ぶスペースを作る装置です。',
+    'マウスピース': 'マウスピース型の装置です。',
+    'ワイヤー矯正': '固定式のワイヤー矯正です。',
 };
 
 export default function KidsOrthoPage() {
@@ -26,7 +41,7 @@ export default function KidsOrthoPage() {
             highlight: "家でのみ行う矯正",
             summary: "基本的に<span class='font-bold bg-yellow-100'>取り外し可能な装置</span>を使用し、ご家庭で装着していただく治療法です。<span class='font-bold bg-yellow-100'>学校では外せる</span>ため、<span class='text-[#395b45] font-bold'>お子様の心理的負担が少なく</span>、食事、歯磨きの際も取り外せるので、虫歯のリスクを減らせます。<span class='text-[#395b45] font-bold'>普段通りの学校生活を送りながら治療可能</span>です。",
             details: [],
-            imageId: "feature1",
+            imageId: "feature02-mouth-expander-close",
             icon: Home,
             color: "from-orange-100 to-amber-100",
             iconColor: "text-orange-500"
@@ -37,7 +52,7 @@ export default function KidsOrthoPage() {
             highlight: "痛みの少ない治療法",
             summary: "<span class='font-bold bg-yellow-100'>成長期の顎の成長を利用</span>した優しい力で歯並びを整えるため、<span class='text-[#395b45] font-bold'>痛みはほとんどありません</span>。ワイヤー矯正のような強い力で歯を動かさず、お子様の<span class='font-bold bg-yellow-100'>自然な成長に合わせて無理なく治療</span>するため、<span class='text-[#395b45] font-bold'>お子様が嫌がらずに続けられる治療</span>です。",
             details: [],
-            imageId: "feature2",
+            imageId: "feature02-painless-smile-close",
             icon: Sparkles,
             color: "from-blue-100 to-cyan-100",
             iconColor: "text-sky-500"
@@ -48,7 +63,7 @@ export default function KidsOrthoPage() {
             highlight: "根本改善のMFT",
             summary: "<span class='font-bold bg-yellow-100'>口呼吸や舌の癖</span>など、歯並びが悪くなる<span class='font-bold bg-yellow-100'>根本原因を改善</span>するトレーニング（MFT）を行います。このトレーニングを行わないと必ず後戻りしてしまいます。<span class='text-[#395b45] font-bold'>悪習癖を直すことで治療後の後戻りを防ぎ、長期的に美しい歯並びを維持</span>できます。",
             details: [],
-            imageId: "MFT舌のトレーニングをしている子供",
+            imageId: "feature03-mouth-training-close",
             icon: Smile,
             color: "from-pink-100 to-rose-100",
             iconColor: "text-pink-500"
@@ -59,7 +74,7 @@ export default function KidsOrthoPage() {
             highlight: "お子様に優しい環境",
             summary: "診療台には<span class='font-bold bg-yellow-100'>天井テレビを完備</span>し、<span class='text-[#395b45] font-bold'>お子様が楽しく通院できる環境</span>を整えています。<span class='font-bold bg-yellow-100'>土日診療も行っており通いやすく</span>、お忙しい保護者の方にも配慮したスケジュールで、<span class='text-[#395b45] font-bold'>お子様がリラックスして治療を受けられる環境</span>です。",
             details: [],
-            imageId: "feature4",
+            imageId: "ceiling-tv",
             icon: Tv,
             color: "from-green-100 to-teal-100",
             iconColor: "text-teal-600"
@@ -70,43 +85,10 @@ export default function KidsOrthoPage() {
             highlight: "明確な費用設計",
             summary: "当院では<span class='font-bold bg-yellow-100'>トータルフィー制度</span>を導入しており、<span class='text-[#395b45] font-bold'>最初にご提示した金額から費用が変わらない安心の費用設計</span>です。治療開始前に総額を明確に提示し、<span class='font-bold bg-yellow-100'>治療途中での追加費用は一切なし</span>。<span class='text-[#395b45] font-bold'>予算を立てやすく、安心して治療を続けられます</span>。",
             details: [],
-            imageId: "こども矯正の料金プラン図解",
+            imageId: "clear-pricing-real-03",
             icon: Coins,
             color: "from-yellow-100 to-orange-100",
             iconColor: "text-yellow-600"
-        }
-    ];
-
-    const steps = [
-        {
-            num: "01",
-            title: "相談・カウンセリング",
-            desc: "歯並びのお悩みやご希望を伺い、お口の中を拝見して、治療の必要性や時期についてお話しします。",
-            imageId: "親子が歯科医師と相談している場面"
-        },
-        {
-            num: "02",
-            title: "精密検査",
-            desc: "レントゲン（セファロ）、写真撮影、型取りなどを行い、骨格や歯の状態を詳しく調べます。",
-            imageId: "子供がレントゲン撮影をしている場面"
-        },
-        {
-            num: "03",
-            title: "診断・治療計画",
-            desc: "検査結果に基づき、最適な治療法、期間、費用について詳しくご説明します。",
-            imageId: "モニターで治療計画を説明している場面"
-        },
-        {
-            num: "04",
-            title: "治療開始（1期治療）",
-            desc: "装置を装着し、定期的に通院して調整を行います。MFT（口腔筋機能療法）も並行して行います。",
-            imageId: "子供がマウスピースを装着している場面"
-        },
-        {
-            num: "05",
-            title: "経過観察・保定",
-            desc: "永久歯が生え揃うまで経過を観察します。必要に応じて2期治療へ移行します。",
-            imageId: "笑顔の子供が歯を見せている場面"
         }
     ];
 
@@ -146,7 +128,7 @@ export default function KidsOrthoPage() {
     ];
 
     return (
-        <div className="min-h-screen bg-white text-[#5A4D41] overflow-x-hidden" style={{ fontFamily: '"游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", sans-serif', wordBreak: 'normal', overflowWrap: 'anywhere' }}>
+        <div className="min-h-screen bg-white text-[#5A4D41] overflow-x-hidden" style={{ fontFamily: '"游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", sans-serif', wordBreak: 'normal', overflowWrap: 'break-word' }}>
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
@@ -155,129 +137,80 @@ export default function KidsOrthoPage() {
 
             <main>
                 {/* --- Hero Section --- */}
-                <section className="relative min-h-screen md:h-[80vh] md:min-h-[600px] overflow-hidden bg-gradient-to-br from-[#FFF9F0] to-[#FFF3E0]">
-                    {/* Mobile Layout */}
-                    <div className="md:hidden h-screen relative">
-                        {/* Full-screen Image with Overlay Text */}
-                        <div className="absolute inset-0">
-                            <div className="relative w-full h-[60vh]">
-                                <PageImage
-                                    path="/kidsortho"
-                                    imageId="hero-mobile"
-                                    alt="お子様の笑顔"
-                                    className="w-full h-full object-cover"
-                                />
-                            </div>
-                            <div className="w-full h-[40vh] bg-gradient-to-br from-[#FFF9F0] to-[#FFF3E0]"></div>
-
-                            {/* Text Overlay on Image */}
-                            <div className="absolute top-0 right-0 h-full flex items-start justify-end pr-4 gap-2 pt-2">
-                                {/* Strip 1: こども矯正 */}
-                                <div className="bg-white py-6 px-3 rounded shadow-lg flex items-center justify-center" style={{ width: 'auto', height: 'auto' }}>
-                                    <h1 className="text-4xl font-bold text-[#C5A572]" style={{ fontFamily: '"Hiragino Maru Gothic ProN", "M PLUS Rounded 1c", sans-serif', writingMode: 'horizontal-tb', display: 'flex', flexDirection: 'column', alignItems: 'center', lineHeight: '1.3', gap: '0.1rem' }}>
-                                        <span>こ</span>
-                                        <span>ど</span>
-                                        <span>も</span>
-                                        <span>矯</span>
-                                        <span>正</span>
-                                    </h1>
+                <section className="relative isolate overflow-hidden bg-[#FDFBF7]">
+                    <h1 className="sr-only">いま必要かを知る こども矯正</h1>
+                    <div className="mx-auto max-w-[430px] px-4 py-5 md:max-w-7xl md:px-8 md:py-12 lg:py-14">
+                        <div className="grid gap-6 md:gap-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(430px,1.1fr)] lg:items-center lg:gap-14">
+                            <div className="order-2 lg:order-1">
+                                <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#E8DCCB] bg-white/86 px-4 py-2 text-sm font-bold text-[#8D6F2F] shadow-sm backdrop-blur md:px-5 md:py-2.5">
+                                    <CheckCircle2 size={17} className="text-[#C5A572]" />
+                                    相談無料 / 豊洲駅徒歩2分
                                 </div>
+                                <p className="mb-4 hidden font-serif text-sm font-semibold tracking-[0.28em] text-[#C5A572] lg:block">
+                                    KIDS ORTHODONTICS
+                                </p>
+                                <h2 className="hidden font-serif text-6xl font-bold leading-[1.34] text-[#5A4D41] lg:block xl:text-7xl">
+                                    いま必要かを
+                                    <br />
+                                    知る
+                                    <br />
+                                    <span className="text-[#C5A572]">こども矯正</span>
+                                </h2>
+                                <p className="mt-0 max-w-md text-sm leading-8 text-[#5A4D41] md:mt-7 md:text-base md:leading-9 md:text-[#7E7469]">
+                                    治療を決める前に、歯並び・噛み合わせ・お口の癖を一緒に整理します。
+                                </p>
 
-                                {/* Strip 2: お顔を育てる */}
-                                <div className="bg-white py-6 px-2 rounded shadow-lg flex items-center justify-center" style={{ width: 'auto', height: 'auto' }}>
-                                    <h1 className="text-3xl font-bold text-[#C5A572]" style={{ fontFamily: '"Hiragino Maru Gothic ProN", "M PLUS Rounded 1c", sans-serif', writingMode: 'horizontal-tb', display: 'flex', flexDirection: 'column', alignItems: 'center', lineHeight: '1.3', gap: '0.1rem' }}>
-                                        <span>お</span>
-                                        <span>顔</span>
-                                        <span>を</span>
-                                        <span>育</span>
-                                        <span>て</span>
-                                        <span>る</span>
-                                    </h1>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="container mx-auto px-4 relative z-10 h-full">
-
-                        {/* Desktop Layout */}
-                        <div className="hidden md:grid grid-cols-2 gap-8 h-full items-center">
-                            {/* Left Side - Image */}
-                            <div className="relative h-full min-h-[500px] flex items-center justify-center">
-                                <div className="relative w-full h-[70%] rounded-2xl overflow-hidden shadow-2xl">
-                                    <PageImage
-                                        path="/kidsortho"
-                                        imageId="hero-desktop"
-                                        alt="お子様の笑顔"
-                                        className="w-full h-full object-cover object-center"
-                                    />
+                                <div className="mt-6 flex flex-col gap-3 md:mt-8 md:grid md:max-w-xl md:grid-cols-2 md:gap-4">
+                                    <a
+                                        href={WEB_RESERVATION_URL}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="group inline-flex min-h-14 items-center justify-center gap-3 rounded-full bg-[#0a8a85] px-7 py-4 text-white shadow-xl shadow-[#0a8a85]/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#087a76] md:min-h-16"
+                                    >
+                                        <Calendar size={22} className="flex-shrink-0" />
+                                        <span className="whitespace-nowrap text-base font-bold md:text-lg">24時間 WEB予約</span>
+                                        <ChevronRight size={20} className="transition-transform group-hover:translate-x-1" />
+                                    </a>
+                                    <a
+                                        href="tel:03-6204-2876"
+                                        className="inline-flex min-h-14 items-center justify-center gap-3 rounded-full border border-[#C5A572]/45 bg-white/88 px-7 py-4 text-[#5A4D41] shadow-sm backdrop-blur transition-colors hover:bg-white md:min-h-16"
+                                    >
+                                        <Phone size={21} className="flex-shrink-0 text-[#C5A572]" />
+                                        <span className="whitespace-nowrap text-base font-bold md:text-lg">電話で相談</span>
+                                        <ChevronRight size={20} className="text-[#C5A572]" />
+                                    </a>
                                 </div>
                             </div>
 
-                            {/* Right Side - Vertical Text Strips */}
-                            <div className="flex items-center justify-start gap-8 h-full">
-                                <div className="flex flex-row-reverse items-center gap-8">
-                                    {/* Strip 1: お子様の */}
-                                    <div className="bg-white py-2 px-10 rounded-md shadow-lg transform -rotate-2 relative" style={{ writingMode: 'vertical-rl' }}>
-                                        <h1 className="text-6xl font-bold text-[#C5A572] tracking-wider leading-relaxed" style={{ fontFamily: '"Hiragino Maru Gothic ProN", "M PLUS Rounded 1c", sans-serif' }}>
-                                            お子様の
-                                        </h1>
+                            <div className="order-1 lg:order-2">
+                                <div className="relative overflow-hidden rounded-[26px] border border-[#E6D8C5] bg-white p-2 shadow-xl shadow-[#C5A572]/12 md:rounded-[34px] md:p-3">
+                                    <picture className="block h-full w-full overflow-hidden rounded-[20px] md:rounded-[26px]">
+                                        <source
+                                            srcSet="/images/pages/kidsortho/hero-consultation-enhanced.webp"
+                                            type="image/webp"
+                                        />
+                                        <img
+                                            src="/images/pages/kidsortho/hero-consultation-enhanced.jpg"
+                                            alt="親子が歯科医師とこども矯正について相談している様子"
+                                            className="aspect-[390/520] h-full w-full object-cover object-[30%_center] sm:aspect-[4/5] md:aspect-[16/11] lg:aspect-[4/3]"
+                                            style={{ width: '100%', height: '100%' }}
+                                            loading="eager"
+                                            decoding="async"
+                                            fetchPriority="high"
+                                        />
+                                    </picture>
+                                    <div className="pointer-events-none absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#FDFBF7]/85 to-transparent md:hidden" />
+                                    <div className="absolute right-4 top-4 flex gap-2 md:hidden">
+                                        {['こども矯正', 'いま必要かを知る'].map((label) => (
+                                            <div
+                                                key={label}
+                                                className="rounded-lg border border-[#E8DCCB] bg-white/92 px-3.5 py-5 text-center font-serif text-[1.78rem] font-bold leading-[1.12] text-[#B8935A] shadow-lg backdrop-blur"
+                                                style={{ writingMode: 'vertical-rl' }}
+                                            >
+                                                {label}
+                                            </div>
+                                        ))}
                                     </div>
-
-                                    {/* Strip 2: 「顔のゆがみ」 */}
-                                    <div className="bg-white py-2 px-10 rounded-md shadow-lg transform rotate-1 relative" style={{ writingMode: 'vertical-rl' }}>
-                                        <h1 className="text-6xl font-bold text-[#C5A572] tracking-wider leading-relaxed" style={{ fontFamily: '"Hiragino Maru Gothic ProN", "M PLUS Rounded 1c", sans-serif' }}>
-                                            「顔のゆがみ」
-                                        </h1>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* CTA Button */}
-                    <div className="hidden md:block absolute bottom-48 left-1/2 transform -translate-x-1/2 z-20">
-                        <a href="#contact" className="inline-flex items-center gap-2 bg-[#C5A572] hover:bg-[#B8935A] text-white px-10 py-5 rounded-full font-bold shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-1 text-xl">
-                            無料相談を予約する <ArrowRight size={24} />
-                        </a>
-                    </div>
-
-                    {/* CTA Section - Overlapping Hero */}
-                    <div className="md:hidden absolute bottom-0 left-0 w-full z-20 transform -translate-y-4">
-                        <div className="container mx-auto px-4 max-w-2xl">
-                            <div className="bg-[#FFF9F0] rounded-3xl shadow-2xl p-8 md:p-12">
-                                <div className="text-center">
-                                    {/* Top Badge */}
-                                    <div className="inline-block mb-6">
-                                        <div className="bg-white px-8 py-4 rounded-full shadow-md">
-                                            <p className="font-bold text-base md:text-lg text-[#C5A572]">
-                                                豊洲の矯正歯科
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    {/* Main Message */}
-                                    <h2 className="text-xl md:text-2xl font-bold text-[#5A4D41] mb-6 leading-relaxed px-4">
-                                        まずは現状の相談だけでも<br />
-                                        してみませんか？
-                                    </h2>
-
-                                    {/* Notice Bubble */}
-                                    <div className="bg-white px-4 py-1.5 rounded-full shadow-md mb-1 inline-block max-w-md relative z-10">
-                                        <p className="text-[#5A4D41] text-[10px] md:text-xs">
-                                            予約が混み合っておりますので、<br className="sm:hidden" />
-                                            <span className="text-[#C5A572] font-bold">お早めのご予約をおすすめします。</span>
-                                        </p>
-                                    </div>
-
-                                    {/* CTA Button */}
-                                    <div className="mb-4 -mt-2">
-                                        <a href="#contact" className="inline-flex items-center justify-center gap-3 bg-[#C5A572] hover:bg-[#B8935A] text-white px-14 md:px-16 py-5 md:py-6 rounded-full font-bold text-xl md:text-2xl shadow-2xl hover:shadow-3xl transition-all transform hover:scale-105 w-full max-w-xl mx-auto border-4 border-white" style={{ boxShadow: '0 10px 30px rgba(0, 0, 0, 0.2), 0 0 0 4px white' }}>
-                                            初診を予約する
-                                            <span className="text-2xl">▸</span>
-                                        </a>
-                                    </div>
-
                                 </div>
                             </div>
                         </div>
@@ -347,9 +280,11 @@ export default function KidsOrthoPage() {
                             <div className="flex flex-col items-center gap-3">
                                 <div className="w-24 h-24 md:w-32 md:h-32 rounded-2xl border-4 border-[#C5A572] flex items-center justify-center bg-white overflow-hidden">
                                     <img
-                                        src="/images/kidsortho/反対.png"
+                                        src="/images/kidsortho/underbite-illustration.webp"
                                         alt="反対咬合"
                                         className="w-full h-full object-cover"
+                                        loading="lazy"
+                                        decoding="async"
                                     />
                                 </div>
                                 <p className="text-[#C5A572] font-bold text-sm md:text-base text-center">反対咬合</p>
@@ -359,9 +294,11 @@ export default function KidsOrthoPage() {
                             <div className="flex flex-col items-center gap-3">
                                 <div className="w-24 h-24 md:w-32 md:h-32 rounded-2xl border-4 border-[#C5A572] flex items-center justify-center bg-white overflow-hidden">
                                     <img
-                                        src="/images/kidsortho/乳歯段差.png"
+                                        src="/images/kidsortho/crowding-illustration.webp"
                                         alt="ガタガタ"
                                         className="w-full h-full object-cover"
+                                        loading="lazy"
+                                        decoding="async"
                                     />
                                 </div>
                                 <p className="text-[#C5A572] font-bold text-sm md:text-base text-center">ガタガタ</p>
@@ -371,9 +308,11 @@ export default function KidsOrthoPage() {
                             <div className="flex flex-col items-center gap-3">
                                 <div className="w-24 h-24 md:w-32 md:h-32 rounded-2xl border-4 border-[#C5A572] flex items-center justify-center bg-white overflow-hidden">
                                     <img
-                                        src="/images/kidsortho/開咬.png"
+                                        src="/images/kidsortho/openbite-illustration.webp"
                                         alt="開咬"
                                         className="w-full h-full object-cover"
+                                        loading="lazy"
+                                        decoding="async"
                                     />
                                 </div>
                                 <p className="text-[#C5A572] font-bold text-sm md:text-base text-center">開咬</p>
@@ -404,7 +343,7 @@ export default function KidsOrthoPage() {
                         <div className="flex items-center justify-center mb-8 gap-1 sm:gap-2 md:gap-4 px-2">
                             <div className="text-2xl sm:text-3xl md:text-5xl text-[#C5A572] font-bold flex-shrink-0">【</div>
                             <h3 className="text-[13px] sm:text-base md:text-2xl font-bold text-[#C5A572] text-center break-keep">
-                                Fデンタルオフィス 豊洲プライムスクエア院<span className="text-[11px] sm:text-sm md:text-2xl block sm:inline"> 豊洲プライムスクエア院</span>
+                                Fデンタルオフィス 豊洲プライムスクエア院
                             </h3>
                             <div className="text-2xl sm:text-3xl md:text-5xl text-[#C5A572] font-bold flex-shrink-0">】</div>
                         </div>
@@ -415,22 +354,22 @@ export default function KidsOrthoPage() {
                             <div className="rounded-2xl overflow-hidden shadow-lg aspect-square">
                                 <PageImage
                                     path="/kidsortho"
-                                    imageId="clinic-interior"
-                                    alt="クリニック内観"
+                                    imageId="clinic-room"
+                                    alt="Fデンタルオフィス 豊洲プライムスクエア院の診療室"
                                     className="w-full h-full object-cover"
                                 />
                             </div>
                             {/* Map */}
                             <div className="rounded-2xl overflow-hidden shadow-lg aspect-square">
                                 <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.0989654321!2d139.7941!3d35.6563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601889f7b7c3a9a9%3A0x1234567890abcdef!2z6LGK5rSyIOODl-ODqeOCpOODoOOCueOCr-OCqOOCog!5e0!3m2!1sja!2sjp!4v1234567890"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.010249888901!2d139.798077!3d35.6521191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018895bd480af87%3A0x46a0d1583ceadde6!2zRuODh-ODs-OCv-ODq-OCquODleOCo-OCuSDosYrmtLLjg5fjg6njgqTjg6Djgrnjgq_jgqjjgqLpmaI!5e0!3m2!1sja!2sjp!4v1778288265882!5m2!1sja!2sjp"
                                     width="100%"
                                     height="100%"
                                     style={{ border: 0 }}
                                     allowFullScreen
                                     loading="lazy"
                                     referrerPolicy="no-referrer-when-downgrade"
-                                    title="豊洲プライムスクエア地図"
+                                    title="Fデンタルオフィス 豊洲プライムスクエア院 地図"
                                 ></iframe>
                             </div>
                         </div>
@@ -459,48 +398,7 @@ export default function KidsOrthoPage() {
                                 <h4 className="text-xl md:text-2xl font-bold text-[#C5A572]">診療時間</h4>
                                 <div className="flex-1 border-t-2 border-dotted border-[#C5A572]"></div>
                             </div>
-                            <div className="overflow-x-auto">
-                                <table className="w-full border-collapse text-base md:text-lg font-sans">
-                                    <thead>
-                                        <tr className="bg-white">
-                                            <th className="py-4 px-3 text-left font-bold border-b border-gray-200 text-[#2d4835] w-[30%]">診療時間</th>
-                                            <th className="py-4 px-2 text-center font-bold border-b border-gray-200 text-[#2d4835] w-[10%]">月</th>
-                                            <th className="py-4 px-2 text-center font-bold border-b border-gray-200 text-[#2d4835] w-[10%]">火</th>
-                                            <th className="py-4 px-2 text-center font-bold border-b border-gray-200 text-[#2d4835] w-[10%]">水</th>
-                                            <th className="py-4 px-2 text-center font-bold border-b border-gray-200 text-[#2d4835] w-[10%]">木</th>
-                                            <th className="py-4 px-2 text-center font-bold border-b border-gray-200 text-[#2d4835] w-[10%]">金</th>
-                                            <th className="py-4 px-2 text-center font-bold border-b border-gray-200 text-[#2d4835] w-[10%]">土</th>
-                                            <th className="py-4 px-2 pr-3 text-center font-bold border-b border-gray-200 text-[#2d4835] w-[10%]">日</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody className="bg-white">
-                                        <tr className="border-b border-gray-200">
-                                            <td className="py-5 px-3 text-left font-semibold text-[#2d4835] text-base md:text-lg whitespace-nowrap" style={{ fontStyle: 'normal', fontFamily: 'sans-serif' }}>10:00-13:00</td>
-                                            <td className="py-5 px-2 text-center text-[#2d4835] text-lg">●</td>
-                                            <td className="py-5 px-2 text-center text-gray-300 text-lg">−</td>
-                                            <td className="py-5 px-2 text-center text-[#2d4835] text-lg">●</td>
-                                            <td className="py-5 px-2 text-center text-[#2d4835] text-lg">●</td>
-                                            <td className="py-5 px-2 text-center text-[#2d4835] text-lg">●</td>
-                                            <td className="py-5 px-2 text-center text-[#2d4835] font-bold">★</td>
-                                            <td className="py-5 px-2 pr-3 text-center text-[#2d4835] font-bold">★</td>
-                                        </tr>
-                                        <tr className="border-b border-gray-200">
-                                            <td className="py-5 px-3 text-left font-semibold text-[#2d4835] text-base md:text-lg whitespace-nowrap" style={{ fontStyle: 'normal', fontFamily: 'sans-serif' }}>14:00-19:00</td>
-                                            <td className="py-5 px-2 text-center text-[#2d4835] text-lg">●</td>
-                                            <td className="py-5 px-2 text-center text-gray-300 text-lg">−</td>
-                                            <td className="py-5 px-2 text-center text-[#2d4835] text-lg">●</td>
-                                            <td className="py-5 px-2 text-center text-[#2d4835] text-lg">●</td>
-                                            <td className="py-5 px-2 text-center text-[#2d4835] text-lg">●</td>
-                                            <td className="py-5 px-2 text-center text-[#2d4835] font-bold">★</td>
-                                            <td className="py-5 px-2 pr-3 text-center text-[#2d4835] font-bold">★</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div className="mt-6 space-y-1 text-sm md:text-base text-[#2d4835] text-center font-sans">
-                                <p style={{ fontStyle: 'normal', fontFamily: 'sans-serif' }}><span className="text-[#2d4835] font-bold text-xl">★</span> 土日：9:00-12:00 / 13:00-17:00</p>
-                                <p className="font-bold text-[#2d4835] mt-3" style={{ fontFamily: 'sans-serif' }}>休診日：火曜日</p>
-                            </div>
+                            <ClinicHoursTable />
                         </div>
                     </div>
                 </section>
@@ -644,82 +542,23 @@ export default function KidsOrthoPage() {
                     </div>
                 </section>
 
-                {/* --- CTA Section --- */}
-                <section className="py-2 md:py-2 bg-white">
-                    <div className="container mx-auto px-4 max-w-2xl">
-                        <div className="bg-[#FFF9F0] rounded-3xl shadow-2xl p-8 md:p-12">
-                            <div className="text-center">
-                                {/* Top Badge */}
-                                <div className="inline-block mb-6">
-                                    <div className="bg-white px-8 py-4 rounded-full shadow-md">
-                                        <p className="font-bold text-base md:text-lg text-[#C5A572]">
-                                            安心の実績と経験
-                                        </p>
-                                    </div>
-                                </div>
-
-                                {/* Main Message */}
-                                <h2 className="text-xl md:text-2xl font-bold text-[#5A4D41] mb-6 leading-relaxed px-4">
-                                    まずは現状の相談だけでも<br />
-                                    してみませんか？
-                                </h2>
-
-                                {/* Notice Bubble */}
-                                <div className="bg-white px-4 py-1.5 rounded-full shadow-md mb-1 inline-block max-w-md relative z-10">
-                                    <p className="text-[#5A4D41] text-[10px] md:text-xs">
-                                        予約が混み合っておりますので、<br className="sm:hidden" />
-                                        <span className="text-[#C5A572] font-bold">お早めのご予約をおすすめします。</span>
-                                    </p>
-                                </div>
-
-                                {/* CTA Button */}
-                                <div className="mb-4 -mt-2">
-                                    <a href="#contact" className="inline-flex items-center justify-center gap-3 bg-[#C5A572] hover:bg-[#B8935A] text-white px-14 md:px-16 py-5 md:py-6 rounded-full font-bold text-xl md:text-2xl shadow-2xl hover:shadow-3xl transition-all transform hover:scale-105 w-full max-w-xl mx-auto border-4 border-white" style={{ boxShadow: '0 10px 30px rgba(0, 0, 0, 0.2), 0 0 0 4px white' }}>
-                                        初診を予約する
-                                        <span className="text-2xl">▸</span>
-                                    </a>
-                                </div>
-
-                                {/* Footer Note */}
-                                <p className="text-[#C5A572] text-xs md:text-sm text-right px-4">
-                                    *2025年2月 当院調べ
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
                 {/* --- Features Section --- */}
-                <section className="pt-6 pb-8 bg-[#FAFAFA] relative overflow-hidden">
-                    <div className="container mx-auto px-4 relative z-10">
-                        <div className="text-center mb-12 space-y-4">
-                            <span className="font-sans text-xs tracking-[0.3em] text-[#C5A572] uppercase">Features</span>
-                            <h2 className="text-4xl font-light tracking-widest text-[#5A4D41]">当院の特徴</h2>
-                            <p className="text-[#8D8070] mt-6">豊洲の矯正歯科として、お子さまに寄り添った治療を提供します</p>
+                <section className="py-20 md:py-28 bg-[#FDFBF7] relative overflow-hidden">
+                    <div className="container mx-auto px-4 relative z-10 max-w-6xl">
+                        <div className="text-center mb-16 md:mb-20">
+                            <span className="font-sans text-[11px] tracking-[0.3em] text-[#C5A572] uppercase mb-4 block">FEATURES</span>
+                            <h2 className="text-3xl md:text-4xl font-light tracking-widest text-[#5A4D41] font-serif">当院の特徴</h2>
+                            <p className="text-[#8D8070] mt-6 leading-loose">豊洲の矯正歯科として、お子さまに寄り添った治療を提供します</p>
                         </div>
 
-                        <div className="space-y-12 max-w-5xl mx-auto">
+                        <div className="space-y-16 md:space-y-24">
                             {features.map((feature, index) => (
-                                <div key={feature.id} className="flex flex-col group">
-                                    {/* Title Area */}
-                                    <div className="relative">
-                                        {/* Large Gradient Number */}
-                                        <span className="text-8xl font-serif text-[#C5A572]/15 absolute -top-16 -left-8 z-0 select-none font-bold" style={{ letterSpacing: '-0.05em' }}>
-                                            {feature.id}
-                                        </span>
-
-                                        {/* Title */}
-                                        <div className="flex items-start justify-between gap-4">
-                                            <h3 className="text-3xl md:text-4xl font-bold text-[#5A4D41] leading-tight tracking-wide font-serif inline-block relative flex-1">
-                                                <span dangerouslySetInnerHTML={{ __html: feature.highlight.replace(/(の|を|に|が|は|と|へ|から|より|で|や|でのみ|な)/g, '<span class="text-[0.75em]">$1</span>') }} />
-                                                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#C5A572] via-[#C5A572] to-transparent"></div>
-                                            </h3>
-                                        </div>
-                                    </div>
-
-                                    {/* Image Area */}
-                                    <div className="w-full mb-8 relative">
-                                        <div className="relative rounded-[30px] overflow-hidden shadow-lg border-2 border-white aspect-[16/9]">
+                                <article
+                                    key={feature.id}
+                                    className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8 lg:gap-14 items-start group`}
+                                >
+                                    <div className="hidden lg:block lg:w-1/2 relative">
+                                        <div className="relative rounded-[32px] overflow-hidden aspect-[16/10] border border-[#E6E0D6] transition-transform duration-700 ease-out group-hover:scale-[1.02]">
                                             <PageImage
                                                 path="/kidsortho"
                                                 imageId={feature.imageId}
@@ -727,14 +566,36 @@ export default function KidsOrthoPage() {
                                                 className="w-full h-full object-cover"
                                             />
                                         </div>
+                                        <div className={`absolute -bottom-8 ${index % 2 === 0 ? '-left-8' : '-right-8'} w-32 h-32 rounded-full blur-2xl -z-10 bg-[#C5A572]/20`} />
                                     </div>
 
-                                    {/* Text Area */}
-                                    <div>
-                                        <p className="text-base md:text-lg text-[#5A4D41] leading-loose font-sans" dangerouslySetInnerHTML={{ __html: feature.summary }}>
-                                        </p>
+                                    <div className="w-full lg:w-1/2 flex flex-col gap-6 relative">
+                                        <div className="relative">
+                                            <span className="font-serif absolute -top-10 -left-2 select-none pointer-events-none text-[6rem] md:text-[7rem] font-semibold tracking-[-0.05em] leading-none text-[#C5A572]/15">
+                                                {feature.id}
+                                            </span>
+                                            <p className="text-[11px] tracking-[0.25em] mb-3 relative text-[#C5A572]">{feature.title}</p>
+                                            <h3 className="font-serif relative text-[#5A4D41]">
+                                                <span className="block text-base font-medium mb-2 tracking-widest text-[#8D8070]">FEATURE {feature.id}</span>
+                                                <span className="block text-3xl md:text-4xl lg:text-5xl leading-[1.3]">{feature.highlight}</span>
+                                                <span className="block w-16 h-px mt-5 bg-[#C5A572]" />
+                                            </h3>
+                                        </div>
+
+                                        <div className="w-full lg:hidden">
+                                            <div className="rounded-[24px] overflow-hidden aspect-[16/10] border border-[#E6E0D6]">
+                                                <PageImage
+                                                    path="/kidsortho"
+                                                    imageId={feature.imageId}
+                                                    alt={feature.highlight}
+                                                    className="w-full h-full object-cover"
+                                                />
+                                            </div>
+                                        </div>
+
+                                        <p className="text-sm md:text-base leading-[2.1] text-[#6B6258]" dangerouslySetInnerHTML={{ __html: feature.summary }} />
                                     </div>
-                                </div>
+                                </article>
                             ))}
                         </div>
                     </div>
@@ -758,7 +619,7 @@ export default function KidsOrthoPage() {
                                     description: "早期の小児矯正により、反対咬合を改善しました。",
                                     patient: "小児",
                                     treatment: "小児矯正（第1期治療）",
-                                    cost: "132,000円〜660,000円（税込）",
+                                    cost: "132,000円（税込）",
                                     duration: "約1〜2年（治療期間）／月1回の通院",
                                     risks: "装置による痛み・違和感、発音のしづらさ、むし歯・歯肉炎リスク、まれに後戻りの可能性",
                                     insurance: "自由診療（保険適用外）"
@@ -771,7 +632,7 @@ export default function KidsOrthoPage() {
                                     description: "小児矯正により、出っ歯（上顎前突）を改善しました。",
                                     patient: "小児",
                                     treatment: "小児矯正（第1期治療）",
-                                    cost: "132,000円〜660,000円（税込）",
+                                    cost: "132,000円（税込）",
                                     duration: "約1〜2年（治療期間）／月1回の通院",
                                     risks: "装置による痛み・違和感、発音のしづらさ、むし歯・歯肉炎リスク、まれに後戻りの可能性",
                                     insurance: "自由診療（保険適用外）"
@@ -812,7 +673,7 @@ export default function KidsOrthoPage() {
                                                 path="/kidsortho"
                                                 imageId={caseStudy.beforeId}
                                                 alt={`${caseStudy.title} - Before`}
-                                                className="w-full aspect-[16/9] object-cover rounded-2xl shadow-lg"
+                                                className="w-full aspect-[3/2] object-contain bg-[#F7F2EA] rounded-2xl shadow-lg"
                                             />
                                         </div>
 
@@ -839,7 +700,7 @@ export default function KidsOrthoPage() {
                                                 path="/kidsortho"
                                                 imageId={caseStudy.afterId}
                                                 alt={`${caseStudy.title} - After`}
-                                                className="w-full aspect-[16/9] object-cover rounded-2xl shadow-lg border-2 border-[#C5A572]/30"
+                                                className="w-full aspect-[3/2] object-contain bg-[#F7F2EA] rounded-2xl shadow-lg border-2 border-[#C5A572]/30"
                                             />
                                         </div>
                                     </div>
@@ -883,106 +744,102 @@ export default function KidsOrthoPage() {
                 </section>
 
                 {/* --- Doctor Introduction Section --- */}
-                <section className="py-6 md:py-8 bg-[#FFF9F0]">
-                    <div className="container mx-auto px-4 max-w-3xl">
-                        {/* Title - トップページ風の字体 */}
-                        <div className="text-center mb-12 space-y-4">
-                            <span className="font-sans text-xs tracking-[0.3em] text-[#C5A572] uppercase">Doctor</span>
-                            <h2 className="text-4xl font-light tracking-widest text-[#5A4D41]">医師紹介</h2>
+                <section className="py-20 md:py-28 bg-[#FFF9F0]">
+                    <div className="container mx-auto px-4 max-w-5xl">
+                        <div className="text-center mb-12">
+                            <span className="font-sans text-[11px] tracking-[0.3em] text-[#8D8070] uppercase mb-4 block">DOCTOR</span>
+                            <h2 className="text-3xl md:text-4xl font-light text-[#5A4D41] font-serif">医師紹介</h2>
                         </div>
 
-                        {/* Doctor Card */}
-                        <div className="bg-white rounded-3xl shadow-lg p-8 md:p-12">
-                            {/* Doctor Photo */}
-                            <div className="flex justify-center mb-8">
-                                <div className="w-64 h-64 md:w-80 md:h-80 rounded-3xl overflow-hidden shadow-lg border-4 border-[#C5A572]">
+                        <div className="grid grid-cols-1 md:grid-cols-[280px_1fr] gap-10 md:gap-14 items-start">
+                            <div className="mx-auto md:mx-0 w-full max-w-[280px]">
+                                <div className="aspect-[3/4] rounded-2xl overflow-hidden border border-[#E6E0D6] bg-white">
                                     <PageImage
-                                        path="/kidsortho"
+                                        path="/homepage"
                                         imageId="doctor"
-                                        alt="医師"
+                                        alt="院長 福永真大"
                                         className="w-full h-full object-cover"
                                     />
                                 </div>
-                            </div>
-
-                            {/* Doctor Info */}
-                            <div className="text-center mb-8">
-                                <div className="flex items-center justify-center gap-4 mb-4">
-                                    <span className="bg-[#8B6F47] text-white px-4 py-2 rounded font-bold text-sm md:text-base">
-                                        院長
-                                    </span>
-                                    <h3 className="text-2xl md:text-3xl font-bold text-[#8B6F47]">
-                                        福永　真大
-                                    </h3>
-                                </div>
-                                <p className="text-sm text-[#8D8070]">Masahiro Fukunaga / 院長・歯科医師</p>
-                            </div>
-
-                            {/* Career */}
-                            <div className="mb-8">
-                                <h4 className="font-bold text-[#8B6F47] mb-3 flex items-center gap-2">
-                                    <span className="w-1 h-4 bg-[#C5A572] rounded-full"></span>
-                                    経歴
-                                </h4>
-                                <ul className="text-base text-[#5A4D41] space-y-2 ml-4">
-                                    <li>• 大阪大学歯学部 卒業</li>
-                                    <li>• 医療法人同仁会ワタナベ歯科医院にて研修医指導医・診療主任を歴任</li>
-                                    <li>• 駒沢公園通り西垣歯科・矯正歯科 副院長</li>
-                                    <li>• 小児歯科部門の立ち上げ</li>
-                                    <li>• Fデンタルオフィス 豊洲プライムスクエア院 開業</li>
-                                    <li>• 咬合育成研究会監修 生活習慣改善アプリの開発</li>
-                                </ul>
-                            </div>
-
-                            {/* Affiliations */}
-                            <div className="mb-8">
-                                <h4 className="font-bold text-[#8B6F47] mb-3 flex items-center gap-2">
-                                    <span className="w-1 h-4 bg-[#C5A572] rounded-full"></span>
-                                    所属学会
-                                </h4>
-                                <p className="text-base text-[#5A4D41] ml-4">
-                                    日本小児歯科学会 / 日本矯正歯科学会 / 日本歯周病学会 / 日本口腔インプラント学会 / 日本審美歯科学会
+                                <p className="text-center mt-4 text-sm text-[#8D8070]">
+                                    <span className="block text-xs mb-1">院長</span>
+                                    <span className="font-serif text-lg text-[#5A4D41]">福永 真大</span>
                                 </p>
                             </div>
 
-                            {/* Dotted separator */}
-                            <div className="border-t-2 border-dotted border-[#C5A572] mb-8"></div>
-
-                            {/* Opening Message - Accordion */}
                             <div>
-                                <h4 className="font-bold text-[#8B6F47] text-lg mb-4 flex items-center gap-2">
-                                    <span className="w-1.5 h-5 bg-[#C5A572] rounded-full"></span>
-                                    当院が大切にしていること
-                                </h4>
-                                <div className="space-y-4 text-sm md:text-base leading-[1.9] text-[#5A4D41]">
-                                    <p>
-                                        私の父は、30年近く小児矯正に携わってきた歯科医師です。幼い頃からその背中を見て育ち、歯並びや噛み合わせが日々の習慣で大きく変わることを学んできました。当院のコンセプトは「未来のいいお顔を育てる」。
+                                <div className="mb-7 pb-6 border-b border-[#E6E0D6]">
+                                    <p className="text-xs tracking-[0.22em] mb-2 text-[#8D8070]">DIRECTOR / DENTIST</p>
+                                    <h3 className="font-serif text-2xl md:text-3xl text-[#5A4D41]">
+                                        福永 真大
+                                    </h3>
+                                    <p className="text-xs md:text-sm mt-2 text-[#8D8070]">
+                                        Masahiro Fukunaga / 院長・歯科医師
                                     </p>
-                                    {isMessageExpanded && (
-                                        <>
-                                            <p>
-                                                これはお子様だけに向けた言葉ではありません。矯正後の後戻り、顔の歪み — その多くは呼吸・姿勢・噛み癖といった習慣に原因があります。ただ、多くの医院ではこれを伝えていない、あるいは軽視しているケースが多いのが現状です。そのため、先にお伝えしたような後戻りが起きたり、大人になってから「やはり駄目だった」という事態が起きてしまいます。お子様の口腔育成から大人の矯正・審美治療まで、習慣へのアプローチを軸に、年齢を問わずお口と表情の健康を整えていく歯科医院です。
-                                            </p>
-                                            <p>
-                                                大阪大学歯学部を卒業後、医療法人同仁会ワタナベ歯科医院にて一般歯科・インプラント・矯正・審美治療など幅広い症例を経験し、研修医指導医も務めました。その中で強く感じたのは、良い治療が患者様に正しく届いていないという現実です。私自身は大学まで野球に打ち込み、噛み合わせや口呼吸がパフォーマンスに直結することも実感してきました。歯並びと全身の健康の関係を、スポーツを頑張るお子様や保護者の方にも届けたいと考えています。
-                                            </p>
-                                            <p>
-                                                父から受け継いだ口腔育成への想い、臨床で培った技術、そして患者様に「伝わる」情報発信力。この3つを軸に、「もっと早く知りたかった」「あの時聞けてよかった」— そう感じていただける歯科医院を目指しています。
-                                            </p>
-                                        </>
-                                    )}
                                 </div>
-                                <div className="text-center mt-6">
-                                    <button
-                                        onClick={() => setIsMessageExpanded(!isMessageExpanded)}
-                                        className="inline-flex items-center gap-2 bg-[#8B6F47] hover:bg-[#6D5E52] text-white px-8 py-3 rounded-full font-bold text-sm md:text-base shadow-lg transition-all"
-                                    >
-                                        {isMessageExpanded ? (
-                                            <>閉じる <ChevronUp size={18} /></>
-                                        ) : (
-                                            <>続きを読む <ChevronDown size={18} /></>
+
+                                <div className="grid grid-cols-1 lg:grid-cols-[1.35fr_1fr] gap-5 mb-8">
+                                    <div className="rounded-2xl p-5 md:p-6 bg-white border border-[#E6E0D6]">
+                                        <p className="text-xs tracking-[0.22em] font-medium mb-4 text-[#C5A572]">CAREER</p>
+                                        <ul className="space-y-2.5 text-sm md:text-[15px] leading-[1.9] text-[#6B6258]">
+                                            {[
+                                                '大阪大学歯学部 卒業',
+                                                '医療法人同仁会ワタナベ歯科医院にて研修医指導医・診療主任を歴任',
+                                                '駒沢公園通り西垣歯科・矯正歯科 副院長',
+                                                '小児歯科部門の立ち上げ',
+                                                'Fデンタルオフィス 豊洲プライムスクエア院 開業',
+                                                '咬合育成研究会監修 生活習慣改善アプリの開発',
+                                            ].map((item) => (
+                                                <li key={item} className="flex gap-2.5">
+                                                    <span className="mt-[0.7em] h-1.5 w-1.5 rounded-full flex-shrink-0 bg-[#C5A572]" />
+                                                    <span>{item}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+
+                                    <div className="rounded-2xl p-5 md:p-6 bg-white border border-[#E6E0D6]">
+                                        <p className="text-xs tracking-[0.22em] font-medium mb-4 text-[#C5A572]">所属学会・資格</p>
+                                        <p className="text-sm md:text-[15px] leading-[2] text-[#6B6258]">
+                                            日本小児歯科学会 / 日本矯正歯科学会 / 日本審美歯科学会 / 歯科医師免許
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div className="rounded-2xl p-6 md:p-8 bg-[#FAF8F5] border border-[#E6E0D6]">
+                                    <h3 className="font-serif text-2xl md:text-3xl leading-[1.7] mb-5 text-[#5A4D41]">
+                                        当院が大切にしていること
+                                    </h3>
+                                    <div className="space-y-5 text-sm md:text-base leading-[2.1] text-[#6B6258]">
+                                        <p>
+                                            私の父は、30年近く小児矯正に携わってきた歯科医師です。幼い頃からその背中を見て育ち、歯並びや噛み合わせが日々の習慣で大きく変わることを学んできました。当院のコンセプトは「未来のいいお顔を育てる」。
+                                        </p>
+                                        {isMessageExpanded && (
+                                            <>
+                                                <p>
+                                                    これはお子様だけに向けた言葉ではありません。矯正後の後戻り、顔の歪み — その多くは呼吸・姿勢・噛み癖といった習慣に原因があります。ただ、多くの医院ではこれを伝えていない、あるいは軽視しているケースが多いのが現状です。そのため、先にお伝えしたような後戻りが起きたり、大人になってから「やはり駄目だった」という事態が起きてしまいます。お子様の口腔育成から大人の矯正・審美治療まで、習慣へのアプローチを軸に、年齢を問わずお口と表情の健康を整えていく歯科医院です。
+                                                </p>
+                                                <p>
+                                                    大阪大学歯学部を卒業後、医療法人同仁会ワタナベ歯科医院にて一般歯科・インプラント・矯正・審美治療など幅広い症例を経験し、研修医指導医も務めました。その中で強く感じたのは、良い治療が患者様に正しく届いていないという現実です。私自身は大学まで野球に打ち込み、噛み合わせや口呼吸がパフォーマンスに直結することも実感してきました。歯並びと全身の健康の関係を、スポーツを頑張るお子様や保護者の方にも届けたいと考えています。
+                                                </p>
+                                                <p>
+                                                    父から受け継いだ口腔育成への想い、臨床で培った技術、そして患者様に「伝わる」情報発信力。この3つを軸に、「もっと早く知りたかった」「あの時聞けてよかった」— そう感じていただける歯科医院を目指しています。
+                                                </p>
+                                            </>
                                         )}
-                                    </button>
+                                    </div>
+                                    <div className="mt-6">
+                                        <button
+                                            onClick={() => setIsMessageExpanded(!isMessageExpanded)}
+                                            className="inline-flex items-center gap-2 rounded-full bg-[#8B6F47] hover:bg-[#6D5E52] text-white px-7 py-3 font-bold text-sm md:text-base shadow-sm transition-all"
+                                        >
+                                            {isMessageExpanded ? (
+                                                <>閉じる <ChevronUp size={18} /></>
+                                            ) : (
+                                                <>続きを読む <ChevronDown size={18} /></>
+                                            )}
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1093,8 +950,8 @@ export default function KidsOrthoPage() {
                             <div className="mb-8 rounded-2xl overflow-hidden shadow-lg">
                                 <PageImage
                                     path="/kidsortho"
-                                    imageId="treatment-scene"
-                                    alt="当院の診療風景"
+                                    imageId="director-xray"
+                                    alt="レントゲンを見ながら治療内容を説明する院長"
                                     className="w-full h-auto object-cover"
                                 />
                             </div>
@@ -1112,88 +969,6 @@ export default function KidsOrthoPage() {
                     </div>
                 </section>
 
-                {/* --- CTA Section 2 --- */}
-                <section className="py-2 md:py-2 bg-[#FFF9F0]">
-                    <div className="container mx-auto px-4 max-w-2xl">
-                        <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-12 border-4 border-[#C5A572]">
-                            <div className="text-center">
-                                {/* Top Badge */}
-                                <div className="inline-block mb-6">
-                                    <div className="bg-[#FFE44D] px-8 py-4 rounded-full shadow-md">
-                                        <p className="font-bold text-base md:text-lg text-[#C5A572]">
-                                            安心の実績と経験
-                                        </p>
-                                    </div>
-                                </div>
-
-                                {/* Main Message */}
-                                <h2 className="text-xl md:text-2xl font-bold text-[#5A4D41] mb-6 leading-relaxed px-4">
-                                    まずは現状の相談だけでも<br />
-                                    してみませんか？
-                                </h2>
-
-                                {/* Notice Bubble */}
-                                <div className="bg-[#FFF9F0] px-4 py-1.5 rounded-full shadow-md mb-1 inline-block max-w-md relative z-10 border border-[#C5A572]">
-                                    <p className="text-[#5A4D41] text-[10px] md:text-xs">
-                                        予約が混み合っておりますので、<br className="sm:hidden" />
-                                        <span className="text-[#C5A572] font-bold">お早めのご予約をおすすめします。</span>
-                                    </p>
-                                </div>
-
-                                {/* CTA Button */}
-                                <div className="mb-4 -mt-2">
-                                    <a href="#contact" className="inline-flex items-center justify-center gap-3 bg-[#C5A572] hover:bg-[#B8935A] text-white px-14 md:px-16 py-5 md:py-6 rounded-full font-bold text-xl md:text-2xl shadow-2xl hover:shadow-3xl transition-all transform hover:scale-105 w-full max-w-xl mx-auto border-4 border-white" style={{ boxShadow: '0 10px 30px rgba(0, 0, 0, 0.2), 0 0 0 4px white' }}>
-                                        初診を予約する
-                                        <span className="text-2xl">▸</span>
-                                    </a>
-                                </div>
-
-                                {/* Footer Note */}
-                                <p className="text-[#C5A572] text-xs md:text-sm text-right px-4">
-                                    *2025年2月 当院調べ
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                {/* --- Flow Section --- */}
-                <section className="py-8 md:py-2 bg-[#FFF9F0]">
-                    <div className="container mx-auto px-4 max-w-5xl">
-                        <div className="bg-white rounded-2xl shadow-lg p-6 md:p-10">
-                            <div className="text-center mb-10">
-                                <h3 className="text-2xl md:text-3xl font-bold text-[#5A4D41] font-serif inline-block">治療の流れ</h3>
-                                <div className="w-16 h-0.5 bg-[#C5A572] mx-auto mt-4"></div>
-                            </div>
-                            <div className="space-y-12">
-                                {steps.map((step, index) => (
-                                    <div key={index}>
-                                        {/* 番号 + タイトル */}
-                                        <div className="flex items-center gap-2 mb-6 border-b border-[#C5A572]/30 pb-3">
-                                            <div className="relative">
-                                                <div className="absolute top-1 left-1/2 -translate-x-1/2 w-6 h-6 bg-[#C5A572]/30 rotate-45"></div>
-                                                <span className="text-3xl md:text-4xl font-light text-[#C5A572] tracking-wider relative z-10">{step.num}</span>
-                                            </div>
-                                            <h4 className="text-lg md:text-xl font-bold text-[#5A4D41] font-serif">{step.title}</h4>
-                                        </div>
-                                        {/* 画像 */}
-                                        <div className="mb-6 rounded-2xl overflow-hidden shadow-md">
-                                            <PageImage
-                                                path="/kidsortho"
-                                                imageId={step.imageId}
-                                                alt={step.title}
-                                                className="w-full h-56 md:h-72 object-cover"
-                                            />
-                                        </div>
-                                        {/* 説明文 */}
-                                        <p className="text-[#5A4D41] leading-loose text-sm md:text-base">{step.desc}</p>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
                 {/* --- Price Section --- */}
                 <section className="py-8 md:py-12 bg-[#FDFBF7]">
                     <div className="container mx-auto px-4 max-w-4xl">
@@ -1203,6 +978,22 @@ export default function KidsOrthoPage() {
                                 料金について
                             </h2>
                             <p className="text-[#8D8070]">豊洲の歯科 Fデンタルオフィス 豊洲プライムスクエア院の小児矯正料金 ※表示価格はすべて税込です</p>
+                        </div>
+
+                        <div className="mb-8 rounded-3xl bg-white border border-[#C5A572]/30 shadow-sm p-6 md:p-8">
+                            <div className="flex flex-col md:flex-row gap-4 md:gap-5">
+                                <div className="w-12 h-12 rounded-full bg-[#C5A572]/15 flex items-center justify-center flex-shrink-0">
+                                    <Coins className="text-[#C5A572]" size={26} />
+                                </div>
+                                <div>
+                                    <h3 className="text-xl md:text-2xl font-bold text-[#5A4D41] font-serif mb-3 leading-snug">
+                                        トータルフィー制度で、治療前に総額を明確にご提示します
+                                    </h3>
+                                    <p className="text-sm md:text-base leading-loose text-[#5A4D41]">
+                                        当院では、こども矯正にトータルフィー制度を導入しています。治療開始前に必要な費用を総額でお伝えするため、「思っていたより費用が高くなった」ということが起こらないようにしています。表示している金額には、調整料など治療に必要な費用も含まれています。
+                                    </p>
+                                </div>
+                            </div>
                         </div>
 
                         {/* Price Table */}
@@ -1215,109 +1006,42 @@ export default function KidsOrthoPage() {
 
                             {/* Items */}
                             <div className="divide-y divide-gray-200">
-                                <div className="flex flex-col md:flex-row md:items-center hover:bg-[#FAFAFA] transition-colors group px-6 py-6">
-                                    <div className="w-full md:w-[70%] mb-2 md:mb-0">
-                                        <div className="font-bold text-black text-base">相談料</div>
-                                        <div className="text-sm text-gray-500 mt-1">矯正相談は無料です。</div>
+                                {kidsOrthoPrices?.items.map((item) => (
+                                    <div key={item.name} className="flex flex-col md:flex-row md:items-center hover:bg-[#FAFAFA] transition-colors group px-6 py-6">
+                                        <div className="w-full md:w-[70%] mb-2 md:mb-0">
+                                            <div className="font-bold text-black text-base">{item.name}</div>
+                                            <div className="text-sm text-gray-500 mt-1">{kidsOrthoPriceDescriptions[item.name]}</div>
+                                        </div>
+                                        <div className="w-full md:w-[30%] text-left md:text-right">
+                                            <span className="font-bold text-lg text-[#008000]">{item.price}</span>
+                                        </div>
                                     </div>
-                                    <div className="w-full md:w-[30%] text-left md:text-right">
-                                        <span className="font-bold text-lg text-[#008000]">¥0</span>
-                                    </div>
-                                </div>
-
-                                <div className="flex flex-col md:flex-row md:items-center hover:bg-[#FAFAFA] transition-colors group px-6 py-6">
-                                    <div className="w-full md:w-[70%] mb-2 md:mb-0">
-                                        <div className="font-bold text-black text-base">検査代</div>
-                                        <div className="text-sm text-gray-500 mt-1">初回検査は無料です。</div>
-                                    </div>
-                                    <div className="w-full md:w-[30%] text-left md:text-right">
-                                        <span className="font-bold text-lg text-[#008000]">¥0</span>
-                                    </div>
-                                </div>
-
-                                <div className="flex flex-col md:flex-row md:items-center hover:bg-[#FAFAFA] transition-colors group px-6 py-6">
-                                    <div className="w-full md:w-[70%] mb-2 md:mb-0">
-                                        <div className="font-bold text-black text-base">結果説明</div>
-                                        <div className="text-sm text-gray-500 mt-1">検査結果の詳しい説明とカウンセリングです。</div>
-                                    </div>
-                                    <div className="w-full md:w-[30%] text-left md:text-right">
-                                        <span className="font-bold text-lg text-[#008000]">¥11,000</span>
-                                    </div>
-                                </div>
-
-                                <div className="flex flex-col md:flex-row md:items-center hover:bg-[#FAFAFA] transition-colors group px-6 py-6">
-                                    <div className="w-full md:w-[70%] mb-2 md:mb-0">
-                                        <div className="font-bold text-black text-base">プレオルソ、EFライン etc(他の付加的装置の全てを含む)</div>
-                                        <div className="text-sm text-gray-500 mt-1">取り外し可能なマウスピース型矯正装置です。</div>
-                                    </div>
-                                    <div className="w-full md:w-[30%] text-left md:text-right">
-                                        <span className="font-bold text-lg text-[#008000]">¥132,000</span>
-                                    </div>
-                                </div>
-
-                                <div className="flex flex-col md:flex-row md:items-center hover:bg-[#FAFAFA] transition-colors group px-6 py-6">
-                                    <div className="w-full md:w-[70%] mb-2 md:mb-0">
-                                        <div className="font-bold text-black text-base">拡大床</div>
-                                        <div className="text-sm text-gray-500 mt-1">顎を広げて歯が並ぶスペースを作る装置です。</div>
-                                    </div>
-                                    <div className="w-full md:w-[30%] text-left md:text-right">
-                                        <span className="font-bold text-lg text-[#008000]">¥495,000</span>
-                                    </div>
-                                </div>
-
-                                <div className="flex flex-col md:flex-row md:items-center hover:bg-[#FAFAFA] transition-colors group px-6 py-6">
-                                    <div className="w-full md:w-[70%] mb-2 md:mb-0">
-                                        <div className="font-bold text-black text-base">マウスピース矯正</div>
-                                        <div className="text-sm text-gray-500 mt-1">透明なマウスピースで目立たず矯正できます。</div>
-                                    </div>
-                                    <div className="w-full md:w-[30%] text-left md:text-right">
-                                        <span className="font-bold text-lg text-[#008000]">¥595,000</span>
-                                    </div>
-                                </div>
-
-                                <div className="flex flex-col md:flex-row md:items-center hover:bg-[#FAFAFA] transition-colors group px-6 py-6">
-                                    <div className="w-full md:w-[70%] mb-2 md:mb-0">
-                                        <div className="font-bold text-black text-base">ワイヤー矯正</div>
-                                        <div className="text-sm text-gray-500 mt-1">従来型のブラケット矯正です。</div>
-                                    </div>
-                                    <div className="w-full md:w-[30%] text-left md:text-right">
-                                        <span className="font-bold text-lg text-[#008000]">¥660,000</span>
-                                    </div>
-                                </div>
+                                ))}
                             </div>
                         </div>
+
+                        <a
+                            href="/kidsortho/appliances"
+                            className="group mt-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4 rounded-3xl bg-white border border-[#C5A572]/30 p-6 md:p-7 shadow-sm hover:shadow-lg hover:border-[#C5A572] transition-all"
+                        >
+                            <div>
+                                <h3 className="text-xl md:text-2xl font-bold text-[#5A4D41] font-serif mb-2">
+                                    装置の選び方について
+                                </h3>
+                                <p className="text-sm md:text-base text-[#8D8070] leading-loose">
+                                    プレオルソ、拡大床、マウスピース、ワイヤー矯正など、装置ごとの特徴と選び方を詳しくご覧いただけます。
+                                </p>
+                            </div>
+                            <span className="inline-flex items-center gap-2 text-[#C5A572] font-bold text-sm md:text-base whitespace-nowrap group-hover:gap-3 transition-all">
+                                詳しく見る
+                                <ArrowRight size={18} />
+                            </span>
+                        </a>
                     </div>
                 </section>
 
                 {/* --- FAQ Section --- */}
-                <section className="py-8 md:py-12 bg-white">
-                    <div className="container mx-auto px-4 max-w-3xl">
-                        <div className="text-center mb-12">
-                            <h2 className="text-2xl md:text-3xl font-bold text-[#5A4D41]">
-                                よくあるご質問
-                            </h2>
-                            <p className="text-sm text-[#8D8070] mt-3">豊洲の歯医者 Fデンタルオフィス 豊洲プライムスクエア院に寄せられるこども矯正のよくあるご質問</p>
-                        </div>
-                        <div className="space-y-6">
-                            {faqs.map((faq, index) => (
-                                <div key={index} className="bg-white rounded-2xl border border-gray-100 p-6">
-                                    <div className="mb-4">
-                                        <div className="flex items-start gap-4">
-                                            <span className="text-[#C5A572] text-xl font-bold">Q.</span>
-                                            <p className="font-bold text-[#5A4D41] leading-relaxed pt-1">{faq.q}</p>
-                                        </div>
-                                    </div>
-                                    <div className="border-t border-dashed border-gray-100 pt-4 bg-gray-50/50 -mx-6 -mb-6 px-6 pb-6 rounded-b-2xl">
-                                        <div className="flex items-start gap-4">
-                                            <span className="text-[#C5A572] text-xl font-bold">A.</span>
-                                            <p className="text-[#8D8070] leading-relaxed text-sm pt-1">{faq.a}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </section>
+                <FaqSection title="よくあるご質問" items={faqs} />
 
                 {/* --- 小児矯正をもっと深く知る Section --- */}
                 <section className="py-2 md:py-2 bg-[#FDFBF7]">
@@ -1558,8 +1282,8 @@ export default function KidsOrthoPage() {
                                 <div>
                                     <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-l-4 border-[#C5A572] py-3 px-4 mb-4">1期治療</h4>
                                     <p className="text-[#5A4D41] leading-loose mb-3">
-                                        <span className="font-bold bg-yellow-100">¥132,000〜¥660,000</span>が目安です。
-                                        検査・診断料、装置代、調整費、保定装置まで<span className="text-[#C5A572] font-bold">すべて含まれたトータルフィー制</span>を採用しています。
+                                        使用する装置により、<span className="font-bold bg-yellow-100">プレオルソ+付加装置 ¥132,000、拡大床 ¥495,000、マウスピース ¥595,000、ワイヤー矯正 ¥660,000</span>です。
+                                        検査・相談・調整料は<span className="text-[#C5A572] font-bold">¥0</span>です。
                                     </p>
                                     <a href="/kidsortho/cost" className="text-[#C5A572] font-bold hover:underline inline-flex items-center gap-1 text-sm">
                                         詳しくはこちら →
@@ -1568,7 +1292,7 @@ export default function KidsOrthoPage() {
                                 <div>
                                     <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-l-4 border-[#C5A572] py-3 px-4 mb-4">2期治療（仕上げの矯正）</h4>
                                     <p className="text-[#5A4D41] leading-loose mb-3">
-                                        <span className="font-bold bg-yellow-100">¥595,000〜¥660,000</span>が目安です。
+                                        全ての歯を動かす治療へ移行する場合は、<span className="font-bold bg-yellow-100">ワイヤー矯正 ¥880,000、マウスピース矯正 ¥440,000〜¥880,000</span>です。
                                         装置の種類により費用が異なります。デンタルローンもご利用いただけます。
                                     </p>
                                     <a href="/kidsortho/cost" className="text-[#C5A572] font-bold hover:underline inline-flex items-center gap-1 text-sm">
@@ -1580,187 +1304,9 @@ export default function KidsOrthoPage() {
                     </div>
                 </section>
 
-                {/* --- CTA Section 3 --- */}
-                <section className="py-2 md:py-2 bg-white">
-                    <div className="container mx-auto px-4 max-w-2xl">
-                        <div className="bg-[#FFF9F0] rounded-3xl shadow-2xl p-8 md:p-12">
-                            <div className="text-center">
-                                {/* Top Badge */}
-                                <div className="inline-block mb-6">
-                                    <div className="bg-white px-8 py-4 rounded-full shadow-md">
-                                        <p className="font-bold text-base md:text-lg text-[#C5A572]">
-                                            安心の実績と経験
-                                        </p>
-                                    </div>
-                                </div>
 
-                                {/* Main Message */}
-                                <h2 className="text-xl md:text-2xl font-bold text-[#5A4D41] mb-6 leading-relaxed px-4">
-                                    まずは現状の相談だけでも<br />
-                                    してみませんか？
-                                </h2>
 
-                                {/* Notice Bubble */}
-                                <div className="bg-white px-4 py-1.5 rounded-full shadow-md mb-1 inline-block max-w-md relative z-10">
-                                    <p className="text-[#5A4D41] text-[10px] md:text-xs">
-                                        予約が混み合っておりますので、<br className="sm:hidden" />
-                                        <span className="text-[#C5A572] font-bold">お早めのご予約をおすすめします。</span>
-                                    </p>
-                                </div>
 
-                                {/* CTA Button */}
-                                <div className="mb-0 -mt-2">
-                                    <a href="#contact" className="inline-flex items-center justify-center gap-3 bg-[#C5A572] hover:bg-[#B8935A] text-white px-14 md:px-16 py-5 md:py-6 rounded-full font-bold text-xl md:text-2xl shadow-2xl hover:shadow-3xl transition-all transform hover:scale-105 w-full max-w-xl mx-auto border-4 border-white" style={{ boxShadow: '0 10px 30px rgba(0, 0, 0, 0.2), 0 0 0 4px white' }}>
-                                        初診を予約する
-                                        <span className="text-2xl">▸</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                {/* --- Related Pages Section (Internal Links) --- */}
-                <section className="py-8 md:py-2 bg-white">
-                    <div className="container mx-auto px-4 max-w-6xl">
-                        <div className="text-center mb-10">
-                            <p className="text-[#C5A572] tracking-[0.2em] font-bold mb-2 uppercase">MORE INFORMATION</p>
-                            <h2 className="text-3xl md:text-4xl font-bold text-[#5A4D41] font-serif mb-4">
-                                関連ページ
-                            </h2>
-                            <p className="text-[#8D8070]">
-                                各トピックの詳細ページで、より深く理解していただけます
-                            </p>
-                        </div>
-
-                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                            {/* 費用について */}
-                            <a
-                                href="/kidsortho/cost"
-                                className="group bg-gradient-to-br from-[#FFF9F0] to-white rounded-3xl p-8 shadow-lg border-2 border-[#C5A572]/10 hover:border-[#C5A572] hover:shadow-xl transition-all transform hover:-translate-y-1"
-                            >
-                                <h3 className="text-xl font-bold text-[#5A4D41] mb-3 font-serif group-hover:text-[#C5A572] transition-colors">
-                                    費用について
-                                </h3>
-                                <p className="text-[#8D8070] text-sm leading-relaxed mb-4">
-                                    トータルフィー制度、医療費控除、デンタルローンなど、気になる費用を詳しく解説
-                                </p>
-                                <div className="flex items-center gap-2 text-[#C5A572] font-bold text-sm group-hover:gap-3 transition-all">
-                                    <span>詳しく見る</span>
-                                    <ArrowRight size={16} />
-                                </div>
-                            </a>
-
-                            {/* いつから始めるべきか */}
-                            <a
-                                href="/kidsortho/timing"
-                                className="group bg-gradient-to-br from-[#FFF9F0] to-white rounded-3xl p-8 shadow-lg border-2 border-[#C5A572]/10 hover:border-[#C5A572] hover:shadow-xl transition-all transform hover:-translate-y-1"
-                            >
-                                <h3 className="text-xl font-bold text-[#5A4D41] mb-3 font-serif group-hover:text-[#C5A572] transition-colors">
-                                    いつから始めるべきか
-                                </h3>
-                                <p className="text-[#8D8070] text-sm leading-relaxed mb-4">
-                                    最適な開始時期、年齢別ガイド、「様子を見る」ことのリスクを解説
-                                </p>
-                                <div className="flex items-center gap-2 text-[#C5A572] font-bold text-sm group-hover:gap-3 transition-all">
-                                    <span>詳しく見る</span>
-                                    <ArrowRight size={16} />
-                                </div>
-                            </a>
-
-                            {/* 治療期間 */}
-                            <a
-                                href="/kidsortho/duration"
-                                className="group bg-gradient-to-br from-[#FFF9F0] to-white rounded-3xl p-8 shadow-lg border-2 border-[#C5A572]/10 hover:border-[#C5A572] hover:shadow-xl transition-all transform hover:-translate-y-1"
-                            >
-                                <h3 className="text-xl font-bold text-[#5A4D41] mb-3 font-serif group-hover:text-[#C5A572] transition-colors">
-                                    治療期間
-                                </h3>
-                                <p className="text-[#8D8070] text-sm leading-relaxed mb-4">
-                                    1期治療・2期治療の期間、治療期間に影響する要因を詳しく解説
-                                </p>
-                                <div className="flex items-center gap-2 text-[#C5A572] font-bold text-sm group-hover:gap-3 transition-all">
-                                    <span>詳しく見る</span>
-                                    <ArrowRight size={16} />
-                                </div>
-                            </a>
-
-                            {/* 不正咬合の種類 */}
-                            <a
-                                href="/kidsortho/types"
-                                className="group bg-gradient-to-br from-[#FFF9F0] to-white rounded-3xl p-8 shadow-lg border-2 border-[#C5A572]/10 hover:border-[#C5A572] hover:shadow-xl transition-all transform hover:-translate-y-1"
-                            >
-                                <h3 className="text-xl font-bold text-[#5A4D41] mb-3 font-serif group-hover:text-[#C5A572] transition-colors">
-                                    不正咬合の種類
-                                </h3>
-                                <p className="text-[#8D8070] text-sm leading-relaxed mb-4">
-                                    出っ歯、受け口、ガタガタなど、7つの不正咬合タイプと最適な治療時期
-                                </p>
-                                <div className="flex items-center gap-2 text-[#C5A572] font-bold text-sm group-hover:gap-3 transition-all">
-                                    <span>詳しく見る</span>
-                                    <ArrowRight size={16} />
-                                </div>
-                            </a>
-
-                            {/* 装置一覧 */}
-                            <a
-                                href="/kidsortho/appliances"
-                                className="group bg-gradient-to-br from-[#FFF9F0] to-white rounded-3xl p-8 shadow-lg border-2 border-[#C5A572]/10 hover:border-[#C5A572] hover:shadow-xl transition-all transform hover:-translate-y-1"
-                            >
-                                <h3 className="text-xl font-bold text-[#5A4D41] mb-3 font-serif group-hover:text-[#C5A572] transition-colors">
-                                    装置一覧
-                                </h3>
-                                <p className="text-[#8D8070] text-sm leading-relaxed mb-4">
-                                    拡大床、機能的矯正装置、MFTトレーナーなど、使用する装置を詳しく紹介
-                                </p>
-                                <div className="flex items-center gap-2 text-[#C5A572] font-bold text-sm group-hover:gap-3 transition-all">
-                                    <span>詳しく見る</span>
-                                    <ArrowRight size={16} />
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </section>
-
-                {/* --- CTA Section --- */}
-                <section id="contact" className="py-2 md:py-2 bg-[#FFF9F0]">
-                    <div className="container mx-auto px-4 max-w-2xl">
-                        <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-12 border-4 border-[#C5A572]">
-                            <div className="text-center">
-                                {/* Top Badge */}
-                                <div className="inline-block mb-6">
-                                    <div className="bg-[#FFE44D] px-8 py-4 rounded-full shadow-md">
-                                        <p className="font-bold text-base md:text-lg text-[#C5A572]">
-                                            豊洲で小児矯正をお考えなら
-                                        </p>
-                                    </div>
-                                </div>
-
-                                {/* Main Message */}
-                                <h2 className="text-xl md:text-2xl font-bold text-[#5A4D41] mb-6 leading-relaxed px-4">
-                                    Fデンタルオフィス 豊洲プライムスクエア院へ<br />
-                                    まずはお気軽にご相談ください
-                                </h2>
-
-                                {/* Notice Bubble */}
-                                <div className="bg-[#FFF9F0] px-4 py-1.5 rounded-full shadow-md mb-1 inline-block max-w-md relative z-10 border border-[#C5A572]">
-                                    <p className="text-[#5A4D41] text-[10px] md:text-xs">
-                                        予約が混み合っておりますので、<br className="sm:hidden" />
-                                        <span className="text-[#C5A572] font-bold">お早めのご予約をおすすめします。</span>
-                                    </p>
-                                </div>
-
-                                {/* CTA Button */}
-                                <div className="mb-0 -mt-2">
-                                    <a href="#contact" className="inline-flex items-center justify-center gap-3 bg-[#C5A572] hover:bg-[#B8935A] text-white px-14 md:px-16 py-5 md:py-6 rounded-full font-bold text-xl md:text-2xl shadow-2xl hover:shadow-3xl transition-all transform hover:scale-105 w-full max-w-xl mx-auto border-4 border-white" style={{ boxShadow: '0 10px 30px rgba(0, 0, 0, 0.2), 0 0 0 4px white' }}>
-                                        初診を予約する
-                                        <span className="text-2xl">▸</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
 
                 {/* 監修者情報 */}
                 <div className="container mx-auto px-4 pt-2 pb-16">

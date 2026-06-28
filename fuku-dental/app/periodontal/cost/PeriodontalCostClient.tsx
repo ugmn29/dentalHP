@@ -153,8 +153,7 @@ export default function PeriodontalCostPage() {
             ]}
             relatedPages={[
                 { title: "歯周病治療TOP", desc: "歯周病治療の概要と特徴をご紹介します。", href: "/periodontal", icon: "🦷" },
-                { title: "治療方法", desc: "基本治療から外科治療、再生療法まで詳しく解説します。", href: "/periodontal/treatment-methods", icon: "⚕️" },
-                { title: "症例紹介", desc: "実際の治療例と患者様の声をご覧いただけます。", href: "/periodontal/case-studies", icon: "📸" }
+                { title: "治療方法", desc: "基本治療から外科治療、再生療法まで詳しく解説します。", href: "/periodontal/treatment-methods", icon: "⚕️" }
             ]}
             showImplantHero={false}
             priceLink={false}

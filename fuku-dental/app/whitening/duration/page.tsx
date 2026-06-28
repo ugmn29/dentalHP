@@ -4,6 +4,8 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
 import { PageImage } from '@/components/PageImage';
+import { RelatedPagesSection } from '@/components/RelatedPagesSection';
+import { whiteningRelatedPages } from '@/data/related-pages';
 import {
   CheckCircle2,
   ArrowRight,
@@ -540,7 +542,7 @@ export default function WhiteningDurationPage() {
                         </li>
                         <li className="flex items-start">
                           <CheckCircle2 className="w-5 h-5 text-[#2E8B57] mr-3 flex-shrink-0 mt-0.5" />
-                          <span><span className="font-bold">費用：</span>オフィスホワイトニング ¥36,300</span>
+                          <span><span className="font-bold">費用：</span>オフィスホワイトニング ¥36,500</span>
                         </li>
                         <li className="flex items-start">
                           <CheckCircle2 className="w-5 h-5 text-[#2E8B57] mr-3 flex-shrink-0 mt-0.5" />
@@ -568,7 +570,7 @@ export default function WhiteningDurationPage() {
                         </li>
                         <li className="flex items-start">
                           <CheckCircle2 className="w-5 h-5 text-[#2E8B57] mr-3 flex-shrink-0 mt-0.5" />
-                          <span><span className="font-bold">費用：</span>ホームホワイトニング ¥38,500</span>
+                          <span><span className="font-bold">費用：</span>ホームホワイトニング ¥36,500</span>
                         </li>
                         <li className="flex items-start">
                           <CheckCircle2 className="w-5 h-5 text-[#2E8B57] mr-3 flex-shrink-0 mt-0.5" />
@@ -709,7 +711,7 @@ export default function WhiteningDurationPage() {
                       <strong className="text-[#C5A572]">A.</strong> <span className="font-bold">ホームホワイトニングでのタッチアップ</span>が最もコスパの良い方法です。
                     </p>
                     <p className="text-sm bg-yellow-50 p-4 rounded-lg">
-                      ホームホワイトニングは¥38,500、オフィスホワイトニングは¥36,300です。ご自宅で継続しやすい方法を選べるのがメリットです。
+                      ホームホワイトニングは¥36,500、オフィスホワイトニングは¥36,500です。ご自宅で継続しやすい方法を選べるのがメリットです。
                     </p>
                   </div>
                 </div>
@@ -718,80 +720,13 @@ export default function WhiteningDurationPage() {
           </div>
         </section>
 
-        {/* 関連ページ */}
-        <section className="py-2 bg-[#FDFBF7]">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <div className="text-center mb-12">
-                <h2 className="text-3xl md:text-4xl font-bold text-[#5A4D41] font-serif">関連ページ</h2>
-                <div className="w-16 h-0.5 bg-[#C5A572] mx-auto mt-4"></div>
-              </div>
+        <RelatedPagesSection
+          title="関連ページ"
+          items={whiteningRelatedPages}
+          currentPath="/whitening/duration"
+        />
 
-              <div className="grid md:grid-cols-3 gap-6">
-                <Link href="/whitening" className="group bg-white p-6 rounded-2xl border-2 border-[#C5A572]/20 hover:border-[#C5A572]/40 hover:shadow-lg transition-all">
-                  <h3 className="text-xl font-bold text-[#5A4D41] font-serif mb-4">ホワイトニングTOP</h3>
-                  <p className="text-[#8D8070] mb-4">
-                    ホワイトニング全般について
-                  </p>
-                  <div className="flex items-center text-[#C5A572] font-semibold group-hover:translate-x-2 transition-transform">
-                    詳しく見る <ArrowRight className="w-5 h-5 ml-2" />
-                  </div>
-                </Link>
 
-                <Link href="/whitening/types" className="group bg-white p-6 rounded-2xl border-2 border-[#C5A572]/20 hover:border-[#C5A572]/40 hover:shadow-lg transition-all">
-                  <h3 className="text-xl font-bold text-[#5A4D41] font-serif mb-4">ホワイトニングの種類</h3>
-                  <p className="text-[#8D8070] mb-4">
-                    3つの方法を徹底比較
-                  </p>
-                  <div className="flex items-center text-[#C5A572] font-semibold group-hover:translate-x-2 transition-transform">
-                    詳しく見る <ArrowRight className="w-5 h-5 ml-2" />
-                  </div>
-                </Link>
-
-                <Link href="/whitening/cost" className="group bg-white p-6 rounded-2xl border-2 border-[#C5A572]/20 hover:border-[#C5A572]/40 hover:shadow-lg transition-all">
-                  <h3 className="text-xl font-bold text-[#5A4D41] font-serif mb-4">料金・費用</h3>
-                  <p className="text-[#8D8070] mb-4">
-                    各プランの詳しい料金
-                  </p>
-                  <div className="flex items-center text-[#C5A572] font-semibold group-hover:translate-x-2 transition-transform">
-                    詳しく見る <ArrowRight className="w-5 h-5 ml-2" />
-                  </div>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA */}
-        <section className="py-2 bg-gradient-to-r from-[#D4AF37] to-[#C5A028] text-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 font-serif">
-                白さを長く保つための<br />
-                アドバイスもお任せください
-              </h2>
-              <p className="text-xl mb-8 text-white/90">
-                無料カウンセリングで、<br className="md:hidden" />
-                あなたに最適なメンテナンス方法をご提案します
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="/#contact"
-                  className="inline-flex items-center justify-center bg-white text-[#C5A572] px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-50 transition-colors shadow-lg"
-                >
-                  無料カウンセリング予約
-                  <ArrowRight className="w-6 h-6 ml-2" />
-                </Link>
-                <Link
-                  href="tel:03-6204-2876"
-                  className="inline-flex items-center justify-center bg-white/20 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/30 transition-colors border-2 border-white"
-                >
-                  電話で相談する
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
                 {/* 監修者情報 */}
                 <div className="container mx-auto px-4 pt-2 pb-16">
                     <AuthorBio />

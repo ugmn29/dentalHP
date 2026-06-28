@@ -3,6 +3,8 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
 import { PageImage } from '@/components/PageImage';
+import { RelatedPagesSection } from '@/components/RelatedPagesSection';
+import { cavityRelatedPages } from '@/data/related-pages';
 import {
   CheckCircle2,
   ArrowRight,
@@ -292,7 +294,7 @@ export default function CostPage() {
                             <p className="font-bold text-[#5A4D41]">ゴールドインレー</p>
                             <p className="text-sm text-[#8D8070]">適合精度が高い、二次虫歯になりにくい</p>
                           </div>
-                          <p className="text-2xl font-bold text-[#C5A572]">約40,000〜60,000円</p>
+                          <p className="text-2xl font-bold text-[#C5A572]">132,000円（税込）</p>
                         </div>
                         <div className="bg-green-50 p-4 rounded-lg border border-green-200">
                           <p className="text-sm text-[#5A4D41]">
@@ -753,95 +755,13 @@ export default function CostPage() {
           </div>
         </section>
 
-        {/* Related Pages */}
-        <section className="py-2 bg-[#FDFBF7]">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-2xl md:text-3xl font-bold mb-10 text-[#5A4D41] font-serif text-center">
-                関連ページ
-              </h2>
-              <div className="grid md:grid-cols-3 gap-6">
-                <a
-                  href="/cavity/stages"
-                  className="group bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border border-[#E5E5E5] hover:border-[#C5A572]"
-                >
-                  <h3 className="text-lg font-bold text-[#5A4D41] mb-3 group-hover:text-[#C5A572] transition-colors">
-                    虫歯の進行段階
-                  </h3>
-                  <p className="text-sm text-[#5A4D41] mb-4 leading-relaxed">
-                    C0からC4まで、虫歯の進行段階ごとの症状と治療法を詳しく解説します。
-                  </p>
-                  <div className="flex items-center text-[#C5A572] text-sm font-medium">
-                    詳しく見る
-                    <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
-                  </div>
-                </a>
+        <RelatedPagesSection
+          title="関連ページ"
+          items={cavityRelatedPages}
+          currentPath="/cavity/cost"
+        />
 
-                <a
-                  href="/cavity/treatment-methods"
-                  className="group bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border border-[#E5E5E5] hover:border-[#C5A572]"
-                >
-                  <h3 className="text-lg font-bold text-[#5A4D41] mb-3 group-hover:text-[#C5A572] transition-colors">
-                    虫歯の治療方法
-                  </h3>
-                  <p className="text-sm text-[#5A4D41] mb-4 leading-relaxed">
-                    コンポジットレジン、インレー、クラウン、根管治療など、治療方法を解説します。
-                  </p>
-                  <div className="flex items-center text-[#C5A572] text-sm font-medium">
-                    詳しく見る
-                    <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
-                  </div>
-                </a>
 
-                <a
-                  href="/cavity/pain"
-                  className="group bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border border-[#E5E5E5] hover:border-[#C5A572]"
-                >
-                  <h3 className="text-lg font-bold text-[#5A4D41] mb-3 group-hover:text-[#C5A572] transition-colors">
-                    虫歯の痛みと対処法
-                  </h3>
-                  <p className="text-sm text-[#5A4D41] mb-4 leading-relaxed">
-                    虫歯の痛みが出たときの応急処置と、痛みの原因について解説します。
-                  </p>
-                  <div className="flex items-center text-[#C5A572] text-sm font-medium">
-                    詳しく見る
-                    <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-2 bg-gradient-to-br from-[#C5A572] to-[#B59562]">
-          <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center text-white">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 font-serif">
-                費用についてのご相談は<br className="md:hidden" />お気軽にどうぞ
-              </h2>
-              <p className="text-lg mb-8 leading-relaxed opacity-95">
-                治療内容と費用について詳しくご説明いたします。<br />
-                保険診療・自費診療ともに対応しておりますので、<br className="hidden md:block" />
-                ご予算やご希望をお聞かせください。
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="/#contact"
-                  className="inline-block bg-white text-[#C5A572] px-8 py-4 rounded-full font-bold hover:bg-[#FDFBF7] transition-all duration-300 shadow-lg hover:shadow-xl"
-                >
-                  ご予約・お問い合わせ
-                </a>
-                <a
-                  href="/cavity"
-                  className="inline-block bg-transparent text-white border-2 border-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-[#C5A572] transition-all duration-300"
-                >
-                  虫歯治療について
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
                 {/* 監修者情報 */}
                 <div className="container mx-auto px-4 pt-2 pb-16">
                     <AuthorBio />

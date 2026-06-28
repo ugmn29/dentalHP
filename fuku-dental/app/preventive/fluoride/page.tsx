@@ -3,6 +3,8 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
 import { PageImage } from '@/components/PageImage';
+import { RelatedPagesSection } from '@/components/RelatedPagesSection';
+import { preventiveRelatedPages } from '@/data/related-pages';
 import {
   CheckCircle2,
   ArrowRight,
@@ -407,68 +409,13 @@ export default function FluoridePage() {
         </section>
 
         {/* Related Pages */}
-        <section className="py-2 bg-[#FDFBF7]">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <h3 className="text-2xl md:text-3xl font-bold text-center mb-12 text-[#5A4D41] font-serif">
-                関連ページ
-              </h3>
-              <div className="grid md:grid-cols-3 gap-6">
-                <a href="/preventive" className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow p-6 border border-gray-100">
-                  <div className="text-4xl mb-4">🦷</div>
-                  <h4 className="font-bold text-[#5A4D41] mb-2 group-hover:text-[#C5A572] transition-colors">予防歯科TOP</h4>
-                  <p className="text-sm text-[#8D8070] leading-relaxed mb-3">
-                    予防歯科の概要と特徴について詳しくご紹介します。
-                  </p>
-                  <span className="text-[#C5A572] text-sm inline-flex items-center gap-1">
-                    詳しく見る <ArrowRight size={14} />
-                  </span>
-                </a>
-                <a href="/preventive/checkup" className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow p-6 border border-gray-100">
-                  <div className="text-4xl mb-4">🔍</div>
-                  <h4 className="font-bold text-[#5A4D41] mb-2 group-hover:text-[#C5A572] transition-colors">定期検診</h4>
-                  <p className="text-sm text-[#8D8070] leading-relaxed mb-3">
-                    虫歯や歯周病の早期発見・早期治療を目的とした重要な予防処置です。
-                  </p>
-                  <span className="text-[#C5A572] text-sm inline-flex items-center gap-1">
-                    詳しく見る <ArrowRight size={14} />
-                  </span>
-                </a>
-                <a href="/preventive/cleaning" className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow p-6 border border-gray-100">
-                  <div className="text-4xl mb-4">✨</div>
-                  <h4 className="font-bold text-[#5A4D41] mb-2 group-hover:text-[#C5A572] transition-colors">クリーニング・PMTC</h4>
-                  <p className="text-sm text-[#8D8070] leading-relaxed mb-3">
-                    専門的な歯のクリーニングで、虫歯や歯周病を予防します。
-                  </p>
-                  <span className="text-[#C5A572] text-sm inline-flex items-center gap-1">
-                    詳しく見る <ArrowRight size={14} />
-                  </span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
+        <RelatedPagesSection
+          title="関連ページ"
+          items={preventiveRelatedPages}
+          currentPath="/preventive/fluoride"
+        />
 
-        {/* CTA Section */}
-        <section className="py-2 bg-gradient-to-b from-[#C5A572] to-[#B59562] text-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center">
-              <h3 className="text-3xl md:text-4xl font-bold mb-6 font-serif">
-                フッ素塗布で虫歯を予防しましょう
-              </h3>
-              <p className="text-lg mb-8 opacity-95">
-                子どもから大人まで、年齢に応じた適切なフッ素塗布をご提案します。<br />
-                定期的な塗布で、健康な歯を長く維持できます。
-              </p>
-              <a
-                href="/#contact"
-                className="inline-block bg-white text-[#C5A572] font-bold py-4 px-8 rounded-full hover:bg-gray-50 transition-colors shadow-lg"
-              >
-                ご予約・お問い合わせ
-              </a>
-            </div>
-          </div>
-        </section>
+
                 {/* 監修者情報 */}
                 <div className="container mx-auto px-4 pt-2 pb-16">
                     <AuthorBio />

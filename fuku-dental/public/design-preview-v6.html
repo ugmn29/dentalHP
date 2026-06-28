@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Fデンタルオフィス 豊洲プライムスクエア院</title>
+    <!-- 
+        aesthetic_dna: Modern Nordic / Scandinavian Editorial
+        ui_paradigm: Soft Spatial Flow, Depth via Glassmorphism & Shadow, Organic Geometry
+        palette: Primary (#8B92AB), Light Tint (#D8DBE6), Text (#5A4D41), Marker (#FFF3D0)
+    -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Noto+Serif+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Geist', 'sans-serif'],
+                        serif: ['"Noto Serif JP"', 'Georgia', 'serif'],
+                    },
+                    colors: {
+                        primary: '#8B92AB', 
+                        primaryLight: '#D8DBE6', 
+                        textMain: '#5A4D41', 
+                        marker: '#FFF3D0',
+                        bgBase: '#FFFFFF', 
+                        bgSoft: '#FAFAFA' 
+                    },
+                    boxShadow: {
+                        'soft': '0 20px 40px -15px rgba(90, 77, 65, 0.05)',
+                        'float': '0 30px 60px -20px rgba(90, 77, 65, 0.08)',
+                        'glass': '0 8px 32px 0 rgba(216, 219, 230, 0.3)'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body, html {
+            overflow-x: hidden !important;
+            width: 100%;
+            color: theme('colors.textMain');
+            background-color: theme('colors.bgSoft');
+            -webkit-font-smoothing: antialiased;
+            word-break: keep-all; 
+            overflow-wrap: break-word;
+        }
+        
+        section {
+            overflow: hidden;
+            width: 100%;
+        }
+
+        /* Marker style for 徒歩2分 */
+        .text-marker {
+            background-image: linear-gradient(transparent 60%, theme('colors.marker') 60%);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            display: inline;
+        }
+
+        /* Glassmorphism Cards */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid theme('colors.primaryLight');
+        }
+
+        /* Ambient Blobs */
+        .ambient-blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            z-index: -1;
+            opacity: 0.4;
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="font-serif font-light text-[15px] leading-relaxed relative">
+
+    <div class="ambient-blob bg-primaryLight w-[60vw] h-[60vw] top-[-10vw] right-[-20vw]"></div>
+
+    <!-- FLOATING RESERVATION BUTTON -->
+    <a href="https://fshika.com/#" class="fixed bottom-6 right-6 z-50 bg-primary opacity-95 text-white rounded-full px-5 py-3 shadow-float hover:scale-105 transition-transform flex items-center gap-3 decoration-none group backdrop-blur-md border border-white/20">
+        <i class="ph ph-calendar-blank text-xl group-hover:rotate-12 transition-transform"></i>
+        <div class="flex flex-col">
+            <span class="text-[9px] font-sans opacity-90 tracking-wider">24時間受付</span>
+            <span class="font-bold text-sm tracking-widest">WEB予約</span>
+        </div>
+    </a>
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="relative pt-24 md:pt-32 pb-20 flex flex-col items-center justify-center min-h-[85vh] text-center px-4">
+        <div class="max-w-4xl mx-auto flex flex-col items-center relative z-10 w-full">
+            
+            <p class="text-sm tracking-[0.2em] mb-4 text-textMain/70">新規開業のお知らせ</p>
+            <h2 class="text-base md:text-lg text-primary mb-10 tracking-widest border border-primaryLight px-6 py-2 rounded-full bg-white/50">
+                0歳から通える歯科医院
+            </h2>
+            
+            <h1 class="text-4xl md:text-7xl font-sans font-medium text-textMain mb-4 tracking-tight flex items-baseline justify-center gap-1 md:gap-2">
+                2026<span class="text-xl md:text-3xl text-textMain/80 font-serif font-light">年</span>7<span class="text-xl md:text-3xl text-textMain/80 font-serif font-light">月</span>1<span class="text-xl md:text-3xl text-textMain/80 font-serif font-light">日</span>
+            </h1>
+            <p class="text-xl md:text-3xl tracking-[0.2em] mb-20">新規開業</p>
+
+            <div class="w-px h-16 bg-primaryLight mx-auto mb-16"></div>
+
+            <!-- Enhanced Hook using requested Marker Style -->
+            <p class="text-2xl md:text-5xl font-medium leading-[1.8] md:leading-[1.6]">
+                <span class="text-marker font-bold">豊洲駅</span> から 
+                <span class="text-marker font-bold mx-1 md:mx-2">徒歩2分</span> の 歯医者
+            </p>
+            <p class="text-lg md:text-2xl tracking-[0.1em] mt-8 text-textMain/80">
+                <span class="font-bold">豊洲</span>で0歳から通える<span class="font-bold">歯科</span>・<span class="font-bold">歯医者</span>
+            </p>
+        </div>
+    </section>
+
+    <!-- ACCESS & TIMETABLE -->
+    <section class="py-20 bg-white relative border-y border-primaryLight/50">
+        <div class="max-w-5xl mx-auto px-4 md:px-6 grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-center">
+            
+            <div class="flex flex-col sm:flex-row items-center gap-6 relative group">
+                <div class="w-full sm:w-1/2 rounded-2xl overflow-hidden aspect-[4/3] relative border border-primaryLight/30">
+                    <img src="https://fshika.com/images/building.avif" alt="豊洲プライムスクエア" class="w-full h-full object-cover">
+                </div>
+                <div class="w-full sm:w-1/2">
+                    <h3 class="text-lg md:text-2xl font-medium mb-3">豊洲プライムスクエア1階</h3>
+                    <p class="text-textMain/70 flex items-center gap-2 font-sans text-sm pb-1">
+                        「豊洲駅6a出口」徒歩2分
+                    </p>
+                </div>
+            </div>
+
+            <div class="w-full overflow-hidden bg-bgSoft/50 p-2 md:p-6 rounded-2xl border border-primaryLight/50">
+                <table class="w-full text-center border-collapse text-[11px] md:text-sm font-sans tracking-wide table-fixed">
+                    <thead>
+                        <tr class="border-b border-primaryLight/50 text-textMain/60">
+                            <th class="py-3 font-normal w-[28%] text-left pl-2">診療時間</th>
+                            <th class="py-3 font-normal w-[10%]">月</th>
+                            <th class="py-3 font-normal w-[10%]">火</th>
+                            <th class="py-3 font-normal w-[10%]">水</th>
+                            <th class="py-3 font-normal w-[10%]">木</th>
+                            <th class="py-3 font-normal w-[10%]">金</th>
+                            <th class="py-3 font-normal w-[10%] text-primary">土</th>
+                            <th class="py-3 font-normal w-[10%] text-primary">日</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-textMain/90">
+                        <tr class="border-b border-primaryLight/30">
+                            <td class="py-4 font-medium text-left pl-2">10:00<span class="hidden sm:inline">-</span><br class="sm:hidden">13:00</td>
+                            <td>●</td><td class="text-black/10">−</td><td>●</td><td>●</td><td>●</td><td class="text-primary">★</td><td class="text-primary">★</td>
+                        </tr>
+                        <tr>
+                            <td class="py-4 font-medium text-left pl-2">14:00<span class="hidden sm:inline">-</span><br class="sm:hidden">19:00</td>
+                            <td>●</td><td class="text-black/10">−</td><td>●</td><td>●</td><td>●</td><td class="text-primary">★</td><td class="text-primary">★</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="mt-4 text-[10px] md:text-xs text-textMain/60 text-right space-y-1 font-sans">
+                    <p>★ 土日：9:00-12:00 / 13:00-17:00</p>
+                    <p>休診日：火曜日</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DOCTOR SECTION (Fixed to Original Layout) -->
+    <section id="doctor" class="py-24 bg-bgSoft relative">
+        <div class="max-w-4xl mx-auto px-6">
+            
+            <div class="text-center mb-16 space-y-4">
+                <span class="font-sans text-xs tracking-[0.3em] text-primary uppercase">Doctor</span>
+                <h2 class="text-3xl font-light tracking-widest">ドクター紹介</h2>
+            </div>
+
+            <!-- Photo Left, Info Right Horizontal Layout -->
+            <div class="flex flex-col md:flex-row gap-10 md:gap-12 items-start bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-primaryLight/40 mb-12">
+                <div class="w-full md:w-5/12 shrink-0">
+                    <div class="rounded-2xl overflow-hidden aspect-square border-4 border-white shadow-soft">
+                        <img src="/images/pages/homepage/豊洲 歯医者.png" alt="院長 福永真大" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="w-full md:w-7/12 flex flex-col justify-center space-y-8">
+                    <div>
+                        <p class="text-sm text-textMain/70 mb-2 tracking-widest">院長</p>
+                        <h3 class="text-3xl mb-3 font-medium border-b border-primaryLight pb-4">
+                            福永　真大
+                        </h3>
+                        <p class="text-sm font-sans font-light text-textMain/60 tracking-wider">
+                            Masahiro Fukunaga / 院長・歯科医師
+                        </p>
+                    </div>
+
+                    <div class="space-y-6 text-[13px] md:text-sm">
+                        <div>
+                            <h4 class="font-bold mb-3 text-primary tracking-widest">経歴</h4>
+                            <ul class="space-y-2 text-textMain/80 leading-relaxed font-sans">
+                                <li class="flex items-start gap-2"><span class="text-primaryLight mt-1">•</span> 大阪大学歯学部 卒業</li>
+                                <li class="flex items-start gap-2"><span class="text-primaryLight mt-1">•</span> 大手医療法人にて研修医指導医・診療主任を歴任</li>
+                                <li class="flex items-start gap-2"><span class="text-primaryLight mt-1">•</span> 都内歯科医院 副院長</li>
+                                <li class="flex items-start gap-2"><span class="text-primaryLight mt-1">•</span> Fデンタルオフィス 豊洲プライムスクエア院 開業</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-bold mb-3 text-primary tracking-widest">所属学会</h4>
+                            <p class="text-textMain/80 leading-relaxed font-sans bg-primaryLight/10 p-4 rounded-xl">
+                                日本小児歯科学会 / 日本矯正歯科学会 / 日本歯周病学会 / 日本口腔インプラント学会 / 日本審美歯科学会
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Doctor Message Content -->
+            <div class="glass-card p-8 md:p-12 pl-12 rounded-[2rem] relative shadow-soft">
+                <div class="absolute left-0 top-0 bottom-0 w-2 bg-primary rounded-l-[2rem]"></div>
+                <h4 class="text-xl md:text-2xl font-medium mb-8">当院が大切にしていること</h4>
+                <div class="space-y-6 text-justify leading-[2] text-sm md:text-base text-textMain/90">
+                    <p>私の父は、30年近く小児矯正に携わってきた歯科医師です。幼い頃からその背中を見て育ち、歯並びや噛み合わせが日々の習慣で大きく変わることを学んできました。当院のコンセプトは「未来のいいお顔を育てる」。これはお子様だけに向けた言葉ではありません。矯正後の後戻り、顔の歪み — その多くは呼吸・姿勢・噛み癖といった習慣に原因があります。お子様の口腔育成から大人の矯正・審美治療まで、習慣へのアプローチを軸に、年齢を問わずお口と表情の健康を整えていく歯科医院です。</p>
+                    <p>大阪大学歯学部を卒業後、大規模医療法人にて一般歯科・インプラント・矯正・審美治療など幅広い症例を経験し、研修医指導医も務めました。その中で強く感じたのは、良い治療が患者様に正しく届いていないという現実です。私自身は大学まで野球に打ち込み、噛み合わせや口呼吸がパフォーマンスに直結することも実感してきました。歯並びと全身の健康の関係を、スポーツを頑張るお子様や保護者の方にも届けたいと考えています。</p>
+                    <p>父から受け継いだ口腔育成への想い、臨床で培った技術、そして患者様に「伝わる」情報発信力。この3つを軸に、「もっと早く知りたかった」「あの時聞けてよかった」— そう感じていただける歯科医院を目指しています。</p>
+                </div>
+            </div>
+
+            <!-- Banner immediately below -->
+            <div class="mt-16 text-center shadow-soft hover:shadow-float rounded-[2rem] overflow-hidden transition-shadow">
+                <a href="https://fshika.com/kidsortho" class="block">
+                    <img src="https://fshika.com/kids-orthodontics-banner.png" alt="豊洲 Fデンタルオフィス こども矯正 小児矯正" class="w-full">
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CONCERNS SECTION (Modern Light Revision) -->
+    <section class="relative py-28 md:py-32 overflow-hidden bg-gradient-to-b from-[#F5F2EE] to-white flex flex-col items-center">
+        <!-- Kept asset but made it light and subtle per instructions -->
+        <div class="absolute inset-0 z-0 opacity-[0.03] mix-blend-multiply pointer-events-none">
+            <img src="https://fshika.com/images/problem-bg-v2.jpg" alt="豊洲 歯科 歯医者 お悩み相談" class="w-full h-full object-cover grayscale">
+        </div>
+
+        <div class="relative z-10 w-full max-w-5xl mx-auto px-6 text-center">
+            
+            <h2 class="text-3xl md:text-5xl font-light tracking-widest mb-16 text-textMain/90">こんなお悩み<br class="md:hidden">ありませんか？</h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 max-w-3xl mx-auto mb-20 text-left">
+                <div class="glass-card p-6 rounded-2xl flex items-center gap-4 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                        <i class="ph-fill ph-baby text-2xl"></i>
+                    </div>
+                    <p class="font-medium tracking-wide">子供の歯並びが気になる...</p>
+                </div>
+                <div class="glass-card p-6 rounded-2xl flex items-center gap-4 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                        <i class="ph-fill ph-sparkle text-2xl"></i>
+                    </div>
+                    <p class="font-medium tracking-wide">銀歯を白くしたい...</p>
+                </div>
+                <div class="glass-card p-6 rounded-2xl flex items-center gap-4 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                        <i class="ph-fill ph-heart-beat text-2xl"></i>
+                    </div>
+                    <p class="font-medium tracking-wide">痛くない治療を受けたい...</p>
+                </div>
+                <div class="glass-card p-6 rounded-2xl flex items-center gap-4 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                        <i class="ph-fill ph-check-square-offset text-2xl"></i>
+                    </div>
+                    <p class="font-medium tracking-wide">インプラントに興味がある...</p>
+                </div>
+            </div>
+
+            <!-- Transition to Solution -->
+            <div class="max-w-2xl mx-auto text-center">
+                <p class="text-lg md:text-xl mb-6 text-textMain/70">こんなお悩み全て...</p>
+                <p class="text-base md:text-lg tracking-widest font-bold mb-4 text-primary">
+                    <span class="text-marker pb-1">豊洲駅から徒歩2分の歯医者</span>
+                </p>
+                <h3 class="text-2xl md:text-4xl font-medium tracking-wider mb-6">
+                    Fデンタルオフィス<br class="md:hidden">
+                    <span class="text-xl md:text-3xl mt-2 block font-light">豊洲プライムスクエア院</span>
+                </h3>
+                <p class="text-xl md:text-2xl mb-12 font-medium">で解決！</p>
+
+                <p class="text-sm tracking-widest text-textMain/60 mb-4 uppercase">WEB予約はこちら</p>
+                <div class="rounded-3xl overflow-hidden shadow-soft mb-8">
+                    <a href="https://fshika.com/#" class="block w-full">
+                        <img src="https://fshika.com/images/web-reserve-banner-v3.png" alt="豊洲 歯医者 24時間WEB予約受付中 Fデンタルオフィス" class="w-full hover:opacity-90 transition-opacity">
+                    </a>
+                </div>
+                
+                <a href="tel:03-6204-2876" class="inline-flex flex-col md:flex-row items-center justify-center gap-2 md:gap-6 bg-white border border-primaryLight px-8 py-5 rounded-full mx-auto hover:bg-bgSoft transition-colors shadow-sm w-full md:w-auto">
+                    <div class="flex items-center gap-3">
+                        <i class="ph-fill ph-phone-call text-primary text-2xl"></i>
+                        <span class="text-2xl font-sans tracking-wide">03-6204-2876</span>
+                    </div>
+                    <div class="w-full md:w-px h-px md:h-8 bg-primaryLight my-2 md:my-0"></div>
+                    <span class="text-[11px] text-textMain/70 text-center md:text-left font-sans">受付時間：平日 10:00-18:30<br>土日 9:00-16:00</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES SECTION -->
+    <section class="py-24 bg-white border-t border-primaryLight/30">
+        <div class="max-w-5xl mx-auto px-6">
+            
+            <div class="text-center mb-20 space-y-4">
+                <span class="font-sans text-xs tracking-[0.3em] text-primary uppercase">Features</span>
+                <h2 class="text-3xl font-light tracking-widest">当院の5つの特徴</h2>
+            </div>
+
+            <div class="space-y-24">
+                <!-- Wrapper for each feature for crisp alignment -->
+                
+                <!-- 01 -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
+                    <div class="order-2 md:order-1 relative">
+                        <span class="absolute -top-10 -left-6 text-7xl font-sans font-black text-primaryLight/30 z-0">01</span>
+                        <div class="relative z-10 pl-2">
+                            <h3 class="text-2xl font-medium mb-4 leading-relaxed">歯を「最大限残す」<br>保存治療</h3>
+                            <p class="text-textMain/75 leading-relaxed text-[13px] md:text-sm">歯を細かく見れる拡大鏡、より精密に治療できるマイクロスコープ、精密診断を可能にする３Dスキャナー・CT。これらの最新設備と診断力で、できる限り削らない・抜かない治療を実現します。</p>
+                        </div>
+                    </div>
+                    <div class="order-1 md:order-2 rounded-3xl overflow-hidden aspect-[4/3] border border-primaryLight/30">
+                        <img src="https://fshika.com/images/pages/homepage/feature5.jpg" alt="豊洲 歯科 保存治療 削らない治療" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <!-- 02 -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
+                    <div class="rounded-3xl overflow-hidden aspect-[4/3] border border-primaryLight/30">
+                        <img src="https://fshika.com/images/pages/homepage/feature1.jpg" alt="豊洲 歯科 透明性のある治療説明" class="w-full h-full object-cover">
+                    </div>
+                    <div class="relative">
+                        <span class="absolute -top-10 -right-6 text-7xl font-sans font-black text-primaryLight/30 z-0 text-right w-full">02</span>
+                        <div class="relative z-10 pr-2">
+                            <h3 class="text-2xl font-medium mb-4 leading-relaxed">すべて見せる、<br>わかりやすい最新の透明な治療</h3>
+                            <p class="text-textMain/75 leading-relaxed text-[13px] md:text-sm mb-6">治療前には必ず口の中の写真を撮影し、現在の状態を一緒に確認します。さらに３Dスキャナーで歯並びを立体的にデータ化し、ペン型カメラで細部まで拡大して見ることができます。これらの最新機器を使って、お口の状態や治療内容を丁寧にわかりやすく説明します。</p>
+                            <a href="https://fshika.com/kidsortho" class="inline-flex items-center gap-2 text-primary font-sans text-xs border border-primaryLight px-5 py-2 rounded-full hover:bg-bgSoft">詳細 <i class="ph ph-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 03 -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
+                    <div class="order-2 md:order-1 relative">
+                        <span class="absolute -top-10 -left-6 text-7xl font-sans font-black text-primaryLight/30 z-0">03</span>
+                        <div class="relative z-10 pl-2">
+                            <h3 class="text-2xl font-medium mb-4 leading-relaxed">「お顔」も育てる<br>こども矯正</h3>
+                            <p class="text-textMain/75 leading-relaxed text-[13px] md:text-sm">歯並びだけでなく、お顔全体の成長を考えた治療を行います。それを補助するために、当院独自の歯ならびの教科書を、来院した子ども患者さん全員にお渡しします。</p>
+                        </div>
+                    </div>
+                    <div class="order-1 md:order-2 rounded-3xl overflow-hidden aspect-[4/3] border border-primaryLight/30">
+                        <img src="https://fshika.com/images/pages/homepage/feature2.jpg" alt="豊洲 Fデンタルオフィス こども矯正 歯並びの教科書" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <!-- 04 -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
+                    <div class="rounded-3xl overflow-hidden aspect-[4/3] border border-primaryLight/30">
+                        <img src="https://fshika.com/images/pages/homepage/feature3.jpg" alt="豊洲 歯医者 個室診療室 天井テレビ" class="w-full h-full object-cover">
+                    </div>
+                    <div class="relative">
+                        <span class="absolute -top-10 -right-6 text-7xl font-sans font-black text-primaryLight/30 z-0 text-right w-full">04</span>
+                        <div class="relative z-10 pr-2">
+                            <h3 class="text-2xl font-medium mb-4 leading-relaxed">天井テレビ付き<br>個室の診療室</h3>
+                            <p class="text-textMain/75 leading-relaxed text-[13px] md:text-sm mb-6">個室でプライバシーを確保。天井テレビがあるため、子供が通いやすい環境を整備しています。</p>
+                            <a href="https://fshika.com/ceramic" class="inline-flex items-center gap-2 text-primary font-sans text-xs border border-primaryLight px-5 py-2 rounded-full hover:bg-bgSoft">詳細 <i class="ph ph-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 05 -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
+                    <div class="order-2 md:order-1 relative">
+                        <span class="absolute -top-10 -left-6 text-7xl font-sans font-black text-primaryLight/30 z-0">05</span>
+                        <div class="relative z-10 pl-2">
+                            <h3 class="text-2xl font-medium mb-4 leading-relaxed">「後悔しない」ための<br>審美歯科</h3>
+                            <p class="text-textMain/75 leading-relaxed text-[13px] md:text-sm">審美歯科で大事なのは、見た目と機能の両立です。それを実現するために、当院では精密診療を行える環境を整備しています。</p>
+                        </div>
+                    </div>
+                    <div class="order-1 md:order-2 rounded-3xl overflow-hidden aspect-[4/3] border border-primaryLight/30">
+                        <img src="https://fshika.com/images/pages/homepage/feature4.jpg" alt="豊洲 審美歯科 セラミック治療 ホワイトニング" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CASE STUDIES & CAROUSEL -->
+    <section id="cases" class="py-24 bg-bgSoft relative">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center mb-16 space-y-4">
+                <span class="font-sans text-xs tracking-[0.3em] text-primary uppercase">Case Studies</span>
+                <h2 class="text-3xl font-light tracking-widest">症例紹介</h2>
+            </div>
+
+            <!-- Full-width Carousel Component -->
+            <div class="relative max-w-4xl mx-auto">
+                <div id="case-carousel" class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth w-full no-scrollbar pb-6 gap-6">
+                    
+                    <!-- Slide 1 -->
+                    <div class="min-w-full snap-center shrink-0 flex flex-col items-center">
+                        <div class="glass-card w-full p-6 md:p-8 rounded-3xl">
+                            <div class="flex flex-col items-center mb-8 border-b border-primaryLight/50 pb-4">
+                                <span class="text-xs bg-bgSoft text-textMain px-3 py-1 rounded-full mb-2 font-sans tracking-widest border border-primaryLight/30">20代 女性</span>
+                                <h3 class="text-xl md:text-2xl font-medium">前歯の隙間改善</h3>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-8 w-full">
+                                <div class="space-y-3 relative group">
+                                    <span class="absolute top-4 left-4 z-10 bg-black/60 text-white text-[10px] px-3 py-1 rounded backdrop-blur-sm font-sans tracking-widest">Before</span>
+                                    <div class="rounded-2xl overflow-hidden aspect-[4/3] border border-primaryLight/30 bg-primaryLight/10">
+                                        <img src="https://fshika.com/images/pages/homepage/case1-before.jpg" alt="前歯の隙間改善 - Before" class="w-full h-full object-cover mix-blend-multiply opacity-80">
+                                    </div>
+                                </div>
+                                <div class="space-y-3 relative">
+                                    <span class="absolute top-4 left-4 z-10 bg-primary/90 text-white text-[10px] px-3 py-1 rounded backdrop-blur-sm font-sans tracking-widest">After</span>
+                                    <div class="rounded-2xl overflow-hidden aspect-[4/3] shadow-soft border border-primaryLight/10">
+                                        <img src="https://fshika.com/images/pages/homepage/case1-after.jpg" alt="前歯の隙間改善 - After" class="w-full h-full object-cover">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="min-w-full snap-center shrink-0 flex flex-col items-center">
+                        <div class="glass-card w-full p-6 md:p-8 rounded-3xl">
+                            <div class="flex flex-col items-center mb-8 border-b border-primaryLight/50 pb-4">
+                                <span class="text-xs bg-bgSoft text-textMain px-3 py-1 rounded-full mb-2 font-sans tracking-widest border border-primaryLight/30">30代 男性</span>
+                                <h3 class="text-xl md:text-2xl font-medium">銀歯をセラミックに</h3>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-8 w-full">
+                                <div class="space-y-3 relative">
+                                    <span class="absolute top-4 left-4 z-10 bg-black/60 text-white text-[10px] px-3 py-1 rounded backdrop-blur-sm font-sans tracking-widest">Before</span>
+                                    <div class="rounded-2xl overflow-hidden aspect-[4/3] border border-primaryLight/30 bg-primaryLight/10">
+                                        <img src="https://fshika.com/images/pages/homepage/case2-before.jpg" alt="銀歯をセラミックに - Before" class="w-full h-full object-cover mix-blend-multiply opacity-80">
+                                    </div>
+                                </div>
+                                <div class="space-y-3 relative">
+                                    <span class="absolute top-4 left-4 z-10 bg-primary/90 text-white text-[10px] px-3 py-1 rounded backdrop-blur-sm font-sans tracking-widest">After</span>
+                                    <div class="rounded-2xl overflow-hidden aspect-[4/3] shadow-soft border border-primaryLight/10">
+                                        <img src="https://fshika.com/images/pages/homepage/case2-after.jpg" alt="銀歯をセラミックに - After" class="w-full h-full object-cover">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="min-w-full snap-center shrink-0 flex flex-col items-center">
+                        <div class="glass-card w-full p-6 md:p-8 rounded-3xl">
+                            <div class="flex flex-col items-center mb-8 border-b border-primaryLight/50 pb-4">
+                                <span class="text-xs bg-bgSoft text-textMain px-3 py-1 rounded-full mb-2 font-sans tracking-widest border border-primaryLight/30">20代 女性</span>
+                                <h3 class="text-xl md:text-2xl font-medium">ホワイトニング</h3>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-8 w-full">
+                                <div class="space-y-3 relative">
+                                    <span class="absolute top-4 left-4 z-10 bg-black/60 text-white text-[10px] px-3 py-1 rounded backdrop-blur-sm font-sans tracking-widest">Before</span>
+                                    <div class="rounded-2xl overflow-hidden aspect-[4/3] border border-primaryLight/30 bg-primaryLight/10">
+                                        <img src="https://fshika.com/images/pages/homepage/case3-before.jpg" alt="ホワイトニング - Before" class="w-full h-full object-cover mix-blend-multiply opacity-80">
+                                    </div>
+                                </div>
+                                <div class="space-y-3 relative">
+                                    <span class="absolute top-4 left-4 z-10 bg-primary/90 text-white text-[10px] px-3 py-1 rounded backdrop-blur-sm font-sans tracking-widest">After</span>
+                                    <div class="rounded-2xl overflow-hidden aspect-[4/3] shadow-soft border border-primaryLight/10">
+                                        <img src="https://fshika.com/images/pages/homepage/case3-after.jpg" alt="ホワイトニング - After" class="w-full h-full object-cover">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 4 -->
+                    <div class="min-w-full snap-center shrink-0 flex flex-col items-center">
+                        <div class="glass-card w-full p-6 md:p-8 rounded-3xl">
+                            <div class="flex flex-col items-center mb-8 border-b border-primaryLight/50 pb-4">
+                                <span class="text-xs bg-bgSoft text-textMain px-3 py-1 rounded-full mb-2 font-sans tracking-widest border border-primaryLight/30">50代 男性</span>
+                                <h3 class="text-xl md:text-2xl font-medium">インプラント治療</h3>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-8 w-full">
+                                <div class="space-y-3 relative">
+                                    <span class="absolute top-4 left-4 z-10 bg-black/60 text-white text-[10px] px-3 py-1 rounded backdrop-blur-sm font-sans tracking-widest">Before</span>
+                                    <div class="rounded-2xl overflow-hidden aspect-[4/3] border border-primaryLight/30 bg-primaryLight/10">
+                                        <img src="https://fshika.com/images/pages/homepage/case4-before.jpg" alt="インプラント治療 - Before" class="w-full h-full object-cover mix-blend-multiply opacity-80">
+                                    </div>
+                                </div>
+                                <div class="space-y-3 relative">
+                                    <span class="absolute top-4 left-4 z-10 bg-primary/90 text-white text-[10px] px-3 py-1 rounded backdrop-blur-sm font-sans tracking-widest">After</span>
+                                    <div class="rounded-2xl overflow-hidden aspect-[4/3] shadow-soft border border-primaryLight/10">
+                                        <img src="https://fshika.com/images/pages/homepage/case4-after.jpg" alt="インプラント治療 - After" class="w-full h-full object-cover">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Dots -->
+                <div class="flex justify-center gap-3 mt-4" id="carousel-dots">
+                    <button class="carousel-dot w-2 h-2 rounded-full bg-primary transition-colors"></button>
+                    <button class="carousel-dot w-2 h-2 rounded-full bg-primaryLight transition-colors"></button>
+                    <button class="carousel-dot w-2 h-2 rounded-full bg-primaryLight transition-colors"></button>
+                    <button class="carousel-dot w-2 h-2 rounded-full bg-primaryLight transition-colors"></button>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="https://fshika.com/case-studies" class="inline-flex items-center gap-2 text-primary border-b border-primary pb-1 hover:opacity-70 transition-opacity tracking-widest text-sm">
+                    すべての症例を見る <i class="ph ph-arrow-right"></i>
+                </a>
+            </div>
+
+            <!-- Pre-footer CTA -->
+            <div class="mt-24 max-w-3xl mx-auto flex flex-col md:flex-row gap-4 items-center bg-white p-2 rounded-full shadow-sm border border-primaryLight/30">
+                <div class="flex-1 w-full relative h-[60px] md:h-auto md:aspect-[4/1] rounded-full overflow-hidden">
+                    <a href="https://fshika.com/#" class="block w-full h-full">
+                        <img src="https://fshika.com/images/web-reserve-banner-v3.png" alt="豊洲 歯医者 24時間WEB予約受付中 Fデンタルオフィス" class="w-full h-full object-cover hover:opacity-90 transition-opacity">
+                    </a>
+                </div>
+                <a href="tel:03-6204-2876" class="flex-1 w-full flex items-center justify-center gap-3 py-4 md:py-0 rounded-full hover:bg-bgSoft transition-colors">
+                    <i class="ph-fill ph-phone-call text-primary text-xl"></i>
+                    <div class="text-left font-sans text-textMain/80">
+                        <span class="block text-xl font-medium tracking-wide leading-none">03-6204-2876</span>
+                        <span class="block text-[10px] tracking-widest mt-1">お気軽にお電話ください</span>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FACILITIES -->
+    <section id="facilities" class="py-24 bg-white">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center mb-16 space-y-4">
+                <span class="font-sans text-xs tracking-[0.3em] text-primary uppercase">Facilities</span>
+                <h2 class="text-3xl font-light tracking-widest">院内設備</h2>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
+                <!-- Items are standard square/rect grids with inner text banner -->
+                <div class="rounded-2xl overflow-hidden aspect-[4/3] group relative border border-primaryLight/30">
+                    <img src="https://fshika.com/images/pages/homepage/facility1.jpg" alt="リラックスできる広々とした待合室" class="w-full h-full object-cover">
+                    <div class="absolute bottom-4 left-4 right-4 glass-card p-3 rounded-xl text-center text-sm tracking-wide">
+                        リラックスできる広々とした待合室
+                    </div>
+                </div>
+                <div class="rounded-2xl overflow-hidden aspect-[4/3] group relative border border-primaryLight/30">
+                    <img src="https://fshika.com/images/pages/homepage/facility2.jpg" alt="プライバシーに配慮した診療室" class="w-full h-full object-cover">
+                    <div class="absolute bottom-4 left-4 right-4 glass-card p-3 rounded-xl text-center text-sm tracking-wide">
+                        プライバシーに配慮した診療室
+                    </div>
+                </div>
+                <div class="rounded-2xl overflow-hidden aspect-[4/3] group relative border border-primaryLight/30">
+                    <img src="https://fshika.com/images/pages/homepage/facility3.jpg" alt="正確な診断を可能にする歯科用CT" class="w-full h-full object-cover">
+                    <div class="absolute bottom-4 left-4 right-4 glass-card p-3 rounded-xl text-center text-sm tracking-wide">
+                        正確な診断を可能にする歯科用CT
+                    </div>
+                </div>
+                <div class="rounded-2xl overflow-hidden aspect-[4/3] group relative border border-primaryLight/30">
+                    <img src="https://fshika.com/images/pages/homepage/facility4.jpg" alt="お子様も退屈しないキッズスペース" class="w-full h-full object-cover">
+                    <div class="absolute bottom-4 left-4 right-4 glass-card p-3 rounded-xl text-center text-sm tracking-wide">
+                        お子様も退屈しないキッズスペース
+                    </div>
+                </div>
+            </div>
+            <p class="text-center mt-6 text-sm">プライバシーに配慮した診療室</p>
+            
+            <div class="text-center mt-12">
+                <a href="https://fshika.com/facilities" class="inline-flex items-center justify-center bg-bgSoft border border-primaryLight text-textMain px-8 py-3 rounded-full hover:bg-white transition-colors tracking-widest text-sm">
+                    院内設備を見る
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FLOW -->
+    <section class="py-24 bg-bgSoft border-t border-primaryLight/50">
+        <div class="max-w-3xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-2xl md:text-3xl font-light tracking-widest border-b border-primaryLight pb-4 inline-block px-8">診療の流れ</h2>
+            </div>
+
+            <!-- Single line container -->
+            <div class="relative flex flex-col pl-4 md:pl-0 space-y-16">
+                <div class="absolute left-[20px] md:left-1/2 top-4 bottom-4 w-px bg-primaryLight md:-translate-x-1/2 z-0 hidden md:block"></div>
+
+                <!-- Steps loop style -->
+                <!-- Note: The HTML is linear to keep correct DOM order and simplistic structural reading -->
+                
+                <div class="relative bg-white border border-primaryLight/50 p-6 md:p-8 rounded-3xl z-10 shadow-sm ml-6 md:ml-0 md:w-[90%] md:mx-auto mt-4">
+                    <div class="absolute -left-10 md:left-1/2 top-4 md:-top-6 md:-translate-x-1/2 w-10 md:w-12 h-10 md:h-12 bg-white rounded-full border border-primaryLight flex items-center justify-center font-sans font-medium text-primary shadow-sm bg-bgSoft">01</div>
+                    <h4 class="text-lg md:text-xl font-medium mb-4 mt-2 md:mt-6 text-center">ご予約・ご来院</h4>
+                    <img src="https://fshika.com/images/pages/homepage/%E3%82%B9%E3%83%9E%E3%83%9B%E3%81%A7%E4%BA%88%E7%B4%84%E3%81%99%E3%82%8B%E4%BA%BA.jpg" alt="ご予約・ご来院" class="rounded-xl w-full max-w-sm mx-auto object-cover mb-4 aspect-[21/9]">
+                    <p class="text-[13px] md:text-sm text-textMain/80 leading-relaxed max-w-md mx-auto text-center border-t border-primaryLight/30 pt-4">WEBまたはお電話にてご予約ください。初診の方は問診票の記入がありますので、10分前にお越しください。</p>
+                </div>
+
+                <div class="relative bg-white border border-primaryLight/50 p-6 md:p-8 rounded-3xl z-10 shadow-sm ml-6 md:ml-0 md:w-[90%] md:mx-auto">
+                    <div class="absolute -left-10 md:left-1/2 top-4 md:-top-6 md:-translate-x-1/2 w-10 md:w-12 h-10 md:h-12 bg-white rounded-full border border-primaryLight flex items-center justify-center font-sans font-medium text-primary shadow-sm bg-bgSoft">02</div>
+                    <h4 class="text-lg md:text-xl font-medium mb-4 mt-2 md:mt-6 text-center">症状のカウンセリング</h4>
+                    <img src="https://fshika.com/images/pages/homepage/%E5%8F%97%E4%BB%98%E3%81%A7%E6%8C%A8%E6%8B%B6%E3%81%97%E3%81%A6%E3%81%84%E3%82%8B%E5%A0%B4%E9%9D%A2.jpg" alt="症状のカウンセリング" class="rounded-xl w-full max-w-sm mx-auto object-cover mb-4 aspect-[21/9]">
+                    <p class="text-[13px] md:text-sm text-textMain/80 leading-relaxed max-w-md mx-auto text-center border-t border-primaryLight/30 pt-4">現在のお悩みや症状について詳しくお伺いします。不安なことや気になることは何でもご相談ください。</p>
+                </div>
+
+                <div class="relative bg-white border border-primaryLight/50 p-6 md:p-8 rounded-3xl z-10 shadow-sm ml-6 md:ml-0 md:w-[90%] md:mx-auto">
+                    <div class="absolute -left-10 md:left-1/2 top-4 md:-top-6 md:-translate-x-1/2 w-10 md:w-12 h-10 md:h-12 bg-white rounded-full border border-primaryLight flex items-center justify-center font-sans font-medium text-primary shadow-sm bg-bgSoft">03</div>
+                    <h4 class="text-lg md:text-xl font-medium mb-4 mt-2 md:mt-6 text-center">レントゲン撮影</h4>
+                    <img src="https://fshika.com/images/pages/homepage/%E3%82%AB%E3%82%A6%E3%83%B3%E3%82%BB%E3%83%AA%E3%83%B3%E3%82%B0%E3%81%A7%E5%8C%BB%E5%B8%AB%E3%81%A8%E6%82%A3%E8%80%85%E3%81%8C%E8%A9%B1%E3%81%97%E3%81%A6%E3%81%84%E3%82%8B%E5%A0%B4%E9%9D%A2.jpg" alt="レントゲン撮影" class="rounded-xl w-full max-w-sm mx-auto object-cover mb-4 aspect-[21/9]">
+                    <p class="text-[13px] md:text-sm text-textMain/80 leading-relaxed max-w-md mx-auto text-center border-t border-primaryLight/30 pt-4">お口の状態を正確に把握するため、レントゲン撮影を行います。必要に応じて歯科用CTでの撮影も実施します。</p>
+                </div>
+
+                <div class="relative bg-white border border-primaryLight/50 p-6 md:p-8 rounded-3xl z-10 shadow-sm ml-6 md:ml-0 md:w-[90%] md:mx-auto">
+                    <div class="absolute -left-10 md:left-1/2 top-4 md:-top-6 md:-translate-x-1/2 w-10 md:w-12 h-10 md:h-12 bg-white rounded-full border border-primaryLight flex items-center justify-center font-sans font-medium text-primary shadow-sm bg-bgSoft">04</div>
+                    <h4 class="text-lg md:text-xl font-medium mb-4 mt-2 md:mt-6 text-center">歯周病検査、口腔内写真の撮影</h4>
+                    <img src="https://fshika.com/images/pages/homepage/%E6%B2%BB%E7%99%82%E4%B8%AD%E3%81%AE%E5%A0%B4%E9%9D%A2.jpg" alt="歯周病検査、口腔内写真の撮影" class="rounded-xl w-full max-w-sm mx-auto object-cover mb-4 aspect-[21/9]">
+                    <p class="text-[13px] md:text-sm text-textMain/80 leading-relaxed max-w-md mx-auto text-center border-t border-primaryLight/30 pt-4">歯周ポケットの深さを測定し、口腔内写真を撮影します。現在の状態を視覚的に確認いただけます。</p>
+                </div>
+
+                <div class="relative bg-white border border-primaryLight/50 p-6 md:p-8 rounded-3xl z-10 shadow-sm ml-6 md:ml-0 md:w-[90%] md:mx-auto">
+                    <div class="absolute -left-10 md:left-1/2 top-4 md:-top-6 md:-translate-x-1/2 w-10 md:w-12 h-10 md:h-12 bg-white rounded-full border border-primaryLight flex items-center justify-center font-sans font-medium text-primary shadow-sm bg-bgSoft">05</div>
+                    <h4 class="text-lg md:text-xl font-medium mb-4 mt-2 md:mt-6 text-center">治療計画の説明</h4>
+                    <img src="https://fshika.com/images/pages/homepage/%E6%AC%A1%E5%9B%9E%E4%BA%88%E7%B4%84%E3%82%92%E3%81%97%E3%81%A6%E3%81%84%E3%82%8B%E5%A0%B4%E9%9D%A2.jpg" alt="治療計画の説明" class="rounded-xl w-full max-w-sm mx-auto object-cover mb-4 aspect-[21/9]">
+                    <p class="text-[13px] md:text-sm text-textMain/80 leading-relaxed max-w-md mx-auto text-center border-t border-primaryLight/30 pt-4">検査結果に基づき、最適な治療プランをご提案します。費用や期間についても詳しくご説明します。</p>
+                </div>
+
+                <div class="relative bg-white border border-primaryLight/50 p-6 md:p-8 rounded-3xl z-10 shadow-sm ml-6 md:ml-0 md:w-[90%] md:mx-auto">
+                    <div class="absolute -left-10 md:left-1/2 top-4 md:-top-6 md:-translate-x-1/2 w-10 md:w-12 h-10 md:h-12 bg-primary text-white rounded-full flex items-center justify-center font-sans font-medium shadow-sm">06</div>
+                    <h4 class="text-lg md:text-xl font-medium mb-4 mt-2 md:mt-6 text-center">治療開始</h4>
+                    <img src="https://fshika.com/images/pages/homepage/step6.jpg" alt="治療開始" class="rounded-xl w-full max-w-sm mx-auto object-cover mb-4 aspect-[21/9]">
+                    <p class="text-[13px] md:text-sm text-textMain/80 leading-relaxed max-w-md mx-auto text-center border-t border-primaryLight/30 pt-4">同意いただいたプランに沿って治療を進めます。痛みに配慮し、丁寧な処置を心がけます。</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- MENU SECTION -->
+    <section class="py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-2xl md:text-3xl font-light tracking-widest mb-3">診療メニュー</h2>
+                <p class="text-textMain/60 text-sm tracking-wide">あらゆるお口のお悩みに対応いたします</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6">
+                <!-- Using clean icon mapping as requested -->
+                <a href="https://fshika.com/kidsortho" class="group flex flex-col items-center bg-bgSoft/50 p-5 rounded-2xl hover:bg-bgSoft transition-colors border border-transparent hover:border-primaryLight/50 text-center">
+                    <img src="https://fshika.com/images/icons/05_%E7%9F%AF%E6%AD%A3%E6%AD%AF%E7%A7%91.png" alt="こども矯正" class="w-10 opacity-70 mb-3 mix-blend-multiply group-hover:scale-110 transition-transform">
+                    <strong class="text-xs font-medium tracking-wide">こども矯正</strong>
+                </a>
+                
+                <a href="https://fshika.com/kids/oral-education" class="group flex flex-col items-center bg-bgSoft/50 p-5 rounded-2xl hover:bg-bgSoft transition-colors border border-transparent hover:border-primaryLight/50 text-center">
+                    <img src="https://fshika.com/images/icons/12_%E5%B0%8F%E5%85%90%E6%AD%AF%E7%A7%91.png" alt="０歳からの口育" class="w-10 opacity-70 mb-3 mix-blend-multiply group-hover:scale-110 transition-transform">
+                    <strong class="text-xs font-medium tracking-wide">０歳からの口育</strong>
+                </a>
+
+                <a href="https://fshika.com/kids/preventive" class="group flex flex-col items-center bg-bgSoft/50 p-5 rounded-2xl hover:bg-bgSoft transition-colors border border-transparent hover:border-primaryLight/50 text-center">
+                    <img src="https://fshika.com/images/icons/12_%E5%B0%8F%E5%85%90%E6%AD%AF%E7%A7%91.png" alt="こども歯科・予防" class="w-10 opacity-70 mb-3 mix-blend-multiply group-hover:scale-110 transition-transform">
+                    <strong class="text-xs font-medium tracking-wide">こども歯科・予防</strong>
+                </a>
+
+                <a href="https://fshika.com/aesthetic/ceramic" class="group flex flex-col items-center bg-bgSoft/50 p-5 rounded-2xl hover:bg-bgSoft transition-colors border border-transparent hover:border-primaryLight/50 text-center">
+                    <img src="https://fshika.com/images/icons/14_%E5%AF%A9%E7%BE%8E%E6%AD%AF%E7%A7%91.png" alt="セラミック治療" class="w-10 opacity-70 mb-3 mix-blend-multiply group-hover:scale-110 transition-transform">
+                    <strong class="text-xs font-medium tracking-wide">セラミック治療</strong>
+                </a>
+
+                <a href="https://fshika.com/mouthpiece" class="group flex flex-col items-center bg-bgSoft/50 p-5 rounded-2xl hover:bg-bgSoft transition-colors border border-transparent hover:border-primaryLight/50 text-center">
+                    <img src="https://fshika.com/images/icons/06_%E3%83%9E%E3%82%A6%E3%82%B9%E3%83%94%E3%83%BC%E3%82%B9%E7%9F%AF%E6%AD%A3.png" alt="マウスピース矯正" class="w-10 opacity-70 mb-3 mix-blend-multiply group-hover:scale-110 transition-transform">
+                    <strong class="text-xs font-medium tracking-wide">マウスピース矯正</strong>
+                </a>
+
+                <a href="https://fshika.com/orthodontics" class="group flex flex-col items-center bg-bgSoft/50 p-5 rounded-2xl hover:bg-bgSoft transition-colors border border-transparent hover:border-primaryLight/50 text-center">
+                    <img src="https://fshika.com/images/icons/05_%E7%9F%AF%E6%AD%A3%E6%AD%AF%E7%A7%91.png" alt="矯正歯科" class="w-10 opacity-70 mb-3 mix-blend-multiply group-hover:scale-110 transition-transform">
+                    <strong class="text-xs font-medium tracking-wide">矯正歯科</strong>
+                </a>
+
+                <a href="https://fshika.com/implant" class="group flex flex-col items-center bg-bgSoft/50 p-5 rounded-2xl hover:bg-bgSoft transition-colors border border-transparent hover:border-primaryLight/50 text-center">
+                    <img src="https://fshika.com/images/icons/07_%E3%82%A4%E3%83%B3%E3%83%97%E3%83%A9%E3%83%B3%E3%83%88.png" alt="インプラント" class="w-10 opacity-70 mb-3 mix-blend-multiply group-hover:scale-110 transition-transform">
+                    <strong class="text-xs font-medium tracking-wide">インプラント</strong>
+                </a>
+
+                <a href="https://fshika.com/whitening" class="group flex flex-col items-center bg-bgSoft/50 p-5 rounded-2xl hover:bg-bgSoft transition-colors border border-transparent hover:border-primaryLight/50 text-center">
+                    <img src="https://fshika.com/images/icons/15_%E3%83%9B%E3%83%AF%E3%82%A4%E3%83%88%E3%83%8B%E3%83%B3%E3%82%B0.png" alt="ホワイトニング" class="w-10 opacity-70 mb-3 mix-blend-multiply group-hover:scale-110 transition-transform">
+                    <strong class="text-xs font-medium tracking-wide">ホワイトニング</strong>
+                </a>
+
+                <a href="https://fshika.com/preventive" class="group flex flex-col items-center bg-bgSoft/50 p-5 rounded-2xl hover:bg-bgSoft transition-colors border border-transparent hover:border-primaryLight/50 text-center">
+                    <img src="https://fshika.com/images/icons/13_%E4%BA%88%E9%98%B2%E6%AD%AF%E7%A7%91.png" alt="予防歯科" class="w-10 opacity-70 mb-3 mix-blend-multiply group-hover:scale-110 transition-transform">
+                    <strong class="text-xs font-medium tracking-wide">予防歯科</strong>
+                </a>
+
+                <a href="https://fshika.com/general/bad-breath" class="group flex flex-col items-center bg-bgSoft/50 p-5 rounded-2xl hover:bg-bgSoft transition-colors border border-transparent hover:border-primaryLight/50 text-center">
+                    <img src="https://fshika.com/images/icons/10_%E5%8F%A3%E8%85%94%E5%A4%96%E7%A7%91.png" alt="口臭治療" class="w-10 opacity-70 mb-3 mix-blend-multiply group-hover:scale-110 transition-transform">
+                    <strong class="text-xs font-medium tracking-wide">口臭治療</strong>
+                </a>
+
+                <a href="https://fshika.com/cavity" class="group flex flex-col items-center bg-bgSoft/50 p-5 rounded-2xl hover:bg-bgSoft transition-colors border border-transparent hover:border-primaryLight/50 text-center">
+                    <img src="https://fshika.com/images/icons/01_%E8%99%AB%E6%AD%AF%E6%B2%BB%E7%99%82.png" alt="むしば治療" class="w-10 opacity-70 mb-3 mix-blend-multiply group-hover:scale-110 transition-transform">
+                    <strong class="text-xs font-medium tracking-wide">むしば治療</strong>
+                </a>
+
+                <a href="https://fshika.com/root-canal" class="group flex flex-col items-center bg-bgSoft/50 p-5 rounded-2xl hover:bg-bgSoft transition-colors border border-transparent hover:border-primaryLight/50 text-center">
+                    <img src="https://fshika.com/images/icons/03_%E6%A0%B9%E7%AE%A1%E6%B2%BB%E7%99%82.png" alt="根管治療" class="w-10 opacity-70 mb-3 mix-blend-multiply group-hover:scale-110 transition-transform">
+                    <strong class="text-xs font-medium tracking-wide">根管治療</strong>
+                </a>
+
+                <a href="https://fshika.com/periodontal" class="group flex flex-col items-center bg-bgSoft/50 p-5 rounded-2xl hover:bg-bgSoft transition-colors border border-transparent hover:border-primaryLight/50 text-center">
+                    <img src="https://fshika.com/images/icons/02_%E6%AD%AF%E5%91%A8%E7%97%85%E6%B2%BB%E7%99%82.png" alt="歯周病治療" class="w-10 opacity-70 mb-3 mix-blend-multiply group-hover:scale-110 transition-transform">
+                    <strong class="text-xs font-medium tracking-wide">歯周病治療</strong>
+                </a>
+
+                <a href="https://fshika.com/wisdom" class="group flex flex-col items-center bg-bgSoft/50 p-5 rounded-2xl hover:bg-bgSoft transition-colors border border-transparent hover:border-primaryLight/50 text-center">
+                    <img src="https://fshika.com/images/icons/04_%E8%A6%AA%E7%9F%A5%E3%82%89%E3%81%9A.png" alt="親知らず抜歯" class="w-10 opacity-70 mb-3 mix-blend-multiply group-hover:scale-110 transition-transform">
+                    <strong class="text-xs font-medium tracking-wide">親知らず抜歯</strong>
+                </a>
+
+                <a href="https://fshika.com/concerns/trauma" class="group flex flex-col items-center bg-bgSoft/50 p-5 rounded-2xl hover:bg-bgSoft transition-colors border border-transparent hover:border-primaryLight/50 text-center">
+                    <img src="https://fshika.com/images/icons/10_%E5%8F%A3%E8%85%94%E5%A4%96%E7%A7%91.png" alt="歯の外傷・急患" class="w-10 opacity-70 mb-3 mix-blend-multiply group-hover:scale-110 transition-transform">
+                    <strong class="text-xs font-medium tracking-wide">歯の外傷・急患</strong>
+                </a>
+
+                <a href="https://fshika.com/concerns/bruxism" class="group flex flex-col items-center bg-bgSoft/50 p-5 rounded-2xl hover:bg-bgSoft transition-colors border border-transparent hover:border-primaryLight/50 text-center">
+                    <img src="https://fshika.com/images/icons/09_%E6%AD%AF%E3%81%8E%E3%81%97%E3%82%8A.png" alt="歯ぎしり・食いしばり" class="w-10 opacity-70 mb-3 mix-blend-multiply group-hover:scale-110 transition-transform">
+                    <strong class="text-xs font-medium tracking-wide">歯ぎしり・食いしばり</strong>
+                </a>
+
+                <a href="https://fshika.com/concerns/tmj" class="group flex flex-col items-center bg-bgSoft/50 p-5 rounded-2xl hover:bg-bgSoft transition-colors border border-transparent hover:border-primaryLight/50 text-center">
+                    <img src="https://fshika.com/images/icons/11_%E5%99%9B%E3%81%BF%E5%90%88%E3%82%8F%E3%81%9B.png" alt="顎関節症" class="w-10 opacity-70 mb-3 mix-blend-multiply group-hover:scale-110 transition-transform">
+                    <strong class="text-xs font-medium tracking-wide">顎関節症</strong>
+                </a>
+
+                <a href="https://fshika.com/concerns/oral-surgery" class="group flex flex-col items-center bg-bgSoft/50 p-5 rounded-2xl hover:bg-bgSoft transition-colors border border-transparent hover:border-primaryLight/50 text-center">
+                    <img src="https://fshika.com/images/icons/10_%E5%8F%A3%E8%85%94%E5%A4%96%E7%A7%91.png" alt="口腔外科・トラブル" class="w-10 opacity-70 mb-3 mix-blend-multiply group-hover:scale-110 transition-transform">
+                    <strong class="text-xs font-medium tracking-wide text-center">口腔外科・トラブル</strong>
+                </a>
+            </div>
+
+            <div class="text-center mt-8 text-[11px] text-textMain/60 font-sans tracking-widest">
+                ※ 症例により適切な専門医が担当します
+            </div>
+            
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mt-12 font-sans w-full max-w-sm mx-auto sm:max-w-none">
+                <a href="tel:03-6204-2876" class="border border-primaryLight px-8 py-3 w-full sm:w-auto text-center rounded-full hover:bg-bgSoft transition-colors flex justify-center items-center gap-2">
+                    <i class="ph-fill ph-phone-call"></i> 電話予約
+                </a>
+                <a href="https://fshika.com/#" class="bg-primary text-white border border-primary px-8 py-3 w-full sm:w-auto text-center rounded-full hover:bg-primary/90 transition-colors flex justify-center items-center gap-2">
+                    <i class="ph-bold ph-calendar-check"></i> 24時間WEB予約
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-textMain text-white/90 py-16 text-sm font-sans tracking-wide">
+        <div class="max-w-6xl mx-auto px-6 text-center shadow-none">
+            <p class="mb-4">&copy; 2024 F Dental Office Toyosu Prime Square. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JS for Simple CSS-native Carousel Control -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const carousel = document.getElementById('case-carousel');
+            if(!carousel) return;
+            const slides = carousel.children;
+            const dots = document.querySelectorAll('.carousel-dot');
+            let index = 0;
+            let timer;
+
+            function updateDots() {
+                dots.forEach((dot, i) => {
+                    if (i === index) {
+                        dot.classList.remove('bg-primaryLight');
+                        dot.classList.add('bg-primary');
+                    } else {
+                        dot.classList.add('bg-primaryLight');
+                        dot.classList.remove('bg-primary');
+                    }
+                });
+            }
+
+            function startTimer() {
+                timer = setInterval(() => {
+                    index = (index + 1) % slides.length;
+                    carousel.scrollTo({
+                        left: slides[index].offsetLeft,
+                        behavior: 'smooth'
+                    });
+                    updateDots();
+                }, 4000);
+            }
+
+            function stopTimer() {
+                clearInterval(timer);
+            }
+
+            carousel.addEventListener('scroll', () => {
+                const scrollLeft = carousel.scrollLeft;
+                const slideWidth = slides[0].offsetWidth;
+                index = Math.round(scrollLeft / slideWidth);
+                updateDots();
+            });
+
+            carousel.addEventListener('mouseenter', stopTimer);
+            carousel.addEventListener('mouseleave', startTimer);
+            carousel.addEventListener('touchstart', stopTimer);
+            carousel.addEventListener('touchend', startTimer);
+
+            // Init
+            updateDots();
+            startTimer();
+            
+            // Dot clicks
+            dots.forEach((dot, i) => {
+                dot.addEventListener('click', () => {
+                    stopTimer();
+                    index = i;
+                    carousel.scrollTo({
+                        left: slides[index].offsetLeft,
+                        behavior: 'smooth'
+                    });
+                    updateDots();
+                    startTimer();
+                });
+            });
+        });
+    </script>
+</body>
+</html>

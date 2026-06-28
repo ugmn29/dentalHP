@@ -6,6 +6,9 @@ import { Header } from '../../../components/Header';
 import { Footer } from '../../../components/Footer';
 import { AuthorBio } from '../../../components/AuthorBio';
 import { CheckCircle2, ArrowRight, Home, ChevronRight, AlertCircle } from 'lucide-react';
+import { RelatedPagesSection } from '@/components/RelatedPagesSection';
+import { oralEducationRelatedPages } from '@/data/related-pages';
+import { FaqSection } from '@/components/FaqSection';
 
 export default function MouthBreathingPage() {
     return (
@@ -19,7 +22,7 @@ export default function MouthBreathingPage() {
                         <div className="flex items-center gap-2 text-sm text-[#8D8070]">
                             <Home size={16} />
                             <ChevronRight size={14} />
-                            <a href="/oral-education" className="hover:text-[#C5A572] transition-colors">０歳からの口育</a>
+                            <a href="/oral-education" className="hover:text-[#C5A572] transition-colors">0歳からのこども歯科・予防</a>
                             <ChevronRight size={14} />
                             <span className="text-[#5A4D41] font-medium">子供の口呼吸を治す方法</span>
                         </div>
@@ -323,15 +326,9 @@ export default function MouthBreathingPage() {
                 </section>
 
                 {/* FAQ Section */}
-                <section className="py-2 bg-white">
-                    <div className="container mx-auto px-4 max-w-4xl">
-                        <div className="text-center mb-12">
-                            <p className="text-[#C5A572] tracking-[0.2em] font-bold mb-2">Q&A</p>
-                            <h2 className="text-3xl md:text-4xl font-bold text-[#5A4D41] font-serif">よくあるご質問</h2>
-                        </div>
-
-                        <div className="space-y-6">
-                            {[
+                <FaqSection
+                  title="よくあるご質問"
+                  items={[
                                 {
                                     q: "何歳から口呼吸の改善トレーニングを始められますか？",
                                     a: "3歳頃から始められます。ただし、0歳〜2歳でも、授乳姿勢や生活習慣の見直しで予防することができます。早ければ早いほど効果的ですので、お気軽にご相談ください。"
@@ -348,95 +345,16 @@ export default function MouthBreathingPage() {
                                     q: "口呼吸は大人になっても治りますか？",
                                     a: "大人でも改善は可能ですが、子供のうちに治す方が圧倒的に早く、確実です。特に顔の骨格が成長する時期（12歳頃まで）に改善することで、顔つきへの影響を最小限に抑えられます。"
                                 }
-                            ].map((faq, index) => (
-                                <div key={index} className="border-b border-[#F0EAE0] pb-6">
-                                    <h3 className="text-lg font-bold text-[#5A4D41] mb-3 flex items-start gap-4">
-                                        <span className="text-[#C5A572] font-serif italic text-2xl leading-none">Q.</span>
-                                        {faq.q}
-                                    </h3>
-                                    <div className="pl-10">
-                                        <p className="text-[#8D8070] leading-relaxed">{faq.a}</p>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </section>
+                            ]}
+                />
 
-                {/* Related Pages */}
-                <section className="py-2 bg-[#FDFBF7]">
-                    <div className="container mx-auto px-4 max-w-6xl">
-                        <div className="text-center mb-12">
-                            <h2 className="text-2xl md:text-3xl font-bold text-[#5A4D41] font-serif mb-4">
-                                関連ページ
-                            </h2>
-                            <p className="text-[#8D8070]">
-                                口育についてもっと詳しく知りたい方へ
-                            </p>
-                        </div>
+                <RelatedPagesSection
+                  title="関連ページ"
+                  items={oralEducationRelatedPages}
+                  currentPath="/oral-education/mouth-breathing"
+                />
 
-                        <div className="grid md:grid-cols-3 gap-6">
-                            {[
-                                {
-                                    title: "０歳からの口育",
-                                    description: "口呼吸予防は0歳から。正しい呼吸と飲み込みを身につける",
-                                    link: "/oral-education",
-                                    icon: "👶"
-                                },
-                                {
-                                    title: "マイオブレース",
-                                    description: "マウスピース型装置で口呼吸から鼻呼吸へ",
-                                    link: "/kidsortho/appliances/functional-mouthpiece",
-                                    icon: "🦷"
-                                },
-                                {
-                                    title: "小児矯正の費用",
-                                    description: "口育・小児矯正にかかる費用について",
-                                    link: "/kidsortho/cost",
-                                    icon: "💰"
-                                }
-                            ].map((item, index) => (
-                                <a
-                                    key={index}
-                                    href={item.link}
-                                    className="group bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-all transform hover:-translate-y-1 border border-gray-100"
-                                >
-                                    <div className="text-4xl mb-4">{item.icon}</div>
-                                    <h3 className="text-lg font-bold text-[#5A4D41] mb-2 font-serif group-hover:text-[#C5A572] transition-colors">
-                                        {item.title}
-                                    </h3>
-                                    <p className="text-[#8D8070] text-sm leading-relaxed mb-4">
-                                        {item.description}
-                                    </p>
-                                    <div className="flex items-center gap-2 text-[#C5A572] font-bold text-sm group-hover:gap-3 transition-all">
-                                        <span>詳しく見る</span>
-                                        <ArrowRight size={16} />
-                                    </div>
-                                </a>
-                            ))}
-                        </div>
-                    </div>
-                </section>
 
-                {/* CTA Section */}
-                <section className="py-2 bg-[#5A4D41] text-white">
-                    <div className="container mx-auto px-4 text-center">
-                        <h2 className="text-2xl md:text-3xl font-bold mb-6 font-serif">
-                            お子様の口呼吸が気になったら、<br className="md:hidden" />お気軽にご相談ください
-                        </h2>
-                        <p className="text-[#F0EAE0] mb-10 max-w-2xl mx-auto">
-                            早期発見・早期改善で、お子様の健やかな成長をサポートします。
-                        </p>
-                        <div className="flex flex-col sm:flex-row gap-6 justify-center max-w-2xl mx-auto">
-                            <a href="#" className="bg-[#C5A572] hover:bg-[#B59562] text-white px-8 py-4 rounded-full font-bold shadow-lg transition-all flex items-center justify-center gap-3 text-lg flex-1">
-                                24時間 WEB予約
-                            </a>
-                            <a href="tel:03-6204-2876" className="bg-transparent border-2 border-[#C5A572] hover:bg-[#C5A572]/10 text-white px-8 py-4 rounded-full font-bold transition-all flex items-center justify-center gap-3 text-lg flex-1">
-                                03-6204-2876
-                            </a>
-                        </div>
-                    </div>
-                </section>
                 {/* 監修者情報 */}
                 <div className="container mx-auto px-4 pt-2 pb-16">
                     <AuthorBio />

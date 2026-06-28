@@ -4,6 +4,8 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
 import { PageImage } from '@/components/PageImage';
+import { RelatedPagesSection } from '@/components/RelatedPagesSection';
+import { cavityRelatedPages } from '@/data/related-pages';
 import {
   CheckCircle2,
   ArrowRight,
@@ -449,69 +451,13 @@ export default function CavityStagesPage() {
           </div>
         </section>
 
-        {/* Related Pages */}
-        <section className="py-2 bg-[#FDFBF7]">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <h3 className="text-2xl md:text-3xl font-bold text-center mb-12 text-[#5A4D41] font-serif">
-                関連ページ
-              </h3>
-              <div className="grid md:grid-cols-3 gap-6">
-                <a href="/cavity" className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow p-6 border border-gray-100">
-                  <div className="text-4xl mb-4">🦷</div>
-                  <h4 className="font-bold text-[#5A4D41] mb-2 group-hover:text-[#C5A572] transition-colors">虫歯治療TOP</h4>
-                  <p className="text-sm text-[#8D8070] leading-relaxed mb-3">
-                    虫歯治療の概要と特徴について詳しくご紹介します。
-                  </p>
-                  <span className="text-[#C5A572] text-sm inline-flex items-center gap-1">
-                    詳しく見る <ArrowRight size={14} />
-                  </span>
-                </a>
-                <a href="/cavity/treatment-methods" className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow p-6 border border-gray-100">
-                  <div className="text-4xl mb-4">⚕️</div>
-                  <h4 className="font-bold text-[#5A4D41] mb-2 group-hover:text-[#C5A572] transition-colors">治療方法</h4>
-                  <p className="text-sm text-[#8D8070] leading-relaxed mb-3">
-                    詰め物、被せ物、根管治療など、治療法を詳しく解説します。
-                  </p>
-                  <span className="text-[#C5A572] text-sm inline-flex items-center gap-1">
-                    詳しく見る <ArrowRight size={14} />
-                  </span>
-                </a>
-                <a href="/cavity/pain" className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow p-6 border border-gray-100">
-                  <div className="text-4xl mb-4">💊</div>
-                  <h4 className="font-bold text-[#5A4D41] mb-2 group-hover:text-[#C5A572] transition-colors">痛みと対処法</h4>
-                  <p className="text-sm text-[#8D8070] leading-relaxed mb-3">
-                    虫歯の痛みの原因と応急処置について解説します。
-                  </p>
-                  <span className="text-[#C5A572] text-sm inline-flex items-center gap-1">
-                    詳しく見る <ArrowRight size={14} />
-                  </span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
+        <RelatedPagesSection
+          title="関連ページ"
+          items={cavityRelatedPages}
+          currentPath="/cavity/stages"
+        />
 
-        {/* CTA Section */}
-        <section className="py-2 bg-gradient-to-b from-[#C5A572] to-[#B59562] text-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center">
-              <h3 className="text-3xl md:text-4xl font-bold mb-6 font-serif">
-                早期発見・早期治療で歯を守りましょう
-              </h3>
-              <p className="text-lg mb-8 opacity-95">
-                痛みが出る前の定期検診が、歯を守る鍵です。<br />
-                3〜6ヶ月ごとの検診をお勧めします。
-              </p>
-              <Link
-                href="/#contact"
-                className="inline-block bg-white text-[#C5A572] font-bold py-4 px-8 rounded-full hover:bg-gray-50 transition-colors shadow-lg"
-              >
-                ご予約・お問い合わせ
-              </Link>
-            </div>
-          </div>
-        </section>
+
                 {/* 監修者情報 */}
                 <div className="container mx-auto px-4 pt-2 pb-16">
                     <AuthorBio />

@@ -55,7 +55,7 @@ export default function PainManagementPage() {
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[#5A4D41] mb-3">
                   こども矯正は痛い？<br className="md:hidden" />痛みの期間と対処法
                 </h1>
-                <PageImage path="/kidsortho/pain-management" imageId="矯正の痛みが減る曲線グラフ" alt="こども矯正の痛みの期間と対処法" />
+                <PageImage path="/kidsortho/pain-management" imageId="矯正の痛みが減る曲線グラフ" alt="こども矯正の痛みの期間と対処法" className="mx-auto mb-8 aspect-[16/9] w-full kidsortho-hero-image-card rounded-3xl border border-[#E6E0D6] bg-white object-contain p-3 shadow-lg" />
                 <div className="w-16 h-0.5 bg-[#C5A572] mb-6"></div>
               </div>
 
@@ -431,75 +431,7 @@ export default function PainManagementPage() {
               </div>
             </section>
 
-            {/* CTA Section */}
-            <section className="bg-gradient-to-br from-[#FDFBF7] to-[#FFF9F0] rounded-xl p-8 md:p-12">
-              <div className="text-center mb-8">
-                <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#5A4D41] mb-4">痛みの少ないこども矯正を</h2>
-                <p className="text-lg md:text-xl text-[#8D8070] leading-loose font-sans">
-                  豊洲で小児矯正をお考えなら、豊洲駅徒歩2分の当院へ。お子さんの痛みに配慮した<br />
-                  矯正治療を行っています。<br />
-                  痛みへの対処法や、緊急時の対応もしっかりサポートします。
-                </p>
-              </div>
 
-              <div className="grid md:grid-cols-2 gap-8 mb-8">
-                <div>
-                  <div className="flex items-center gap-3 mb-4">
-                    <Calendar size={24} className="text-[#C5A572]" />
-                    <div>
-                      <h3 className="font-serif font-bold text-lg text-[#5A4D41]">無料カウンセリング</h3>
-                      <p className="text-sm text-[#8D8070] font-sans">所要時間：30〜60分</p>
-                    </div>
-                  </div>
-                  <ul className="space-y-2 text-sm text-[#8D8070] ml-9 font-sans">
-                    <li className="flex items-start gap-2">
-                      <span className="text-[#C5A572] mt-1">✓</span>
-                      <span>痛みへの対処法の詳しいご説明</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-[#C5A572] mt-1">✓</span>
-                      <span>お子様に合った治療方法のご提案</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-[#C5A572] mt-1">✓</span>
-                      <span>治療期間と費用の詳しいご説明</span>
-                    </li>
-                  </ul>
-                </div>
-
-                <div>
-                  <div className="flex items-center gap-3 mb-4">
-                    <Phone size={24} className="text-[#C5A572]" />
-                    <div>
-                      <h3 className="font-serif font-bold text-lg text-[#5A4D41]">お電話でのご予約</h3>
-                      <p className="text-sm text-[#8D8070] font-sans">平日 9:00〜18:00</p>
-                    </div>
-                  </div>
-                  <p className="text-3xl font-bold text-[#C5A572] mb-3 ml-9">03-6204-2876</p>
-                  <p className="text-sm text-[#8D8070] ml-9 font-sans">
-                    「痛みの相談」とお伝えください
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="/#contact"
-                  className="inline-flex items-center justify-center gap-2 bg-[#C5A572] hover:bg-[#B39562] text-white font-bold py-4 px-8 rounded-full transition-all transform hover:scale-105 shadow-lg"
-                >
-                  <Calendar size={20} />
-                  <span>無料カウンセリング予約</span>
-                  <ArrowRight size={20} />
-                </Link>
-                <Link
-                  href="/kidsortho"
-                  className="inline-flex items-center justify-center gap-2 bg-[#5A4D41] hover:bg-[#4A3D31] text-white font-bold py-4 px-8 rounded-full transition-all border-2 border-[#5A4D41]"
-                >
-                  <span>こども矯正トップへ</span>
-                  <ArrowRight size={20} />
-                </Link>
-              </div>
-            </section>
           </div>
         </div>
 

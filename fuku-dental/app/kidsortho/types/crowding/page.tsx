@@ -6,6 +6,8 @@ import { AuthorBio } from '@/components/AuthorBio';
 import { KidsOrthoImage } from '@/components/KidsOrthoImage';
 import { PageImage } from '@/components/PageImage';
 import Link from 'next/link';
+import { RelatedPagesSection } from '@/components/RelatedPagesSection';
+import { kidsOrthoRelatedPages } from '@/data/related-pages';
 
 export const metadata: Metadata = {
   title: '叢生(そうせい)ガタガタの歯並びの治療 | こども矯正 | Fデンタルオフィス 豊洲プライムスクエア院',
@@ -52,7 +54,7 @@ export default function CrowdingDetailPage() {
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[#5A4D41] mb-3">
                   叢生(そうせい)
                 </h1>
-                <PageImage path="/kidsortho/types/crowding" imageId="叢生ガタガタの正面歯列図" alt="叢生（ガタガタの歯並び）の治療" />
+                <PageImage path="/kidsortho/types/crowding" imageId="叢生ガタガタの正面歯列図" alt="叢生（ガタガタの歯並び）の治療" className="mx-auto mb-8 aspect-[16/9] w-full kidsortho-hero-image-card rounded-3xl border border-[#E6E0D6] bg-white object-contain p-3 shadow-lg" />
                 <p className="text-sm text-[#8D8070] mb-3">豊洲の矯正歯科が詳しく解説</p>
                 <div className="w-16 h-0.5 bg-[#C5A572] mb-6"></div>
               </div>
@@ -409,108 +411,14 @@ export default function CrowdingDetailPage() {
               </div>
             </section>
 
-            {/* CTA Section */}
-            <section className="bg-gradient-to-r from-[#C5A572] to-[#B8935A] rounded-2xl p-8 md:p-12 text-white">
-              <div className="text-center max-w-2xl mx-auto">
-                <h2 className="text-2xl md:text-3xl font-serif font-bold mb-4">
-                  お子様の歯並びで<br className="md:hidden" />お悩みではありませんか？
-                </h2>
-                <p className="text-lg mb-8 opacity-90">
-                  叢生は早期治療で抜歯を避けられる可能性が高まります。<br />
-                  豊洲で小児矯正をお考えなら、まずはお気軽に無料相談をご利用ください。
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                  <Link
-                    href="/#contact"
-                    className="bg-white text-[#C5A572] hover:bg-gray-50 px-8 py-4 rounded-full font-bold flex items-center gap-2 transition-all shadow-md hover:shadow-lg group w-full sm:w-auto justify-center"
-                  >
-                    <Calendar className="w-5 h-5" />
-                    無料相談を予約する
-                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                  </Link>
-                  <a
-                    href="tel:03-6204-2876"
-                    className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 px-8 py-4 rounded-full font-bold flex items-center gap-2 transition-all border border-white/30 w-full sm:w-auto justify-center"
-                  >
-                    <Phone className="w-5 h-5" />
-                    電話で相談する
-                  </a>
-                </div>
-                <p className="mt-6 text-sm opacity-80">
-                  平日 9:00-19:00 / 土曜 9:00-17:00
-                </p>
-              </div>
-            </section>
+
 
             {/* 関連ページリンク */}
-            <section>
-              <h2 className="text-2xl md:text-3xl font-serif font-bold text-[#5A4D41] mb-6">関連ページ</h2>
-              <div className="grid md:grid-cols-2 gap-4">
-                <Link
-                  href="/kidsortho/types"
-                  className="bg-white rounded-xl p-6 hover:shadow-md transition-all group"
-                >
-                  <h3 className="font-bold text-[#5A4D41] mb-2 group-hover:text-[#C5A572] transition-colors">
-                    不正咬合の種類
-                  </h3>
-                  <p className="text-sm text-[#8D8070] mb-3 font-sans">
-                    その他の不正咬合について詳しく解説しています
-                  </p>
-                  <div className="flex items-center text-[#C5A572] text-sm font-bold">
-                    詳しく見る
-                    <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                  </div>
-                </Link>
-
-                <Link
-                  href="/kidsortho/timing"
-                  className="bg-white rounded-xl p-6 hover:shadow-md transition-all group"
-                >
-                  <h3 className="font-bold text-[#5A4D41] mb-2 group-hover:text-[#C5A572] transition-colors">
-                    矯正治療を始める時期
-                  </h3>
-                  <p className="text-sm text-[#8D8070] mb-3 font-sans">
-                    お子様の矯正治療の最適なタイミングについて
-                  </p>
-                  <div className="flex items-center text-[#C5A572] text-sm font-bold">
-                    詳しく見る
-                    <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                  </div>
-                </Link>
-
-                <Link
-                  href="/kidsortho/cost"
-                  className="bg-white rounded-xl p-6 hover:shadow-md transition-all group"
-                >
-                  <h3 className="font-bold text-[#5A4D41] mb-2 group-hover:text-[#C5A572] transition-colors">
-                    治療費用について
-                  </h3>
-                  <p className="text-sm text-[#8D8070] mb-3 font-sans">
-                    こども矯正の費用と支払い方法について
-                  </p>
-                  <div className="flex items-center text-[#C5A572] text-sm font-bold">
-                    詳しく見る
-                    <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                  </div>
-                </Link>
-
-                <Link
-                  href="/kidsortho"
-                  className="bg-white rounded-xl p-6 hover:shadow-md transition-all group"
-                >
-                  <h3 className="font-bold text-[#5A4D41] mb-2 group-hover:text-[#C5A572] transition-colors">
-                    こども矯正トップ
-                  </h3>
-                  <p className="text-sm text-[#8D8070] mb-3 font-sans">
-                    こども矯正の総合案内ページ
-                  </p>
-                  <div className="flex items-center text-[#C5A572] text-sm font-bold">
-                    詳しく見る
-                    <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                  </div>
-                </Link>
-              </div>
-            </section>
+            <RelatedPagesSection
+              title="関連ページ"
+              items={kidsOrthoRelatedPages}
+              currentPath="/kidsortho/types/crowding"
+            />
 
             {/* 監修者情報 */}
             <AuthorBio />

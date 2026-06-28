@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
+import { WEB_RESERVATION_URL } from '@/lib/reservation';
 import {
   Zap,
   Crown,
@@ -364,13 +365,15 @@ export default function ImplantVsDenturePage() {
                 無料カウンセリングで詳しくご説明します
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="/#contact"
+                <a
+                  href={WEB_RESERVATION_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center bg-white text-purple-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-purple-50 transition-colors shadow-lg"
                 >
                   無料相談を予約する
                   <ArrowRight className="w-6 h-6 ml-2" />
-                </Link>
+                </a>
               </div>
             </div>
           </div>

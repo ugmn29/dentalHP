@@ -7,6 +7,7 @@ import { Footer } from "@/components/Footer";
 import { PageImage } from '@/components/PageImage';
 import { AuthorBio } from '@/components/AuthorBio';
 import { Phone, Calendar, AlertTriangle, Clock, CheckCircle } from "lucide-react";
+import { ReservationCta } from '@/components/ReservationCta';
 
 const TraumaPage = () => {
 
@@ -1073,47 +1074,8 @@ const TraumaPage = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-6 md:py-6 px-4 bg-gradient-to-b from-[#E74C3C] to-[#C0392B]">
-        <div className="max-w-4xl mx-auto text-center text-white">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            歯<span className="text-[0.75em]">の</span>外傷<span className="text-[0.75em]">は</span>緊急対応<span className="text-[0.75em]">が</span>重要<span className="text-[0.75em]">です</span>
-          </h2>
-          <p className="text-lg mb-8 opacity-90">
-            迷<span className="text-[0.75em]">ったら</span>すぐ<span className="text-[0.75em]">に</span>ご連絡<span className="text-[0.75em]">ください</span>。時間<span className="text-[0.75em]">が</span>経過<span className="text-[0.75em]">するほど</span>、治療<span className="text-[0.75em]">の</span>成功率<span className="text-[0.75em]">は</span>低下<span className="text-[0.75em]">します</span>。
-          </p>
+      <ReservationCta />
 
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8">
-            <a href="tel:03-6204-2876" className="bg-white text-[#E74C3C] px-10 py-5 rounded-full font-bold text-xl shadow-2xl hover:bg-gray-100 transition flex items-center gap-3 transform hover:scale-105">
-              <Phone size={28} />
-              <div className="text-left">
-                <p className="text-xs opacity-70">緊急連絡</p>
-                <p>03-6204-2876</p>
-              </div>
-            </a>
-            <a href="#" className="bg-yellow-400 text-gray-900 px-10 py-5 rounded-full font-bold text-xl shadow-2xl hover:bg-yellow-300 transition flex items-center gap-3 transform hover:scale-105">
-              <Calendar size={28} />
-              24時間WEB予約
-            </a>
-          </div>
-
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 max-w-2xl mx-auto">
-            <h3 className="font-bold text-xl mb-4">診療時間</h3>
-            <div className="grid grid-cols-2 gap-4 text-sm">
-              <div>
-                <p className="font-bold mb-1">平日</p>
-                <p>10:00-13:00 / 14:00-18:30</p>
-              </div>
-              <div>
-                <p className="font-bold mb-1">土日</p>
-                <p>9:00-12:00 / 13:00-16:00</p>
-              </div>
-            </div>
-            <p className="text-xs mt-4 opacity-75">休診日：火曜日・祝日</p>
-            <p className="text-sm mt-2 font-bold">※ 緊急時は休診日でも対応いたします</p>
-          </div>
-        </div>
-      </section>
 
       <Footer />
     </div>

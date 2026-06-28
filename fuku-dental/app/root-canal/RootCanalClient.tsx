@@ -1,113 +1,29 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
 import { PageImage } from '@/components/PageImage';
+import { FeatureSection } from '@/components/FeatureSection';
 import { CheckCircle2, ArrowRight, Calendar, Phone, Plus, Minus, ChevronRight } from 'lucide-react';
+import { FaqSection } from '@/components/FaqSection';
+import { MobileTreatmentHero } from '@/components/MobileTreatmentHero';
+import { WEB_RESERVATION_URL } from '@/lib/reservation';
 
 export default function RootCanalPage() {
-    const [currentHeroSlide, setCurrentHeroSlide] = useState(0);
-
-    // Hero slider images
-    const heroImages = [
-        { imageId: "hero-slide1", alt: "豊洲の歯医者 根管治療" },
-        { imageId: "hero-slide2", alt: "豊洲 歯科 精密根管治療" },
-        { imageId: "hero-slide3", alt: "豊洲駅近くの歯医者 マイクロスコープ根管治療" },
-    ];
-
-    // Hero image slider logic
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentHeroSlide((prev) => (prev + 1) % heroImages.length);
-        }, 5000); // Switch every 5 seconds
-
-        return () => clearInterval(interval);
-    }, [heroImages.length]);
 
     return (
         <div className="min-h-screen bg-white font-sans text-[#4A4A4A] overflow-x-hidden" style={{ wordBreak: 'normal', overflowWrap: 'anywhere' }}>
             <Header />
 
             <main>
-                {/* Hero Section - Image Slider + Text */}
-                <section className="relative w-full overflow-hidden bg-white">
-                    {/* Image Slider - Reduced height */}
-                    <div className="relative w-full" style={{ height: '50vh' }}>
-                        {heroImages.map((image, index) => (
-                            <div
-                                key={index}
-                                className={`absolute inset-0 transition-opacity duration-1000 ${
-                                    index === currentHeroSlide ? 'opacity-100' : 'opacity-0'
-                                }`}
-                            >
-                                <PageImage
-                                    path="/root-canal"
-                                    imageId={image.imageId}
-                                    alt={image.alt}
-                                    className="w-full h-full object-cover"
-                                />
-                                <div className="absolute inset-0 bg-black/20"></div>
-                            </div>
-                        ))}
-
-                        {/* CTA Button - Bottom Right */}
-                        <div className="absolute -bottom-8 right-4 md:-bottom-10 md:right-8 z-20 animate-bounce-slow">
-                            <a
-                                href="#"
-                                className="group relative flex items-center gap-3 bg-gradient-to-r from-[#9B89B3] to-[#8B7AA3] hover:from-[#AB99C3] hover:to-[#9B89B3] text-white px-6 py-4 md:px-8 md:py-5 rounded-full shadow-2xl hover:shadow-[0_0_30px_rgba(155,137,179,0.6)] transition-all duration-300 transform hover:scale-105"
-                            >
-                                <div className="flex items-center gap-2">
-                                    <Calendar size={24} className="group-hover:rotate-12 transition-transform" />
-                                    <div className="flex flex-col items-start">
-                                        <span className="text-xs font-medium opacity-90">24時間受付</span>
-                                        <span className="text-base md:text-lg font-bold whitespace-nowrap">WEB予約</span>
-                                    </div>
-                                </div>
-                                <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center group-hover:translate-x-1 transition-transform">
-                                    <ChevronRight size={20} />
-                                </div>
-
-                                {/* Pulsing ring effect */}
-                                <div className="absolute inset-0 rounded-full bg-[#9B89B3] opacity-0 group-hover:opacity-20 group-hover:scale-110 transition-all duration-300"></div>
-                            </a>
-                        </div>
-                    </div>
-
-                    {/* Text Area - Closer to image */}
-                    <div className="relative bg-white flex flex-col items-center justify-start px-4 pt-8 pb-6 md:pb-8">
-                        <div className="max-w-7xl w-full text-center flex items-center justify-center">
-                            <h1 className="font-bold leading-tight font-serif mb-0">
-                                <div className="relative inline-block mb-2 md:mb-4 px-4 md:px-8">
-                                    <div className="relative z-10 py-2 md:py-4 whitespace-nowrap overflow-x-auto">
-                                        <span className="inline-flex items-center justify-center gap-1 md:gap-3 text-[6vw] sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif"
-                                              style={{
-                                                  fontWeight: '900',
-                                                  letterSpacing: '0.05em'
-                                              }}>
-                                            <span className="inline-block text-[#2d2d2d]">
-                                                歯を残す、
-                                            </span>
-                                            <span className="inline-block bg-gradient-to-br from-[#D4AF37] via-[#F4E3B2] to-[#C5A028] bg-clip-text text-transparent drop-shadow-lg transform hover:scale-105 transition-all duration-300"
-                                                  style={{
-                                                      WebkitBackgroundClip: 'text',
-                                                      WebkitTextFillColor: 'transparent'
-                                                  }}>
-                                                <span className="text-[120%]">最後の砦</span>
-                                            </span>
-                                        </span>
-                                    </div>
-                                    <div className="absolute -inset-4 bg-gradient-to-r from-[#D4AF37]/10 via-[#F4E3B2]/20 to-[#D4AF37]/10 rounded-3xl blur-2xl -z-10 animate-pulse"></div>
-                                    <div className="absolute -inset-2 bg-gradient-to-r from-transparent via-[#D4AF37]/5 to-transparent rounded-2xl -z-10"></div>
-                                </div>
-                                <span className="block text-[5.5vw] sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-[#5A4D41] mt-1 md:mt-4 mb-0 pb-0 leading-none font-semibold font-serif">
-                                    精密な根管治療で大切な歯を守る
-                                </span>
-                            </h1>
-                        </div>
-                    </div>
-                </section>
+                <MobileTreatmentHero
+                    imageSrc="/images/pages/mobile-heroes/root-canal-hero.webp"
+                    tabletSrc="/images/pages/mobile-heroes/root-canal-hero-tablet.webp"
+                    desktopSrc="/images/pages/mobile-heroes/root-canal-hero-desktop.webp"
+                    title="精密根管治療"
+                    alt="歯を残すための、精密治療 精密根管治療"
+                />
 
                 {/* Concept Message Section */}
                 <section className="pt-6 md:pt-2 pb-2 md:pb-2 bg-[#FDFBF7] relative overflow-hidden">
@@ -157,7 +73,7 @@ export default function RootCanalPage() {
                                             path="/root-canal"
                                             imageId={item.imageId}
                                             alt={item.title}
-                                            className="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-700"
+                                            className="w-full aspect-[3/2] object-contain bg-[#F7F2EA] transform group-hover:scale-105 transition-transform duration-700"
                                         />
                                         <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500"></div>
                                         <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-4 py-1 rounded-full">
@@ -175,14 +91,14 @@ export default function RootCanalPage() {
                         </div>
 
                         <div className="text-center mt-12">
-                            <a href="#" className="inline-flex items-center gap-2 text-[#C5A572] hover:text-[#B59562] transition-colors border-b border-[#C5A572] pb-1 font-medium">
+                            <a href="/case-studies#root-canal" className="inline-flex items-center gap-2 text-[#C5A572] hover:text-[#B59562] transition-colors border-b border-[#C5A572] pb-1 font-medium">
                                 もっと症例を見る <ArrowRight size={16} />
                             </a>
                         </div>
 
                         {/* Web予約バナー */}
                         <div className="mt-12">
-                            <a href="https://apo-toolboxes.stransa.co.jp/user/web/babordc4ba29b/reservations" target="_blank" rel="noopener noreferrer" className="block">
+                            <a href={WEB_RESERVATION_URL} target="_blank" rel="noopener noreferrer" className="block">
                                 <img
                                     src="/images/web-reservation-banner.webp"
                                     alt="Web予約" loading="lazy" decoding="async" className="w-full max-w-2xl mx-auto rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
@@ -192,114 +108,17 @@ export default function RootCanalPage() {
                     </div>
                 </section>
 
-                {/* Features Section - 5つの特徴 */}
-                <section className="pt-8 pb-8 bg-white overflow-hidden">
-                    <div className="container mx-auto px-4">
-                        <div className="text-center mb-12">
-                            <span className="text-[#C5A572] font-bold tracking-[0.2em] text-sm block mb-2">FEATURES</span>
-                            <h2 className="text-4xl md:text-5xl font-bold text-[#5A4D41] font-serif">
-                                当院<span className="text-[0.75em]">の</span><span className="text-[#C5A572]">特徴</span>
-                            </h2>
-                        </div>
-
-                        <div className="space-y-12 max-w-5xl mx-auto">
-                            {[
-                                {
-                                    id: "01",
-                                    title: "Precision Treatment",
-                                    highlight: "マイクロスコープによる精密治療",
-                                    summary: "肉眼では見えない微細な根管も、<span class='font-bold bg-yellow-100'>歯科用顕微鏡</span>で拡大視野下で確実に治療します。",
-                                    details: [
-                                        "<span class='text-[#395b45] font-bold'>最大20倍の拡大視野で精密に処置</span>",
-                                        "<span class='text-[#395b45] font-bold'>見落としがちな根管も確実に発見・治療</span>"
-                                    ],
-                                    imageId: "feature1"
-                                },
-                                {
-                                    id: "02",
-                                    title: "Pain Control",
-                                    highlight: "痛みを最小限に抑える麻酔技術",
-                                    summary: "<span class='font-bold bg-yellow-100'>表面麻酔・電動麻酔器・極細針</span>を使用し、治療中の痛みや不快感を軽減します。",
-                                    details: [
-                                        "<span class='text-[#395b45] font-bold'>表面麻酔で注射の痛みを和らげる</span>",
-                                        "<span class='text-[#395b45] font-bold'>電動麻酔器で一定速度の注入により痛みを軽減</span>"
-                                    ],
-                                    imageId: "feature2"
-                                },
-                                {
-                                    id: "03",
-                                    title: "Nickel Titanium File",
-                                    highlight: "ニッケルチタンファイルの使用",
-                                    summary: "<span class='font-bold bg-yellow-100'>柔軟性のあるニッケルチタンファイル</span>で、複雑に曲がった根管も確実に清掃できます。",
-                                    details: [
-                                        "<span class='text-[#395b45] font-bold'>従来のステンレスファイルでは届かない部分まで到達</span>",
-                                        "<span class='text-[#395b45] font-bold'>根管の形状を保ちながら効率的に清掃</span>"
-                                    ],
-                                    imageId: "feature3"
-                                },
-                                {
-                                    id: "04",
-                                    title: "Rubber Dam Isolation",
-                                    highlight: "ラバーダム防湿で再感染を防ぐ",
-                                    summary: "治療中の<span class='font-bold bg-yellow-100'>唾液や細菌の侵入を防ぎ</span>、無菌的な環境で確実な治療を行います。",
-                                    details: [
-                                        "<span class='text-[#395b45] font-bold'>唾液中の細菌による再感染リスクを大幅に低減</span>",
-                                        "<span class='text-[#395b45] font-bold'>薬液の口腔内流出を防ぎ、安全性を向上</span>"
-                                    ],
-                                    imageId: "feature4"
-                                },
-                                {
-                                    id: "05",
-                                    title: "Long-term Success",
-                                    highlight: "長期的な成功を目指す治療計画",
-                                    summary: "根管治療後の被せ物まで考慮し、<span class='font-bold bg-yellow-100'>長持ちする総合的な治療計画</span>を立案します。",
-                                    details: [
-                                        "<span class='text-[#395b45] font-bold'>根管治療後の土台や被せ物の選択までサポート</span>",
-                                        "<span class='text-[#395b45] font-bold'>定期的なメンテナンスで長期的な健康を維持</span>"
-                                    ],
-                                    imageId: "feature5"
-                                }
-                            ].map((feature, index) => (
-                                <div key={feature.id} className="flex flex-col group">
-                                    {/* Title Area */}
-                                    <div className="relative">
-                                        {/* Large Gradient Number */}
-                                        <span className="text-8xl font-serif text-[#C5A572]/15 absolute -top-16 -left-8 z-0 select-none font-bold" style={{ letterSpacing: '-0.05em' }}>
-                                            {feature.id}
-                                        </span>
-
-                                        {/* Title */}
-                                        <div className="flex items-start justify-between gap-4">
-                                            <h3 className="text-3xl md:text-4xl font-bold text-[#5A4D41] leading-tight tracking-wide font-serif inline-block relative flex-1">
-                                                <span dangerouslySetInnerHTML={{ __html: feature.highlight.replace(/(の|を|に|が|は|と|へ|から|より|で|や)/g, '<span class="text-[0.75em]">$1</span>') }} />
-                                                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#C5A572] via-[#C5A572] to-transparent"></div>
-                                            </h3>
-                                        </div>
-                                    </div>
-
-                                    {/* Image Area */}
-                                    <div className="w-full mb-8 relative">
-                                        <div className="relative rounded-[30px] overflow-hidden shadow-lg border-2 border-white">
-                                            <PageImage
-                                                path="/root-canal"
-                                                imageId={feature.imageId}
-                                                alt={feature.highlight}
-                                                className="w-full h-auto aspect-[16/9] object-cover"
-                                            />
-                                            <div className="absolute inset-0 bg-gradient-to-t from-[#C5A572]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-                                        </div>
-                                    </div>
-
-                                    {/* Text Area - Always Left Aligned */}
-                                    <div>
-                                        <p className="text-base md:text-lg text-[#5A4D41] leading-loose font-sans" dangerouslySetInnerHTML={{ __html: feature.summary + feature.details.join('') }}>
-                                        </p>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </section>
+                <FeatureSection
+                    title="当院の特徴"
+                    pagePath="/root-canal"
+                    features={[
+                        { id: "01", title: "Precision Treatment", highlight: "マイクロスコープによる精密治療", summary: "肉眼では見えない微細な根管も、<span class='font-bold bg-yellow-100'>歯科用顕微鏡</span>で確認しながら治療します。", details: ["最大20倍の拡大視野で、見落としがちな根管まで丁寧に確認します。"], imageId: "feature1" },
+                        { id: "02", title: "Pain Control", highlight: "痛みを最小限に抑える麻酔技術", summary: "表面麻酔・電動麻酔器・極細針を使用し、治療中の痛みや不快感を軽減します。", details: [], imageId: "feature2" },
+                        { id: "03", title: "Nickel Titanium File", highlight: "ニッケルチタンファイルの使用", summary: "柔軟性のある器具で、複雑に曲がった根管も清掃しやすくします。", details: [], imageId: "feature3" },
+                        { id: "04", title: "Rubber Dam Isolation", highlight: "ラバーダム防湿で再感染を防ぐ", summary: "治療中の唾液や細菌の侵入を防ぎ、清潔な環境で治療を行います。", details: [], imageId: "feature4" },
+                        { id: "05", title: "Long-term Success", highlight: "長期的な成功を目指す治療計画", summary: "根管治療後の土台や被せ物まで含め、歯を長く残すための計画を立てます。", details: [], imageId: "feature5" },
+                    ]}
+                />
 
                 {/* 根管治療とは Section */}
                 <section className="py-2 bg-[#FDFBF7]">
@@ -466,7 +285,7 @@ export default function RootCanalPage() {
                                     当院で実際に行った根管治療の症例をご紹介しています。<span className="font-bold bg-yellow-100">初回根管治療、再根管治療、歯根端切除術</span>など、さまざまなケースの治療前後の写真や経過、患者様の声を掲載しています。同じような症状でお悩みの方は、ぜひ参考にしてください。
                                 </p>
                                 <div className="text-center mt-6">
-                                    <a href="/root-canal/case-studies" className="inline-flex items-center gap-2 text-[#C5A572] hover:text-[#B59562] transition-colors border-b border-[#C5A572] pb-1 font-medium">
+                                    <a href="/case-studies#root-canal" className="inline-flex items-center gap-2 text-[#C5A572] hover:text-[#B59562] transition-colors border-b border-[#C5A572] pb-1 font-medium">
                                         症例紹介を詳しく見る <ArrowRight size={16} />
                                     </a>
                                 </div>
@@ -566,15 +385,9 @@ export default function RootCanalPage() {
                 </section>
 
                 {/* FAQ Section */}
-                <section className="pt-8 pb-2 bg-white">
-                    <div className="container mx-auto px-4 max-w-4xl">
-                        <div className="text-center mb-16">
-                            <p className="text-[#C5A572] tracking-[0.2em] font-bold mb-2">Q&A</p>
-                            <h2 className="text-3xl md:text-4xl font-bold text-[#5A4D41] font-serif">よくあるご質問</h2>
-                        </div>
-
-                        <div className="space-y-6">
-                            {[
+                <FaqSection
+                  title="よくあるご質問"
+                  items={[
                                 {
                                     q: "根管治療は痛いですか？",
                                     a: "麻酔を十分に効かせて治療しますので、治療中の痛みはほとんどありません。ただし、炎症が強い場合や治療後に一時的な痛みが出ることがあります。痛み止めを処方しますのでご安心ください。"
@@ -591,49 +404,10 @@ export default function RootCanalPage() {
                                     q: "保険は適用されますか？",
                                     a: "基本的な根管治療は保険適用です。ただし、マイクロスコープを使用した精密治療やMTAセメントなどの特殊な材料を使用する場合は、自費診療となることがあります。詳しくはご相談ください。"
                                 }
-                            ].map((faq, index) => (
-                                <div key={index} className="border-b border-[#F0EAE0] pb-6">
-                                    <h3 className="text-lg font-bold text-[#5A4D41] mb-3 flex items-start gap-4">
-                                        <span className="text-[#C5A572] font-serif italic text-2xl leading-none">Q.</span>
-                                        {faq.q}
-                                    </h3>
-                                    <div className="pl-10">
-                                        <p className="text-[#8D8070] leading-relaxed">{faq.a}</p>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </section>
+                            ]}
+                />
 
-                {/* CTA Section */}
-                <section className="py-2 bg-[#5A4D41] text-white">
-                    <div className="container mx-auto px-4 text-center">
-                        <h2 className="text-3xl md:text-4xl font-bold mb-8 font-serif">
-                            歯を残せる可能性があります。<br className="md:hidden" />まずはご相談ください
-                        </h2>
-                        <p className="text-[#F0EAE0] mb-12">
-                            抜歯を避け、大切な歯を守るために。精密な根管治療で最善を尽くします。
-                        </p>
 
-                        <div className="flex flex-col sm:flex-row gap-6 justify-center max-w-2xl mx-auto">
-                            <button className="bg-[#C5A572] hover:bg-[#B59562] text-white px-8 py-5 rounded-full font-bold shadow-lg transition-all flex items-center justify-center gap-3 text-lg flex-1 group">
-                                <Calendar className="group-hover:rotate-12 transition" />
-                                24時間 WEB予約
-                            </button>
-                            <button className="bg-transparent border-2 border-[#C5A572] hover:bg-[#C5A572]/10 text-white px-8 py-5 rounded-full font-bold transition-all flex items-center justify-center gap-3 text-lg flex-1">
-                                <Phone className="text-[#C5A572]" />
-                                03-6204-2876
-                            </button>
-                        </div>
-
-                        <div className="mt-12">
-                            <a href="/price" className="inline-flex items-center gap-2 text-[#C5A572] hover:text-[#E5C592] transition-colors border-b border-[#C5A572] pb-1">
-                                料金表を見る <ArrowRight size={16} />
-                            </a>
-                        </div>
-                    </div>
-                </section>
                 {/* 監修者情報 */}
                 <div className="container mx-auto px-4 pt-2 pb-16">
                     <AuthorBio />

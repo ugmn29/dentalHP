@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F dental office 豊洲プライムスクエア院 | 0歳から通える歯科医院</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            primary: '#4ABFBF',
+                            primaryHover: '#3A9F9F',
+                            dark: '#3A3A3A',
+                            bg: '#FFFFFF',
+                            alt: '#FAFAF8',
+                            border: '#E8E8E8'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                        serif: ['"Noto Serif JP"', 'serif'],
+                    },
+                    spacing: {
+                        'section': '120px',
+                        'section-sm': '80px',
+                    },
+                    boxShadow: {
+                        'soft': '0 4px 20px rgba(0, 0, 0, 0.03)',
+                        'float': '0 10px 40px rgba(74, 191, 191, 0.15)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { color: #3A3A3A; -webkit-font-smoothing: antialiased; }
+        .text-balance { text-wrap: balance; }
+        .section-header { position: relative; padding-bottom: 24px; margin-bottom: 48px; text-align: center; }
+        .section-header::after {
+            content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
+            width: 24px; height: 1px; background-color: #4ABFBF; opacity: 0.5;
+        }
+        @keyframes gentleFloat {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(2deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+        .animate-float { animation: gentleFloat 6s ease-in-out infinite; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #FAFAF8; }
+        ::-webkit-scrollbar-thumb { background: #D1D5DB; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #9CA3AF; }
+        .glass { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.4); }
+    </style>
+</head>
+<body class="bg-brand-bg font-sans">
+
+    <!-- Sticky Floating CTA -->
+    <a href="#reserve" class="fixed z-50 right-6 top-24 bg-brand-primary text-white rounded-xl shadow-float p-4 flex flex-col items-center justify-center transition-transform hover:scale-105 group border border-brand-primary/20 backdrop-blur-md bg-opacity-90">
+        <i class="ph ph-calendar-check text-2xl mb-1 group-hover:-translate-y-1 transition-transform"></i>
+        <span class="text-xs font-bold tracking-wider">WEB予約</span>
+    </a>
+
+    <!-- Header -->
+    <header class="fixed w-full top-0 left-0 z-40 bg-white/90 backdrop-blur-md border-b border-brand-border transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <div class="w-10 h-10 rounded-full bg-brand-primary/10 flex items-center justify-center text-brand-primary">
+                    <i class="ph ph-tooth text-2xl"></i>
+                </div>
+                <div>
+                    <h1 class="font-serif text-xl font-medium tracking-wide">F dental office</h1>
+                    <p class="text-[10px] text-gray-500 tracking-widest uppercase">Toyosu Prime Square</p>
+                </div>
+            </div>
+            <nav class="hidden lg:flex items-center gap-8 text-sm text-brand-dark/80 font-medium">
+                <a href="#features" class="hover:text-brand-primary transition-colors">特徴</a>
+                <a href="#doctor" class="hover:text-brand-primary transition-colors">院長紹介</a>
+                <a href="#menu" class="hover:text-brand-primary transition-colors">診療メニュー</a>
+                <a href="#facilities" class="hover:text-brand-primary transition-colors">院内設備</a>
+                <a href="#access" class="hover:text-brand-primary transition-colors">アクセス</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-20 pb-12 lg:h-[90vh] flex items-center max-w-[1600px] mx-auto overflow-hidden">
+        <div class="absolute inset-0 lg:left-1/3 lg:inset-y-0 w-full lg:w-2/3 h-[60vh] lg:h-full z-0">
+            <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=1600&q=80" alt="Modern clean clinic interior" class="w-full h-full object-cover rounded-bl-[4rem] filter contrast-[0.95]" />
+            <div class="absolute inset-0 bg-brand-primary/5"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 w-full relative z-10 grid lg:grid-cols-12 gap-8 items-center mt-[50vh] lg:mt-0">
+            <div class="lg:col-span-6 bg-white lg:bg-white/95 backdrop-blur-sm p-8 lg:p-16 rounded-3xl shadow-soft relative border border-white/50">
+                <div class="absolute -top-6 lg:-top-10 -right-4 lg:-right-10 w-28 h-28 lg:w-36 lg:h-36 rounded-full bg-brand-alt border-4 border-white shadow-lg flex items-center justify-center flex-col animate-float z-20 text-center">
+                    <span class="text-brand-primary text-xs lg:text-sm font-bold tracking-widest">2026年<br>7月1日</span>
+                    <span class="text-xs font-serif mt-1 border-t border-brand-primary/20 pt-1 w-16 mx-auto">新規開業</span>
+                </div>
+                <p class="text-brand-primary font-medium tracking-widest text-sm mb-4">TOYOSU PRIME SQUARE</p>
+                <h2 class="font-serif text-4xl lg:text-5xl leading-tight mb-6 text-brand-dark">
+                    0歳から通える<br>
+                    <span class="text-balance">やさしい歯科医院</span>
+                </h2>
+                <p class="text-gray-500 leading-relaxed mb-10 text-sm lg:text-base">
+                    豊洲プライムスクエア院に新規オープン。<br>
+                    自然光が差し込む心地よい空間で、<br>
+                    ご家族の生涯の歯の健康を守ります。
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#reserve" class="bg-brand-primary hover:bg-brand-primaryHover text-white px-8 py-4 rounded-full text-center font-medium transition-all shadow-md flex items-center justify-center gap-2">
+                        <span>WEBでのご予約</span>
+                        <i class="ph ph-arrow-right"></i>
+                    </a>
+                    <a href="tel:03-6204-2876" class="bg-brand-alt border border-brand-border text-brand-dark px-8 py-4 rounded-full text-center font-medium transition-all hover:bg-white flex items-center justify-center gap-2">
+                        <i class="ph ph-phone text-brand-primary"></i>
+                        <span class="font-serif text-lg tracking-wider">03-6204-2876</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule -->
+    <section class="max-w-4xl mx-auto px-6 -mt-8 relative z-20 pb-section">
+        <div class="bg-white rounded-2xl shadow-soft border border-brand-border overflow-hidden">
+            <div class="bg-brand-alt px-6 py-4 border-b border-brand-border flex items-center gap-3">
+                <i class="ph ph-clock text-brand-primary text-xl"></i>
+                <h3 class="font-serif text-lg">診療時間</h3>
+            </div>
+            <div class="p-6 overflow-x-auto">
+                <table class="w-full text-center text-sm border-collapse min-w-[600px]">
+                    <thead>
+                        <tr class="text-brand-dark/60 font-medium">
+                            <th class="py-3 px-4 font-normal border-b border-r border-brand-border w-1/4">診療時間</th>
+                            <th class="py-3 px-4 font-normal border-b border-brand-border">月</th>
+                            <th class="py-3 px-4 font-normal border-b border-brand-border text-red-400">火<span class="text-xs block">休診</span></th>
+                            <th class="py-3 px-4 font-normal border-b border-brand-border">水</th>
+                            <th class="py-3 px-4 font-normal border-b border-brand-border">木</th>
+                            <th class="py-3 px-4 font-normal border-b border-brand-border">金</th>
+                            <th class="py-3 px-4 font-normal border-b border-brand-border text-blue-500">土</th>
+                            <th class="py-3 px-4 font-normal border-b border-brand-border text-red-500">日</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="py-4 px-4 font-serif tracking-widest border-r border-b border-brand-border text-gray-600">10:00 - 13:00<br><span class="text-[10px] text-gray-400">土日 9:00 - 12:00</span></td>
+                            <td class="py-4 px-4 border-b border-brand-border"><div class="w-3 h-3 rounded-full bg-brand-primary mx-auto"></div></td>
+                            <td class="py-4 px-4 border-b border-brand-border text-gray-300">-</td>
+                            <td class="py-4 px-4 border-b border-brand-border"><div class="w-3 h-3 rounded-full bg-brand-primary mx-auto"></div></td>
+                            <td class="py-4 px-4 border-b border-brand-border"><div class="w-3 h-3 rounded-full bg-brand-primary mx-auto"></div></td>
+                            <td class="py-4 px-4 border-b border-brand-border"><div class="w-3 h-3 rounded-full bg-brand-primary mx-auto"></div></td>
+                            <td class="py-4 px-4 border-b border-brand-border"><div class="w-3 h-3 border-2 border-brand-primary rounded-full mx-auto"></div></td>
+                            <td class="py-4 px-4 border-b border-brand-border"><div class="w-3 h-3 border-2 border-brand-primary rounded-full mx-auto"></div></td>
+                        </tr>
+                        <tr>
+                            <td class="py-4 px-4 font-serif tracking-widest border-r border-brand-border text-gray-600">14:00 - 19:00<br><span class="text-[10px] text-gray-400">土日 13:00 - 17:00</span></td>
+                            <td class="py-4 px-4"><div class="w-3 h-3 rounded-full bg-brand-primary mx-auto"></div></td>
+                            <td class="py-4 px-4 text-gray-300">-</td>
+                            <td class="py-4 px-4"><div class="w-3 h-3 rounded-full bg-brand-primary mx-auto"></div></td>
+                            <td class="py-4 px-4"><div class="w-3 h-3 rounded-full bg-brand-primary mx-auto"></div></td>
+                            <td class="py-4 px-4"><div class="w-3 h-3 rounded-full bg-brand-primary mx-auto"></div></td>
+                            <td class="py-4 px-4"><div class="w-3 h-3 border-2 border-brand-primary rounded-full mx-auto"></div></td>
+                            <td class="py-4 px-4"><div class="w-3 h-3 border-2 border-brand-primary rounded-full mx-auto"></div></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctor Section -->
+    <section id="doctor" class="bg-brand-alt py-section relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-brand-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
+        <div class="max-w-6xl mx-auto px-6 relative z-10">
+            <div class="section-header">
+                <h2 class="font-serif text-3xl tracking-widest text-brand-primary mb-2">Greeting</h2>
+                <p class="text-sm tracking-widest text-brand-dark/70">院長挨拶</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
+                <div class="relative group">
+                    <div class="absolute inset-0 bg-brand-primary/10 rounded-2xl transform translate-x-4 translate-y-4 -z-10 transition-transform group-hover:translate-x-2 group-hover:translate-y-2"></div>
+                    <img src="/images/pages/homepage/豊洲 歯医者.png" alt="院長 福永真大" class="w-full h-[500px] object-cover rounded-2xl grayscale-[20%] group-hover:grayscale-0 transition-all duration-700" />
+                </div>
+                <div>
+                    <h3 class="font-serif text-2xl mb-8 leading-snug">
+                        歯を守ること、<br>
+                        それは日々の笑顔を守ること。
+                    </h3>
+                    <div class="space-y-4 text-gray-600 text-[15px] leading-loose mb-10">
+                        <p>皆様、はじめまして。F dental office 豊洲プライムスクエア院、院長の福永真大です。</p>
+                        <p>私が歯科医師として常に心がけているのは「自身の家族に受けさせたい治療」を提供することです。北欧の予防歯科の考え方を取り入れ、削って治すだけでなく、悪くならないための環境づくりを大切にしています。</p>
+                        <p>小さなお子様からご年配の方まで、地域の皆様が安心して通える、温かみのあるクリニックを目指してまいります。</p>
+                    </div>
+                    <div class="border-t border-brand-border pt-6">
+                        <p class="font-bold text-lg mb-2">院長 福永 真大 <span class="text-sm font-normal text-gray-500 ml-2">Masahiro Fukunaga</span></p>
+                        <ul class="text-sm text-gray-500 space-y-1">
+                            <li>大阪大学歯学部 卒業</li>
+                            <li>大手医療法人にて研修医指導医・診療主任を歴任</li>
+                            <li>日本小児歯科学会 / 日本矯正歯科学会 / 日本歯周病学会</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-section">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="section-header">
+                <h2 class="font-serif text-3xl tracking-widest text-brand-primary mb-2">Our Efforts</h2>
+                <p class="text-sm tracking-widest text-brand-dark/70">当院の5つの特徴</p>
+            </div>
+            <div class="space-y-16 lg:space-y-24">
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div class="h-64 md:h-80 rounded-2xl overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1600170311833-c2cf5280ce49?auto=format&fit=crop&w=800&q=80" alt="保存治療" class="w-full h-full object-cover">
+                        <div class="absolute bottom-0 left-0 bg-brand-primary text-white text-4xl font-serif px-4 py-2 rounded-tr-xl opacity-90">01</div>
+                    </div>
+                    <div class="md:pl-8">
+                        <h3 class="font-serif text-2xl mb-4 border-b border-brand-border pb-4">できるだけ削らない<br><span class="text-brand-primary">保存治療</span></h3>
+                        <p class="text-gray-600 leading-relaxed text-sm">マイクロスコープ（歯科用顕微鏡）を使用し、肉眼では見えない微細な虫歯のみを精密に除去します。健康な歯質を最大限に残し、歯の寿命を延ばす治療にこだわっています。</p>
+                    </div>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8 items-center md:grid-flow-col">
+                    <div class="md:pr-8 md:col-start-1">
+                        <h3 class="font-serif text-2xl mb-4 border-b border-brand-border pb-4">すべて見せる、わかりやすい<br><span class="text-brand-primary">透明な治療</span></h3>
+                        <p class="text-gray-600 leading-relaxed text-sm">治療前には必ず口の中の写真を撮影し、現在の状態を一緒に確認します。3Dスキャナーで歯並びを立体的にデータ化し、お口の状態や治療内容を丁寧にわかりやすく説明します。</p>
+                    </div>
+                    <div class="h-64 md:h-80 rounded-2xl overflow-hidden relative md:col-start-2">
+                        <img src="https://images.unsplash.com/photo-1598256989800-fea5ce514A0A?auto=format&fit=crop&w=800&q=80" alt="透明な治療" class="w-full h-full object-cover">
+                        <div class="absolute bottom-0 left-0 bg-brand-primary text-white text-4xl font-serif px-4 py-2 rounded-tr-xl opacity-90">02</div>
+                    </div>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div class="h-64 md:h-80 rounded-2xl overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=80" alt="こども矯正" class="w-full h-full object-cover">
+                        <div class="absolute bottom-0 left-0 bg-brand-primary text-white text-4xl font-serif px-4 py-2 rounded-tr-xl opacity-90">03</div>
+                    </div>
+                    <div class="md:pl-8">
+                        <h3 class="font-serif text-2xl mb-4 border-b border-brand-border pb-4">「お顔」も育てる<br><span class="text-brand-primary">こども矯正</span></h3>
+                        <p class="text-gray-600 leading-relaxed text-sm">歯並びだけでなく、お顔全体の成長を考えた治療を行います。当院独自の歯ならびの教科書を、来院した子ども患者さん全員にお渡しします。</p>
+                    </div>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8 items-center md:grid-flow-col">
+                    <div class="md:pr-8 md:col-start-1">
+                        <h3 class="font-serif text-2xl mb-4 border-b border-brand-border pb-4">天井テレビ付き<br><span class="text-brand-primary">個室の診療室</span></h3>
+                        <p class="text-gray-600 leading-relaxed text-sm">個室でプライバシーを確保。天井テレビがあるため、子供が通いやすい環境を整備しています。ベビーカーでもそのまま入れる広々とした設計です。</p>
+                    </div>
+                    <div class="h-64 md:h-80 rounded-2xl overflow-hidden relative md:col-start-2">
+                        <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80" alt="個室の診療室" class="w-full h-full object-cover">
+                        <div class="absolute bottom-0 left-0 bg-brand-primary text-white text-4xl font-serif px-4 py-2 rounded-tr-xl opacity-90">04</div>
+                    </div>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div class="h-64 md:h-80 rounded-2xl overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1544507856-74fcce7b38cb?auto=format&fit=crop&w=800&q=80" alt="審美歯科" class="w-full h-full object-cover">
+                        <div class="absolute bottom-0 left-0 bg-brand-primary text-white text-4xl font-serif px-4 py-2 rounded-tr-xl opacity-90">05</div>
+                    </div>
+                    <div class="md:pl-8">
+                        <h3 class="font-serif text-2xl mb-4 border-b border-brand-border pb-4">美しさと機能性を追求<br><span class="text-brand-primary">審美歯科</span></h3>
+                        <p class="text-gray-600 leading-relaxed text-sm">ただ白くするだけでなく、顔貌との調和や噛み合わせのバランスを考慮した審美治療を提供します。高品質なセラミック素材を使用し、長持ちする美しさを実現します。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Concerns Section -->
+    <section class="py-section bg-brand-alt border-y border-brand-border">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="font-serif text-2xl md:text-3xl text-brand-dark mb-4">こんなお悩みありませんか？</h2>
+                <p class="text-brand-primary/80 text-sm">当院では様々なライフステージのお悩みに対応しています</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+                <div class="bg-white p-6 rounded-2xl shadow-soft text-center hover:-translate-y-1 transition-transform cursor-default">
+                    <i class="ph ph-baby text-3xl text-brand-primary mb-3"></i>
+                    <p class="font-medium text-sm">子供の歯並びが<br>気になる</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-soft text-center hover:-translate-y-1 transition-transform cursor-default">
+                    <i class="ph ph-sparkle text-3xl mb-3" style="color: #D4C3A3"></i>
+                    <p class="font-medium text-sm">銀歯を白く<br>自然にしたい</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-soft text-center hover:-translate-y-1 transition-transform cursor-default">
+                    <i class="ph ph-shield-check text-3xl text-brand-primary mb-3"></i>
+                    <p class="font-medium text-sm">痛みの少ない<br>治療を受けたい</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-soft text-center hover:-translate-y-1 transition-transform cursor-default">
+                    <i class="ph ph-tooth text-3xl text-brand-dark/50 mb-3"></i>
+                    <p class="font-medium text-sm">しっかり噛める<br>インプラント</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Treatment Flow -->
+    <section class="py-section max-w-6xl mx-auto px-6">
+        <div class="section-header">
+            <h2 class="font-serif text-3xl tracking-widest text-brand-primary mb-2">Flow</h2>
+            <p class="text-sm tracking-widest text-brand-dark/70">初診の流れ</p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 relative">
+            <div class="hidden lg:block absolute top-[40px] left-10 right-10 h-px bg-brand-border z-0"></div>
+            <div class="relative z-10 flex flex-col items-center text-center">
+                <div class="w-20 h-20 bg-white border-2 border-brand-primary rounded-full flex items-center justify-center mb-4 shadow-sm">
+                    <span class="font-serif text-xl text-brand-primary font-bold">1</span>
+                </div>
+                <h4 class="font-bold text-sm mb-2">ご予約・ご来院</h4>
+                <p class="text-xs text-gray-500">WEBまたはお電話にてご予約ください。</p>
+            </div>
+            <div class="relative z-10 flex flex-col items-center text-center">
+                <div class="w-20 h-20 bg-white border-2 border-brand-border text-gray-400 rounded-full flex items-center justify-center mb-4 shadow-sm hover:border-brand-primary hover:text-brand-primary transition-colors">
+                    <span class="font-serif text-xl font-bold">2</span>
+                </div>
+                <h4 class="font-bold text-sm mb-2">カウンセリング</h4>
+                <p class="text-xs text-gray-500">お悩みやご希望を丁寧にお伺いします。</p>
+            </div>
+            <div class="relative z-10 flex flex-col items-center text-center">
+                <div class="w-20 h-20 bg-white border-2 border-brand-border text-gray-400 rounded-full flex items-center justify-center mb-4 shadow-sm hover:border-brand-primary hover:text-brand-primary transition-colors">
+                    <span class="font-serif text-xl font-bold">3</span>
+                </div>
+                <h4 class="font-bold text-sm mb-2">各種検査</h4>
+                <p class="text-xs text-gray-500">レントゲンや口腔内写真を撮影します。</p>
+            </div>
+            <div class="relative z-10 flex flex-col items-center text-center">
+                <div class="w-20 h-20 bg-white border-2 border-brand-border text-gray-400 rounded-full flex items-center justify-center mb-4 shadow-sm hover:border-brand-primary hover:text-brand-primary transition-colors">
+                    <span class="font-serif text-xl font-bold">4</span>
+                </div>
+                <h4 class="font-bold text-sm mb-2">歯周病検査</h4>
+                <p class="text-xs text-gray-500">歯茎の状態を精密にチェックします。</p>
+            </div>
+            <div class="relative z-10 flex flex-col items-center text-center">
+                <div class="w-20 h-20 bg-white border-2 border-brand-border text-gray-400 rounded-full flex items-center justify-center mb-4 shadow-sm hover:border-brand-primary hover:text-brand-primary transition-colors">
+                    <span class="font-serif text-xl font-bold">5</span>
+                </div>
+                <h4 class="font-bold text-sm mb-2">治療計画の立案</h4>
+                <p class="text-xs text-gray-500">結果をもとに最適な治療法をご提案。</p>
+            </div>
+            <div class="relative z-10 flex flex-col items-center text-center">
+                <div class="w-20 h-20 bg-brand-primary text-white border-2 border-brand-primary rounded-full flex items-center justify-center mb-4 shadow-md">
+                    <span class="font-serif text-xl font-bold">6</span>
+                </div>
+                <h4 class="font-bold text-sm mb-2">治療開始</h4>
+                <p class="text-xs text-gray-500">同意を得た上で治療をスタートします。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Treatment Menu -->
+    <section id="menu" class="py-section bg-[#F8F9FA]">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="section-header">
+                <h2 class="font-serif text-3xl tracking-widest text-brand-primary mb-2">Medical Guidance</h2>
+                <p class="text-sm tracking-widest text-brand-dark/70">診療案内</p>
+            </div>
+            <p class="text-center text-sm text-gray-600 mb-12 max-w-2xl mx-auto leading-relaxed">
+                当院では、むし歯の治療から高度なインプラント・矯正治療まで、<br class="hidden md:block">
+                あらゆる分野の治療で高い水準の医療を提供いたします。
+            </p>
+            <div class="grid grid-cols-3 md:grid-cols-5 gap-y-12 gap-x-4">
+                <div class="flex flex-col items-center group cursor-pointer">
+                    <div class="w-16 h-16 md:w-24 md:h-24 rounded-full border border-brand-primary/30 flex items-center justify-center bg-white mb-4 group-hover:bg-brand-primary transition-colors duration-300">
+                        <i class="ph ph-tooth text-3xl md:text-4xl text-brand-primary group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <span class="text-[11px] md:text-sm font-medium text-center">むしば治療</span>
+                </div>
+                <div class="flex flex-col items-center group cursor-pointer">
+                    <div class="w-16 h-16 md:w-24 md:h-24 rounded-full border border-brand-primary/30 flex items-center justify-center bg-white mb-4 group-hover:bg-brand-primary transition-colors duration-300">
+                        <i class="ph ph-bandaids text-3xl md:text-4xl text-brand-primary group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <span class="text-[11px] md:text-sm font-medium text-center">歯周病治療</span>
+                </div>
+                <div class="flex flex-col items-center group cursor-pointer">
+                    <div class="w-16 h-16 md:w-24 md:h-24 rounded-full border border-brand-primary/30 flex items-center justify-center bg-white mb-4 group-hover:bg-brand-primary transition-colors duration-300">
+                        <i class="ph ph-baby text-3xl md:text-4xl text-brand-primary group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <span class="text-[11px] md:text-sm font-medium text-center">こども歯科・予防</span>
+                </div>
+                <div class="flex flex-col items-center group cursor-pointer">
+                    <div class="w-16 h-16 md:w-24 md:h-24 rounded-full border border-brand-primary/30 flex items-center justify-center bg-white mb-4 group-hover:bg-brand-primary transition-colors duration-300">
+                        <i class="ph ph-sparkle text-3xl md:text-4xl text-brand-primary group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <span class="text-[11px] md:text-sm font-medium text-center">ホワイトニング</span>
+                </div>
+                <div class="flex flex-col items-center group cursor-pointer">
+                    <div class="w-16 h-16 md:w-24 md:h-24 rounded-full border border-brand-primary/30 flex items-center justify-center bg-white mb-4 group-hover:bg-brand-primary transition-colors duration-300">
+                        <i class="ph ph-diamond text-3xl md:text-4xl text-brand-primary group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <span class="text-[11px] md:text-sm font-medium text-center">セラミック治療</span>
+                </div>
+                <div class="flex flex-col items-center group cursor-pointer">
+                    <div class="w-16 h-16 md:w-24 md:h-24 rounded-full border border-brand-primary/30 flex items-center justify-center bg-white mb-4 group-hover:bg-brand-primary transition-colors duration-300">
+                        <i class="ph ph-smiley text-3xl md:text-4xl text-brand-primary group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <span class="text-[11px] md:text-sm font-medium text-center">マウスピース矯正</span>
+                </div>
+                <div class="flex flex-col items-center group cursor-pointer">
+                    <div class="w-16 h-16 md:w-24 md:h-24 rounded-full border border-brand-primary/30 flex items-center justify-center bg-white mb-4 group-hover:bg-brand-primary transition-colors duration-300">
+                        <i class="ph ph-git-branch text-3xl md:text-4xl text-brand-primary group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <span class="text-[11px] md:text-sm font-medium text-center">矯正歯科</span>
+                </div>
+                <div class="flex flex-col items-center group cursor-pointer">
+                    <div class="w-16 h-16 md:w-24 md:h-24 rounded-full border border-brand-primary/30 flex items-center justify-center bg-white mb-4 group-hover:bg-brand-primary transition-colors duration-300">
+                        <i class="ph ph-baby text-3xl md:text-4xl text-brand-primary group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <span class="text-[11px] md:text-sm font-medium text-center">こども矯正</span>
+                </div>
+                <div class="flex flex-col items-center group cursor-pointer">
+                    <div class="w-16 h-16 md:w-24 md:h-24 rounded-full border border-brand-primary/30 flex items-center justify-center bg-white mb-4 group-hover:bg-brand-primary transition-colors duration-300">
+                        <i class="ph ph-anchor text-3xl md:text-4xl text-brand-primary group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <span class="text-[11px] md:text-sm font-medium text-center">インプラント</span>
+                </div>
+                <div class="flex flex-col items-center group cursor-pointer">
+                    <div class="w-16 h-16 md:w-24 md:h-24 rounded-full border border-brand-primary/30 flex items-center justify-center bg-white mb-4 group-hover:bg-brand-primary transition-colors duration-300">
+                        <i class="ph ph-shield-check text-3xl md:text-4xl text-brand-primary group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <span class="text-[11px] md:text-sm font-medium text-center">予防歯科</span>
+                </div>
+                <div class="flex flex-col items-center group cursor-pointer">
+                    <div class="w-16 h-16 md:w-24 md:h-24 rounded-full border border-brand-primary/30 flex items-center justify-center bg-white mb-4 group-hover:bg-brand-primary transition-colors duration-300">
+                        <i class="ph ph-git-diff text-3xl md:text-4xl text-brand-primary group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <span class="text-[11px] md:text-sm font-medium text-center">根管治療</span>
+                </div>
+                <div class="flex flex-col items-center group cursor-pointer">
+                    <div class="w-16 h-16 md:w-24 md:h-24 rounded-full border border-brand-primary/30 flex items-center justify-center bg-white mb-4 group-hover:bg-brand-primary transition-colors duration-300">
+                        <i class="ph ph-scissors text-3xl md:text-4xl text-brand-primary group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <span class="text-[11px] md:text-sm font-medium text-center">親知らず抜歯</span>
+                </div>
+                <div class="flex flex-col items-center group cursor-pointer">
+                    <div class="w-16 h-16 md:w-24 md:h-24 rounded-full border border-brand-primary/30 flex items-center justify-center bg-white mb-4 group-hover:bg-brand-primary transition-colors duration-300">
+                        <i class="ph ph-wind text-3xl md:text-4xl text-brand-primary group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <span class="text-[11px] md:text-sm font-medium text-center">口臭治療</span>
+                </div>
+                <div class="flex flex-col items-center group cursor-pointer">
+                    <div class="w-16 h-16 md:w-24 md:h-24 rounded-full border border-brand-primary/30 flex items-center justify-center bg-white mb-4 group-hover:bg-brand-primary transition-colors duration-300">
+                        <i class="ph ph-first-aid text-3xl md:text-4xl text-brand-primary group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <span class="text-[11px] md:text-sm font-medium text-center">歯の外傷・急患</span>
+                </div>
+                <div class="flex flex-col items-center group cursor-pointer">
+                    <div class="w-16 h-16 md:w-24 md:h-24 rounded-full border border-brand-primary/30 flex items-center justify-center bg-white mb-4 group-hover:bg-brand-primary transition-colors duration-300">
+                        <i class="ph ph-moon text-3xl md:text-4xl text-brand-primary group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <span class="text-[11px] md:text-sm font-medium text-center">歯ぎしり・食いしばり</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities -->
+    <section id="facilities" class="py-section">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="section-header">
+                <h2 class="font-serif text-3xl tracking-widest text-brand-primary mb-2">Clinic Facilities</h2>
+                <p class="text-sm tracking-widest text-brand-dark/70">院内設備</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-brand-alt p-4 rounded-2xl">
+                    <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=600&q=80" alt="受付・待合室" class="w-full h-64 object-cover rounded-xl mb-4">
+                    <h3 class="font-serif text-lg text-center mb-2">リラックスできる待合室</h3>
+                    <p class="text-xs text-gray-500 text-center px-4">歯医者特有の緊張感を感じさせない、カフェのような空間づくりをしています。</p>
+                </div>
+                <div class="bg-brand-alt p-4 rounded-2xl">
+                    <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=600&q=80" alt="診療室" class="w-full h-64 object-cover rounded-xl mb-4">
+                    <h3 class="font-serif text-lg text-center mb-2">プライバシー配慮の診療室</h3>
+                    <p class="text-xs text-gray-500 text-center px-4">全室広々とした設計で、ベビーカーをお側においたまま治療を受けることが可能です。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="access" class="bg-brand-dark text-white pt-20 pb-10">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 border-b border-gray-700 pb-16">
+            <div>
+                <h2 class="font-serif text-3xl mb-1">F dental office</h2>
+                <p class="text-brand-primary text-xs tracking-wider mb-8 uppercase">Toyosu Prime Square</p>
+                <p class="text-sm text-gray-300 mb-6 leading-relaxed">
+                    〒135-0061<br>
+                    東京都江東区豊洲X-X-X プライムスクエア1F<br>
+                    「豊洲駅6a出口」徒歩2分
+                </p>
+                <div class="bg-gray-800/50 p-6 rounded-xl border border-gray-700 mb-6">
+                    <p class="text-xs text-gray-400 mb-2">ご予約・お問い合わせ</p>
+                    <a href="tel:03-6204-2876" class="flex items-center gap-2 group w-max">
+                        <i class="ph ph-phone text-brand-primary text-xl"></i>
+                        <span class="font-serif text-2xl tracking-wider group-hover:text-brand-primary transition-colors">03-6204-2876</span>
+                    </a>
+                </div>
+                <a href="#reserve" class="inline-block bg-brand-primary hover:bg-white hover:text-brand-dark text-white px-8 py-4 rounded-full text-center font-medium transition-all shadow-md w-full md:w-auto">
+                    WEBでのご予約はこちら
+                </a>
+            </div>
+            <div>
+                <div class="w-full h-64 bg-gray-800 rounded-xl mb-6 relative overflow-hidden flex items-center justify-center">
+                    <i class="ph ph-map-pin text-gray-600 text-4xl"></i>
+                    <span class="text-gray-500 ml-2">Google Map Area</span>
+                </div>
+                <div class="bg-gray-800/50 rounded-xl p-4 border border-gray-700">
+                    <p class="text-xs text-brand-primary mb-2 border-b border-gray-700 pb-2">診療時間</p>
+                    <p class="text-sm text-gray-300 leading-relaxed">
+                        午前：10:00 - 13:00 (土日 9:00 - 12:00)<br>
+                        午後：14:00 - 19:00 (土日 13:00 - 17:00)<br>
+                        <span class="text-red-400">休診日：火曜・祝日</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="text-center text-xs text-gray-500 mt-8 pt-4">
+            &copy; 2026 F dental office Toyosu Prime Square. All Rights Reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

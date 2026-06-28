@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { ChevronRight, MessageCircleQuestion, HelpCircle, Stethoscope, Wallet, Wrench, ShieldAlert } from 'lucide-react';
+import { WEB_RESERVATION_URL } from '@/lib/reservation';
 
 /* ─── FAQ Data ─── */
 interface FAQ {
@@ -425,7 +426,9 @@ export default function QAContent() {
                 03-6204-2876
               </a>
               <a
-                href="#"
+                href={WEB_RESERVATION_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#FF9F43] text-white rounded-full font-bold hover:bg-[#e8903c] transition-all shadow-md"
               >
                 無料カウンセリング予約

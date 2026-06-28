@@ -4,6 +4,8 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
 import { PageImage } from '@/components/PageImage';
+import { RelatedPagesSection } from '@/components/RelatedPagesSection';
+import { preventiveRelatedPages } from '@/data/related-pages';
 import {
   CheckCircle2,
   ArrowRight,
@@ -412,80 +414,13 @@ export default function PreventiveCleaningPage() {
           </div>
         </section>
 
-        {/* 関連ページ */}
-        <section className="py-2 bg-[#FDFBF7]">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <div className="text-center mb-12">
-                <h2 className="text-3xl md:text-4xl font-bold text-[#5A4D41] font-serif">関連ページ</h2>
-                <div className="w-16 h-0.5 bg-[#C5A572] mx-auto mt-4"></div>
-              </div>
+        <RelatedPagesSection
+          title="関連ページ"
+          items={preventiveRelatedPages}
+          currentPath="/preventive/cleaning"
+        />
 
-              <div className="grid md:grid-cols-3 gap-6">
-                <Link href="/preventive" className="group bg-white p-6 rounded-2xl border-2 border-[#C5A572]/20 hover:border-[#C5A572]/40 hover:shadow-lg transition-all">
-                  <h3 className="text-xl font-bold text-[#5A4D41] font-serif mb-4">予防歯科TOP</h3>
-                  <p className="text-[#8D8070] mb-4">
-                    予防歯科の概要と特徴
-                  </p>
-                  <div className="flex items-center text-[#C5A572] font-semibold group-hover:translate-x-2 transition-transform">
-                    詳しく見る <ArrowRight className="w-5 h-5 ml-2" />
-                  </div>
-                </Link>
 
-                <Link href="/preventive/checkup" className="group bg-white p-6 rounded-2xl border-2 border-[#C5A572]/20 hover:border-[#C5A572]/40 hover:shadow-lg transition-all">
-                  <h3 className="text-xl font-bold text-[#5A4D41] font-serif mb-4">定期検診</h3>
-                  <p className="text-[#8D8070] mb-4">
-                    虫歯・歯周病の早期発見
-                  </p>
-                  <div className="flex items-center text-[#C5A572] font-semibold group-hover:translate-x-2 transition-transform">
-                    詳しく見る <ArrowRight className="w-5 h-5 ml-2" />
-                  </div>
-                </Link>
-
-                <Link href="/preventive/fluoride" className="group bg-white p-6 rounded-2xl border-2 border-[#C5A572]/20 hover:border-[#C5A572]/40 hover:shadow-lg transition-all">
-                  <h3 className="text-xl font-bold text-[#5A4D41] font-serif mb-4">フッ素塗布</h3>
-                  <p className="text-[#8D8070] mb-4">
-                    歯質を強化し虫歯を予防
-                  </p>
-                  <div className="flex items-center text-[#C5A572] font-semibold group-hover:translate-x-2 transition-transform">
-                    詳しく見る <ArrowRight className="w-5 h-5 ml-2" />
-                  </div>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA */}
-        <section className="py-2 bg-gradient-to-r from-[#D4AF37] to-[#C5A028] text-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 font-serif">
-                専門的なクリーニングで<br />
-                お口の健康を守ります
-              </h2>
-              <p className="text-xl mb-8 text-white/90">
-                無料カウンセリングで、<br className="md:hidden" />
-                あなたに最適なケアをご提案します
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="/#contact"
-                  className="inline-flex items-center justify-center bg-white text-[#C5A572] px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-50 transition-colors shadow-lg"
-                >
-                  無料カウンセリング予約
-                  <ArrowRight className="w-6 h-6 ml-2" />
-                </Link>
-                <Link
-                  href="tel:03-6204-2876"
-                  className="inline-flex items-center justify-center bg-white/20 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/30 transition-colors border-2 border-white"
-                >
-                  電話で相談する
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
                 {/* 監修者情報 */}
                 <div className="container mx-auto px-4 pt-2 pb-16">
                     <AuthorBio />

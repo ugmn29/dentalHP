@@ -1,113 +1,28 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
 import { Header } from '../../components/Header';
 import { Footer } from '../../components/Footer';
 import { AuthorBio } from '../../components/AuthorBio';
 import { PageImage } from '@/components/PageImage';
+import { FeatureSection } from '@/components/FeatureSection';
 import { CheckCircle2, ArrowRight, Calendar, Phone, ChevronRight } from 'lucide-react';
+import { FaqSection } from '@/components/FaqSection';
+import { MobileTreatmentHero } from '@/components/MobileTreatmentHero';
 
 export default function OralEducationPage() {
-    const [currentHeroSlide, setCurrentHeroSlide] = useState(0);
-
-    // Hero slider images
-    const heroImages = [
-        { imageId: "hero-slide1", alt: "豊洲の歯科 0歳からの口育プログラム" },
-        { imageId: "hero-slide2", alt: "豊洲の歯医者 こどもの口育トレーニング" },
-        { imageId: "hero-slide3", alt: "豊洲 歯科医院 親子カウンセリング" },
-    ];
-
-    // Hero image slider logic
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentHeroSlide((prev) => (prev + 1) % heroImages.length);
-        }, 5000);
-
-        return () => clearInterval(interval);
-    }, [heroImages.length]);
 
     return (
         <div className="min-h-screen bg-white font-sans text-[#4A4A4A] overflow-x-hidden" style={{ wordBreak: 'normal', overflowWrap: 'anywhere' }}>
             <Header />
 
             <main>
-                {/* Hero Section - Image Slider + Text */}
-                <section className="relative w-full overflow-hidden bg-white">
-                    {/* Image Slider - Reduced height */}
-                    <div className="relative w-full" style={{ height: '50vh' }}>
-                        {heroImages.map((image, index) => (
-                            <div
-                                key={index}
-                                className={`absolute inset-0 transition-opacity duration-1000 ${
-                                    index === currentHeroSlide ? 'opacity-100' : 'opacity-0'
-                                }`}
-                            >
-                                <PageImage
-                                    path="/oral-education"
-                                    imageId={image.imageId}
-                                    alt={image.alt}
-                                    className="w-full h-full object-cover"
-                                />
-                                <div className="absolute inset-0 bg-black/20"></div>
-                            </div>
-                        ))}
-
-                        {/* CTA Button - Bottom Right */}
-                        <div className="absolute -bottom-8 right-4 md:-bottom-10 md:right-8 z-20 animate-bounce-slow">
-                            <a
-                                href="#"
-                                className="group relative flex items-center gap-3 bg-gradient-to-r from-[#395b45] to-[#2d4835] hover:from-[#4a6c56] hover:to-[#395b45] text-white px-6 py-4 md:px-8 md:py-5 rounded-full shadow-2xl hover:shadow-[0_0_30px_rgba(57,91,69,0.6)] transition-all duration-300 transform hover:scale-105"
-                            >
-                                <div className="flex items-center gap-2">
-                                    <Calendar size={24} className="group-hover:rotate-12 transition-transform" />
-                                    <div className="flex flex-col items-start">
-                                        <span className="text-xs font-medium opacity-90">24時間受付</span>
-                                        <span className="text-base md:text-lg font-bold whitespace-nowrap">WEB予約</span>
-                                    </div>
-                                </div>
-                                <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center group-hover:translate-x-1 transition-transform">
-                                    <ChevronRight size={20} />
-                                </div>
-
-                                {/* Pulsing ring effect */}
-                                <div className="absolute inset-0 rounded-full bg-[#395b45] opacity-0 group-hover:opacity-20 group-hover:scale-110 transition-all duration-300"></div>
-                            </a>
-                        </div>
-                    </div>
-
-                    {/* Text Area - Closer to image */}
-                    <div className="relative bg-white flex flex-col items-center justify-start px-4 pt-8 pb-6 md:pb-8">
-                        <div className="max-w-7xl w-full text-center flex items-center justify-center">
-                            <h1 className="font-bold leading-tight font-serif mb-0">
-                                <div className="relative inline-block mb-2 md:mb-4 px-4 md:px-8">
-                                    <div className="relative z-10 py-2 md:py-4 whitespace-nowrap overflow-x-auto">
-                                        <span className="inline-flex items-center justify-center gap-1 md:gap-3 text-[6vw] sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif"
-                                              style={{
-                                                  fontWeight: '900',
-                                                  letterSpacing: '0.05em'
-                                              }}>
-                                            <span className="inline-block text-[#2d2d2d]">
-                                                0歳から始める、
-                                            </span>
-                                            <span className="inline-block bg-gradient-to-br from-[#395b45] via-[#4a6c56] to-[#2d4835] bg-clip-text text-transparent drop-shadow-lg transform hover:scale-105 transition-all duration-300"
-                                                  style={{
-                                                      WebkitBackgroundClip: 'text',
-                                                      WebkitTextFillColor: 'transparent'
-                                                  }}>
-                                                <span className="text-[120%]">一生もの</span><span className="text-[85%]">の歯並び</span>
-                                            </span>
-                                        </span>
-                                    </div>
-                                    <div className="absolute -inset-4 bg-gradient-to-r from-[#395b45]/10 via-[#c8ddd0]/20 to-[#395b45]/10 rounded-3xl blur-2xl -z-10 animate-pulse"></div>
-                                    <div className="absolute -inset-2 bg-gradient-to-r from-transparent via-[#395b45]/5 to-transparent rounded-2xl -z-10"></div>
-                                </div>
-                                <span className="block text-[5.5vw] sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-[#5A4D41] mt-1 md:mt-4 mb-0 pb-0 leading-none font-semibold font-serif">
-                                    ０歳からの口育
-                                </span>
-                            </h1>
-                        </div>
-                    </div>
-                </section>
+                <MobileTreatmentHero
+                    imageSrc="/images/pages/mobile-heroes/oral-education-hero.webp"
+                    tabletSrc="/images/pages/mobile-heroes/oral-education-hero-tablet.webp"
+                    desktopSrc="/images/pages/mobile-heroes/oral-education-hero-desktop.webp"
+                    title="0歳からのこども歯科・予防"
+                    alt="はじめての歯医者を、楽しい経験に 0歳からのこども歯科・予防"
+                />
 
                 {/* Concept Message Section */}
                 <section className="pt-6 md:pt-2 pb-2 md:pb-2 bg-[#FDFBF7] relative overflow-hidden">
@@ -119,114 +34,63 @@ export default function OralEducationPage() {
                             FEATURES OF ORAL EDUCATION
                         </p>
                         <h2 className="text-2xl md:text-3xl font-medium text-[#5A4D41] font-serif leading-loose tracking-widest">
-                            Fデンタルオフィス 豊洲プライムスクエア院の口育は<br />
-                            歯並びの根本原因にアプローチします
+                            Fデンタルオフィス 豊洲プライムスクエア院のこども歯科は<br />
+                            口育と予防でお口の成長を支えます
                         </h2>
                     </div>
                 </section>
 
-                {/* Features (CHARM) Section - Refined Zig-Zag */}
-                <section className="pt-8 pb-8 bg-white overflow-hidden">
-                    <div className="container mx-auto px-4">
-                        <div className="text-center mb-12">
-                            <span className="text-[#C5A572] font-bold tracking-[0.2em] text-sm block mb-2">FEATURES</span>
-                            <h2 className="text-4xl md:text-5xl font-bold text-[#5A4D41] font-serif">
-                                当院<span className="text-[0.75em]">の</span><span className="text-[#395b45]">特徴</span>
-                            </h2>
-                        </div>
-
-                        <div className="space-y-12 max-w-5xl mx-auto">
-                            {[
-                                {
-                                    id: "01",
-                                    title: "Early Start",
-                                    highlight: "0歳からのアプローチ",
-                                    summary: "歯が生える前からの関わりで、きれいな歯並びの土台を作ります。",
-                                    details: [
-                                        "授乳姿勢や抱っこの仕方など、生活習慣からのアドバイス",
-                                        "離乳食の与え方や噛む練習の指導",
-                                        "指しゃぶりなどの習癖への早期対応"
-                                    ],
-                                    imageId: "feature1"
-                                },
-                                {
-                                    id: "02",
-                                    title: "Fun Training",
-                                    highlight: "楽しく学べるトレーニング",
-                                    summary: "遊び感覚で続けられる、お口周りの筋肉トレーニングです。",
-                                    details: [
-                                        "「あいうべ体操」や風船遊びで楽しく筋力アップ",
-                                        "専用のトレーニング器具を使った効果的な練習",
-                                        "お子様が飽きずに続けられるプログラム"
-                                    ],
-                                    imageId: "子供が風船やシャボン玉で遊んでいるイラスト"
-                                },
-                                {
-                                    id: "03",
-                                    title: "Myobrace",
-                                    highlight: "マイオブレース対応",
-                                    summary: "マウスピース型の装置で、歯並びが悪くなる根本原因にアプローチします。",
-                                    details: [
-                                        "日中1時間と就寝時の装着だけでOK",
-                                        "口呼吸から鼻呼吸への改善をサポート",
-                                        "正しい舌の位置や飲み込み方を習得"
-                                    ],
-                                    imageId: "feature3"
-                                },
-                                {
-                                    id: "04",
-                                    title: "Parent Support",
-                                    highlight: "親子で取り組むサポート",
-                                    summary: "ご自宅でのトレーニングも無理なく続けられるよう、親御様をサポートします。",
-                                    details: [
-                                        "ご家庭での練習方法を丁寧にレクチャー",
-                                        "定期的なチェックでモチベーション維持を応援",
-                                        "お子様の成長を一緒に見守るパートナーシップ"
-                                    ],
-                                    imageId: "feature4"
-                                }
-                            ].map((feature, index) => (
-                                <div key={feature.id} className="flex flex-col group">
-                                    {/* Title Area */}
-                                    <div className="relative">
-                                        {/* Large Gradient Number */}
-                                        <span className="text-8xl font-serif text-[#C5A572]/15 absolute -top-16 -left-8 z-0 select-none font-bold" style={{ letterSpacing: '-0.05em' }}>
-                                            {feature.id}
-                                        </span>
-
-                                        {/* Title */}
-                                        <div className="flex items-start justify-between gap-4">
-                                            <h3 className="text-3xl md:text-4xl font-bold text-[#5A4D41] leading-tight tracking-wide font-serif inline-block relative flex-1">
-                                                <span dangerouslySetInnerHTML={{ __html: feature.highlight.replace(/(の|を|に|が|は|と|へ|から|より|で|や)/g, '<span class="text-[0.75em]">$1</span>') }} />
-                                                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#C5A572] via-[#C5A572] to-transparent"></div>
-                                            </h3>
-                                        </div>
-                                    </div>
-
-                                    {/* Image Area */}
-                                    <div className="w-full mb-8 relative">
-                                        <div className="relative rounded-[30px] overflow-hidden shadow-lg border-2 border-white">
-                                            <PageImage
-                                                path="/oral-education"
-                                                imageId={feature.imageId}
-                                                alt={feature.highlight}
-                                                className="w-full h-auto aspect-[16/9] object-cover"
-                                            />
-                                            <div className="absolute inset-0 bg-gradient-to-t from-[#C5A572]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-                                        </div>
-                                    </div>
-
-                                    {/* Text Area - Always Left Aligned */}
-                                    <div>
-                                        <p className="text-base md:text-lg text-[#5A4D41] leading-relaxed font-serif">
-                                            {feature.summary}{feature.details.map((detail, i) => detail).join('')}
-                                        </p>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </section>
+                <FeatureSection
+                    title="当院の特徴"
+                    pagePath="/oral-education"
+                    features={[
+                        {
+                            no: "01",
+                            label: "Early Start",
+                            title: "0歳からのアプローチ",
+                            highlight: "お口の成長を早期から支える",
+                            body: "歯が生える前から、授乳姿勢・抱っこ・離乳食・噛む練習まで、将来の歯並びと口腔機能につながる土台づくりをサポートします。",
+                            imageId: "医師と親子が対面で話している場面",
+                            imageAlt: "親子が歯科医師に0歳からのこども歯科と予防について相談している様子",
+                        },
+                        {
+                            no: "02",
+                            label: "Preventive Care",
+                            title: "虫歯予防まで一緒に",
+                            highlight: "フッ素・シーラント・定期検診",
+                            body: "フッ素塗布、シーラント、定期的なチェックで、虫歯になる前の予防を重視します。乳歯の虫歯も、永久歯や歯並びに影響するため早めの管理が大切です。",
+                            imageId: "口腔内写真撮影と態癖チェック",
+                            imageAlt: "こどものお口を確認しながら予防処置を説明している様子",
+                        },
+                        {
+                            no: "03",
+                            label: "Home Care",
+                            title: "親子で続ける歯みがき",
+                            highlight: "仕上げみがきと生活習慣",
+                            body: "年齢に合わせた仕上げみがきの方法、歯ブラシの選び方、おやつや食べ方の工夫まで、ご家庭で続けやすい形でお伝えします。",
+                            imageId: "子供がトレーニング中で衛生士が見守る場面",
+                            imageAlt: "歯科衛生士が子供のトレーニングを見守っている様子",
+                        },
+                        {
+                            no: "04",
+                            label: "Step Up",
+                            title: "怖くない通院体験",
+                            highlight: "歯医者嫌いにしない工夫",
+                            body: "いきなり治療を始めるのではなく、診療台に座る、器具に触れる、お口を開けるなど、できることを少しずつ増やしていきます。",
+                            imageId: "笑顔の子供とGoodサイン",
+                            imageAlt: "歯科医院で笑顔の子供が安心している様子",
+                        },
+                        {
+                            no: "05",
+                            label: "Oral Function",
+                            title: "口呼吸・お口ぽかんへ対応",
+                            highlight: "歯並びの原因にアプローチ",
+                            body: "口呼吸、舌の位置、飲み込み方、指しゃぶりなどの癖を確認し、必要に応じてMFTやマイオブレースなどで歯並びが悪くなる原因に働きかけます。",
+                            imageId: "子供が風船やシャボン玉で遊んでいるイラスト",
+                            imageAlt: "こどもが遊びながらお口周りのトレーニングをしているイラスト",
+                        },
+                    ]}
+                />
 
                 {/* Lead & Recommended Section */}
                 <section className="py-2 bg-[#FDFBF7]">
@@ -259,6 +123,39 @@ export default function OralEducationPage() {
                                 <p>
                                     早期に正しい習慣を身につけることで、<span className="font-bold bg-yellow-100">将来的な矯正治療の必要性を減らし、生涯にわたる健康な口腔環境</span>を育むことができます。
                                 </p>
+                            </div>
+                        </div>
+
+                        {/* こども歯科・予防で行うこと */}
+                        <div className="mb-16">
+                            <div className="text-center mb-8">
+                                <h3 className="text-2xl md:text-3xl font-bold text-[#5A4D41] font-serif inline-block">こども歯科・予防で行うこと</h3>
+                                <div className="w-16 h-0.5 bg-[#395b45] mx-auto mt-4"></div>
+                            </div>
+                            <div className="grid gap-5 md:grid-cols-3">
+                                {[
+                                    {
+                                        id: "fluoride",
+                                        title: "フッ素・シーラント",
+                                        desc: "歯質を強くするフッ素塗布と、奥歯の溝を守るシーラントで虫歯を予防します。"
+                                    },
+                                    {
+                                        id: "brushing",
+                                        title: "歯みがき・仕上げみがき",
+                                        desc: "年齢や歯並びに合わせて、親子で続けやすい磨き方とケア用品をお伝えします。"
+                                    },
+                                    {
+                                        id: "overcoming-fear",
+                                        title: "歯医者嫌いにしない通院",
+                                        desc: "お子様のペースに合わせたステップアップで、怖さを減らしながら通える環境を作ります。"
+                                    }
+                                ].map((item) => (
+                                    <div key={item.id} id={item.id} className="rounded-2xl border border-[#E8E0D4] bg-white p-6 shadow-sm">
+                                        <p className="mb-3 text-[11px] tracking-[0.25em] text-[#C5A572]">PREVENTION</p>
+                                        <h4 className="mb-4 font-serif text-xl font-bold text-[#5A4D41]">{item.title}</h4>
+                                        <p className="text-sm leading-[2] text-[#8D8070]">{item.desc}</p>
+                                    </div>
+                                ))}
                             </div>
                         </div>
 
@@ -466,15 +363,9 @@ export default function OralEducationPage() {
                 </section>
 
                 {/* FAQ Section */}
-                <section className="pt-8 pb-8 bg-[#FDFBF7]">
-                    <div className="container mx-auto px-4 max-w-4xl">
-                        <div className="text-center mb-8">
-                            <p className="text-[#C5A572] tracking-[0.2em] font-bold mb-2">Q&A</p>
-                            <h2 className="text-3xl md:text-4xl font-bold text-[#5A4D41] font-serif">よくあるご質問</h2>
-                        </div>
-
-                        <div className="space-y-6">
-                            {[
+                <FaqSection
+                  title="よくあるご質問"
+                  items={[
                                 {
                                     q: "何歳から始められますか？",
                                     a: "0歳（妊娠中）からご相談いただけます。実際にトレーニングを始めるのは、言葉の理解が進む3歳頃からが一般的ですが、生活習慣の指導は早ければ早いほど効果的です。"
@@ -487,49 +378,10 @@ export default function OralEducationPage() {
                                     q: "費用はどれくらいかかりますか？",
                                     a: "相談や簡単な指導は保険診療の範囲内で行えることもありますが、本格的なプログラムや装置を使用する場合は自費診療となります。詳しくは料金表をご覧ください。"
                                 }
-                            ].map((faq, index) => (
-                                <div key={index} className="border-b border-[#F0EAE0] pb-6">
-                                    <h3 className="text-lg font-bold text-[#5A4D41] mb-3 flex items-start gap-4">
-                                        <span className="text-[#C5A572] font-serif italic text-2xl leading-none">Q.</span>
-                                        {faq.q}
-                                    </h3>
-                                    <div className="pl-10">
-                                        <p className="text-[#8D8070] leading-relaxed">{faq.a}</p>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </section>
+                            ]}
+                />
 
-                {/* CTA Section */}
-                <section className="py-2 bg-[#395b45] text-white">
-                    <div className="container mx-auto px-4 text-center">
-                        <h2 className="text-3xl md:text-4xl font-bold mb-8 font-serif">
-                            まずは一度、<br className="md:hidden" />お気軽にご相談ください
-                        </h2>
-                        <p className="text-white/90 mb-12">
-                            お子様一人ひとりに合わせた最適なプログラムをご提案いたします。
-                        </p>
 
-                        <div className="flex flex-col sm:flex-row gap-6 justify-center max-w-2xl mx-auto">
-                            <button className="bg-[#C5A572] hover:bg-[#B59562] text-white px-8 py-5 rounded-full font-bold shadow-lg transition-all flex items-center justify-center gap-3 text-lg flex-1 group">
-                                <Calendar className="group-hover:rotate-12 transition" />
-                                24時間 WEB予約
-                            </button>
-                            <button className="bg-transparent border-2 border-[#C5A572] hover:bg-[#C5A572]/10 text-white px-8 py-5 rounded-full font-bold transition-all flex items-center justify-center gap-3 text-lg flex-1">
-                                <Phone className="text-[#C5A572]" />
-                                03-6204-2876
-                            </button>
-                        </div>
-
-                        <div className="mt-12">
-                            <a href="/kidsortho/cost" className="inline-flex items-center gap-2 text-[#C5A572] hover:text-[#E5C592] transition-colors border-b border-[#C5A572] pb-1">
-                                料金表を見る <ArrowRight size={16} />
-                            </a>
-                        </div>
-                    </div>
-                </section>
                 {/* 監修者情報 */}
                 <div className="container mx-auto px-4 pt-2 pb-16">
                     <AuthorBio />

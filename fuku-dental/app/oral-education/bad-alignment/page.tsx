@@ -6,6 +6,9 @@ import { Header } from '../../../components/Header';
 import { Footer } from '../../../components/Footer';
 import { AuthorBio } from '../../../components/AuthorBio';
 import { CheckCircle2, ArrowRight, Home, ChevronRight, AlertCircle, XCircle } from 'lucide-react';
+import { RelatedPagesSection } from '@/components/RelatedPagesSection';
+import { oralEducationRelatedPages } from '@/data/related-pages';
+import { FaqSection } from '@/components/FaqSection';
 
 export default function BadAlignmentPage() {
     return (
@@ -19,7 +22,7 @@ export default function BadAlignmentPage() {
                         <div className="flex items-center gap-2 text-sm text-[#8D8070]">
                             <Home size={16} />
                             <ChevronRight size={14} />
-                            <a href="/oral-education" className="hover:text-[#C5A572] transition-colors">０歳からの口育</a>
+                            <a href="/oral-education" className="hover:text-[#C5A572] transition-colors">0歳からのこども歯科・予防</a>
                             <ChevronRight size={14} />
                             <span className="text-[#5A4D41] font-medium">子供の歯並びが悪くなる原因と予防</span>
                         </div>
@@ -414,15 +417,9 @@ export default function BadAlignmentPage() {
                 </section>
 
                 {/* FAQ Section */}
-                <section className="py-2 bg-white">
-                    <div className="container mx-auto px-4 max-w-4xl">
-                        <div className="text-center mb-12">
-                            <p className="text-[#C5A572] tracking-[0.2em] font-bold mb-2">Q&A</p>
-                            <h2 className="text-3xl md:text-4xl font-bold text-[#5A4D41] font-serif">よくあるご質問</h2>
-                        </div>
-
-                        <div className="space-y-6">
-                            {[
+                <FaqSection
+                  title="よくあるご質問"
+                  items={[
                                 {
                                     q: "歯並びは遺伝で決まるのではないですか？",
                                     a: "遺伝の影響は約20%です。残り80%は、口呼吸・指しゃぶり・舌癖などの生活習慣が原因です。つまり、生活習慣を改善することで、歯並びの悪化を予防できます。"
@@ -443,96 +440,16 @@ export default function BadAlignmentPage() {
                                     q: "柔らかい食べ物ばかりだとなぜ歯並びが悪くなるのですか？",
                                     a: "よく噛まないと顎の成長が不十分になり、歯が並ぶスペースが足りなくなるためです。硬めの食材を取り入れ、「モグモグ30回」を意識して、顎の成長を促しましょう。"
                                 }
-                            ].map((faq, index) => (
-                                <div key={index} className="border-b border-[#F0EAE0] pb-6">
-                                    <h3 className="text-lg font-bold text-[#5A4D41] mb-3 flex items-start gap-4">
-                                        <span className="text-[#C5A572] font-serif italic text-2xl leading-none">Q.</span>
-                                        {faq.q}
-                                    </h3>
-                                    <div className="pl-10">
-                                        <p className="text-[#8D8070] leading-relaxed">{faq.a}</p>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </section>
+                            ]}
+                />
 
-                {/* Related Pages */}
-                <section className="py-2 bg-[#FDFBF7]">
-                    <div className="container mx-auto px-4 max-w-6xl">
-                        <div className="text-center mb-12">
-                            <h2 className="text-2xl md:text-3xl font-bold text-[#5A4D41] font-serif mb-4">
-                                関連ページ
-                            </h2>
-                            <p className="text-[#8D8070]">
-                                口育・歯並び予防についてもっと詳しく知りたい方へ
-                            </p>
-                        </div>
+                <RelatedPagesSection
+                  title="関連ページ"
+                  items={oralEducationRelatedPages}
+                  currentPath="/oral-education/bad-alignment"
+                />
 
-                        <div className="grid md:grid-cols-3 gap-6">
-                            {[
-                                {
-                                    title: "子供の口呼吸を治す方法",
-                                    description: "歯並びに最も影響する口呼吸の改善方法",
-                                    link: "/oral-education/mouth-breathing",
-                                    icon: "😮"
-                                },
-                                {
-                                    title: "ポカン口の治し方",
-                                    description: "30.7%の子供が該当するポカン口の予防と改善",
-                                    link: "/oral-education/open-mouth",
-                                    icon: "👄"
-                                },
-                                {
-                                    title: "０歳からの口育",
-                                    description: "生まれた時から始める歯並び予防",
-                                    link: "/oral-education",
-                                    icon: "👶"
-                                }
-                            ].map((item, index) => (
-                                <a
-                                    key={index}
-                                    href={item.link}
-                                    className="group bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-all transform hover:-translate-y-1 border border-gray-100"
-                                >
-                                    <div className="text-4xl mb-4">{item.icon}</div>
-                                    <h3 className="text-lg font-bold text-[#5A4D41] mb-2 font-serif group-hover:text-[#C5A572] transition-colors">
-                                        {item.title}
-                                    </h3>
-                                    <p className="text-[#8D8070] text-sm leading-relaxed mb-4">
-                                        {item.description}
-                                    </p>
-                                    <div className="flex items-center gap-2 text-[#C5A572] font-bold text-sm group-hover:gap-3 transition-all">
-                                        <span>詳しく見る</span>
-                                        <ArrowRight size={16} />
-                                    </div>
-                                </a>
-                            ))}
-                        </div>
-                    </div>
-                </section>
 
-                {/* CTA Section */}
-                <section className="py-2 bg-[#5A4D41] text-white">
-                    <div className="container mx-auto px-4 text-center">
-                        <h2 className="text-2xl md:text-3xl font-bold mb-6 font-serif">
-                            お子様の歯並びが心配な方は、<br className="md:hidden" />お気軽にご相談ください
-                        </h2>
-                        <p className="text-[#F0EAE0] mb-10 max-w-2xl mx-auto">
-                            歯並びの80%は生活習慣で決まります。<br />
-                            0歳からの「口育」で、きれいな歯並びを手に入れましょう。
-                        </p>
-                        <div className="flex flex-col sm:flex-row gap-6 justify-center max-w-2xl mx-auto">
-                            <a href="#" className="bg-[#C5A572] hover:bg-[#B59562] text-white px-8 py-4 rounded-full font-bold shadow-lg transition-all flex items-center justify-center gap-3 text-lg flex-1">
-                                24時間 WEB予約
-                            </a>
-                            <a href="tel:03-6204-2876" className="bg-transparent border-2 border-[#C5A572] hover:bg-[#C5A572]/10 text-white px-8 py-4 rounded-full font-bold transition-all flex items-center justify-center gap-3 text-lg flex-1">
-                                03-6204-2876
-                            </a>
-                        </div>
-                    </div>
-                </section>
                 {/* 監修者情報 */}
                 <div className="container mx-auto px-4 pt-2 pb-16">
                     <AuthorBio />

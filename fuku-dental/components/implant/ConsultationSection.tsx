@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { Phone, Calendar } from 'lucide-react';
+import { WEB_RESERVATION_URL } from '@/lib/reservation';
 
 export function ConsultationSection() {
   return (
@@ -67,8 +68,10 @@ export function ConsultationSection() {
               </Link>
 
               {/* WEB予約ボタン */}
-              <Link
-                href="/#contact"
+              <a
+                href={WEB_RESERVATION_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-[195px] h-[57.19px] flex flex-col items-center justify-center rounded-sm relative"
                 style={{
                   background: 'linear-gradient(to top, #113161, #174180)',
@@ -90,7 +93,7 @@ export function ConsultationSection() {
                     予約
                   </div>
                 </div>
-              </Link>
+              </a>
             </div>
 
             {/* Consultation 装飾テキスト */}
@@ -124,13 +127,15 @@ export function ConsultationSection() {
                 <Phone className="w-5 h-5" />
                 03-6204-2876
               </Link>
-              <Link
-                href="/#contact"
+              <a
+                href={WEB_RESERVATION_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-b from-[#174180] to-[#113161] text-white rounded-lg font-bold text-lg hover:opacity-90 transition-opacity"
               >
                 <Calendar className="w-5 h-5" />
                 WEB予約
-              </Link>
+              </a>
             </div>
           </div>
         </div>

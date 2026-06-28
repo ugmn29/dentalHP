@@ -3,10 +3,8 @@
 import Link from 'next/link';
 import { Phone } from 'lucide-react';
 import { FaInstagram, FaYoutube, FaTiktok } from 'react-icons/fa';
-
-// 外部予約システムURL（HomeClientと同期）
-// TODO: 外部予約サービスのURLが決定したらここに記入
-const WEB_RESERVATION_URL = "";
+import { ClinicHoursTable } from './ClinicHoursTable';
+import { WEB_RESERVATION_URL } from '@/lib/reservation';
 
 // 新デザイン用カラートークン（HomeClientと同期）
 const ACCENT_DARK = '#0a8a85';   // Button/CTA bg (white text safe)
@@ -18,22 +16,23 @@ const LINE = '#E6E3DC';
 
 const treatmentLinks = [
     { name: "こども矯正", link: "/kidsortho" },
-    { name: "０歳からの口育", link: "/oral-education" },
-    { name: "こども歯科・予防", link: "/kids-preventive" },
+    { name: "0歳からのこども歯科・予防", link: "/oral-education" },
     { name: "セラミック治療", link: "/ceramic" },
     { name: "マウスピース矯正", link: "/mouthpiece" },
-    { name: "矯正歯科", link: "/orthodontics" },
+    { name: "ワイヤー矯正", link: "/orthodontics" },
     { name: "インプラント", link: "/implant" },
     { name: "ホワイトニング", link: "/whitening" },
     { name: "予防歯科", link: "/preventive" },
     { name: "口臭治療", link: "/general/bad-breath" },
     { name: "むしば治療", link: "/cavity" },
-    { name: "根管治療", link: "/root-canal" },
+    { name: "精密根管治療", link: "/root-canal" },
 ];
 
 const aboutLinks = [
     { name: "症例紹介", link: "/case-studies" },
+    { name: "ドクター紹介", link: "/doctor" },
     { name: "院内設備", link: "/facilities" },
+    { name: "アクセス・診療時間", link: "/access" },
     { name: "料金表", link: "/price" },
     { name: "ブログ・お知らせ", link: "/blog" },
     { name: "採用情報", link: "/recruit" },
@@ -75,41 +74,7 @@ export const Footer = () => {
                         </div>
 
                         {/* Schedule */}
-                        <div className="rounded-2xl p-6 md:p-8" style={{ background: SURFACE, border: `1px solid ${LINE}` }}>
-                            <h3 className="font-serif text-xl mb-6 text-center" style={{ color: TEXT }}>診療時間</h3>
-                            <table className="w-full text-center table-fixed border-collapse text-sm">
-                                <thead>
-                                    <tr style={{ borderBottom: `1px solid ${LINE}` }}>
-                                        <th className="py-3 font-normal text-xs" style={{ color: TEXT_MUTED }}>診療時間</th>
-                                        <th className="py-3 font-medium" style={{ color: TEXT }}>月</th>
-                                        <th className="py-3 font-medium" style={{ color: TEXT }}>火</th>
-                                        <th className="py-3 font-medium" style={{ color: TEXT }}>水</th>
-                                        <th className="py-3 font-medium" style={{ color: TEXT }}>木</th>
-                                        <th className="py-3 font-medium" style={{ color: TEXT }}>金</th>
-                                        <th className="py-3 font-medium" style={{ color: ACCENT_DARK }}>土</th>
-                                        <th className="py-3 font-medium" style={{ color: ACCENT_DARK }}>日</th>
-                                    </tr>
-                                </thead>
-                                <tbody className="text-base">
-                                    <tr style={{ borderBottom: `1px solid ${LINE}` }}>
-                                        <td className="py-4 text-xs" style={{ color: TEXT_MUTED }}>10:00–13:00</td>
-                                        <td>●</td><td style={{ opacity: 0.2 }}>−</td><td>●</td><td>●</td><td>●</td>
-                                        <td className="text-sm" style={{ color: ACCENT_DARK }}>★</td>
-                                        <td className="text-sm" style={{ color: ACCENT_DARK }}>★</td>
-                                    </tr>
-                                    <tr>
-                                        <td className="py-4 text-xs" style={{ color: TEXT_MUTED }}>14:00–19:00</td>
-                                        <td>●</td><td style={{ opacity: 0.2 }}>−</td><td>●</td><td>●</td><td>●</td>
-                                        <td className="text-sm" style={{ color: ACCENT_DARK }}>★</td>
-                                        <td className="text-sm" style={{ color: ACCENT_DARK }}>★</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <div className="mt-5 text-xs space-y-1 text-center" style={{ color: TEXT_MUTED }}>
-                                <p>★ 土日：9:00–12:00 / 13:00–17:00</p>
-                                <p style={{ color: ACCENT_DARK, fontWeight: 600 }}>休診日：火曜日</p>
-                            </div>
-                        </div>
+                        <ClinicHoursTable />
                     </div>
                 </div>
 
@@ -191,13 +156,13 @@ export const Footer = () => {
                     <span className="text-[10px] font-medium tracking-wider">電話予約</span>
                 </a>
                 <a
-                    href={WEB_RESERVATION_URL || '#'}
-                    target={WEB_RESERVATION_URL ? '_blank' : undefined}
-                    rel={WEB_RESERVATION_URL ? 'noopener noreferrer' : undefined}
+                    href={WEB_RESERVATION_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="min-w-0 flex-[1.5] flex items-center justify-center px-2 transition"
                     style={{ background: ACCENT_DARK, color: '#fff' }}
                 >
-                    <span className="truncate text-xs font-medium tracking-wider sm:text-sm">24時間 WEB予約</span>
+                    <span className="whitespace-nowrap text-[15px] font-semibold tracking-[0.08em] sm:text-base">24時間 WEB予約</span>
                 </a>
             </div>
         </>

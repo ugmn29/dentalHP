@@ -5,8 +5,11 @@ import { Header } from './Header';
 import { Footer } from './Footer';
 import { WaveBottom } from './Wave';
 import { AuthorBio } from './AuthorBio';
-import { CheckCircle2, ChevronRight, Calendar, Phone, ArrowRight } from 'lucide-react';
+import { CheckCircle2 } from 'lucide-react';
 import { PageImage } from '@/components/PageImage';
+import { FeatureSection } from '@/components/FeatureSection';
+import { RelatedPagesSection } from '@/components/RelatedPagesSection';
+import { FaqSection } from '@/components/FaqSection';
 
 interface Feature {
     id: string;
@@ -244,76 +247,20 @@ export const TreatmentLayout: React.FC<TreatmentLayoutProps> = ({
                     </section>
                 )}
 
-                {/* Features Section (Redesigned) */}
+                {/* Features Section */}
                 {features && features.length > 0 && (
-                    <section className="pt-8 pb-16 bg-gradient-to-b from-[#FAFAFA] to-white relative overflow-hidden" style={{ fontFamily: '"Noto Sans Japanese", sans-serif' }}>
-                        <div className="container mx-auto px-4 relative z-10">
-                            <div className="text-center mb-8">
-                                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-2 relative inline-block">
-                                    <span className="text-[#395b45] relative z-10">
-                                        Features
-                                    </span>
-                                </h2>
-                                <p className="text-xl md:text-2xl lg:text-3xl font-bold text-[#666666] mb-4">
-                                    当院の{title}の特徴
-                                </p>
-                                <div className="w-24 h-0.5 bg-gradient-to-r from-transparent via-[#395b45] to-transparent mx-auto mb-4"></div>
-                            </div>
-
-                            <div className="space-y-12 max-w-5xl mx-auto">
-                                {features.map((feature, index) => (
-                                    <div key={feature.id} className="flex flex-col mb-16 lg:mb-24 relative">
-                                        {/* Title Section with Number */}
-                                        <div className="relative h-24 flex items-center mb-4">
-                                            {/* Large Gradient Number */}
-                                            <span className={`absolute top-[20%] -translate-y-1/2 block text-[8rem] md:text-[11rem] leading-[0.8] font-serif text-transparent bg-clip-text bg-gradient-to-b from-[#C5A572] via-[#E5C592] to-transparent select-none opacity-60 scale-x-[0.85] tracking-tighter ${index % 2 === 0 ? 'left-[-1rem] origin-left' : 'right-0 origin-right'}`}>
-                                                {feature.id}
-                                            </span>
-
-                                            {/* Title - Always Left */}
-                                            <div className="relative z-10 w-full text-left pl-4">
-                                                <h3 className="text-3xl md:text-4xl font-bold text-[#5A4D41] leading-tight tracking-wide font-serif inline-block relative">
-                                                    <span dangerouslySetInnerHTML={{ __html: feature.highlight.replace(/(の|を|に|が|は|と|へ|から|より|で|や)/g, '<span class="text-[0.75em]">$1</span>') }} />
-                                                    <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#C5A572] via-[#C5A572] to-transparent"></div>
-                                                </h3>
-                                            </div>
-                                        </div>
-
-                                        {/* Image */}
-                                        <div className="w-full relative group mb-8">
-                                            <div className="relative rounded-[30px] overflow-hidden shadow-2xl border-4 border-white transform transition-all duration-500 group-hover:shadow-[0_20px_60px_rgba(197,165,114,0.3)]">
-                                                {feature.imageId && pagePath ? (
-                                                    <PageImage
-                                                        path={pagePath}
-                                                        imageId={feature.imageId}
-                                                        alt={feature.imageAlt}
-                                                        className="w-full h-auto aspect-[16/9] object-cover transition-transform duration-700 group-hover:scale-105"
-                                                    />
-                                                ) : feature.image ? (
-                                                    <img
-                                                        src={feature.image}
-                                                        alt={feature.imageAlt}
-                                                        className="w-full h-auto aspect-[16/9] object-cover transition-transform duration-700 group-hover:scale-105"
-                                                    />
-                                                ) : null}
-                                                <div className="absolute inset-0 bg-gradient-to-t from-[#C5A572]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                                            </div>
-                                        </div>
-
-                                        {/* Text Content */}
-                                        <div>
-                                            <p className="text-base md:text-lg text-[#5A4D41] leading-relaxed">
-                                                <span dangerouslySetInnerHTML={{ __html: feature.summary.replace(/([^。、\s]{2,})/g, (match) => `<span class='brush-underline'>${match}</span>`) }} />
-                                                {feature.details.map((detail, i) => (
-                                                    <span key={i}>{detail}</span>
-                                                ))}
-                                            </p>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    </section>
+                    <FeatureSection
+                        title={`当院の${title}の特徴`}
+                        pagePath={pagePath}
+                        features={features.map((feature) => ({
+                            no: feature.id,
+                            label: feature.title,
+                            title: feature.highlight,
+                            bodyHtml: `${feature.summary}${feature.details.join('')}`,
+                            imageId: feature.imageId,
+                            imageAlt: feature.imageAlt,
+                        }))}
+                    />
                 )}
 
                 {/* Custom Children Section */}
@@ -427,58 +374,12 @@ export const TreatmentLayout: React.FC<TreatmentLayoutProps> = ({
 
                 {/* FAQ Section */}
                 {faqs && faqs.length > 0 && (
-                    <section className="py-16 md:py-24 bg-[#FAFAFA]">
-                        <div className="container mx-auto px-4 max-w-4xl">
-                            <div className="text-center mb-16">
-                                <span className="text-[#FF9F43] font-bold tracking-widest text-sm uppercase mb-2 block">Q&A</span>
-                                <h2 className="text-2xl md:text-3xl font-bold text-[#5A4D41]">よくあるご質問</h2>
-                            </div>
-
-                            <div className="space-y-4">
-                                {faqs.map((faq, index) => (
-                                    <div key={index} className="bg-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-sm">
-                                        <div className="flex gap-4 items-start mb-4">
-                                            <span className="text-[#FF9F43] font-bold text-xl">Q.</span>
-                                            <h3 className="text-[#5A4D41] font-bold text-lg pt-0.5">{faq.q}</h3>
-                                        </div>
-                                        <div className="flex gap-4 items-start pl-0 md:pl-9">
-                                            <span className="text-[#FF9F43] font-bold text-xl">A.</span>
-                                            <p className="text-[#8D8070] leading-relaxed">
-                                                {faq.a}
-                                            </p>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    </section>
+                    <FaqSection items={faqs} title="よくあるご質問" />
                 )}
 
                 {/* Related Pages Section */}
                 {relatedPages && relatedPages.length > 0 && (
-                    <section className="py-16 md:py-24 bg-white">
-                        <div className="container mx-auto px-4 max-w-6xl">
-                            <div className="text-center mb-12">
-                                <span className="text-[#FF9F43] font-bold tracking-widest text-sm uppercase mb-2 block">RELATED PAGES</span>
-                                <h2 className="text-2xl md:text-3xl font-bold text-[#5A4D41]">関連ページ</h2>
-                            </div>
-
-                            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                                {relatedPages.map((page, index) => (
-                                    <a key={index} href={page.href} className="group block bg-[#FDFBF7] hover:bg-white border border-gray-100 hover:border-[#FF9F43]/30 rounded-2xl p-6 transition-all hover:shadow-lg">
-                                        <div className="flex items-start gap-4 mb-3">
-                                            <span className="text-4xl">{page.icon}</span>
-                                            <h3 className="text-lg font-bold text-[#5A4D41] group-hover:text-[#FF9F43] transition-colors">{page.title}</h3>
-                                        </div>
-                                        <p className="text-sm text-[#8D8070] leading-relaxed mb-4">{page.desc}</p>
-                                        <div className="flex items-center gap-2 text-[#FF9F43] text-sm font-medium">
-                                            詳しく見る <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-                                        </div>
-                                    </a>
-                                ))}
-                            </div>
-                        </div>
-                    </section>
+                    <RelatedPagesSection items={relatedPages} currentPath={pagePath} />
                 )}
 
                 {/* 監修者情報 */}
@@ -486,33 +387,7 @@ export const TreatmentLayout: React.FC<TreatmentLayoutProps> = ({
                     <AuthorBio />
                 </div>
 
-                {/* CTA & Price Link */}
-                <section className="py-16 md:py-24 bg-[#FFF9F0]">
-                    <div className="container mx-auto px-4 max-w-4xl text-center">
-                        <h2 className="text-2xl md:text-3xl font-bold text-[#5A4D41] mb-8">
-                            まずは一度、お気軽にご相談ください
-                        </h2>
 
-                        {priceLink && (
-                            <div className="mb-12">
-                                <a href="/price" className="inline-flex items-center gap-2 text-[#FF9F43] font-bold border-b-2 border-[#FF9F43] pb-1 hover:text-[#E0862D] hover:border-[#E0862D] transition-colors">
-                                    料金表を見る <ArrowRight size={18} />
-                                </a>
-                            </div>
-                        )}
-
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <button className="bg-[#FF9F43] hover:bg-[#FF8F20] text-white px-8 py-4 rounded-full font-bold shadow-[0_4px_0_#E0862D] active:shadow-none active:translate-y-[4px] transition-all flex items-center justify-center gap-2 text-lg group min-w-[240px]">
-                                <Calendar className="group-hover:rotate-12 transition" />
-                                24時間 WEB予約
-                            </button>
-                            <button className="bg-white hover:bg-gray-50 text-[#5A4D41] border-2 border-[#E0D6EA] px-8 py-4 rounded-full font-bold shadow-sm transition-all flex items-center justify-center gap-2 text-lg group min-w-[240px]">
-                                <Phone className="text-[#FF9F43] group-hover:scale-110 transition" />
-                                03-6204-2876
-                            </button>
-                        </div>
-                    </div>
-                </section>
             </main>
 
             <Footer />

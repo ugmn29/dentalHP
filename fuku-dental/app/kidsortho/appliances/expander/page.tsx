@@ -3,8 +3,8 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
 import { KidsOrthoImage } from '@/components/KidsOrthoImage';
-import { PageImage } from '@/components/PageImage';
-import { Wrench, ArrowRight, CheckCircle, AlertCircle, Clock, TrendingUp, X, Info, Home, ChevronRight } from 'lucide-react';
+import { ApplianceDetailHero } from '@/components/kidsortho/ApplianceDetailHero';
+import { ArrowRight, CheckCircle, AlertCircle, X, Home, ChevronRight } from 'lucide-react';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 
@@ -50,122 +50,86 @@ export default function ExpanderPage() {
 
             <main className="bg-[#FDFBF7]" style={{ fontFamily: '"游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", sans-serif' }}>
                 {/* Hero Section */}
-                <section className="bg-[#FDFBF7] py-6 md:py-6">
-                    <div className="container mx-auto px-4">
-                        <div className="max-w-4xl mx-auto">
-                            <div className="mb-6">
-                                <p className="text-[#C5A572] font-bold text-sm mb-2">拡大床（かくだいしょう）</p>
-                                <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[#5A4D41] mb-3">
-                                    拡大床とは？｜効果・費用・装着時間を詳しく解説
-                                </h1>
-                                <PageImage path="/kidsortho/appliances/expander" alt="拡大床の効果・費用・装着時間" />
-                                <div className="w-16 h-0.5 bg-[#C5A572] mb-6"></div>
-                            </div>
-
-
-                            <p className="text-sm text-[#8D8070] mt-3">豊洲の矯正歯科が詳しく解説</p>
-                            <p className="text-base md:text-lg leading-loose text-[#8D8070] font-sans mt-4 mb-8">
-                                こども矯正で最も一般的に使用される取り外し式装置です
-                            </p>
-                        </div>
-                    </div>
-                </section>
+                <ApplianceDetailHero
+                    label="拡大床（かくだいしょう）"
+                    title="拡大床とは？"
+                    accent="顎を広げて永久歯のスペースをつくる装置"
+                    lead="こども矯正でよく使われる、取り外し可能なプレート型の装置です。中央の拡大ネジを少しずつ調整し、歯が並ぶためのスペースを整えます。"
+                    imagePath="/kidsortho/appliances/expander"
+                    imageAlt="拡大床の装置"
+                    current="拡大床"
+                    facts={[
+                        { label: '装置タイプ', value: '取り外し式' },
+                        { label: '目的', value: '顎の拡大' },
+                        { label: '期間目安', value: '6〜12ヶ月' },
+                        { label: '生活面', value: '食事時は外せる' },
+                    ]}
+                    point="装置中央のネジを調整し、上顎・下顎の歯列を少しずつ横に広げます。"
+                />
 
                 {/* 拡大床とは */}
-                <section className="py-6 md:py-6">
+                <section className="bg-white py-10 md:py-14">
                     <div className="container mx-auto px-4">
-                        <div className="max-w-5xl mx-auto">
-                            <div className="text-center mb-12">
-                                <h2 className="text-3xl md:text-4xl font-bold text-[#5A4D41] mb-4">
-                                    拡大床とは
-                                </h2>
-                                <p className="text-lg text-[#8D8070]">
-                                    取り外し可能なプレート型の矯正装置
-                                </p>
-                            </div>
+                        <div className="mx-auto max-w-6xl">
+                            <div className="grid gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
+                                <div>
+                                    <p className="mb-3 text-sm font-bold tracking-[0.18em] text-[#C5A572]">ABOUT EXPANDER</p>
+                                    <h2 className="font-serif text-3xl font-bold leading-[1.45] text-[#5A4D41] md:text-4xl">
+                                        取り外しできる
+                                        <br className="hidden lg:block" />
+                                        プレート型の矯正装置
+                                    </h2>
+                                    <p className="mt-5 text-base leading-8 text-[#7E7469]">
+                                        拡大床は、プラスチック製のプレートと金属製のワイヤーで構成された装置です。成長期の顎の発育を利用しながら、歯が並ぶスペースを確保します。
+                                    </p>
+                                </div>
 
-                            <div className="mb-12">
-                                <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 pb-2 border-b-2 border-[#C5A572]">
-                                    拡大床の仕組み
-                                </h4>
-                                <p className="text-[#5A4D41] leading-relaxed mb-8">
-                                    拡大床は、プラスチック製のプレートと金属製のワイヤーで構成された取り外し式の装置です。中央に組み込まれた「拡大ネジ」を定期的に回すことで、少しずつ顎の骨を横に広げていきます。
-                                </p>
-
-                                <div className="space-y-6">
-                                    <div>
-                                        <p className="font-bold text-[#5A4D41] mb-2">
-                                            1. プレート部分
-                                        </p>
-                                        <p className="text-[#8D8070]">
-                                            上顎または下顎の歯列に沿ったプラスチック製の床
-                                        </p>
-                                    </div>
-                                    <div>
-                                        <p className="font-bold text-[#5A4D41] mb-2">
-                                            2. 拡大ネジ
-                                        </p>
-                                        <p className="text-[#8D8070]">
-                                            中央の金属ネジを回すことで装置が少しずつ広がる
-                                        </p>
-                                    </div>
-                                    <div>
-                                        <p className="font-bold text-[#5A4D41] mb-2">
-                                            3. クラスプ
-                                        </p>
-                                        <p className="text-[#8D8070]">
-                                            装置を固定するための金属製のバネ（ワイヤー）
-                                        </p>
-                                    </div>
+                                <div className="grid gap-4 md:grid-cols-3">
+                                    {[
+                                        { title: '1. プレート部分', body: '上顎または下顎の歯列に沿ったプラスチック製の床' },
+                                        { title: '2. 拡大ネジ', body: '中央の金属ネジを回すことで装置が少しずつ広がる' },
+                                        { title: '3. クラスプ', body: '装置を固定するための金属製のバネやワイヤー' },
+                                    ].map((item) => (
+                                        <div key={item.title} className="rounded-2xl border border-[#E6D8C5] bg-[#FDFBF7] p-5">
+                                            <p className="mb-3 font-serif text-lg font-bold text-[#5A4D41]">{item.title}</p>
+                                            <p className="text-sm leading-7 text-[#7E7469]">{item.body}</p>
+                                        </div>
+                                    ))}
                                 </div>
                             </div>
 
-                            <div className="space-y-8">
-                                <div>
-                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 pb-2 border-b-2 border-[#C5A572]">
+                            <div className="mt-10 grid gap-5 md:grid-cols-2">
+                                <div className="rounded-3xl border border-[#E6D8C5] bg-[#FDFBF7] p-6">
+                                    <h3 className="mb-4 font-serif text-xl font-bold text-[#5A4D41]">
                                         上顎拡大床
-                                    </h4>
-                                    <p className="text-[#8D8070] mb-4 leading-relaxed">
-                                        上顎の歯列を横に広げる装置。上顎は左右の骨が中央で結合しているため、成長期であれば骨自体を広げることが可能です。
+                                    </h3>
+                                    <p className="mb-5 leading-8 text-[#7E7469]">
+                                        上顎の歯列を横に広げる装置です。成長期であれば、骨の発育を利用しながらスペースを整えられる場合があります。
                                     </p>
-                                    <p className="text-[#5A4D41] font-bold mb-2">適応症例</p>
-                                    <ul className="text-[#8D8070] space-y-2">
-                                        <li className="flex items-start gap-2">
-                                            <span className="text-[#C5A572]">•</span>
-                                            <span>上顎が狭く、永久歯のスペース不足</span>
-                                        </li>
-                                        <li className="flex items-start gap-2">
-                                            <span className="text-[#C5A572]">•</span>
-                                            <span>交叉咬合（奥歯の咬み合わせが逆）</span>
-                                        </li>
-                                        <li className="flex items-start gap-2">
-                                            <span className="text-[#C5A572]">•</span>
-                                            <span>叢生（歯が重なっている）</span>
-                                        </li>
+                                    <ul className="space-y-3 text-sm text-[#5A4D41]">
+                                        {['上顎が狭く、永久歯のスペース不足', '交叉咬合（奥歯の咬み合わせが逆）', '叢生（歯が重なっている）'].map((item) => (
+                                            <li key={item} className="flex items-start gap-2">
+                                                <CheckCircle className="mt-0.5 h-4 w-4 flex-shrink-0 text-[#C5A572]" />
+                                                <span>{item}</span>
+                                            </li>
+                                        ))}
                                     </ul>
                                 </div>
 
-                                <div>
-                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 pb-2 border-b-2 border-[#C5A572]">
+                                <div className="rounded-3xl border border-[#E6D8C5] bg-[#FDFBF7] p-6">
+                                    <h3 className="mb-4 font-serif text-xl font-bold text-[#5A4D41]">
                                         下顎拡大床
-                                    </h4>
-                                    <p className="text-[#8D8070] mb-4 leading-relaxed">
-                                        下顎の歯列を横に広げる装置。下顎は一体の骨のため、主に歯列の傾斜を改善します。
+                                    </h3>
+                                    <p className="mb-5 leading-8 text-[#7E7469]">
+                                        下顎の歯列を横に広げる装置です。下顎は一体の骨のため、主に歯列の傾斜や並びを整える目的で使用します。
                                     </p>
-                                    <p className="text-[#5A4D41] font-bold mb-2">適応症例</p>
-                                    <ul className="text-[#8D8070] space-y-2">
-                                        <li className="flex items-start gap-2">
-                                            <span className="text-[#C5A572]">•</span>
-                                            <span>下顎の叢生（歯が重なっている）</span>
-                                        </li>
-                                        <li className="flex items-start gap-2">
-                                            <span className="text-[#C5A572]">•</span>
-                                            <span>前歯が内側に倒れている</span>
-                                        </li>
-                                        <li className="flex items-start gap-2">
-                                            <span className="text-[#C5A572]">•</span>
-                                            <span>上顎拡大との併用治療</span>
-                                        </li>
+                                    <ul className="space-y-3 text-sm text-[#5A4D41]">
+                                        {['下顎の叢生（歯が重なっている）', '前歯が内側に倒れている', '上顎拡大との併用治療'].map((item) => (
+                                            <li key={item} className="flex items-start gap-2">
+                                                <CheckCircle className="mt-0.5 h-4 w-4 flex-shrink-0 text-[#C5A572]" />
+                                                <span>{item}</span>
+                                            </li>
+                                        ))}
                                     </ul>
                                 </div>
                             </div>
@@ -805,6 +769,8 @@ export default function ExpanderPage() {
                         </div>
                     </div>
                 </section>
+
+
                 {/* 監修者情報 */}
                 <div className="container mx-auto px-4 pt-2 pb-16">
                     <AuthorBio />

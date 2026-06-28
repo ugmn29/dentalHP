@@ -5,6 +5,9 @@ import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
 import { TreatmentSteps } from '@/components/implant/TreatmentSteps';
 import { PageImage } from '@/components/PageImage';
+import { RelatedPagesSection } from '@/components/RelatedPagesSection';
+import { implantRelatedPages } from '@/data/related-pages';
+import { FaqSection } from '@/components/FaqSection';
 import {
   CheckCircle,
   Clock,
@@ -386,16 +389,9 @@ export default function ImplantFlowPage() {
         </section>
 
         {/* FAQ about the flow */}
-        <section className="py-16 px-4 bg-[#FDFBF7]" style={{ fontFamily: 'YuGothic, "Yu Gothic", sans-serif' }}>
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-2xl md:text-3xl font-bold text-center text-[#2d4835] mb-3">
-              治療の流れに関するよくある質問
-            </h2>
-            <p className="text-center text-gray-500 mb-10 text-sm">
-              患者様からよくいただくご質問にお答えします
-            </p>
-            <div className="space-y-4">
-              {[
+        <FaqSection
+          title="治療の流れに関するよくある質問"
+          items={[
                 {
                   q: '治療期間はどのくらいですか？',
                   a: '一般的に4〜8ヶ月程度です。骨造成が必要な場合は、さらに数ヶ月かかることがあります。治癒期間は上顎で4〜6ヶ月、下顎で2〜4ヶ月が目安です。',
@@ -416,63 +412,16 @@ export default function ImplantFlowPage() {
                   q: '治療中に仕事を休む必要はありますか？',
                   a: '一次手術の翌日から通常のお仕事は可能です。ただし、激しい運動や飲酒は2〜3日お控えいただくことをお願いしています。デスクワークの方であれば、手術当日の午後からお仕事に戻られる方もいらっしゃいます。',
                 },
-              ].map((faq, i) => (
-                <div
-                  key={i}
-                  className="bg-white rounded-xl border border-gray-100 p-5 md:p-6"
-                >
-                  <div className="flex items-start gap-3 mb-3">
-                    <span className="w-7 h-7 rounded-full bg-[#395b45] text-white flex items-center justify-center text-xs font-bold flex-shrink-0">
-                      Q
-                    </span>
-                    <h3 className="font-bold text-[#2d4835] text-base">{faq.q}</h3>
-                  </div>
-                  <div className="flex items-start gap-3 pl-0 md:pl-10">
-                    <span className="w-7 h-7 rounded-full bg-[#FF9F43]/10 text-[#FF9F43] flex items-center justify-center text-xs font-bold flex-shrink-0">
-                      A
-                    </span>
-                    <p className="text-sm text-gray-600 leading-relaxed">{faq.a}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+              ]}
+        />
 
             {/* 関連ページへのリンク */}
-            <div className="mt-16 bg-white rounded-2xl p-8 border border-gray-100">
-              <h3 className="text-xl font-bold text-[#2d4835] mb-6 text-center">インプラント治療についてもっと詳しく</h3>
-              <div className="grid md:grid-cols-2 gap-4">
-                <Link
-                  href="/implant/about"
-                  className="flex items-center justify-between p-4 bg-[#FDFBF7] hover:bg-gray-50 rounded-xl border border-gray-100 transition-colors group"
-                >
-                  <span className="font-medium text-[#2d4835]">インプラントとは</span>
-                  <ArrowRight className="w-5 h-5 text-[#395b45] group-hover:translate-x-1 transition-transform" />
-                </Link>
-                <Link
-                  href="/implant/comparison"
-                  className="flex items-center justify-between p-4 bg-[#FDFBF7] hover:bg-gray-50 rounded-xl border border-gray-100 transition-colors group"
-                >
-                  <span className="font-medium text-[#2d4835]">入れ歯・ブリッジとの比較</span>
-                  <ArrowRight className="w-5 h-5 text-[#395b45] group-hover:translate-x-1 transition-transform" />
-                </Link>
-                <Link
-                  href="/implant/cost"
-                  className="flex items-center justify-between p-4 bg-[#FDFBF7] hover:bg-gray-50 rounded-xl border border-gray-100 transition-colors group"
-                >
-                  <span className="font-medium text-[#2d4835]">費用について</span>
-                  <ArrowRight className="w-5 h-5 text-[#395b45] group-hover:translate-x-1 transition-transform" />
-                </Link>
-                <Link
-                  href="/implant/safety"
-                  className="flex items-center justify-between p-4 bg-[#FDFBF7] hover:bg-gray-50 rounded-xl border border-gray-100 transition-colors group"
-                >
-                  <span className="font-medium text-[#2d4835]">安全性へのこだわり</span>
-                  <ArrowRight className="w-5 h-5 text-[#395b45] group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </div>
-            </div>
+            <RelatedPagesSection
+              title="インプラント治療についてもっと詳しく"
+              items={implantRelatedPages}
+              currentPath="/implant/flow"
+              className="rounded-2xl"
+            />
 
           </div>
         </section>

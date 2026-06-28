@@ -1,8 +1,6 @@
-'use client';
-
-import React, { useState } from 'react';
 import Link from 'next/link';
-import { ChevronRight, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { FaqSection } from '@/components/FaqSection';
 
 const faqs = [
   { q: '手術は痛いですか？', a: '局所麻酔を行うため、手術中の痛みはほとんどありません。ご不安な方には静脈内鎮静法もご用意しています。術後の痛みは痛み止めでコントロールできる範囲です。' },
@@ -14,51 +12,21 @@ const faqs = [
 ];
 
 export function FAQSection() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
   return (
-    <section className="py-16 px-4 bg-white" style={{ fontFamily: 'YuGothic, "Yu Gothic", sans-serif' }}>
-      <div className="max-w-3xl mx-auto">
-        <h2 className="text-2xl md:text-3xl font-bold text-center text-[#2d4835] mb-3 font-serif">
-          よくあるご質問
-        </h2>
-        <p className="text-center text-gray-500 mb-10 text-sm">
-          インプラント治療についてお寄せいただく代表的なご質問
-        </p>
-        <div className="space-y-3">
-          {faqs.map((faq, i) => (
-            <div key={i} className="border border-gray-100 rounded-xl overflow-hidden">
-              <button
-                onClick={() => setOpenIndex(openIndex === i ? null : i)}
-                className="w-full flex items-center justify-between p-5 text-left hover:bg-gray-50 transition"
-              >
-                <span className="font-semibold text-[#2d4835] flex items-center gap-3">
-                  <span className="w-7 h-7 rounded-full bg-[#395b45] text-white flex items-center justify-center text-xs font-bold flex-shrink-0">Q</span>
-                  {faq.q}
-                </span>
-                <ChevronRight
-                  className={`w-5 h-5 text-gray-400 flex-shrink-0 transition-transform ${
-                    openIndex === i ? 'rotate-90' : ''
-                  }`}
-                />
-              </button>
-              {openIndex === i && (
-                <div className="px-5 pb-5 pl-14">
-                  <p className="text-sm text-gray-600 leading-relaxed">{faq.a}</p>
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
-        <div className="text-center mt-6">
-          <Link
-            href="/implant/qa"
-            className="inline-flex items-center gap-1 text-[#395b45] font-semibold text-sm hover:underline"
-          >
+    <>
+      <FaqSection
+        title="よくあるご質問"
+        subtitle="インプラント治療についてお寄せいただく代表的なご質問"
+        items={faqs}
+        className="pb-4"
+      />
+      <div className="container mx-auto px-4 pb-12">
+        <div className="mx-auto max-w-4xl text-center">
+          <Link href="/implant/qa" className="inline-flex items-center gap-2 text-sm font-bold text-[#C5A572] transition-colors hover:text-[#B89558]">
             すべてのQ&Aを見る <ArrowRight size={14} />
           </Link>
         </div>
       </div>
-    </section>
+    </>
   );
 }

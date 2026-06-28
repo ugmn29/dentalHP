@@ -30,19 +30,6 @@ export default function BadBreathPage() {
             features={[
                 {
                     id: "01",
-                    title: "Scientific Analysis",
-                    highlight: "口臭測定器による数値化",
-                    summary: "専用の測定器で口臭成分を分析し、原因を客観的に特定します。",
-                    details: [
-                        "3大口臭成分（硫化水素・メチルメルカプタン・ジメチルサルファイド）を測定",
-                        "口臭の強さを数値で見える化",
-                        "原因が「お口の中」か「内臓」かを判別"
-                    ],
-                    imageId: "feature1",
-                    imageAlt: "口臭測定のイメージ"
-                },
-                {
-                    id: "02",
                     title: "Root Cause Therapy",
                     highlight: "原因療法による根本解決",
                     summary: "臭いを消すだけでなく、臭いの元となる原因を根本から治療します。",
@@ -55,7 +42,7 @@ export default function BadBreathPage() {
                     imageAlt: "歯科治療の様子"
                 },
                 {
-                    id: "03",
+                    id: "02",
                     title: "Privacy First",
                     highlight: "プライバシーへの配慮",
                     summary: "プライバシーに配慮した診療室で、周りを気にせず安心してご相談いただけます。",
@@ -68,7 +55,7 @@ export default function BadBreathPage() {
                     imageAlt: "個室診療室"
                 },
                 {
-                    id: "04",
+                    id: "03",
                     title: "Holistic Care",
                     highlight: "生活習慣からの改善",
                     summary: "食生活やストレスなど、生活習慣の見直しも含めたトータルケアを行います。",

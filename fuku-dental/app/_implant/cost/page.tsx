@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
+import { RelatedPagesSection } from '@/components/RelatedPagesSection';
+import { implantRelatedPages } from '@/data/related-pages';
 import {
   DollarSign,
   Zap,
@@ -667,90 +669,13 @@ export default function ImplantCostPage() {
           </div>
         </section>
 
-        {/* 関連ページ */}
-        <section className="py-2 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">
-                関連ページ
-              </h2>
+        <RelatedPagesSection
+          title="関連ページ"
+          items={implantRelatedPages}
+          currentPath="/implant/cost"
+        />
 
-              <div className="grid md:grid-cols-3 gap-6">
-                <Link href="/implant" className="group bg-gradient-to-br from-cyan-50 to-white p-6 rounded-xl border-2 border-cyan-100 hover:border-cyan-300 hover:shadow-lg transition-all">
-                  <div className="flex items-center mb-4">
-                    <Zap className="w-8 h-8 text-cyan-600 mr-3" />
-                    <h3 className="text-xl font-bold text-gray-800">インプラント治療TOP</h3>
-                  </div>
-                  <p className="text-gray-600 mb-4">
-                    インプラント治療の概要
-                  </p>
-                  <div className="flex items-center text-cyan-600 font-semibold group-hover:translate-x-2 transition-transform">
-                    詳しく見る
-                    <ArrowRight className="w-5 h-5 ml-2" />
-                  </div>
-                </Link>
 
-                <Link href="/implant/vs-denture" className="group bg-gradient-to-br from-purple-50 to-white p-6 rounded-xl border-2 border-purple-100 hover:border-purple-300 hover:shadow-lg transition-all">
-                  <div className="flex items-center mb-4">
-                    <Shield className="w-8 h-8 text-purple-600 mr-3" />
-                    <h3 className="text-xl font-bold text-gray-800">入れ歯との比較</h3>
-                  </div>
-                  <p className="text-gray-600 mb-4">
-                    詳しい比較とメリット
-                  </p>
-                  <div className="flex items-center text-purple-600 font-semibold group-hover:translate-x-2 transition-transform">
-                    詳しく見る
-                    <ArrowRight className="w-5 h-5 ml-2" />
-                  </div>
-                </Link>
-
-                <Link href="/implant/procedure" className="group bg-gradient-to-br from-blue-50 to-white p-6 rounded-xl border-2 border-blue-100 hover:border-blue-300 hover:shadow-lg transition-all">
-                  <div className="flex items-center mb-4">
-                    <Clock className="w-8 h-8 text-blue-600 mr-3" />
-                    <h3 className="text-xl font-bold text-gray-800">治療の流れ</h3>
-                  </div>
-                  <p className="text-gray-600 mb-4">
-                    インプラント治療の手順
-                  </p>
-                  <div className="flex items-center text-blue-600 font-semibold group-hover:translate-x-2 transition-transform">
-                    詳しく見る
-                    <ArrowRight className="w-5 h-5 ml-2" />
-                  </div>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA */}
-        <section className="py-2 bg-gradient-to-r from-green-600 to-emerald-600 text-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                無料カウンセリング実施中
-              </h2>
-              <p className="text-xl mb-8 text-green-50">
-                費用や治療内容について、詳しくご説明します<br />
-                デンタルローンのご相談も承ります
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="/#contact"
-                  className="inline-flex items-center justify-center bg-white text-green-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-green-50 transition-colors shadow-lg"
-                >
-                  無料相談を予約する
-                  <ArrowRight className="w-6 h-6 ml-2" />
-                </Link>
-                <Link
-                  href="tel:03-6204-2876"
-                  className="inline-flex items-center justify-center bg-green-700 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-green-800 transition-colors border-2 border-white"
-                >
-                  電話で相談する
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
                 {/* 監修者情報 */}
                 <div className="container mx-auto px-4 pt-2 pb-16">
                     <AuthorBio />

@@ -6,6 +6,8 @@ import { AuthorBio } from '@/components/AuthorBio';
 import { PageImage } from '@/components/PageImage';
 import { CheckCircle2, ArrowRight, Home, ChevronRight } from 'lucide-react';
 import type { Metadata } from 'next';
+import { RelatedPagesSection } from '@/components/RelatedPagesSection';
+import { whiteningRelatedPages } from '@/data/related-pages';
 
 export const metadata: Metadata = {
   title: 'ホワイトニングの種類｜オフィス・ホーム・デュアル徹底比較｜Fデンタルオフィス 豊洲プライムスクエア院',
@@ -148,10 +150,10 @@ export default function WhiteningTypesPage() {
                 <div className="grid md:grid-cols-4 gap-4 p-4 bg-white rounded-xl">
                   <div className="font-semibold text-[#5A4D41]">費用目安</div>
                   <div className="text-center">
-                    <span className="text-gray-700 font-bold">¥36,300〜¥110,000</span>
+                    <span className="text-gray-700 font-bold">¥36,500〜¥99,000</span>
                   </div>
                   <div className="text-center">
-                    <span className="text-green-600 font-bold">¥38,500</span>
+                    <span className="text-green-600 font-bold">¥36,500</span>
                   </div>
                   <div className="text-center">
                     <span className="text-gray-700 font-bold">¥66,000</span>
@@ -229,7 +231,7 @@ export default function WhiteningTypesPage() {
                       {[
                         "知覚過敏が起きやすい",
                         "色戻りが比較的早い（3〜6ヶ月）",
-                        "費用は¥36,300〜¥110,000",
+                        "費用は¥36,500〜¥99,000",
                         "施術中に痛みを感じることがある"
                       ].map((item, i) => (
                         <li key={i} className="flex items-start">
@@ -281,7 +283,7 @@ export default function WhiteningTypesPage() {
                         "知覚過敏が起きにくい",
                         "色戻りしにくい（6〜12ヶ月持続）",
                         "自然で透明感のある白さになる",
-                        "費用は¥38,500"
+                        "費用は¥36,500"
                       ].map((item, i) => (
                         <li key={i} className="flex items-start">
                           <CheckCircle2 className="w-5 h-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
@@ -584,74 +586,13 @@ export default function WhiteningTypesPage() {
         </div>
       </section>
 
-      {/* 関連ページ */}
-      <section className="py-2 bg-[#FDFBF7]">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-[#5A4D41] font-serif">関連ページ</h2>
-              <div className="w-16 h-0.5 bg-[#C5A572] mx-auto mt-4"></div>
-            </div>
+      <RelatedPagesSection
+        title="関連ページ"
+        items={whiteningRelatedPages}
+        currentPath="/whitening/types"
+      />
 
-            <div className="grid md:grid-cols-3 gap-6">
-              <a href="/whitening" className="group bg-white p-6 rounded-2xl border-2 border-[#C5A572]/20 hover:border-[#C5A572]/40 hover:shadow-lg transition-all">
-                <h3 className="text-xl font-bold text-[#5A4D41] font-serif mb-4">ホワイトニングTOP</h3>
-                <p className="text-[#8D8070] mb-4">
-                  ホワイトニング全般について
-                </p>
-                <div className="flex items-center text-[#C5A572] font-semibold group-hover:translate-x-2 transition-transform">
-                  詳しく見る <ArrowRight className="w-5 h-5 ml-2" />
-                </div>
-              </a>
 
-              <a href="/whitening/cost" className="group bg-white p-6 rounded-2xl border-2 border-[#C5A572]/20 hover:border-[#C5A572]/40 hover:shadow-lg transition-all">
-                <h3 className="text-xl font-bold text-[#5A4D41] font-serif mb-4">料金・費用</h3>
-                <p className="text-[#8D8070] mb-4">
-                  各ホワイトニングの詳しい料金
-                </p>
-                <div className="flex items-center text-[#C5A572] font-semibold group-hover:translate-x-2 transition-transform">
-                  詳しく見る <ArrowRight className="w-5 h-5 ml-2" />
-                </div>
-              </a>
-
-              <a href="/whitening/duration" className="group bg-white p-6 rounded-2xl border-2 border-[#C5A572]/20 hover:border-[#C5A572]/40 hover:shadow-lg transition-all">
-                <h3 className="text-xl font-bold text-[#5A4D41] font-serif mb-4">効果の持続期間</h3>
-                <p className="text-[#8D8070] mb-4">
-                  白さを長持ちさせるコツ
-                </p>
-                <div className="flex items-center text-[#C5A572] font-semibold group-hover:translate-x-2 transition-transform">
-                  詳しく見る <ArrowRight className="w-5 h-5 ml-2" />
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-2 bg-gradient-to-r from-[#D4AF37] to-[#C5A028] text-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 font-serif">
-              あなたに最適なホワイトニングを<br />
-              一緒に見つけましょう
-            </h2>
-            <p className="text-xl mb-8 text-white/90">
-              無料カウンセリングで、あなたの歯の状態や<br />
-              ご希望をお聞かせください
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/#contact"
-                className="inline-flex items-center justify-center bg-white text-[#C5A572] px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-50 transition-colors shadow-lg"
-              >
-                無料カウンセリング予約
-                <ArrowRight className="w-6 h-6 ml-2" />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
                 {/* 監修者情報 */}
                 <div className="container mx-auto px-4 pt-2 pb-16">
                     <AuthorBio />

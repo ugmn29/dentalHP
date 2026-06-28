@@ -5,6 +5,9 @@ import { AuthorBio } from '@/components/AuthorBio';
 import { PageImage } from '@/components/PageImage';
 import { Sparkles, ArrowRight, CheckCircle, Clock, Heart, Star, AlertCircle, Shield, Users, TrendingUp, X, Zap } from 'lucide-react';
 import type { Metadata } from 'next';
+import { RelatedPagesSection } from '@/components/RelatedPagesSection';
+import { whiteningRelatedPages } from '@/data/related-pages';
+import { WEB_RESERVATION_URL } from '@/lib/reservation';
 
 export const metadata: Metadata = {
   title: '当院のホワイトニングが選ばれる理由｜他院との違い｜Fデンタルオフィス 豊洲プライムスクエア院',
@@ -52,7 +55,9 @@ export default function WhiteningComparisonPage() {
             </p>
 
             <a
-              href="/#contact"
+              href={WEB_RESERVATION_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-white text-pink-600 px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
             >
               無料カウンセリング予約
@@ -263,9 +268,8 @@ export default function WhiteningComparisonPage() {
 
                 <div className="mt-6 bg-purple-100 p-4 rounded-xl">
                   <p className="text-sm text-gray-800 leading-relaxed">
-                    <strong className="text-purple-600">実績：</strong>
-                    当院推奨の歯磨き粉とケア方法を実践した患者様は、
-                    <strong>白さの持続期間が平均1.5倍</strong>に伸びています（当院調べ）。
+                    <strong className="text-purple-600">ポイント：</strong>
+                    当院推奨の歯磨き粉とケア方法を継続することで、白さを長く保ちやすくなります。
                   </p>
                 </div>
               </div>
@@ -626,128 +630,13 @@ export default function WhiteningComparisonPage() {
         </div>
       </section>
 
-      {/* --- 関連ページ --- */}
-      <section className="py-6 md:py-6 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">
-              ホワイトニングについてもっと知る
-            </h2>
+      <RelatedPagesSection
+        title="関連ページ"
+        items={whiteningRelatedPages}
+        currentPath="/whitening/comparison"
+      />
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <a
-                href="/whitening"
-                className="group bg-gradient-to-br from-blue-50 to-white p-6 rounded-xl border-2 border-blue-100 hover:border-blue-300 hover:shadow-xl transition-all duration-300"
-              >
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                    <Sparkles className="w-6 h-6 text-white" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="font-bold text-lg mb-2 text-gray-800 group-hover:text-blue-600 transition-colors">
-                      ホワイトニングTOP
-                    </h3>
-                    <p className="text-sm text-gray-600 mb-3">
-                      ホワイトニング全般について
-                    </p>
-                    <div className="flex items-center text-blue-600 text-sm font-medium">
-                      詳しく見る
-                      <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                    </div>
-                  </div>
-                </div>
-              </a>
 
-              <a
-                href="/whitening/types"
-                className="group bg-gradient-to-br from-purple-50 to-white p-6 rounded-xl border-2 border-purple-100 hover:border-purple-300 hover:shadow-xl transition-all duration-300"
-              >
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                    <Star className="w-6 h-6 text-white" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="font-bold text-lg mb-2 text-gray-800 group-hover:text-purple-600 transition-colors">
-                      ホワイトニングの種類
-                    </h3>
-                    <p className="text-sm text-gray-600 mb-3">
-                      3つの方法を徹底比較
-                    </p>
-                    <div className="flex items-center text-purple-600 text-sm font-medium">
-                      詳しく見る
-                      <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                    </div>
-                  </div>
-                </div>
-              </a>
-
-              <a
-                href="/whitening/cost"
-                className="group bg-gradient-to-br from-green-50 to-white p-6 rounded-xl border-2 border-green-100 hover:border-green-300 hover:shadow-xl transition-all duration-300"
-              >
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                    <CheckCircle className="w-6 h-6 text-white" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="font-bold text-lg mb-2 text-gray-800 group-hover:text-green-600 transition-colors">
-                      料金・費用
-                    </h3>
-                    <p className="text-sm text-gray-600 mb-3">
-                      各プランの詳しい料金
-                    </p>
-                    <div className="flex items-center text-green-600 text-sm font-medium">
-                      詳しく見る
-                      <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* --- CTA Section --- */}
-      <section className="py-6 md:py-6 bg-gradient-to-r from-pink-600 to-pink-400 text-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              当院のホワイトニングを<br />
-              ぜひ体験してください
-            </h2>
-            <p className="text-xl mb-8 text-pink-50">
-              他院との違いを実感していただける<br className="md:hidden" />
-              自信があります
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a
-                href="/#contact"
-                className="group bg-white text-pink-600 px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center gap-2"
-              >
-                無料カウンセリング予約
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </a>
-            </div>
-
-            <div className="mt-8 flex items-center justify-center gap-6 text-sm text-pink-100">
-              <div className="flex items-center gap-2">
-                <Shield className="w-5 h-5" />
-                <span>充実のサービス</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Heart className="w-5 h-5" />
-                <span>患者様第一</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Star className="w-5 h-5" />
-                <span>高い満足度</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
                 {/* 監修者情報 */}
                 <div className="container mx-auto px-4 pt-2 pb-16">
                     <AuthorBio />

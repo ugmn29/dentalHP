@@ -6,6 +6,8 @@ import { AuthorBio } from '@/components/AuthorBio';
 import Link from 'next/link';
 import { KidsOrthoImage } from '@/components/KidsOrthoImage';
 import { PageImage } from '@/components/PageImage';
+import { RelatedPagesSection } from '@/components/RelatedPagesSection';
+import { kidsOrthoRelatedPages } from '@/data/related-pages';
 
 export const metadata: Metadata = {
   title: '上顎前突（出っ歯）の治療 | こども矯正 | Fデンタルオフィス 豊洲プライムスクエア院',
@@ -52,7 +54,7 @@ export default function OverbiteDetailPage() {
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[#5A4D41] mb-3">
                   上顎前突（じょうがくぜんとつ）
                 </h1>
-                <PageImage path="/kidsortho/types/overbite" imageId="出っ歯の横顔と歯列図" alt="上顎前突（出っ歯）の治療" />
+                <PageImage path="/kidsortho/types/overbite" imageId="出っ歯の横顔と歯列図" alt="上顎前突（出っ歯）の治療" className="mx-auto mb-8 aspect-[16/9] w-full kidsortho-hero-image-card rounded-3xl border border-[#E6E0D6] bg-white object-contain p-3 shadow-lg" />
                 <p className="text-sm text-[#8D8070] mb-3">豊洲の矯正歯科が詳しく解説</p>
                 <div className="w-16 h-0.5 bg-[#C5A572] mb-6"></div>
               </div>
@@ -603,108 +605,14 @@ export default function OverbiteDetailPage() {
             </div>
           </section>
 
-          {/* CTA Section */}
-          <section className="relative rounded-2xl p-8 md:p-12 border-2 border-[#C5A572]/20">
-            <div>
-              <div className="text-center mb-8">
-                <h2 className="text-3xl md:text-4xl font-bold text-[#5A4D41] mb-4">お子様の出っ歯が気になりませんか？</h2>
-                <p className="text-lg md:text-xl text-[#8D8070] leading-relaxed">
-                  上顎前突（出っ歯）は早期治療が効果的です。<br />
-                  豊洲で小児矯正をお考えなら、まずは無料カウンセリングにお越しください。
-                </p>
-              </div>
 
-              <div className="grid md:grid-cols-2 gap-6 mb-8">
-                <div className="rounded-xl p-6 border border-[#C5A572]/10">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 bg-[#C5A572] rounded-full flex items-center justify-center text-white">
-                      <Calendar size={24} />
-                    </div>
-                    <div>
-                      <h3 className="font-bold text-lg text-[#5A4D41]">無料カウンセリング</h3>
-                      <p className="text-sm text-[#8D8070]">所要時間：30〜60分</p>
-                    </div>
-                  </div>
-                  <ul className="space-y-2 text-sm text-[#8D8070]">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle size={16} className="mt-1 flex-shrink-0 text-[#C5A572]" />
-                      <span>お子様の歯並びの状態を詳しく診査</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle size={16} className="mt-1 flex-shrink-0 text-[#C5A572]" />
-                      <span>最適な治療方法と時期をご提案</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle size={16} className="mt-1 flex-shrink-0 text-[#C5A572]" />
-                      <span>治療期間と費用の詳しいご説明</span>
-                    </li>
-                  </ul>
-                </div>
-
-                <div className="rounded-xl p-6 border border-[#C5A572]/10">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 bg-[#C5A572] rounded-full flex items-center justify-center text-white">
-                      <Phone size={24} />
-                    </div>
-                    <div>
-                      <h3 className="font-bold text-lg text-[#5A4D41]">お電話でのご予約</h3>
-                      <p className="text-sm text-[#8D8070]">平日 9:00〜18:00</p>
-                    </div>
-                  </div>
-                  <p className="text-3xl font-bold text-[#C5A572] mb-3">03-6204-2876</p>
-                  <p className="text-sm text-[#8D8070]">
-                    「こども矯正の相談」とお伝えください
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="/#contact"
-                  className="inline-flex items-center justify-center gap-2 bg-[#C5A572] hover:bg-[#B39562] text-white font-bold py-4 px-8 rounded-full transition-all transform hover:scale-105 shadow-lg"
-                >
-                  <Calendar size={20} />
-                  <span>無料カウンセリング予約</span>
-                  <ArrowRight size={20} />
-                </Link>
-                <Link
-                  href="/kidsortho"
-                  className="inline-flex items-center justify-center gap-2 bg-white hover:bg-gray-50 text-[#5A4D41] font-bold py-4 px-8 rounded-full transition-all border-2 border-[#C5A572]/30 shadow-md"
-                >
-                  <span>こども矯正トップへ</span>
-                  <ArrowRight size={20} />
-                </Link>
-              </div>
-            </div>
-          </section>
 
           {/* Related Links */}
-          <section>
-            <h2 className="text-2xl md:text-3xl font-bold text-[#5A4D41] mb-6">関連ページ</h2>
-            <div className="grid md:grid-cols-3 gap-6">
-              <Link href="/kidsortho/types" className="rounded-xl p-6 hover:shadow-xl transition-all border-2 border-transparent hover:border-[#C5A572]/30 group">
-                <h3 className="font-bold text-[#5A4D41] mb-2 group-hover:text-[#C5A572] transition-colors flex items-center gap-2">
-                  不正咬合の種類
-                  <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-                </h3>
-                <p className="text-sm text-[#8D8070]">7つの不正咬合タイプと特徴</p>
-              </Link>
-              <Link href="/kidsortho/timing" className="rounded-xl p-6 hover:shadow-xl transition-all border-2 border-transparent hover:border-[#C5A572]/30 group">
-                <h3 className="font-bold text-[#5A4D41] mb-2 group-hover:text-[#C5A572] transition-colors flex items-center gap-2">
-                  いつから始めるべきか
-                  <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-                </h3>
-                <p className="text-sm text-[#8D8070]">最適な治療開始時期について</p>
-              </Link>
-              <Link href="/kidsortho/cost" className="rounded-xl p-6 hover:shadow-xl transition-all border-2 border-transparent hover:border-[#C5A572]/30 group">
-                <h3 className="font-bold text-[#5A4D41] mb-2 group-hover:text-[#C5A572] transition-colors flex items-center gap-2">
-                  費用について
-                  <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-                </h3>
-                <p className="text-sm text-[#8D8070]">治療費用と支払い方法</p>
-              </Link>
-            </div>
-          </section>
+          <RelatedPagesSection
+            title="関連ページ"
+            items={kidsOrthoRelatedPages}
+            currentPath="/kidsortho/types/overbite"
+          />
         </div>
       </div>
                 {/* 監修者情報 */}

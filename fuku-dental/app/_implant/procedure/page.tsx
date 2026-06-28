@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
+import { WEB_RESERVATION_URL } from '@/lib/reservation';
 import {
   Clock,
   Zap,
@@ -330,13 +331,15 @@ export default function ImplantProcedurePage() {
               <p className="text-xl mb-8 text-blue-50">
                 無料カウンセリングで個別に詳しくご説明します
               </p>
-              <Link
-                href="/#contact"
+              <a
+                href={WEB_RESERVATION_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center bg-white text-blue-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-blue-50 transition-colors shadow-lg"
               >
                 無料相談を予約する
                 <ArrowRight className="w-6 h-6 ml-2" />
-              </Link>
+              </a>
             </div>
           </div>
         </section>

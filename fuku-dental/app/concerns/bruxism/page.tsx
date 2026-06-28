@@ -1265,36 +1265,7 @@ export default function BruxismPage() {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-2 bg-gradient-to-br from-[#8B7AA3] to-[#9B89B3] text-white">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8">
-              まずは一度、お気軽にご相談ください
-            </h2>
-            <p className="text-white/90 mb-12 text-lg">
-              歯ぎしり・食いしばりのお悩み、お気軽にご相談ください。<br />
-              患者様一人ひとりに合わせた最適な治療プランをご提案いたします。
-            </p>
 
-            <div className="flex flex-col sm:flex-row gap-6 justify-center max-w-2xl mx-auto">
-              <a
-                href="https://apo-toolboxes.stransa.co.jp/user/web/babordc4ba29b/reservations"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-white hover:bg-gray-100 text-[#9B89B3] px-8 py-5 rounded-full font-bold shadow-lg transition-all flex items-center justify-center gap-3 text-lg flex-1"
-              >
-                <Clock />
-                24時間 WEB予約
-              </a>
-              <a
-                href="tel:03-6204-2876"
-                className="bg-transparent border-2 border-white hover:bg-white/10 text-white px-8 py-5 rounded-full font-bold transition-all flex items-center justify-center gap-3 text-lg flex-1"
-              >
-                お電話でのご予約
-              </a>
-            </div>
-          </div>
-        </section>
                 {/* 監修者情報 */}
                 <div className="container mx-auto px-4 pt-2 pb-16">
                     <AuthorBio />

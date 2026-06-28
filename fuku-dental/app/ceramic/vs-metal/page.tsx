@@ -4,6 +4,9 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
 import { PageImage } from '@/components/PageImage';
+import { RelatedPagesSection } from '@/components/RelatedPagesSection';
+import { ceramicRelatedPages } from '@/data/related-pages';
+import { FaqSection } from '@/components/FaqSection';
 import {
   CheckCircle2,
   ArrowRight,
@@ -103,64 +106,78 @@ export default function CeramicVsMetalPage() {
                 <div className="w-16 h-0.5 bg-[#C5A572] mx-auto mt-4"></div>
               </div>
 
-              <div className="bg-white p-8 rounded-2xl shadow-sm border border-[#C5A572]/10 mb-6">
-                <div className="grid md:grid-cols-3 gap-4 mb-6">
+              <div className="bg-white p-4 md:p-8 rounded-2xl shadow-sm border border-[#C5A572]/10 mb-6">
+                <div className="hidden md:grid md:grid-cols-[1fr_1.2fr_1.2fr] gap-4 mb-6 px-4">
                   <div className="font-bold text-[#5A4D41]">比較項目</div>
                   <div className="font-bold text-[#C5A572] text-center">セラミック</div>
                   <div className="font-bold text-gray-600 text-center">銀歯</div>
                 </div>
 
                 <div className="space-y-4">
-                  {/* 見た目 */}
-                  <div className="grid md:grid-cols-3 gap-4 p-4 bg-[#FDFBF7] rounded-xl">
-                    <div className="font-semibold text-[#5A4D41]">見た目</div>
-                    <div className="text-center">
-                      <span className="text-green-600 font-bold">⭐⭐⭐⭐⭐</span>
-                      <p className="text-sm mt-1">天然歯と見分けがつかない</p>
+                  {[
+                    {
+                      label: '見た目',
+                      ceramic: (
+                        <>
+                          <span className="text-green-600 font-bold">⭐⭐⭐⭐⭐</span>
+                          <p className="text-sm mt-1">天然歯と見分けがつかない</p>
+                        </>
+                      ),
+                      metal: (
+                        <>
+                          <span className="text-red-600 font-bold">⭐</span>
+                          <p className="text-sm mt-1">銀色で目立つ</p>
+                        </>
+                      ),
+                    },
+                    {
+                      label: '平均寿命',
+                      ceramic: <span className="text-[#C5A572] font-bold text-lg md:text-xl">7〜15年</span>,
+                      metal: <span className="text-gray-600 font-bold text-lg md:text-xl">3〜5年</span>,
+                    },
+                    {
+                      label: '初期費用',
+                      ceramic: (
+                        <>
+                          <span className="text-orange-600 font-bold text-sm sm:text-base md:text-xl">
+                            <span className="block sm:inline">¥77,000〜</span>
+                            <span className="block sm:inline">¥220,000</span>
+                          </span>
+                          <p className="text-xs text-gray-600 mt-1">自費診療</p>
+                        </>
+                      ),
+                      metal: (
+                        <>
+                          <span className="text-green-600 font-bold text-base md:text-xl">3千〜1万円</span>
+                          <p className="text-xs text-gray-600 mt-1">保険適用</p>
+                        </>
+                      ),
+                    },
+                    {
+                      label: '二次虫歯リスク',
+                      ceramic: <span className="text-green-600 font-bold">低い</span>,
+                      metal: <span className="text-red-600 font-bold">高い</span>,
+                    },
+                    {
+                      label: '金属アレルギー',
+                      ceramic: <span className="text-green-600 font-bold">なし</span>,
+                      metal: <span className="text-red-600 font-bold">リスクあり</span>,
+                    },
+                  ].map((item, index) => (
+                    <div key={item.label} className={`grid gap-3 p-4 rounded-xl md:grid-cols-[1fr_1.2fr_1.2fr] md:items-center ${index % 2 === 0 ? 'bg-[#FDFBF7]' : 'bg-white'}`}>
+                      <div className="font-semibold text-[#5A4D41]">{item.label}</div>
+                      <div className="grid grid-cols-2 gap-3 md:contents">
+                        <div className="rounded-xl bg-white/80 p-3 text-center shadow-sm md:bg-transparent md:p-0 md:shadow-none">
+                          <p className="mb-2 text-xs font-bold tracking-[0.12em] text-[#C5A572] md:hidden">セラミック</p>
+                          {item.ceramic}
+                        </div>
+                        <div className="rounded-xl bg-white/80 p-3 text-center shadow-sm md:bg-transparent md:p-0 md:shadow-none">
+                          <p className="mb-2 text-xs font-bold tracking-[0.12em] text-gray-500 md:hidden">銀歯</p>
+                          {item.metal}
+                        </div>
+                      </div>
                     </div>
-                    <div className="text-center">
-                      <span className="text-red-600 font-bold">⭐</span>
-                      <p className="text-sm mt-1">銀色で目立つ</p>
-                    </div>
-                  </div>
-
-                  {/* 寿命 */}
-                  <div className="grid md:grid-cols-3 gap-4 p-4 bg-white rounded-xl">
-                    <div className="font-semibold text-[#5A4D41]">平均寿命</div>
-                    <div className="text-center">
-                      <span className="text-[#C5A572] font-bold text-xl">7〜15年</span>
-                    </div>
-                    <div className="text-center">
-                      <span className="text-gray-600 font-bold text-xl">3〜5年</span>
-                    </div>
-                  </div>
-
-                  {/* 費用 */}
-                  <div className="grid md:grid-cols-3 gap-4 p-4 bg-[#FDFBF7] rounded-xl">
-                    <div className="font-semibold text-[#5A4D41]">初期費用</div>
-                    <div className="text-center">
-                      <span className="text-orange-600 font-bold text-xl">¥77,000〜¥220,000</span>
-                      <p className="text-xs text-gray-600 mt-1">（自費診療）</p>
-                    </div>
-                    <div className="text-center">
-                      <span className="text-green-600 font-bold text-xl">3千〜1万円</span>
-                      <p className="text-xs text-gray-600 mt-1">（保険適用）</p>
-                    </div>
-                  </div>
-
-                  {/* 虫歯リスク */}
-                  <div className="grid md:grid-cols-3 gap-4 p-4 bg-white rounded-xl">
-                    <div className="font-semibold text-[#5A4D41]">二次虫歯リスク</div>
-                    <div className="text-center text-green-600 font-bold">低い</div>
-                    <div className="text-center text-red-600 font-bold">高い</div>
-                  </div>
-
-                  {/* 金属アレルギー */}
-                  <div className="grid md:grid-cols-3 gap-4 p-4 bg-[#FDFBF7] rounded-xl">
-                    <div className="font-semibold text-[#5A4D41]">金属アレルギー</div>
-                    <div className="text-center text-green-600 font-bold">なし</div>
-                    <div className="text-center text-red-600 font-bold">リスクあり</div>
-                  </div>
+                  ))}
                 </div>
               </div>
             </div>
@@ -215,7 +232,7 @@ export default function CeramicVsMetalPage() {
                   <div className="space-y-4 text-[#5A4D41] leading-loose">
                     <p>
                       <span className="font-bold bg-yellow-100">セラミックは¥77,000〜¥220,000（自費診療）</span>で、初期費用は高めです。
-                      インレー・アンレーは¥77,000〜¥110,000、補綴は¥143,000〜¥220,000です。
+                      インレー・アンレーは¥77,000〜¥132,000、補綴は¥143,000〜¥220,000です。
                     </p>
                     <p>
                       <span className="text-[#2E8B57] font-bold">銀歯は3千〜1万円（保険適用・3割負担）</span>で、初期費用は安いです。
@@ -377,16 +394,9 @@ export default function CeramicVsMetalPage() {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-6 md:py-6 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <div className="text-center mb-12">
-                <h2 className="text-3xl md:text-4xl font-bold text-[#5A4D41] font-serif">よくある質問</h2>
-                <div className="w-16 h-0.5 bg-[#C5A572] mx-auto mt-4"></div>
-              </div>
-
-              <div className="space-y-6">
-                {[
+        <FaqSection
+          title="よくある質問"
+          items={[
                   {
                     q: "銀歯をセラミックに替えることはできますか？",
                     a: "はい、銀歯をセラミックに交換することは可能です。多くの患者様が、審美性の向上や金属アレルギーの予防のために、銀歯からセラミックへ交換されています。交換する際は、銀歯を外して虫歯の有無を確認し、必要に応じて治療した後、セラミックを作製・装着します。通常2〜3回の通院で完了します。"
@@ -408,108 +418,15 @@ export default function CeramicVsMetalPage() {
                     q: "結局、セラミックと銀歯のどちらがいいですか？",
                     a: "長期的な健康、審美性、費用対効果を考えると、セラミックがおすすめです。初期費用は銀歯の方が安いですが、セラミックは2〜3倍長持ちする、二次虫歯のリスクが低い、再治療の手間と費用が減る、見た目が美しい、健康への悪影響がないという利点があります。長い目で見ると、セラミックの方が経済的で健康的です。まずは無料カウンセリングでご相談ください。"
                   }
-                ].map((faq, index) => (
-                  <div key={index} className="bg-white rounded-xl shadow-md border border-gray-200 p-6">
-                    <div className="mb-4">
-                      <div className="flex items-center gap-3 mb-3">
-                        <span className="w-8 h-8 bg-[#C5A572] rounded-full flex items-center justify-center text-white text-sm flex-shrink-0">
-                          Q{index + 1}
-                        </span>
-                        <h3 className="font-bold text-[#5A4D41] text-lg">
-                          {faq.q}
-                        </h3>
-                      </div>
-                    </div>
-                    <div className="text-[#8D8070] leading-relaxed">
-                      <p className="mb-3">
-                        <strong className="text-[#C5A572]">A.</strong> {faq.a}
-                      </p>
-                      {faq.note && (
-                        <p className="text-sm bg-[#E8F2ED] p-4 rounded-lg">
-                          {faq.note}
-                        </p>
-                      )}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
+                ]}
+        />
 
-        {/* 関連ページ */}
-        <section className="py-2 bg-[#FDFBF7]">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <div className="text-center mb-12">
-                <h2 className="text-3xl md:text-4xl font-bold text-[#5A4D41] font-serif">関連ページ</h2>
-                <div className="w-16 h-0.5 bg-[#C5A572] mx-auto mt-4"></div>
-              </div>
+        <RelatedPagesSection
+          title="関連ページ"
+          items={ceramicRelatedPages}
+          currentPath="/ceramic/vs-metal"
+        />
 
-              <div className="grid md:grid-cols-3 gap-6">
-                <Link href="/ceramic" className="group bg-white p-6 rounded-2xl border-2 border-[#C5A572]/20 hover:border-[#C5A572]/40 hover:shadow-lg transition-all">
-                  <h3 className="text-xl font-bold text-[#5A4D41] font-serif mb-4">セラミック治療TOP</h3>
-                  <p className="text-[#8D8070] mb-4">
-                    セラミック治療の概要と特徴
-                  </p>
-                  <div className="flex items-center text-[#C5A572] font-semibold group-hover:translate-x-2 transition-transform">
-                    詳しく見る <ArrowRight className="w-5 h-5 ml-2" />
-                  </div>
-                </Link>
-
-                <Link href="/ceramic/cost" className="group bg-white p-6 rounded-2xl border-2 border-[#C5A572]/20 hover:border-[#C5A572]/40 hover:shadow-lg transition-all">
-                  <h3 className="text-xl font-bold text-[#5A4D41] font-serif mb-4">費用・料金</h3>
-                  <p className="text-[#8D8070] mb-4">
-                    セラミック治療の費用について
-                  </p>
-                  <div className="flex items-center text-[#C5A572] font-semibold group-hover:translate-x-2 transition-transform">
-                    詳しく見る <ArrowRight className="w-5 h-5 ml-2" />
-                  </div>
-                </Link>
-
-                <Link href="/ceramic/longevity" className="group bg-white p-6 rounded-2xl border-2 border-[#C5A572]/20 hover:border-[#C5A572]/40 hover:shadow-lg transition-all">
-                  <h3 className="text-xl font-bold text-[#5A4D41] font-serif mb-4">寿命・耐久性</h3>
-                  <p className="text-[#8D8070] mb-4">
-                    セラミックはどのくらい持つ？
-                  </p>
-                  <div className="flex items-center text-[#C5A572] font-semibold group-hover:translate-x-2 transition-transform">
-                    詳しく見る <ArrowRight className="w-5 h-5 ml-2" />
-                  </div>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA */}
-        <section className="py-2 bg-gradient-to-r from-[#D4AF37] to-[#C5A028] text-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 font-serif">
-                セラミック治療で美しく健康な歯を
-              </h2>
-              <p className="text-xl mb-8 text-white/90">
-                銀歯からセラミックへの交換もご相談ください<br />
-                無料カウンセリングで詳しくご説明します
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="/#contact"
-                  className="inline-flex items-center justify-center bg-white text-[#C5A572] px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-50 transition-colors shadow-lg"
-                >
-                  無料相談を予約する
-                  <ArrowRight className="w-6 h-6 ml-2" />
-                </Link>
-                <Link
-                  href="tel:03-6204-2876"
-                  className="inline-flex items-center justify-center bg-white/20 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/30 transition-colors border-2 border-white"
-                >
-                  電話で相談する
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
                 {/* 監修者情報 */}
                 <div className="container mx-auto px-4 pt-2 pb-16">
                     <AuthorBio />

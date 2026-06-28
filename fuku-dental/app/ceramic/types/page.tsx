@@ -3,7 +3,8 @@ import Link from 'next/link';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
-import { PageImage } from '@/components/PageImage';
+import { RelatedPagesSection } from '@/components/RelatedPagesSection';
+import { ceramicRelatedPages } from '@/data/related-pages';
 import {
   CheckCircle2,
   XCircle,
@@ -60,7 +61,6 @@ export default function CeramicTypesPage() {
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#5A4D41] font-serif">
                 セラミック治療の種類
               </h1>
-              <PageImage path="/ceramic/types" alt="セラミック治療の種類" />
               <div className="w-24 h-1 bg-[#C5A572] mx-auto mb-8"></div>
               <p className="text-xl md:text-2xl mb-6 text-[#5A4D41] font-medium">
                 インレー・クラウン・ベニアの違いと選び方
@@ -117,15 +117,11 @@ export default function CeramicTypesPage() {
                           <CheckCircle2 className="w-5 h-5 text-[#C5A572] mr-3 flex-shrink-0 mt-0.5" />
                           <span>奥歯の銀歯を白くしたい</span>
                         </li>
-                        <li className="flex items-start">
-                          <CheckCircle2 className="w-5 h-5 text-[#C5A572] mr-3 flex-shrink-0 mt-0.5" />
-                          <span>費用を抑えたい</span>
-                        </li>
                       </ul>
                     </div>
 
                     <p className="mt-4">
-                      <span className="font-bold text-[#C5A572]">目安費用：</span>e-max ¥77,000、ゴールド ¥110,000
+                      <span className="font-bold text-[#C5A572]">目安費用：</span>e-max ¥77,000、ゴールド ¥132,000
                     </p>
                   </div>
                 </div>
@@ -167,7 +163,7 @@ export default function CeramicTypesPage() {
                     </div>
 
                     <p className="mt-4">
-                      <span className="font-bold text-[#C5A572]">目安費用：</span>e-max ¥77,000、ゴールド ¥110,000
+                      <span className="font-bold text-[#C5A572]">目安費用：</span>e-max ¥77,000、ゴールド ¥132,000
                     </p>
                   </div>
                 </div>
@@ -180,7 +176,6 @@ export default function CeramicTypesPage() {
                   <div className="space-y-4 text-[#5A4D41] leading-loose">
                     <p className="text-lg text-[#8D8070] mb-4">
                       <span className="font-bold bg-yellow-100">大きな虫歯や変色した歯に</span>
-                      <span className="ml-3 bg-[#C5A572] text-white text-sm font-bold px-3 py-1 rounded-full">最も人気</span>
                     </p>
                     <p>
                       歯全体を覆うように被せる治療法です。大きな虫歯治療や、変色した歯を白くする際に使用します。
@@ -318,7 +313,6 @@ export default function CeramicTypesPage() {
                 <div>
                   <h3 className="text-2xl font-bold text-[#5A4D41] font-serif mb-4 pb-2 border-b-2 border-[#C5A572]">
                     ジルコニア
-                    <span className="ml-3 bg-[#C5A572] text-white text-sm font-bold px-3 py-1 rounded-full">おすすめ</span>
                   </h3>
                   <div className="space-y-4 text-[#5A4D41] leading-loose">
                     <p>
@@ -335,10 +329,10 @@ export default function CeramicTypesPage() {
                   </div>
                 </div>
 
-                {/* PF（ジルコボンド） */}
+                {/* ジルコニアセラミック */}
                 <div>
                   <h3 className="text-2xl font-bold text-[#5A4D41] font-serif mb-4 pb-2 border-b-2 border-[#C5A572]">
-                    PF（ジルコボンド）
+                    ジルコニアセラミック
                     <span className="ml-3 bg-[#C5A572] text-white text-sm font-bold px-3 py-1 rounded-full">最高級</span>
                   </h3>
                   <div className="space-y-4 text-[#5A4D41] leading-loose">
@@ -397,12 +391,12 @@ export default function CeramicTypesPage() {
               <div className="mt-8 p-6 bg-white rounded-2xl shadow-sm border border-[#C5A572]/10">
                 <p className="text-[#5A4D41] font-semibold mb-2 font-serif flex items-center">
                   <Shield className="w-5 h-5 inline mr-2 text-[#C5A572]" />
-                  当院のおすすめ
+                  材料選びのポイント
                 </p>
                 <p className="text-[#8D8070]">
-                  当院では、<span className="font-bold text-[#C5A572]">ジルコニア</span>を最もおすすめしています。
-                  強度と審美性のバランスに優れ、長期的に安定した結果が期待できます。
-                  前歯には透明感の高い<span className="font-bold text-[#C5A572]">オールセラミック（e.max）</span>も人気です。
+                  奥歯には強度に優れた<span className="font-bold text-[#C5A572]">ジルコニア</span>、
+                  前歯には透明感と色調再現性に優れた<span className="font-bold text-[#C5A572]">ジルコニアセラミック</span>を候補に、
+                  噛み合わせや見た目のご希望に合わせて選択します。
                 </p>
               </div>
             </div>
@@ -502,29 +496,6 @@ export default function CeramicTypesPage() {
                   </div>
                 </div>
 
-                {/* 費用を抑えたい */}
-                <div>
-                  <h3 className="text-2xl font-bold text-[#5A4D41] font-serif mb-4 pb-2 border-b-2 border-[#C5A572]">
-                    費用を抑えたい
-                  </h3>
-                  <div className="space-y-4 text-[#5A4D41] leading-loose">
-                    <p>インレーが最も費用対効果が高いです</p>
-                    <ul className="space-y-2 ml-4">
-                      <li className="flex items-start">
-                        <ArrowRight className="w-5 h-5 text-[#C5A572] mr-3 flex-shrink-0 mt-0.5" />
-                        <div>
-                          <span className="font-semibold">最安：</span>e-max（¥77,000）
-                        </div>
-                      </li>
-                      <li className="flex items-start">
-                        <ArrowRight className="w-5 h-5 text-[#C5A572] mr-3 flex-shrink-0 mt-0.5" />
-                        <div>
-                          <span className="font-semibold">次点：</span>ゴールド（¥110,000）
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
               </div>
 
               <div className="mt-12 p-8 bg-white rounded-2xl shadow-sm border border-[#C5A572]/10">
@@ -560,13 +531,33 @@ export default function CeramicTypesPage() {
                   <h3 className="text-lg font-bold text-[#5A4D41] mb-4 font-serif">
                     インレーとクラウンの違いは何ですか？
                   </h3>
-                  <p className="text-[#8D8070] leading-relaxed mb-4">
-                    <span className="font-bold bg-yellow-100">インレー</span>は歯の一部だけを削って埋める「詰め物」で、
-                    <span className="font-bold bg-yellow-100">クラウン</span>は歯全体を削って被せる「被せ物」です。
-                    虫歯が小さければインレー、大きければクラウンとなります。
-                    インレーの方が削る量が少なく、費用も抑えられますが、強度はクラウンの方が高くなります。
-                  </p>
-                  <div className="grid md:grid-cols-2 gap-4">
+	                  <p className="text-[#8D8070] leading-relaxed mb-4">
+	                    <span className="font-bold bg-yellow-100">インレー</span>は歯の一部だけを削って埋める「詰め物」で、
+	                    <span className="font-bold bg-yellow-100">クラウン</span>は歯全体を削って被せる「被せ物」です。
+	                    虫歯が小さければインレー、大きければクラウンとなります。
+	                    インレーの方が削る量が少なく、費用も抑えられますが、強度はクラウンの方が高くなります。
+	                  </p>
+	                  <div className="mb-5 grid gap-4 sm:grid-cols-2">
+	                    <div className="rounded-2xl border border-[#C5A572]/20 bg-[#FDFBF7] p-4 text-center">
+	                      <p className="mb-3 font-bold text-[#5A4D41]">インレー</p>
+	                      <svg viewBox="0 0 180 140" role="img" aria-label="歯の一部を詰めるインレーの図" className="mx-auto h-32 w-full max-w-[220px]">
+	                        <path d="M57 22c-20 9-29 31-23 55 5 24 12 45 27 45 9 0 12-13 19-13s10 13 19 13c15 0 22-21 27-45 6-24-3-46-23-55-13-6-21 3-23 3s-10-9-23-3z" fill="#fff" stroke="#8D8070" strokeWidth="4" />
+	                        <path d="M76 40c11 0 23 1 34 7-6 16-17 24-34 24-13 0-23-5-29-14 5-11 16-17 29-17z" fill="#C5A572" opacity="0.9" />
+	                        <path d="M73 76c10 5 21 5 32 0" fill="none" stroke="#C5A572" strokeWidth="4" strokeLinecap="round" />
+	                      </svg>
+	                      <p className="text-sm leading-relaxed text-[#8D8070]">歯の一部だけを補う詰め物</p>
+	                    </div>
+	                    <div className="rounded-2xl border border-[#C5A572]/20 bg-[#FDFBF7] p-4 text-center">
+	                      <p className="mb-3 font-bold text-[#5A4D41]">クラウン</p>
+	                      <svg viewBox="0 0 180 140" role="img" aria-label="歯全体を被せるクラウンの図" className="mx-auto h-32 w-full max-w-[220px]">
+	                        <path d="M57 38c-19 8-27 27-23 49 4 22 12 35 27 35 9 0 12-11 19-11s10 11 19 11c15 0 23-13 27-35 4-22-4-41-23-49-13-6-21 2-23 2s-10-8-23-2z" fill="#fff" stroke="#8D8070" strokeWidth="4" />
+	                        <path d="M45 20c18-13 52-15 72 0 13 10 17 25 12 41-22 12-76 12-98 0-5-16 1-31 14-41z" fill="#C5A572" opacity="0.92" />
+	                        <path d="M36 60c27 12 81 12 108 0" fill="none" stroke="#B89558" strokeWidth="4" strokeLinecap="round" />
+	                      </svg>
+	                      <p className="text-sm leading-relaxed text-[#8D8070]">歯全体を覆う被せ物</p>
+	                    </div>
+	                  </div>
+	                  <div className="grid md:grid-cols-2 gap-4">
                     <div className="bg-[#FDFBF7] p-4 rounded-lg">
                       <p className="font-bold text-[#5A4D41] mb-2 text-sm">インレー</p>
                       <ul className="space-y-1 text-sm text-[#8D8070]">
@@ -632,7 +623,7 @@ export default function CeramicTypesPage() {
                       <li>• 治療範囲：部分的（中程度）</li>
                       <li>• 咬頭部分を含む</li>
                       <li>• 強度と審美性のバランスが良い</li>
-                      <li>• 費用：¥77,000〜¥110,000</li>
+                      <li>• 費用：¥77,000〜¥132,000</li>
                     </ul>
                   </div>
                 </div>
@@ -732,78 +723,13 @@ export default function CeramicTypesPage() {
           </div>
         </section>
 
-        {/* 関連ページ */}
-        <section className="py-2 bg-[#FDFBF7]">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <div className="text-center mb-12">
-                <h2 className="text-3xl md:text-4xl font-bold text-[#5A4D41] font-serif">関連ページ</h2>
-                <div className="w-16 h-0.5 bg-[#C5A572] mx-auto mt-4"></div>
-              </div>
+        <RelatedPagesSection
+          title="関連ページ"
+          items={ceramicRelatedPages}
+          currentPath="/ceramic/types"
+        />
 
-              <div className="grid md:grid-cols-3 gap-6">
-                <Link href="/ceramic" className="group bg-white p-6 rounded-2xl border-2 border-[#C5A572]/20 hover:border-[#C5A572]/40 hover:shadow-lg transition-all">
-                  <h3 className="text-xl font-bold text-[#5A4D41] font-serif mb-4">セラミック治療TOP</h3>
-                  <p className="text-[#8D8070] mb-4">
-                    セラミック治療の概要と特徴
-                  </p>
-                  <div className="flex items-center text-[#C5A572] font-semibold group-hover:translate-x-2 transition-transform">
-                    詳しく見る <ArrowRight className="w-5 h-5 ml-2" />
-                  </div>
-                </Link>
 
-                <Link href="/ceramic/cost" className="group bg-white p-6 rounded-2xl border-2 border-[#C5A572]/20 hover:border-[#C5A572]/40 hover:shadow-lg transition-all">
-                  <h3 className="text-xl font-bold text-[#5A4D41] font-serif mb-4">費用・料金</h3>
-                  <p className="text-[#8D8070] mb-4">
-                    セラミック治療の費用について
-                  </p>
-                  <div className="flex items-center text-[#C5A572] font-semibold group-hover:translate-x-2 transition-transform">
-                    詳しく見る <ArrowRight className="w-5 h-5 ml-2" />
-                  </div>
-                </Link>
-
-                <Link href="/ceramic/longevity" className="group bg-white p-6 rounded-2xl border-2 border-[#C5A572]/20 hover:border-[#C5A572]/40 hover:shadow-lg transition-all">
-                  <h3 className="text-xl font-bold text-[#5A4D41] font-serif mb-4">寿命・耐久性</h3>
-                  <p className="text-[#8D8070] mb-4">
-                    セラミックはどのくらい持つ？
-                  </p>
-                  <div className="flex items-center text-[#C5A572] font-semibold group-hover:translate-x-2 transition-transform">
-                    詳しく見る <ArrowRight className="w-5 h-5 ml-2" />
-                  </div>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA */}
-        <section className="py-2 bg-gradient-to-r from-[#D4AF37] to-[#C5A028] text-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 font-serif">
-                あなたに最適なセラミック治療を
-              </h2>
-              <p className="text-xl mb-8 text-white/90">
-                無料相談で詳しくご説明いたします
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="/#contact"
-                  className="inline-flex items-center justify-center bg-white text-[#C5A572] px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-50 transition-colors shadow-lg"
-                >
-                  無料相談を予約する
-                  <ArrowRight className="w-6 h-6 ml-2" />
-                </Link>
-                <Link
-                  href="tel:03-6204-2876"
-                  className="inline-flex items-center justify-center bg-white/20 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/30 transition-colors border-2 border-white"
-                >
-                  電話で相談する
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
                 {/* 監修者情報 */}
                 <div className="container mx-auto px-4 pt-2 pb-16">
                     <AuthorBio />

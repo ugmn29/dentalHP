@@ -49,7 +49,16 @@ export async function getArticles(
   offset: number = 0,
   category?: string
 ): Promise<MicroCMSListResponse<MicroCMSArticle>> {
-  if (!client) {
+  const activeServiceDomain =
+    process.env.MICROCMS_SERVICE_DOMAIN ||
+    process.env.NEXT_PUBLIC_MICROCMS_SERVICE_DOMAIN ||
+    "";
+  const activeApiKey =
+    process.env.MICROCMS_API_KEY ||
+    process.env.NEXT_PUBLIC_MICROCMS_API_KEY ||
+    "";
+
+  if (!activeServiceDomain || !activeApiKey) {
     return { contents: [], totalCount: 0, offset: 0, limit };
   }
 
@@ -59,15 +68,20 @@ export async function getArticles(
       : undefined;
 
   try {
-    const data = await client.getList<MicroCMSArticle>({
-      endpoint: "articles",
-      queries: {
-        limit,
-        offset,
-        orders: "-publishedDate,-publishedAt",
-        ...(filters ? { filters } : {}),
-      },
+    const params = new URLSearchParams({
+      limit: String(limit),
+      offset: String(offset),
+      orders: "-publishedDate,-publishedAt",
+      cacheBust: String(Date.now()),
     });
+    if (filters) params.set("filters", filters);
+
+    const res = await fetch(
+      `https://${activeServiceDomain}.microcms.io/api/v1/articles?${params.toString()}`,
+      { headers: { "X-MICROCMS-API-KEY": activeApiKey } }
+    );
+    if (!res.ok) throw new Error(`microCMS fetch failed: ${res.status}`);
+    const data = (await res.json()) as MicroCMSListResponse<MicroCMSArticle>;
     return data;
   } catch (error) {
     console.error("microCMS fetch error:", error);
