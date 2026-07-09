@@ -1,6 +1,8 @@
 # 旧URLから新URLへの301リダイレクト（SEO評価引き継ぎ）
 /prevention /preventive 301
 /about / 301
+/homepage / 301
+/homepage/ / 301
 /kids/oral-education /oral-education 301
 /kids-preventive/brushing /oral-education#brushing 301
 /kids-preventive/fluoride /oral-education#fluoride 301

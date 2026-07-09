@@ -169,6 +169,11 @@ export default function PricePage() {
                                                     <div key={i} className="flex flex-col md:flex-row md:items-center hover:bg-[#F5F2EE] transition-colors group px-6 py-6">
                                                         <div className="w-full md:w-[70%] mb-2 md:mb-0">
                                                             <div className="font-bold text-[#2C2C2A] text-base">{item.name}</div>
+                                                            {item.note && (
+                                                                <p className="mt-1 text-xs leading-relaxed text-[#6B6B68]">
+                                                                    {item.note}
+                                                                </p>
+                                                            )}
                                                         </div>
                                                         <div className="w-full md:w-[30%] text-left md:text-right">
                                                             <span className="font-bold text-lg text-[#0a8a85]">

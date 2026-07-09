@@ -167,7 +167,7 @@ export default function OrthodonticsTypesPage() {
                     <div className="text-center">
                       <DollarSign className="w-6 h-6 text-amber-600 mx-auto mb-2" />
                       <div className="text-xs text-gray-600 mb-1">費用目安</div>
-                      <div className="font-bold text-gray-900">¥880,000</div>
+                      <div className="font-bold text-gray-900">¥935,000＋調整料</div>
                     </div>
                     <div className="text-center">
                       <Eye className="w-6 h-6 text-amber-600 mx-auto mb-2" />
@@ -277,6 +277,7 @@ export default function OrthodonticsTypesPage() {
                       <DollarSign className="w-6 h-6 text-blue-600 mx-auto mb-2" />
                       <div className="text-xs text-gray-600 mb-1">費用目安</div>
                       <div className="font-bold text-gray-900">¥440,000〜¥880,000</div>
+                      <div className="mt-1 text-[11px] text-gray-500">調整料込み</div>
                     </div>
                     <div className="text-center">
                       <Eye className="w-6 h-6 text-blue-600 mx-auto mb-2" />
@@ -557,8 +558,8 @@ export default function OrthodonticsTypesPage() {
                   </tr>
                   <tr className="hover:bg-amber-50 transition-colors">
                     <td className="p-4 font-semibold text-gray-900">費用目安</td>
-                    <td className="p-4 text-center bg-amber-50">¥880,000</td>
-                    <td className="p-4 text-center">¥440,000〜¥880,000</td>
+                    <td className="p-4 text-center bg-amber-50">¥935,000＋調整料</td>
+                    <td className="p-4 text-center">¥440,000〜¥880,000<br /><span className="text-xs text-gray-600">調整料込み</span></td>
                     <td className="p-4 text-center">要相談</td>
                     <td className="p-4 text-center bg-green-50">要相談</td>
                   </tr>
@@ -590,8 +591,8 @@ export default function OrthodonticsTypesPage() {
             {/* Mobile Cards */}
             <div className="md:hidden space-y-6">
               {[
-                { name: 'ワイヤー矯正', color: 'amber', data: { visible: '★★☆☆☆', range: '★★★★★', period: '2〜3年', cost: '¥880,000', remove: '不可', pain: 'やや強い', clean: '難しい' } },
-                { name: 'マウスピース矯正', color: 'blue', data: { visible: '★★★★★', range: '★★★☆☆', period: '1〜2年', cost: '¥440,000〜¥880,000', remove: '可能', pain: '少ない', clean: '普段通り' } },
+                { name: 'ワイヤー矯正', color: 'amber', data: { visible: '★★☆☆☆', range: '★★★★★', period: '2〜3年', cost: '¥935,000＋調整料', remove: '不可', pain: 'やや強い', clean: '難しい' } },
+                { name: 'マウスピース矯正', color: 'blue', data: { visible: '★★★★★', range: '★★★☆☆', period: '1〜2年', cost: '¥440,000〜¥880,000（調整料込）', remove: '可能', pain: '少ない', clean: '普段通り' } },
                 { name: '裏側矯正', color: 'purple', data: { visible: '★★★★★', range: '★★★★☆', period: '2〜3年', cost: '要相談', remove: '不可', pain: '強い', clean: 'かなり難しい' } },
                 { name: '部分矯正', color: 'green', data: { visible: '★★☆☆☆', range: '★★☆☆☆', period: '3ヶ月〜1年', cost: '要相談', remove: '不可', pain: '少ない', clean: '難しい' } },
               ].map((type, index) => (

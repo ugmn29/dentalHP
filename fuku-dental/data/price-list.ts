@@ -1,6 +1,7 @@
 export type PriceItem = {
   name: string;
   price: string;
+  note?: string;
 };
 
 export type PriceCategory = {
@@ -64,15 +65,19 @@ export const priceCategories: PriceCategory[] = [
   },
   {
     id: 'adult-ortho',
-    title: '成人矯正（15歳〜全ての歯の移動）',
+    title: '成人矯正（19歳以上〜全ての歯の移動）',
     items: [
       { name: '検査', price: '¥11,000' },
-      { name: '計画説明', price: '¥11,000' },
-      { name: 'ワイヤー矯正', price: '¥880,000' },
-      { name: 'マウスピース矯正（軽度）', price: '¥440,000' },
-      { name: 'マウスピース矯正（中等度）', price: '¥660,000' },
-      { name: 'マウスピース矯正（重度）', price: '¥770,000' },
-      { name: 'マウスピース矯正（付加装置あり）', price: '¥880,000' },
+      { name: '診断・治療計画説明', price: '¥22,000' },
+      { name: 'マウスピース矯正（軽度）', price: '¥440,000', note: '調整料込みの総額です。' },
+      { name: 'マウスピース矯正（中等度）', price: '¥660,000', note: '調整料込みの総額です。' },
+      { name: 'マウスピース矯正（重度）', price: '¥770,000', note: '調整料込みの総額です。' },
+      { name: 'マウスピース矯正（付加装置あり）', price: '¥880,000', note: '調整料込みの総額です。' },
+      { name: 'ワイヤー矯正', price: '¥935,000', note: '月々の調整料は別途かかります。' },
+      { name: 'ホワイトワイヤー使用の場合', price: '¥110,000' },
+      { name: '毎月調整料', price: '¥5,500 / 月', note: '24回〜36回を目安にかかります。' },
+      { name: '便宜抜歯（必要な場合）', price: '¥7,700 / 本' },
+      { name: 'アンカースクリュー（必要な場合）', price: '¥44,000 / 本' },
     ],
   },
   {

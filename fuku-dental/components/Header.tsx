@@ -57,10 +57,10 @@ export const Header = () => {
                                 <img src="/icon.png" alt="Fデンタルオフィス 豊洲プライムスクエア院 ロゴ" loading="eager" decoding="async" fetchPriority="high" className="w-full h-full object-cover" />
                             </div>
                             <div className="min-w-0 flex-1 pr-12 lg:pr-0">
-                                <p className="text-[10px] md:text-xs text-[#8D8070] font-bold leading-none mb-0.5">豊洲の歯医者</p>
-                                <h1 className="max-w-[calc(100vw-7.5rem)] truncate whitespace-nowrap text-[11px] sm:text-sm md:max-w-none md:text-lg font-bold text-[#5A4D41] leading-tight tracking-wide" style={{ fontFamily: 'Georgia, "Yu Mincho", "Hiragino Mincho ProN", serif' }}>
+                                <p className="text-[10px] md:text-xs text-[#8D8070] font-bold leading-none mb-0.5">豊洲の歯科・歯医者</p>
+                                <div className="max-w-[calc(100vw-7.5rem)] truncate whitespace-nowrap text-[11px] sm:text-sm md:max-w-none md:text-lg font-bold text-[#5A4D41] leading-tight tracking-wide" style={{ fontFamily: 'Georgia, "Yu Mincho", "Hiragino Mincho ProN", serif' }}>
                                     Fデンタルオフィス 豊洲プライムスクエア院
-                                </h1>
+                                </div>
                             </div>
                         </Link>
                     </div>

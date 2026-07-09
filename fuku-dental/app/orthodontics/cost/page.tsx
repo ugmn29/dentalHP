@@ -44,7 +44,12 @@ function PriceTable({ category }: { category: PriceCategory }) {
           <tbody>
             {category.items.map((item, index) => (
               <tr key={item.name} className={index % 2 === 1 ? 'bg-amber-50/60' : 'bg-white'}>
-                <td className="px-5 py-4 font-bold text-gray-800">{item.name}</td>
+                <td className="px-5 py-4">
+                  <div className="font-bold text-gray-800">{item.name}</div>
+                  {item.note && (
+                    <p className="mt-1 text-xs leading-relaxed text-gray-600">{item.note}</p>
+                  )}
+                </td>
                 <td className="px-5 py-4 text-right font-bold text-green-700">{item.price}</td>
               </tr>
             ))}

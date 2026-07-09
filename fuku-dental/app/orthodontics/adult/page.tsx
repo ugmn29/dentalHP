@@ -332,6 +332,7 @@ export default function OrthodonticsAdultPage() {
                       <span className="text-sm text-gray-600">費用</span>
                       <span className="font-bold text-gray-900">¥440,000〜¥880,000</span>
                     </div>
+                    <p className="text-right text-xs text-gray-500">調整料込みの総額です</p>
                     <div className="flex justify-between items-center">
                       <span className="text-sm text-gray-600">期間</span>
                       <span className="font-bold text-gray-900">1〜2年</span>

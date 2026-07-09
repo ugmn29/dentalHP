@@ -1292,7 +1292,7 @@ export default function KidsOrthoPage() {
                                 <div>
                                     <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-l-4 border-[#C5A572] py-3 px-4 mb-4">2期治療（仕上げの矯正）</h4>
                                     <p className="text-[#5A4D41] leading-loose mb-3">
-                                        全ての歯を動かす治療へ移行する場合は、<span className="font-bold bg-yellow-100">ワイヤー矯正 ¥880,000、マウスピース矯正 ¥440,000〜¥880,000</span>です。
+                                        全ての歯を動かす治療へ移行する場合は、<span className="font-bold bg-yellow-100">ワイヤー矯正 ¥935,000＋調整料、マウスピース矯正 ¥440,000〜¥880,000（調整料込み）</span>です。
                                         装置の種類により費用が異なります。デンタルローンもご利用いただけます。
                                     </p>
                                     <a href="/kidsortho/cost" className="text-[#C5A572] font-bold hover:underline inline-flex items-center gap-1 text-sm">
