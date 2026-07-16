@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
-import { Phone, Calendar, ChevronDown, ChevronRight } from 'lucide-react';
+import { Phone, Calendar, ChevronDown, ChevronRight, MapPin, UserRound, ReceiptText, Images } from 'lucide-react';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { ClinicHoursTable } from '@/components/ClinicHoursTable';
@@ -147,6 +147,37 @@ const heroSlides = [
     alt: "Fデンタルオフィス 豊洲プライムスクエア院の受付モニターと院内",
     mobilePosition: "50% 50%",
     desktopPosition: "50% 50%",
+  },
+] as const;
+
+const firstVisitLinks = [
+  {
+    href: "/access",
+    label: "アクセス・診療時間",
+    eyebrow: "ACCESS",
+    body: "豊洲駅6a出口から徒歩2分。土日診療の受付時間も確認できます。",
+    icon: MapPin,
+  },
+  {
+    href: "/doctor",
+    label: "ドクター紹介",
+    eyebrow: "DOCTOR",
+    body: "院長の経歴と、診療で大切にしている考え方をご紹介します。",
+    icon: UserRound,
+  },
+  {
+    href: "/price",
+    label: "料金表",
+    eyebrow: "PRICE",
+    body: "矯正・審美・インプラントなど、自費診療の費用を確認できます。",
+    icon: ReceiptText,
+  },
+  {
+    href: "/case-studies",
+    label: "症例紹介",
+    eyebrow: "CASE",
+    body: "治療前後の変化や、実際の治療の流れをご覧いただけます。",
+    icon: Images,
   },
 ] as const;
 
@@ -347,6 +378,35 @@ export default function Home() {
           </div>
         </section>
 
+        {/* ============ Section 1.5: 初めての方への重要導線 ============ */}
+        <section className="px-4 py-3 md:px-5 md:py-4" style={{ background: SURFACE, borderTop: `1px solid ${LINE}`, borderBottom: `1px solid ${LINE}` }}>
+          <div className="mx-auto flex max-w-6xl flex-col gap-3 md:flex-row md:items-center md:justify-between">
+            <div className="flex items-center justify-center gap-3 md:justify-start">
+              <p className="text-[9px] font-medium tracking-[0.28em]" style={{ color: ACCENT_DARK }}>FIRST VISIT</p>
+              <span className="h-4 w-px" style={{ background: LINE }} aria-hidden="true" />
+              <h2 className="font-serif text-sm font-light md:text-base" style={{ color: TEXT }}>初めての方へ</h2>
+            </div>
+
+            <nav className="grid grid-cols-2 gap-2 sm:flex sm:flex-wrap sm:justify-center md:justify-end" aria-label="初めての方への主要リンク">
+              {firstVisitLinks.map((item) => {
+                const Icon = item.icon;
+                return (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    className="group inline-flex min-h-10 items-center justify-center gap-2 rounded-full px-3 text-xs font-bold tracking-[0.04em] transition hover:-translate-y-0.5 md:px-4 md:text-[13px]"
+                    style={{ background: PAGE_BG, border: `1px solid ${LINE}`, color: TEXT }}
+                  >
+                    <Icon size={15} strokeWidth={1.8} style={{ color: ACCENT_DARK }} />
+                    <span className="whitespace-nowrap">{item.label}</span>
+                    <ChevronRight size={13} className="transition-transform group-hover:translate-x-0.5" style={{ color: ACCENT_DARK }} />
+                  </a>
+                );
+              })}
+            </nav>
+          </div>
+        </section>
+
         {/* ============ Section 2.5: Narrative Bridge（理念→根本治療への接続） ============ */}
         {false && (
         <section className="py-24 md:py-32 px-5" style={{ background: PAGE_BG }}>
@@ -455,6 +515,84 @@ export default function Home() {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ============ Section 4: ターゲット別入口 ============ */}
+        <section className="py-24 md:py-32 px-5" style={{ background: SURFACE }}>
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-14">
+              <p className="text-[11px] tracking-[0.3em] mb-4" style={{ color: ACCENT_DARK }}>FOR YOU</p>
+              <h2 className="font-serif text-3xl md:text-4xl font-light" style={{ color: TEXT }}>
+                あなたに合った診療を、ここから。
+              </h2>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+              <a href="/kidsortho" className="group block rounded-2xl overflow-hidden transition" style={{ background: PAGE_BG, border: `1px solid ${LINE}` }}>
+                <div className="relative aspect-[4/3] overflow-hidden">
+                  <Image
+                    src={homepageImages.kidsAlignment}
+                    alt="豊洲の小児歯科で0歳から高校生までのこども矯正と歯並びを相談する様子"
+                    fill
+                    sizes="(min-width: 768px) 480px, calc(100vw - 2.5rem)"
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="p-7 md:p-9">
+                  <p className="text-[10px] tracking-[0.3em] mb-3" style={{ color: ACCENT_DARK }}>FOR PARENTS</p>
+                  <h3 className="font-serif text-[1.45rem] leading-[1.65] md:text-2xl md:leading-[1.7] mb-4" style={{ color: TEXT }}>
+                    <span className="block">0歳から高校生までの、</span>
+                    <span className="block">お子様の歯並びを</span>
+                    <span className="block">案じる保護者の方へ</span>
+                  </h3>
+                  <p className="text-sm leading-[2.05] mb-5" style={{ color: TEXT_MUTED }}>
+                    <span className="block">豊洲の小児歯科として、</span>
+                    <span className="block">0歳からのこども歯科・予防・</span>
+                    <span className="block">こども矯正・MFTに対応。</span>
+                    <span className="block mt-2">成長期のお顔とお口の土台を、</span>
+                    <span className="block">一緒に育てます。</span>
+                  </p>
+                  <span className="inline-flex items-center gap-1 text-sm font-medium" style={{ color: ACCENT_DARK }}>
+                    こども矯正・口育を見る
+                    <ChevronRight size={16} className="transition-transform group-hover:translate-x-1" />
+                  </span>
+                </div>
+              </a>
+
+              <a href="/ceramic" className="group block rounded-2xl overflow-hidden transition" style={{ background: PAGE_BG, border: `1px solid ${LINE}` }}>
+                <div className="relative aspect-[4/3] overflow-hidden">
+                  <Image
+                    src={homepageImages.adultPrecision}
+                    alt="豊洲の歯科で自分の歯を大切にする精密治療を行う歯科医師"
+                    fill
+                    sizes="(min-width: 768px) 480px, calc(100vw - 2.5rem)"
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="p-7 md:p-9">
+                  <p className="text-[10px] tracking-[0.3em] mb-3" style={{ color: ACCENT_DARK }}>FOR ADULTS</p>
+                  <h3 className="font-serif text-[1.45rem] leading-[1.65] md:text-2xl md:leading-[1.7] mb-4" style={{ color: TEXT }}>
+                    <span className="block">ご自身の歯を</span>
+                    <span className="block">大切にしたい</span>
+                    <span className="block">大人の方へ</span>
+                  </h3>
+                  <p className="text-sm leading-[2.05] mb-5" style={{ color: TEXT_MUTED }}>
+                    <span className="block">豊洲の審美歯科として、</span>
+                    <span className="block">削らない保存治療・セラミック・</span>
+                    <span className="block">矯正歯科・インプラントに対応。</span>
+                    <span className="block mt-2">見た目と機能の両立を、</span>
+                    <span className="block">精密診断で実現します。</span>
+                  </p>
+                  <span className="inline-flex items-center gap-1 text-sm font-medium" style={{ color: ACCENT_DARK }}>
+                    審美・大人の治療を見る
+                    <ChevronRight size={16} className="transition-transform group-hover:translate-x-1" />
+                  </span>
+                </div>
+              </a>
             </div>
           </div>
         </section>
@@ -645,86 +783,18 @@ export default function Home() {
                       className={`transition-transform duration-300 ${isDoctorMessageOpen ? 'rotate-180' : ''}`}
                     />
                   </button>
+                  <div className="mt-5 text-center">
+                    <a
+                      href="/doctor"
+                      className="inline-flex items-center gap-2 text-sm font-medium tracking-[0.08em]"
+                      style={{ color: ACCENT_DARK }}
+                    >
+                      ドクター紹介を詳しく見る
+                      <ChevronRight size={16} />
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ============ Section 4: ターゲット別入口 ============ */}
-        <section className="py-24 md:py-32 px-5" style={{ background: SURFACE }}>
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-14">
-              <p className="text-[11px] tracking-[0.3em] mb-4" style={{ color: ACCENT_DARK }}>FOR YOU</p>
-              <h2 className="font-serif text-3xl md:text-4xl font-light" style={{ color: TEXT }}>
-                あなたに合った診療を、ここから。
-              </h2>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-              <a href="/kidsortho" className="group block rounded-2xl overflow-hidden transition" style={{ background: PAGE_BG, border: `1px solid ${LINE}` }}>
-                <div className="relative aspect-[4/3] overflow-hidden">
-                  <Image
-                    src={homepageImages.kidsAlignment}
-                    alt="豊洲の小児歯科で0歳から高校生までのこども矯正と歯並びを相談する様子"
-                    fill
-                    sizes="(min-width: 768px) 480px, calc(100vw - 2.5rem)"
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                    loading="lazy"
-                  />
-                </div>
-                <div className="p-7 md:p-9">
-                  <p className="text-[10px] tracking-[0.3em] mb-3" style={{ color: ACCENT_DARK }}>FOR PARENTS</p>
-                  <h3 className="font-serif text-[1.45rem] leading-[1.65] md:text-2xl md:leading-[1.7] mb-4" style={{ color: TEXT }}>
-                    <span className="block">0歳から高校生までの、</span>
-                    <span className="block">お子様の歯並びを</span>
-                    <span className="block">案じる保護者の方へ</span>
-                  </h3>
-                  <p className="text-sm leading-[2.05] mb-5" style={{ color: TEXT_MUTED }}>
-                    <span className="block">豊洲の小児歯科として、</span>
-                    <span className="block">0歳からのこども歯科・予防・</span>
-                    <span className="block">こども矯正・MFTに対応。</span>
-                    <span className="block mt-2">成長期のお顔とお口の土台を、</span>
-                    <span className="block">一緒に育てます。</span>
-                  </p>
-                  <span className="inline-flex items-center gap-1 text-sm font-medium" style={{ color: ACCENT_DARK }}>
-                    こども矯正・口育を見る
-                    <ChevronRight size={16} className="transition-transform group-hover:translate-x-1" />
-                  </span>
-                </div>
-              </a>
-
-              <a href="/ceramic" className="group block rounded-2xl overflow-hidden transition" style={{ background: PAGE_BG, border: `1px solid ${LINE}` }}>
-                <div className="relative aspect-[4/3] overflow-hidden">
-                  <Image
-                    src={homepageImages.adultPrecision}
-                    alt="豊洲の歯科で自分の歯を大切にする精密治療を行う歯科医師"
-                    fill
-                    sizes="(min-width: 768px) 480px, calc(100vw - 2.5rem)"
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                    loading="lazy"
-                  />
-                </div>
-                <div className="p-7 md:p-9">
-                  <p className="text-[10px] tracking-[0.3em] mb-3" style={{ color: ACCENT_DARK }}>FOR ADULTS</p>
-                  <h3 className="font-serif text-[1.45rem] leading-[1.65] md:text-2xl md:leading-[1.7] mb-4" style={{ color: TEXT }}>
-                    <span className="block">ご自身の歯を</span>
-                    <span className="block">大切にしたい</span>
-                    <span className="block">大人の方へ</span>
-                  </h3>
-                  <p className="text-sm leading-[2.05] mb-5" style={{ color: TEXT_MUTED }}>
-                    <span className="block">豊洲の審美歯科として、</span>
-                    <span className="block">削らない保存治療・セラミック・</span>
-                    <span className="block">矯正歯科・インプラントに対応。</span>
-                    <span className="block mt-2">見た目と機能の両立を、</span>
-                    <span className="block">精密診断で実現します。</span>
-                  </p>
-                  <span className="inline-flex items-center gap-1 text-sm font-medium" style={{ color: ACCENT_DARK }}>
-                    審美・大人の治療を見る
-                    <ChevronRight size={16} className="transition-transform group-hover:translate-x-1" />
-                  </span>
-                </div>
-              </a>
             </div>
           </div>
         </section>
@@ -790,6 +860,16 @@ export default function Home() {
                     ))}
                   </div>
                 </div>
+                <div className="mt-8 text-center">
+                  <a
+                    href="/access"
+                    className="inline-flex items-center gap-2 rounded-full px-7 py-3 text-sm font-medium tracking-widest transition hover:-translate-y-0.5"
+                    style={{ border: `1px solid ${TEXT}`, color: TEXT }}
+                  >
+                    アクセス・診療時間を詳しく見る
+                    <ChevronRight size={16} />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -828,7 +908,7 @@ export default function Home() {
         </section>
 
         {/* ============ Section 9: 診療メニュー ============ */}
-        <section className="py-24 md:py-32 px-5" style={{ background: SURFACE }}>
+        <section id="treatment-menu" className="py-24 md:py-32 px-5" style={{ background: SURFACE }}>
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-14">
               <p className="text-[11px] tracking-[0.3em] mb-4" style={{ color: ACCENT_DARK }}>MENU</p>

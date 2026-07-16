@@ -5,6 +5,14 @@ import Link from 'next/link';
 import { Phone, Calendar, Menu, X, ChevronRight, ChevronUp, ChevronDown } from 'lucide-react';
 import { WEB_RESERVATION_URL } from '@/lib/reservation';
 
+const primaryNavLinks = [
+    { name: "診療メニュー", href: "/#treatment-menu" },
+    { name: "症例紹介", href: "/case-studies" },
+    { name: "ドクター紹介", href: "/doctor" },
+    { name: "料金表", href: "/price" },
+    { name: "アクセス", href: "/access" },
+];
+
 export const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isMobileTreatmentOpen, setIsMobileTreatmentOpen] = useState(false);
@@ -49,7 +57,7 @@ export const Header = () => {
     return (
         <>
             <header className="bg-white/95 backdrop-blur-sm shadow-sm z-40 border-b border-[#E8E0D4] w-full overflow-x-hidden">
-                <div className="container mx-auto px-3 sm:px-4 py-2 md:py-3 flex items-center max-w-full">
+                <div className="container mx-auto px-3 sm:px-4 py-2 md:py-3 flex items-center gap-6 max-w-full">
                     {/* Logo Area */}
                     <div className="flex min-w-0 flex-1 items-center gap-2 md:gap-3">
                         <Link href="/" className="flex min-w-0 flex-1 items-center gap-2 md:gap-3">
@@ -64,6 +72,18 @@ export const Header = () => {
                             </div>
                         </Link>
                     </div>
+
+                    <nav className="hidden xl:flex items-center gap-5 pr-16" aria-label="主要ページ">
+                        {primaryNavLinks.map((item) => (
+                            <Link
+                                key={item.href}
+                                href={item.href}
+                                className="whitespace-nowrap text-[13px] font-bold tracking-[0.08em] text-[#5A4D41] transition-colors hover:text-[#0a8a85]"
+                            >
+                                {item.name}
+                            </Link>
+                        ))}
+                    </nav>
                 </div>
             </header>
 
