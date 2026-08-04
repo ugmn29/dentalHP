@@ -1233,7 +1233,7 @@ export default function KidsOrthoPage() {
                                     <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-l-4 border-[#C5A572] py-3 px-4 mb-4">プレオルソ（マウスピース型）</h4>
                                     <p className="text-[#5A4D41] leading-loose mb-3">
                                         マウスピース型の装置で、<span className="font-bold bg-yellow-100">お口の周りの筋肉を正しく使えるようトレーニング</span>します。
-                                        <span className="text-[#C5A572] font-bold">就寝時と日中2時間の装着</span>で効果を発揮します。
+                                        <span className="text-[#C5A572] font-bold">日中2時間と就寝時の装着</span>で効果を発揮します。特に就寝時の継続が大切です。
                                     </p>
                                     <a href="/kidsortho/appliances/functional-mouthpiece" className="text-[#C5A572] font-bold hover:underline inline-flex items-center gap-1 text-sm">
                                         詳しくはこちら →

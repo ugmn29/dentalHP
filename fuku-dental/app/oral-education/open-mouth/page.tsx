@@ -66,7 +66,7 @@ export default function OpenMouthPage() {
                                 </p>
                                 <p className="text-lg">
                                     放置すると、<span className="font-bold bg-yellow-100">出っ歯、受け口、顔が長くなる（アデノイド顔貌）、風邪をひきやすい</span>などの問題が起こります。
-                                    当院では、<span className="text-[#2E8B57] font-bold">「あいうべ体操」「MFT（口腔筋機能療法）」「マイオブレース」</span>など、
+                                    当院では、<span className="text-[#2E8B57] font-bold">「あいうべ体操」「MFT（口腔筋機能療法）」「プレオルソ」</span>など、
                                     お子様の年齢や状態に合わせたトレーニング方法で、ポカン口を改善します。
                                 </p>
                             </div>
@@ -265,22 +265,22 @@ export default function OpenMouthPage() {
                                     </p>
                                 </div>
 
-                                {/* マイオブレース */}
+                                {/* プレオルソ */}
                                 <div className="bg-white rounded-2xl p-6 md:p-8 shadow-md border-l-4 border-[#C5A572]">
                                     <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4">
-                                        マイオブレース
+                                        プレオルソ
                                     </h4>
                                     <p className="text-[#5A4D41] leading-loose mb-4">
                                         <span className="font-bold bg-yellow-100">マウスピース型の装置を装着することで、舌を正しい位置に誘導し、口を自然と閉じる習慣をつけます</span>。
-                                        日中1時間と就寝時の装着だけでOKです。
-                                        口呼吸から鼻呼吸への改善をサポートし、歯並びの悪化も予防できます。
+                                        日中2時間と就寝時の装着を目安に、ご家庭でも継続して使います。
+                                        特に就寝時はまとまった時間装着できるため、MFTと組み合わせながら、口呼吸から鼻呼吸への改善や歯並びの悪化予防につなげます。
                                     </p>
                                     <div className="text-center">
                                         <a
                                             href="/kidsortho/appliances/functional-mouthpiece"
                                             className="inline-flex items-center gap-2 text-[#C5A572] hover:text-[#B59562] transition-colors border-b border-[#C5A572] pb-1 font-medium"
                                         >
-                                            マイオブレースについて詳しく見る <ArrowRight size={16} />
+                                            プレオルソについて詳しく見る <ArrowRight size={16} />
                                         </a>
                                     </div>
                                 </div>

@@ -43,6 +43,7 @@ export default function KidsOrthoAppliancesPage() {
                 "柔らかいシリコン製で違和感が少ない",
                 "口呼吸から鼻呼吸への改善",
                 "舌の位置を正しく誘導",
+                "日中2時間＋就寝時の装着が目安",
                 "歯並びの改善と筋機能訓練を同時に"
             ],
             suitable: [

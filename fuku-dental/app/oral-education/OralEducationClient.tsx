@@ -85,7 +85,7 @@ export default function OralEducationPage() {
                             label: "Oral Function",
                             title: "口呼吸・お口ぽかんへ対応",
                             highlight: "歯並びの原因にアプローチ",
-                            body: "口呼吸、舌の位置、飲み込み方、指しゃぶりなどの癖を確認し、必要に応じてMFTやマイオブレースなどで歯並びが悪くなる原因に働きかけます。",
+                            body: "口呼吸、舌の位置、飲み込み方、指しゃぶりなどの癖を確認し、必要に応じてMFTやプレオルソなどで歯並びが悪くなる原因に働きかけます。",
                             imageId: "子供が風船やシャボン玉で遊んでいるイラスト",
                             imageAlt: "こどもが遊びながらお口周りのトレーニングをしているイラスト",
                         },
@@ -172,7 +172,7 @@ export default function OralEducationPage() {
                                 </p>
                                 <p>
                                     <span className="text-[#395b45] font-bold">早期発見と適切なトレーニングで、鼻呼吸への改善が可能</span>です。
-                                    「あいうべ体操」や口周りの筋力トレーニング（MFT）、マイオブレース装置を使った治療など、お子様の状態に合わせた方法をご提案します。
+                                    「あいうべ体操」や口周りの筋力トレーニング（MFT）、プレオルソなどの装置を使った治療など、お子様の状態に合わせた方法をご提案します。
                                 </p>
                                 <p>
                                     口呼吸のチェックポイントや具体的な改善方法について、詳しくは専用ページをご覧ください。
@@ -204,7 +204,7 @@ export default function OralEducationPage() {
                                     放置すると、出っ歯やガタガタの歯並び、顔が長くなる、風邪をひきやすいなど、さまざまな悪影響が現れます。
                                 </p>
                                 <p>
-                                    当院では、口を閉じる筋力を鍛えるトレーニングや、マイオブレース装置を使った治療で、ポカン口の改善をサポートします。
+                                    当院では、口を閉じる筋力を鍛えるトレーニングや、プレオルソなどの装置を使った治療で、ポカン口の改善をサポートします。
                                 </p>
                             </div>
                             <div className="text-center">
@@ -273,23 +273,23 @@ export default function OralEducationPage() {
                             </div>
                         </div>
 
-                        {/* マイオブレース */}
+                        {/* プレオルソ */}
                         <div className="mb-16">
                             <div className="text-center mb-8">
-                                <h3 className="text-2xl md:text-3xl font-bold text-[#5A4D41] font-serif inline-block">マイオブレース</h3>
+                                <h3 className="text-2xl md:text-3xl font-bold text-[#5A4D41] font-serif inline-block">プレオルソ</h3>
                                 <div className="w-16 h-0.5 bg-[#395b45] mx-auto mt-4"></div>
                             </div>
                             <div className="space-y-4 text-[#5A4D41] leading-loose mb-6">
                                 <p>
-                                    マイオブレースは、<span className="font-bold bg-yellow-100">マウスピース型の装置とトレーニングを組み合わせた小児矯正システム</span>です。
+                                    プレオルソは、<span className="font-bold bg-yellow-100">マウスピース型の装置とトレーニングを組み合わせた小児矯正治療</span>です。
                                     従来のワイヤー矯正のように「歯を動かす」のではなく、「歯並びが悪くなる根本原因（口呼吸、舌の位置、飲み込み方の癖）」にアプローチします。
                                 </p>
                                 <p>
-                                    <span className="text-[#395b45] font-bold">日中1時間と就寝時の装着だけで、正しい呼吸・舌の位置・飲み込み方を自然に習得</span>できます。
-                                    3〜15歳のお子様が対象で、早く始めるほど効果が出やすい治療法です。
+                                    <span className="text-[#395b45] font-bold">日中2時間と就寝時の装着を目安に、特に就寝時の継続を大切にしながら</span>、
+                                    正しい呼吸・舌の位置・飲み込み方の習得をサポートします。主に3〜10歳前後のお子様に使用する治療法です。
                                 </p>
                                 <p>
-                                    マイオブレースの詳しい仕組み、効果、費用、治療の流れについては、専用ページをご覧ください。
+                                    プレオルソの詳しい仕組み、効果、費用、治療の流れについては、専用ページをご覧ください。
                                 </p>
                             </div>
                             <div className="text-center">
@@ -297,7 +297,7 @@ export default function OralEducationPage() {
                                     href="/kidsortho/appliances/functional-mouthpiece"
                                     className="inline-flex items-center gap-2 text-[#395b45] hover:text-[#2d4835] transition-colors border-b border-[#395b45] pb-1 font-medium"
                                 >
-                                    マイオブレースについて詳しく見る <ArrowRight size={16} />
+                                    プレオルソについて詳しく見る <ArrowRight size={16} />
                                 </a>
                             </div>
                         </div>

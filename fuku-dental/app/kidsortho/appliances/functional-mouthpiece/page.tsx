@@ -150,7 +150,7 @@ export default function FunctionalMouthpiecePage() {
                                 </h3>
                                 <div className="space-y-4 text-[#5A4D41] leading-loose font-sans">
                                     <p>
-                                        日本で開発された機能的マウスピース装置。<span className="font-bold bg-yellow-100">ポリウレタン製で非常に柔らかく、違和感が少ない</span>のが特徴です。日中1時間＋就寝時の装着でOK。Type I〜IIIまでタイプがあり、症状に応じて選択します。
+                                        日本で開発された機能的マウスピース装置。<span className="font-bold bg-yellow-100">ポリウレタン製で非常に柔らかく、違和感が少ない</span>のが特徴です。日中2時間＋就寝時の装着が目安で、特に就寝時の継続が大切です。Type I〜IIIまでタイプがあり、症状に応じて選択します。
                                     </p>
                                     <p>
                                         <span className="text-[#C5A572] font-bold">適応症例：</span>口呼吸・舌癖、出っ歯・受け口・開咬、軽度〜中等度の歯並びの乱れ
@@ -498,7 +498,7 @@ export default function FunctionalMouthpiecePage() {
                                     </div>
                                     <div className="text-[#8D8070] leading-loose font-sans">
                                         <p className="mb-3">
-                                            <strong className="text-[#C5A572]">A.</strong> 基本的には<strong>就寝時＋日中1〜2時間</strong>の装着が必要です。プレオルソは日中1時間＋就寝時、マイオブレースは日中1〜2時間＋就寝時が推奨されています。装着時間が短いと効果が出にくくなります。
+                                            <strong className="text-[#C5A572]">A.</strong> 装置により異なりますが、プレオルソは<strong>日中2時間＋就寝時</strong>の装着が目安です。特に就寝時の装着が大切で、まとまった時間装置を入れることで、舌の位置・口唇閉鎖・鼻呼吸の習慣づくりをサポートします。マイオブレースは日中1〜2時間＋就寝時が推奨されています。
                                         </p>
                                     </div>
                                 </div>

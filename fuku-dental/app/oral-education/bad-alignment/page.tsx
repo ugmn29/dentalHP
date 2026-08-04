@@ -349,8 +349,8 @@ export default function BadAlignmentPage() {
                                         <div className="flex items-start gap-3">
                                             <CheckCircle2 size={20} className="text-[#C5A572] flex-shrink-0 mt-0.5" />
                                             <div>
-                                                <p className="font-bold text-[#5A4D41]">マイオブレース</p>
-                                                <p className="text-sm text-[#8D8070]">マウスピース型装置で口呼吸から鼻呼吸へ</p>
+                                                <p className="font-bold text-[#5A4D41]">プレオルソ</p>
+                                                <p className="text-sm text-[#8D8070]">日中2時間＋就寝時に装着し、特に就寝時を重視</p>
                                             </div>
                                         </div>
                                     </div>
@@ -359,7 +359,7 @@ export default function BadAlignmentPage() {
                                             href="/kidsortho/appliances/functional-mouthpiece"
                                             className="inline-flex items-center gap-2 text-[#C5A572] hover:text-[#B59562] transition-colors border-b border-[#C5A572] pb-1 font-medium"
                                         >
-                                            マイオブレースについて詳しく見る <ArrowRight size={16} />
+                                            プレオルソについて詳しく見る <ArrowRight size={16} />
                                         </a>
                                     </div>
                                 </div>
@@ -430,7 +430,7 @@ export default function BadAlignmentPage() {
                                 },
                                 {
                                     q: "すでに歯並びが悪い場合はどうすればいいですか？",
-                                    a: "早めに歯科医院でご相談ください。年齢や状態に応じて、予防矯正（マイオブレースなど）や本格矯正をご提案します。成長期であれば、まだ十分に改善できる可能性があります。"
+                                    a: "早めに歯科医院でご相談ください。年齢や状態に応じて、予防矯正（プレオルソなど）や本格矯正をご提案します。成長期であれば、まだ十分に改善できる可能性があります。"
                                 },
                                 {
                                     q: "指しゃぶりをやめさせるにはどうすればいいですか？",

@@ -236,7 +236,7 @@ export default function UnderbiteDetailPage() {
                     3歳児検診で受け口を指摘されたら、すぐに治療を開始することをお勧めします。<span className="text-[#395b45] font-bold">この時期の治療が最も効果的で、将来的な外科手術のリスクを大幅に減らせます</span>。
                   </p>
                   <p>
-                    主な治療法として、<span className="font-bold bg-yellow-100">プレオルソ</span>（やわらかいマウスピース型装置で日中1時間+就寝時の使用）、
+                    主な治療法として、<span className="font-bold bg-yellow-100">プレオルソ</span>（やわらかいマウスピース型装置で日中2時間＋就寝時に使用し、特に就寝時を重視）、
                     <span className="text-[#395b45] font-bold">舌訓練（MFT）、鼻呼吸トレーニング</span>などがあります。
                   </p>
                   <p>
