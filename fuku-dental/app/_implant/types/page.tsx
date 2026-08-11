@@ -18,9 +18,9 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'インプラントの種類とシステム｜ストローマン・ノーベル比較｜Fデンタルオフィス 豊洲プライムスクエア院',
-  description: 'インプラントの種類（1ピース・2ピース）とメーカー（ストローマン、ノーベルバイオケア等）の違いを詳しく解説。あなたに最適なインプラントが見つかります。',
-  keywords: 'インプラント,種類,ストローマン,ノーベルバイオケア,メーカー,システム,比較',
+  title: 'インプラントの種類とシステム｜オステム・主要メーカー比較｜Fデンタルオフィス 豊洲プライムスクエア院',
+  description: 'インプラントの種類（1ピース・2ピース）とメーカー（オステム、ノーベルバイオケア等）の違いを詳しく解説。あなたに最適なインプラントが見つかります。',
+  keywords: 'インプラント,種類,オステム,ノーベルバイオケア,メーカー,システム,比較',
 };
 
 export default function ImplantTypesPage() {
@@ -257,17 +257,17 @@ export default function ImplantTypesPage() {
               </div>
 
               <div className="grid md:grid-cols-2 gap-8 mb-12">
-                {/* ストローマン */}
+                {/* オステム */}
                 <div className="bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-cyan-300">
                   <div className="bg-gradient-to-r from-cyan-600 to-teal-600 p-6 text-white">
                     <div className="flex items-center justify-between mb-4">
                       <div>
-                        <h3 className="text-2xl font-bold">ストローマン</h3>
-                        <p className="text-cyan-50 text-sm mt-1">Straumann（スイス）</p>
+                        <h3 className="text-2xl font-bold">オステム</h3>
+                        <p className="text-cyan-50 text-sm mt-1">OSSTEM（韓国）</p>
                       </div>
                       <div className="text-right">
                         <span className="bg-yellow-400 text-cyan-900 text-xs font-bold px-3 py-1 rounded-full">
-                          世界シェアNo.1
+                          グローバルメーカー
                         </span>
                       </div>
                     </div>
@@ -276,10 +276,10 @@ export default function ImplantTypesPage() {
                     <div className="mb-6">
                       <h4 className="font-bold text-lg text-gray-800 mb-3">特徴</h4>
                       <ul className="space-y-2 text-sm text-gray-700">
-                        <li>• 世界シェアNo.1（約30%）の最大手メーカー</li>
-                        <li>• 60年以上の歴史と豊富な臨床データ</li>
-                        <li>• SLA表面処理による高い骨結合率</li>
-                        <li>• 短期間での骨結合（3〜4週間）</li>
+                        <li>• 世界各国で使用されているインプラントメーカー</li>
+                        <li>• フィクスチャー販売本数で高い実績</li>
+                        <li>• 症例に合わせて選びやすい製品ラインナップ</li>
+                        <li>• 日本法人による国内供給・サポート体制</li>
                       </ul>
                     </div>
 
@@ -288,15 +288,15 @@ export default function ImplantTypesPage() {
                       <ul className="space-y-2">
                         <li className="flex items-start">
                           <CheckCircle2 className="w-4 h-4 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                          <span className="text-sm text-gray-700">長期予後のデータが豊富で信頼性が高い</span>
+                          <span className="text-sm text-gray-700">国内供給体制があり、継続管理を相談しやすい</span>
                         </li>
                         <li className="flex items-start">
                           <CheckCircle2 className="w-4 h-4 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                          <span className="text-sm text-gray-700">世界中で使用され、移転先でもメンテナンス可能</span>
+                          <span className="text-sm text-gray-700">世界各国で使用され、症例経験が蓄積されている</span>
                         </li>
                         <li className="flex items-start">
                           <CheckCircle2 className="w-4 h-4 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                          <span className="text-sm text-gray-700">10年生存率97%以上</span>
+                          <span className="text-sm text-gray-700">骨質や埋入部位に合わせた選択がしやすい</span>
                         </li>
                       </ul>
                     </div>
@@ -304,7 +304,7 @@ export default function ImplantTypesPage() {
                     <div className="bg-cyan-50 p-4 rounded-lg">
                       <p className="text-sm text-gray-700">
                         <strong>当院での採用：</strong>
-                        メインシステムとして採用。ほとんどの症例で使用しています。
+                        メインシステムとして採用。CT診断と合わせ、症例に応じて使用しています。
                       </p>
                     </div>
                   </div>
@@ -380,9 +380,9 @@ export default function ImplantTypesPage() {
                       </p>
                     </div>
                     <div>
-                      <h4 className="font-bold text-gray-800 mb-2">オステム（韓国）</h4>
+                      <h4 className="font-bold text-gray-800 mb-2">ストローマン（スイス）</h4>
                       <p className="text-sm text-gray-700">
-                        コストパフォーマンスに優れる。アジアで高シェア。
+                        長期的な臨床データが豊富な老舗メーカー。
                       </p>
                     </div>
                   </div>
@@ -414,7 +414,7 @@ export default function ImplantTypesPage() {
                       </h3>
                       <p className="text-gray-700 leading-relaxed">
                         10年、20年といった長期的なデータが豊富なメーカーを選ぶことが重要です。
-                        ストローマンやノーベルバイオケアは50年以上の実績があり、信頼性が高いです。
+                        オステムやノーベルバイオケアなど、実績と供給体制のあるメーカーを選ぶことが大切です。
                       </p>
                     </div>
                   </div>
@@ -478,10 +478,10 @@ export default function ImplantTypesPage() {
                   当院が推奨する理由
                 </h3>
                 <p className="text-lg leading-relaxed">
-                  当院では、<span className="font-bold text-yellow-300">ストローマンインプラント</span>を
+                  当院では、<span className="font-bold text-yellow-300">オステムインプラント</span>を
                   メインシステムとして採用しています。
-                  世界シェアNo.1の実績、豊富な臨床データ、高い成功率など、
-                  患者様に安心して使っていただける条件が揃っているからです。
+                  世界各国での使用実績、日本法人による国内供給・サポート体制、症例に応じた選択肢など、
+                  患者様に安心して使っていただける条件を重視しているからです。
                 </p>
               </div>
             </div>
@@ -553,8 +553,8 @@ export default function ImplantTypesPage() {
                       <strong>メーカーが判明していれば、メンテナンス可能</strong>です。
                     </p>
                     <p>
-                      ストローマン、ノーベルバイオケアなど主要メーカーであれば対応できますが、
-                      マイナーなメーカーやアジア製の一部製品は、パーツが手に入らない場合があります。
+                      オステム、ストローマン、ノーベルバイオケアなど主要メーカーであれば対応できる場合がありますが、
+                      マイナーなメーカーや流通量の少ない一部製品は、パーツが手に入らない場合があります。
                       まずはご相談ください。
                     </p>
                   </div>

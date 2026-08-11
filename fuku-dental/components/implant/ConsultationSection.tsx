@@ -95,13 +95,6 @@ export function ConsultationSection() {
                 </div>
               </a>
             </div>
-
-            {/* Consultation 装飾テキスト */}
-            <div className="absolute left-[-18.59px] bottom-0 py-[54.85px]">
-              <div className="text-[#248cc4] text-[21px] tracking-[1.28px] leading-[12.6px]" style={{ fontFamily: 'Times New Roman, serif' }}>
-                Consultation
-              </div>
-            </div>
           </div>
         </div>
       </div>

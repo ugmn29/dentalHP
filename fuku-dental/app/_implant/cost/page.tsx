@@ -130,7 +130,7 @@ export default function ImplantCostPage() {
                       <ul className="space-y-2 mb-4">
                         <li className="flex items-start text-sm">
                           <CheckCircle2 className="w-4 h-4 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                          <span className="text-gray-700">ストローマンインプラント使用</span>
+                          <span className="text-gray-700">オステムインプラント使用</span>
                         </li>
                         <li className="flex items-start text-sm">
                           <CheckCircle2 className="w-4 h-4 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
@@ -165,7 +165,7 @@ export default function ImplantCostPage() {
                       <ul className="space-y-2 mb-4">
                         <li className="flex items-start text-sm">
                           <CheckCircle2 className="w-4 h-4 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                          <span className="text-gray-700">ノーベルバイオケアまたはストローマン</span>
+                          <span className="text-gray-700">症例に応じた高品質インプラント</span>
                         </li>
                         <li className="flex items-start text-sm">
                           <CheckCircle2 className="w-4 h-4 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
@@ -208,7 +208,7 @@ export default function ImplantCostPage() {
                     <div className="flex justify-between items-center p-4 bg-gray-50 rounded-lg">
                       <div>
                         <h4 className="font-bold text-gray-800">②インプラント体（人工歯根）</h4>
-                        <p className="text-sm text-gray-600">ストローマン社製チタン製インプラント</p>
+                        <p className="text-sm text-gray-600">オステム社製チタン製インプラント</p>
                       </div>
                       <div className="text-right">
                         <p className="text-2xl font-bold text-gray-800">¥150,000</p>

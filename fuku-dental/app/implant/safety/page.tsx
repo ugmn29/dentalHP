@@ -26,15 +26,15 @@ import {
 export const metadata: Metadata = {
   title: 'インプラントの安全性へのこだわり | インプラント | Fデンタルオフィス 豊洲プライムスクエア院',
   description:
-    'Fデンタルオフィス 豊洲プライムスクエア院のインプラント治療における安全性への取り組み。CT精密診断、サージカルガイド、世界基準のストローマンインプラント、徹底した感染対策、静脈内鎮静法など、安心・安全な治療体制をご紹介します。',
+    'Fデンタルオフィス 豊洲プライムスクエア院のインプラント治療における安全性への取り組み。CT精密診断、サージカルガイド、オステムインプラント、徹底した感染対策、静脈内鎮静法など、安心・安全な治療体制をご紹介します。',
   keywords:
-    'インプラント,安全性,CT診断,サージカルガイド,ストローマン,感染対策,静脈内鎮静法,歯科,インプラントリスク',
+    'インプラント,安全性,CT診断,サージカルガイド,オステム,感染対策,静脈内鎮静法,歯科,インプラントリスク',
   alternates: {
     canonical: 'https://fshika.com/implant/safety',
   },
   openGraph: {
     title: 'インプラントの安全性へのこだわり | Fデンタルオフィス 豊洲プライムスクエア院',
-    description: 'CT精密診断、サージカルガイド、ストローマンインプラント、徹底した感染対策、静脈内鎮静法など、安心・安全な治療体制をご紹介。',
+    description: 'CT精密診断、サージカルガイド、オステムインプラント、徹底した感染対策、静脈内鎮静法など、安心・安全な治療体制をご紹介。',
     type: 'website',
     locale: 'ja_JP',
     url: 'https://fshika.com/implant/safety',
@@ -95,7 +95,7 @@ export default function ImplantSafetyPage() {
               </h2>
               <div className="space-y-4 text-[#5A4D41] leading-loose max-w-3xl mx-auto">
                 <p>
-                  インプラント治療の安全性を高めるため、当院では<span className="bg-yellow-100 font-bold">歯科用3D CTによる精密診断</span>、<span className="bg-yellow-100 font-bold">サージカルガイドを用いた正確な手術</span>、<span className="bg-yellow-100 font-bold">世界トップシェアのストローマンインプラント</span>を採用しています。
+                  インプラント治療の安全性を高めるため、当院では<span className="bg-yellow-100 font-bold">歯科用3D CTによる精密診断</span>、<span className="bg-yellow-100 font-bold">サージカルガイドを用いた正確な手術</span>、<span className="bg-yellow-100 font-bold">世界各国で使用されているオステムインプラント</span>を採用しています。
                 </p>
                 <p>
                   また、<span className="text-[#395b45] font-bold">徹底した滅菌・感染対策</span>と<span className="text-[#395b45] font-bold">静脈内鎮静法による痛み・不安の軽減</span>により、患者様が安心して治療を受けられる環境を整えています。
@@ -267,36 +267,36 @@ export default function ImplantSafetyPage() {
               世界基準のインプラント体
             </h2>
             <p className="text-gray-500 text-sm mb-8 max-w-2xl">
-              世界シェアNo.1のストローマン社製インプラントを採用しています。
+              世界各国で使用されるオステムインプラントを採用しています。
             </p>
 
             <div className="bg-gradient-to-br from-[#f5f0e8] to-[#ebe4d8] rounded-2xl p-6 md:p-10">
               <div className="grid md:grid-cols-2 gap-8 items-start">
                 <div>
                   <h3 className="text-xl font-bold text-[#2d4835] mb-4">
-                    Straumann（ストローマン）インプラント
+                    OSSTEM（オステム）インプラント
                   </h3>
                   <p className="text-sm text-[#5A4D41] leading-relaxed mb-6">
-                    当院では、スイスに本社を置くストローマン社のインプラントシステムを採用しています。
-                    ストローマンは世界70カ国以上で使用されている、インプラント市場シェア世界第1位のメーカーです。
-                    50年以上にわたる研究開発と豊富な臨床データに裏付けられた、信頼性の高いインプラントです。
+                    当院では、韓国発のグローバルメーカーであるオステム社のインプラントシステムを採用しています。
+                    オステムはインプラントフィクスチャーの世界販売本数で高い実績を持ち、日本法人による国内供給・サポート体制も整っています。
+                    症例に応じたサイズ・形状を選択しやすく、長期的なメンテナンスまで見据えた治療計画に役立つインプラントです。
                   </p>
                   <div className="space-y-3">
                     {[
                       {
-                        label: '世界シェア',
-                        value: 'No.1',
-                        note: '70カ国以上で使用',
+                        label: '販売実績',
+                        value: '世界水準',
+                        note: '世界各国で使用されるグローバルメーカー',
                       },
                       {
-                        label: '研究実績',
-                        value: '50年以上',
-                        note: '豊富な臨床論文・エビデンス',
+                        label: '国内体制',
+                        value: '日本法人',
+                        note: '国内供給・サポート体制を整備',
                       },
                       {
-                        label: '10年生存率',
-                        value: '98.8%',
-                        note: '長期臨床データに基づく',
+                        label: '品質管理',
+                        value: '厳格管理',
+                        note: '安定した品質を重視した製品づくり',
                       },
                     ].map((stat, i) => (
                       <div

@@ -259,6 +259,10 @@ function PriceOverview() {
               <span className="text-[#5A4D41] font-medium">インプラント（難症例）</span>
               <span className="text-[#395b45] font-bold text-lg">¥595,000</span>
             </div>
+            <div className="flex justify-between items-center py-3 border-b border-gray-100">
+              <span className="text-[#5A4D41] font-medium">10年保証</span>
+              <span className="text-[#395b45] font-bold text-lg">¥33,000</span>
+            </div>
           </div>
           <p className="text-xs text-gray-400 mt-4">※ 詳しくはカウンセリング時にご説明いたします。</p>
         </div>

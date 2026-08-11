@@ -15,14 +15,14 @@ export function IntroSection() {
         }}
       />
 
-      <div className="relative flex flex-col items-start max-w-[370px] w-[370px] gap-[18.51px]">
+      <div className="relative flex flex-col items-start w-full max-w-[370px] gap-[18.51px] px-[10px]">
         {/* Image */}
-        <div className="flex flex-col items-start pl-[18.5px] w-full">
+        <div className="w-full">
           <PageImage
             path="/implant"
             imageId="intro"
             alt="安全性と精度を高める先進インプラント技術"
-            className="w-[246.05px] h-[287.14px] max-w-[259px] object-cover"
+            className="w-full h-[214px] object-cover rounded-[4px] shadow-[0_18px_42px_rgba(12,60,110,0.28)]"
           />
         </div>
 

@@ -2,22 +2,27 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
-import { PageImage } from '@/components/PageImage';
 import {
-  ToothPainIcon,
-  WorriedFaceIcon,
-  ExtractionToolIcon,
-  DentistIcon,
-  ToothQuestionIcon,
-  DentureIcon,
-  ToothShieldIcon,
-  WalletIcon,
-} from './ProblemIcons';
+  Activity,
+  ArrowRight,
+  BadgeAlert,
+  Bone,
+  MessageCircleQuestionMark,
+  ShieldCheck,
+  SmilePlus,
+  Stethoscope,
+  WalletCards,
+  type LucideIcon,
+} from 'lucide-react';
+import { PageImage } from '@/components/PageImage';
 
-const problems = [
+const problems: Array<{
+  icon: LucideIcon;
+  label: React.ReactNode;
+  href: string;
+}> = [
   {
-    icon: ToothPainIcon,
+    icon: Activity,
     label: (
       <>
         手術による<br />
@@ -27,7 +32,7 @@ const problems = [
     href: '/implant/iv-sedation',
   },
   {
-    icon: WorriedFaceIcon,
+    icon: Bone,
     label: (
       <>
         <span className="text-[#1c87bd]">骨が足りない・少ない</span><br />
@@ -37,7 +42,7 @@ const problems = [
     href: '/implant/bone-augmentation',
   },
   {
-    icon: ExtractionToolIcon,
+    icon: BadgeAlert,
     label: (
       <>
         <span className="text-[#1c87bd]">抜歯をしたほうが</span><br />
@@ -47,7 +52,7 @@ const problems = [
     href: '/implant/immediate-placement',
   },
   {
-    icon: DentistIcon,
+    icon: Stethoscope,
     label: (
       <>
         他院で<span className="text-[#1c87bd]">インプラントは</span><br />
@@ -57,7 +62,7 @@ const problems = [
     href: '/implant/reason',
   },
   {
-    icon: ToothQuestionIcon,
+    icon: MessageCircleQuestionMark,
     label: (
       <>
         <span className="text-[#1c87bd]">どの治療法がいい</span>のか<br />
@@ -67,7 +72,7 @@ const problems = [
     href: '/implant/comparison',
   },
   {
-    icon: DentureIcon,
+    icon: SmilePlus,
     label: (
       <>
         入れ歯がよく<span className="text-[#1c87bd]">外れて</span><br />
@@ -77,7 +82,7 @@ const problems = [
     href: '/implant/overdenture',
   },
   {
-    icon: ToothShieldIcon,
+    icon: ShieldCheck,
     label: (
       <>
         インプラントって<br />
@@ -87,7 +92,7 @@ const problems = [
     href: '/implant/safety',
   },
   {
-    icon: WalletIcon,
+    icon: WalletCards,
     label: (
       <>
         <span className="text-[#1c87bd]">治療費</span>は<br />
@@ -149,15 +154,21 @@ export function ProblemGrid() {
               <Link
                 key={i}
                 href={problem.href}
-                className="group relative bg-white rounded-[20px] shadow-sm hover:shadow-md transition-shadow"
+                className="group relative rounded-[20px] border border-white/80 bg-white/95 shadow-[0_12px_32px_rgba(19,125,158,0.16)] transition-all hover:-translate-y-0.5 hover:shadow-[0_18px_40px_rgba(19,125,158,0.22)]"
                 style={{
                   width: '177.5px',
                   height: '180px',
                 }}
               >
+                <div
+                  className="absolute inset-0 rounded-[20px]"
+                  style={{ background: 'radial-gradient(circle at 50% 16%, rgba(36, 140, 196, 0.12), rgba(255, 255, 255, 0) 58%)' }}
+                />
+
                 {/* アイコン */}
-                <div className="absolute flex items-center justify-center" style={{ left: '62.125px', top: '35.015px', width: '53.25px', height: '53.97px' }}>
-                  <problem.icon className="w-full h-full text-[#1c87bd]" />
+                <div className="absolute left-1/2 top-[26px] flex h-[62px] w-[62px] -translate-x-1/2 items-center justify-center rounded-full bg-white shadow-[inset_0_0_0_1px_rgba(36,140,196,0.18),0_10px_24px_rgba(36,140,196,0.16)]">
+                  <div className="absolute inset-[8px] rounded-full bg-[#e9f7fc]" />
+                  <problem.icon className="relative h-[30px] w-[30px] text-[#137d9e]" strokeWidth={1.8} />
                 </div>
 
                 {/* テキスト */}
@@ -200,10 +211,11 @@ export function ProblemGrid() {
               <Link
                 key={i}
                 href={p.href}
-                className="group flex flex-col items-center gap-4 p-6 rounded-xl border border-gray-100 bg-white hover:border-[#248cc4]/30 hover:shadow-md transition-all"
+                className="group flex flex-col items-center gap-4 rounded-xl border border-white/75 bg-white/95 p-6 shadow-[0_16px_36px_rgba(19,125,158,0.18)] backdrop-blur transition-all hover:-translate-y-1 hover:border-[#248cc4]/30 hover:shadow-[0_22px_48px_rgba(19,125,158,0.24)]"
               >
-                <div className="w-16 h-16 rounded-full bg-[#248cc4]/10 flex items-center justify-center group-hover:bg-[#248cc4]/20 transition">
-                  <p.icon className="w-8 h-8 text-[#248cc4]" />
+                <div className="relative flex h-16 w-16 items-center justify-center rounded-full bg-white shadow-[inset_0_0_0_1px_rgba(36,140,196,0.2),0_12px_28px_rgba(36,140,196,0.16)] transition group-hover:scale-105">
+                  <div className="absolute inset-[9px] rounded-full bg-[#e9f7fc]" />
+                  <p.icon className="relative h-8 w-8 text-[#137d9e]" strokeWidth={1.8} />
                 </div>
                 <span className="text-sm font-semibold text-[#1e1e1e] text-center leading-snug">
                   {p.label}

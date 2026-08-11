@@ -47,7 +47,7 @@ export const priceCategories: PriceCategory[] = [
     id: 'cr',
     title: '修復',
     items: [
-      { name: 'ダイレクトボンディング', price: '¥33,000' },
+      { name: 'ダイレクトボンディング', price: '¥44,000' },
     ],
   },
   {
@@ -69,7 +69,7 @@ export const priceCategories: PriceCategory[] = [
     items: [
       { name: '検査', price: '¥11,000' },
       { name: '診断・治療計画説明', price: '¥22,000' },
-      { name: 'マウスピース矯正（軽度）', price: '¥440,000', note: '調整料込みの総額です。' },
+      { name: 'マウスピース矯正（軽度）', price: '¥550,000', note: '調整料込みの総額です。' },
       { name: 'マウスピース矯正（中等度）', price: '¥660,000', note: '調整料込みの総額です。' },
       { name: 'マウスピース矯正（重度）', price: '¥770,000', note: '調整料込みの総額です。' },
       { name: 'マウスピース矯正（付加装置あり）', price: '¥880,000', note: '調整料込みの総額です。' },
@@ -86,6 +86,7 @@ export const priceCategories: PriceCategory[] = [
     items: [
       { name: '簡単', price: '¥495,000' },
       { name: '難症例', price: '¥595,000' },
+      { name: '10年保証', price: '¥33,000' },
     ],
   },
   {

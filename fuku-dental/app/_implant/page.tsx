@@ -60,8 +60,8 @@ export default function ImplantPage() {
                     highlight: "信頼性の高いインプラント",
                     summary: "<span class='font-bold bg-yellow-100'>世界的に実績のあるトップブランドのインプラント体</span>を使用しています。",
                     details: [
-                        "<span class='font-bold bg-yellow-100'>世界シェアNo.1のストローマン社製インプラントを採用</span>",
-                        "<span class='text-[#395b45] font-bold'>長期的な安定性と安全性が科学的に証明された製品のみを使用</span>",
+                        "<span class='font-bold bg-yellow-100'>世界各国で使用されているオステムインプラントを採用</span>",
+                        "<span class='text-[#395b45] font-bold'>国内供給・サポート体制が整った製品を使用</span>",
                         "<span class='text-[#395b45] font-bold'>患者様の骨質や症例に合わせた最適なインプラントの選定</span>"
                     ],
                     imageId: "feature3",

@@ -8,16 +8,19 @@ const heroSlides = [
     title: '"いつまでも\n自分の歯のように噛める"を\n追究したインプラント治療',
     features: ['プライバシーに\n配慮', '難症例にも\n対応'],
     imageId: 'hero-slide1',
+    mobileImageId: 'hero-slide1-mobile',
   },
   {
     title: '正確な診断と緻密な計画で、\n安全な治療を実現',
     features: ['正確な診断を行うための\n歯科用CT', '治療の精度を上げる\nサージカルガイド'],
     imageId: 'hero-slide2',
+    mobileImageId: 'hero-slide2-mobile',
   },
   {
     title: '眠ったような感覚で受けられる\n安心のインプラント治療',
     features: ['ウトウトしながら、', '緊張や痛みが和らぐ\n静脈内鎮静法対応'],
     imageId: 'hero-slide3',
+    mobileImageId: 'hero-slide3-mobile',
   },
 ];
 
@@ -43,9 +46,16 @@ export function HeroCarousel() {
         >
           <PageImage
             path="/implant"
+            imageId={s.mobileImageId}
+            alt={s.title.replace(/\n/g, ' ')}
+            className="absolute inset-0 w-full h-full object-cover md:hidden"
+            priority={i === 0}
+          />
+          <PageImage
+            path="/implant"
             imageId={s.imageId}
             alt={s.title.replace(/\n/g, ' ')}
-            className="absolute inset-0 w-full h-full object-cover"
+            className="absolute inset-0 hidden w-full h-full object-cover md:block"
             priority={i === 0}
           />
           <div className="absolute inset-0 bg-black/30" />

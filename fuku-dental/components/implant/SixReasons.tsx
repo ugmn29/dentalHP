@@ -15,6 +15,7 @@ interface ReasonItem {
   href: string;
   verticalBandHeight?: string; // 縦書きタイトルの白い帯の高さ（カードごとに異なる）
   verticalTitleSize?: string; // 縦書きタイトルのカスタムサイズ
+  verticalTitleSmallSize?: string; // 縦書き小タイトルのカスタムサイズ
   swapBands?: boolean; // 左右の帯を入れ替えるか
 }
 
@@ -52,7 +53,7 @@ const reasons: ReasonItem[] = [
     verticalBandHeight: 'h-[109.16px]',
     verticalTitleSize: 'text-[18px]',
     description: [
-      '当院では、世界で最も信頼されているストローマンインプラントを採用しています。ストローマンは世界シェアNo.1の最もメジャーなインプラントメーカーであり、国内外のほとんどの歯科医院で採用されています。そのため、引っ越しや転勤などで当院に通えなくなった場合でも、転居先の歯科医院で継続的なメンテナンスやトラブル対応が可能です。生涯にわたって安心してご使用いただけます。',
+      '当院では、世界各国で使用されているオステムインプラントを採用しています。オステムは、インプラントフィクスチャーの世界販売本数で高い実績を持つグローバルメーカーで、日本法人による国内供給・サポート体制も整っています。患者様の骨質や症例に合わせて適切なインプラント体を選択し、CT診断・治療記録・定期メンテナンスを組み合わせることで、治療後も長く安心してお使いいただける体制を大切にしています。',
     ],
     imageId: 'reason3',
     href: '/implant/safety',
@@ -70,13 +71,14 @@ const reasons: ReasonItem[] = [
     href: '/implant/safety',
   },
   {
-    title: 'ガイデント保証制度に対応',
+    title: 'ガイドデント保証制度に対応',
     verticalTitle: '保証制度に対応',
-    verticalTitleSmall: 'ガイデント',
+    verticalTitleSmall: 'ガイドデント',
+    verticalTitleSmallSize: 'text-[20px]',
     isGoldColor: true,
     verticalBandHeight: 'h-[193.59px]',
     description: [
-      '当院では、インプラント治療を長く安心して受けていただけるよう、ガイデント保証制度に対応しています。治療後のメンテナンスや保証内容をわかりやすくご説明し、転居などで当院への通院が難しくなった場合にも相談しやすい体制づくりを大切にしています。',
+      '当院では、インプラント治療を長く安心して受けていただけるよう、ガイドデント保証制度に対応しています。治療後のメンテナンスや保証内容をわかりやすくご説明し、転居などで当院への通院が難しくなった場合にも相談しやすい体制づくりを大切にしています。',
     ],
     imageId: 'reason5',
     href: '/implant/safety',
@@ -216,7 +218,7 @@ function DesktopReasonCard({ reason, index }: { reason: ReasonItem; index: numbe
               {/* swapBands=true: 左に小さいテキスト（ゴールド）、右に大きいテキスト（黒） */}
               {reason.verticalTitleSmall && (
                 <div className="bg-white relative shrink-0 w-[48px] flex items-start justify-center pt-[24px] pb-[24px] shadow-lg">
-                  <p className={`text-[24px] font-medium [writing-mode:vertical-rl] [text-orientation:upright] whitespace-nowrap ${reason.isGoldColor ? 'text-[#aa912d]' : 'text-[#1e1e1e]'}`}>
+                  <p className={`${reason.verticalTitleSmallSize || 'text-[24px]'} font-medium [writing-mode:vertical-rl] [text-orientation:upright] whitespace-nowrap ${reason.isGoldColor ? 'text-[#aa912d]' : 'text-[#1e1e1e]'}`}>
                     {reason.verticalTitleSmall}
                   </p>
                 </div>
@@ -237,7 +239,7 @@ function DesktopReasonCard({ reason, index }: { reason: ReasonItem; index: numbe
               </div>
               {reason.verticalTitleSmall && (
                 <div className="bg-white relative shrink-0 w-[48px] flex items-start justify-center pt-[24px] pb-[24px] shadow-lg">
-                  <p className={`text-[24px] font-medium [writing-mode:vertical-rl] [text-orientation:upright] whitespace-nowrap ${reason.isGoldColor ? 'text-[#aa912d]' : 'text-[#1e1e1e]'}`}>
+                  <p className={`${reason.verticalTitleSmallSize || 'text-[24px]'} font-medium [writing-mode:vertical-rl] [text-orientation:upright] whitespace-nowrap ${reason.isGoldColor ? 'text-[#aa912d]' : 'text-[#1e1e1e]'}`}>
                     {reason.verticalTitleSmall}
                   </p>
                 </div>
@@ -308,7 +310,7 @@ function ReasonCard({ reason, index }: { reason: ReasonItem; index: number }) {
               {/* swapBands=true: 左に小さいテキスト（ゴールド）、右に大きいテキスト（黒） */}
               {reason.verticalTitleSmall && (
                 <div className="bg-white relative shrink-0 w-[32px] flex items-start justify-center pt-[16px] pb-[16px]">
-                  <p className={`text-[20px] font-medium [writing-mode:vertical-rl] [text-orientation:upright] whitespace-nowrap ${reason.isGoldColor ? 'text-[#aa912d]' : 'text-[#1e1e1e]'}`}>
+                  <p className={`${reason.verticalTitleSmallSize || 'text-[20px]'} font-medium [writing-mode:vertical-rl] [text-orientation:upright] whitespace-nowrap ${reason.isGoldColor ? 'text-[#aa912d]' : 'text-[#1e1e1e]'}`}>
                     {reason.verticalTitleSmall}
                   </p>
                 </div>
@@ -329,7 +331,7 @@ function ReasonCard({ reason, index }: { reason: ReasonItem; index: number }) {
               </div>
               {reason.verticalTitleSmall && (
                 <div className="bg-white relative shrink-0 w-[32px] flex items-start justify-center pt-[16px] pb-[16px]">
-                  <p className={`text-[20px] font-medium [writing-mode:vertical-rl] [text-orientation:upright] whitespace-nowrap ${reason.isGoldColor ? 'text-[#aa912d]' : 'text-[#1e1e1e]'}`}>
+                  <p className={`${reason.verticalTitleSmallSize || 'text-[20px]'} font-medium [writing-mode:vertical-rl] [text-orientation:upright] whitespace-nowrap ${reason.isGoldColor ? 'text-[#aa912d]' : 'text-[#1e1e1e]'}`}>
                     {reason.verticalTitleSmall}
                   </p>
                 </div>
