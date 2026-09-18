@@ -22,25 +22,19 @@ interface Article {
 function ArticleContent() {
   const searchParams = useSearchParams();
   const id = searchParams.get('id') || '';
+  const serviceDomain = process.env.NEXT_PUBLIC_MICROCMS_SERVICE_DOMAIN || '';
+  const apiKey = process.env.NEXT_PUBLIC_MICROCMS_API_KEY || '';
+  const setupError = !id
+    ? '記事IDが指定されていません'
+    : !serviceDomain || !apiKey
+      ? 'microCMSが設定されていません'
+      : '';
   const [article, setArticle] = useState<Article | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(!setupError);
   const [error, setError] = useState('');
 
   useEffect(() => {
-    if (!id) {
-      setError('記事IDが指定されていません');
-      setLoading(false);
-      return;
-    }
-
-    const serviceDomain = process.env.NEXT_PUBLIC_MICROCMS_SERVICE_DOMAIN || '';
-    const apiKey = process.env.NEXT_PUBLIC_MICROCMS_API_KEY || '';
-
-    if (!serviceDomain || !apiKey) {
-      setError('microCMSが設定されていません');
-      setLoading(false);
-      return;
-    }
+    if (setupError) return;
 
     const params = new URLSearchParams({ cacheBust: String(Date.now()) });
 
@@ -63,7 +57,7 @@ function ArticleContent() {
         setError(e.message);
         setLoading(false);
       });
-  }, [id]);
+  }, [apiKey, id, serviceDomain, setupError]);
 
   if (loading) {
     return (
@@ -74,11 +68,11 @@ function ArticleContent() {
     );
   }
 
-  if (error || !article) {
+  if (setupError || error || !article) {
     return (
       <main className="py-20 text-center">
         <h1 className="text-2xl font-bold mb-4 text-[#5A4D41]">
-          {error || '記事が見つかりません'}
+          {setupError || error || '記事が見つかりません'}
         </h1>
         <a href="/blog" className="text-[#395b45] font-bold hover:underline">
           ブログ一覧に戻る

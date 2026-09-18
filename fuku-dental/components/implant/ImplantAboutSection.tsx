@@ -25,7 +25,7 @@ export function ImplantAboutSection() {
           <div className="text-center">
             <div className="text-white text-[23.4px] font-medium leading-[35.1px] tracking-[1.872px]">
               <p className="mb-0">インプラント治療は、</p>
-              <p>失った歯を補う"第二の永久歯"</p>
+              <p>失った歯を補う「第二の永久歯」</p>
             </div>
           </div>
 
@@ -58,7 +58,7 @@ export function ImplantAboutSection() {
             <div className="text-white">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
                 インプラント治療は、<br />
-                失った歯を補う"第二の永久歯"
+                失った歯を補う「第二の永久歯」
               </h2>
               <div className="space-y-4 text-lg leading-relaxed">
                 <p>

@@ -72,7 +72,7 @@ function ImageSlot({
           </button>
         </div>
         <img
-          src={previewUrl || `${src}?t=${Date.now()}`}
+          src={previewUrl || src}
           alt={`${pagePath} ${slotId}`}
           className="w-full h-32 object-cover rounded"
           onError={(e) => {

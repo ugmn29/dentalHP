@@ -102,7 +102,7 @@ export function BeforeImplantCards() {
                 {/* タイトル */}
                 <div className="px-[25.92px]">
                   <div className="text-[#137d9e] text-[20px] font-medium tracking-[1.28px] leading-[29px] text-center">
-                    <p className="mb-0">"できない"と諦める前に、</p>
+                    <p className="mb-0">「できない」と諦める前に、</p>
                     <p>もう一度ご相談ください</p>
                   </div>
                 </div>
@@ -169,7 +169,7 @@ export function BeforeImplantCards() {
             <div className="relative p-8 min-h-[400px] flex flex-col justify-between">
               <h3 className="text-white text-2xl font-bold mb-4">インプラントを断られた方へ</h3>
               <div className="bg-white/90 p-6 rounded-lg">
-                <h4 className="text-[#137d9e] text-xl font-bold mb-3">"できない"と諦める前に、もう一度ご相談ください</h4>
+                <h4 className="text-[#137d9e] text-xl font-bold mb-3">「できない」と諦める前に、もう一度ご相談ください</h4>
                 <p className="text-[#1e1e1e] leading-relaxed">
                   他院で「骨が足りない」「全身疾患がある」「重度の歯周病」などの理由でインプラントを断られた方も、当院では治療できる可能性があります。精密検査をもとに、安全で最適な治療法をご提案します。
                 </p>

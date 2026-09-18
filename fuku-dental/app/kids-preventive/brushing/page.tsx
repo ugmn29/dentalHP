@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import Link from 'next/link';
 import { CheckCircle2, ArrowRight, Calendar, Phone } from 'lucide-react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
@@ -15,9 +16,9 @@ export default function BrushingGuidePage() {
             <div className="bg-[#FDFBF7] py-4">
                 <div className="container mx-auto px-4">
                     <div className="flex items-center gap-2 text-sm text-[#5A4D41]">
-                        <a href="/" className="hover:text-[#395b45] transition-colors">
+                        <Link href="/" className="hover:text-[#395b45] transition-colors">
                             ホーム
-                        </a>
+                        </Link>
                         <span>/</span>
                         <a href="/kids-preventive" className="hover:text-[#395b45] transition-colors">
                             こども歯科・予防

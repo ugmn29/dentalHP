@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
@@ -71,7 +72,7 @@ export default function WhiteningComparisonPage() {
       <section className="bg-white border-b">
         <div className="container mx-auto px-4 py-3">
           <div className="flex items-center gap-2 text-sm text-gray-600">
-            <a href="/" className="hover:text-pink-600">ホーム</a>
+            <Link href="/" className="hover:text-pink-600">ホーム</Link>
             <span>/</span>
             <a href="/whitening" className="hover:text-pink-600">ホワイトニング</a>
             <span>/</span>
