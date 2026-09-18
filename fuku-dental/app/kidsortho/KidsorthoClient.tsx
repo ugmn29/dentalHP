@@ -168,7 +168,7 @@ export default function KidsOrthoPage() {
                                         className="group inline-flex min-h-14 items-center justify-center gap-3 rounded-full bg-[#0a8a85] px-7 py-4 text-white shadow-xl shadow-[#0a8a85]/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#087a76] md:min-h-16"
                                     >
                                         <Calendar size={22} className="flex-shrink-0" />
-                                        <span className="whitespace-nowrap text-base font-bold md:text-lg">24時間 WEB予約</span>
+                                        <span className="whitespace-nowrap text-base font-bold md:text-lg">ネット予約をする</span>
                                         <ChevronRight size={20} className="transition-transform group-hover:translate-x-1" />
                                     </a>
                                     <a

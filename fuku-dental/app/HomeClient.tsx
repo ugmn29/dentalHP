@@ -352,7 +352,7 @@ export default function Home() {
                     rel="noopener noreferrer"
                   >
                     <Calendar size={18} />
-                    <span className="whitespace-nowrap">WEB予約はこちら</span>
+                    <span className="whitespace-nowrap">ネット予約をする</span>
                   </a>
                   <a
                     className="inline-flex min-h-14 items-center justify-center gap-2 rounded-full border bg-white px-8 text-sm font-bold tracking-widest transition hover:-translate-y-0.5"
@@ -946,7 +946,7 @@ export default function Home() {
         onMouseOut={e => (e.currentTarget.style.background = ACCENT_DARK)}
       >
         <Calendar size={16} />
-        WEB予約
+        ネット予約をする
       </a>
 
       <Footer />

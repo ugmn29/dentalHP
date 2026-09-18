@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { Header } from '../../components/Header';
 import { Footer } from '../../components/Footer';
 import { WaveBottom } from '../../components/Wave';
-import { CreditCard, AlertCircle, ChevronRight, Check } from 'lucide-react';
+import { CreditCard, AlertCircle, ChevronRight } from 'lucide-react';
 import { priceCategories } from '../../data/price-list';
 
 const categories = priceCategories;
@@ -242,12 +242,8 @@ export default function PricePage() {
                                                 お支払いのタイミング
                                             </h3>
                                             <p className="text-sm text-[#6B6B68] mb-4 leading-relaxed">
-                                                自費診療のお支払いは、初回に半額、半年後に残りの半額をお支払いいただく形です。<br />
                                                 高額支払いの場合は、銀行振り込みでのお支払いも可能です。
                                             </p>
-                                            <div className="flex items-center gap-2 text-xs text-[#0a8a85] font-bold bg-[#0abab5]/10 px-3 py-2 rounded-lg inline-block">
-                                                <Check size={14} /> 初回に半額・半年後に半額
-                                            </div>
                                         </div>
                                     </div>
 
@@ -289,7 +285,7 @@ export default function PricePage() {
                                                 <h4 className="font-bold text-[#2C2C2A] text-sm mb-1">ご予約の変更・キャンセルについて</h4>
                                                 <p className="text-xs text-[#6B6B68] leading-relaxed">
                                                     ご予約の変更・キャンセルは、<span className="font-bold text-[#0a8a85]">前日の診療終了時まで</span>にお電話にてご連絡ください。<br />
-                                                    Web予約の場合は、マイページより前日まで変更可能です。
+                                                    ネット予約の場合は、マイページより前日まで変更可能です。
                                                 </p>
                                             </div>
                                         </div>

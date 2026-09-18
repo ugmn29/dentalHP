@@ -61,7 +61,7 @@ export function ImplantCTA({
             }`}
           >
             <Calendar size={20} />
-            24時間WEB予約
+            ネット予約をする
           </a>
         </div>
       </div>
