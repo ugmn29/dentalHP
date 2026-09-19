@@ -177,7 +177,7 @@ export const Header = () => {
                             rel="noopener noreferrer"
                             className="w-full bg-[#395b45] text-white py-4 rounded-full font-bold shadow-[0_4px_0_#2d4835] active:shadow-none active:translate-y-[4px] transition-all flex justify-center items-center gap-2 text-lg"
                         >
-                            <Calendar size={22} /> 24時間 WEB予約
+                            <Calendar size={22} /> ネット予約をする
                         </a>
                         <button className="w-full bg-white border-2 border-[#395b45] text-[#395b45] py-4 rounded-full font-bold shadow-sm flex justify-center items-center gap-2 text-lg">
                             <Phone size={22} /> 03-6204-2876

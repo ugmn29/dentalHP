@@ -39,9 +39,9 @@ export function MobileTreatmentHero({
             target="_blank"
             rel="noopener noreferrer"
             className="block h-14 rounded-full focus:outline-none focus-visible:ring-4 focus-visible:ring-[#0A8A85]/40 md:h-16 lg:h-20"
-            aria-label={`${title}の24時間WEB予約`}
+            aria-label={`${title}のネット予約`}
           >
-            <span className="sr-only">24時間WEB予約</span>
+            <span className="sr-only">ネット予約をする</span>
           </a>
           <a
             href="tel:03-6204-2876"

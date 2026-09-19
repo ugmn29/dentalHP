@@ -1,7 +1,7 @@
 "use client";
 
 import Link from 'next/link';
-import { Phone } from 'lucide-react';
+import { CalendarCheck, Phone } from 'lucide-react';
 import { FaInstagram, FaYoutube, FaTiktok } from 'react-icons/fa';
 import { ClinicHoursTable } from './ClinicHoursTable';
 import { WEB_RESERVATION_URL } from '@/lib/reservation';
@@ -64,7 +64,7 @@ export const Footer = () => {
                                 <p className="text-sm leading-[2]" style={{ color: TEXT_MUTED }}>
                                     〒135-0061 東京都江東区豊洲5-6-36<br />
                                     豊洲プライムスクエア1階<br />
-                                    <span style={{ color: ACCENT_DARK }}>●</span> 豊洲駅 6a出口 徒歩2分 / 提携駐車場あり
+                                    <span style={{ color: ACCENT_DARK }}>●</span> 豊洲駅 6a出口 徒歩2分
                                 </p>
                                 <a href="tel:03-6204-2876" className="inline-flex items-center gap-2 mt-4 text-sm font-medium" style={{ color: ACCENT_DARK }}>
                                     <Phone size={16} />
@@ -150,19 +150,19 @@ export const Footer = () => {
             </footer>
 
             {/* ===== Sticky Bottom Tabs (Mobile) ===== */}
-            <div className="fixed bottom-0 left-0 right-0 z-40 flex md:hidden h-[64px] max-w-full overflow-hidden" style={{ borderTop: `1px solid ${LINE}` }}>
-                <a href="tel:03-6204-2876" className="min-w-0 flex-1 flex flex-col items-center justify-center gap-1 transition" style={{ background: SURFACE, color: TEXT }}>
-                    <Phone size={18} />
-                    <span className="text-[10px] font-medium tracking-wider">電話予約</span>
-                </a>
+            <div
+                className="fixed bottom-0 left-0 right-0 z-40 flex md:hidden max-w-full items-center justify-center px-3 pb-[calc(env(safe-area-inset-bottom)+8px)] pt-2 shadow-[0_-8px_24px_rgba(90,77,65,0.10)]"
+                style={{ background: `${SURFACE}F2`, borderTop: `1px solid ${LINE}` }}
+            >
                 <a
                     href={WEB_RESERVATION_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="min-w-0 flex-[1.5] flex items-center justify-center px-2 transition"
-                    style={{ background: ACCENT_DARK, color: '#fff' }}
+                    className="flex h-[56px] w-full max-w-[520px] items-center justify-center gap-3 rounded-[18px] px-5 text-[16px] font-bold tracking-[0.08em] text-white shadow-[0_8px_0_#066b67] transition active:translate-y-[3px] active:shadow-[0_5px_0_#066b67]"
+                    style={{ background: ACCENT_DARK }}
                 >
-                    <span className="whitespace-nowrap text-[15px] font-semibold tracking-[0.08em] sm:text-base">24時間 WEB予約</span>
+                    <CalendarCheck size={24} />
+                    <span className="whitespace-nowrap">ネット予約をする</span>
                 </a>
             </div>
         </>

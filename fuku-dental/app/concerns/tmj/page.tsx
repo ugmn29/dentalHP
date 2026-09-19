@@ -36,7 +36,7 @@ export default function TMJPage() {
               </p>
             </div>
 
-            {/* WEB予約ボタン */}
+            {/* ネット予約ボタン */}
             <div className="flex justify-center mt-12">
               <a
                 href={WEB_RESERVATION_URL}
@@ -47,7 +47,7 @@ export default function TMJPage() {
                 <Calendar size={24} className="group-hover:rotate-12 transition-transform" />
                 <div className="flex flex-col items-start">
                   <span className="text-xs font-medium">24時間受付</span>
-                  <span className="text-lg font-bold">WEB予約</span>
+                  <span className="text-lg font-bold">ネット予約をする</span>
                 </div>
                 <ChevronRight size={20} className="group-hover:translate-x-1 transition-transform" />
               </a>

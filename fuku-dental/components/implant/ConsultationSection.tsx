@@ -67,7 +67,7 @@ export function ConsultationSection() {
                 </div>
               </Link>
 
-              {/* WEB予約ボタン */}
+              {/* ネット予約ボタン */}
               <a
                 href={WEB_RESERVATION_URL}
                 target="_blank"
@@ -127,7 +127,7 @@ export function ConsultationSection() {
                 className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-b from-[#174180] to-[#113161] text-white rounded-lg font-bold text-lg hover:opacity-90 transition-opacity"
               >
                 <Calendar className="w-5 h-5" />
-                WEB予約
+                ネット予約をする
               </a>
             </div>
           </div>

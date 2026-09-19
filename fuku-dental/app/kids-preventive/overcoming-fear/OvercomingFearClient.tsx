@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import Link from 'next/link';
 import { PageImage } from '@/components/PageImage';
 import { CheckCircle2, ArrowRight, Calendar, Phone, Heart, Star } from 'lucide-react';
 import { Header } from '@/components/Header';
@@ -16,9 +17,9 @@ export default function OvercomingFearPage() {
             <div className="bg-[#FDFBF7] py-4">
                 <div className="container mx-auto px-4">
                     <div className="flex items-center gap-2 text-sm text-[#5A4D41]">
-                        <a href="/" className="hover:text-[#395b45] transition-colors">
+                        <Link href="/" className="hover:text-[#395b45] transition-colors">
                             ホーム
-                        </a>
+                        </Link>
                         <span>/</span>
                         <a href="/kids-preventive" className="hover:text-[#395b45] transition-colors">
                             こども歯科・予防
@@ -502,7 +503,7 @@ export default function OvercomingFearPage() {
                                     <div className="bg-red-50 border-2 border-red-400 rounded-xl p-6">
                                         <h4 className="text-xl font-bold text-red-700 mb-4 flex items-center gap-2">
                                             <span className="text-2xl">✕</span>
-                                            やってはいけないこと（DON'T）
+                                            やってはいけないこと（DON’T）
                                         </h4>
                                         <div className="space-y-4 ml-8">
                                             <div>

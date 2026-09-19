@@ -114,7 +114,7 @@ export default function AccessPage() {
                     <div>
                       <h2 className="font-serif text-xl text-[#2C2C2A]">最寄り駅</h2>
                       <p className="mt-2 text-sm leading-[2] text-[#6B6B68]">
-                        豊洲駅 6a出口 徒歩2分 / 提携駐車場あり
+                        豊洲駅 6a出口 徒歩2分
                       </p>
                     </div>
                   </div>

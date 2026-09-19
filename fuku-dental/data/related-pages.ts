@@ -218,14 +218,19 @@ export const orthodonticsRelatedPages: RelatedPageItem[] = [
     href: '/orthodontics',
   },
   {
+    title: '歯を抜かない矯正治療',
+    description: '抜歯を提案された方の矯正相談',
+    href: '/orthodontics/non-extraction',
+  },
+  {
     title: '矯正装置の種類',
     description: 'ワイヤー・マウスピースなどを解説',
     href: '/orthodontics/types',
   },
   {
     title: '矯正歯科の費用',
-    description: '治療費と支払い方法について',
-    href: '/orthodontics/cost',
+    description: '料金表の矯正費用を確認する',
+    href: '/price#kids-ortho',
   },
   {
     title: '矯正治療の期間',

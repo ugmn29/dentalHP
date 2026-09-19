@@ -65,7 +65,7 @@ function CtaButtons({ dark = false }: { dark?: boolean }) {
         className="inline-flex min-h-[58px] items-center justify-center gap-3 rounded-full bg-[#0a8a85] px-7 py-4 text-sm font-bold text-white shadow-[0_16px_34px_rgba(10,138,133,0.22)] transition hover:bg-[#087571] sm:min-w-[230px]"
       >
         <CalendarDays size={20} />
-        <span className="whitespace-nowrap">24時間 WEB予約</span>
+        <span className="whitespace-nowrap">ネット予約をする</span>
         <ArrowRight size={16} />
       </a>
       <a

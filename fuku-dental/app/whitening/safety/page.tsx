@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
@@ -32,10 +33,10 @@ export default function WhiteningSafetyPage() {
       <div className="bg-white border-b">
         <div className="container mx-auto px-4 py-3">
           <div className="flex items-center text-sm text-gray-600">
-            <a href="/" className="hover:text-[#C5A572] flex items-center">
+            <Link href="/" className="hover:text-[#C5A572] flex items-center">
               <Home className="w-4 h-4 mr-1" />
               ホーム
-            </a>
+            </Link>
             <ChevronRight className="w-4 h-4 mx-2" />
             <a href="/whitening" className="hover:text-[#C5A572]">ホワイトニング</a>
             <ChevronRight className="w-4 h-4 mx-2" />

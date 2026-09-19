@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Link from 'next/link';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
@@ -36,7 +37,7 @@ export default function FluoridePage() {
           <div className="container mx-auto px-4 py-4">
             <div className="flex items-center gap-2 text-sm text-[#8D8070]">
               <Home size={16} />
-              <a href="/" className="hover:text-[#C5A572] transition-colors">ホーム</a>
+              <Link href="/" className="hover:text-[#C5A572] transition-colors">ホーム</Link>
               <ChevronRight size={16} />
               <a href="/preventive" className="hover:text-[#C5A572] transition-colors">予防歯科</a>
               <ChevronRight size={16} />

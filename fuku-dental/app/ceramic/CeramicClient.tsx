@@ -60,7 +60,7 @@ export default function CeramicPage() {
                                     className="group inline-flex min-h-14 w-full max-w-[320px] items-center justify-center gap-3 rounded-full bg-[#0a8a85] px-7 py-4 text-white shadow-xl shadow-[#0a8a85]/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#087a76] sm:w-auto"
                                 >
                                     <Calendar size={22} className="flex-shrink-0" />
-                                    <span className="whitespace-nowrap text-base font-bold">24時間 WEB予約</span>
+                                    <span className="whitespace-nowrap text-base font-bold">ネット予約をする</span>
                                     <ChevronRight size={20} className="transition-transform group-hover:translate-x-1" />
                                 </a>
                                 <a
@@ -148,12 +148,12 @@ export default function CeramicPage() {
                             </a>
                         </div>
 
-                        {/* Web予約バナー */}
+                        {/* ネット予約バナー */}
                         <div className="mt-12">
                             <a href={WEB_RESERVATION_URL} target="_blank" rel="noopener noreferrer" className="block">
                                 <img
                                     src="/images/web-reservation-banner.webp"
-                                    alt="Web予約" loading="lazy" decoding="async" className="w-full max-w-2xl mx-auto rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+                                    alt="ネット予約をする" loading="lazy" decoding="async" className="w-full max-w-2xl mx-auto rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
                                 />
                             </a>
                         </div>

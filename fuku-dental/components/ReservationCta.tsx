@@ -82,7 +82,7 @@ export function ReservationCta({
             <div className="flex flex-col gap-3">
               <CtaButton href={WEB_RESERVATION_URL}>
                 <CalendarDays size={20} />
-                <span className="whitespace-nowrap">24時間 WEB予約</span>
+                <span className="whitespace-nowrap">ネット予約をする</span>
                 <ArrowRight size={16} />
               </CtaButton>
               <CtaButton href="tel:03-6204-2876" variant="secondary">

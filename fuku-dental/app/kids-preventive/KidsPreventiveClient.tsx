@@ -66,7 +66,7 @@ export default function KidsPreventivePage() {
                                     <Calendar size={24} className="group-hover:rotate-12 transition-transform" />
                                     <div className="flex flex-col items-start">
                                         <span className="text-xs font-medium opacity-90">24時間受付</span>
-                                        <span className="text-base md:text-lg font-bold whitespace-nowrap">WEB予約</span>
+                                        <span className="text-base md:text-lg font-bold whitespace-nowrap">ネット予約をする</span>
                                     </div>
                                 </div>
                                 <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center group-hover:translate-x-1 transition-transform">

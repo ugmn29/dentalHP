@@ -26,9 +26,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // 矯正歯科（トピッククラスター）
     { url: '/orthodontics', priority: 0.9, changeFrequency: 'weekly' as const },
     { url: '/orthodontics/types', priority: 0.8, changeFrequency: 'monthly' as const },
-    { url: '/orthodontics/cost', priority: 0.8, changeFrequency: 'monthly' as const },
     { url: '/orthodontics/duration', priority: 0.8, changeFrequency: 'monthly' as const },
     { url: '/orthodontics/adult', priority: 0.8, changeFrequency: 'monthly' as const },
+    { url: '/orthodontics/non-extraction', priority: 0.8, changeFrequency: 'monthly' as const },
 
     // 根管治療（トピッククラスター）
     { url: '/root-canal', priority: 0.9, changeFrequency: 'weekly' as const },

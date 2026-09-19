@@ -76,7 +76,7 @@ export default function OrthoGeneralPage() {
 
                         <div className="mt-12">
                             <a href={WEB_RESERVATION_URL} target="_blank" rel="noopener noreferrer" className="block">
-                                <img src="/images/web-reservation-banner.webp" alt="Web予約" loading="lazy" decoding="async" className="w-full max-w-2xl mx-auto rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300" />
+                                <img src="/images/web-reservation-banner.webp" alt="ネット予約をする" loading="lazy" decoding="async" className="w-full max-w-2xl mx-auto rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300" />
                             </a>
                         </div>
                     </div>
@@ -179,8 +179,8 @@ export default function OrthoGeneralPage() {
                                 </p>
                             </div>
                             <div className="text-center mt-8">
-                                <a href="/orthodontics/cost" className="inline-flex items-center gap-2 text-[#C5A572] hover:text-[#B59562] transition-colors border-b border-[#C5A572] pb-1 font-medium">
-                                    矯正歯科の費用について詳しく見る <ArrowRight size={16} />
+                                <a href="/price#kids-ortho" className="inline-flex items-center gap-2 text-[#C5A572] hover:text-[#B59562] transition-colors border-b border-[#C5A572] pb-1 font-medium">
+                                    料金表で矯正費用を見る <ArrowRight size={16} />
                                 </a>
                             </div>
                         </div>

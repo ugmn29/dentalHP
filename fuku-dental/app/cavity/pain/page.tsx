@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Link from 'next/link';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
@@ -41,10 +42,10 @@ export default function PainPage() {
           <div className="container mx-auto px-4">
             <ol className="flex items-center space-x-2 text-sm">
               <li>
-                <a href="/" className="text-[#8D8070] hover:text-[#C5A572] transition-colors flex items-center">
+                <Link href="/" className="text-[#8D8070] hover:text-[#C5A572] transition-colors flex items-center">
                   <Home size={16} className="mr-1" />
                   ホーム
-                </a>
+                </Link>
               </li>
               <ChevronRight size={16} className="text-[#8D8070]" />
               <li>
