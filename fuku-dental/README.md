@@ -39,6 +39,8 @@ publication, verification, and recovery steps.
 
 ## Analytics
 
-GA4 and Microsoft Clarity are loaded from the root layout. Reservation and phone
-links emit `web_reservation_click` and `phone_click` events through
-`components/AnalyticsTracker.tsx`.
+GA4 and Microsoft Clarity are loaded only after analytics consent. Embedded
+Google Maps are loaded only after external-content consent. Reservation and
+phone links emit `web_reservation_click` and `phone_click` events through
+`components/AnalyticsTracker.tsx`. Visitors can change analytics, external
+content, and marketing consent from the footer or privacy page.

@@ -7,6 +7,7 @@ import { AuthorBio } from '../../components/AuthorBio';
 import { CheckCircle2, ChevronDown, ChevronUp, Calendar, Phone, ArrowRight, ChevronRight, Smile, Home, Coins, Tv, Sparkles } from 'lucide-react';
 import { PageImage } from '@/components/PageImage';
 import { ClinicHoursTable } from '@/components/ClinicHoursTable';
+import { ConsentAwareMap } from '@/components/ConsentAwareMap';
 import { getPriceCategory } from '@/data/price-list';
 import { FaqSection } from '@/components/FaqSection';
 import { WEB_RESERVATION_URL } from '@/lib/reservation';
@@ -361,16 +362,7 @@ export default function KidsOrthoPage() {
                             </div>
                             {/* Map */}
                             <div className="rounded-2xl overflow-hidden shadow-lg aspect-square">
-                                <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.010249888901!2d139.798077!3d35.6521191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018895bd480af87%3A0x46a0d1583ceadde6!2zRuODh-ODs-OCv-ODq-OCquODleOCo-OCuSDosYrmtLLjg5fjg6njgqTjg6Djgrnjgq_jgqjjgqLpmaI!5e0!3m2!1sja!2sjp!4v1778288265882!5m2!1sja!2sjp"
-                                    width="100%"
-                                    height="100%"
-                                    style={{ border: 0 }}
-                                    allowFullScreen
-                                    loading="lazy"
-                                    referrerPolicy="no-referrer-when-downgrade"
-                                    title="Fデンタルオフィス 豊洲プライムスクエア院 地図"
-                                ></iframe>
+                                <ConsentAwareMap title="Fデンタルオフィス 豊洲プライムスクエア院 地図" />
                             </div>
                         </div>
 
