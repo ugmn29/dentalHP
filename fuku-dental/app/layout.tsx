@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Noto_Serif_JP, Noto_Sans_JP, Shippori_Mincho } from "next/font/google";
 import { AnalyticsScripts } from "@/components/AnalyticsScripts";
 import { AnalyticsTracker } from "@/components/AnalyticsTracker";
-import { CookieConsent } from "@/components/CookieConsent";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -266,7 +265,6 @@ export default function RootLayout({
         <AnalyticsScripts />
         <AnalyticsTracker />
         {children}
-        <CookieConsent />
       </body>
     </html>
   );

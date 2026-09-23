@@ -1,7 +1,6 @@
 "use client";
 
 import React from 'react';
-import { CookieSettingsButton } from '../../components/CookieConsent';
 import { Header } from '../../components/Header';
 import { Footer } from '../../components/Footer';
 
@@ -150,10 +149,9 @@ export default function PrivacyPolicyPage() {
             <h2 className="text-2xl font-bold text-[#2d4835] mb-4 pb-2 border-b-2 border-[#395b45]">
               7. Cookieの使用について
             </h2>
-            <p className="text-gray-700 leading-relaxed mb-4">
-              当院のウェブサイトでは、サイトの安全な提供、利用状況の分析、外部コンテンツの表示、広告効果の測定のためにCookieや類似の技術を使用することがあります。必須ではないCookieは、利用者が許可した場合にのみ使用します。
+            <p className="text-gray-700 leading-relaxed">
+              当院のウェブサイトでは、Google Analytics 4およびMicrosoft Clarityによるアクセス解析について、解析用Cookieを保存しない設定を使用します。Googleマップの表示を選択したことは、お使いの端末に保存されます。
             </p>
-            <CookieSettingsButton className="inline-flex min-h-11 items-center border border-[#395b45] px-5 text-sm font-semibold text-[#2d4835] transition hover:bg-[#eef4f0] sm:rounded-md" />
           </section>
 
           {/* 8. アクセス解析ツールについて */}
@@ -162,7 +160,7 @@ export default function PrivacyPolicyPage() {
               8. アクセス解析ツールについて
             </h2>
             <p className="text-gray-700 leading-relaxed mb-4">
-              当院のウェブサイトでは、アクセス解析を許可した場合に、Google Analytics 4およびMicrosoft Clarityを使用します。これらのツールでは、閲覧したページ、参照元、端末・ブラウザ情報、クリックやスクロールなどの操作情報が各提供者へ送信されることがあります。氏名、電話番号、予約内容などを当院から解析イベントとして送信しません。
+              当院のウェブサイトでは、Google Analytics 4およびMicrosoft ClarityをCookieを保存しない設定で使用します。閲覧したページ、参照元、端末・ブラウザ情報、クリックやスクロールなどの操作情報が各提供者へ送信されることがあります。氏名、電話番号、予約内容などを当院から解析イベントとして送信しません。
             </p>
             <p className="text-gray-700 leading-relaxed mb-4">
               Clarityのセッション再現では入力欄の内容がマスクされます。当院は管理画面でも厳格なマスキングを使用し、サイト改善に必要な集計と操作傾向の確認に限定します。
@@ -186,7 +184,7 @@ export default function PrivacyPolicyPage() {
               9. 外部コンテンツについて
             </h2>
             <p className="text-gray-700 leading-relaxed mb-4">
-              外部コンテンツを許可した場合に、Googleマップをページ内に表示します。表示時には、IPアドレス、端末・ブラウザ情報などがGoogleへ送信されることがあります。許可しない場合も、外部サイトで地図を開くリンクをご利用いただけます。
+              「地図を表示」を選択した場合に、Googleマップをページ内に読み込みます。表示時には、IPアドレス、端末・ブラウザ情報などがGoogleへ送信され、GoogleがCookie等を使用することがあります。ページ内に読み込まず、外部サイトで地図を開くこともできます。
             </p>
             <a className="underline underline-offset-2" href="https://policies.google.com/privacy?hl=ja" target="_blank" rel="noopener noreferrer">
               Google プライバシーポリシー
@@ -198,7 +196,7 @@ export default function PrivacyPolicyPage() {
               10. 広告効果測定について
             </h2>
             <p className="text-gray-700 leading-relaxed">
-              広告効果測定を許可した場合に限り、広告媒体の計測機能を使用することがあります。診療内容、症状、予約内容、患者情報を広告媒体へ送信せず、医療に関する機微な情報を使ったオーディエンス作成は行いません。
+              現在、Meta Pixelなどの広告媒体の計測タグは使用していません。Google Analytics 4でも広告用ストレージ、広告シグナルおよび広告パーソナライズを無効にしています。診療内容、症状、予約内容、患者情報を広告媒体へ送信せず、医療に関する機微な情報を使ったオーディエンス作成は行いません。
             </p>
           </section>
 
@@ -245,7 +243,7 @@ export default function PrivacyPolicyPage() {
           <section className="mt-12 text-right">
             <p className="text-gray-600">
               制定日: 2024年1月1日<br />
-              最終更新日: 2026年9月21日
+              最終更新日: 2026年9月23日
             </p>
           </section>
         </div>

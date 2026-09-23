@@ -39,8 +39,10 @@ publication, verification, and recovery steps.
 
 ## Analytics
 
-GA4 and Microsoft Clarity are loaded only after analytics consent. Embedded
-Google Maps are loaded only after external-content consent. Reservation and
-phone links emit `web_reservation_click` and `phone_click` events through
-`components/AnalyticsTracker.tsx`. Visitors can change analytics, external
-content, and marketing consent from the footer or privacy page.
+GA4 and Microsoft Clarity run without analytics or advertising cookie storage.
+Microsoft Clarity also uses strict masking in the project settings. Embedded
+Google Maps load only after the visitor selects the contextual map button; that
+choice is stored locally on the visitor's device. Reservation and phone links
+emit `web_reservation_click` and `phone_click` events through
+`components/AnalyticsTracker.tsx`. Meta Pixel and other advertising tags are
+not loaded.

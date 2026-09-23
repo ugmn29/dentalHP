@@ -5,7 +5,6 @@ import { CalendarCheck, Phone } from 'lucide-react';
 import { FaInstagram, FaYoutube, FaTiktok } from 'react-icons/fa';
 import { ClinicHoursTable } from './ClinicHoursTable';
 import { ConsentAwareMap } from './ConsentAwareMap';
-import { CookieSettingsButton } from './CookieConsent';
 import { WEB_RESERVATION_URL } from '@/lib/reservation';
 
 // 新デザイン用カラートークン（HomeClientと同期）
@@ -143,12 +142,9 @@ export const Footer = () => {
                 <div style={{ borderTop: `1px solid ${LINE}` }}>
                     <div className="max-w-6xl mx-auto flex flex-col items-center justify-between gap-3 px-5 py-6 text-center text-xs sm:flex-row" style={{ color: TEXT_MUTED }}>
                         <span>© Fuku Dental Clinic All Rights Reserved.</span>
-                        <div className="flex items-center gap-5">
-                            <Link href="/privacy" className="underline underline-offset-4 hover:text-[#0a8a85]">
-                                プライバシーポリシー
-                            </Link>
-                            <CookieSettingsButton className="underline underline-offset-4 hover:text-[#0a8a85]" />
-                        </div>
+                        <Link href="/privacy" className="underline underline-offset-4 hover:text-[#0a8a85]">
+                            プライバシーポリシー
+                        </Link>
                     </div>
                 </div>
             </footer>
