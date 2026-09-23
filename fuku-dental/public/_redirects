@@ -7,9 +7,7 @@
 /kids-preventive/brushing /oral-education#brushing 301
 /kids-preventive/fluoride /oral-education#fluoride 301
 /kids-preventive/overcoming-fear /oral-education#overcoming-fear 301
-/kids-preventive/* /oral-education 301
 /kids-preventive /oral-education 301
-/kids/* /oral-education 301
 /cases /case-studies 301
 /ceramic/case-studies /case-studies#ceramic 301
 /orthodontics/case-studies /case-studies#orthodontics 301
@@ -17,7 +15,8 @@
 /periodontal/case-studies /periodontal 301
 /images/kidsortho/training/posture-improvement-hero /images/kidsortho/training/posture-improvement-hero.jpg 301
 
-# www → non-www 統一（Cloudflare Pagesのカスタムドメイン設定でも対応推奨）
-https://www.fshika.com/* https://fshika.com/:splat 301
-http://www.fshika.com/* https://fshika.com/:splat 301
-http://fshika.com/* https://fshika.com/:splat 301
+# ワイルドカードは個別URLより後に評価する
+/kids-preventive/* /oral-education 301
+/kids/* /oral-education 301
+
+# wwwからnon-wwwへの統一はCloudflareのゾーンルールで管理する

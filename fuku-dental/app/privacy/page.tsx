@@ -23,7 +23,7 @@ export default function PrivacyPolicyPage() {
           {/* 前文 */}
           <section className="mb-12">
             <p className="text-gray-700 leading-relaxed">
-              Fデンタルオフィス 豊洲プライムスクエア院 豊洲（以下、「当院」といいます。）は、患者様の個人情報の保護に最大限の注意を払い、以下の方針に基づいて個人情報を適切に取り扱います。
+              Fデンタルオフィス 豊洲プライムスクエア院（以下、「当院」といいます。）は、患者様の個人情報の保護に最大限の注意を払い、以下の方針に基づいて個人情報を適切に取り扱います。
             </p>
           </section>
 
@@ -150,7 +150,7 @@ export default function PrivacyPolicyPage() {
               7. Cookieの使用について
             </h2>
             <p className="text-gray-700 leading-relaxed">
-              当院のウェブサイトでは、より良いサービスを提供するため、Cookieを使用しています。Cookieによって取得した情報は、サイトの利用状況の分析、サービスの改善に使用します。Cookieの設定は、お使いのブラウザで変更することができます。
+              当院のウェブサイトでは、Google Analytics 4およびMicrosoft Clarityによるアクセス解析について、解析用Cookieを保存しない設定を使用します。Googleマップなどの外部サービスでは、提供者がCookie等を使用することがあります。
             </p>
           </section>
 
@@ -159,45 +159,81 @@ export default function PrivacyPolicyPage() {
             <h2 className="text-2xl font-bold text-[#2d4835] mb-4 pb-2 border-b-2 border-[#395b45]">
               8. アクセス解析ツールについて
             </h2>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              当院のウェブサイトでは、Google Analytics 4およびMicrosoft ClarityをCookieを保存しない設定で使用します。閲覧したページ、参照元、端末・ブラウザ情報、クリックやスクロールなどの操作情報が各提供者へ送信されることがあります。氏名、電話番号、予約内容などを当院から解析イベントとして送信しません。
+            </p>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              Clarityのセッション再現では入力欄の内容がマスクされます。当院は管理画面でも厳格なマスキングを使用し、サイト改善に必要な集計と操作傾向の確認に限定します。
+            </p>
+            <ul className="list-disc list-inside space-y-2 text-gray-700 ml-4">
+              <li>
+                <a className="underline underline-offset-2" href="https://policies.google.com/privacy?hl=ja" target="_blank" rel="noopener noreferrer">
+                  Google プライバシーポリシー
+                </a>
+              </li>
+              <li>
+                <a className="underline underline-offset-2" href="https://privacy.microsoft.com/ja-jp/privacystatement" target="_blank" rel="noopener noreferrer">
+                  Microsoft プライバシーステートメント
+                </a>
+              </li>
+            </ul>
+          </section>
+
+          <section className="mb-8">
+            <h2 className="text-2xl font-bold text-[#2d4835] mb-4 pb-2 border-b-2 border-[#395b45]">
+              9. 外部コンテンツについて
+            </h2>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              当院の所在地を案内するため、Googleマップをページ内に表示します。ページを表示した際に、IPアドレス、端末・ブラウザ情報などがGoogleへ送信され、GoogleがCookie等を使用することがあります。
+            </p>
+            <a className="underline underline-offset-2" href="https://policies.google.com/privacy?hl=ja" target="_blank" rel="noopener noreferrer">
+              Google プライバシーポリシー
+            </a>
+          </section>
+
+          <section className="mb-8">
+            <h2 className="text-2xl font-bold text-[#2d4835] mb-4 pb-2 border-b-2 border-[#395b45]">
+              10. 広告効果測定について
+            </h2>
             <p className="text-gray-700 leading-relaxed">
-              当院のウェブサイトでは、Microsoft Clarityなどのアクセス解析ツールを使用しています。これらのツールは、Cookieを使用してウェブサイトの利用状況を分析し、サービスの向上に役立てています。取得される情報には個人を特定する情報は含まれません。
+              現在、Meta Pixelなどの広告媒体の計測タグは使用していません。Google Analytics 4でも広告用ストレージ、広告シグナルおよび広告パーソナライズを無効にしています。診療内容、症状、予約内容、患者情報を広告媒体へ送信せず、医療に関する機微な情報を使ったオーディエンス作成は行いません。
             </p>
           </section>
 
-          {/* 9. SSL/TLSについて */}
+          {/* 11. SSL/TLSについて */}
           <section className="mb-8">
             <h2 className="text-2xl font-bold text-[#2d4835] mb-4 pb-2 border-b-2 border-[#395b45]">
-              9. SSL/TLSについて
+              11. SSL/TLSについて
             </h2>
             <p className="text-gray-700 leading-relaxed">
               当院のウェブサイトでは、個人情報を安全に送信するため、SSL/TLS暗号化通信を使用しています。
             </p>
           </section>
 
-          {/* 10. プライバシーポリシーの変更 */}
+          {/* 12. プライバシーポリシーの変更 */}
           <section className="mb-8">
             <h2 className="text-2xl font-bold text-[#2d4835] mb-4 pb-2 border-b-2 border-[#395b45]">
-              10. プライバシーポリシーの変更
+              12. プライバシーポリシーの変更
             </h2>
             <p className="text-gray-700 leading-relaxed">
               当院は、法令の変更等に伴い、本プライバシーポリシーを変更することがあります。変更した場合は、当ウェブサイトに掲載してお知らせいたします。
             </p>
           </section>
 
-          {/* 11. お問い合わせ窓口 */}
+          {/* 13. お問い合わせ窓口 */}
           <section className="mb-8">
             <h2 className="text-2xl font-bold text-[#2d4835] mb-4 pb-2 border-b-2 border-[#395b45]">
-              11. お問い合わせ窓口
+              13. お問い合わせ窓口
             </h2>
             <div className="bg-[#FAFAFA] p-6 rounded-lg border border-[#395b45]/20">
               <p className="text-gray-700 mb-4">
                 個人情報の取り扱いに関するお問い合わせは、以下までご連絡ください。
               </p>
               <div className="space-y-2 text-gray-700">
-                <p className="font-semibold text-[#2d4835]">Fデンタルオフィス 豊洲プライムスクエア院 豊洲</p>
+                <p className="font-semibold text-[#2d4835]">Fデンタルオフィス 豊洲プライムスクエア院</p>
                 <p>個人情報保護管理責任者: 院長 福永 真大</p>
                 <p>住所: 〒135-0061 東京都江東区豊洲5-6-36 豊洲プライムスクエア1階</p>
-                <p>電話: 03-XXXX-XXXX（代表）</p>
+                <p>電話: 03-6204-2876（代表）</p>
                 <p>受付時間: 平日 10:00-19:00 / 土日 9:00-17:00（火曜定休）</p>
               </div>
             </div>
@@ -207,7 +243,7 @@ export default function PrivacyPolicyPage() {
           <section className="mt-12 text-right">
             <p className="text-gray-600">
               制定日: 2024年1月1日<br />
-              最終更新日: 2026年2月1日
+              最終更新日: 2026年9月23日
             </p>
           </section>
         </div>
