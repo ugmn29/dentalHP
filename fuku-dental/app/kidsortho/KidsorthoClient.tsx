@@ -7,7 +7,7 @@ import { AuthorBio } from '../../components/AuthorBio';
 import { CheckCircle2, ChevronDown, ChevronUp, Calendar, Phone, ArrowRight, ChevronRight, Smile, Home, Coins, Tv, Sparkles } from 'lucide-react';
 import { PageImage } from '@/components/PageImage';
 import { ClinicHoursTable } from '@/components/ClinicHoursTable';
-import { ConsentAwareMap } from '@/components/ConsentAwareMap';
+import { GoogleMapEmbed } from '@/components/GoogleMapEmbed';
 import { getPriceCategory } from '@/data/price-list';
 import { FaqSection } from '@/components/FaqSection';
 import { WEB_RESERVATION_URL } from '@/lib/reservation';
@@ -362,7 +362,7 @@ export default function KidsOrthoPage() {
                             </div>
                             {/* Map */}
                             <div className="rounded-2xl overflow-hidden shadow-lg aspect-square">
-                                <ConsentAwareMap title="Fデンタルオフィス 豊洲プライムスクエア院 地図" />
+                                <GoogleMapEmbed title="Fデンタルオフィス 豊洲プライムスクエア院 地図" />
                             </div>
                         </div>
 

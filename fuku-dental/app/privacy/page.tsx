@@ -150,7 +150,7 @@ export default function PrivacyPolicyPage() {
               7. Cookieの使用について
             </h2>
             <p className="text-gray-700 leading-relaxed">
-              当院のウェブサイトでは、Google Analytics 4およびMicrosoft Clarityによるアクセス解析について、解析用Cookieを保存しない設定を使用します。Googleマップの表示を選択したことは、お使いの端末に保存されます。
+              当院のウェブサイトでは、Google Analytics 4およびMicrosoft Clarityによるアクセス解析について、解析用Cookieを保存しない設定を使用します。Googleマップなどの外部サービスでは、提供者がCookie等を使用することがあります。
             </p>
           </section>
 
@@ -184,7 +184,7 @@ export default function PrivacyPolicyPage() {
               9. 外部コンテンツについて
             </h2>
             <p className="text-gray-700 leading-relaxed mb-4">
-              「地図を表示」を選択した場合に、Googleマップをページ内に読み込みます。表示時には、IPアドレス、端末・ブラウザ情報などがGoogleへ送信され、GoogleがCookie等を使用することがあります。ページ内に読み込まず、外部サイトで地図を開くこともできます。
+              当院の所在地を案内するため、Googleマップをページ内に表示します。ページを表示した際に、IPアドレス、端末・ブラウザ情報などがGoogleへ送信され、GoogleがCookie等を使用することがあります。
             </p>
             <a className="underline underline-offset-2" href="https://policies.google.com/privacy?hl=ja" target="_blank" rel="noopener noreferrer">
               Google プライバシーポリシー

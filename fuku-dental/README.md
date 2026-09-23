@@ -41,8 +41,7 @@ publication, verification, and recovery steps.
 
 GA4 and Microsoft Clarity run without analytics or advertising cookie storage.
 Microsoft Clarity also uses strict masking in the project settings. Embedded
-Google Maps load only after the visitor selects the contextual map button; that
-choice is stored locally on the visitor's device. Reservation and phone links
-emit `web_reservation_click` and `phone_click` events through
-`components/AnalyticsTracker.tsx`. Meta Pixel and other advertising tags are
-not loaded.
+Google Maps load automatically and may use Google-managed storage. Reservation
+and phone links emit `web_reservation_click` and `phone_click` events
+through `components/AnalyticsTracker.tsx`. Meta Pixel and other advertising
+tags are not loaded.

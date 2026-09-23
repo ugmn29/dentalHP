@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { CalendarCheck, Phone } from 'lucide-react';
 import { FaInstagram, FaYoutube, FaTiktok } from 'react-icons/fa';
 import { ClinicHoursTable } from './ClinicHoursTable';
-import { ConsentAwareMap } from './ConsentAwareMap';
+import { GoogleMapEmbed } from './GoogleMapEmbed';
 import { WEB_RESERVATION_URL } from '@/lib/reservation';
 
 // 新デザイン用カラートークン（HomeClientと同期）
@@ -54,7 +54,7 @@ export const Footer = () => {
                         {/* Map + NAP */}
                         <div>
                             <div className="aspect-video rounded-2xl overflow-hidden" style={{ border: `1px solid ${LINE}` }}>
-                                <ConsentAwareMap title="Fデンタルオフィス 豊洲プライムスクエア院 Googleマップ" />
+                                <GoogleMapEmbed title="Fデンタルオフィス 豊洲プライムスクエア院 Googleマップ" />
                             </div>
                             <div className="mt-6">
                                 <p className="font-serif text-lg mb-2" style={{ color: TEXT }}>Fデンタルオフィス 豊洲プライムスクエア院</p>

@@ -4,7 +4,7 @@ import { MapPin, Phone, Train } from 'lucide-react';
 import { Header } from '../../components/Header';
 import { Footer } from '../../components/Footer';
 import { ClinicHoursTable } from '@/components/ClinicHoursTable';
-import { ConsentAwareMap } from '@/components/ConsentAwareMap';
+import { GoogleMapEmbed } from '@/components/GoogleMapEmbed';
 
 export const metadata: Metadata = {
   title: 'アクセス・診療時間｜豊洲駅徒歩2分｜Fデンタルオフィス 豊洲プライムスクエア院',
@@ -85,7 +85,7 @@ export default function AccessPage() {
             <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-12">
               <section className="rounded-2xl border border-[#E6E3DC] bg-white p-5 shadow-sm md:p-6">
                 <div className="aspect-video overflow-hidden rounded-2xl border border-[#E6E3DC]">
-                  <ConsentAwareMap title="Fデンタルオフィス 豊洲プライムスクエア院 Googleマップ" />
+                  <GoogleMapEmbed title="Fデンタルオフィス 豊洲プライムスクエア院 Googleマップ" />
                 </div>
 
                 <div className="mt-8 space-y-5">
