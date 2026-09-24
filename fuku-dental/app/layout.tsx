@@ -1,36 +1,16 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Noto_Serif_JP, Noto_Sans_JP, Shippori_Mincho } from "next/font/google";
+import "@fontsource-variable/geist/wght.css";
+import "@fontsource-variable/geist-mono/wght.css";
+import "@fontsource-variable/noto-serif-jp/wght.css";
+import "@fontsource-variable/noto-sans-jp/wght.css";
+import "@fontsource/shippori-mincho/400.css";
+import "@fontsource/shippori-mincho/500.css";
+import "@fontsource/shippori-mincho/600.css";
+import "@fontsource-variable/cormorant-garamond/wght.css";
+import "@fontsource-variable/cormorant-garamond/wght-italic.css";
 import { AnalyticsScripts } from "@/components/AnalyticsScripts";
 import { AnalyticsTracker } from "@/components/AnalyticsTracker";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-const notoSerifJP = Noto_Serif_JP({
-  variable: "--font-noto-serif-jp",
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-});
-
-const notoSansJP = Noto_Sans_JP({
-  variable: "--font-noto-sans-jp",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "700"],
-});
-
-const shipporiMincho = Shippori_Mincho({
-  variable: "--font-shippori-mincho",
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-});
 
 export const metadata: Metadata = {
   title: "豊洲駅徒歩2分の歯科・歯医者｜Fデンタルオフィス 豊洲プライムスクエア院",
@@ -259,9 +239,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} ${notoSerifJP.variable} ${notoSansJP.variable} ${shipporiMincho.variable} antialiased`}
-      >
+      <body className="antialiased">
         <AnalyticsScripts />
         <AnalyticsTracker />
         {children}
