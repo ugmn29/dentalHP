@@ -203,7 +203,7 @@ export default function KidsOrthoTimingPage() {
                                             </p>
                                         </div>
                                         <p>
-                                            <span className="font-bold bg-yellow-100">費用：¥132,000〜¥660,000</span><br />
+                                            <span className="font-bold bg-yellow-100">費用：¥132,000〜¥880,000</span><br />
                                             <span className="font-bold bg-yellow-100">期間：2〜3年（1期治療済みの場合は1〜2年）</span>
                                         </p>
                                         <p className="text-sm text-gray-600">
@@ -258,7 +258,7 @@ export default function KidsOrthoTimingPage() {
                                     </h4>
                                     <div className="space-y-4 text-[#5A4D41] leading-loose font-sans">
                                         <p>
-                                            <strong>費用：</strong>小児矯正は¥132,000〜¥660,000<br />
+                                            <strong>費用：</strong>小児矯正は¥132,000〜¥880,000<br />
                                             <strong>期間：</strong>1期1〜2年 → 2期のみ2〜3年<br />
                                             思春期に長期間装置をつける心理的負担も増大します。
                                         </p>

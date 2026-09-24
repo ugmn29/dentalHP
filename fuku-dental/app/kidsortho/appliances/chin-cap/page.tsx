@@ -185,7 +185,7 @@ export default function ChinCapPage() {
                                 <div className="space-y-4">
                                     <div className="flex items-baseline gap-3">
                                         <span className="text-[#8D8070] font-sans">全国の歯科医院での平均的な費用：</span>
-                                        <span className="text-3xl font-bold text-blue-700">¥132,000〜¥660,000</span>
+                                        <span className="text-3xl font-bold text-blue-700">¥132,000〜¥880,000</span>
                                         <span className="text-gray-600">（税込）</span>
                                     </div>
                                     <p className="text-sm text-[#5A4D41] leading-relaxed font-sans">

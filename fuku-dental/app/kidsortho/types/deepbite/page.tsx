@@ -443,7 +443,7 @@ export default function DeepBiteDetailPage() {
                         <TrendingUp size={18} className="text-yellow-600" />
                         <span className="font-bold text-[#5A4D41] text-sm">費用</span>
                       </div>
-                      <p className="text-[#8D8070] text-sm">¥595,000〜¥660,000<br /><span className="text-xs">（装置により異なります）</span></p>
+                      <p className="text-[#8D8070] text-sm">¥660,000〜¥880,000<br /><span className="text-xs">（装置により異なります）</span></p>
                     </div>
                   </div>
                 </div>
