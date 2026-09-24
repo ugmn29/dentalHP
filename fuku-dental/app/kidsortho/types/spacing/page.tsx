@@ -296,7 +296,7 @@ export default function SpacingDetailPage() {
                   </div>
                   <div>
                     <span className="font-bold text-[#5A4D41] block mb-2">費用</span>
-                    <p className="text-sm">¥595,000〜¥660,000<br /><span className="text-xs">（装置により異なります）</span></p>
+                    <p className="text-sm">¥660,000〜¥880,000<br /><span className="text-xs">（装置により異なります）</span></p>
                   </div>
                 </div>
               </div>

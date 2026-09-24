@@ -52,15 +52,17 @@ export const priceCategories: PriceCategory[] = [
   },
   {
     id: 'kids-ortho',
-    title: '小児矯正（3歳〜18歳・6歳臼歯の移動まで）',
+    title: '小児矯正（3歳〜18歳）',
     items: [
       { name: '検査', price: '¥0' },
       { name: '相談', price: '¥0' },
       { name: '調整料', price: '¥0' },
       { name: 'プレオルソ+付加装置', price: '¥132,000' },
       { name: '拡大床', price: '¥495,000' },
-      { name: 'マウスピース', price: '¥595,000' },
-      { name: 'ワイヤー矯正', price: '¥660,000' },
+      { name: 'マウスピース矯正', price: '¥660,000' },
+      { name: 'ワイヤー矯正（混合歯列期）', price: '¥660,000' },
+      { name: 'ワイヤー矯正（永久歯列・6歳臼歯まで）', price: '¥770,000' },
+      { name: 'ワイヤー矯正（永久歯列・7歳臼歯まで）', price: '¥880,000' },
     ],
   },
   {

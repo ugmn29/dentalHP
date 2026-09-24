@@ -28,8 +28,10 @@ const kidsOrthoPriceDescriptions: Record<string, string> = {
     '調整料': '毎回の調整料は無料です。',
     'プレオルソ+付加装置': 'プレオルソと必要な付加装置を含みます。',
     '拡大床': '顎を広げて歯が並ぶスペースを作る装置です。',
-    'マウスピース': 'マウスピース型の装置です。',
-    'ワイヤー矯正': '固定式のワイヤー矯正です。',
+    'マウスピース矯正': 'マウスピース型の装置です。',
+    'ワイヤー矯正（混合歯列期）': '乳歯と永久歯が混在する時期の固定式ワイヤー矯正です。',
+    'ワイヤー矯正（永久歯列・6歳臼歯まで）': '6歳臼歯までを対象とする固定式ワイヤー矯正です。',
+    'ワイヤー矯正（永久歯列・7歳臼歯まで）': '7歳臼歯までを対象とする固定式ワイヤー矯正です。',
 };
 
 export default function KidsOrthoPage() {
@@ -114,7 +116,7 @@ export default function KidsOrthoPage() {
             q: "費用はどのくらいかかりますか？",
             a: (
                 <>
-                    こども矯正の費用は<span className="border-b-2 border-[#FFD700]">¥132,000〜¥660,000</span>です。詳しくは料金表をご覧ください。<span className="border-b-2 border-[#FFD700]">デンタルローンもご利用いただけます</span>。
+                    こども矯正の費用は<span className="border-b-2 border-[#FFD700]">¥132,000〜¥880,000</span>です。詳しくは料金表をご覧ください。<span className="border-b-2 border-[#FFD700]">デンタルローンもご利用いただけます</span>。
                 </>
             )
         },
@@ -637,7 +639,7 @@ export default function KidsOrthoPage() {
                                     description: "矯正治療で歯並びと深い噛み合わせをバランスよく整えました。",
                                     patient: "小児",
                                     treatment: "小児矯正（第1期・第2期治療）",
-                                    cost: "132,000円〜660,000円（税込）",
+                                    cost: "132,000円〜880,000円（税込）",
                                     duration: "約2〜3年（治療期間）／月1回の通院",
                                     risks: "装置による痛み・違和感、発音のしづらさ、むし歯・歯肉炎リスク、歯根吸収、まれに後戻りの可能性",
                                     insurance: "自由診療（保険適用外）"
@@ -1274,7 +1276,7 @@ export default function KidsOrthoPage() {
                                 <div>
                                     <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-l-4 border-[#C5A572] py-3 px-4 mb-4">1期治療</h4>
                                     <p className="text-[#5A4D41] leading-loose mb-3">
-                                        使用する装置により、<span className="font-bold bg-yellow-100">プレオルソ+付加装置 ¥132,000、拡大床 ¥495,000、マウスピース ¥595,000、ワイヤー矯正 ¥660,000</span>です。
+                                        使用する装置により、<span className="font-bold bg-yellow-100">プレオルソ+付加装置 ¥132,000、拡大床 ¥495,000、マウスピース矯正 ¥660,000、ワイヤー矯正（混合歯列期） ¥660,000</span>です。
                                         検査・相談・調整料は<span className="text-[#C5A572] font-bold">¥0</span>です。
                                     </p>
                                     <a href="/kidsortho/cost" className="text-[#C5A572] font-bold hover:underline inline-flex items-center gap-1 text-sm">
@@ -1284,7 +1286,7 @@ export default function KidsOrthoPage() {
                                 <div>
                                     <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-l-4 border-[#C5A572] py-3 px-4 mb-4">2期治療（仕上げの矯正）</h4>
                                     <p className="text-[#5A4D41] leading-loose mb-3">
-                                        全ての歯を動かす治療へ移行する場合は、<span className="font-bold bg-yellow-100">ワイヤー矯正 ¥935,000＋調整料、マウスピース矯正 ¥440,000〜¥880,000（調整料込み）</span>です。
+                                        全ての歯を動かす治療へ移行する場合は、<span className="font-bold bg-yellow-100">ワイヤー矯正（6歳臼歯まで） ¥770,000、ワイヤー矯正（7歳臼歯まで） ¥880,000、マウスピース矯正 ¥660,000</span>です。
                                         装置の種類により費用が異なります。デンタルローンもご利用いただけます。
                                     </p>
                                     <a href="/kidsortho/cost" className="text-[#C5A572] font-bold hover:underline inline-flex items-center gap-1 text-sm">
