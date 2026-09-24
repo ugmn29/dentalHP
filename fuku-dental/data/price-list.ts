@@ -59,7 +59,7 @@ export const priceCategories: PriceCategory[] = [
       { name: '調整料', price: '¥0' },
       { name: 'プレオルソ+付加装置', price: '¥132,000' },
       { name: '拡大床', price: '¥495,000' },
-      { name: 'マウスピース矯正', price: '¥660,000' },
+      { name: 'マウスピース矯正（混合歯列期）', price: '¥660,000' },
       { name: 'ワイヤー矯正（混合歯列期）', price: '¥660,000' },
       { name: 'ワイヤー矯正（永久歯列・6歳臼歯まで）', price: '¥770,000' },
       { name: 'ワイヤー矯正（永久歯列・7歳臼歯まで）', price: '¥880,000' },
