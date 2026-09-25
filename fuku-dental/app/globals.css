@@ -31,6 +31,11 @@ html, body {
 }
 
 body {
+  --font-geist-sans: "Geist Variable", sans-serif;
+  --font-geist-mono: "Geist Mono Variable", monospace;
+  --font-noto-serif-jp: "Noto Serif JP Variable", "Noto Serif JP", serif;
+  --font-noto-sans-jp: "Noto Sans JP Variable", "Noto Sans JP", sans-serif;
+  --font-shippori-mincho: "Shippori Mincho", "Noto Serif JP Variable", serif;
   background: #FAFAF8;
   color: #5A4D41;
   font-family: var(--font-noto-sans-jp), "Noto Sans JP", sans-serif;
