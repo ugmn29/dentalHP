@@ -14,6 +14,22 @@
 /root-canal/case-studies /case-studies#root-canal 301
 /periodontal/case-studies /periodontal 301
 /images/kidsortho/training/posture-improvement-hero /images/kidsortho/training/posture-improvement-hero.jpg 301
+/surgery /concerns/oral-surgery 301
+/orthodontics/duration-矯正治療の期間 /orthodontics/duration 301
+/cavity/stages-虫歯の進行段階 /cavity/stages 301
+/whitening/comparison-他院との比較 /whitening/comparison 301
+/whitening/types-ホワイトニングの種類 /whitening/types 301
+/whitening-ホワイトニングTOP /whitening 301
+/implant/reason /implant/bone-augmentation 301
+
+# 過去の装置詳細URLを実在する関連ページへ統合
+/kidsortho/appliances/mft-trainer /kidsortho/mft-training 301
+/kidsortho/appliances/headgear /kidsortho/appliances 301
+/kidsortho/appliances/quad-helix /kidsortho/appliances 301
+/kidsortho/appliances/lingual-arch /kidsortho/appliances 301
+/kidsortho/appliances/rapid-expander /kidsortho/appliances 301
+/kidsortho/appliances/wire-braces /orthodontics 301
+/kidsortho/appliances/clear-aligner /mouthpiece 301
 
 # ワイルドカードは個別URLより後に評価する
 /kids-preventive/* /oral-education 301

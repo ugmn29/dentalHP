@@ -20,7 +20,7 @@ const fallbackImages: Record<string, string> = {
   '/kidsortho/ceiling-tv': '/images/pages/homepage/豊洲-歯科-天井テレビ付き診療室-正方形.webp',
   '/kidsortho/director-xray': '/images/pages/homepage/豊洲-歯科-原因から考える-根本治療.webp',
   '/facilities/facility4': '/images/pages/homepage/カウンセリングで医師と患者が話している場面.jpg',
-  '/facilities/private-room': '/images/pages/facilities/豊洲-歯科-完全個室-診療室.webp',
+  '/facilities/private-room': '/images/pages/facilities/private-treatment-room.webp',
   '/facilities/dental-ct': '/images/pages/facilities/豊洲-歯科-歯科用CT-精密診断.webp',
   '/facilities/microscope': '/images/pages/facilities/豊洲-歯科-マイクロスコープ-精密治療.webp',
   '/facilities/3d-scanner': '/images/pages/facilities/豊洲-歯科-3Dスキャナー-スキャンイメージ.webp',
