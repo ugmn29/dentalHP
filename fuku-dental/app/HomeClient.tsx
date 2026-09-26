@@ -98,8 +98,8 @@ const homepageImages = {
 
 const heroImages = {
   director: "/images/pages/homepage/hero-square/豊洲-歯科-ヒーロー-院長-福永真大-正方形.webp",
-  privateRoom: "/images/pages/facilities/豊洲-歯科-完全個室-診療室.webp",
-  privateRoomSquare: "/images/pages/homepage/hero-processed/豊洲-歯科-ヒーロー-完全個室-診療室-正方形.webp",
+  privateRoom: "/images/pages/facilities/private-treatment-room.webp",
+  privateRoomSquare: "/images/pages/homepage/hero-processed/private-treatment-room-square.webp",
   microscope: "/images/pages/homepage/hero-square/豊洲-歯科-ヒーロー-マイクロスコープ-精密治療-正方形.webp",
   precisionDoctor: "/images/pages/homepage/豊洲-歯科-自分の歯を大切に-精密治療.webp",
   precisionDoctorSquare: "/images/pages/homepage/hero-processed/豊洲-歯科-ヒーロー-マイクロ覗く院長-正方形.webp",

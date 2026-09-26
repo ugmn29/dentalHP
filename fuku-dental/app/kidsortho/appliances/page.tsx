@@ -130,7 +130,7 @@ export default function KidsOrthoAppliancesPage() {
                 "指しゃぶりが続いている",
                 "発音が不明瞭（さ行・た行など）"
             ],
-            link: "/kidsortho/appliances/mft-trainer",
+            link: "/kidsortho/mft-training",
             usedInClinic: false
         },
         {
@@ -156,7 +156,7 @@ export default function KidsOrthoAppliancesPage() {
                 "抜歯せずに治療したい",
                 "骨格的な問題を早期に解決したい"
             ],
-            link: "/kidsortho/appliances/headgear",
+            link: "/kidsortho/appliances",
             usedInClinic: false
         },
         {
@@ -208,7 +208,7 @@ export default function KidsOrthoAppliancesPage() {
                 "取り外し式装置の装着が困難",
                 "確実な治療効果を求める"
             ],
-            link: "/kidsortho/appliances/quad-helix",
+            link: "/kidsortho/appliances",
             usedInClinic: false
         },
         {
@@ -234,7 +234,7 @@ export default function KidsOrthoAppliancesPage() {
                 "前歯が内側に倒れている",
                 "確実にスペースを維持したい"
             ],
-            link: "/kidsortho/appliances/lingual-arch",
+            link: "/kidsortho/appliances",
             usedInClinic: false
         },
         {
@@ -260,7 +260,7 @@ export default function KidsOrthoAppliancesPage() {
                 "短期間で効果を出したい",
                 "成長期の早い段階（7〜12歳）"
             ],
-            link: "/kidsortho/appliances/rapid-expander",
+            link: "/kidsortho/appliances",
             usedInClinic: false
         },
         {
@@ -286,7 +286,7 @@ export default function KidsOrthoAppliancesPage() {
                 "複雑な歯並びの問題",
                 "確実に歯を動かしたい"
             ],
-            link: "/kidsortho/appliances/wire-braces",
+            link: "/orthodontics",
             usedInClinic: true
         },
         {
@@ -312,7 +312,7 @@ export default function KidsOrthoAppliancesPage() {
                 "スポーツや楽器をしている",
                 "衛生管理を自分でできる"
             ],
-            link: "/kidsortho/appliances/clear-aligner",
+            link: "/mouthpiece",
             usedInClinic: true
         }
     ];

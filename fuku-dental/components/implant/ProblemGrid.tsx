@@ -59,7 +59,7 @@ const problems: Array<{
         <span className="text-[#1c87bd]">できない</span>と言われた
       </>
     ),
-    href: '/implant/reason',
+    href: '/implant/bone-augmentation',
   },
   {
     icon: MessageCircleQuestionMark,
