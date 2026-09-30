@@ -55,6 +55,20 @@ test('decorates HubDent booking URL without forwarding click identifiers', () =>
   assert.equal(decorated.searchParams.has('gclid'), false);
 });
 
+test('decorates a bare HubDent booking URL after a client-side route change', () => {
+  const decorated = new URL(
+    decorateHubDentReservationUrl('https://hubdent.net/web-booking', {
+      utm_source: 'google',
+      utm_medium: 'cpc',
+      utm_campaign: '456',
+    }),
+  );
+
+  assert.equal(decorated.searchParams.get('utm_source'), 'google');
+  assert.equal(decorated.searchParams.get('utm_medium'), 'cpc');
+  assert.equal(decorated.searchParams.get('utm_campaign'), '456');
+});
+
 test('leaves unrelated URLs unchanged', () => {
   const externalUrl = 'https://example.com/?utm_source=google';
   assert.equal(isHubDentReservationUrl(externalUrl), false);
