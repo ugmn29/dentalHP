@@ -44,4 +44,6 @@ Microsoft Clarity also uses strict masking in the project settings. Embedded
 Google Maps load automatically and may use Google-managed storage. Reservation
 and phone links emit `web_reservation_click` and `phone_click` events
 through `components/AnalyticsTracker.tsx`. Meta Pixel and other advertising
-tags are not loaded.
+tags are not loaded. Allowlisted UTM parameters are kept in tab-scoped
+`sessionStorage` and appended to HubDent reservation links; advertising click
+identifiers are neither stored nor forwarded.

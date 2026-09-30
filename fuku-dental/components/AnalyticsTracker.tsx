@@ -3,6 +3,53 @@
 import { Suspense, useEffect, useRef } from 'react';
 import { usePathname, useSearchParams } from 'next/navigation';
 import { trackContactClick, trackPageView } from '@/lib/analytics';
+import {
+  ATTRIBUTION_STORAGE_KEY,
+  decorateHubDentReservationUrl,
+  extractAttributionParams,
+  hasAttributionParams,
+  isHubDentReservationUrl,
+  parseStoredAttribution,
+  type AttributionParams,
+} from '@/lib/reservation-attribution';
+
+function readStoredAttribution(): AttributionParams {
+  try {
+    return parseStoredAttribution(window.sessionStorage.getItem(ATTRIBUTION_STORAGE_KEY));
+  } catch {
+    return {};
+  }
+}
+
+function captureAttribution(search: string): AttributionParams {
+  const incoming = extractAttributionParams(search);
+
+  if (!hasAttributionParams(incoming)) {
+    return readStoredAttribution();
+  }
+
+  try {
+    window.sessionStorage.setItem(ATTRIBUTION_STORAGE_KEY, JSON.stringify(incoming));
+  } catch {
+    // Storage can be unavailable in private browsing; links still work for this page.
+  }
+
+  return incoming;
+}
+
+function decorateReservationAnchors(attribution: AttributionParams) {
+  document.querySelectorAll<HTMLAnchorElement>('a[href]').forEach((anchor) => {
+    const href = anchor.href;
+    if (!isHubDentReservationUrl(href)) {
+      return;
+    }
+
+    const decoratedHref = decorateHubDentReservationUrl(href, attribution);
+    if (decoratedHref !== href) {
+      anchor.href = decoratedHref;
+    }
+  });
+}
 
 function normalizeLabel(anchor: HTMLAnchorElement) {
   const ariaLabel = anchor.getAttribute('aria-label');
@@ -68,6 +115,28 @@ function ContactClickTracker() {
   return null;
 }
 
+function ReservationAttributionTracker() {
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+
+  useEffect(() => {
+    const search = searchParams.toString();
+    const attribution = captureAttribution(search ? `?${search}` : '');
+
+    decorateReservationAnchors(attribution);
+
+    const observer = new MutationObserver(() => {
+      decorateReservationAnchors(attribution);
+    });
+
+    observer.observe(document.body, { childList: true, subtree: true });
+
+    return () => observer.disconnect();
+  }, [pathname, searchParams]);
+
+  return null;
+}
+
 function RouteChangeTracker() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -93,9 +162,9 @@ export function AnalyticsTracker() {
     <>
       <ContactClickTracker />
       <Suspense fallback={null}>
+        <ReservationAttributionTracker />
         <RouteChangeTracker />
       </Suspense>
     </>
   );
 }
-
