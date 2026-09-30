@@ -88,13 +88,23 @@ function ContactClickTracker() {
       }
 
       const rawHref = anchor.getAttribute('href') || '';
-      const resolvedHref = anchor.href || rawHref;
+      let resolvedHref = anchor.href || rawHref;
       const isPhone = rawHref.startsWith('tel:') || resolvedHref.startsWith('tel:');
       const isWebReservation =
         rawHref.includes('hubdent.net/web-booking') || resolvedHref.includes('hubdent.net/web-booking');
 
       if (!isPhone && !isWebReservation) {
         return;
+      }
+
+      if (isWebReservation) {
+        const attribution = captureAttribution(window.location.search);
+        const decoratedHref = decorateHubDentReservationUrl(resolvedHref, attribution);
+
+        if (decoratedHref !== resolvedHref) {
+          anchor.href = decoratedHref;
+          resolvedHref = decoratedHref;
+        }
       }
 
       trackContactClick({
@@ -129,7 +139,12 @@ function ReservationAttributionTracker() {
       decorateReservationAnchors(attribution);
     });
 
-    observer.observe(document.body, { childList: true, subtree: true });
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true,
+      attributes: true,
+      attributeFilter: ['href'],
+    });
 
     return () => observer.disconnect();
   }, [pathname, searchParams]);
