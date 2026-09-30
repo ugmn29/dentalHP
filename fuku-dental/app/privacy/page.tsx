@@ -152,6 +152,9 @@ export default function PrivacyPolicyPage() {
             <p className="text-gray-700 leading-relaxed">
               当院のウェブサイトでは、Google Analytics 4およびMicrosoft Clarityによるアクセス解析について、解析用Cookieを保存しない設定を使用します。Googleマップなどの外部サービスでは、提供者がCookie等を使用することがあります。
             </p>
+            <p className="text-gray-700 leading-relaxed mt-4">
+              広告経由でアクセスした場合、流入元・媒体・キャンペーンを示すUTMパラメータのみを、開いているタブのsessionStorageに一時保存し、WEB予約ページへ引き継ぐことがあります。この情報はタブを閉じると削除され、氏名、電話番号、予約内容、広告クリックIDは含みません。
+            </p>
           </section>
 
           {/* 8. アクセス解析ツールについて */}
@@ -196,7 +199,7 @@ export default function PrivacyPolicyPage() {
               10. 広告効果測定について
             </h2>
             <p className="text-gray-700 leading-relaxed">
-              現在、Meta Pixelなどの広告媒体の計測タグは使用していません。Google Analytics 4でも広告用ストレージ、広告シグナルおよび広告パーソナライズを無効にしています。診療内容、症状、予約内容、患者情報を広告媒体へ送信せず、医療に関する機微な情報を使ったオーディエンス作成は行いません。
+              現在、Meta Pixelなどの広告媒体の計測タグは使用していません。Google Analytics 4でも広告用ストレージ、広告シグナルおよび広告パーソナライズを無効にしています。広告別のWEB予約件数は、個人を識別しないUTMパラメータを予約システムに引き継ぎ、当院内で集計します。診療内容、症状、予約内容、患者情報を広告媒体へ送信せず、医療に関する機微な情報を使ったオーディエンス作成は行いません。
             </p>
           </section>
 
