@@ -1,6 +1,5 @@
 import { Header } from '../../components/Header';
 import { Footer } from '../../components/Footer';
-import { blogCategories } from '../../data/blog-posts';
 import { getArticles } from '../../lib/microcms';
 import BlogClient from './BlogClient';
 
@@ -42,6 +41,10 @@ export default async function BlogPage() {
   const allPosts = cmsPosts.sort(
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
   );
+  const categories = [
+    '全て',
+    ...Array.from(new Set(allPosts.map((post) => post.category))),
+  ];
 
   const breadcrumbJsonLd = {
     '@context': 'https://schema.org',
@@ -59,7 +62,7 @@ export default async function BlogPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       <Header />
-      <BlogClient posts={allPosts} categories={blogCategories} />
+      <BlogClient posts={allPosts} categories={categories} />
       <Footer />
     </div>
   );

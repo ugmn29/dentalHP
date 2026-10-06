@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node scripts/sync-microcms-articles.mjs",
     "build": "next build --webpack",
     "postbuild": "node scripts/write-deployment-metadata.mjs",
     "start": "next start",

@@ -1,7 +1,19 @@
+import { readFile } from "node:fs/promises";
+import path from "node:path";
+
 type MicroCMSConfig = {
   serviceDomain: string;
   apiKey: string;
 };
+
+class MicroCMSRequestError extends Error {
+  constructor(
+    endpointPath: string,
+    readonly status: number
+  ) {
+    super(`microCMS fetch failed: ${endpointPath} ${status}`);
+  }
+}
 
 function getMicroCMSConfig(): MicroCMSConfig | null {
   const serviceDomain =
@@ -47,16 +59,27 @@ async function fetchMicroCMS<T>(
     search ? `?${search}` : ""
   }`;
 
-  const res = await fetch(url, {
-    headers: { "X-MICROCMS-API-KEY": config.apiKey },
-    cache: "no-store",
-  });
+  for (let attempt = 0; attempt < 5; attempt += 1) {
+    const res = await fetch(url, {
+      headers: { "X-MICROCMS-API-KEY": config.apiKey },
+      cache: "no-store",
+    });
 
-  if (!res.ok) {
-    throw new Error(`microCMS fetch failed: ${endpointPath} ${res.status}`);
+    if (res.ok) {
+      return (await res.json()) as T;
+    }
+
+    const retryable = res.status === 429 || res.status >= 500;
+    if (!retryable || attempt === 4) {
+      throw new MicroCMSRequestError(endpointPath, res.status);
+    }
+
+    await new Promise((resolve) =>
+      setTimeout(resolve, 250 * 2 ** attempt)
+    );
   }
 
-  return (await res.json()) as T;
+  return null;
 }
 
 // microCMS の記事型
@@ -86,12 +109,55 @@ export interface MicroCMSListResponse<T> {
   limit: number;
 }
 
+const generatedArticlesPath = path.join(
+  process.cwd(),
+  "generated",
+  "microcms-articles.json"
+);
+let generatedArticlesPromise: Promise<MicroCMSArticle[] | null> | null = null;
+
+async function getGeneratedArticles(): Promise<MicroCMSArticle[] | null> {
+  if (!generatedArticlesPromise) {
+    generatedArticlesPromise = readFile(generatedArticlesPath, "utf8")
+      .then((contents) => JSON.parse(contents) as MicroCMSArticle[])
+      .catch((error: NodeJS.ErrnoException) => {
+        if (error.code === "ENOENT") return null;
+        throw error;
+      });
+  }
+
+  return generatedArticlesPromise;
+}
+
+function articleTimestamp(article: MicroCMSArticle): number {
+  return Date.parse(article.publishedDate || article.publishedAt || "") || 0;
+}
+
 // 記事一覧を取得
 export async function getArticles(
   limit: number = 20,
   offset: number = 0,
   category?: string
 ): Promise<MicroCMSListResponse<MicroCMSArticle>> {
+  const generatedArticles = await getGeneratedArticles();
+  if (generatedArticles) {
+    const filtered = generatedArticles
+      .filter(
+        (article) =>
+          !category ||
+          category === "全て" ||
+          article.category?.includes(category)
+      )
+      .sort((a, b) => articleTimestamp(b) - articleTimestamp(a));
+
+    return {
+      contents: filtered.slice(offset, offset + limit),
+      totalCount: filtered.length,
+      offset,
+      limit,
+    };
+  }
+
   if (!getMicroCMSConfig()) {
     return { contents: [], totalCount: 0, offset, limit };
   }
@@ -125,10 +191,29 @@ export async function getArticles(
 export async function getArticleBySlug(
   slug: string
 ): Promise<MicroCMSArticle | null> {
+  const generatedArticles = await getGeneratedArticles();
+  if (generatedArticles) {
+    return (
+      generatedArticles.find(
+        (article) => article.id === slug || article.slug === slug
+      ) ?? null
+    );
+  }
+
   if (!getMicroCMSConfig()) return null;
 
   try {
-    // まずslugフィールドで検索
+    try {
+      const article = await fetchMicroCMS<MicroCMSArticle>(
+        `articles/${encodeURIComponent(slug)}`
+      );
+      if (article) return article;
+    } catch (error) {
+      if (!(error instanceof MicroCMSRequestError) || error.status !== 404) {
+        throw error;
+      }
+    }
+
     const data = await fetchMicroCMS<
       MicroCMSListResponse<MicroCMSArticle>
     >(
@@ -141,18 +226,21 @@ export async function getArticleBySlug(
     if (data?.contents.length) {
       return data.contents[0];
     }
-
-    // 見つからなければIDで取得
-    return await fetchMicroCMS<MicroCMSArticle>(
-      `articles/${encodeURIComponent(slug)}`
-    );
-  } catch {
+  } catch (error) {
+    console.error("microCMS article fetch error:", error);
     return null;
   }
+
+  return null;
 }
 
 // 全記事のslug一覧を取得（静的パス生成用）
 export async function getAllArticleSlugs(): Promise<string[]> {
+  const generatedArticles = await getGeneratedArticles();
+  if (generatedArticles) {
+    return generatedArticles.map((article) => article.slug || article.id);
+  }
+
   if (!getMicroCMSConfig()) return [];
 
   try {

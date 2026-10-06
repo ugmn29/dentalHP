@@ -8,6 +8,7 @@ tmp/
 .codex/
 .mcp.json
 fuku-dental/.claude/
+fuku-dental/generated/microcms-articles.json
 
 .aidesigner/*
 !.aidesigner/.gitkeep
