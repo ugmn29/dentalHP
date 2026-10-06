@@ -1,8 +1,9 @@
 import { MetadataRoute } from 'next';
+import { getArticles } from '@/lib/microcms';
 
 export const dynamic = 'force-static';
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://fshika.com';
 
   const pages = [
@@ -152,9 +153,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: '/preventive/fluoride', priority: 0.7, changeFrequency: 'monthly' as const },
   ];
 
-  return pages.map((page) => ({
+  const staticPages: MetadataRoute.Sitemap = pages.map((page) => ({
     url: `${baseUrl}${page.url}`,
     changeFrequency: page.changeFrequency,
     priority: page.priority,
   }));
+
+  const { contents: articles } = await getArticles(100);
+  const articlePages: MetadataRoute.Sitemap = articles.map((article) => ({
+    url: `${baseUrl}/blog/${encodeURIComponent(article.slug || article.id)}`,
+    lastModified: article.revisedAt || article.publishedAt,
+    changeFrequency: 'monthly',
+    priority: 0.6,
+  }));
+
+  return [...staticPages, ...articlePages];
 }

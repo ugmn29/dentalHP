@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Calendar, ChevronRight } from 'lucide-react';
 import type { BlogPost } from './page';
 import { ReservationCta } from '@/components/ReservationCta';
@@ -10,75 +10,13 @@ interface Props {
   categories: string[];
 }
 
-type MicroCMSArticle = {
-  id: string;
-  title?: string;
-  body?: string;
-  excerpt?: string;
-  thumbnail?: { url?: string };
-  category?: string[];
-  slug?: string;
-  publishedDate?: string;
-  publishedAt?: string;
-};
-
-function articleToPost(article: MicroCMSArticle): BlogPost {
-  const plainBody = (article.body || '').replace(/<[^>]+>/g, '');
-  return {
-    id: article.id,
-    title: article.title || '無題',
-    category: Array.isArray(article.category)
-      ? article.category[0] || 'お知らせ'
-      : 'お知らせ',
-    date: article.publishedDate || article.publishedAt?.split('T')[0] || '',
-    thumbnail: article.thumbnail?.url,
-    summary: article.excerpt || (plainBody ? plainBody.slice(0, 100) + '...' : ''),
-    slug: article.slug || article.id,
-    source: 'microcms',
-  };
-}
-
 export default function BlogClient({ posts, categories }: Props) {
   const [selectedCategory, setSelectedCategory] = useState('全て');
-  const [runtimePosts, setRuntimePosts] = useState(posts);
-
-  useEffect(() => {
-    const serviceDomain = process.env.NEXT_PUBLIC_MICROCMS_SERVICE_DOMAIN || '';
-    const apiKey = process.env.NEXT_PUBLIC_MICROCMS_API_KEY || '';
-    if (!serviceDomain || !apiKey) return;
-
-    const params = new URLSearchParams({
-      limit: '50',
-      orders: '-publishedDate,-publishedAt',
-      cacheBust: String(Date.now()),
-    });
-
-    fetch(`https://${serviceDomain}.microcms.io/api/v1/articles?${params.toString()}`, {
-      headers: { 'X-MICROCMS-API-KEY': apiKey },
-      cache: 'no-store',
-    })
-      .then((res) => {
-        if (!res.ok) throw new Error('microCMS articles fetch failed');
-        return res.json();
-      })
-      .then((data) => {
-        const nextPosts = (data.contents || [])
-          .map(articleToPost)
-          .sort(
-            (a: BlogPost, b: BlogPost) =>
-              new Date(b.date).getTime() - new Date(a.date).getTime()
-          );
-        if (nextPosts.length > 0) setRuntimePosts(nextPosts);
-      })
-      .catch((error) => {
-        console.error('microCMS runtime fetch error:', error);
-      });
-  }, []);
 
   const filteredPosts =
     selectedCategory === '全て'
-      ? runtimePosts
-      : runtimePosts.filter((p) => p.category === selectedCategory);
+      ? posts
+      : posts.filter((p) => p.category === selectedCategory);
 
   return (
     <main className="pt-0 pb-2 overflow-x-hidden" style={{ wordBreak: 'normal', overflowWrap: 'anywhere' }}>
@@ -122,15 +60,11 @@ export default function BlogClient({ posts, categories }: Props) {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 max-w-7xl mx-auto">
             {filteredPosts.map((post) => {
-              const href =
-                post.source === 'microcms'
-                  ? `/blog/article?id=${post.id}`
-                  : undefined;
-              const Tag = href ? 'a' : 'div';
+              const href = `/blog/${encodeURIComponent(post.slug || post.id)}`;
               return (
-                <Tag
+                <a
                   key={`${post.source}-${post.id}`}
-                  {...(href ? { href } : {})}
+                  href={href}
                   className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden group block border border-[#E8E0D4]"
                 >
                   {/* Thumbnail */}
@@ -181,7 +115,7 @@ export default function BlogClient({ posts, categories }: Props) {
                       </div>
                     )}
                   </div>
-                </Tag>
+                </a>
               );
             })}
           </div>
