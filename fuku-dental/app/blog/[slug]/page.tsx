@@ -30,7 +30,19 @@ function articleDescription(article: MicroCMSArticle): string {
 }
 
 function articleDate(article: MicroCMSArticle): string {
-  return article.publishedDate || article.publishedAt?.split('T')[0] || '';
+  return article.publishedDate || article.publishedAt || '';
+}
+
+function displayArticleDate(value: string): string {
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return value;
+
+  return new Intl.DateTimeFormat('ja-JP', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    timeZone: 'Asia/Tokyo',
+  }).format(date);
 }
 
 function articleCategory(article: MicroCMSArticle): string {
@@ -125,6 +137,7 @@ export default async function BlogArticlePage({
   )}`;
   const description = articleDescription(article);
   const date = articleDate(article);
+  const displayDate = displayArticleDate(date);
   const category = articleCategory(article);
   const structuredData = {
     '@context': 'https://schema.org',
@@ -199,7 +212,7 @@ export default async function BlogArticlePage({
                 </span>
                 <div className="flex items-center gap-2 text-sm text-[#8D8070]">
                   <Calendar size={16} />
-                  <time dateTime={date}>{date}</time>
+                  <time dateTime={date}>{displayDate}</time>
                 </div>
               </div>
 
