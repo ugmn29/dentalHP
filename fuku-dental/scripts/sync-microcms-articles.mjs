@@ -10,13 +10,10 @@ const apiKey =
   process.env.NEXT_PUBLIC_MICROCMS_API_KEY ||
   '';
 
-if (!serviceDomain || !apiKey) {
-  throw new Error(
-    'microCMS build credentials are missing. Set MICROCMS_SERVICE_DOMAIN and MICROCMS_API_KEY.'
-  );
-}
-
-const apiUrl = `https://${serviceDomain}.microcms.io/api/v1/articles`;
+const hasCredentials = Boolean(serviceDomain && apiKey);
+const apiUrl = hasCredentials
+  ? `https://${serviceDomain}.microcms.io/api/v1/articles`
+  : '';
 const limit = 100;
 
 async function fetchPage(offset) {
@@ -52,15 +49,37 @@ async function fetchPage(offset) {
 }
 
 const articles = [];
-let offset = 0;
-let totalCount = 0;
 
-do {
-  const page = await fetchPage(offset);
-  articles.push(...page.contents);
-  totalCount = page.totalCount;
-  offset += page.contents.length;
-} while (offset < totalCount);
+if (hasCredentials) {
+  let offset = 0;
+  let totalCount = 0;
+
+  do {
+    const page = await fetchPage(offset);
+    articles.push(...page.contents);
+    totalCount = page.totalCount;
+    offset += page.contents.length;
+  } while (offset < totalCount);
+} else if (process.env.GITHUB_ACTIONS === 'true') {
+  const timestamp = '2026-01-01T00:00:00.000Z';
+  articles.push({
+    id: 'build-validation',
+    title: 'Build validation article',
+    body: '<p>This fixture is used only for GitHub Actions build validation.</p>',
+    excerpt: 'GitHub Actions build validation fixture.',
+    category: ['お知らせ'],
+    slug: 'build-validation',
+    publishedDate: '2026-01-01',
+    createdAt: timestamp,
+    updatedAt: timestamp,
+    publishedAt: timestamp,
+    revisedAt: timestamp,
+  });
+} else {
+  throw new Error(
+    'microCMS build credentials are missing. Set MICROCMS_SERVICE_DOMAIN and MICROCMS_API_KEY.'
+  );
+}
 
 const outputDirectory = path.join(process.cwd(), 'generated');
 const outputPath = path.join(outputDirectory, 'microcms-articles.json');
@@ -70,4 +89,5 @@ await mkdir(outputDirectory, { recursive: true });
 await writeFile(temporaryPath, JSON.stringify(articles), 'utf8');
 await rename(temporaryPath, outputPath);
 
-console.log(`microCMS article snapshot: ${articles.length} articles`);
+const source = hasCredentials ? 'microCMS' : 'GitHub Actions fixture';
+console.log(`microCMS article snapshot: ${articles.length} articles (${source})`);
