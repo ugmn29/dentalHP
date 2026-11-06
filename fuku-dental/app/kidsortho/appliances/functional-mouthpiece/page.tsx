@@ -33,7 +33,7 @@ export default function FunctionalMouthpiecePage() {
                     label="機能的マウスピース装置"
                     title="プレオルソ・マイオブレース等"
                     accent="口呼吸・舌癖から整える装置"
-                    lead="プレオルソ・T4K・マイオブレースなど、柔らかいシリコン製のマウスピースで口呼吸・舌癖を改善しながら歯並びを整える治療法です。"
+                    lead="プレオルソ・T4K・マイオブレースなど、素材や硬さの異なるマウスピースを使い、お口の機能と歯並びに配慮する治療法です。"
                     imagePath="/kidsortho/appliances/functional-mouthpiece"
                     imageAlt="機能的マウスピース装置の比較"
                     current="機能的マウスピース装置"
@@ -56,7 +56,7 @@ export default function FunctionalMouthpiecePage() {
                             <div className="w-16 h-0.5 bg-[#C5A572] mb-8"></div>
 
                             <p className="text-lg text-[#5A4D41] leading-relaxed mb-6 font-sans">
-                                機能的マウスピース装置は、<span className="font-bold text-[#C5A572]">柔らかいシリコン製のマウスピース</span>を使用して、歯並びの改善と同時に口の周りの筋肉（舌・唇・頬）の正しい使い方を訓練する装置です。
+                                機能的マウスピース装置は、<span className="font-bold text-[#C5A572]">製品ごとに素材や硬さの異なるマウスピース</span>を使用して、歯並びの改善と同時に口の周りの筋肉（舌・唇・頬）の正しい使い方を訓練する装置です。プレオルソはポリウレタン製です。
                             </p>
                             <p className="text-lg text-[#5A4D41] leading-relaxed mb-10 font-sans">
                                 従来の矯正装置と異なり、<span className="font-bold text-[#C5A572]">歯を動かすだけでなく、不正咬合の根本原因となる口呼吸・舌癖・悪い嚥下習慣を改善</span>することで、後戻りしにくい安定した歯並びを目指します。
@@ -282,7 +282,7 @@ export default function FunctionalMouthpiecePage() {
                             <ul className="space-y-3 ml-4 mb-10 text-[#8D8070] leading-loose font-sans">
                                 <li className="flex items-start gap-3">
                                     <span className="text-[#C5A572] mt-1 flex-shrink-0">✓</span>
-                                    <span><strong className="text-[#5A4D41]">痛みがほとんどない：</strong>柔らかいシリコン製で違和感が少ない</span>
+                                    <span><strong className="text-[#5A4D41]">取り外し式：</strong>痛みや違和感がある場合は、使用を中止して調整を相談できます</span>
                                 </li>
                                 <li className="flex items-start gap-3">
                                     <span className="text-[#C5A572] mt-1 flex-shrink-0">✓</span>
@@ -516,7 +516,7 @@ export default function FunctionalMouthpiecePage() {
                                     </div>
                                     <div className="text-[#8D8070] leading-loose font-sans">
                                         <p className="mb-3">
-                                            <strong className="text-[#C5A572]">A.</strong> 柔らかいシリコン製のため、<strong>ほとんど痛みはありません</strong>。装着直後は少し違和感がありますが、数日で慣れます。ワイヤー矯正のような強い痛みはないので、お子さまの負担が少ない治療法です。
+                                            <strong className="text-[#C5A572]">A.</strong> プレオルソはポリウレタン製です。装着直後に痛み・違和感・粘膜への刺激が出ることがあり、感じ方には個人差があります。強い痛みや傷がある場合は無理に使用せず、装置の調整についてご相談ください。
                                         </p>
                                         <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
                                             <p className="text-sm text-[#5A4D41] leading-relaxed">

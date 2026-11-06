@@ -40,7 +40,7 @@ export default function KidsOrthoAppliancesPage() {
             imageId: "preortho-blue",
             shortDesc: "マウスピース型の筋機能訓練装置",
             features: [
-                "柔らかいシリコン製で違和感が少ない",
+                "柔軟性のあるポリウレタン製",
                 "口呼吸から鼻呼吸への改善",
                 "舌の位置を正しく誘導",
                 "日中2時間＋就寝時の装着が目安",
