@@ -10,15 +10,15 @@ import { RelatedPagesSection } from '@/components/RelatedPagesSection';
 import { orthodonticsRelatedPages } from '@/data/related-pages';
 
 export const metadata: Metadata = {
-  title: '矯正治療の種類｜ワイヤー・マウスピース・裏側矯正の比較｜Fデンタルオフィス 豊洲プライムスクエア院',
-  description: '豊洲の歯医者 Fデンタルオフィス 豊洲プライムスクエア院が矯正治療の種類を詳しく解説。ワイヤー矯正、マウスピース矯正、裏側矯正、部分矯正など、それぞれの特徴・費用・治療期間を比較。あなたに最適な矯正方法が見つかります。',
-  keywords: '矯正,種類,ワイヤー矯正,マウスピース矯正,インビザライン,裏側矯正,部分矯正,比較,Fデンタルオフィス 豊洲プライムスクエア院',
+  title: '矯正治療の種類｜ワイヤー・マウスピース・部分矯正の比較｜Fデンタルオフィス 豊洲プライムスクエア院',
+  description: '豊洲の歯医者 Fデンタルオフィス 豊洲プライムスクエア院が矯正治療の種類を詳しく解説。ワイヤー矯正、マウスピース矯正、部分矯正など、それぞれの特徴・費用・治療期間を比較。あなたに最適な矯正方法が見つかります。',
+  keywords: '矯正,種類,ワイヤー矯正,マウスピース矯正,インビザライン,部分矯正,比較,Fデンタルオフィス 豊洲プライムスクエア院',
   alternates: {
     canonical: 'https://fshika.com/orthodontics/types',
   },
   openGraph: {
-    title: '矯正治療の種類｜ワイヤー・マウスピース・裏側矯正の比較｜Fデンタルオフィス 豊洲プライムスクエア院',
-    description: '豊洲の歯医者 Fデンタルオフィス 豊洲プライムスクエア院が矯正治療の種類を詳しく解説。ワイヤー・マウスピース・裏側・部分矯正の特徴・費用・治療期間を比較。',
+    title: '矯正治療の種類｜ワイヤー・マウスピース・部分矯正の比較｜Fデンタルオフィス 豊洲プライムスクエア院',
+    description: '豊洲の歯医者 Fデンタルオフィス 豊洲プライムスクエア院が矯正治療の種類を詳しく解説。ワイヤー・マウスピース・部分矯正の特徴・費用・治療期間を比較。',
     type: 'website',
     locale: 'ja_JP',
     url: 'https://fshika.com/orthodontics/types',
@@ -72,7 +72,7 @@ export default function OrthodonticsTypesPage() {
                 あなたに最適な矯正治療を見つけましょう
               </h2>
               <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
-                矯正治療には、ワイヤー矯正、マウスピース矯正、裏側矯正など、様々な種類があります。<br />
+                矯正治療には、ワイヤー矯正、マウスピース矯正、部分矯正など、様々な種類があります。<br />
                 それぞれにメリット・デメリットがあり、歯並びの状態やライフスタイル、ご予算によって最適な治療法は異なります。<br />
                 当院では、患者様一人ひとりに最適な矯正方法をご提案いたします。
               </p>
@@ -298,116 +298,7 @@ export default function OrthodonticsTypesPage() {
           </div>
         </section>
 
-        {/* Type 3: Lingual Braces */}
-        <section className="py-2">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
-              <div className="md:flex">
-                <div className="md:w-2/5 bg-gradient-to-br from-purple-100 to-pink-100 p-12 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="text-7xl mb-6">👄</div>
-                    <h3 className="text-2xl font-bold text-gray-800 mb-2">裏側矯正</h3>
-                    <p className="text-gray-600 text-sm">外から見えない矯正法</p>
-                  </div>
-                </div>
-                <div className="md:w-3/5 p-8 md:p-12">
-                  <div className="flex items-center mb-6">
-                    <span className="bg-purple-100 text-purple-700 text-xs font-bold px-3 py-1 rounded-full">
-                      舌側矯正
-                    </span>
-                    <span className="ml-3 text-sm text-gray-500">Lingual Braces</span>
-                  </div>
-                  <h3 className="text-3xl font-bold mb-6 text-gray-900">
-                    歯の裏側に装置をつける見えない矯正
-                  </h3>
-                  <p className="text-gray-700 mb-6 leading-relaxed">
-                    歯の裏側（舌側）にブラケットとワイヤーを装着する矯正法です。
-                    <span className="font-bold text-purple-700">正面からは装置がまったく見えない</span>ため、
-                    矯正していることを周囲に気づかれたくない方に最適です。
-                  </p>
-
-                  <div className="grid md:grid-cols-2 gap-6 mb-8">
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-3 flex items-center">
-                        <CheckCircle className="w-5 h-5 text-green-600 mr-2" />
-                        メリット
-                      </h4>
-                      <ul className="space-y-2 text-sm text-gray-700">
-                        <li className="flex items-start">
-                          <span className="text-purple-600 mr-2">●</span>
-                          <span>正面から装置が見えない</span>
-                        </li>
-                        <li className="flex items-start">
-                          <span className="text-purple-600 mr-2">●</span>
-                          <span>ワイヤー矯正と同等の効果</span>
-                        </li>
-                        <li className="flex items-start">
-                          <span className="text-purple-600 mr-2">●</span>
-                          <span>前歯が引っ込みやすい</span>
-                        </li>
-                        <li className="flex items-start">
-                          <span className="text-purple-600 mr-2">●</span>
-                          <span>表側のエナメル質を傷つけない</span>
-                        </li>
-                      </ul>
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-3 flex items-center">
-                        <XCircle className="w-5 h-5 text-gray-400 mr-2" />
-                        デメリット
-                      </h4>
-                      <ul className="space-y-2 text-sm text-gray-700">
-                        <li className="flex items-start">
-                          <span className="text-gray-400 mr-2">●</span>
-                          <span>費用が高額</span>
-                        </li>
-                        <li className="flex items-start">
-                          <span className="text-gray-400 mr-2">●</span>
-                          <span>舌に違和感や痛みが出やすい</span>
-                        </li>
-                        <li className="flex items-start">
-                          <span className="text-gray-400 mr-2">●</span>
-                          <span>発音しにくくなることがある</span>
-                        </li>
-                        <li className="flex items-start">
-                          <span className="text-gray-400 mr-2">●</span>
-                          <span>歯磨きがさらに難しい</span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-3 gap-4 bg-purple-50 rounded-xl p-6">
-                    <div className="text-center">
-                      <Clock className="w-6 h-6 text-purple-600 mx-auto mb-2" />
-                      <div className="text-xs text-gray-600 mb-1">治療期間</div>
-                      <div className="font-bold text-gray-900">2〜3年</div>
-                    </div>
-                    <div className="text-center">
-                      <DollarSign className="w-6 h-6 text-purple-600 mx-auto mb-2" />
-                      <div className="text-xs text-gray-600 mb-1">費用目安</div>
-                      <div className="font-bold text-gray-900">要相談</div>
-                    </div>
-                    <div className="text-center">
-                      <Eye className="w-6 h-6 text-purple-600 mx-auto mb-2" />
-                      <div className="text-xs text-gray-600 mb-1">目立ちにくさ</div>
-                      <div className="font-bold text-gray-900">★★★★★</div>
-                    </div>
-                  </div>
-
-                  <div className="mt-6 p-4 bg-purple-50 border-l-4 border-purple-600 rounded">
-                    <p className="text-sm text-gray-700">
-                      <span className="font-bold text-purple-900">こんな方におすすめ：</span>
-                      絶対に装置を見せたくない方、人前に出る職業の方、結婚式などのイベントを控えている方
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Type 4: Partial Orthodontics */}
+        {/* Type 3: Partial Orthodontics */}
         <section className="py-2 bg-gradient-to-br from-green-50 to-emerald-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
@@ -530,7 +421,6 @@ export default function OrthodonticsTypesPage() {
                     <th className="p-4 text-left font-bold">比較項目</th>
                     <th className="p-4 text-center font-bold bg-amber-700">ワイヤー矯正</th>
                     <th className="p-4 text-center font-bold">マウスピース矯正</th>
-                    <th className="p-4 text-center font-bold">裏側矯正</th>
                     <th className="p-4 text-center font-bold">部分矯正</th>
                   </tr>
                 </thead>
@@ -539,28 +429,24 @@ export default function OrthodonticsTypesPage() {
                     <td className="p-4 font-semibold text-gray-900">目立ちにくさ</td>
                     <td className="p-4 text-center">★★☆☆☆</td>
                     <td className="p-4 text-center bg-blue-50">★★★★★</td>
-                    <td className="p-4 text-center bg-purple-50">★★★★★</td>
                     <td className="p-4 text-center">★★☆☆☆</td>
                   </tr>
                   <tr className="hover:bg-amber-50 transition-colors">
                     <td className="p-4 font-semibold text-gray-900">適応範囲</td>
                     <td className="p-4 text-center bg-amber-50">★★★★★<br /><span className="text-xs text-gray-600">全症例対応</span></td>
                     <td className="p-4 text-center">★★★☆☆<br /><span className="text-xs text-gray-600">軽度〜中度</span></td>
-                    <td className="p-4 text-center">★★★★☆<br /><span className="text-xs text-gray-600">ほぼ全症例</span></td>
                     <td className="p-4 text-center">★★☆☆☆<br /><span className="text-xs text-gray-600">軽度のみ</span></td>
                   </tr>
                   <tr className="hover:bg-amber-50 transition-colors">
                     <td className="p-4 font-semibold text-gray-900">治療期間</td>
                     <td className="p-4 text-center">2〜3年</td>
                     <td className="p-4 text-center">1〜2年</td>
-                    <td className="p-4 text-center">2〜3年</td>
                     <td className="p-4 text-center bg-green-50">3ヶ月〜1年</td>
                   </tr>
                   <tr className="hover:bg-amber-50 transition-colors">
                     <td className="p-4 font-semibold text-gray-900">費用目安</td>
                     <td className="p-4 text-center bg-amber-50">¥935,000＋調整料</td>
                     <td className="p-4 text-center">¥440,000〜¥880,000<br /><span className="text-xs text-gray-600">調整料込み</span></td>
-                    <td className="p-4 text-center">要相談</td>
                     <td className="p-4 text-center bg-green-50">要相談</td>
                   </tr>
                   <tr className="hover:bg-amber-50 transition-colors">
@@ -568,20 +454,17 @@ export default function OrthodonticsTypesPage() {
                     <td className="p-4 text-center">不可</td>
                     <td className="p-4 text-center bg-blue-50">可能</td>
                     <td className="p-4 text-center">不可</td>
-                    <td className="p-4 text-center">不可</td>
                   </tr>
                   <tr className="hover:bg-amber-50 transition-colors">
                     <td className="p-4 font-semibold text-gray-900">痛み・違和感</td>
                     <td className="p-4 text-center">やや強い</td>
                     <td className="p-4 text-center bg-blue-50">少ない</td>
-                    <td className="p-4 text-center">強い</td>
                     <td className="p-4 text-center">少ない</td>
                   </tr>
                   <tr className="hover:bg-amber-50 transition-colors">
                     <td className="p-4 font-semibold text-gray-900">歯磨きのしやすさ</td>
                     <td className="p-4 text-center">難しい</td>
                     <td className="p-4 text-center bg-blue-50">普段通り</td>
-                    <td className="p-4 text-center">かなり難しい</td>
                     <td className="p-4 text-center">難しい</td>
                   </tr>
                 </tbody>
@@ -593,7 +476,6 @@ export default function OrthodonticsTypesPage() {
               {[
                 { name: 'ワイヤー矯正', color: 'amber', data: { visible: '★★☆☆☆', range: '★★★★★', period: '2〜3年', cost: '¥935,000＋調整料', remove: '不可', pain: 'やや強い', clean: '難しい' } },
                 { name: 'マウスピース矯正', color: 'blue', data: { visible: '★★★★★', range: '★★★☆☆', period: '1〜2年', cost: '¥440,000〜¥880,000（調整料込）', remove: '可能', pain: '少ない', clean: '普段通り' } },
-                { name: '裏側矯正', color: 'purple', data: { visible: '★★★★★', range: '★★★★☆', period: '2〜3年', cost: '要相談', remove: '不可', pain: '強い', clean: 'かなり難しい' } },
                 { name: '部分矯正', color: 'green', data: { visible: '★★☆☆☆', range: '★★☆☆☆', period: '3ヶ月〜1年', cost: '要相談', remove: '不可', pain: '少ない', clean: '難しい' } },
               ].map((type, index) => (
                 <div key={index} className={`bg-${type.color}-50 border-2 border-${type.color}-200 rounded-2xl p-6 shadow-lg`}>
@@ -674,18 +556,6 @@ export default function OrthodonticsTypesPage() {
                 </summary>
                 <div className="p-6 pt-0 text-gray-700 leading-relaxed border-t">
                   前歯の軽いガタガタや隙間であれば、部分矯正で改善できる可能性があります。ただし、噛み合わせに問題がある場合や、奥歯にも問題がある場合は、全体矯正が必要になることもあります。まずは検査を受けて、部分矯正が適応できるかどうかを判断させていただきます。
-                </div>
-              </details>
-
-              <details className="group bg-white rounded-xl shadow-md overflow-hidden">
-                <summary className="flex items-center justify-between cursor-pointer p-6 hover:bg-amber-50 transition-colors">
-                  <span className="font-semibold text-lg text-gray-900">
-                    裏側矯正は誰でもできますか？
-                  </span>
-                  <ChevronRight className="w-5 h-5 text-amber-600 group-open:rotate-90 transition-transform" />
-                </summary>
-                <div className="p-6 pt-0 text-gray-700 leading-relaxed border-t">
-                  ほとんどの症例で裏側矯正は可能ですが、歯の大きさや形状、噛み合わせの状態によっては適応が難しい場合もあります。また、舌に装置が当たることによる違和感や発音への影響を気にされる方もいらっしゃいます。まずはご相談いただき、適応可能かどうかを診断させていただきます。
                 </div>
               </details>
             </div>
