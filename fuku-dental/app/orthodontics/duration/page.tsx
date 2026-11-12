@@ -87,7 +87,7 @@ export default function OrthodonticsDurationPage() {
               矯正方法別の治療期間
             </h2>
 
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8 mb-12">
               {/* Wire Braces */}
               <div className="bg-white rounded-2xl shadow-xl overflow-hidden border-t-4 border-amber-600">
                 <div className="bg-gradient-to-br from-amber-100 to-yellow-100 p-8">
@@ -178,53 +178,6 @@ export default function OrthodonticsDurationPage() {
                   <div className="mt-6 p-4 bg-yellow-50 border-l-4 border-yellow-600 rounded">
                     <p className="text-sm text-gray-700">
                       <span className="font-bold">重要：</span>1日20〜22時間の装着が必須。装着時間が短いと期間が延びます。
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Lingual Braces */}
-              <div className="bg-white rounded-2xl shadow-xl overflow-hidden border-t-4 border-purple-600">
-                <div className="bg-gradient-to-br from-purple-100 to-pink-100 p-8">
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex items-center">
-                      <div className="text-5xl mr-4">👄</div>
-                      <h3 className="text-2xl font-bold text-gray-900">裏側矯正</h3>
-                    </div>
-                  </div>
-                </div>
-                <div className="p-8">
-                  <div className="text-center mb-6 bg-purple-50 rounded-xl p-6">
-                    <div className="text-sm text-gray-600 mb-2">平均治療期間</div>
-                    <div className="text-5xl font-bold text-purple-600 mb-2">2〜3年</div>
-                    <div className="text-sm text-gray-500">（24〜36ヶ月）</div>
-                  </div>
-                  <div className="space-y-4">
-                    <div className="flex items-start">
-                      <Clock className="w-5 h-5 text-purple-600 mr-3 mt-1 flex-shrink-0" />
-                      <div>
-                        <div className="font-semibold text-gray-900 mb-1">動的治療期間</div>
-                        <div className="text-sm text-gray-700">装置をつけて歯を動かす期間：2〜3年</div>
-                      </div>
-                    </div>
-                    <div className="flex items-start">
-                      <Clock className="w-5 h-5 text-purple-600 mr-3 mt-1 flex-shrink-0" />
-                      <div>
-                        <div className="font-semibold text-gray-900 mb-1">保定期間</div>
-                        <div className="text-sm text-gray-700">後戻りを防ぐ期間：2年以上</div>
-                      </div>
-                    </div>
-                    <div className="flex items-start">
-                      <Calendar className="w-5 h-5 text-purple-600 mr-3 mt-1 flex-shrink-0" />
-                      <div>
-                        <div className="font-semibold text-gray-900 mb-1">通院頻度</div>
-                        <div className="text-sm text-gray-700">月1回程度（調整のため）</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="mt-6 p-4 bg-purple-50 border-l-4 border-purple-600 rounded">
-                    <p className="text-sm text-gray-700">
-                      <span className="font-bold">注意：</span>表側矯正よりやや期間が長くなる場合があります。
                     </p>
                   </div>
                 </div>

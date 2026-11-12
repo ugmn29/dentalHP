@@ -11,14 +11,14 @@ import { orthodonticsRelatedPages } from '@/data/related-pages';
 
 export const metadata: Metadata = {
   title: '大人の矯正治療｜何歳からでも始められる歯列矯正｜Fデンタルオフィス 豊洲プライムスクエア院',
-  description: '豊洲の歯医者 Fデンタルオフィス 豊洲プライムスクエア院の大人の矯正治療。40代・50代から始める方も増加中。目立たないマウスピース矯正や裏側矯正で、仕事や生活に支障なく美しい歯並びを手に入れられます。',
+  description: '豊洲の歯医者 Fデンタルオフィス 豊洲プライムスクエア院の大人の矯正治療。40代・50代から始める方も増加中。目立たないマウスピース矯正で、仕事や生活に支障なく美しい歯並びを手に入れられます。',
   keywords: '大人,矯正,成人矯正,何歳まで,40代,50代,社会人,目立たない,Fデンタルオフィス 豊洲プライムスクエア院',
   alternates: {
     canonical: 'https://fshika.com/orthodontics/adult',
   },
   openGraph: {
     title: '大人の矯正治療｜何歳からでも始められる歯列矯正｜Fデンタルオフィス 豊洲プライムスクエア院',
-    description: '豊洲の歯医者 Fデンタルオフィス 豊洲プライムスクエア院の大人の矯正治療。40代・50代から始める方も増加中。目立たないマウスピース矯正や裏側矯正で美しい歯並びに。',
+    description: '豊洲の歯医者 Fデンタルオフィス 豊洲プライムスクエア院の大人の矯正治療。40代・50代から始める方も増加中。目立たないマウスピース矯正で美しい歯並びに。',
     type: 'website',
     locale: 'ja_JP',
     url: 'https://fshika.com/orthodontics/adult',
@@ -273,7 +273,7 @@ export default function OrthodonticsAdultPage() {
                 </li>
                 <li className="flex items-start">
                   <span className="text-amber-600 mr-2">●</span>
-                  <span><span className="font-bold">審美的な選択肢が豊富：</span>目立たないマウスピース矯正や裏側矯正など、大人向けの治療法が充実</span>
+                  <span><span className="font-bold">審美的な選択肢が豊富：</span>マウスピース矯正や審美ブラケットなど、目立ちにくさに配慮した大人向けの治療法が充実</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-amber-600 mr-2">●</span>
@@ -290,7 +290,7 @@ export default function OrthodonticsAdultPage() {
             <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">
               大人におすすめの矯正方法
             </h2>
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="max-w-3xl mx-auto">
               {/* Invisalign */}
               <div className="bg-white rounded-2xl shadow-xl overflow-hidden border-t-4 border-green-600">
                 <div className="bg-gradient-to-br from-green-100 to-emerald-100 p-8">
@@ -340,55 +340,6 @@ export default function OrthodonticsAdultPage() {
                   </div>
                 </div>
               </div>
-
-              {/* Lingual Braces */}
-              <div className="bg-white rounded-2xl shadow-xl overflow-hidden border-t-4 border-purple-600">
-                <div className="bg-gradient-to-br from-purple-100 to-pink-100 p-8">
-                  <div className="flex items-center justify-between mb-4">
-                    <div>
-                      <div className="text-5xl mb-2">👄</div>
-                      <h3 className="text-2xl font-bold text-gray-900">裏側矯正</h3>
-                      <p className="text-sm text-gray-600">舌側矯正</p>
-                    </div>
-                    <div className="bg-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full">
-                      完全に見えない
-                    </div>
-                  </div>
-                </div>
-                <div className="p-8">
-                  <div className="mb-6">
-                    <h4 className="font-bold text-gray-900 mb-3">こんな大人におすすめ</h4>
-                    <ul className="space-y-2 text-sm text-gray-700">
-                      <li className="flex items-start">
-                        <CheckCircle className="w-4 h-4 text-purple-600 mr-2 mt-0.5 flex-shrink-0" />
-                        <span>絶対に装置を見せたくない方</span>
-                      </li>
-                      <li className="flex items-start">
-                        <CheckCircle className="w-4 h-4 text-purple-600 mr-2 mt-0.5 flex-shrink-0" />
-                        <span>アナウンサー・モデルなど人前に出る職業の方</span>
-                      </li>
-                      <li className="flex items-start">
-                        <CheckCircle className="w-4 h-4 text-purple-600 mr-2 mt-0.5 flex-shrink-0" />
-                        <span>結婚式などのイベントを控えている方</span>
-                      </li>
-                      <li className="flex items-start">
-                        <CheckCircle className="w-4 h-4 text-purple-600 mr-2 mt-0.5 flex-shrink-0" />
-                        <span>費用より審美性を優先したい方</span>
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="bg-purple-50 rounded-xl p-4">
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="text-sm text-gray-600">費用</span>
-                      <span className="font-bold text-gray-900">要相談</span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-sm text-gray-600">期間</span>
-                      <span className="font-bold text-gray-900">2〜3年</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </section>
@@ -412,21 +363,6 @@ export default function OrthodonticsAdultPage() {
                 </div>
                 <p className="text-gray-700 leading-relaxed">
                   「ずっとコンプレックスだった出っ歯を、45歳で治す決心をしました。職場で矯正していることに気づかれることもなく、1年半で理想の歯並びに。もっと早くやれば良かったと思いますが、今からでも遅くないと実感しています。笑顔に自信が持て、人生が変わりました。」
-                </p>
-              </div>
-
-              <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8 border-l-4 border-green-600 shadow-lg">
-                <div className="flex items-start mb-4">
-                  <div className="w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center font-bold mr-4 flex-shrink-0">
-                    38歳
-                  </div>
-                  <div>
-                    <div className="font-bold text-gray-900 mb-1">営業職（男性）裏側矯正</div>
-                    <div className="text-sm text-gray-600">治療期間：2年3ヶ月</div>
-                  </div>
-                </div>
-                <p className="text-gray-700 leading-relaxed">
-                  「営業職なので、見た目が重要です。裏側矯正なら誰にも気づかれず治療できました。初めは舌に違和感がありましたが、1週間で慣れました。費用は高めでしたが、投資する価値は十分にありました。お客様からも『印象が良くなった』と言われます。」
                 </p>
               </div>
 
@@ -538,7 +474,6 @@ export default function OrthodonticsAdultPage() {
                       <p className="font-bold text-green-700 mb-2">目立たない装置</p>
                       <ul className="text-sm space-y-1">
                         <li>• マウスピース矯正</li>
-                        <li>• 裏側矯正</li>
                         <li>• 審美ブラケット</li>
                       </ul>
                       <p className="text-xs text-[#5A4D41] mt-2">接客業や営業職でも問題なし</p>

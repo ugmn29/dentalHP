@@ -275,7 +275,7 @@ export default function OverbiteDetailPage() {
                   <span className="text-[#395b45] font-bold">永久歯が生え揃った後に、歯の位置を細かく調整する段階です</span>。
                 </p>
                 <p>
-                  歯の表側または裏側にブラケットを装着し、ワイヤーで歯を動かすマルチブラケット装置を使用します。
+                  歯の表側にブラケットを装着し、ワイヤーで歯を動かすマルチブラケット装置を使用します。
                   <span className="text-[#395b45] font-bold">透明なマウスピースを使用した目立たないマウスピース矯正も選択できます</span>。
                 </p>
                 <p>

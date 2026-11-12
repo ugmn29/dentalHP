@@ -147,13 +147,6 @@ export default function OrthoGeneralPage() {
                                         金属製に比べて<span className="text-[#2E8B57] font-bold">目立ちにくく、審美性を重視する方</span>におすすめです。
                                     </p>
                                 </div>
-                                <div>
-                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-l-4 border-[#C5A572] py-3 px-4 mb-4">舌側矯正（リンガル矯正）</h4>
-                                    <p className="text-[#5A4D41] leading-loose">
-                                        歯の裏側に装置をつける矯正法です。<span className="font-bold bg-yellow-100">正面からは装置が見えない</span>ため、
-                                        <span className="text-[#2E8B57] font-bold">矯正していることを知られたくない方</span>に最適です。
-                                    </p>
-                                </div>
                             </div>
                             <div className="text-center mt-8">
                                 <a href="/orthodontics/types" className="inline-flex items-center gap-2 text-[#C5A572] hover:text-[#B59562] transition-colors border-b border-[#C5A572] pb-1 font-medium">
@@ -174,7 +167,7 @@ export default function OrthoGeneralPage() {
                                     当院では、患者様のご予算やご希望に合わせて、最適な治療プランをご提案いたします。
                                 </p>
                                 <p>
-                                    メタルブラケットは比較的費用を抑えられ、<span className="text-[#2E8B57] font-bold">審美ブラケットや舌側矯正は見た目を重視する分、費用が高くなります</span>。
+                                    メタルブラケットは比較的費用を抑えられ、<span className="text-[#2E8B57] font-bold">審美ブラケットは見た目を重視する分、費用が高くなります</span>。
                                     詳しい料金や分割払いのご相談は、お気軽にお問い合わせください。
                                 </p>
                             </div>
