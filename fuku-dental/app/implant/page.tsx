@@ -322,67 +322,8 @@ function RelatedPages() {
 
 /* ─── Main Page ─── */
 export default function ImplantMainPage() {
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'Dentist',
-    name: 'Fデンタルオフィス 豊洲プライムスクエア院',
-    description: '豊洲駅徒歩2分のインプラント治療専門。500症例以上の経験を持つ院長が、歯科用CTと綿密な計画で安全なインプラント治療を提供。',
-    url: 'https://fshika.com/implant',
-    telephone: '+81-3-XXXX-XXXX',
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: '豊洲',
-      addressLocality: '江東区',
-      addressRegion: '東京都',
-      postalCode: '135-XXXX',
-      addressCountry: 'JP',
-    },
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: 35.6654,
-      longitude: 139.7964,
-    },
-    openingHoursSpecification: [
-      {
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-        opens: '10:00',
-        closes: '19:00',
-      },
-      {
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Saturday', 'Sunday'],
-        opens: '10:00',
-        closes: '18:00',
-      },
-    ],
-    priceRange: '¥¥¥',
-    medicalSpecialty: 'Dentistry',
-    availableService: [
-      {
-        '@type': 'MedicalProcedure',
-        name: 'インプラント治療',
-        description: '歯科用CTを使用した精密診断による安全なインプラント埋入',
-      },
-      {
-        '@type': 'MedicalProcedure',
-        name: '静脈内鎮静法',
-        description: '痛みや恐怖心を軽減する鎮静法によるインプラント手術',
-      },
-      {
-        '@type': 'MedicalProcedure',
-        name: '骨造成治療',
-        description: '骨が不足している場合の骨増生治療',
-      },
-    ],
-  };
-
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
       <Header />
       <main className="overflow-x-hidden" style={{ wordBreak: 'normal', overflowWrap: 'anywhere' }}>
         <HeroCarousel />
