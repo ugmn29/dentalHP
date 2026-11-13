@@ -671,7 +671,7 @@ export default function KidsOrthoTypesPage() {
                                                 </li>
                                             </ul>
                                         </div>
-                                        <p className="text-sm bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-400">
+                                        <p className="text-sm bg-yellow-50 p-4 rounded-lg border-yellow-400">
                                             <strong className="text-yellow-700">注意：</strong>1つでもチェックがついた場合は、早めに歯科医院での診察をお勧めします。
                                         </p>
                                     </div>

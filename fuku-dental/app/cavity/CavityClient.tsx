@@ -163,7 +163,7 @@ export default function CavityPage() {
                             <div className="space-y-8">
                                 {/* C0 */}
                                 <div>
-                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-l-4 border-[#C5A572] py-3 px-4 mb-4">C0（初期虫歯）</h4>
+                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-[#C5A572] py-3 px-4 mb-4">C0（初期虫歯）</h4>
                                     <p className="text-[#5A4D41] leading-loose">
                                         歯の表面のエナメル質が少し溶け始めた「脱灰」の状態です。<span className="font-bold bg-yellow-100">まだ穴は空いておらず、痛みもありません</span>。
                                         <span className="text-[#2E8B57] font-bold">削らずに、正しい歯磨きとフッ素塗布で再石灰化を促します</span>。定期検診で経過を観察します。
@@ -171,7 +171,7 @@ export default function CavityPage() {
                                 </div>
                                 {/* C1 */}
                                 <div>
-                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-l-4 border-[#C5A572] py-3 px-4 mb-4">C1（エナメル質の虫歯）</h4>
+                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-[#C5A572] py-3 px-4 mb-4">C1（エナメル質の虫歯）</h4>
                                     <p className="text-[#5A4D41] leading-loose">
                                         エナメル質がさらに溶け、小さな穴が空いた状態です。<span className="font-bold bg-yellow-100">痛みはまだありません</span>。
                                         <span className="text-[#2E8B57] font-bold">虫歯部分だけを最小限削り、白い詰め物（レジン）で修復します</span>。通常1回で治療が完了します。
@@ -179,7 +179,7 @@ export default function CavityPage() {
                                 </div>
                                 {/* C2 */}
                                 <div>
-                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-l-4 border-[#C5A572] py-3 px-4 mb-4">C2（象牙質の虫歯）</h4>
+                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-[#C5A572] py-3 px-4 mb-4">C2（象牙質の虫歯）</h4>
                                     <p className="text-[#5A4D41] leading-loose">
                                         エナメル質の内側にある象牙質まで虫歯が進行した状態です。<span className="font-bold bg-yellow-100">冷たいものがしみ始めます</span>。
                                         <span className="text-[#2E8B57] font-bold">虫歯を削り、型取りをして詰め物（インレー）を装着します</span>。型取りと装着で2〜3回の通院が必要です。
@@ -187,7 +187,7 @@ export default function CavityPage() {
                                 </div>
                                 {/* C3 */}
                                 <div>
-                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-l-4 border-[#C5A572] py-3 px-4 mb-4">C3（神経まで達した虫歯）</h4>
+                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-[#C5A572] py-3 px-4 mb-4">C3（神経まで達した虫歯）</h4>
                                     <p className="text-[#5A4D41] leading-loose">
                                         虫歯が神経（歯髄）まで達した状態です。<span className="font-bold bg-yellow-100">何もしなくてもズキズキと激しく痛みます</span>。
                                         <span className="text-[#2E8B57] font-bold">汚染された神経を取り除く「根管治療」を行い、被せ物をします</span>。根の治療には回数がかかり、5〜8回程度必要です。
@@ -195,7 +195,7 @@ export default function CavityPage() {
                                 </div>
                                 {/* C4 */}
                                 <div>
-                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-l-4 border-[#C5A572] py-3 px-4 mb-4">C4（歯根だけ残った状態）</h4>
+                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-[#C5A572] py-3 px-4 mb-4">C4（歯根だけ残った状態）</h4>
                                     <p className="text-[#5A4D41] leading-loose">
                                         歯の頭の部分（歯冠）が崩壊し、根っこ（歯根）だけが残った末期の状態です。<span className="font-bold bg-yellow-100">神経が死ぬと一旦痛みが引くこともあります</span>。
                                         <span className="text-[#2E8B57] font-bold">抜歯となる可能性が高いですが、条件次第で根管治療を行います</span>。治療期間は長期にわたります。

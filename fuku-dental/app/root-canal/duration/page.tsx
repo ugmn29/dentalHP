@@ -583,7 +583,7 @@ export default function RootCanalDurationPage() {
                       <span>治療を中断せずに最後まで通院する</span>
                     </li>
                   </ul>
-                  <p className="text-sm bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-400">
+                  <p className="text-sm bg-yellow-50 p-4 rounded-lg border-yellow-400">
                     <strong className="text-yellow-700">注意：</strong>治療を急ぐと成功率が下がる可能性があります。適切な期間をかけて丁寧に治療することが、長期的には歯を残すことに繋がります。
                   </p>
                 </div>

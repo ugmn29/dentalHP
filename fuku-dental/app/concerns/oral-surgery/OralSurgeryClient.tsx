@@ -247,7 +247,7 @@ export default function OralSurgeryPage() {
                             <div className="space-y-8">
                                 {/* 粘膜疾患 */}
                                 <div>
-                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-l-4 border-[#C5A572] py-3 px-4 mb-4">粘膜疾患</h4>
+                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-[#C5A572] py-3 px-4 mb-4">粘膜疾患</h4>
                                     <p className="text-[#5A4D41] leading-loose">
                                         <span className="font-bold bg-yellow-100">口内炎、白板症、扁平苔癬、舌痛症</span>など、お口の粘膜に生じる様々な病気を診断します。
                                         <span className="text-[#2E8B57] font-bold">2週間以上治らない口内炎や、粘膜の色の変化（白や赤）は要注意</span>です。
@@ -256,7 +256,7 @@ export default function OralSurgeryPage() {
                                 </div>
                                 {/* 良性腫瘍・嚢胞 */}
                                 <div>
-                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-l-4 border-[#C5A572] py-3 px-4 mb-4">良性腫瘍・嚢胞</h4>
+                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-[#C5A572] py-3 px-4 mb-4">良性腫瘍・嚢胞</h4>
                                     <p className="text-[#5A4D41] leading-loose">
                                         お口の中にできる<span className="font-bold bg-yellow-100">できもの（腫瘍）や膿の袋（嚢胞）</span>を摘出します。
                                         <span className="text-[#2E8B57] font-bold">当院では局所麻酔下での日帰り手術が可能</span>で、摘出した組織は病理検査に出し、確定診断を行います。
@@ -265,7 +265,7 @@ export default function OralSurgeryPage() {
                                 </div>
                                 {/* 唾液腺疾患 */}
                                 <div>
-                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-l-4 border-[#C5A572] py-3 px-4 mb-4">唾液腺疾患</h4>
+                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-[#C5A572] py-3 px-4 mb-4">唾液腺疾患</h4>
                                     <p className="text-[#5A4D41] leading-loose">
                                         <span className="font-bold bg-yellow-100">食事の時に顎の下が腫れる、唾液が出にくい、口が乾く</span>などの症状は、唾液腺の病気かもしれません。
                                         <span className="text-[#2E8B57] font-bold">唾液腺炎、唾石症、シェーグレン症候群</span>など、様々な原因が考えられます。

@@ -488,7 +488,7 @@ export default function WhiteningTypesPage() {
                   <p className="mb-3">
                     <strong className="text-[#C5A572]">A.</strong> オフィスホワイトニングは即効性が高く、1回の施術で数段階白くなりますが、色戻りも早めです。ホームホワイトニングは時間はかかりますが、徐々に白くなり、自然な透明感のある白さが長持ちします。
                   </p>
-                  <div className="text-sm bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-400">
+                  <div className="text-sm bg-yellow-50 p-4 rounded-lg border-yellow-400">
                     最も白くなるのは両方を併用するデュアルホワイトニングです。
                   </div>
                 </div>
@@ -522,7 +522,7 @@ export default function WhiteningTypesPage() {
                   <p className="mb-3">
                     <strong className="text-[#C5A572]">A.</strong> オフィスホワイトニングは3〜6ヶ月、ホームホワイトニングは6〜12ヶ月、デュアルホワイトニングは1〜2年程度持続します。
                   </p>
-                  <div className="text-sm bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-400">
+                  <div className="text-sm bg-yellow-50 p-4 rounded-lg border-yellow-400">
                     コーヒーやワインなどの着色しやすい飲食物の摂取頻度、喫煙の有無、歯磨きの習慣などにより個人差があります。定期的なメンテナンスで白さを長く保てます。
                   </div>
                 </div>
@@ -576,7 +576,7 @@ export default function WhiteningTypesPage() {
                       <span>この期間は歯が着色しやすい状態になっています</span>
                     </li>
                   </ul>
-                  <div className="text-sm bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-400">
+                  <div className="text-sm bg-yellow-50 p-4 rounded-lg border-yellow-400">
                     白い食事（白米、パン、鶏肉、白身魚、牛乳など）を心がけることで、効果を最大限に引き出せます。
                   </div>
                 </div>

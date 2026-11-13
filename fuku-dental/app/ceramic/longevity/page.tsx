@@ -521,35 +521,35 @@ export default function CeramicLongevityPage() {
               </div>
 
               <div className="space-y-4">
-                <div className="bg-white p-6 rounded-2xl shadow-sm border-l-4 border-red-500">
+                <div className="bg-white p-6 rounded-2xl shadow-sm border-red-500">
                   <h4 className="text-lg font-bold text-[#5A4D41] mb-2">セラミックが欠けた・割れた</h4>
                   <p className="text-[#5A4D41] leading-loose">
                     小さな欠けでも放置すると、そこから虫歯になったり、割れが広がったりします。
                   </p>
                 </div>
 
-                <div className="bg-white p-6 rounded-2xl shadow-sm border-l-4 border-red-500">
+                <div className="bg-white p-6 rounded-2xl shadow-sm border-red-500">
                   <h4 className="text-lg font-bold text-[#5A4D41] mb-2">浮いた感じ・ガタつき</h4>
                   <p className="text-[#5A4D41] leading-loose">
                     セラミックが外れかかっている可能性があります。完全に外れる前に再接着が必要です。
                   </p>
                 </div>
 
-                <div className="bg-white p-6 rounded-2xl shadow-sm border-l-4 border-red-500">
+                <div className="bg-white p-6 rounded-2xl shadow-sm border-red-500">
                   <h4 className="text-lg font-bold text-[#5A4D41] mb-2">痛みや違和感</h4>
                   <p className="text-[#5A4D41] leading-loose">
                     セラミックの下で虫歯が進行している可能性があります。早期発見が重要です。
                   </p>
                 </div>
 
-                <div className="bg-white p-6 rounded-2xl shadow-sm border-l-4 border-red-500">
+                <div className="bg-white p-6 rounded-2xl shadow-sm border-red-500">
                   <h4 className="text-lg font-bold text-[#5A4D41] mb-2">食べ物が詰まりやすくなった</h4>
                   <p className="text-[#5A4D41] leading-loose">
                     セラミックと歯の間に隙間ができている可能性があります。
                   </p>
                 </div>
 
-                <div className="bg-white p-6 rounded-2xl shadow-sm border-l-4 border-red-500">
+                <div className="bg-white p-6 rounded-2xl shadow-sm border-red-500">
                   <h4 className="text-lg font-bold text-[#5A4D41] mb-2">噛み合わせが変わった気がする</h4>
                   <p className="text-[#5A4D41] leading-loose">
                     周囲の歯の移動や、セラミックの摩耗が考えられます。調整が必要です。

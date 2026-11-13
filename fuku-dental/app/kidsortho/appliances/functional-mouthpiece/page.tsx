@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
@@ -51,9 +52,17 @@ export default function FunctionalMouthpiecePage() {
             <Link href="/">ホーム</Link><span aria-hidden="true">/</span><Link href="/kidsortho">こども矯正</Link><span aria-hidden="true">/</span><Link href="/kidsortho/appliances">装置一覧</Link><span aria-hidden="true">/</span><span>機能的マウスピースの比較</span>
           </nav>
           <header className="mb-12">
+            <div className="grid items-center gap-8 lg:grid-cols-[minmax(0,1.65fr)_minmax(0,1fr)]">
+              <div>
             <p className="mb-4 text-sm font-bold tracking-wider text-[#087a76]">こどもの歯並びと、お口の使い方</p>
             <h1 className="max-w-4xl font-serif text-3xl font-bold leading-normal md:text-5xl md:leading-snug">EFライン・マイオブレース・<br className="hidden md:block" />プレオルソの違いと選び方</h1>
             <p className="mt-6 max-w-3xl text-lg leading-8">3つの装置は、基本的な構造や考え方が共通しています。院長の臨床上の実感では、使っている感覚もほとんど同じです。使い分けで特に大きいのは「硬さ」の違いです。</p>
+              </div>
+              <figure className="mx-auto w-full max-w-md">
+                <Image src="/images/kidsortho/education/appliance-structure.webp" width={1000} height={1000} alt="上下の歯列を包む機能的マウスピースの構造を描いたイラスト" sizes="(min-width: 1024px) 400px, (min-width: 640px) 448px, 100vw" priority className="h-auto w-full rounded-2xl" />
+                <figcaption className="mt-3 text-sm leading-6 text-[#71665A]">『咬合育成のバイブル』より、プレオルソの構造をもとにしたイメージ図。実際の形状は、製品やサイズによって異なります。</figcaption>
+              </figure>
+            </div>
             <div className="mt-8 grid gap-4 md:grid-cols-3">
               {appliances.map((appliance) => (
                 <div key={appliance.name} className="rounded-2xl border border-[#E6D8C5] bg-white p-6">

@@ -94,7 +94,7 @@ export default function WhiteningComparisonPage() {
 
             <div className="space-y-12">
               {/* 理由1 */}
-              <div className="bg-gradient-to-br from-blue-50 to-white rounded-2xl shadow-xl p-8 md:p-12 border-l-4 border-blue-600">
+              <div className="bg-gradient-to-br from-blue-50 to-white rounded-2xl shadow-xl p-8 md:p-12 border-blue-600">
                 <div className="flex items-start gap-4 mb-6">
                   <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
                     <span className="text-3xl font-bold text-white">1</span>
@@ -155,7 +155,7 @@ export default function WhiteningComparisonPage() {
               </div>
 
               {/* 理由2 */}
-              <div className="bg-gradient-to-br from-green-50 to-white rounded-2xl shadow-xl p-8 md:p-12 border-l-4 border-green-600">
+              <div className="bg-gradient-to-br from-green-50 to-white rounded-2xl shadow-xl p-8 md:p-12 border-green-600">
                 <div className="flex items-start gap-4 mb-6">
                   <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0">
                     <span className="text-3xl font-bold text-white">2</span>
@@ -216,7 +216,7 @@ export default function WhiteningComparisonPage() {
               </div>
 
               {/* 理由3 */}
-              <div className="bg-gradient-to-br from-purple-50 to-white rounded-2xl shadow-xl p-8 md:p-12 border-l-4 border-purple-600">
+              <div className="bg-gradient-to-br from-purple-50 to-white rounded-2xl shadow-xl p-8 md:p-12 border-purple-600">
                 <div className="flex items-start gap-4 mb-6">
                   <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
                     <span className="text-3xl font-bold text-white">3</span>
@@ -276,7 +276,7 @@ export default function WhiteningComparisonPage() {
               </div>
 
               {/* 理由4 */}
-              <div className="bg-gradient-to-br from-orange-50 to-white rounded-2xl shadow-xl p-8 md:p-12 border-l-4 border-orange-600">
+              <div className="bg-gradient-to-br from-orange-50 to-white rounded-2xl shadow-xl p-8 md:p-12 border-orange-600">
                 <div className="flex items-start gap-4 mb-6">
                   <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center flex-shrink-0">
                     <span className="text-3xl font-bold text-white">4</span>
@@ -337,7 +337,7 @@ export default function WhiteningComparisonPage() {
               </div>
 
               {/* 理由5 */}
-              <div className="bg-gradient-to-br from-teal-50 to-white rounded-2xl shadow-xl p-8 md:p-12 border-l-4 border-teal-600">
+              <div className="bg-gradient-to-br from-teal-50 to-white rounded-2xl shadow-xl p-8 md:p-12 border-teal-600">
                 <div className="flex items-start gap-4 mb-6">
                   <div className="w-16 h-16 bg-teal-600 rounded-full flex items-center justify-center flex-shrink-0">
                     <span className="text-3xl font-bold text-white">5</span>

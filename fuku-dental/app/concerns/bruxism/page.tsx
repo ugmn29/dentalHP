@@ -109,7 +109,7 @@ export default function BruxismPage() {
                   睡眠中や日中に無意識に歯を強く噛みしめたり、こすり合わせたりする習癖性の運動障害です。
                 </p>
 
-                <div className="bg-blue-50 border-l-4 border-[#9B89B3] p-6 rounded-r-lg my-8">
+                <div className="bg-blue-50 border-[#9B89B3] p-6 rounded-lg my-8">
                   <h3 className="text-xl font-bold text-[#5A4D41] mb-3 flex items-center gap-2">
                     <Shield className="text-[#9B89B3]" size={24} />
                     疫学データ
@@ -300,7 +300,7 @@ export default function BruxismPage() {
                   </h3>
                 </header>
 
-                <div className="bg-red-50 border-l-4 border-red-400 p-6 rounded-r-lg mb-6">
+                <div className="bg-red-50 border-red-400 p-6 rounded-lg mb-6">
                   <p className="text-gray-700 leading-relaxed text-lg">
                     ブラキシズムによる咬合力は、<span className="font-bold bg-yellow-100">通常の咀嚼時の約2〜10倍</span>にも達します。
                     この過度な力により、歯に深刻なダメージが蓄積されます。
@@ -384,7 +384,7 @@ export default function BruxismPage() {
                   </div>
                 </section>
 
-                <div className="bg-blue-50 border-l-4 border-[#9B89B3] p-6 rounded-r-lg mt-6">
+                <div className="bg-blue-50 border-[#9B89B3] p-6 rounded-lg mt-6">
                   <p className="text-sm font-semibold text-[#9B89B3] mb-2">エビデンス</p>
                   <p className="text-gray-700 leading-relaxed">
                     Lobbezoo F らの系統的レビュー（J Oral Rehabil 2013）によると、ブラキシズムは歯の摩耗、破折、および修復物の失敗と強く関連しています。
@@ -403,7 +403,7 @@ export default function BruxismPage() {
                   </h3>
                 </header>
 
-                <div className="bg-orange-50 border-l-4 border-orange-400 p-6 rounded-r-lg mb-6">
+                <div className="bg-orange-50 border-orange-400 p-6 rounded-lg mb-6">
                   <p className="text-gray-700 leading-relaxed text-lg">
                     ブラキシズムは、<span className="font-bold bg-yellow-100">顎関節症（TMD: Temporomandibular Disorders）の主要なリスク因子</span>の一つです。
                   </p>
@@ -450,7 +450,7 @@ export default function BruxismPage() {
                   </div>
                 </section>
 
-                <div className="bg-blue-50 border-l-4 border-[#9B89B3] p-6 rounded-r-lg mt-6">
+                <div className="bg-blue-50 border-[#9B89B3] p-6 rounded-lg mt-6">
                   <p className="text-sm font-semibold text-[#9B89B3] mb-2">エビデンス</p>
                   <p className="text-gray-700 leading-relaxed">
                     Shetty S らのメタアナリシス（J Indian Prosthodont Soc 2010）では、ブラキシズムを有する患者は、
@@ -544,7 +544,7 @@ export default function BruxismPage() {
                   </div>
                 </div>
 
-                <div className="bg-blue-50 border-l-4 border-[#9B89B3] p-6 rounded-r-lg mt-6">
+                <div className="bg-blue-50 border-[#9B89B3] p-6 rounded-lg mt-6">
                   <p className="text-sm font-semibold text-[#9B89B3] mb-2">エビデンス</p>
                   <p className="text-gray-700 leading-relaxed">
                     Ciancaglini R らの研究（Cranio 1999）では、ブラキシズム患者の約60%が頭痛を訴え、
@@ -643,7 +643,7 @@ export default function BruxismPage() {
                   </div>
                 </div>
 
-                <div className="bg-blue-50 border-l-4 border-[#9B89B3] p-6 rounded-r-lg">
+                <div className="bg-blue-50 border-[#9B89B3] p-6 rounded-lg">
                   <p className="text-sm font-semibold text-[#9B89B3] mb-2">エビデンス</p>
                   <p className="text-gray-700 leading-relaxed">
                     Macedo CR らのコクランレビュー（Cochrane Database Syst Rev 2007）では、
@@ -763,7 +763,7 @@ export default function BruxismPage() {
                   </div>
                 </div>
 
-                <div className="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-lg">
+                <div className="bg-blue-50 border-blue-500 p-6 rounded-lg">
                   <p className="text-sm font-semibold text-blue-600 mb-2">エビデンス</p>
                   <p className="text-gray-700 leading-relaxed">
                     Lee SJ らの無作為化比較試験（J Dent Res 2010）では、ボトックス注射により睡眠時ブラキシズムのエピソード頻度が
@@ -817,7 +817,7 @@ export default function BruxismPage() {
                   </p>
                 </div>
 
-                <div className="bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-r-lg mb-8">
+                <div className="bg-yellow-50 border-yellow-400 p-6 rounded-lg mb-8">
                   <p className="text-gray-700 leading-relaxed">
                     <span className="font-bold">重要：</span>
                     すべてのブラキシズムが咬合異常によるものではありません。
@@ -879,7 +879,7 @@ export default function BruxismPage() {
                   </div>
                 </div>
 
-                <div className="bg-blue-50 border-l-4 border-green-500 p-6 rounded-r-lg">
+                <div className="bg-blue-50 border-green-500 p-6 rounded-lg">
                   <p className="text-sm font-semibold text-green-600 mb-2">エビデンス</p>
                   <p className="text-gray-700 leading-relaxed">
                     咬合異常とブラキシズムの関連については議論がありますが、Manfredini D らの研究（J Oral Rehabil 2012）では、
@@ -1058,7 +1058,7 @@ export default function BruxismPage() {
                   <p className="text-[#8D8070] leading-relaxed mb-4">
                     歯ぎしりの原因はストレス、遺伝、咬合異常など複合的であり、完全に「治す（なくす）」ことは難しいのが現状です。治療の目的は、ナイトガードやボトックスなどで歯や顎への負担を軽減し、症状をコントロールすること（対症療法）が中心となります。ただし、咬合異常が原因の場合は、矯正治療により根本的な改善が期待できる場合もあります。
                   </p>
-                  <div className="bg-blue-50 border-l-4 border-[#E67A2E] p-4 rounded-r-lg">
+                  <div className="bg-blue-50 border-[#E67A2E] p-4 rounded-lg">
                     <p className="text-sm font-semibold text-[#5A4D41] mb-2">治療アプローチ</p>
                     <ul className="space-y-2 text-sm text-[#8D8070]">
                       <li className="flex items-start gap-2">
@@ -1085,7 +1085,7 @@ export default function BruxismPage() {
                     はい、歯科医院で作製するナイトガード（スプリント）は保険適用です。3割負担の方で約3,000円〜5,000円程度で作製できます（初診料・検査料等は別途）。ただし、市販のマウスピースは保険適用外であり、フィット感も劣るため、歯科医院でオーダーメイドのものを作製することをお勧めします。
                   </p>
                   <div className="grid md:grid-cols-2 gap-4">
-                    <div className="bg-green-50 border-l-4 border-green-400 p-4 rounded-r-lg">
+                    <div className="bg-green-50 border-green-400 p-4 rounded-lg">
                       <p className="font-bold text-green-800 mb-2 text-sm">歯科医院製</p>
                       <ul className="space-y-1 text-xs text-[#8D8070]">
                         <li>• 保険適用</li>
@@ -1094,7 +1094,7 @@ export default function BruxismPage() {
                         <li>• フィット感良好</li>
                       </ul>
                     </div>
-                    <div className="bg-red-50 border-l-4 border-red-400 p-4 rounded-r-lg">
+                    <div className="bg-red-50 border-red-400 p-4 rounded-lg">
                       <p className="font-bold text-red-800 mb-2 text-sm">市販品</p>
                       <ul className="space-y-1 text-xs text-[#8D8070]">
                         <li>• 保険適用外</li>
@@ -1117,7 +1117,7 @@ export default function BruxismPage() {
                   <p className="text-[#8D8070] leading-relaxed mb-4">
                     市販品は誰にでも合うように作られているため、フィット感が悪く、逆に顎を痛めたり噛み合わせが悪くなるリスクがあります。また、適切な厚みや硬さでないと、歯を守る効果が不十分です。歯科医院でご自身の歯型に合わせて作製したものを使用することを強くお勧めします。
                   </p>
-                  <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-r-lg">
+                  <div className="bg-yellow-50 border-yellow-400 p-4 rounded-lg">
                     <p className="text-sm font-semibold text-yellow-800 mb-2">市販品のリスク</p>
                     <ul className="space-y-2 text-sm text-[#8D8070]">
                       <li className="flex items-start gap-2">
@@ -1151,7 +1151,7 @@ export default function BruxismPage() {
                   <p className="text-[#8D8070] leading-relaxed mb-4">
                     ボトックスの効果は個人差がありますが、通常3〜6ヶ月程度持続します。効果が切れてきたら、再度注射を行う必要があります。定期的に継続することで、咬筋が徐々に小さくなり、食いしばりの力も弱まっていく傾向があります。
                   </p>
-                  <div className="bg-purple-50 border-l-4 border-purple-400 p-4 rounded-r-lg">
+                  <div className="bg-purple-50 border-purple-400 p-4 rounded-lg">
                     <p className="text-sm font-semibold text-purple-800 mb-2">ボトックスの効果</p>
                     <ul className="space-y-2 text-sm text-[#8D8070]">
                       <li className="flex items-start gap-2">
@@ -1208,7 +1208,7 @@ export default function BruxismPage() {
                   <p className="text-[#8D8070] leading-relaxed mb-4">
                     日中の食いしばり（覚醒時ブラキシズム）には、意識的なリラクゼーションが効果的です。気づいたらすぐに顎の力を抜き、上下の歯を離すようにしましょう。「唇は閉じて、歯は離す」を意識してください。また、ストレス管理や認知行動療法も有効です。重度の場合はボトックス治療も検討されます。
                   </p>
-                  <div className="bg-cyan-50 border-l-4 border-cyan-400 p-4 rounded-r-lg">
+                  <div className="bg-cyan-50 border-cyan-400 p-4 rounded-lg">
                     <p className="text-sm font-semibold text-cyan-800 mb-2">セルフケア</p>
                     <ul className="space-y-2 text-sm text-[#8D8070]">
                       <li className="flex items-start gap-2">
@@ -1242,7 +1242,7 @@ export default function BruxismPage() {
                   <p className="text-[#8D8070] leading-relaxed mb-4">
                     子供の歯ぎしりは成長過程で一時的に見られることが多く、多くの場合は自然に治まります。ただし、乳歯や永久歯が大きくすり減っている場合、顎の痛みを訴える場合は、小児歯科での相談をお勧めします。必要に応じて、子供用のナイトガードを作製することもあります。
                   </p>
-                  <div className="bg-blue-50 border-l-4 border-[#E67A2E] p-4 rounded-r-lg">
+                  <div className="bg-blue-50 border-[#E67A2E] p-4 rounded-lg">
                     <p className="text-sm font-semibold text-[#5A4D41] mb-2">受診が必要な場合</p>
                     <ul className="space-y-2 text-sm text-[#8D8070]">
                       <li className="flex items-start gap-2">

@@ -1054,7 +1054,7 @@ export default function KidsOrthoPage() {
                             </div>
                             <div className="space-y-8">
                                 <div>
-                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-l-4 border-[#C5A572] py-3 px-4 mb-4">こども矯正はいつから？3〜7歳が最適な開始時期｜「様子を見ましょう」のリスク</h4>
+                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-[#C5A572] py-3 px-4 mb-4">こども矯正はいつから？3〜7歳が最適な開始時期｜「様子を見ましょう」のリスク</h4>
                                     <p className="text-[#5A4D41] leading-loose mb-3">
                                         <span className="font-bold bg-yellow-100">受け口は3歳から、デコボコは6歳から</span>。最適な開始時期は3〜7歳（混合歯列期）です。
                                         早期治療により<span className="text-[#C5A572] font-bold">2期治療が不要になる可能性</span>が高まります。
@@ -1064,7 +1064,7 @@ export default function KidsOrthoPage() {
                                     </a>
                                 </div>
                                 <div>
-                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-l-4 border-[#C5A572] py-3 px-4 mb-4">受け口は自然に治る？確率14%の真実</h4>
+                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-[#C5A572] py-3 px-4 mb-4">受け口は自然に治る？確率14%の真実</h4>
                                     <p className="text-[#5A4D41] leading-loose mb-3">
                                         「放置して治った」はレアケース。<span className="font-bold bg-yellow-100">自然治癒率14%のエビデンス</span>と、
                                         <span className="text-[#C5A572] font-bold">3歳から始める早期治療</span>（ムーシールド・プレオルソ）を紹介します。
@@ -1074,7 +1074,7 @@ export default function KidsOrthoPage() {
                                     </a>
                                 </div>
                                 <div>
-                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-l-4 border-[#C5A572] py-3 px-4 mb-4">ただの「癖」だと思っていませんか？口呼吸の病気リスク</h4>
+                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-[#C5A572] py-3 px-4 mb-4">ただの「癖」だと思っていませんか？口呼吸の病気リスク</h4>
                                     <p className="text-[#5A4D41] leading-loose mb-3">
                                         お口ポカン、いびき、クチャクチャ食べ...。<span className="font-bold bg-yellow-100">見た目より健康被害（病気）</span>が深刻です。
                                         <span className="text-[#C5A572] font-bold">セルフチェックリスト</span>で今すぐ確認を。
@@ -1094,7 +1094,7 @@ export default function KidsOrthoPage() {
                             </div>
                             <div className="space-y-8">
                                 <div>
-                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-l-4 border-[#C5A572] py-3 px-4 mb-4">1日3分！あいうべ体操とボタンプルの正しいやり方</h4>
+                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-[#C5A572] py-3 px-4 mb-4">1日3分！あいうべ体操とボタンプルの正しいやり方</h4>
                                     <p className="text-[#5A4D41] leading-loose mb-3">
                                         専門用語（MFT）を噛み砕き、<span className="font-bold bg-yellow-100">ゲーム感覚でできる手順</span>を紹介。
                                         <span className="text-[#C5A572] font-bold">口唇閉鎖力が向上し顔貌が改善</span>した論文データも解説します。
@@ -1104,7 +1104,7 @@ export default function KidsOrthoPage() {
                                     </a>
                                 </div>
                                 <div>
-                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-l-4 border-[#C5A572] py-3 px-4 mb-4">市販のガムでOK！ガムトレーニング完全手順</h4>
+                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-[#C5A572] py-3 px-4 mb-4">市販のガムでOK！ガムトレーニング完全手順</h4>
                                     <p className="text-[#5A4D41] leading-loose mb-3">
                                         特別な道具不要。<span className="font-bold bg-yellow-100">舌で丸める→上顎に貼り付ける（ポッピング）→正しく飲み込む</span>の3ステップで、
                                         <span className="text-[#C5A572] font-bold">正しい嚥下を獲得</span>します。
@@ -1114,7 +1114,7 @@ export default function KidsOrthoPage() {
                                     </a>
                                 </div>
                                 <div>
-                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-l-4 border-[#C5A572] py-3 px-4 mb-4">猫背や浮き指が歯並びを悪くする？姿勢改善マニュアル</h4>
+                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-[#C5A572] py-3 px-4 mb-4">猫背や浮き指が歯並びを悪くする？姿勢改善マニュアル</h4>
                                     <p className="text-[#5A4D41] leading-loose mb-3">
                                         <span className="font-bold bg-yellow-100">足指（浮き指）→重心後退→猫背→下顎後退</span>の負の連鎖を図解。
                                         家庭でできる<span className="text-[#C5A572] font-bold">ひろのば体操</span>や足指チェックを紹介します。
@@ -1124,7 +1124,7 @@ export default function KidsOrthoPage() {
                                     </a>
                                 </div>
                                 <div>
-                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-l-4 border-[#C5A572] py-3 px-4 mb-4">顎を育てる食育レシピと調理の工夫</h4>
+                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-[#C5A572] py-3 px-4 mb-4">顎を育てる食育レシピと調理の工夫</h4>
                                     <p className="text-[#5A4D41] leading-loose mb-3">
                                         「硬いもの」より<span className="font-bold bg-yellow-100">前歯で噛みちぎる形状</span>（スティック野菜、骨付き肉）が正解。
                                         <span className="text-[#C5A572] font-bold">咀嚼が骨細胞を活性化</span>し、顎骨形成を促進します。
@@ -1144,7 +1144,7 @@ export default function KidsOrthoPage() {
                             </div>
                             <div className="space-y-8">
                                 <div>
-                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-l-4 border-[#C5A572] py-3 px-4 mb-4">小児矯正はいつ終わる？「長い」と感じる理由</h4>
+                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-[#C5A572] py-3 px-4 mb-4">小児矯正はいつ終わる？「長い」と感じる理由</h4>
                                     <p className="text-[#5A4D41] leading-loose mb-3">
                                         期間が長いのは<span className="font-bold bg-yellow-100">成長を待つ時間（経過観察）が含まれる</span>から。
                                         <span className="text-[#C5A572] font-bold">I期治療とII期治療のタイムライン</span>を詳しく解説します。
@@ -1154,7 +1154,7 @@ export default function KidsOrthoPage() {
                                     </a>
                                 </div>
                                 <div>
-                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-l-4 border-[#C5A572] py-3 px-4 mb-4">医療費控除でいくら戻る？申請書の書き方</h4>
+                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-[#C5A572] py-3 px-4 mb-4">医療費控除でいくら戻る？申請書の書き方</h4>
                                     <p className="text-[#5A4D41] leading-loose mb-3">
                                         子供の矯正は<span className="font-bold bg-yellow-100">審美ではなく発育に必要な治療</span>なので控除対象。
                                         <span className="text-[#C5A572] font-bold">年収別の還付金シミュレーション</span>と申請方法を詳しく解説します。
@@ -1164,7 +1164,7 @@ export default function KidsOrthoPage() {
                                     </a>
                                 </div>
                                 <div>
-                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-l-4 border-[#C5A572] py-3 px-4 mb-4">「やらなきゃよかった」と後悔しないために</h4>
+                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-[#C5A572] py-3 px-4 mb-4">「やらなきゃよかった」と後悔しないために</h4>
                                     <p className="text-[#5A4D41] leading-loose mb-3">
                                         失敗の最大原因は<span className="font-bold bg-yellow-100">装着時間を守れない（コンプライアンス）と後戻り</span>。
                                         <span className="text-[#C5A572] font-bold">5つの失敗パターンと親の心構え</span>を紹介します。
@@ -1184,7 +1184,7 @@ export default function KidsOrthoPage() {
                             </div>
                             <div className="space-y-8">
                                 <div>
-                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-l-4 border-[#C5A572] py-3 px-4 mb-4">矯正中の部活はどうする？スポーツや楽器への影響</h4>
+                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-[#C5A572] py-3 px-4 mb-4">矯正中の部活はどうする？スポーツや楽器への影響</h4>
                                     <p className="text-[#5A4D41] leading-loose mb-3">
                                         <span className="font-bold bg-yellow-100">金管楽器（トランペット等）は唇に当たるため影響</span>が出やすい。
                                         コンタクトスポーツ時の<span className="text-[#C5A572] font-bold">マウスガード活用法</span>も解説します。
@@ -1194,7 +1194,7 @@ export default function KidsOrthoPage() {
                                     </a>
                                 </div>
                                 <div>
-                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-l-4 border-[#C5A572] py-3 px-4 mb-4">子供が矯正を嫌がったら？痛みの対処法</h4>
+                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-[#C5A572] py-3 px-4 mb-4">子供が矯正を嫌がったら？痛みの対処法</h4>
                                     <p className="text-[#5A4D41] leading-loose mb-3">
                                         痛みは<span className="font-bold bg-yellow-100">最初の数日で慣れる</span>。ワックスでの対処法と、
                                         モチベーション維持のための<span className="text-[#C5A572] font-bold">ご褒美シート活用術</span>を紹介します。
@@ -1214,7 +1214,7 @@ export default function KidsOrthoPage() {
                             </div>
                             <div className="space-y-8">
                                 <div>
-                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-l-4 border-[#C5A572] py-3 px-4 mb-4">装置一覧・比較表</h4>
+                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-[#C5A572] py-3 px-4 mb-4">装置一覧・比較表</h4>
                                     <p className="text-[#5A4D41] leading-loose mb-3">
                                         各装置の<span className="font-bold bg-yellow-100">特徴・費用・適応症例</span>を比較表で分かりやすく解説。
                                         お子様に<span className="text-[#C5A572] font-bold">最適な装置選び</span>をサポートします。
@@ -1224,7 +1224,7 @@ export default function KidsOrthoPage() {
                                     </a>
                                 </div>
                                 <div>
-                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-l-4 border-[#C5A572] py-3 px-4 mb-4">プレオルソ（マウスピース型）</h4>
+                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-[#C5A572] py-3 px-4 mb-4">プレオルソ（マウスピース型）</h4>
                                     <p className="text-[#5A4D41] leading-loose mb-3">
                                         マウスピース型の装置で、<span className="font-bold bg-yellow-100">お口の周りの筋肉を正しく使えるようトレーニング</span>します。
                                         <span className="text-[#C5A572] font-bold">日中2時間と就寝時の装着</span>で効果を発揮します。特に就寝時の継続が大切です。
@@ -1234,7 +1234,7 @@ export default function KidsOrthoPage() {
                                     </a>
                                 </div>
                                 <div>
-                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-l-4 border-[#C5A572] py-3 px-4 mb-4">拡大床</h4>
+                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-[#C5A572] py-3 px-4 mb-4">拡大床</h4>
                                     <p className="text-[#5A4D41] leading-loose mb-3">
                                         <span className="font-bold bg-yellow-100">取り外しできる装置</span>で、顎を広げて<span className="font-bold bg-yellow-100">歯が生えるスペースを確保</span>します。
                                         <span className="text-[#C5A572] font-bold">永久歯を抜かずに治療できる可能性</span>が高まります。
@@ -1244,7 +1244,7 @@ export default function KidsOrthoPage() {
                                     </a>
                                 </div>
                                 <div>
-                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-l-4 border-[#C5A572] py-3 px-4 mb-4">機能的矯正装置</h4>
+                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-[#C5A572] py-3 px-4 mb-4">機能的矯正装置</h4>
                                     <p className="text-[#5A4D41] leading-loose mb-3">
                                         <span className="font-bold bg-yellow-100">顎の成長を誘導する装置</span>で、受け口や出っ歯の改善に効果的。
                                         <span className="text-[#C5A572] font-bold">骨格的な問題にアプローチ</span>します。
@@ -1254,7 +1254,7 @@ export default function KidsOrthoPage() {
                                     </a>
                                 </div>
                                 <div>
-                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-l-4 border-[#C5A572] py-3 px-4 mb-4">チンキャップ</h4>
+                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-[#C5A572] py-3 px-4 mb-4">チンキャップ</h4>
                                     <p className="text-[#5A4D41] leading-loose mb-3">
                                         <span className="font-bold bg-yellow-100">下顎の成長を抑制する装置</span>で、受け口（反対咬合）の治療に使用。
                                         <span className="text-[#C5A572] font-bold">骨格的な受け口の改善</span>に効果的です。
@@ -1274,7 +1274,7 @@ export default function KidsOrthoPage() {
                             </div>
                             <div className="space-y-8">
                                 <div>
-                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-l-4 border-[#C5A572] py-3 px-4 mb-4">1期治療</h4>
+                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-[#C5A572] py-3 px-4 mb-4">1期治療</h4>
                                     <p className="text-[#5A4D41] leading-loose mb-3">
                                         使用する装置により、<span className="font-bold bg-yellow-100">プレオルソ+付加装置 ¥132,000、拡大床 ¥495,000、マウスピース矯正（混合歯列期） ¥660,000、ワイヤー矯正（混合歯列期） ¥660,000</span>です。
                                         検査・相談・調整料は<span className="text-[#C5A572] font-bold">¥0</span>です。
@@ -1284,7 +1284,7 @@ export default function KidsOrthoPage() {
                                     </a>
                                 </div>
                                 <div>
-                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-l-4 border-[#C5A572] py-3 px-4 mb-4">2期治療（仕上げの矯正）</h4>
+                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-[#C5A572] py-3 px-4 mb-4">2期治療（仕上げの矯正）</h4>
                                     <p className="text-[#5A4D41] leading-loose mb-3">
                                         全ての歯を動かす治療へ移行する場合は、<span className="font-bold bg-yellow-100">ワイヤー矯正（6歳臼歯まで） ¥770,000、ワイヤー矯正（7歳臼歯まで） ¥880,000、マウスピース矯正（混合歯列期） ¥660,000</span>です。
                                         装置の種類により費用が異なります。デンタルローンもご利用いただけます。

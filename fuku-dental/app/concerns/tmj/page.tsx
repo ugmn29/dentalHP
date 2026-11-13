@@ -100,7 +100,7 @@ export default function TMJPage() {
                 医学的には単一の疾患ではなく、様々な病態を含む症候群として認識されています。
               </p>
 
-              <div className="bg-blue-50 border-l-4 border-[#9B89B3] p-6 rounded-r-xl mb-8">
+              <div className="bg-blue-50 border-[#9B89B3] p-6 rounded-xl mb-8">
                 <h3 className="font-bold text-gray-800 mb-3 flex items-center gap-2">
                   <span className="bg-[#9B89B3] text-white px-3 py-1 rounded-full text-sm">疫学データ</span>
                 </h3>
@@ -231,7 +231,7 @@ export default function TMJPage() {
               ))}
             </div>
 
-            <div className="mt-8 bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-r-xl">
+            <div className="mt-8 bg-yellow-50 border-yellow-400 p-6 rounded-xl">
               <p className="text-gray-700 font-bold flex items-start gap-2">
                 <AlertTriangle size={20} className="text-yellow-600 flex-shrink-0 mt-0.5" />
                 これらの症状が2週間以上続く場合は、早めの受診をお勧めします
@@ -302,7 +302,7 @@ export default function TMJPage() {
                 ))}
               </div>
 
-              <div className="mt-8 bg-blue-50 border-l-4 border-blue-400 p-6 rounded-r-xl">
+              <div className="mt-8 bg-blue-50 border-blue-400 p-6 rounded-xl">
                 <p className="text-gray-700 text-sm italic">
                   Liu F, Steinkeler A. Epidemiology, diagnosis, and treatment of temporomandibular disorders. Dent Clin North Am 2013;57:465-479
                 </p>
@@ -336,7 +336,7 @@ export default function TMJPage() {
                   この状態になると、急に口が開かなくなる「ロッキング」が起こり、日常生活に大きな支障をきたします。
                 </p>
 
-                <div className="bg-red-50 border-l-4 border-red-400 p-6 rounded-r-xl mb-6">
+                <div className="bg-red-50 border-red-400 p-6 rounded-xl mb-6">
                   <h4 className="font-bold text-gray-800 mb-3 flex items-center gap-2">
                     <AlertTriangle size={20} className="text-red-600" />
                     エビデンス
@@ -385,7 +385,7 @@ export default function TMJPage() {
                   慢性疼痛は治療が困難になり、QOL（生活の質）を著しく低下させます。
                 </p>
 
-                <div className="bg-orange-50 border-l-4 border-orange-400 p-6 rounded-r-xl mb-6">
+                <div className="bg-orange-50 border-orange-400 p-6 rounded-xl mb-6">
                   <h4 className="font-bold text-gray-800 mb-3 flex items-center gap-2">
                     <AlertTriangle size={20} className="text-orange-600" />
                     エビデンス
@@ -433,7 +433,7 @@ export default function TMJPage() {
                   痛みや機能障害による生活制限は、精神的ストレスをさらに増大させ、悪循環を生み出します。
                 </p>
 
-                <div className="bg-purple-50 border-l-4 border-purple-400 p-6 rounded-r-xl mb-6">
+                <div className="bg-purple-50 border-purple-400 p-6 rounded-xl mb-6">
                   <h4 className="font-bold text-gray-800 mb-3 flex items-center gap-2">
                     <AlertTriangle size={20} className="text-purple-600" />
                     エビデンス
@@ -554,7 +554,7 @@ export default function TMJPage() {
                   </div>
                 </div>
 
-                <div className="bg-blue-50 border-l-4 border-blue-400 p-6 rounded-r-xl">
+                <div className="bg-blue-50 border-blue-400 p-6 rounded-xl">
                   <h4 className="font-bold text-gray-800 mb-2">エビデンス</h4>
                   <p className="text-gray-700 text-sm mb-2">
                     Cochrane Review（最高水準のエビデンス）において、スプリント療法は筋筋膜性疼痛に対して
@@ -599,7 +599,7 @@ export default function TMJPage() {
                   自宅で行えるセルフケアの指導も含まれ、スプリント療法との併用が効果的です。
                 </p>
 
-                <div className="bg-blue-50 border-l-4 border-blue-400 p-6 rounded-r-xl">
+                <div className="bg-blue-50 border-blue-400 p-6 rounded-xl">
                   <h4 className="font-bold text-gray-800 mb-2">エビデンス</h4>
                   <p className="text-gray-700 text-sm mb-2">
                     ストレッチや徒手療法により、<span className="font-bold text-blue-600">開口量が平均5〜10mm改善</span>し、
@@ -641,7 +641,7 @@ export default function TMJPage() {
                   </div>
                 </div>
 
-                <div className="bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-r-xl">
+                <div className="bg-yellow-50 border-yellow-400 p-6 rounded-xl">
                   <p className="text-gray-700 text-sm font-bold flex items-start gap-2">
                     <AlertTriangle size={16} className="text-yellow-600 flex-shrink-0 mt-0.5" />
                     薬物療法は他の治療法と併用し、長期連用は避けることが重要です
@@ -707,7 +707,7 @@ export default function TMJPage() {
                   </div>
                 </div>
 
-                <div className="bg-blue-50 border-l-4 border-blue-400 p-6 rounded-r-xl">
+                <div className="bg-blue-50 border-blue-400 p-6 rounded-xl">
                   <h4 className="font-bold text-gray-800 mb-2">エビデンス</h4>
                   <p className="text-gray-700 text-sm mb-2">
                     ボツリヌストキシン注射により、筋性TMD患者の<span className="font-bold text-blue-600">疼痛が平均50〜70%減少</span>し、
@@ -779,7 +779,7 @@ export default function TMJPage() {
                   </div>
                 </div>
 
-                <div className="bg-blue-50 border-l-4 border-blue-400 p-6 rounded-r-xl">
+                <div className="bg-blue-50 border-blue-400 p-6 rounded-xl">
                   <h4 className="font-bold text-gray-800 mb-2">エビデンス</h4>
                   <p className="text-gray-700 text-sm mb-2">
                     咬合異常を伴うTMD患者において、矯正治療により
@@ -825,7 +825,7 @@ export default function TMJPage() {
                   関節鏡視下手術や開放手術がありますが、適応は非常に限定的です。
                 </p>
 
-                <div className="bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-r-xl mb-6">
+                <div className="bg-yellow-50 border-yellow-400 p-6 rounded-xl mb-6">
                   <p className="text-gray-700 text-sm font-bold flex items-start gap-2">
                     <AlertTriangle size={16} className="text-yellow-600 flex-shrink-0 mt-0.5" />
                     外科治療が必要となるケースはTMD全体の5%未満です。ほとんどのケースは保存的治療で改善します。
@@ -888,7 +888,7 @@ export default function TMJPage() {
                   <p className="text-[#8D8070] leading-relaxed mb-4">
                     多くのケースで症状の大幅な改善または完治が可能です。特に早期に適切な治療を開始した場合、70〜80%の患者様で満足のいく結果が得られます。ただし、慢性化した症例や重度の器質的変化を伴う場合は、症状の軽減にとどまることもあります。生活習慣の改善と定期的なメンテナンスにより、再発を予防することが重要です。
                   </p>
-                  <div className="bg-green-50 border-l-4 border-green-400 p-4 rounded-r-lg">
+                  <div className="bg-green-50 border-green-400 p-4 rounded-lg">
                     <p className="text-sm font-semibold text-green-800 mb-2">改善率</p>
                     <div className="grid md:grid-cols-2 gap-3 text-sm text-[#8D8070]">
                       <div>
@@ -914,7 +914,7 @@ export default function TMJPage() {
                   <p className="text-[#8D8070] leading-relaxed mb-4">
                     はい、顎関節症の治療に使用するスプリントは保険適用となります。3割負担の場合、製作費用は約3,000〜5,000円程度です。ただし、診察料や検査料は別途かかります。初診から完成まで2〜3回の通院が必要です。
                   </p>
-                  <div className="bg-blue-50 border-l-4 border-[#E67A2E] p-4 rounded-r-lg">
+                  <div className="bg-blue-50 border-[#E67A2E] p-4 rounded-lg">
                     <p className="text-sm font-semibold text-[#5A4D41] mb-2">費用の目安（3割負担）</p>
                     <ul className="space-y-2 text-sm text-[#8D8070]">
                       <li className="flex items-start gap-2">
@@ -971,7 +971,7 @@ export default function TMJPage() {
                   <p className="text-[#8D8070] leading-relaxed mb-4">
                     痛みや開口障害がない単純なクリック音（復位性円板転位）の場合、必ずしも治療は必要ありません。しかし、約10〜20%の症例で非復位性転位（口が開かなくなる状態）に進行する可能性があるため、定期的な経過観察が推奨されます。音が大きくなってきた、痛みが出始めた、開口量が減ってきたなどの変化があれば、早めに受診してください。
                   </p>
-                  <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-r-lg">
+                  <div className="bg-yellow-50 border-yellow-400 p-4 rounded-lg">
                     <p className="text-sm font-semibold text-yellow-800 mb-2">受診が必要な変化</p>
                     <ul className="space-y-2 text-sm text-[#8D8070]">
                       <li className="flex items-start gap-2">
@@ -1001,7 +1001,7 @@ export default function TMJPage() {
                   <p className="text-[#8D8070] leading-relaxed mb-4">
                     歯ぎしり（ブラキシズム）は顎関節症の最大のリスク因子の一つです。睡眠中の歯ぎしりでは通常の咀嚼力の2〜10倍の力が顎関節にかかるため、関節や筋肉に過度な負担となります。TMD患者の約70〜80%に何らかのブラキシズムが認められます。スプリント療法は歯ぎしりによる顎関節への負担を軽減する効果があります。
                   </p>
-                  <div className="bg-red-50 border-l-4 border-red-400 p-4 rounded-r-lg">
+                  <div className="bg-red-50 border-red-400 p-4 rounded-lg">
                     <p className="text-sm font-semibold text-red-800 mb-2">歯ぎしりの影響</p>
                     <ul className="space-y-2 text-sm text-[#8D8070]">
                       <li className="flex items-start gap-2">
@@ -1031,7 +1031,7 @@ export default function TMJPage() {
                   <p className="text-[#8D8070] leading-relaxed mb-4">
                     ボトックス治療は重度のブラキシズムを伴うTMDや、保存的治療に抵抗性の筋性疼痛に対して有効ですが、全ての方に適しているわけではありません。妊娠中・授乳中の方、神経筋疾患のある方、ボツリヌストキシンにアレルギーのある方は禁忌です。また自費診療のため費用面でのご検討も必要です。適応については診察時に詳しくご説明いたします。
                   </p>
-                  <div className="bg-red-50 border-l-4 border-red-400 p-4 rounded-r-lg">
+                  <div className="bg-red-50 border-red-400 p-4 rounded-lg">
                     <p className="text-sm font-semibold text-red-800 mb-2">禁忌事項</p>
                     <ul className="space-y-2 text-sm text-[#8D8070]">
                       <li className="flex items-start gap-2">
@@ -1061,7 +1061,7 @@ export default function TMJPage() {
                   <p className="text-[#8D8070] leading-relaxed mb-4">
                     ほとんどのケースは保存的治療（スプリント、理学療法、薬物療法など）で改善します。外科手術が必要となるのはTMD全体の5%未満で、関節円板穿孔、高度な変形性関節症、骨性癒着など、保存的治療を6ヶ月以上行っても改善しない重症例に限られます。その場合は大学病院などの専門医療機関をご紹介いたします。
                   </p>
-                  <div className="bg-blue-50 border-l-4 border-[#E67A2E] p-4 rounded-r-lg">
+                  <div className="bg-blue-50 border-[#E67A2E] p-4 rounded-lg">
                     <p className="text-sm font-semibold text-[#5A4D41] mb-2">手術が必要なケース</p>
                     <ul className="space-y-2 text-sm text-[#8D8070]">
                       <li className="flex items-start gap-2">

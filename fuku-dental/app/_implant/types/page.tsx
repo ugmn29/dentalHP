@@ -403,7 +403,7 @@ export default function ImplantTypesPage() {
               </div>
 
               <div className="space-y-6">
-                <div className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-cyan-500">
+                <div className="bg-white rounded-xl shadow-lg p-6 border-cyan-500">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 w-12 h-12 bg-cyan-600 text-white rounded-full flex items-center justify-center font-bold text-xl mr-4">
                       1
@@ -420,7 +420,7 @@ export default function ImplantTypesPage() {
                   </div>
                 </div>
 
-                <div className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-blue-500">
+                <div className="bg-white rounded-xl shadow-lg p-6 border-blue-500">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-xl mr-4">
                       2
@@ -437,7 +437,7 @@ export default function ImplantTypesPage() {
                   </div>
                 </div>
 
-                <div className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-indigo-500">
+                <div className="bg-white rounded-xl shadow-lg p-6 border-indigo-500">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 w-12 h-12 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold text-xl mr-4">
                       3
@@ -454,7 +454,7 @@ export default function ImplantTypesPage() {
                   </div>
                 </div>
 
-                <div className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-purple-500">
+                <div className="bg-white rounded-xl shadow-lg p-6 border-purple-500">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold text-xl mr-4">
                       4

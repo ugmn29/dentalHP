@@ -193,7 +193,7 @@ export default function RootCanalPainPage() {
                   <h4 className="text-2xl font-bold text-[#5A4D41]">痛みの経過</h4>
                 </div>
                 <div className="space-y-4">
-                  <div className="bg-[#FDFBF7] rounded-xl p-6 border-l-4 border-[#C5A572]">
+                  <div className="bg-[#FDFBF7] rounded-xl p-6 border-[#C5A572]">
                     <h5 className="font-bold text-[#5A4D41] mb-2">治療当日〜翌日</h5>
                     <p className="text-[#8D8070] mb-2">
                       麻酔が切れた後、軽い痛みや違和感を感じることがあります。ズキズキとした痛みや噛んだ時の痛みが出ることもあります。
@@ -202,7 +202,7 @@ export default function RootCanalPainPage() {
                       → 処方された痛み止めを服用してください
                     </p>
                   </div>
-                  <div className="bg-[#FDFBF7] rounded-xl p-6 border-l-4 border-[#B39560]">
+                  <div className="bg-[#FDFBF7] rounded-xl p-6 border-[#B39560]">
                     <h5 className="font-bold text-[#5A4D41] mb-2">2〜3日目</h5>
                     <p className="text-[#8D8070] mb-2">
                       通常、痛みは徐々に軽減していきます。噛んだ時の違和感は残ることがありますが、自然に改善していきます。
@@ -211,7 +211,7 @@ export default function RootCanalPainPage() {
                       → 必要に応じて痛み止めを服用
                     </p>
                   </div>
-                  <div className="bg-[#FDFBF7] rounded-xl p-6 border-l-4 border-[#395b45]">
+                  <div className="bg-[#FDFBF7] rounded-xl p-6 border-[#395b45]">
                     <h5 className="font-bold text-[#5A4D41] mb-2">4〜7日目</h5>
                     <p className="text-[#8D8070] mb-2">
                       ほとんどの場合、痛みは消失します。違和感も少なくなり、通常の生活に戻れます。
@@ -440,7 +440,7 @@ export default function RootCanalPainPage() {
                   <p className="mb-3">
                     <strong className="text-[#C5A572]">A.</strong> 痛みが強くなる場合は、すぐに当院にご連絡ください。
                   </p>
-                  <div className="bg-red-50 p-4 rounded-lg border-l-4 border-red-500">
+                  <div className="bg-red-50 p-4 rounded-lg border-red-500">
                     <p className="text-sm text-[#5A4D41] mb-2">
                       <strong className="text-red-600">以下の症状がある場合は緊急性が高い可能性があります：</strong>
                     </p>

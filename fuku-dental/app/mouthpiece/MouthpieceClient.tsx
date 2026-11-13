@@ -164,7 +164,7 @@ export default function MouthpiecePage() {
                             <div className="space-y-8">
                                 {/* インビザライン */}
                                 <div>
-                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-l-4 border-[#C5A572] py-3 px-4 mb-4">インビザライン</h4>
+                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-[#C5A572] py-3 px-4 mb-4">インビザライン</h4>
                                     <p className="text-[#5A4D41] leading-loose">
                                         世界で最も普及しているマウスピース矯正システムです。
                                         <span className="font-bold bg-yellow-100">1,500万人以上の治療実績</span>があり、<span className="text-[#2E8B57] font-bold">軽度から中程度の歯並びの乱れに幅広く対応</span>できます。
@@ -173,7 +173,7 @@ export default function MouthpiecePage() {
                                 </div>
                                 {/* インビザラインGo */}
                                 <div>
-                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-l-4 border-[#C5A572] py-3 px-4 mb-4">インビザラインGo</h4>
+                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-[#C5A572] py-3 px-4 mb-4">インビザラインGo</h4>
                                     <p className="text-[#5A4D41] leading-loose">
                                         前歯を中心とした<span className="font-bold bg-yellow-100">軽度な歯並びの乱れに特化</span>したシステムです。
                                         <span className="text-[#2E8B57] font-bold">治療期間が短く、費用も抑えられる</span>のが特徴です。

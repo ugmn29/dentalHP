@@ -162,7 +162,7 @@ export default function OvercomingFearPage() {
                                     </div>
                                 </div>
 
-                                <div className="bg-yellow-50 border-l-4 border-[#395b45] rounded p-6 mt-6">
+                                <div className="bg-yellow-50 border-[#395b45] rounded p-6 mt-6">
                                     <p className="text-[#5A4D41] leading-loose">
                                         <span className="font-bold text-[#395b45]">重要なポイント:</span><br />
                                         これらの恐怖は<span className="text-[#395b45] font-bold">すべて正常な反応</span>です。
@@ -415,7 +415,7 @@ export default function OvercomingFearPage() {
                                     </div>
                                 </div>
 
-                                <div className="bg-yellow-50 border-l-4 border-[#395b45] rounded p-6 mt-8">
+                                <div className="bg-yellow-50 border-[#395b45] rounded p-6 mt-8">
                                     <p className="text-[#5A4D41] leading-loose">
                                         <span className="font-bold text-[#395b45]">大切なのは「焦らないこと」:</span><br />
                                         <span className="font-bold bg-yellow-100">お子様によってペースは違います</span>。

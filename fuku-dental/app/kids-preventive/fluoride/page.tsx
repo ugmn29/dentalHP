@@ -204,7 +204,7 @@ export default function FluoridePage() {
                                     </div>
                                 </div>
 
-                                <div className="bg-yellow-50 border-l-4 border-[#395b45] rounded p-6">
+                                <div className="bg-yellow-50 border-[#395b45] rounded p-6">
                                     <p className="text-[#5A4D41] leading-loose">
                                         <span className="font-bold text-[#395b45]">重要なポイント:</span><br />
                                         フッ素塗布だけで虫歯を100%防げるわけではありません。
@@ -402,7 +402,7 @@ export default function FluoridePage() {
                                     </p>
                                 </div>
 
-                                <div className="bg-yellow-50 border-l-4 border-[#395b45] rounded p-6 mt-6">
+                                <div className="bg-yellow-50 border-[#395b45] rounded p-6 mt-6">
                                     <h4 className="font-bold text-[#395b45] mb-3">フッ素塗布後の注意事項</h4>
                                     <div className="space-y-2 text-sm">
                                         <p>• <span className="font-bold">30分間は飲食を控える</span>（フッ素を歯に定着させるため）</p>
@@ -472,7 +472,7 @@ export default function FluoridePage() {
                                     </div>
                                 </div>
 
-                                <div className="bg-red-50 border-l-4 border-red-400 rounded p-6">
+                                <div className="bg-red-50 border-red-400 rounded p-6">
                                     <h4 className="font-bold text-red-700 mb-3 flex items-center gap-2">
                                         <AlertTriangle className="text-red-700" size={20} />
                                         フッ素に関する誤解
@@ -587,7 +587,7 @@ export default function FluoridePage() {
                                     </div>
                                 </div>
 
-                                <div className="bg-yellow-50 border-l-4 border-[#395b45] rounded p-6">
+                                <div className="bg-yellow-50 border-[#395b45] rounded p-6">
                                     <p className="text-[#5A4D41] leading-loose">
                                         <span className="font-bold text-[#395b45]">ダブルのフッ素ケアで最強の予防:</span><br />
                                         <span className="font-bold bg-yellow-100">歯科医院での高濃度フッ素塗布（3〜4ヶ月に1回）</span> +

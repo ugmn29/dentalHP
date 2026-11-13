@@ -495,7 +495,7 @@ export default function AvoidRegretPage() {
                       <span className="font-bold bg-yellow-100">しかし、それ以外の軽度〜中等度の症例で「今すぐ」と過度に煽る医院は要注意</span>です。
                       治療の緊急性について詳しい説明がない場合は、必ずセカンドオピニオンを受けて、冷静に判断しましょう。
                     </p>
-                    <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500 text-sm">
+                    <div className="bg-blue-50 p-4 rounded-lg border-blue-500 text-sm">
                       <p className="font-bold text-blue-700 mb-1">判断のポイント：</p>
                       <p className="text-gray-700">信頼できる医師は、装置治療をすぐに勧めるのではなく、装置を使わなくても「習慣改善」だけでも提案してくれます。口呼吸や舌癖などの根本原因に対処することの重要性を説明してくれる医院を選びましょう。</p>
                     </div>

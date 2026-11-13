@@ -152,7 +152,7 @@ export default function UnderbiteNaturalCurePage() {
                 </div>
               </div>
 
-              <div className="bg-yellow-50 p-6 rounded-xl border-l-4 border-yellow-400">
+              <div className="bg-yellow-50 p-6 rounded-xl border-yellow-400">
                 <p className="text-sm text-gray-700">
                   <span className="font-bold text-yellow-700">重要：</span>
                   「様子を見ましょう」と言われても、実際には<span className="font-bold">定期的な経過観察（3〜6ヶ月ごと）</span>が必須です。

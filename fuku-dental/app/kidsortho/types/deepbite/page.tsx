@@ -225,7 +225,7 @@ export default function DeepBiteDetailPage() {
                     <span><strong className="text-[#5A4D41]">前歯の萌出位置：</strong>上の前歯が下方に、下の前歯が上方に生える傾向が遺伝します</span>
                   </li>
                 </ul>
-                <div className="bg-blue-50 p-5 rounded-lg mt-4 border-l-4 border-blue-500">
+                <div className="bg-blue-50 p-5 rounded-lg mt-4 border-blue-500">
                   <p className="text-sm text-[#5A4D41]">
                     <strong className="text-blue-600">遺伝の影響：</strong>親が過蓋咬合の場合、お子様も同様の傾向を持つ可能性があります。早期治療により成長をコントロールすることで改善が可能です。
                   </p>
@@ -269,7 +269,7 @@ export default function DeepBiteDetailPage() {
                     <span><strong className="text-[#5A4D41]">歯ぎしり・食いしばり：</strong>強い咬合力により奥歯がすり減り、咬合が深くなります</span>
                   </li>
                 </ul>
-                <div className="bg-yellow-50 p-5 rounded-lg mt-4 border-l-4 border-yellow-400">
+                <div className="bg-yellow-50 p-5 rounded-lg mt-4 border-yellow-400">
                   <p className="text-sm text-[#5A4D41]">
                     <strong className="text-yellow-600">習癖と虫歯予防が重要：</strong>下唇を噛む癖や頬杖などの習癖を早期に改善し、乳歯の虫歯を予防することで、過蓋咬合の進行を防げます。
                   </p>
@@ -407,7 +407,7 @@ export default function DeepBiteDetailPage() {
               </h4>
               <div className="space-y-6">
                 {/* 1期治療 */}
-                <div className="bg-blue-50 p-6 rounded-xl border-l-4 border-blue-500">
+                <div className="bg-blue-50 p-6 rounded-xl border-blue-500">
                   <h4 className="font-bold text-[#5A4D41] mb-4 text-lg">1期治療（7〜12歳頃）</h4>
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="bg-white p-4 rounded-lg">
@@ -428,7 +428,7 @@ export default function DeepBiteDetailPage() {
                 </div>
 
                 {/* 2期治療 */}
-                <div className="bg-yellow-50 p-6 rounded-xl border-l-4 border-yellow-400">
+                <div className="bg-yellow-50 p-6 rounded-xl border-yellow-400">
                   <h4 className="font-bold text-[#5A4D41] mb-4 text-lg">2期治療（12歳以降〜）</h4>
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="bg-white p-4 rounded-lg">
@@ -494,14 +494,14 @@ export default function DeepBiteDetailPage() {
                   </ul>
                 </div>
 
-                <div className="bg-blue-50 p-6 rounded-xl border-l-4 border-blue-500">
+                <div className="bg-blue-50 p-6 rounded-xl border-blue-500">
                   <h4 className="font-bold text-[#5A4D41] mb-3">7歳での定期検診を推奨</h4>
                   <p className="text-sm text-[#8D8070] leading-relaxed">
                     過蓋咬合は見た目では分かりにくいことがあります。7歳頃に矯正歯科で検診を受けることで、過蓋咬合の有無を確認し、適切な治療開始時期を見逃さずに済みます。
                   </p>
                 </div>
 
-                <div className="bg-yellow-50 p-6 rounded-xl border-l-4 border-yellow-400">
+                <div className="bg-yellow-50 p-6 rounded-xl border-yellow-400">
                   <h4 className="font-bold text-[#5A4D41] mb-3">12歳以降でも治療可能</h4>
                   <p className="text-sm text-[#8D8070] leading-relaxed">
                     成長期を過ぎてしまった場合でも、マルチブラケット装置とアンカースクリューを使用することで治療可能です。ただし、骨格的な問題が大きい場合は、治療が困難になることがあります。
@@ -579,7 +579,7 @@ export default function DeepBiteDetailPage() {
                       <span><strong className="text-[#5A4D41]">重度の過蓋咬合：</strong>下の前歯がほとんど見えない、または歯茎を突いている状態</span>
                     </li>
                   </ul>
-                  <p className="text-sm bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+                  <p className="text-sm bg-blue-50 p-4 rounded-lg border-blue-500">
                     重度の場合は早急な治療が必要です。矯正歯科での診断を受けることをお勧めします。
                   </p>
                 </div>
@@ -611,7 +611,7 @@ export default function DeepBiteDetailPage() {
                       <span><strong className="text-[#5A4D41]">奥歯の違和感：</strong>奥歯が伸びる過程で軽い違和感を感じることがあります</span>
                     </li>
                   </ul>
-                  <p className="text-sm bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-400">
+                  <p className="text-sm bg-yellow-50 p-4 rounded-lg border-yellow-400">
                     ほとんどのお子様は数日で装置に慣れます。違和感が強い場合は調整できますので、ご相談ください。
                   </p>
                 </div>
@@ -675,7 +675,7 @@ export default function DeepBiteDetailPage() {
                       <span><strong className="text-[#5A4D41]">予防：</strong>早期に過蓋咬合を治療することで、顎関節症を予防できます</span>
                     </li>
                   </ul>
-                  <p className="text-sm bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+                  <p className="text-sm bg-blue-50 p-4 rounded-lg border-blue-500">
                     成人してから顎関節症が発症すると治療が困難です。子どものうちに過蓋咬合を治療することが、将来の顎関節症予防につながります。
                   </p>
                 </div>

@@ -312,7 +312,7 @@ export default function ExpanderPage() {
                                 </div>
                             </div>
 
-                            <div className="bg-yellow-50 p-6 border-l-4 border-yellow-400 rounded-r-lg">
+                            <div className="bg-yellow-50 p-6 border-yellow-400 rounded-lg">
                                 <div className="flex items-start gap-4">
                                     <AlertCircle className="w-8 h-8 text-yellow-600 flex-shrink-0 mt-1" />
                                     <div>
@@ -370,7 +370,7 @@ export default function ExpanderPage() {
                                         <p className="text-[#8D8070] mb-3">
                                             装置を外した後は、必ず水またはぬるま湯で洗います。歯ブラシを使って優しくこすり、食べカスや汚れを落としましょう。
                                         </p>
-                                        <p className="text-sm text-[#5A4D41] bg-yellow-50 p-4 border-l-4 border-yellow-400 rounded-r-lg mt-3">
+                                        <p className="text-sm text-[#5A4D41] bg-yellow-50 p-4 border-yellow-400 rounded-lg mt-3">
                                             <strong>注意：</strong>熱湯は使用しないでください。プラスチックが変形する恐れがあります。
                                         </p>
                                     </div>
@@ -382,7 +382,7 @@ export default function ExpanderPage() {
                                         <p className="text-[#8D8070] mb-3">
                                             入れ歯洗浄剤（ポリデントなど）を使用して、装置を浸け置き洗いします。臭いや着色を防ぎ、清潔に保てます。
                                         </p>
-                                        <p className="text-sm text-[#5A4D41] bg-blue-50 p-4 border-l-4 border-blue-400 rounded-r-lg mt-3">
+                                        <p className="text-sm text-[#5A4D41] bg-blue-50 p-4 border-blue-400 rounded-lg mt-3">
                                             <strong>方法：</strong>コップに水と洗浄剤を入れ、装置を15〜30分浸す → 水でよくすすぐ
                                         </p>
                                     </div>
@@ -519,7 +519,7 @@ export default function ExpanderPage() {
                                         <p className="text-[#8D8070] leading-relaxed mb-4">
                                             拡大ネジを回した直後は、少し圧迫感や違和感がありますが、強い痛みはほとんどありません。多くのお子さまは2〜3日で慣れます。もし痛みが強い場合は、ネジを回すペースを遅くするなどの調整が可能です。
                                         </p>
-                                        <div className="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-r-lg">
+                                        <div className="bg-blue-50 border-blue-400 p-4 rounded-lg">
                                             <p className="text-sm font-bold text-blue-900 mb-2">痛みの程度</p>
                                             <ul className="space-y-2 text-sm text-[#5A4D41]">
                                                 <li className="flex items-start gap-2">
@@ -594,7 +594,7 @@ export default function ExpanderPage() {
                                         <p className="text-[#8D8070] leading-relaxed mb-4">
                                             はい、必ず外してください。装着したまま食事をすると、装置が破損したり、食べカスが詰まって不衛生になります。食事後は歯磨きをしてから再度装着しましょう。
                                         </p>
-                                        <div className="bg-red-50 border-l-4 border-red-400 p-4 rounded-r-lg">
+                                        <div className="bg-red-50 border-red-400 p-4 rounded-lg">
                                             <p className="text-sm font-bold text-red-900 mb-2">食事中の注意事項</p>
                                             <ul className="space-y-2 text-sm text-[#5A4D41]">
                                                 <li className="flex items-start gap-2">
@@ -669,7 +669,7 @@ export default function ExpanderPage() {
                                         <p className="text-[#8D8070] leading-relaxed mb-4">
                                             拡大直後は後戻りのリスクがあります。そのため、拡大完了後も数ヶ月間は保定装置として使用を続けます。指示通りに装着すれば、後戻りはほとんど起こりません。
                                         </p>
-                                        <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-r-lg mb-4">
+                                        <div className="bg-yellow-50 border-yellow-400 p-4 rounded-lg mb-4">
                                             <p className="text-sm font-bold text-yellow-900 mb-2">後戻り防止のポイント</p>
                                             <ul className="space-y-2 text-sm text-[#5A4D41]">
                                                 <li className="flex items-start gap-2">
@@ -705,7 +705,7 @@ export default function ExpanderPage() {
                                         <p className="text-[#8D8070] leading-relaxed mb-4">
                                             当院の拡大床は¥495,000です。詳しくは費用ページをご覧ください。
                                         </p>
-                                        <div className="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-r-lg">
+                                        <div className="bg-blue-50 border-blue-400 p-4 rounded-lg">
                                             <p className="text-sm font-bold text-blue-900 mb-2">費用の内訳</p>
                                             <ul className="space-y-2 text-sm text-[#5A4D41]">
                                                 <li className="flex items-start gap-2">

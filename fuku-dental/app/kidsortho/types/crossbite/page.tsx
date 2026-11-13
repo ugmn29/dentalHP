@@ -225,7 +225,7 @@ export default function CrossBiteDetailPage() {
                     <span><strong className="text-[#5A4D41]">顎の左右非対称：</strong>左右で顎の大きさや位置が異なる傾向が遺伝することがあります</span>
                   </li>
                 </ul>
-                <div className="bg-blue-50 p-5 rounded-lg mt-4 border-l-4 border-blue-500">
+                <div className="bg-blue-50 p-5 rounded-lg mt-4 border-blue-500">
                   <p className="text-sm text-[#5A4D41]">
                     <strong className="text-blue-600">遺伝の影響：</strong>親に交叉咬合がある場合、お子様も同様の傾向を持つ可能性があります。ただし、早期治療により顎の成長をコントロールし、改善することが可能です。
                   </p>
@@ -265,7 +265,7 @@ export default function CrossBiteDetailPage() {
                     <span><strong className="text-[#5A4D41]">指しゃぶり：</strong>片側を吸う癖があると、その側の歯並びが狭くなります</span>
                   </li>
                 </ul>
-                <div className="bg-yellow-50 p-5 rounded-lg mt-4 border-l-4 border-yellow-400">
+                <div className="bg-yellow-50 p-5 rounded-lg mt-4 border-yellow-400">
                   <p className="text-sm text-[#5A4D41]">
                     <strong className="text-yellow-600">習癖の早期改善が重要：</strong>片側噛みや頬杖などの習癖は、早期に改善することで交叉咬合の進行を防げます。また、鼻呼吸を確立することも重要です。
                   </p>
@@ -407,7 +407,7 @@ export default function CrossBiteDetailPage() {
               </h4>
               <div className="space-y-6">
                 {/* 1期治療 */}
-                <div className="bg-blue-50 p-6 rounded-xl border-l-4 border-blue-500">
+                <div className="bg-blue-50 p-6 rounded-xl border-blue-500">
                   <h4 className="font-bold text-[#5A4D41] mb-4 text-lg">1期治療（6〜12歳頃）</h4>
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="bg-white p-4 rounded-lg">
@@ -428,7 +428,7 @@ export default function CrossBiteDetailPage() {
                 </div>
 
                 {/* 2期治療 */}
-                <div className="bg-yellow-50 p-6 rounded-xl border-l-4 border-yellow-400">
+                <div className="bg-yellow-50 p-6 rounded-xl border-yellow-400">
                   <h4 className="font-bold text-[#5A4D41] mb-4 text-lg">2期治療（12歳以降〜）</h4>
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="bg-white p-4 rounded-lg">
@@ -494,14 +494,14 @@ export default function CrossBiteDetailPage() {
                   </ul>
                 </div>
 
-                <div className="bg-red-50 p-6 rounded-xl border-l-4 border-red-500">
+                <div className="bg-red-50 p-6 rounded-xl border-red-500">
                   <h4 className="font-bold text-[#5A4D41] mb-3">早期発見が極めて重要</h4>
                   <p className="text-sm text-[#8D8070] leading-relaxed">
                     交叉咬合は放置すると顔の変形を引き起こす緊急性の高い不正咬合です。少しでも疑いがある場合は、すぐに矯正歯科でご相談ください。早ければ早いほど、簡単な治療で改善できます。
                   </p>
                 </div>
 
-                <div className="bg-yellow-50 p-6 rounded-xl border-l-4 border-yellow-400">
+                <div className="bg-yellow-50 p-6 rounded-xl border-yellow-400">
                   <h4 className="font-bold text-[#5A4D41] mb-3">12歳以降は治療困難化</h4>
                   <p className="text-sm text-[#8D8070] leading-relaxed">
                     成長期を過ぎてしまうと、顎の拡大が困難になり、骨格的な変形が固定化します。重度の場合は、外科矯正（顎の手術）が必要になることがあります。
@@ -579,7 +579,7 @@ export default function CrossBiteDetailPage() {
                       <span><strong className="text-[#5A4D41]">効果的：</strong>短期間で顎を拡大できる最も効果的な方法です</span>
                     </li>
                   </ul>
-                  <p className="text-sm bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+                  <p className="text-sm bg-blue-50 p-4 rounded-lg border-blue-500">
                     ほとんどのお子様は数日で装置に慣れます。痛みが強い場合は調整できますので、ご相談ください。
                   </p>
                 </div>
@@ -611,7 +611,7 @@ export default function CrossBiteDetailPage() {
                       <span><strong className="text-[#5A4D41]">外科矯正が必要：</strong>成人してからは顎の手術が必要になることがあります</span>
                     </li>
                   </ul>
-                  <p className="text-sm bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-400">
+                  <p className="text-sm bg-yellow-50 p-4 rounded-lg border-yellow-400">
                     交叉咬合は最も早期治療が重要な不正咬合です。発見したらできるだけ早く治療を開始してください。
                   </p>
                 </div>
@@ -675,7 +675,7 @@ export default function CrossBiteDetailPage() {
                       <span><strong className="text-[#5A4D41]">早期治療が効果的：</strong>前歯だけの場合は、比較的簡単に治療できます</span>
                     </li>
                   </ul>
-                  <p className="text-sm bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+                  <p className="text-sm bg-blue-50 p-4 rounded-lg border-blue-500">
                     前歯だけの交叉咬合は、早期に発見して治療すれば、短期間で改善できます。放置すると全体に広がることもあるため、早めの治療をお勧めします。
                   </p>
                 </div>

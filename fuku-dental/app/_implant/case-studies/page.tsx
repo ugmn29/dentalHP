@@ -140,7 +140,7 @@ export default function ImplantCaseStudiesPage() {
                       </div>
                     </div>
                   </div>
-                  <div className="bg-purple-50 border-l-4 border-purple-600 p-4 rounded">
+                  <div className="bg-purple-50 border-purple-600 p-4 rounded">
                     <div className="flex items-start">
                       <Heart className="w-5 h-5 text-purple-600 mr-3 mt-0.5 flex-shrink-0" />
                       <div>
@@ -205,7 +205,7 @@ export default function ImplantCaseStudiesPage() {
                       </div>
                     </div>
                   </div>
-                  <div className="bg-blue-50 border-l-4 border-blue-600 p-4 rounded">
+                  <div className="bg-blue-50 border-blue-600 p-4 rounded">
                     <div className="flex items-start">
                       <Heart className="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" />
                       <div>
@@ -270,7 +270,7 @@ export default function ImplantCaseStudiesPage() {
                       </div>
                     </div>
                   </div>
-                  <div className="bg-green-50 border-l-4 border-green-600 p-4 rounded">
+                  <div className="bg-green-50 border-green-600 p-4 rounded">
                     <div className="flex items-start">
                       <Heart className="w-5 h-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
                       <div>
@@ -335,7 +335,7 @@ export default function ImplantCaseStudiesPage() {
                       </div>
                     </div>
                   </div>
-                  <div className="bg-amber-50 border-l-4 border-amber-600 p-4 rounded">
+                  <div className="bg-amber-50 border-amber-600 p-4 rounded">
                     <div className="flex items-start">
                       <Heart className="w-5 h-5 text-amber-600 mr-3 mt-0.5 flex-shrink-0" />
                       <div>
@@ -400,7 +400,7 @@ export default function ImplantCaseStudiesPage() {
                       </div>
                     </div>
                   </div>
-                  <div className="bg-rose-50 border-l-4 border-rose-600 p-4 rounded">
+                  <div className="bg-rose-50 border-rose-600 p-4 rounded">
                     <div className="flex items-start">
                       <Heart className="w-5 h-5 text-rose-600 mr-3 mt-0.5 flex-shrink-0" />
                       <div>

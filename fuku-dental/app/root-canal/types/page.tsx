@@ -214,7 +214,7 @@ export default function RootCanalTypesPage() {
                       </div>
                     </div>
                   </div>
-                  <div className="bg-yellow-50 border-l-4 border-yellow-600 p-4 rounded">
+                  <div className="bg-yellow-50 border-yellow-600 p-4 rounded">
                     <div className="flex items-start">
                       <AlertCircle className="w-5 h-5 text-yellow-600 mr-3 mt-0.5 flex-shrink-0" />
                       <div>

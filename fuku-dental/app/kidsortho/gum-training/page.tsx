@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
@@ -38,16 +39,20 @@ export default function GumTrainingPage() {
         <div className="mx-auto max-w-5xl px-4 pb-16 pt-8 md:px-8">
           <nav aria-label="パンくずリスト" className="mb-8 flex flex-wrap gap-2 text-sm text-[#71665A]"><Link href="/">ホーム</Link><span aria-hidden="true">/</span><Link href="/kidsortho">こども矯正</Link><span aria-hidden="true">/</span><span>ガムトレーニング</span></nav>
           <header className="mb-12">
+            <div className="grid items-center gap-8 lg:grid-cols-2">
+              <div>
             <p className="mb-4 text-sm font-bold tracking-wider text-[#087a76]">食べるためのお口の動きを練習する</p>
-            <h1 className="font-serif text-3xl font-bold leading-normal md:text-5xl md:leading-snug">子どもの<span className="block sm:inline">ガムトレーニング</span></h1>
+            <h1 className="font-serif text-3xl font-bold leading-normal md:text-5xl md:leading-snug">子どもの<span className="block">ガムトレーニング</span></h1>
             <p className="mt-4 font-serif text-xl font-bold md:text-2xl">噛み方・舌の動きの練習と注意点</p>
             <p className="mt-6 max-w-3xl text-lg leading-8">ガムを使って「奥歯で噛む」「舌で運ぶ」といった動きを確かめる練習です。お子さまのお口の状態に合わせて、歯科医院で方法を確認してから取り組みましょう。</p>
-            <div className="mt-8 grid gap-3 sm:grid-cols-3">
-              {[
-                ['01', '奥歯で噛む', '噛む位置と力加減を確かめる'],
-                ['02', '舌で運ぶ', 'ガムを奥歯の方へ戻す'],
-                ['03', '動きを確認する', '噛み方・舌・唇の連携を見る'],
-              ].map(([number, label, detail]) => <div key={number} className="rounded-2xl border border-[#E6D8C5] bg-white p-6"><p className="text-sm font-bold text-[#087a76]">{number}</p><p className="mb-2 mt-3 text-xl font-bold">{label}</p><p className="text-sm leading-7">{detail}</p></div>)}
+              </div>
+              <figure className="mx-auto w-full max-w-lg">
+                <Image src="/images/kidsortho/education/gum-movements.webp" width={1000} height={1000} alt="歯科医院で確認する動きの例。1は噛む、2は舌でガムを丸める、3は上あごに広げる、4は唾液を飲む動き" sizes="(min-width: 1024px) 464px, (min-width: 640px) 512px, 100vw" priority className="h-auto w-full rounded-2xl" />
+                <figcaption className="mt-3 text-sm leading-6 text-[#71665A]">
+                  <span className="block font-bold text-[#5A4D41]">歯科医院で確認する動きの例</span>
+                  ①噛む → ②舌で丸める → ③上あごに広げる → ④唾液を飲む。『咬合育成のバイブル』の図を使用しています。<strong className="block mt-2 text-[#5A4D41]">④で飲み込むのは唾液です。ガムそのものは飲み込みません。</strong>
+                </figcaption>
+              </figure>
             </div>
           </header>
           <nav aria-label="このページの内容" className="mb-12 flex flex-wrap gap-x-6 gap-y-3 rounded-2xl bg-[#F1ECE3] p-5 text-sm"><a href="#purpose" className={linkStyle}>練習の目的</a><a href="#before" className={linkStyle}>始める前に</a><a href="#steps" className={linkStyle}>練習の流れ</a><a href="#faq" className={linkStyle}>よくある質問</a></nav>
@@ -56,7 +61,7 @@ export default function GumTrainingPage() {
               <h2 className={heading}>ガムトレーニングで何を練習するの？</h2>
               <p>食べるときは、歯で噛む動きに加え、舌で食べ物を奥歯へ運ぶ、唇を閉じる、飲み込む準備をするといった動きが関わります。ガムトレーニングは、このようなお口の働きを確認し、必要な動きを練習するMFT（口腔筋機能療法）の一つです。</p>
               <p className="mt-4">当院の参考資料では、奥歯で噛む位置を意識できるようにしてから、柔らかくなったガムを舌で奥歯へ戻す練習へ進みます。回数をこなすことより、目的の動きができているかを大切にします。</p>
-              <div className="mt-6 rounded-2xl border-l-4 border-[#087a76] bg-[#EAF4F0] p-6">
+              <div className="mt-6 rounded-2xl border-[#087a76] bg-[#EAF4F0] p-6">
                 <h3 className="mb-3 text-lg font-bold">ガムで顎を鍛えれば、歯並びも治りますか？</h3>
                 <p>ガムを噛むだけで顎の幅が広がる、決まった期間で歯並びが整うとはいえません。歯並びには、顎の成長、歯の大きさ、生える位置など複数の要因が関わります。歯並びや噛み合わせの治療が必要かどうかは、別に診察・検査を行います。</p>
               </div>

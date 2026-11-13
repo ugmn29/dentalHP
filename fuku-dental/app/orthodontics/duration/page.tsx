@@ -127,7 +127,7 @@ export default function OrthodonticsDurationPage() {
                       </div>
                     </div>
                   </div>
-                  <div className="mt-6 p-4 bg-blue-50 border-l-4 border-blue-600 rounded">
+                  <div className="mt-6 p-4 bg-blue-50 border-blue-600 rounded">
                     <p className="text-sm text-gray-700">
                       <span className="font-bold">症例別の目安：</span><br />
                       軽度：1.5〜2年 / 中度：2〜2.5年 / 重度：2.5〜3年以上
@@ -175,7 +175,7 @@ export default function OrthodonticsDurationPage() {
                       </div>
                     </div>
                   </div>
-                  <div className="mt-6 p-4 bg-yellow-50 border-l-4 border-yellow-600 rounded">
+                  <div className="mt-6 p-4 bg-yellow-50 border-yellow-600 rounded">
                     <p className="text-sm text-gray-700">
                       <span className="font-bold">重要：</span>1日20〜22時間の装着が必須。装着時間が短いと期間が延びます。
                     </p>
@@ -222,7 +222,7 @@ export default function OrthodonticsDurationPage() {
                       </div>
                     </div>
                   </div>
-                  <div className="mt-6 p-4 bg-green-50 border-l-4 border-green-600 rounded">
+                  <div className="mt-6 p-4 bg-green-50 border-green-600 rounded">
                     <p className="text-sm text-gray-700">
                       <span className="font-bold">メリット：</span>短期間・低費用で気になる部分だけを改善できます。
                     </p>
@@ -487,7 +487,7 @@ export default function OrthodonticsDurationPage() {
                 </div>
               </div>
 
-              <div className="bg-red-50 border-l-4 border-red-600 p-6 rounded">
+              <div className="bg-red-50 border-red-600 p-6 rounded">
                 <div className="flex items-start">
                   <AlertTriangle className="w-6 h-6 text-red-600 mr-3 mt-0.5 flex-shrink-0" />
                   <div>

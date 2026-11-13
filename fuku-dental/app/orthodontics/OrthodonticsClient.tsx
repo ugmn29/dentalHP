@@ -134,14 +134,14 @@ export default function OrthoGeneralPage() {
                             </div>
                             <div className="space-y-8">
                                 <div>
-                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-l-4 border-[#C5A572] py-3 px-4 mb-4">メタルブラケット</h4>
+                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-[#C5A572] py-3 px-4 mb-4">メタルブラケット</h4>
                                     <p className="text-[#5A4D41] leading-loose">
                                         最も一般的なワイヤー矯正装置です。<span className="font-bold bg-yellow-100">金属製で強度が高く、幅広い症例に対応</span>できます。
                                         <span className="text-[#2E8B57] font-bold">費用を抑えたい方</span>におすすめです。
                                     </p>
                                 </div>
                                 <div>
-                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-l-4 border-[#C5A572] py-3 px-4 mb-4">ホワイトブラケット（審美ブラケット）</h4>
+                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-[#C5A572] py-3 px-4 mb-4">ホワイトブラケット（審美ブラケット）</h4>
                                     <p className="text-[#5A4D41] leading-loose">
                                         <span className="font-bold bg-yellow-100">歯の色に馴染む白いセラミック製のブラケット</span>です。
                                         金属製に比べて<span className="text-[#2E8B57] font-bold">目立ちにくく、審美性を重視する方</span>におすすめです。

@@ -95,7 +95,7 @@ export default function BadAlignmentPage() {
 
                             {/* 遺伝 vs 生活習慣 */}
                             <div className="grid md:grid-cols-2 gap-6">
-                                <div className="bg-white rounded-2xl p-6 shadow-md border-l-4 border-[#8D8070]">
+                                <div className="bg-white rounded-2xl p-6 shadow-md border-[#8D8070]">
                                     <h4 className="text-lg font-bold text-[#5A4D41] mb-4">先天的要因（遺伝）約20%</h4>
                                     <ul className="space-y-2 text-sm text-[#8D8070]">
                                         <li className="flex items-start gap-2">
@@ -113,7 +113,7 @@ export default function BadAlignmentPage() {
                                     </ul>
                                 </div>
 
-                                <div className="bg-gradient-to-br from-[#e8f2ed] to-white rounded-2xl p-6 shadow-md border-l-4 border-[#395b45]">
+                                <div className="bg-gradient-to-br from-[#e8f2ed] to-white rounded-2xl p-6 shadow-md border-[#395b45]">
                                     <h4 className="text-lg font-bold text-[#395b45] mb-4">後天的要因（生活習慣）約80%</h4>
                                     <ul className="space-y-2 text-sm text-[#5A4D41]">
                                         <li className="flex items-start gap-2">
@@ -150,7 +150,7 @@ export default function BadAlignmentPage() {
                             </div>
                             <div className="space-y-6">
                                 {/* 1. 口呼吸・ポカン口 */}
-                                <div className="bg-white rounded-2xl p-6 md:p-8 shadow-md border-l-4 border-red-500">
+                                <div className="bg-white rounded-2xl p-6 md:p-8 shadow-md border-red-500">
                                     <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 flex items-center gap-3">
                                         <span className="w-8 h-8 bg-red-500 text-white rounded-full flex items-center justify-center text-sm">1</span>
                                         口呼吸・ポカン口（最も影響大）
@@ -176,7 +176,7 @@ export default function BadAlignmentPage() {
                                 </div>
 
                                 {/* 2. 指しゃぶり・爪噛み */}
-                                <div className="bg-white rounded-2xl p-6 md:p-8 shadow-md border-l-4 border-[#E89B4D]">
+                                <div className="bg-white rounded-2xl p-6 md:p-8 shadow-md border-[#E89B4D]">
                                     <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 flex items-center gap-3">
                                         <span className="w-8 h-8 bg-[#E89B4D] text-white rounded-full flex items-center justify-center text-sm">2</span>
                                         指しゃぶり・爪噛み
@@ -193,7 +193,7 @@ export default function BadAlignmentPage() {
                                 </div>
 
                                 {/* 3. 舌の位置・舌癖 */}
-                                <div className="bg-white rounded-2xl p-6 md:p-8 shadow-md border-l-4 border-[#C5A572]">
+                                <div className="bg-white rounded-2xl p-6 md:p-8 shadow-md border-[#C5A572]">
                                     <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 flex items-center gap-3">
                                         <span className="w-8 h-8 bg-[#C5A572] text-white rounded-full flex items-center justify-center text-sm">3</span>
                                         舌の位置・舌癖（低位舌・舌突出癖）
@@ -216,7 +216,7 @@ export default function BadAlignmentPage() {
                                 </div>
 
                                 {/* 4. 柔らかい食べ物ばかり */}
-                                <div className="bg-white rounded-2xl p-6 md:p-8 shadow-md border-l-4 border-[#8D8070]">
+                                <div className="bg-white rounded-2xl p-6 md:p-8 shadow-md border-[#8D8070]">
                                     <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 flex items-center gap-3">
                                         <span className="w-8 h-8 bg-[#8D8070] text-white rounded-full flex items-center justify-center text-sm">4</span>
                                         柔らかい食べ物ばかり食べる
@@ -229,7 +229,7 @@ export default function BadAlignmentPage() {
                                 </div>
 
                                 {/* 5. 頬杖・横向き寝 */}
-                                <div className="bg-white rounded-2xl p-6 md:p-8 shadow-md border-l-4 border-[#8D8070]">
+                                <div className="bg-white rounded-2xl p-6 md:p-8 shadow-md border-[#8D8070]">
                                     <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 flex items-center gap-3">
                                         <span className="w-8 h-8 bg-[#8D8070] text-white rounded-full flex items-center justify-center text-sm">5</span>
                                         頬杖・横向き寝・うつ伏せ寝
@@ -297,7 +297,7 @@ export default function BadAlignmentPage() {
                                 </div>
 
                                 {/* 1〜3歳 */}
-                                <div className="bg-white rounded-2xl p-6 md:p-8 shadow-md border-l-4 border-[#C5A572]">
+                                <div className="bg-white rounded-2xl p-6 md:p-8 shadow-md border-[#C5A572]">
                                     <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4">
                                         1〜3歳：悪い習慣の予防
                                     </h4>
@@ -327,7 +327,7 @@ export default function BadAlignmentPage() {
                                 </div>
 
                                 {/* 3歳〜 */}
-                                <div className="bg-white rounded-2xl p-6 md:p-8 shadow-md border-l-4 border-[#C5A572]">
+                                <div className="bg-white rounded-2xl p-6 md:p-8 shadow-md border-[#C5A572]">
                                     <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4">
                                         3歳〜：トレーニングの開始
                                     </h4>

@@ -329,7 +329,7 @@ export default function BrushingGuidePage() {
                                     </div>
                                 </div>
 
-                                <div className="bg-yellow-50 border-l-4 border-[#395b45] rounded p-6">
+                                <div className="bg-yellow-50 border-[#395b45] rounded p-6">
                                     <p className="text-[#5A4D41] leading-loose">
                                         <span className="font-bold text-[#395b45]">重要なポイント:</span><br />
                                         どうしても嫌がる場合は、<span className="font-bold bg-yellow-100">無理せず短時間でもOK</span>。
@@ -494,7 +494,7 @@ export default function BrushingGuidePage() {
 
                                 <div className="space-y-4">
                                     {/* 間違い1 */}
-                                    <div className="bg-red-50 border-l-4 border-red-400 rounded-r-xl p-6">
+                                    <div className="bg-red-50 border-red-400 rounded-xl p-6">
                                         <div className="flex items-start gap-3 mb-3">
                                             <span className="bg-red-400 text-white px-3 py-1 rounded text-sm font-bold flex-shrink-0">NG</span>
                                             <h5 className="font-bold text-red-700 text-lg">力を入れてゴシゴシ磨く</h5>
@@ -515,7 +515,7 @@ export default function BrushingGuidePage() {
                                     </div>
 
                                     {/* 間違い2 */}
-                                    <div className="bg-red-50 border-l-4 border-red-400 rounded-r-xl p-6">
+                                    <div className="bg-red-50 border-red-400 rounded-xl p-6">
                                         <div className="flex items-start gap-3 mb-3">
                                             <span className="bg-red-400 text-white px-3 py-1 rounded text-sm font-bold flex-shrink-0">NG</span>
                                             <h5 className="font-bold text-red-700 text-lg">大きく横に動かす</h5>
@@ -536,7 +536,7 @@ export default function BrushingGuidePage() {
                                     </div>
 
                                     {/* 間違い3 */}
-                                    <div className="bg-red-50 border-l-4 border-red-400 rounded-r-xl p-6">
+                                    <div className="bg-red-50 border-red-400 rounded-xl p-6">
                                         <div className="flex items-start gap-3 mb-3">
                                             <span className="bg-red-400 text-white px-3 py-1 rounded text-sm font-bold flex-shrink-0">NG</span>
                                             <h5 className="font-bold text-red-700 text-lg">歯磨き粉をたくさんつける</h5>
@@ -557,7 +557,7 @@ export default function BrushingGuidePage() {
                                     </div>
 
                                     {/* 間違い4 */}
-                                    <div className="bg-red-50 border-l-4 border-red-400 rounded-r-xl p-6">
+                                    <div className="bg-red-50 border-red-400 rounded-xl p-6">
                                         <div className="flex items-start gap-3 mb-3">
                                             <span className="bg-red-400 text-white px-3 py-1 rounded text-sm font-bold flex-shrink-0">NG</span>
                                             <h5 className="font-bold text-red-700 text-lg">上唇小帯に歯ブラシが当たる</h5>
@@ -578,7 +578,7 @@ export default function BrushingGuidePage() {
                                     </div>
 
                                     {/* 間違い5 */}
-                                    <div className="bg-red-50 border-l-4 border-red-400 rounded-r-xl p-6">
+                                    <div className="bg-red-50 border-red-400 rounded-xl p-6">
                                         <div className="flex items-start gap-3 mb-3">
                                             <span className="bg-red-400 text-white px-3 py-1 rounded text-sm font-bold flex-shrink-0">NG</span>
                                             <h5 className="font-bold text-red-700 text-lg">何度も強くうがいをさせる</h5>

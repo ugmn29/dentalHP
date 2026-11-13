@@ -532,7 +532,7 @@ export default function WhiteningSafetyPage() {
                       <span>フッ素塗布で症状を軽減</span>
                     </li>
                   </ul>
-                  <p className="text-sm bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-400">
+                  <p className="text-sm bg-yellow-50 p-4 rounded-lg border-yellow-400">
                     1週間以上続く場合は、すぐに歯科医院にご相談ください。
                   </p>
                 </div>
@@ -571,7 +571,7 @@ export default function WhiteningSafetyPage() {
                   <p className="mb-3">
                     <strong className="text-[#C5A572]">A.</strong> エステサロンでのホワイトニングは、歯科医師法により厳しく制限されています。無資格者が高濃度の薬剤を使用すると違法であり、トラブルのリスクも高まります。
                   </p>
-                  <div className="bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-400">
+                  <div className="bg-yellow-50 p-4 rounded-lg border-yellow-400">
                     <p className="text-sm text-[#5A4D41]">
                       安全性と効果を考えると、<strong>必ず歯科医院で受けること</strong>をおすすめします。
                     </p>
