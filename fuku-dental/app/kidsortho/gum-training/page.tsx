@@ -47,7 +47,18 @@ export default function GumTrainingPage() {
             <p className="mt-6 max-w-3xl text-lg leading-8">ガムを使って「奥歯で噛む」「舌で運ぶ」といった動きを確かめる練習です。お子さまのお口の状態に合わせて、歯科医院で方法を確認してから取り組みましょう。</p>
               </div>
               <figure className="mx-auto w-full max-w-lg">
-                <Image src="/images/kidsortho/education/gum-movements.webp" width={1000} height={1000} alt="歯科医院で確認する動きの例。1は噛む、2は舌でガムを丸める、3は上あごに広げる、4は唾液を飲む動き" sizes="(min-width: 1024px) 464px, (min-width: 640px) 512px, 100vw" priority className="h-auto w-full rounded-2xl" />
+                <div className="relative">
+                  <Image src="/images/kidsortho/education/gum-movements.webp" width={1000} height={1000} alt="歯科医院で確認する動きの例。1は噛む、2は舌でガムを丸める、3は上あごに広げる、4は唾液を飲む動き" sizes="(min-width: 1024px) 464px, (min-width: 640px) 512px, 100vw" priority className="h-auto w-full rounded-2xl" />
+                  {/* Keep the numbered badges aligned as the original illustration scales. */}
+                  <svg viewBox="0 0 1000 1000" aria-hidden="true" focusable="false" className="pointer-events-none absolute inset-0 h-full w-full">
+                    {[[87, 87], [569, 87], [87, 569], [569, 569]].map(([x, y], index) => (
+                      <g key={index} transform={`translate(${x} ${y})`}>
+                        <circle r="37" fill="#5D9B71" />
+                        <text x="0" y="21" textAnchor="middle" fill="white" fontFamily="Arial, sans-serif" fontSize="60" fontWeight="700">{index + 1}</text>
+                      </g>
+                    ))}
+                  </svg>
+                </div>
                 <figcaption className="mt-3 text-sm leading-6 text-[#71665A]">
                   <span className="block font-bold text-[#5A4D41]">歯科医院で確認する動きの例</span>
                   ①噛む → ②舌で丸める → ③上あごに広げる → ④唾液を飲む。『咬合育成のバイブル』の図を使用しています。<strong className="block mt-2 text-[#5A4D41]">④で飲み込むのは唾液です。ガムそのものは飲み込みません。</strong>
