@@ -6,7 +6,7 @@ import { AuthorBio } from '@/components/AuthorBio';
 import { priceCategories } from '@/data/price-list';
 
 const title = 'EFライン・マイオブレース・プレオルソの違いと選び方';
-const description = 'EFライン・マイオブレース・プレオルソを、種類・素材・使い方から比較。こどもの歯並びとお口の機能を確認して選ぶ理由、当院の使用時間・費用・注意点を豊洲の歯科医院が解説します。';
+const description = 'EFライン・マイオブレース・プレオルソに共通する基本構造と使う目的、使い分けで重視する硬さの違いを解説。院長の使用感とメーカーの製品情報をもとに、当院の使い方・費用も紹介します。';
 const url = 'https://fshika.com/kidsortho/appliances/functional-mouthpiece';
 
 export const metadata: Metadata = {
@@ -18,19 +18,21 @@ export const metadata: Metadata = {
 };
 
 const appliances = [
-  { name: 'EFライン', en: 'EF Line', summary: 'お口の状態に合わせて、形の異なる装置から選ぶ', detail: '舌や唇の働き、歯列の形などに配慮した複数のモデルがあります。比較するときは、具体的な製品名とサイズを確認します。' },
-  { name: 'マイオブレース', en: 'Myobrace', summary: '治療の段階に合わせて、装置を使い分ける', detail: '乳歯と永久歯が混在する時期の「for Kids」では、K1・K2・K3の3段階が基本です。段階によって目的や硬さが変わります。' },
-  { name: 'プレオルソ', en: 'Preortho', summary: '噛み合わせに応じたタイプを選び、必要に応じて調整する', detail: '3つのタイプがあり、素材はポリウレタンです。歯科医院で加熱による調整ができることも特徴です。' },
+  { name: 'EFライン', en: 'EF Line', summary: '硬さやお口への収まりを確認して選ぶ', detail: '機能的マウスピースとしての基本的な考え方は共通です。複数のモデルから、硬さ・形・サイズがお子さまに合うものを選びます。' },
+  { name: 'マイオブレース', en: 'Myobrace', summary: '同じシリーズでも、段階によって硬さが変わる', detail: '基本的な構造や使う目的は、ほかの機能的マウスピースとよく似ています。「for Kids」はK1・K2・K3があり、段階ごとに硬さや設計が異なります。' },
+  { name: 'プレオルソ', en: 'Preortho', summary: '硬さ・サイズ・噛み合わせを確認し、必要に応じて調整する', detail: '基本的な考え方は共通で、素材はポリウレタンです。3つのタイプがあり、歯科医院で加熱による調整ができます。' },
 ];
 const comparison = [
+  { label: '共通する考え方', cells: ['歯並びと、舌・唇などのお口の働きに配慮した取り外し式の装置', '歯並びと、舌・唇などのお口の働きに配慮した取り外し式の装置', '歯並びと、舌・唇などのお口の働きに配慮した取り外し式の装置'] },
+  { label: '硬さ・装着感', cells: ['実際に使うモデルの硬さと、お口への収まりを確認', 'K1は柔軟、K3は同シリーズで最も硬いなど、段階で異なる', '実際の装置の硬さと適合を確認し、必要に応じて歯科医院で調整'] },
   { label: '種類・選び方', cells: ['形状・サイズの異なる複数のモデルから選択', 'for KidsはK1→K2→K3の段階別システム', 'タイプ1・2・3から噛み合わせに応じて選択'] },
-  { label: '素材・硬さ', cells: ['モデルと製品仕様を確認。メーカーは2026年から新素材への段階的移行を案内', 'K1は柔軟、K3は同シリーズで最も硬いなど、段階で異なる', '熱可塑性のポリウレタン。必要に応じて歯科医院で調整'] },
   { label: '比較のポイント', cells: ['どのモデルを、何の目的で使うか', 'どの段階から始め、何を確認して次へ進むか', 'どのタイプ・サイズが合い、調整が必要か'] },
   { label: '使用時間', cells: ['選んだ装置と治療計画に沿って個別に指示', '選んだ装置と治療計画に沿って個別に指示', '当院では日中2時間＋就寝時を基本に個別調整'] },
   { label: '当院での取り扱い', cells: ['使用しています', '本ページでは比較情報として紹介しています', '使用しています'] },
 ];
 const faqs = [
-  { q: 'EFラインはプレオルソより柔らかいですか？', a: 'ブランド全体を一律に比べることはできません。モデル・サイズ・素材によって異なり、装着感には形状やお口との適合も関係します。実際に使う装置で確認します。' },
+  { q: '基本的な構造や、使ったときの感覚は違いますか？', a: '基本的な構造や使う目的は共通しており、院長の臨床上の実感では、使っている感覚もほとんど同じです。そのうえで、使い分けの際に大きな違いとして感じるのが硬さです。細かな形やサイズも異なるため、実際の装置がお子さまのお口に合うかを確認します。' },
+  { q: '硬い装置と柔らかい装置は、どちらがよいですか？', a: '硬さは当院が装置を選ぶときに重視する点ですが、硬いほどよい、柔らかいほどよいとは限りません。お子さまの装着感、噛み合わせ、練習の進み具合に合わせて選びます。同じブランドにも硬さの異なるモデルがあるため、実際に使う製品で確認します。' },
   { q: '何歳から相談すればよいですか？', a: '年齢だけで適応は決まりません。前歯の噛み合わせ、歯の生え替わり、食べ方、お口が開いていることなどが気になった時点でご相談ください。診察の結果、経過観察をご案内する場合もあります。' },
   { q: '装置を使えば、口呼吸も治りますか？', a: '口呼吸には鼻づまりやのどの状態などが関係することがあります。装置だけで解決するとは限りません。鼻で息がしづらい、いびきが続く場合などは、必要に応じて耳鼻咽喉科への相談をご案内します。' },
   { q: 'ガムトレーニングも一緒にした方がよいですか？', a: '噛み方や舌の動きを確認し、必要な方に練習をご案内します。全員に同じトレーニングが必要なわけではありません。装置を入れたままガムを噛まず、併用の可否や方法を担当の歯科医師に確認してください。' },
@@ -51,7 +53,7 @@ export default function FunctionalMouthpiecePage() {
           <header className="mb-12">
             <p className="mb-4 text-sm font-bold tracking-wider text-[#087a76]">こどもの歯並びと、お口の使い方</p>
             <h1 className="max-w-4xl font-serif text-3xl font-bold leading-normal md:text-5xl md:leading-snug">EFライン・マイオブレース・<br className="hidden md:block" />プレオルソの違いと選び方</h1>
-            <p className="mt-6 max-w-3xl text-lg leading-8">どれも取り外し式の機能的マウスピースですが、種類や治療の進め方が異なります。大切なのは、お子さまの噛み合わせとお口の使い方に合った装置を選ぶことです。</p>
+            <p className="mt-6 max-w-3xl text-lg leading-8">3つの装置は、基本的な構造や考え方が共通しています。院長の臨床上の実感では、使っている感覚もほとんど同じです。使い分けで特に大きいのは「硬さ」の違いです。</p>
             <div className="mt-8 grid gap-4 md:grid-cols-3">
               {appliances.map((appliance) => (
                 <div key={appliance.name} className="rounded-2xl border border-[#E6D8C5] bg-white p-6">
@@ -69,16 +71,22 @@ export default function FunctionalMouthpiecePage() {
           <div className="space-y-14 text-base leading-8">
             <section id="comparison" className="scroll-mt-28">
               <h2 className={heading}>3つの装置を比べてみましょう</h2>
-              <p className="mb-5">メーカー・販売元の公開情報をもとに、装置の設計と使い分けを整理しました。マイオブレースは、主に生え替わり期に使う「for Kids」を比較しています。</p>
+              <p className="mb-4">EFライン・マイオブレース・プレオルソは、取り外し式のマウスピースを使い、歯並びや噛み合わせとともに、舌・唇などのお口の働きに配慮する装置です。この基本となる構造や考え方は、3つの装置に共通しています。</p>
+              <div className="mb-6 rounded-2xl bg-[#EAF4F0] p-6">
+                <h3 className="mb-3 text-lg font-bold">院長が使い分けで重視しているのは「硬さ」です</h3>
+                <p>細かな形や素材はそれぞれ異なりますが、院長の実感として、使っている感覚はほとんど同じです。当院では、硬さの違いとお口への収まりを確かめ、お子さまが無理なく取り組める装置を選ぶことを大切にしています。</p>
+                <p className="mt-3 text-sm leading-7">使用感は院長の臨床上の実感としてお伝えしています。細かな形状・寸法・素材や適応は、製品ごとに異なります。</p>
+              </div>
+              <p className="mb-5">以下の表では、共通点を押さえたうえで、メーカー・販売元が案内する製品の違いをまとめています。マイオブレースは、主に生え替わり期に使う「for Kids」を比較しています。</p>
               <p id="comparison-hint" className="mb-2 text-sm text-[#71665A] md:hidden">表は横にスクロールできます。</p>
               <div role="region" aria-label="機能的マウスピースの比較表" tabIndex={0} className="overflow-x-auto rounded-2xl border border-[#E6D8C5] bg-white focus-visible:outline-2 focus-visible:outline-[#087a76]">
                 <table className="w-full min-w-[760px] border-collapse text-left text-sm leading-7">
-                  <caption className="sr-only">EFライン・マイオブレース・プレオルソの種類、素材、使用時間、当院での取り扱い</caption>
+                  <caption className="sr-only">EFライン・マイオブレース・プレオルソの共通点、硬さ、種類、使用時間、当院での取り扱い</caption>
                   <thead><tr className="bg-[#EAF4F0]"><th scope="col" className="w-32 p-4">比較項目</th>{appliances.map((item) => <th scope="col" key={item.name} className="w-[28%] p-4 text-base">{item.name}</th>)}</tr></thead>
                   <tbody>{comparison.map((row) => <tr key={row.label} className="border-t border-[#E6D8C5]"><th scope="row" className="bg-[#FAF8F5] p-4 align-top">{row.label}</th>{row.cells.map((cell, index) => <td key={index} className="p-4 align-top">{cell}</td>)}</tr>)}</tbody>
                 </table>
               </div>
-              <p className="mt-4 text-sm leading-7 text-[#71665A]">EFラインのメーカーは、2026年から医療用の新素材（コポリマー）へ順次移行すると案内しています。国内で使用する製品の素材は、実際の製品表示・添付文書で確認します。ブランド名だけで硬さや装着感を順位づけすることはできません。</p>
+              <p className="mt-4 text-sm leading-7 text-[#71665A]">EFラインのメーカーは、2026年から医療用の新素材（コポリマー）へ順次移行すると案内しています。国内で使用する製品の素材は、実際の製品表示・添付文書で確認します。同じブランドでもモデルによって硬さや装着感が異なるため、具体的な製品で確かめます。</p>
               <div className="mt-7 grid gap-6 md:grid-cols-2">
                 <div className="rounded-2xl bg-white p-6">
                   <h3 className="mb-3 text-lg font-bold">マイオブレース：段階ごとに目的が変わります</h3>
@@ -97,7 +105,7 @@ export default function FunctionalMouthpiecePage() {
                 {[
                   ['歯と顎の状態', '歯の生え替わり、歯が並ぶスペース、上下の顎のバランス、噛み合わせを確認します。'],
                   ['お口の使い方', '舌の位置、唇の閉じ方、噛み方・飲み込み方、鼻で呼吸しづらいことがないかを確認します。'],
-                  ['家庭で続けられるか', '装置の大きさや装着感、生活時間、ご本人とご家族の取り組みやすさを相談します。'],
+                  ['硬さが合い、家庭で続けられるか', '硬さ・大きさ・装着感を確かめ、生活時間やご本人・ご家族の取り組みやすさも相談します。'],
                 ].map(([label, text], index) => <li key={label} className="border-t-2 border-[#C5A572] pt-4"><p className="mb-2 font-bold"><span className="mr-3 text-[#087a76]">0{index + 1}</span>{label}</p><p>{text}</p></li>)}
               </ol>
               <div className="mt-7 rounded-2xl border border-[#E6D8C5] p-6">
@@ -109,7 +117,7 @@ export default function FunctionalMouthpiecePage() {
             </section>
             <section id="clinic" className="scroll-mt-28">
               <h2 className={heading}>当院の使い方・費用・注意点</h2>
-              <p>当院ではプレオルソとEFラインを使用しています。診察・検査の結果と装着感を確認して選びます。マイオブレースは、このページでは違いを知っていただくための比較情報として紹介しています。</p>
+              <p>当院ではプレオルソとEFラインを使用しています。診察・検査に加え、硬さやお口への収まりを確認し、装着しやすさも重視して選びます。マイオブレースは、このページでは違いを知っていただくための比較情報として紹介しています。</p>
               <div className="my-6 rounded-2xl bg-[#EAF4F0] p-6">
                 <h3 className="mb-3 text-lg font-bold">プレオルソは「日中2時間＋就寝時」が当院の基本です</h3>
                 <p>年齢、お口の状態、治療目的に合わせて調整します。製品の一般的な案内と異なる場合も、担当の歯科医師の指示を優先してください。EFラインの使用時間は、選んだ装置に応じてお伝えします。</p>
@@ -137,7 +145,7 @@ export default function FunctionalMouthpiecePage() {
                 <li><a className={linkStyle} href="https://www.forest-one.co.jp/products/preortho/">フォレスト・ワン：プレオルソ</a></li>
                 <li><a className={linkStyle} href="https://www.jspd.or.jp/recommendation/article26/">日本小児歯科学会：口腔機能を育てる治療と矯正治療との関係</a></li>
               </ul>
-              <p className="mt-3">お口の機能を確認する視点は、院内資料「咬合育成療法・完全統合レポート v4」の咀嚼・嚥下に関する講義資料も参考にしています。装着時間と取り扱い装置は当院の診療方針です。</p>
+              <p className="mt-3">お口の機能を確認する視点は、院内資料「咬合育成療法・完全統合レポート v4」の咀嚼・嚥下に関する講義資料も参考にしています。使用感と硬さを重視する使い分けは院長の臨床上の実感、装着時間と取り扱い装置は当院の診療方針として記載しています。</p>
             </section>
             <AuthorBio lastUpdated="2026年11月13日" ctaTitle="お子さまに合う方法を、一緒に確認しましょう" ctaBody="豊洲でこども矯正をご検討の方へ。歯並びとお口の使い方を確認し、装置の必要性・費用・通院の見通しをご説明します。" />
           </div>
