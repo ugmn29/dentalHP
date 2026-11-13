@@ -34,12 +34,12 @@ export default function GumTrainingPage() {
   return (
     <>
       <Header />
-      <main className="bg-[#FDFBF7] text-[#5A4D41]">
+      <main className="break-normal bg-[#FDFBF7] text-[#5A4D41]">
         <div className="mx-auto max-w-5xl px-4 pb-16 pt-8 md:px-8">
           <nav aria-label="パンくずリスト" className="mb-8 flex flex-wrap gap-2 text-sm text-[#71665A]"><Link href="/">ホーム</Link><span aria-hidden="true">/</span><Link href="/kidsortho">こども矯正</Link><span aria-hidden="true">/</span><span>ガムトレーニング</span></nav>
           <header className="mb-12">
             <p className="mb-4 text-sm font-bold tracking-wider text-[#087a76]">食べるためのお口の動きを練習する</p>
-            <h1 className="font-serif text-3xl font-bold leading-normal md:text-5xl md:leading-snug">子どものガムトレーニング</h1>
+            <h1 className="font-serif text-3xl font-bold leading-normal md:text-5xl md:leading-snug">子どもの<span className="block sm:inline">ガムトレーニング</span></h1>
             <p className="mt-4 font-serif text-xl font-bold md:text-2xl">噛み方・舌の動きの練習と注意点</p>
             <p className="mt-6 max-w-3xl text-lg leading-8">ガムを使って「奥歯で噛む」「舌で運ぶ」といった動きを確かめる練習です。お子さまのお口の状態に合わせて、歯科医院で方法を確認してから取り組みましょう。</p>
             <div className="mt-8 grid gap-3 sm:grid-cols-3">

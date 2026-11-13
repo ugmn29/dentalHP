@@ -43,7 +43,7 @@ export default function FunctionalMouthpiecePage() {
   return (
     <>
       <Header />
-      <main className="bg-[#FDFBF7] text-[#5A4D41]">
+      <main className="break-normal bg-[#FDFBF7] text-[#5A4D41]">
         <div className="mx-auto max-w-6xl px-4 pb-16 pt-8 md:px-8">
           <nav aria-label="パンくずリスト" className="mb-8 flex flex-wrap gap-2 text-sm text-[#71665A]">
             <Link href="/">ホーム</Link><span aria-hidden="true">/</span><Link href="/kidsortho">こども矯正</Link><span aria-hidden="true">/</span><Link href="/kidsortho/appliances">装置一覧</Link><span aria-hidden="true">/</span><span>機能的マウスピースの比較</span>
