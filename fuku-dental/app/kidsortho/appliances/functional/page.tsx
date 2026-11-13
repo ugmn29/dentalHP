@@ -142,7 +142,7 @@ export default function FunctionalAppliancePage() {
                             </div>
                         </div>
 
-                        <div className="bg-yellow-50 p-6 border-l-4 border-yellow-400 rounded-r-lg">
+                        <div className="bg-yellow-50 p-6 border-yellow-400 rounded-lg">
                             <p className="font-bold text-[#5A4D41] mb-2">成長期だからこそ効果が高い</p>
                             <p className="text-[#8D8070] leading-relaxed">
                                 6〜10歳の成長期に治療を行うことで、顎の成長をコントロールしやすくなります。成人になってからでは外科手術が必要になる骨格的な問題も、この時期であれば装置で改善できる可能性があります。
@@ -225,7 +225,7 @@ export default function FunctionalAppliancePage() {
                                     </div>
                                 </div>
 
-                                <p className="text-[#8D8070] bg-blue-50 p-4 border-l-4 border-blue-400 rounded-r-lg mt-4">
+                                <p className="text-[#8D8070] bg-blue-50 p-4 border-blue-400 rounded-lg mt-4">
                                     <span className="font-bold text-[#5A4D41]">当院での採用：</span>
                                     バイオネーターは骨格的な問題の改善に効果が高く、当院でも受け口・出っ歯の治療に使用しています。
                                 </p>

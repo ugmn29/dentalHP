@@ -130,7 +130,7 @@ const WisdomToothPage = () => {
               <p className="text-gray-700 leading-relaxed mb-6 text-lg">
                 親知らず周辺の<span className="font-bold bg-yellow-100">歯茎が腫れ、痛みや膿が出る</span>状態が繰り返される場合。放置すると、<span className="text-[#1B6B3D]">隣の歯や顎の骨にも影響を及ぼす</span>可能性があります。
               </p>
-              <div className="bg-blue-50 border-l-4 border-[#8B7355] p-6 rounded-r-lg">
+              <div className="bg-blue-50 border-[#8B7355] p-6 rounded-lg">
                 <p className="text-sm font-semibold text-[#8B7355] mb-2">研究結果</p>
                 <p className="text-gray-700 leading-relaxed">
                   研究により、智歯周囲炎の再発率は保存的治療で<span className="font-bold text-[#8B7355]">約60-70%</span>と報告されています。
@@ -147,7 +147,7 @@ const WisdomToothPage = () => {
               <p className="text-gray-700 leading-relaxed mb-6 text-lg">
                 親知らずが斜めに生えて、<span className="font-bold bg-yellow-100">隣の第二大臼歯を圧迫</span>したり、<span className="text-[#1B6B3D]">虫歯や歯周病の原因</span>になっている場合。第二大臼歯は噛み合わせに重要な歯です。
               </p>
-              <div className="bg-blue-50 border-l-4 border-[#8B7355] p-6 rounded-r-lg">
+              <div className="bg-blue-50 border-[#8B7355] p-6 rounded-lg">
                 <p className="text-sm font-semibold text-[#8B7355] mb-2">研究結果</p>
                 <p className="text-gray-700 leading-relaxed">
                   水平埋伏智歯による第二大臼歯の虫歯リスクは、正常萌出歯と比較して<span className="font-bold text-[#8B7355]">約2.2倍高い</span>ことが示されています。
@@ -164,7 +164,7 @@ const WisdomToothPage = () => {
               <p className="text-gray-700 leading-relaxed mb-6 text-lg">
                 埋伏した親知らずの周りに<span className="font-bold bg-yellow-100">嚢胞（液体の入った袋）</span>ができている場合。放置すると<span className="text-[#1B6B3D]">顎の骨を溶かし、顔の変形や骨折のリスク</span>が高まります。
               </p>
-              <div className="bg-blue-50 border-l-4 border-[#8B7355] p-6 rounded-r-lg">
+              <div className="bg-blue-50 border-[#8B7355] p-6 rounded-lg">
                 <p className="text-sm font-semibold text-[#8B7355] mb-2">研究結果</p>
                 <p className="text-gray-700 leading-relaxed">
                   埋伏智歯に伴う含歯性嚢胞の発生率は<span className="font-bold text-[#8B7355]">約2-5%</span>で、早期発見・早期治療が推奨されます。
@@ -181,7 +181,7 @@ const WisdomToothPage = () => {
               <p className="text-gray-700 leading-relaxed mb-6 text-lg">
                 歯列矯正を行う際、親知らずが<span className="font-bold bg-yellow-100">他の歯を押して歯並びを悪化させる</span>可能性がある場合。<span className="text-[#1B6B3D]">矯正治療後の後戻り防止</span>のためにも抜歯を検討します。
               </p>
-              <div className="bg-blue-50 border-l-4 border-[#8B7355] p-6 rounded-r-lg">
+              <div className="bg-blue-50 border-[#8B7355] p-6 rounded-lg">
                 <p className="text-sm font-semibold text-[#8B7355] mb-2">研究結果</p>
                 <p className="text-gray-700 leading-relaxed">
                   矯正治療における予防的智歯抜歯の必要性は議論がありますが、スペース不足や後戻りリスクを考慮した<span className="font-bold text-[#8B7355]">個別判断が重要</span>です。
@@ -323,7 +323,7 @@ const WisdomToothPage = () => {
               <p className="text-gray-700 leading-relaxed mb-6 text-lg">
                 下顎の親知らずの根が<span className="font-bold bg-yellow-100">神経に近い場合</span>、抜歯時に神経が傷つき、<span className="text-[#1B6B3D]">唇や舌のしびれ</span>が生じる可能性があります。
               </p>
-              <div className="bg-blue-50 border-l-4 border-[#8B7355] p-6 rounded-r-lg">
+              <div className="bg-blue-50 border-[#8B7355] p-6 rounded-lg">
                 <p className="text-sm font-semibold text-[#8B7355] mb-2">対策</p>
                 <p className="text-gray-700 leading-relaxed">
                   <span className="font-bold bg-yellow-100">CT撮影で神経の位置を正確に把握</span>し、リスクが高い場合は<span className="text-[#1B6B3D]">歯冠分割など安全な術式を選択</span>。万一発生しても、多くは数週間～数ヶ月で改善します。
@@ -343,7 +343,7 @@ const WisdomToothPage = () => {
               <p className="text-gray-700 leading-relaxed mb-6 text-lg">
                 抜歯後の<span className="font-bold bg-yellow-100">血餅（かさぶた）が剥がれ、骨が露出</span>して強い痛みが続く状態。特に<span className="text-[#1B6B3D]">下顎の埋伏歯で起こりやすい</span>です。
               </p>
-              <div className="bg-blue-50 border-l-4 border-[#8B7355] p-6 rounded-r-lg">
+              <div className="bg-blue-50 border-[#8B7355] p-6 rounded-lg">
                 <p className="text-sm font-semibold text-[#8B7355] mb-2">対策</p>
                 <p className="text-gray-700 leading-relaxed">
                   術後の<span className="font-bold bg-yellow-100">うがいや喫煙を控えるよう指導</span>。発生した場合は、<span className="text-[#1B6B3D]">抜歯窩の洗浄と鎮痛剤処方で対応</span>。通常1～2週間で改善します。
@@ -363,7 +363,7 @@ const WisdomToothPage = () => {
               <p className="text-gray-700 leading-relaxed mb-6 text-lg">
                 抜歯は外科処置のため、<span className="font-bold bg-yellow-100">術後2～3日は腫れや痛みが出る</span>のが一般的です。<span className="text-[#1B6B3D]">埋伏が深いほど症状は強くなります</span>。
               </p>
-              <div className="bg-blue-50 border-l-4 border-[#8B7355] p-6 rounded-r-lg">
+              <div className="bg-blue-50 border-[#8B7355] p-6 rounded-lg">
                 <p className="text-sm font-semibold text-[#8B7355] mb-2">対策</p>
                 <p className="text-gray-700 leading-relaxed">
                   <span className="font-bold bg-yellow-100">丁寧な術式で組織への侵襲を最小化</span>。術後は<span className="text-[#1B6B3D]">適切な鎮痛剤と抗生剤を処方し、冷却指導も実施</span>。多くは3～5日でピークを越え、1週間程度で落ち着きます。
@@ -383,7 +383,7 @@ const WisdomToothPage = () => {
               <p className="text-gray-700 leading-relaxed mb-6 text-lg">
                 上顎の親知らずの根が<span className="font-bold bg-yellow-100">上顎洞（鼻の奥の空洞）に近い</span>場合、<span className="text-[#1B6B3D]">抜歯時に穴が開く</span>可能性があります。
               </p>
-              <div className="bg-blue-50 border-l-4 border-[#8B7355] p-6 rounded-r-lg">
+              <div className="bg-blue-50 border-[#8B7355] p-6 rounded-lg">
                 <p className="text-sm font-semibold text-[#8B7355] mb-2">対策</p>
                 <p className="text-gray-700 leading-relaxed">
                   <span className="font-bold bg-yellow-100">CTで事前に上顎洞との距離を確認</span>。小さな穿孔は自然閉鎖することが多く、<span className="text-[#1B6B3D]">必要に応じて縫合や投薬で対応</span>します。
@@ -403,7 +403,7 @@ const WisdomToothPage = () => {
               <p className="text-gray-700 leading-relaxed mb-6 text-lg">
                 抜歯当日は<span className="font-bold bg-yellow-100">じわじわとした出血が続く</span>のが普通です。まれに<span className="text-[#1B6B3D]">血が止まりにくい場合</span>があります。
               </p>
-              <div className="bg-blue-50 border-l-4 border-[#8B7355] p-6 rounded-r-lg">
+              <div className="bg-blue-50 border-[#8B7355] p-6 rounded-lg">
                 <p className="text-sm font-semibold text-[#8B7355] mb-2">対策</p>
                 <p className="text-gray-700 leading-relaxed">
                   <span className="font-bold bg-yellow-100">術前に服薬歴（抗凝固薬など）を確認</span>。止血が不十分な場合は、<span className="text-[#1B6B3D]">圧迫止血や止血剤の追加、必要に応じて縫合で対応</span>します。
@@ -487,7 +487,7 @@ const WisdomToothPage = () => {
               </div>
 
               {/* 注意事項 */}
-              <div className="bg-blue-50 border-l-4 border-[#8B7355] p-6 rounded-r-lg">
+              <div className="bg-blue-50 border-[#8B7355] p-6 rounded-lg">
                 <h4 className="text-sm font-semibold text-[#8B7355] mb-3">費用についての補足</h4>
                 <ul className="space-y-2 text-sm text-gray-700">
                   <li className="flex items-start gap-2">
@@ -621,7 +621,7 @@ const WisdomToothPage = () => {
                 </div>
                 <div className="px-6 py-4">
                   <p className="text-gray-700 leading-relaxed mb-3" dangerouslySetInnerHTML={{ __html: faq.answer }}></p>
-                  <p className="text-xs text-gray-500 italic border-l-2 border-gray-300 pl-3">{faq.citation}</p>
+                  <p className="text-xs text-gray-500 italic border-gray-300 pl-3">{faq.citation}</p>
                 </div>
               </div>
             ))}

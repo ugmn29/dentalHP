@@ -183,7 +183,7 @@ const TraumaPage = () => {
 
               {/* 緊急対応 */}
               <section className="mb-10">
-                <div className="bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-r-lg mb-6">
+                <div className="bg-yellow-50 border-yellow-400 p-6 rounded-lg mb-6">
                   <div className="flex items-start gap-3">
                     <Clock size={24} className="text-yellow-600 flex-shrink-0 mt-1" />
                     <div>
@@ -364,7 +364,7 @@ const TraumaPage = () => {
                     </li>
                   </ul>
                 </div>
-                <div className="bg-blue-50 border-l-4 border-[#E74C3C] p-6 rounded-r-lg mt-6">
+                <div className="bg-blue-50 border-[#E74C3C] p-6 rounded-lg mt-6">
                   <p className="text-sm font-semibold text-[#E74C3C] mb-2">研究結果</p>
                   <p className="text-gray-700 leading-relaxed">
                     歯牙保存液や牛乳中での保存により、歯根膜細胞の生存率が有意に向上し、再植後の予後が改善されることが報告されています。乾燥状態での保存は避けるべきです。適切な処置と経過観察により、10年以上機能する例も多くあります。
@@ -385,7 +385,7 @@ const TraumaPage = () => {
 
               {/* 緊急対応 */}
               <section className="mb-10">
-                <div className="bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-r-lg mb-6">
+                <div className="bg-yellow-50 border-yellow-400 p-6 rounded-lg mb-6">
                   <p className="text-gray-700 leading-relaxed text-lg">
                     破折の程度により治療法が異なります。<span className="font-bold bg-yellow-100">折れた破片は捨てずに保管</span>してください。再接着できる可能性があります。
                   </p>
@@ -400,15 +400,15 @@ const TraumaPage = () => {
                   <div className="bg-gray-50 p-6 rounded-lg">
                     <h4 className="font-bold text-lg text-gray-800 mb-3">破折の種類と症状</h4>
                     <div className="space-y-4">
-                      <div className="border-l-4 border-green-400 pl-4 bg-white p-4 rounded">
+                      <div className="border-green-400 pl-4 bg-white p-4 rounded">
                         <p className="font-bold text-green-700 mb-1">エナメル質破折（軽度）</p>
                         <p className="text-sm text-gray-600">表面の白い部分のみが欠けた状態。痛みは少ないですが、早めの受診が推奨されます。</p>
                       </div>
-                      <div className="border-l-4 border-yellow-400 pl-4 bg-white p-4 rounded">
+                      <div className="border-yellow-400 pl-4 bg-white p-4 rounded">
                         <p className="font-bold text-yellow-700 mb-1">象牙質破折（中等度）</p>
                         <p className="text-sm text-gray-600">黄色い象牙質まで到達。知覚過敏や痛みを伴うため、速やかな処置が必要です。</p>
                       </div>
-                      <div className="border-l-4 border-red-400 pl-4 bg-white p-4 rounded">
+                      <div className="border-red-400 pl-4 bg-white p-4 rounded">
                         <p className="font-bold text-red-700 mb-1">歯髄露出（重度）</p>
                         <p className="text-sm text-gray-600">神経まで到達。強い痛みや出血を伴います。<span className="font-bold">できるだけ早急な処置が必要</span>です。</p>
                       </div>
@@ -562,7 +562,7 @@ const TraumaPage = () => {
                     </li>
                   </ul>
                 </div>
-                <div className="bg-blue-50 border-l-4 border-[#E74C3C] p-6 rounded-r-lg mt-6">
+                <div className="bg-blue-50 border-[#E74C3C] p-6 rounded-lg mt-6">
                   <p className="text-sm font-semibold text-[#E74C3C] mb-2">研究結果</p>
                   <p className="text-gray-700 leading-relaxed">
                     歯冠破折の治療において、破折片の再接着は審美的・機能的に優れた結果をもたらすことが示されています。破折片の適切な保存が重要です。コンポジットレジンやセラミック修復においても、適切な治療により長期的な予後が期待できます。
@@ -583,7 +583,7 @@ const TraumaPage = () => {
 
               {/* 緊急対応 */}
               <section className="mb-10">
-                <div className="bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-r-lg mb-6">
+                <div className="bg-yellow-50 border-yellow-400 p-6 rounded-lg mb-6">
                   <p className="text-gray-700 leading-relaxed text-lg">
                     歯がぐらついているが抜けていない状態。<span className="font-bold bg-yellow-100">歯を触らず、できるだけ早く固定処置が必要</span>です。
                   </p>
@@ -753,7 +753,7 @@ const TraumaPage = () => {
                     </li>
                   </ul>
                 </div>
-                <div className="bg-blue-50 border-l-4 border-[#E74C3C] p-6 rounded-r-lg mt-6">
+                <div className="bg-blue-50 border-[#E74C3C] p-6 rounded-lg mt-6">
                   <p className="text-sm font-semibold text-[#E74C3C] mb-2">研究結果</p>
                   <p className="text-gray-700 leading-relaxed">
                     脱臼歯の固定期間は、骨の治癒と歯根吸収のリスクを考慮して決定されます。適切な固定（柔軟性のある固定で2〜4週間）により、歯の予後が大幅に改善されることが報告されています。長期的な経過観察により、遅発性の合併症も早期発見できます。
@@ -773,7 +773,7 @@ const TraumaPage = () => {
               </header>
 
               <div className="space-y-8">
-                <div className="bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-r-lg">
+                <div className="bg-yellow-50 border-yellow-400 p-6 rounded-lg">
                   <p className="text-gray-700 leading-relaxed">
                     顔面打撲により、唇・歯茎・舌・頬の内側などを切ることがあります。<span className="font-bold bg-yellow-100">出血が多い場合や深い傷の場合は速やかに受診</span>してください。
                   </p>
@@ -934,7 +934,7 @@ const TraumaPage = () => {
                 <p className="text-[#8D8070] leading-relaxed mb-4">
                   はい。緊急時は当院の緊急連絡先（03-6204-2876）にお電話ください。歯の外傷は時間との勝負ですので、迅速に対応いたします。
                 </p>
-                <div className="bg-red-50 border-l-4 border-[#E74C3C] p-4 rounded-r-lg">
+                <div className="bg-red-50 border-[#E74C3C] p-4 rounded-lg">
                   <p className="text-sm font-semibold text-[#5A4D41] mb-2">緊急連絡先</p>
                   <div className="flex items-center gap-3 text-[#E74C3C] font-bold text-lg">
                     <Phone size={20} />
@@ -956,7 +956,7 @@ const TraumaPage = () => {
                   基本的な外傷治療（再植・固定・修復）は保険適用です。ただし、審美性を重視したセラミック治療などは自費診療となります。
                 </p>
                 <div className="grid md:grid-cols-2 gap-4">
-                  <div className="bg-green-50 border-l-4 border-green-400 p-4 rounded-r-lg">
+                  <div className="bg-green-50 border-green-400 p-4 rounded-lg">
                     <p className="font-bold text-green-800 mb-2 text-sm">保険適用</p>
                     <ul className="space-y-1 text-xs text-[#8D8070]">
                       <li>• 再植術</li>
@@ -965,7 +965,7 @@ const TraumaPage = () => {
                       <li>• 根管治療</li>
                     </ul>
                   </div>
-                  <div className="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-r-lg">
+                  <div className="bg-blue-50 border-blue-400 p-4 rounded-lg">
                     <p className="font-bold text-blue-800 mb-2 text-sm">自費診療</p>
                     <ul className="space-y-1 text-xs text-[#8D8070]">
                       <li>• セラミック治療</li>
@@ -987,7 +987,7 @@ const TraumaPage = () => {
                 <p className="text-[#8D8070] leading-relaxed mb-4">
                   治療時は局所麻酔を使用しますので、痛みはほとんどありません。治療後は鎮痛剤を処方いたします。
                 </p>
-                <div className="bg-blue-50 border-l-4 border-[#E67A2E] p-4 rounded-r-lg">
+                <div className="bg-blue-50 border-[#E67A2E] p-4 rounded-lg">
                   <p className="text-sm font-semibold text-[#5A4D41] mb-2">痛みへの配慮</p>
                   <ul className="space-y-2 text-sm text-[#8D8070]">
                     <li className="flex items-start gap-2">
@@ -1017,7 +1017,7 @@ const TraumaPage = () => {
                 <p className="text-[#8D8070] leading-relaxed mb-4">
                   乳歯の場合、永久歯に悪影響を及ぼす可能性があるため、基本的には再植せず経過観察となります。ただし、後継永久歯への影響を確認する必要がありますので、必ず受診してください。
                 </p>
-                <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-r-lg">
+                <div className="bg-yellow-50 border-yellow-400 p-4 rounded-lg">
                   <p className="text-sm font-semibold text-yellow-800 mb-2">乳歯外傷の注意点</p>
                   <ul className="space-y-2 text-sm text-[#8D8070]">
                     <li className="flex items-start gap-2">
@@ -1047,7 +1047,7 @@ const TraumaPage = () => {
                 <p className="text-[#8D8070] leading-relaxed mb-4">
                   適切な処置と経過観察により、10年以上機能する例も多くあります。ただし、個人差があり、定期的なメンテナンスが重要です。
                 </p>
-                <div className="bg-green-50 border-l-4 border-green-400 p-4 rounded-r-lg">
+                <div className="bg-green-50 border-green-400 p-4 rounded-lg">
                   <p className="text-sm font-semibold text-green-800 mb-2">長持ちさせるポイント</p>
                   <ul className="space-y-2 text-sm text-[#8D8070]">
                     <li className="flex items-start gap-2">

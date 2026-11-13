@@ -1,544 +1,166 @@
-import React from 'react';
+import type { Metadata } from 'next';
+import Link from 'next/link';
+import Image from 'next/image';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { AuthorBio } from '@/components/AuthorBio';
-import { KidsOrthoImage } from '@/components/KidsOrthoImage';
-import { ApplianceDetailHero } from '@/components/kidsortho/ApplianceDetailHero';
-import type { Metadata } from 'next';
+import { priceCategories } from '@/data/price-list';
+
+const title = 'EFライン・マイオブレース・プレオルソの違いと選び方';
+const description = 'EFライン・マイオブレース・プレオルソに共通する基本構造と使う目的、使い分けで重視する硬さの違いを解説。院長の使用感とメーカーの製品情報をもとに、当院の使い方・費用も紹介します。';
+const url = 'https://fshika.com/kidsortho/appliances/functional-mouthpiece';
 
 export const metadata: Metadata = {
-    title: 'プレオルソ・マイオブレース・T4K・EFラインの比較｜どれがいい？費用と効果の違い｜Fデンタルオフィス 豊洲プライムスクエア院',
-    description: '機能的マウスピース装置（プレオルソ・マイオブレース・T4K・EFライン）の違いを徹底比較。どれを選べばいい？費用・効果・適応症例の違いをわかりやすく解説します。',
-    keywords: 'プレオルソ,マイオブレース,T4K,EFライン,機能的マウスピース,こども矯正,小児矯正,費用,比較,選び方',
-    alternates: {
-        canonical: 'https://fshika.com/kidsortho/appliances/functional-mouthpiece',
-    },
-    openGraph: {
-        title: 'プレオルソ・マイオブレース・T4K・EFラインの比較｜どれがいい？費用と効果の違い｜Fデンタルオフィス 豊洲プライムスクエア院',
-        description: '機能的マウスピース装置（プレオルソ・マイオブレース・T4K・EFライン）の違いを徹底比較。費用・効果・適応症例の違いをわかりやすく解説します。',
-        type: 'website',
-        locale: 'ja_JP',
-        url: 'https://fshika.com/kidsortho/appliances/functional-mouthpiece',
-        siteName: 'Fデンタルオフィス 豊洲プライムスクエア院',
-    },
+  title: `${title}｜Fデンタルオフィス 豊洲プライムスクエア院`,
+  description,
+  keywords: 'EFライン,マイオブレース,プレオルソ,違い,比較,機能的マウスピース,豊洲,こども矯正',
+  alternates: { canonical: url },
+  openGraph: { title, description, url, type: 'website', locale: 'ja_JP', siteName: 'Fデンタルオフィス 豊洲プライムスクエア院' },
 };
 
+const appliances = [
+  { name: 'EFライン', en: 'EF Line', summary: '硬さやお口への収まりを確認して選ぶ', detail: '機能的マウスピースとしての基本的な考え方は共通です。複数のモデルから、硬さ・形・サイズがお子さまに合うものを選びます。' },
+  { name: 'マイオブレース', en: 'Myobrace', summary: '同じシリーズでも、段階によって硬さが変わる', detail: '基本的な構造や使う目的は、ほかの機能的マウスピースとよく似ています。「for Kids」はK1・K2・K3があり、段階ごとに硬さや設計が異なります。' },
+  { name: 'プレオルソ', en: 'Preortho', summary: '硬さ・サイズ・噛み合わせを確認し、必要に応じて調整する', detail: '基本的な考え方は共通で、素材はポリウレタンです。3つのタイプがあり、歯科医院で加熱による調整ができます。' },
+];
+const comparison = [
+  { label: '共通する考え方', cells: ['歯並びと、舌・唇などのお口の働きに配慮した取り外し式の装置', '歯並びと、舌・唇などのお口の働きに配慮した取り外し式の装置', '歯並びと、舌・唇などのお口の働きに配慮した取り外し式の装置'] },
+  { label: '硬さ・装着感', cells: ['実際に使うモデルの硬さと、お口への収まりを確認', 'K1は柔軟、K3は同シリーズで最も硬いなど、段階で異なる', '実際の装置の硬さと適合を確認し、必要に応じて歯科医院で調整'] },
+  { label: '種類・選び方', cells: ['形状・サイズの異なる複数のモデルから選択', 'for KidsはK1→K2→K3の段階別システム', 'タイプ1・2・3から噛み合わせに応じて選択'] },
+  { label: '比較のポイント', cells: ['どのモデルを、何の目的で使うか', 'どの段階から始め、何を確認して次へ進むか', 'どのタイプ・サイズが合い、調整が必要か'] },
+  { label: '使用時間', cells: ['選んだ装置と治療計画に沿って個別に指示', '選んだ装置と治療計画に沿って個別に指示', '当院では日中2時間＋就寝時を基本に個別調整'] },
+  { label: '当院での取り扱い', cells: ['使用しています', '本ページでは比較情報として紹介しています', '使用しています'] },
+];
+const faqs = [
+  { q: '基本的な構造や、使ったときの感覚は違いますか？', a: '基本的な構造や使う目的は共通しており、院長の臨床上の実感では、使っている感覚もほとんど同じです。そのうえで、使い分けの際に大きな違いとして感じるのが硬さです。細かな形やサイズも異なるため、実際の装置がお子さまのお口に合うかを確認します。' },
+  { q: '硬い装置と柔らかい装置は、どちらがよいですか？', a: '硬さは当院が装置を選ぶときに重視する点ですが、硬いほどよい、柔らかいほどよいとは限りません。お子さまの装着感、噛み合わせ、練習の進み具合に合わせて選びます。同じブランドにも硬さの異なるモデルがあるため、実際に使う製品で確認します。' },
+  { q: '何歳から相談すればよいですか？', a: '年齢だけで適応は決まりません。前歯の噛み合わせ、歯の生え替わり、食べ方、お口が開いていることなどが気になった時点でご相談ください。診察の結果、経過観察をご案内する場合もあります。' },
+  { q: '装置を使えば、口呼吸も治りますか？', a: '口呼吸には鼻づまりやのどの状態などが関係することがあります。装置だけで解決するとは限りません。鼻で息がしづらい、いびきが続く場合などは、必要に応じて耳鼻咽喉科への相談をご案内します。' },
+  { q: 'ガムトレーニングも一緒にした方がよいですか？', a: '噛み方や舌の動きを確認し、必要な方に練習をご案内します。全員に同じトレーニングが必要なわけではありません。装置を入れたままガムを噛まず、併用の可否や方法を担当の歯科医師に確認してください。' },
+];
+const heading = 'mb-6 font-serif text-2xl font-bold leading-relaxed text-[#5A4D41] md:text-3xl';
+const linkStyle = 'font-medium text-[#087a76] underline decoration-[#087a76]/40 underline-offset-4 hover:decoration-current';
+const clinicPrices = priceCategories.find((category) => category.id === 'kids-ortho')!.items.filter((item) => ['検査', '相談', '調整料', 'プレオルソ+付加装置', '拡大床'].includes(item.name));
+
 export default function FunctionalMouthpiecePage() {
-    return (
-        <>
-            <Header />
-            <main className="bg-[#FDFBF7]" style={{ fontFamily: '"游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", sans-serif' }}>
-                {/* Hero Section */}
-                <ApplianceDetailHero
-                    label="機能的マウスピース装置"
-                    title="プレオルソ・マイオブレース等"
-                    accent="口呼吸・舌癖から整える装置"
-                    lead="プレオルソ・T4K・マイオブレースなど、素材や硬さの異なるマウスピースを使い、お口の機能と歯並びに配慮する治療法です。"
-                    imagePath="/kidsortho/appliances/functional-mouthpiece"
-                    imageAlt="機能的マウスピース装置の比較"
-                    current="機能的マウスピース装置"
-                    showBreadcrumb
-                    facts={[
-                        { label: '装置タイプ', value: 'マウスピース' },
-                        { label: '目的', value: '舌癖・口呼吸改善' },
-                        { label: '素材', value: 'やわらかい素材' },
-                        { label: '特徴', value: '取り外し式' },
-                    ]}
-                    point="歯を動かすだけでなく、お口の筋肉や舌の使い方を整えることを重視します。"
-                />
-
-                {/* Main Content */}
-                <div className="container mx-auto px-4 py-2 pb-16">
-                    <div className="max-w-4xl mx-auto space-y-12">
-                        {/* 機能的マウスピース装置とは */}
-                        <section>
-                            <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#5A4D41] mb-3">機能的マウスピース装置とは</h2>
-                            <div className="w-16 h-0.5 bg-[#C5A572] mb-8"></div>
-
-                            <p className="text-lg text-[#5A4D41] leading-relaxed mb-6 font-sans">
-                                機能的マウスピース装置は、<span className="font-bold text-[#C5A572]">製品ごとに素材や硬さの異なるマウスピース</span>を使用して、歯並びの改善と同時に口の周りの筋肉（舌・唇・頬）の正しい使い方を訓練する装置です。プレオルソはポリウレタン製です。
-                            </p>
-                            <p className="text-lg text-[#5A4D41] leading-relaxed mb-10 font-sans">
-                                従来の矯正装置と異なり、<span className="font-bold text-[#C5A572]">歯を動かすだけでなく、不正咬合の根本原因となる口呼吸・舌癖・悪い嚥下習慣を改善</span>することで、後戻りしにくい安定した歯並びを目指します。
-                            </p>
-
-                            <div className="space-y-8">
-                                <div>
-                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 pb-2 border-b-2 border-[#C5A572]">歯並びの改善</h4>
-                                    <p className="text-[#8D8070] leading-relaxed font-sans">
-                                        歯列のアーチを広げ、永久歯が正しい位置に生えるスペースを確保します
-                                    </p>
-                                </div>
-
-                                <div>
-                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 pb-2 border-b-2 border-[#C5A572]">筋機能訓練</h4>
-                                    <p className="text-[#8D8070] leading-relaxed font-sans">
-                                        舌・唇・頬の筋肉を正しく使えるようにトレーニングし、口呼吸を鼻呼吸に改善します
-                                    </p>
-                                </div>
-                            </div>
-
-                            {/* 装着方法の画像 */}
-                            <div className="mt-8">
-                                <KidsOrthoImage
-                                    name="functional-mouthpiece-usage"
-                                    alt="機能的マウスピース装置を装着している様子"
-                                    category="appliances"
-                                />
-                            </div>
-                        </section>
-
-                        {/* どのように機能するのか */}
-                        <section>
-                            <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#5A4D41] mb-3">どのように機能するのか？</h2>
-                            <div className="w-16 h-0.5 bg-[#C5A572] mb-8"></div>
-
-                            <h3 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 pb-2 border-b-2 border-[#C5A572]">
-                                プレオルソの構造的特徴
-                            </h3>
-                            <ul className="space-y-3 ml-4 mb-10 text-[#8D8070] leading-loose font-sans">
-                                <li className="flex items-start gap-3">
-                                    <span className="text-[#C5A572] mt-1 flex-shrink-0">✓</span>
-                                    <span><strong className="text-[#5A4D41]">舌タブ：</strong>舌を正しい位置（上顎の前歯裏）に誘導し、舌癖を改善</span>
-                                </li>
-                                <li className="flex items-start gap-3">
-                                    <span className="text-[#C5A572] mt-1 flex-shrink-0">✓</span>
-                                    <span><strong className="text-[#5A4D41]">リップバンパー：</strong>唇を閉じやすくし、口呼吸から鼻呼吸へ誘導</span>
-                                </li>
-                                <li className="flex items-start gap-3">
-                                    <span className="text-[#C5A572] mt-1 flex-shrink-0">✓</span>
-                                    <span><strong className="text-[#5A4D41]">歯列アーチ形状：</strong>歯を適切な位置に誘導し、歯列を拡大</span>
-                                </li>
-                                <li className="flex items-start gap-3">
-                                    <span className="text-[#C5A572] mt-1 flex-shrink-0">✓</span>
-                                    <span><strong className="text-[#5A4D41]">柔軟な素材：</strong>ポリウレタン製で違和感が少なく、成長に合わせて変形</span>
-                                </li>
-                            </ul>
-
-                            <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 pb-2 border-b-2 border-[#C5A572]">
-                                3つの作用で歯並びを改善
-                            </h4>
-                            <div className="space-y-4 text-[#5A4D41] leading-loose font-sans mb-8">
-                                <p>
-                                    <span className="font-bold bg-yellow-100">口呼吸改善</span>：リップバンパーが唇を閉じさせ、鼻呼吸を促進。口腔内の乾燥を防ぎ、むし歯・歯周病のリスクを軽減
-                                </p>
-                                <p>
-                                    <span className="font-bold bg-yellow-100">舌位置の矯正</span>：舌タブが舌を正しい位置に誘導。前歯を押し出す舌癖が改善され、出っ歯・開咬の予防につながる
-                                </p>
-                                <p>
-                                    <span className="font-bold bg-yellow-100">歯列の拡大</span>：理想的なアーチ形状が歯を適切な位置に誘導。永久歯が生えるスペースを確保し、抜歯矯正のリスクを軽減
-                                </p>
-                            </div>
-
-                            {/* 効果の画像 */}
-                            <KidsOrthoImage
-                                name="functional-mouthpiece-effect"
-                                alt="機能的マウスピース装置の効果を示す図解"
-                                category="appliances"
-                            />
-                        </section>
-
-                        {/* 主な種類 */}
-                        <section>
-                            <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#5A4D41] mb-3">機能的マウスピース装置の主な種類</h2>
-                            <div className="w-16 h-0.5 bg-[#C5A572] mb-8"></div>
-
-                            {/* プレオルソ */}
-                            <div className="mb-10">
-                                <h3 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 pb-2 border-b-2 border-[#C5A572]">
-                                    1. プレオルソ（Preortho）
-                                </h3>
-                                <div className="space-y-4 text-[#5A4D41] leading-loose font-sans">
-                                    <p>
-                                        日本で開発された機能的マウスピース装置。<span className="font-bold bg-yellow-100">ポリウレタン製で非常に柔らかく、違和感が少ない</span>のが特徴です。日中2時間＋就寝時の装着が目安で、特に就寝時の継続が大切です。Type I〜IIIまでタイプがあり、症状に応じて選択します。
-                                    </p>
-                                    <p>
-                                        <span className="text-[#C5A572] font-bold">適応症例：</span>口呼吸・舌癖、出っ歯・受け口・開咬、軽度〜中等度の歯並びの乱れ
-                                    </p>
-                                </div>
-                            </div>
-
-                            {/* EFライン */}
-                            <div className="mb-10">
-                                <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 pb-2 border-b-2 border-[#C5A572]">
-                                    2. EFライン（EF Line）
-                                </h4>
-                                <div className="space-y-4 text-[#5A4D41] leading-loose font-sans">
-                                    <p>
-                                        フランスで開発された機能的マウスピース装置。<span className="font-bold bg-yellow-100">プレオルソより柔らかいポリ塩化ビニル（PVC）素材</span>を使用しており、プレオルソが固くて使用できなかった場合の代替選択肢として最適です。日中2〜4時間＋就寝時の装着が推奨されています。
-                                    </p>
-                                    <p>
-                                        <span className="text-[#C5A572] font-bold">適応症例：</span>口呼吸・舌癖、軽度〜中等度の歯並びの乱れ、プレオルソが硬くて装着困難な場合
-                                    </p>
-                                    <div className="bg-green-50 p-4 rounded-lg border-l-4 border-green-500">
-                                        <p className="text-sm text-[#5A4D41] leading-relaxed">
-                                            <span className="font-bold text-green-700">硬さの比較：</span>プレオルソ（硬い）＞ EFライン（中間）＞ マイオブレース/T4K（柔らかい）
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* T4K・マイオブレース */}
-                            <div className="mb-10">
-                                <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 pb-2 border-b-2 border-[#C5A572]">
-                                    3. T4K（Trainer for Kids）・マイオブレース（Myobrace）
-                                </h4>
-
-                                {/* 関係性の説明 */}
-                                <div className="bg-blue-50 p-6 rounded-xl mb-6 border-l-4 border-blue-500">
-                                    <p className="font-bold text-blue-700 mb-3">T4Kとマイオブレースの関係</p>
-                                    <p className="text-[#5A4D41] leading-loose mb-3">
-                                        結論から言うと、<span className="font-bold bg-yellow-100">「同じメーカー（オーストラリアのMRC社）が作った、兄弟のような関係」</span>です。厳密には<span className="font-bold text-[#C5A572]">「マイオブレースという大きなシステムの中に、T4Kという製品がある」</span>というイメージです。
-                                    </p>
-                                    <p className="text-[#5A4D41] leading-loose">
-                                        どちらも「歯並びを直接動かす」というよりは、<span className="font-bold bg-yellow-100">「口の周りの筋肉を鍛えて、結果的に歯並びを整える」</span>という目的は共通しています。
-                                    </p>
-                                </div>
-
-                                {/* 比較表 */}
-                                <div className="overflow-x-auto mb-6">
-                                    <table className="w-full border-collapse">
-                                        <thead>
-                                            <tr className="bg-[#FAF8F5]">
-                                                <th className="border border-gray-300 p-3 text-left text-[#5A4D41] font-serif">特徴</th>
-                                                <th className="border border-gray-300 p-3 text-left text-[#5A4D41] font-serif">T4K (Trainer for Kids)</th>
-                                                <th className="border border-gray-300 p-3 text-left text-[#5A4D41] font-serif">マイオブレース (Myobrace)</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody className="text-sm">
-                                            <tr>
-                                                <td className="border border-gray-300 p-3 font-bold text-[#5A4D41]">位置づけ</td>
-                                                <td className="border border-gray-300 p-3 text-[#8D8070]">初期の代表的な<strong>単一製品</strong></td>
-                                                <td className="border border-gray-300 p-3 text-[#8D8070]">成長段階に合わせた<strong>矯正システム全体</strong></td>
-                                            </tr>
-                                            <tr>
-                                                <td className="border border-gray-300 p-3 font-bold text-[#5A4D41]">種類</td>
-                                                <td className="border border-gray-300 p-3 text-[#8D8070]">種類が少なく、汎用的</td>
-                                                <td className="border border-gray-300 p-3 text-[#8D8070]">年齢や歯の状態に合わせ、数十種類ある</td>
-                                            </tr>
-                                            <tr>
-                                                <td className="border border-gray-300 p-3 font-bold text-[#5A4D41]">構造</td>
-                                                <td className="border border-gray-300 p-3 text-[#8D8070]">柔らかい素材がメイン</td>
-                                                <td className="border border-gray-300 p-3 text-[#8D8070]">硬さの違う素材を組み合わせた多層構造</td>
-                                            </tr>
-                                            <tr>
-                                                <td className="border border-gray-300 p-3 font-bold text-[#5A4D41]">目的</td>
-                                                <td className="border border-gray-300 p-3 text-[#8D8070]">混合歯列期（生え変わり期）の改善</td>
-                                                <td className="border border-gray-300 p-3 text-[#8D8070]">筋肉の訓練 ＋ 顎の拡大 ＋ 歯並びの微調整</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-
-                                <div className="grid md:grid-cols-2 gap-6">
-                                    {/* T4K */}
-                                    <div className="bg-white p-6 rounded-xl border-2 border-gray-200">
-                                        <h5 className="font-bold text-[#C5A572] mb-3 text-lg">T4K：スタンダードな入門機</h5>
-                                        <p className="text-[#5A4D41] leading-loose mb-4 text-sm">
-                                            主に6〜10歳くらいの、乳歯と永久歯が混ざった時期に使われます。
-                                        </p>
-                                        <div className="space-y-2 text-sm">
-                                            <p><span className="text-green-600 font-bold">メリット：</span>シンプルで扱いやすい</p>
-                                            <p><span className="text-yellow-600 font-bold">デメリット：</span>既製品なので、個々の複雑な歯並びには対応しきれないことがある</p>
-                                        </div>
-                                        <p className="mt-4 text-[#C5A572] font-bold text-sm">
-                                            適応：比較的症状が軽く、まずは筋肉の癖を直したい場合
-                                        </p>
-                                    </div>
-
-                                    {/* マイオブレース */}
-                                    <div className="bg-white p-6 rounded-xl border-2 border-[#C5A572]">
-                                        <h5 className="font-bold text-[#C5A572] mb-3 text-lg">マイオブレース：進化版・オーダーメイドに近いシステム</h5>
-                                        <p className="text-[#5A4D41] leading-loose mb-4 text-sm">
-                                            T4Kの成功を経て、より細かく「乳歯期用」「永久歯期用」「出っ歯用」など、子供の成長段階や症状に合わせてステップアップできるように体系化されたシステムです。
-                                        </p>
-                                        <div className="bg-blue-50 p-4 rounded-lg mb-4">
-                                            <p className="text-sm text-[#5A4D41] leading-relaxed">
-                                                <span className="font-bold text-blue-700">ポイント：</span>1つの装置で終わりではなく、ステージ1（習慣の改善）、ステージ2（顎の拡大）、ステージ3（歯並びの仕上げ）といった具合に、装置を付け替えながら進めていくのが一般的です。
-                                            </p>
-                                        </div>
-                                        <p className="text-[#C5A572] font-bold text-sm">
-                                            適応：歯並びの問題が少し複雑で、成長に合わせて段階的にしっかり治したい場合
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div className="mt-6 bg-yellow-50 p-6 rounded-xl border-l-4 border-yellow-400">
-                                    <p className="font-bold text-[#5A4D41] mb-2">最近の歯科医院では</p>
-                                    <p className="text-sm text-[#5A4D41] leading-relaxed">
-                                        単に装置（T4Kなど）をはめるだけでなく、<span className="font-bold bg-yellow-100">「アクティビティ」と呼ばれるお口のトレーニング（MFT）</span>をセットで行うプログラム全体を「マイオブレース矯正」と呼ぶことが多いです。
-                                    </p>
-                                </div>
-                            </div>
-                        </section>
-
-                        {/* メリット・デメリット */}
-                        <section>
-                            <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#5A4D41] mb-3">メリット・デメリット</h2>
-                            <div className="w-16 h-0.5 bg-[#C5A572] mb-8"></div>
-
-                            {/* メリット */}
-                            <h4 className="text-xl font-serif font-bold text-[#5A4D41] mb-4 pb-2 border-b-2 border-[#C5A572]">メリット</h4>
-                            <ul className="space-y-3 ml-4 mb-10 text-[#8D8070] leading-loose font-sans">
-                                <li className="flex items-start gap-3">
-                                    <span className="text-[#C5A572] mt-1 flex-shrink-0">✓</span>
-                                    <span><strong className="text-[#5A4D41]">取り外し式：</strong>痛みや違和感がある場合は、使用を中止して調整を相談できます</span>
-                                </li>
-                                <li className="flex items-start gap-3">
-                                    <span className="text-[#C5A572] mt-1 flex-shrink-0">✓</span>
-                                    <span><strong className="text-[#5A4D41]">取り外し可能：</strong>食事・歯磨き時は外せるので衛生的</span>
-                                </li>
-                                <li className="flex items-start gap-3">
-                                    <span className="text-[#C5A572] mt-1 flex-shrink-0">✓</span>
-                                    <span><strong className="text-[#5A4D41]">根本原因を改善：</strong>口呼吸・舌癖を治すので後戻りしにくい</span>
-                                </li>
-                                <li className="flex items-start gap-3">
-                                    <span className="text-[#C5A572] mt-1 flex-shrink-0">✓</span>
-                                    <span><strong className="text-[#5A4D41]">早期開始が可能：</strong>3歳から始められる</span>
-                                </li>
-                                <li className="flex items-start gap-3">
-                                    <span className="text-[#C5A572] mt-1 flex-shrink-0">✓</span>
-                                    <span><strong className="text-[#5A4D41]">費用が抑えられる：</strong>既製品なので比較的安価</span>
-                                </li>
-                            </ul>
-
-                            {/* デメリット */}
-                            <h4 className="text-xl font-serif font-bold text-[#5A4D41] mb-4 pb-2 border-b-2 border-[#C5A572]">デメリット</h4>
-                            <ul className="space-y-3 ml-4 mb-4 text-[#8D8070] leading-loose font-sans">
-                                <li className="flex items-start gap-3">
-                                    <span className="text-yellow-600 mt-1 flex-shrink-0">⚠</span>
-                                    <span><strong className="text-[#5A4D41]">装着時間を守る必要：</strong>効果を出すには毎日の装着が必須</span>
-                                </li>
-                                <li className="flex items-start gap-3">
-                                    <span className="text-yellow-600 mt-1 flex-shrink-0">⚠</span>
-                                    <span><strong className="text-[#5A4D41]">お子さまの協力が必要：</strong>自分で装着できる年齢・性格が必要</span>
-                                </li>
-                                <li className="flex items-start gap-3">
-                                    <span className="text-yellow-600 mt-1 flex-shrink-0">⚠</span>
-                                    <span><strong className="text-[#5A4D41]">適応症例が限定的：</strong>重度の不正咬合には効果が薄い</span>
-                                </li>
-                                <li className="flex items-start gap-3">
-                                    <span className="text-yellow-600 mt-1 flex-shrink-0">⚠</span>
-                                    <span><strong className="text-[#5A4D41]">治療期間が長い：</strong>1〜2年以上かかることが多い</span>
-                                </li>
-                            </ul>
-                        </section>
-
-                        {/* 費用について */}
-                        <section>
-                            <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#5A4D41] mb-3">費用について</h2>
-                            <div className="w-16 h-0.5 bg-[#C5A572] mb-8"></div>
-
-                            <div className="mb-8">
-                                <h3 className="text-xl font-bold text-[#5A4D41] font-serif mb-6 pb-2 border-b-2 border-[#C5A572]">
-                                    当院の費用（税込）
-                                </h3>
-
-                                <div className="grid md:grid-cols-2 gap-6 mb-8">
-                                    {/* 相談・検査費用 */}
-                                    <div className="bg-green-50 p-6 rounded-xl border-2 border-green-200">
-                                        <h4 className="font-bold text-green-700 mb-4 text-lg">相談・検査費用</h4>
-                                        <div className="space-y-3">
-                                            <div className="flex justify-between items-center">
-                                                <span className="text-[#5A4D41]">相談料</span>
-                                                <span className="text-2xl font-bold text-green-700">¥0</span>
-                                            </div>
-                                            <p className="text-sm text-gray-600">矯正相談は無料です</p>
-                                            <div className="flex justify-between items-center pt-3 border-t border-green-200">
-                                                <span className="text-[#5A4D41]">検査代</span>
-                                                <span className="text-2xl font-bold text-green-700">¥0</span>
-                                            </div>
-                                            <p className="text-sm text-gray-600">初回検査は無料です</p>
-                                            <div className="flex justify-between items-center pt-3 border-t border-green-200">
-                                                <span className="text-[#5A4D41]">結果説明</span>
-                                                <span className="text-2xl font-bold text-[#C5A572]">¥11,000</span>
-                                            </div>
-                                            <p className="text-sm text-gray-600">検査結果の詳しい説明とカウンセリング</p>
-                                        </div>
-                                    </div>
-
-                                    {/* 装置費用 */}
-                                    <div className="bg-white p-6 rounded-xl border-2 border-[#C5A572]">
-                                        <h4 className="font-bold text-[#C5A572] mb-4 text-lg">装置費用</h4>
-                                        <div className="text-center mb-4">
-                                            <div className="text-5xl font-bold text-[#C5A572] mb-2">
-                                                ¥132,000
-                                            </div>
-                                            <p className="text-sm text-gray-600">（税込）</p>
-                                        </div>
-                                        <div className="bg-blue-50 p-4 rounded-lg">
-                                            <p className="text-sm text-[#5A4D41] leading-relaxed">
-                                                <span className="font-bold text-blue-700">含まれるもの：</span><br />
-                                                プレオルソ、EFライン、その他の付加的装置の全てを含みます
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="border-t border-gray-200 pt-6">
-                                    <h4 className="font-bold text-[#5A4D41] mb-4 font-serif">治療費に含まれるサービス</h4>
-                                    <div className="grid md:grid-cols-2 gap-3">
-                                        <div className="flex items-start gap-2">
-                                            <span className="text-[#C5A572] mt-1 flex-shrink-0">✓</span>
-                                            <span className="text-[#8D8070]">装置代（プレオルソ・EFライン等）</span>
-                                        </div>
-                                        <div className="flex items-start gap-2">
-                                            <span className="text-[#C5A572] mt-1 flex-shrink-0">✓</span>
-                                            <span className="text-[#8D8070]">装置の調整・交換費用</span>
-                                        </div>
-                                        <div className="flex items-start gap-2">
-                                            <span className="text-[#C5A572] mt-1 flex-shrink-0">✓</span>
-                                            <span className="text-[#8D8070]">MFT（筋機能療法）指導</span>
-                                        </div>
-                                        <div className="flex items-start gap-2">
-                                            <span className="text-[#C5A572] mt-1 flex-shrink-0">✓</span>
-                                            <span className="text-[#8D8070]">定期的な経過観察</span>
-                                        </div>
-                                        <div className="flex items-start gap-2">
-                                            <span className="text-[#C5A572] mt-1 flex-shrink-0">✓</span>
-                                            <span className="text-[#8D8070]">治療期間中のサポート</span>
-                                        </div>
-                                        <div className="flex items-start gap-2">
-                                            <span className="text-[#C5A572] mt-1 flex-shrink-0">✓</span>
-                                            <span className="text-[#8D8070]">保護者への指導・相談</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="bg-yellow-50 p-6 border-l-4 border-yellow-400 rounded-r-lg">
-                                <p className="font-bold text-[#5A4D41] mb-2 font-serif">医療費控除の対象です</p>
-                                <p className="text-sm text-[#5A4D41] leading-relaxed font-sans">
-                                    小児矯正治療は医療費控除の対象となります。確定申告で一部が還付される可能性がありますので、領収書は大切に保管してください。
-                                </p>
-                            </div>
-                        </section>
-
-                        {/* 当院で使用している装置 */}
-                        <section>
-                            <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#5A4D41] mb-3">当院で使用している装置について</h2>
-                            <div className="w-16 h-0.5 bg-[#C5A572] mb-8"></div>
-
-                            <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-2xl border-2 border-blue-200 mb-8">
-                                <div>
-                                    <h3 className="text-xl font-bold text-[#5A4D41] mb-4 font-serif">当院ではプレオルソとEFラインのみを使用しております</h3>
-
-                                        <div className="space-y-4 text-[#5A4D41] leading-loose">
-                                            <p>
-                                                数ある機能的マウスピース装置の中で、当院では<span className="font-bold bg-yellow-100">プレオルソとEFラインの2つの装置</span>を採用しています。
-                                            </p>
-
-                                            <div className="bg-white p-6 rounded-xl">
-                                                <h4 className="font-bold text-[#C5A572] mb-3 text-lg">選定理由</h4>
-                                                <ul className="space-y-3">
-                                                    <li className="flex items-start gap-3">
-                                                        <span className="text-[#C5A572] mt-1 flex-shrink-0">1.</span>
-                                                        <span><strong>ほとんどの症例に対応可能：</strong>この2つの装置で、お子さまの歯並びの問題のほとんどをカバーできます</span>
-                                                    </li>
-                                                    <li className="flex items-start gap-3">
-                                                        <span className="text-[#C5A572] mt-1 flex-shrink-0">2.</span>
-                                                        <span><strong>日本人の口に適している：</strong>プレオルソは日本で製造された装置のため、日本人のお子さまの口腔構造に合いやすく設計されています</span>
-                                                    </li>
-                                                    <li className="flex items-start gap-3">
-                                                        <span className="text-[#C5A572] mt-1 flex-shrink-0">3.</span>
-                                                        <span><strong>硬さの選択肢：</strong>プレオルソが硬くて使用できない場合、より柔らかいEFラインに切り替えることで対応できます</span>
-                                                    </li>
-                                                </ul>
-                                            </div>
-
-                                            <div className="bg-blue-50 p-6 rounded-xl border-l-4 border-blue-500">
-                                                <p className="text-sm leading-relaxed mb-3">
-                                                    <span className="font-bold text-blue-700">硬さの順番：</span><br />
-                                                    プレオルソ（硬い）＞ EFライン（中間）＞ マイオブレース・T4K（柔らかい）
-                                                </p>
-                                                <p className="text-sm leading-relaxed">
-                                                    <span className="font-bold text-blue-700">補足：</span>
-                                                    マイオブレースやT4Kなどの海外製装置は欧米人の口腔構造に合わせて設計されています。機能的マウスピース装置としての効果は同等で、<span className="font-bold bg-yellow-100">どの装置を使用しても適切な効果が得られます</span>。最も有名なのはマイオブレースですが、「それでないとできない」ということはなく、他の装置でも十分に対応可能です。
-                                                </p>
-                                            </div>
-                                        </div>
-                                </div>
-                            </div>
-                        </section>
-
-                        {/* よくある質問 */}
-                        <section>
-                            <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#5A4D41] mb-3">よくある質問</h2>
-                            <div className="w-16 h-0.5 bg-[#C5A572] mb-8"></div>
-
-                            <div className="space-y-6">
-                                <div className="bg-white rounded-xl shadow-md border border-gray-200 p-6">
-                                    <div className="mb-4">
-                                        <div className="flex items-center gap-3 mb-3">
-                                            <span className="w-8 h-8 bg-[#C5A572] rounded-full flex items-center justify-center text-white text-sm flex-shrink-0">
-                                                Q1
-                                            </span>
-                                            <h3 className="font-bold text-[#5A4D41] text-lg font-serif">
-                                                何歳から始められますか？
-                                            </h3>
-                                        </div>
-                                    </div>
-                                    <div className="text-[#8D8070] leading-loose font-sans">
-                                        <p className="mb-3">
-                                            <strong className="text-[#C5A572]">A.</strong> 3歳から始められます。プレオルソは3〜10歳、マイオブレースは3〜15歳まで年齢別のサイズがあります。早期に始めるほど、口呼吸・舌癖などの悪習癖を改善しやすく、効果が高くなります。
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div className="bg-white rounded-xl shadow-md border border-gray-200 p-6">
-                                    <div className="mb-4">
-                                        <div className="flex items-center gap-3 mb-3">
-                                            <span className="w-8 h-8 bg-[#C5A572] rounded-full flex items-center justify-center text-white text-sm flex-shrink-0">
-                                                Q2
-                                            </span>
-                                            <h3 className="font-bold text-[#5A4D41] text-lg font-serif">
-                                                1日どれくらい装着する必要がありますか？
-                                            </h3>
-                                        </div>
-                                    </div>
-                                    <div className="text-[#8D8070] leading-loose font-sans">
-                                        <p className="mb-3">
-                                            <strong className="text-[#C5A572]">A.</strong> 装置により異なりますが、プレオルソは<strong>日中2時間＋就寝時</strong>の装着が目安です。特に就寝時の装着が大切で、まとまった時間装置を入れることで、舌の位置・口唇閉鎖・鼻呼吸の習慣づくりをサポートします。マイオブレースは日中1〜2時間＋就寝時が推奨されています。
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div className="bg-white rounded-xl shadow-md border border-gray-200 p-6">
-                                    <div className="mb-4">
-                                        <div className="flex items-center gap-3 mb-3">
-                                            <span className="w-8 h-8 bg-[#C5A572] rounded-full flex items-center justify-center text-white text-sm flex-shrink-0">
-                                                Q3
-                                            </span>
-                                            <h3 className="font-bold text-[#5A4D41] text-lg font-serif">
-                                                痛みはありますか？
-                                            </h3>
-                                        </div>
-                                    </div>
-                                    <div className="text-[#8D8070] leading-loose font-sans">
-                                        <p className="mb-3">
-                                            <strong className="text-[#C5A572]">A.</strong> プレオルソはポリウレタン製です。装着直後に痛み・違和感・粘膜への刺激が出ることがあり、感じ方には個人差があります。強い痛みや傷がある場合は無理に使用せず、装置の調整についてご相談ください。
-                                        </p>
-                                        <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
-                                            <p className="text-sm text-[#5A4D41] leading-relaxed">
-                                                <span className="font-bold text-blue-700">当院の方針：</span>
-                                                基本的にはプレオルソを使用しますが、痛みがあり使用できない場合は、より柔らかいEFラインに切り替えて対応いたします。お子さまの快適性を最優先に考えた治療を行っています。
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-
-
-                    </div>
+  return (
+    <>
+      <Header />
+      <main className="break-normal bg-[#FDFBF7] text-[#5A4D41]">
+        <div className="mx-auto max-w-6xl px-4 pb-16 pt-8 md:px-8">
+          <nav aria-label="パンくずリスト" className="mb-8 flex flex-wrap gap-2 text-sm text-[#71665A]">
+            <Link href="/">ホーム</Link><span aria-hidden="true">/</span><Link href="/kidsortho">こども矯正</Link><span aria-hidden="true">/</span><Link href="/kidsortho/appliances">装置一覧</Link><span aria-hidden="true">/</span><span>機能的マウスピースの比較</span>
+          </nav>
+          <header className="mb-12">
+            <div className="grid items-center gap-8 lg:grid-cols-[minmax(0,1.65fr)_minmax(0,1fr)]">
+              <div>
+            <p className="mb-4 text-sm font-bold tracking-wider text-[#087a76]">こどもの歯並びと、お口の使い方</p>
+            <h1 className="max-w-4xl font-serif text-3xl font-bold leading-normal md:text-5xl md:leading-snug">EFライン・マイオブレース・<br className="hidden md:block" />プレオルソの違いと選び方</h1>
+            <p className="mt-6 max-w-3xl text-lg leading-8">3つの装置は、基本的な構造や考え方が共通しています。院長の臨床上の実感では、使っている感覚もほとんど同じです。使い分けで特に大きいのは「硬さ」の違いです。</p>
+              </div>
+              <figure className="mx-auto w-full max-w-md">
+                <Image src="/images/kidsortho/education/appliance-structure.webp" width={1000} height={1000} alt="上下の歯列を包む機能的マウスピースの構造を描いたイラスト" sizes="(min-width: 1024px) 400px, (min-width: 640px) 448px, 100vw" priority className="h-auto w-full rounded-2xl" />
+                <figcaption className="mt-3 text-sm leading-6 text-[#71665A]">『咬合育成のバイブル』より、プレオルソの構造をもとにしたイメージ図。実際の形状は、製品やサイズによって異なります。</figcaption>
+              </figure>
+            </div>
+            <div className="mt-8 grid gap-4 md:grid-cols-3">
+              {appliances.map((appliance) => (
+                <div key={appliance.name} className="rounded-2xl border border-[#E6D8C5] bg-white p-6">
+                  <p className="text-xs tracking-wider text-[#71665A]">{appliance.en}</p>
+                  <h2 className="mt-2 text-xl font-bold">{appliance.name}</h2>
+                  <p className="mt-4 font-bold leading-7 text-[#087a76]">{appliance.summary}</p>
+                  <p className="mt-3 text-sm leading-7">{appliance.detail}</p>
                 </div>
-
-                {/* 監修者情報 */}
-                <div className="container mx-auto px-4 pt-2 pb-16">
-                    <AuthorBio />
+              ))}
+            </div>
+          </header>
+          <nav aria-label="このページの内容" className="mb-12 flex flex-wrap gap-x-6 gap-y-3 rounded-2xl bg-[#F1ECE3] p-5 text-sm">
+            <a href="#comparison" className={linkStyle}>3つの比較</a><a href="#choice" className={linkStyle}>選ぶときのポイント</a><a href="#clinic" className={linkStyle}>当院の使い方・費用</a><a href="#faq" className={linkStyle}>よくある質問</a>
+          </nav>
+          <div className="space-y-14 text-base leading-8">
+            <section id="comparison" className="scroll-mt-28">
+              <h2 className={heading}>3つの装置を比べてみましょう</h2>
+              <p className="mb-4">EFライン・マイオブレース・プレオルソは、取り外し式のマウスピースを使い、歯並びや噛み合わせとともに、舌・唇などのお口の働きに配慮する装置です。この基本となる構造や考え方は、3つの装置に共通しています。</p>
+              <div className="mb-6 rounded-2xl bg-[#EAF4F0] p-6">
+                <h3 className="mb-3 text-lg font-bold">院長が使い分けで重視しているのは「硬さ」です</h3>
+                <p>細かな形や素材はそれぞれ異なりますが、院長の実感として、使っている感覚はほとんど同じです。当院では、硬さの違いとお口への収まりを確かめ、お子さまが無理なく取り組める装置を選ぶことを大切にしています。</p>
+                <p className="mt-3 text-sm leading-7">使用感は院長の臨床上の実感としてお伝えしています。細かな形状・寸法・素材や適応は、製品ごとに異なります。</p>
+              </div>
+              <p className="mb-5">以下の表では、共通点を押さえたうえで、メーカー・販売元が案内する製品の違いをまとめています。マイオブレースは、主に生え替わり期に使う「for Kids」を比較しています。</p>
+              <p id="comparison-hint" className="mb-2 text-sm text-[#71665A] md:hidden">表は横にスクロールできます。</p>
+              <div role="region" aria-label="機能的マウスピースの比較表" tabIndex={0} className="overflow-x-auto rounded-2xl border border-[#E6D8C5] bg-white focus-visible:outline-2 focus-visible:outline-[#087a76]">
+                <table className="w-full min-w-[760px] border-collapse text-left text-sm leading-7">
+                  <caption className="sr-only">EFライン・マイオブレース・プレオルソの共通点、硬さ、種類、使用時間、当院での取り扱い</caption>
+                  <thead><tr className="bg-[#EAF4F0]"><th scope="col" className="w-32 p-4">比較項目</th>{appliances.map((item) => <th scope="col" key={item.name} className="w-[28%] p-4 text-base">{item.name}</th>)}</tr></thead>
+                  <tbody>{comparison.map((row) => <tr key={row.label} className="border-t border-[#E6D8C5]"><th scope="row" className="bg-[#FAF8F5] p-4 align-top">{row.label}</th>{row.cells.map((cell, index) => <td key={index} className="p-4 align-top">{cell}</td>)}</tr>)}</tbody>
+                </table>
+              </div>
+              <p className="mt-4 text-sm leading-7 text-[#71665A]">EFラインのメーカーは、2026年から医療用の新素材（コポリマー）へ順次移行すると案内しています。国内で使用する製品の素材は、実際の製品表示・添付文書で確認します。同じブランドでもモデルによって硬さや装着感が異なるため、具体的な製品で確かめます。</p>
+              <div className="mt-7 grid gap-6 md:grid-cols-2">
+                <div className="rounded-2xl bg-white p-6">
+                  <h3 className="mb-3 text-lg font-bold">マイオブレース：段階ごとに目的が変わります</h3>
+                  <p>K1は呼吸・舌などの習慣への対応、K2は歯列の幅や舌・唇の働きへの対応、K3は歯列の仕上げや保定を目的とした設計です。段階を進める時期は診察で判断します。</p>
                 </div>
-            </main>
-            <Footer />
-        </>
-    );
+                <div className="rounded-2xl bg-white p-6">
+                  <h3 className="mb-3 text-lg font-bold">プレオルソ：噛み合わせでタイプを選びます</h3>
+                  <p>タイプ1は出っ歯・歯のデコボコ・深い噛み合わせなど、タイプ2は前歯が閉じない開咬、タイプ3は受け口に用いる設計です。同じ症状名でも、装置が適するかは検査が必要です。</p>
+                </div>
+              </div>
+            </section>
+            <section id="choice" className="scroll-mt-28">
+              <h2 className={heading}>装置を選ぶ前に確認すること</h2>
+              <p>機能的マウスピースは、歯並び・噛み合わせに加えて、舌や唇などの働きにも配慮した装置です。診察では次の点を確認し、何を目指す治療なのかを共有します。</p>
+              <ol className="mt-6 grid gap-4 md:grid-cols-3">
+                {[
+                  ['歯と顎の状態', '歯の生え替わり、歯が並ぶスペース、上下の顎のバランス、噛み合わせを確認します。'],
+                  ['お口の使い方', '舌の位置、唇の閉じ方、噛み方・飲み込み方、鼻で呼吸しづらいことがないかを確認します。'],
+                  ['硬さが合い、家庭で続けられるか', '硬さ・大きさ・装着感を確かめ、生活時間やご本人・ご家族の取り組みやすさも相談します。'],
+                ].map(([label, text], index) => <li key={label} className="border-t-2 border-[#C5A572] pt-4"><p className="mb-2 font-bold"><span className="mr-3 text-[#087a76]">0{index + 1}</span>{label}</p><p>{text}</p></li>)}
+              </ol>
+              <div className="mt-7 rounded-2xl border border-[#E6D8C5] p-6">
+                <h3 className="mb-3 font-bold">装置・トレーニング・経過観察を組み合わせます</h3>
+                <p>お口の機能を育てる練習と、歯を動かす矯正治療は目的が異なります。必要に応じてMFT（口腔筋機能療法）や食べ方の練習を行いますが、練習だけですべての歯並びが整うわけではありません。</p>
+                <p className="mt-3">歯が並ぶスペースの不足や骨格的な問題、歯の生える方向などによっては、別の装置や永久歯がそろってからの2期治療が必要です。適応がなければ経過観察も選択肢になります。</p>
+                <div className="mt-4 flex flex-wrap gap-x-6 gap-y-2"><Link href="/kidsortho/mft-training" className={linkStyle}>MFTについて</Link><Link href="/kidsortho/gum-training" className={linkStyle}>ガムを使った練習について</Link></div>
+              </div>
+            </section>
+            <section id="clinic" className="scroll-mt-28">
+              <h2 className={heading}>当院の使い方・費用・注意点</h2>
+              <p>当院ではプレオルソとEFラインを使用しています。診察・検査に加え、硬さやお口への収まりを確認し、装着しやすさも重視して選びます。マイオブレースは、このページでは違いを知っていただくための比較情報として紹介しています。</p>
+              <div className="my-6 rounded-2xl bg-[#EAF4F0] p-6">
+                <h3 className="mb-3 text-lg font-bold">プレオルソは「日中2時間＋就寝時」が当院の基本です</h3>
+                <p>年齢、お口の状態、治療目的に合わせて調整します。製品の一般的な案内と異なる場合も、担当の歯科医師の指示を優先してください。EFラインの使用時間は、選んだ装置に応じてお伝えします。</p>
+                <p className="mt-3">食事・歯磨きの際は取り外し、指定された方法で洗浄・保管してください。家庭で加熱して形を変えたり、削ったりしないでください。</p>
+              </div>
+              <h3 className="mb-4 text-xl font-bold">小児矯正の費用（税込）</h3>
+              <dl className="divide-y divide-[#E6D8C5] rounded-2xl border border-[#E6D8C5] bg-white px-5">
+                {clinicPrices.map((item) => <div key={item.name} className="flex flex-wrap justify-between gap-2 py-4"><dt>{item.name}</dt><dd className="font-bold">{item.price}</dd></div>)}
+              </dl>
+              <p className="mt-4 text-sm leading-7">プレオルソから拡大床へ移行する場合は差額で対応します。EFラインを用いる場合や追加治療の費用は、診察後の治療計画に沿ってご説明します。<Link href="/price#kids-ortho" className={linkStyle}>詳しい料金表を見る</Link></p>
+              <h3 className="mb-3 mt-7 text-xl font-bold">治療期間と主なリスク</h3>
+              <p>こども矯正は原則として自由診療です。期間・通院回数は、歯の生え替わりや治療範囲によって異なるため、検査後に目安をご説明します。装着時間や成長の経過によって、期間延長や計画変更、追加装置・2期治療が必要になる場合があります。</p>
+              <p className="mt-3">一時的な痛み・違和感、発音しにくさ、唾液の増加、粘膜への刺激、装置の紛失・破損などが起こることがあります。清掃が不十分な場合はむし歯や歯肉炎のリスクがあり、治療後に後戻りする可能性もあります。強い痛み、傷、息苦しさがある場合は使用を中止してご相談ください。</p>
+            </section>
+            <section id="faq" className="scroll-mt-28">
+              <h2 className={heading}>よくある質問</h2>
+              <div className="divide-y divide-[#E6D8C5]">{faqs.map((faq) => <div key={faq.q} className="py-6 first:pt-0"><h3 className="mb-3 text-lg font-bold">{faq.q}</h3><p>{faq.a}</p></div>)}</div>
+            </section>
+            <section className="rounded-2xl bg-[#F1ECE3] p-6 text-sm leading-7">
+              <h2 className="mb-3 text-lg font-bold">参考情報</h2>
+              <p>製品の種類・設計・素材は、以下のメーカー・販売元の公開情報を参照しています（2026年11月13日確認）。製品の設計目的を説明したもので、特定の装置の優位性や治療結果を保証するものではありません。</p>
+              <ul className="mt-3 space-y-2">
+                <li><a className={linkStyle} href="https://orthoplus.fr/en/content/a-therapeutic-approach-to-dysfunction/">Orthoplus：EF Lineの設計</a> ／ <a className={linkStyle} href="https://orthoplus.fr/actualite/nouvelle-matiere-grade-medical-ef-line/">2026年の素材変更</a></li>
+                <li><a className={linkStyle} href="https://www.myoresearch.com/en-au/appliances/myobrace/for-kids">Myofunctional Research Co.：Myobrace for Kids</a></li>
+                <li><a className={linkStyle} href="https://www.forest-one.co.jp/products/preortho/">フォレスト・ワン：プレオルソ</a></li>
+                <li><a className={linkStyle} href="https://www.jspd.or.jp/recommendation/article26/">日本小児歯科学会：口腔機能を育てる治療と矯正治療との関係</a></li>
+              </ul>
+              <p className="mt-3">お口の機能を確認する視点は、院内資料「咬合育成療法・完全統合レポート v4」の咀嚼・嚥下に関する講義資料も参考にしています。使用感と硬さを重視する使い分けは院長の臨床上の実感、装着時間と取り扱い装置は当院の診療方針として記載しています。</p>
+            </section>
+            <AuthorBio lastUpdated="2026年11月13日" ctaTitle="お子さまに合う方法を、一緒に確認しましょう" ctaBody="豊洲でこども矯正をご検討の方へ。歯並びとお口の使い方を確認し、装置の必要性・費用・通院の見通しをご説明します。" />
+          </div>
+        </div>
+      </main>
+      <Footer />
+    </>
+  );
 }

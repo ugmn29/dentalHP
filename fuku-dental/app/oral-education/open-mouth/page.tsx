@@ -134,7 +134,7 @@ export default function OpenMouthPage() {
                             </div>
                             <div className="space-y-6">
                                 {/* 歯並びへの影響 */}
-                                <div className="bg-white rounded-2xl p-6 md:p-8 shadow-md border-l-4 border-[#C5A572]">
+                                <div className="bg-white rounded-2xl p-6 md:p-8 shadow-md border-[#C5A572]">
                                     <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 flex items-center gap-3">
                                         <span className="w-8 h-8 bg-[#C5A572] text-white rounded-full flex items-center justify-center text-sm">1</span>
                                         歯並びへの影響（出っ歯・ガタガタ）
@@ -146,7 +146,7 @@ export default function OpenMouthPage() {
                                 </div>
 
                                 {/* 顔つきへの影響 */}
-                                <div className="bg-white rounded-2xl p-6 md:p-8 shadow-md border-l-4 border-[#C5A572]">
+                                <div className="bg-white rounded-2xl p-6 md:p-8 shadow-md border-[#C5A572]">
                                     <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 flex items-center gap-3">
                                         <span className="w-8 h-8 bg-[#C5A572] text-white rounded-full flex items-center justify-center text-sm">2</span>
                                         顔つきへの影響（顔が長くなる）
@@ -163,7 +163,7 @@ export default function OpenMouthPage() {
                                 </div>
 
                                 {/* 健康への影響 */}
-                                <div className="bg-white rounded-2xl p-6 md:p-8 shadow-md border-l-4 border-[#C5A572]">
+                                <div className="bg-white rounded-2xl p-6 md:p-8 shadow-md border-[#C5A572]">
                                     <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 flex items-center gap-3">
                                         <span className="w-8 h-8 bg-[#C5A572] text-white rounded-full flex items-center justify-center text-sm">3</span>
                                         健康への影響（風邪・アレルギー）
@@ -176,7 +176,7 @@ export default function OpenMouthPage() {
                                 </div>
 
                                 {/* 発音・睡眠への影響 */}
-                                <div className="bg-white rounded-2xl p-6 md:p-8 shadow-md border-l-4 border-[#C5A572]">
+                                <div className="bg-white rounded-2xl p-6 md:p-8 shadow-md border-[#C5A572]">
                                     <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 flex items-center gap-3">
                                         <span className="w-8 h-8 bg-[#C5A572] text-white rounded-full flex items-center justify-center text-sm">4</span>
                                         発音・睡眠への影響
@@ -254,7 +254,7 @@ export default function OpenMouthPage() {
                                 </div>
 
                                 {/* MFT */}
-                                <div className="bg-white rounded-2xl p-6 md:p-8 shadow-md border-l-4 border-[#C5A572]">
+                                <div className="bg-white rounded-2xl p-6 md:p-8 shadow-md border-[#C5A572]">
                                     <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4">
                                         MFT（口腔筋機能療法）
                                     </h4>
@@ -266,7 +266,7 @@ export default function OpenMouthPage() {
                                 </div>
 
                                 {/* プレオルソ */}
-                                <div className="bg-white rounded-2xl p-6 md:p-8 shadow-md border-l-4 border-[#C5A572]">
+                                <div className="bg-white rounded-2xl p-6 md:p-8 shadow-md border-[#C5A572]">
                                     <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4">
                                         プレオルソ
                                     </h4>
@@ -286,7 +286,7 @@ export default function OpenMouthPage() {
                                 </div>
 
                                 {/* 鼻づまりの治療 */}
-                                <div className="bg-white rounded-2xl p-6 md:p-8 shadow-md border-l-4 border-[#C5A572]">
+                                <div className="bg-white rounded-2xl p-6 md:p-8 shadow-md border-[#C5A572]">
                                     <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4">
                                         鼻づまりの治療（耳鼻咽喉科との連携）
                                     </h4>
@@ -298,7 +298,7 @@ export default function OpenMouthPage() {
                                 </div>
 
                                 {/* 生活習慣の見直し */}
-                                <div className="bg-white rounded-2xl p-6 md:p-8 shadow-md border-l-4 border-[#C5A572]">
+                                <div className="bg-white rounded-2xl p-6 md:p-8 shadow-md border-[#C5A572]">
                                     <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4">
                                         生活習慣の見直し
                                     </h4>

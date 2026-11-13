@@ -281,7 +281,7 @@ export default function CeramicPage() {
                             <div className="space-y-8">
                                 {/* e-max */}
                                 <div>
-                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-l-4 border-[#C5A572] py-3 px-4 mb-4">e-max（イーマックス）</h4>
+                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-[#C5A572] py-3 px-4 mb-4">e-max（イーマックス）</h4>
                                     <p className="text-[#5A4D41] leading-loose">
                                         ニケイ酸リチウムガラスを主成分とした、<span className="font-bold bg-yellow-100">透明感に優れたセラミック</span>です。
                                         天然歯に最も近い透明感と色調を再現でき、<span className="text-[#2E8B57] font-bold">特に前歯など審美性が求められる部位に適しています</span>。
@@ -290,7 +290,7 @@ export default function CeramicPage() {
                                 </div>
                                 {/* ジルコニア */}
                                 <div>
-                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-l-4 border-[#C5A572] py-3 px-4 mb-4">ジルコニア</h4>
+                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-[#C5A572] py-3 px-4 mb-4">ジルコニア</h4>
                                     <p className="text-[#5A4D41] leading-loose">
                                         人工ダイヤモンドとも呼ばれる、<span className="font-bold bg-yellow-100">非常に強度の高いセラミック</span>です。
                                         <span className="text-[#2E8B57] font-bold">噛む力が強くかかる奥歯やブリッジに適しています</span>。
@@ -299,7 +299,7 @@ export default function CeramicPage() {
                                 </div>
                                 {/* ジルコニアセラミック */}
                                 <div>
-                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-l-4 border-[#C5A572] py-3 px-4 mb-4">ジルコニアセラミック</h4>
+                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-[#C5A572] py-3 px-4 mb-4">ジルコニアセラミック</h4>
                                     <p className="text-[#5A4D41] leading-loose">
                                         ジルコニアの土台（フレーム）の上に、セラミックを焼き付けた素材です。
                                         <span className="font-bold bg-yellow-100">ジルコニアの強度とセラミックの審美性を兼ね備えて</span>おり、<span className="text-[#2E8B57] font-bold">前歯から奥歯まで幅広く対応</span>できます。

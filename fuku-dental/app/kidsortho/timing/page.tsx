@@ -158,7 +158,7 @@ export default function KidsOrthoTimingPage() {
                                                 <a href="https://pubmed.ncbi.nlm.nih.gov/25951334/" target="_blank" rel="noopener noreferrer" className="underline hover:text-[#395b45]">McNamara et al. (2015)</a> のメタ分析によると、6〜9歳で1期治療を行った場合、2期治療が不要になる確率は約60%、必要になっても治療期間が平均40%短縮されることが示されています。
                                             </p>
                                         </div>
-                                        <div className="bg-[#FFF4E6] p-6 rounded-xl mt-4 border-l-4 border-[#FF9F43]">
+                                        <div className="bg-[#FFF4E6] p-6 rounded-xl mt-4 border-[#FF9F43]">
                                             <p className="font-bold text-[#5A4D41] mb-2">⚠️ 注意：9歳に近づくほど条件が不利に</p>
                                             <p className="text-sm">
                                                 この時期でも、<span className="font-bold bg-yellow-100">9歳に近づけば近づくほど治療条件が悪化</span>します。
@@ -219,7 +219,7 @@ export default function KidsOrthoTimingPage() {
                             <div className="text-center mb-12">
                                 <h3 className="text-2xl md:text-3xl font-bold text-[#5A4D41] font-serif inline-block">「様子を見ましょう」のリスク</h3>
                                 <div className="w-16 h-0.5 bg-[#C5A572] mx-auto mt-4"></div>
-                                <div className="bg-yellow-50 p-6 rounded-xl border-l-4 border-yellow-400 mt-6 max-w-3xl mx-auto">
+                                <div className="bg-yellow-50 p-6 rounded-xl border-yellow-400 mt-6 max-w-3xl mx-auto">
                                     <p className="font-sans text-[#5A4D41] leading-relaxed">
                                         <span className="font-bold text-yellow-800">他院で「様子を見ましょう」と言われても、ほとんどのケースで何らかの介入が必要です。</span><br />
                                         早期に子供の矯正の専門の病院で診察を受けることで、お子さまに最適な治療開始時期を見極めることができます。
@@ -284,7 +284,7 @@ export default function KidsOrthoTimingPage() {
                                         <p>
                                             容貌への自信喪失（思春期の自己肯定感低下）、発音障害によるコミュニケーション不安、いじめや対人関係トラブルのリスクが高まります。
                                         </p>
-                                        <div className="bg-yellow-50 p-6 rounded-xl border-l-4 border-yellow-400 mt-4">
+                                        <div className="bg-yellow-50 p-6 rounded-xl border-yellow-400 mt-4">
                                             <p className="font-sans">
                                                 <span className="font-bold text-yellow-800">「永久歯が生え揃ってから」では手遅れになることも</span><br />
                                                 多くの保護者が「永久歯が生え揃ってから矯正を始めれば良い」と考えていますが、実際には永久歯列になってからでは、顎の成長を利用した治療ができず、抜歯や外科手術が必要になるケースが急増します。早期相談（6歳まで）が、お子さまの将来の選択肢を広げます。

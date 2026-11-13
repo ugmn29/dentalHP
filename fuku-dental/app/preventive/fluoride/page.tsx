@@ -77,7 +77,7 @@ export default function FluoridePage() {
                   <p className="text-lg">
                     フッ素塗布は、<span className="font-bold bg-yellow-100">歯の表面に高濃度のフッ素を直接塗布することで、歯質を強化し、虫歯を予防する</span>安全で効果的な予防処置です。
                   </p>
-                  <div className="bg-[#FDFBF7] p-6 rounded-xl border-l-4 border-[#C5A572]">
+                  <div className="bg-[#FDFBF7] p-6 rounded-xl border-[#C5A572]">
                     <p className="font-bold text-xl mb-3 text-[#C5A572]">フッ素塗布の3つの効果</p>
                     <ul className="space-y-2">
                       <li className="flex items-start">

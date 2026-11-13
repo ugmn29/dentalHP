@@ -77,7 +77,7 @@ export default function PreventiveCostPage() {
                   <p className="text-lg">
                     予防歯科の多くは<span className="font-bold bg-yellow-100">保険診療で対応可能</span>で、定期検診やクリーニングは3割負担で数千円程度です。一見、継続的な費用がかかるように感じますが、<span className="font-bold text-[#2E8B57]">虫歯や歯周病の治療費と比べると、長期的には大幅な医療費削減</span>につながります。
                   </p>
-                  <div className="bg-[#FDFBF7] p-6 rounded-xl border-l-4 border-[#C5A572]">
+                  <div className="bg-[#FDFBF7] p-6 rounded-xl border-[#C5A572]">
                     <p className="font-bold text-xl mb-3 text-[#C5A572]">予防vs治療の費用比較</p>
                     <ul className="space-y-2">
                       <li className="flex items-start">

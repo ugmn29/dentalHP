@@ -351,7 +351,7 @@ export default function OrthodonticsAdultPage() {
               大人で矯正を始めた患者様の声
             </h2>
             <div className="space-y-6">
-              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8 border-l-4 border-blue-600 shadow-lg">
+              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8 border-blue-600 shadow-lg">
                 <div className="flex items-start mb-4">
                   <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold mr-4 flex-shrink-0">
                     45歳
@@ -366,7 +366,7 @@ export default function OrthodonticsAdultPage() {
                 </p>
               </div>
 
-              <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 border-l-4 border-purple-600 shadow-lg">
+              <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 border-purple-600 shadow-lg">
                 <div className="flex items-start mb-4">
                   <div className="w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold mr-4 flex-shrink-0">
                     52歳
@@ -435,7 +435,7 @@ export default function OrthodonticsAdultPage() {
                   <p className="mb-3">
                     <strong className="text-[#E67A2E]">A.</strong> 遅すぎることはありません。確かに子供の方が歯が動きやすいですが、大人でも適切な治療を行えば確実に歯は動きます。
                   </p>
-                  <div className="bg-[#FFF9F0] p-4 rounded-lg mb-3 border-l-4 border-[#E67A2E]">
+                  <div className="bg-[#FFF9F0] p-4 rounded-lg mb-3 border-[#E67A2E]">
                     <h4 className="font-bold text-[#5A4D41] mb-2">大人の矯正のメリット</h4>
                     <ul className="space-y-2 text-sm">
                       <li className="flex items-start gap-2">
@@ -452,7 +452,7 @@ export default function OrthodonticsAdultPage() {
                       </li>
                     </ul>
                   </div>
-                  <p className="text-sm bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+                  <p className="text-sm bg-blue-50 p-4 rounded-lg border-blue-500">
                     <strong className="text-blue-600">「今が一番若い時」です。</strong>思い立った時が始め時です。何歳からでも美しい歯並びを手に入れることができます。
                   </p>
                 </div>
@@ -522,7 +522,7 @@ export default function OrthodonticsAdultPage() {
                       </li>
                     </ul>
                   </div>
-                  <p className="text-sm bg-green-50 p-4 rounded-lg border-l-4 border-green-500">
+                  <p className="text-sm bg-green-50 p-4 rounded-lg border-green-500">
                     痛みが心配な方には、マウスピース矯正をお勧めしています。ワイヤー矯正と比べて痛みや違和感が少なく、快適に治療を進められます。
                   </p>
                 </div>
@@ -557,7 +557,7 @@ export default function OrthodonticsAdultPage() {
                       </ul>
                     </div>
                   </div>
-                  <p className="text-sm bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+                  <p className="text-sm bg-blue-50 p-4 rounded-lg border-blue-500">
                     まずは詳しく診査させていただき、被せ物の状態を確認した上で、最適な治療計画を立案いたします。矯正後に被せ物をやり直す場合は、セラミックなど審美性の高い材料をご提案します。
                   </p>
                 </div>

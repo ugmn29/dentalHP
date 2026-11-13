@@ -308,7 +308,7 @@ export default function KidsOrthoDurationPage() {
                                     </div>
                                 </div>
 
-                                <div className="bg-blue-50 rounded-xl p-6 border-l-4 border-blue-500">
+                                <div className="bg-blue-50 rounded-xl p-6 border-blue-500">
                                     <p className="text-sm text-[#5A4D41]">
                                         <strong className="text-blue-600">エビデンス：</strong>
                                         Tulloch et al. (2004) の研究では、1期治療を行った群は2期治療のみの群と比較して、総治療期間が平均40%短縮（24ヶ月 vs. 40ヶ月）されたことが報告されています。
@@ -431,7 +431,7 @@ export default function KidsOrthoDurationPage() {
                                         <p className="text-[#8D8070] mb-4">
                                             月に1回の定期調整に通えなくなると、治療の進行が遅れ、期間が延びます。特に拡大床などは定期的な調整が必須です。
                                         </p>
-                                        <div className="bg-yellow-50 rounded-xl p-4 border-l-4 border-yellow-400">
+                                        <div className="bg-yellow-50 rounded-xl p-4 border-yellow-400">
                                             <p className="text-sm text-[#5A4D41]">
                                                 <strong className="text-yellow-700">例：</strong>3回連続で調整を延期すると、約3ヶ月の遅延が発生。1年の予定が1年3ヶ月に延長される可能性があります。
                                             </p>
@@ -548,7 +548,7 @@ export default function KidsOrthoDurationPage() {
                                         <p className="mb-3">
                                             <strong className="text-[#C5A572]">A.</strong> 永久歯が生え揃う12〜14歳頃から開始します。1期治療終了後、1〜2年の観察期間を設け、永久歯の萌出状況を確認してから2期治療の必要性を判断します。
                                         </p>
-                                        <p className="text-sm bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+                                        <p className="text-sm bg-blue-50 p-4 rounded-lg border-blue-500">
                                             <strong className="text-blue-600">重要：</strong>すぐに開始するのではなく、適切なタイミングを見極めることが重要です。観察期間中は2〜3ヶ月に1回の通院で経過を確認します。
                                         </p>
                                     </div>
@@ -579,7 +579,7 @@ export default function KidsOrthoDurationPage() {
                                                 <span><strong>2期治療：</strong>月に1回の調整</span>
                                             </li>
                                         </ul>
-                                        <p className="text-sm bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-400">
+                                        <p className="text-sm bg-yellow-50 p-4 rounded-lg border-yellow-400">
                                             <strong className="text-yellow-700">ポイント：</strong>定期的な通院を守ることで、計画通りに治療が進み、期間の延長を防げます。
                                         </p>
                                     </div>
@@ -606,7 +606,7 @@ export default function KidsOrthoDurationPage() {
                                                 <span><strong>固定式装置：</strong>マウスガードの使用をお勧めします</span>
                                             </li>
                                         </ul>
-                                        <p className="text-sm bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-400">
+                                        <p className="text-sm bg-yellow-50 p-4 rounded-lg border-yellow-400">
                                             <strong className="text-yellow-700">注意：</strong>コンタクトスポーツ（ラグビー、柔道など）の場合は、安全のため装置を外すか、専用のマウスガードを使用することをお勧めします。
                                         </p>
                                     </div>
@@ -637,7 +637,7 @@ export default function KidsOrthoDurationPage() {
                                                 <span>追加の期間と費用がかかります</span>
                                             </li>
                                         </ul>
-                                        <p className="text-sm bg-red-50 p-4 rounded-lg border-l-4 border-red-500">
+                                        <p className="text-sm bg-red-50 p-4 rounded-lg border-red-500">
                                             <strong className="text-red-700">重要：</strong>保定期間は治療の一部です。保定装置の使用を守ることで、治療の成果を長期的に維持できます。
                                         </p>
                                     </div>

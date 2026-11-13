@@ -176,7 +176,7 @@ export default function OrthodonticsTypesPage() {
                     </div>
                   </div>
 
-                  <div className="mt-6 p-4 bg-blue-50 border-l-4 border-blue-600 rounded">
+                  <div className="mt-6 p-4 bg-blue-50 border-blue-600 rounded">
                     <p className="text-sm text-gray-700">
                       <span className="font-bold text-blue-900">こんな方におすすめ：</span>
                       歯並びのガタガタが強い方、確実な治療結果を求める方、費用を抑えたい方
@@ -286,7 +286,7 @@ export default function OrthodonticsTypesPage() {
                     </div>
                   </div>
 
-                  <div className="mt-6 p-4 bg-green-50 border-l-4 border-green-600 rounded">
+                  <div className="mt-6 p-4 bg-green-50 border-green-600 rounded">
                     <p className="text-sm text-gray-700">
                       <span className="font-bold text-green-900">こんな方におすすめ：</span>
                       装置を目立たせたくない方、接客業や営業職の方、食事を楽しみたい方
@@ -394,7 +394,7 @@ export default function OrthodonticsTypesPage() {
                     </div>
                   </div>
 
-                  <div className="mt-6 p-4 bg-yellow-50 border-l-4 border-yellow-600 rounded">
+                  <div className="mt-6 p-4 bg-yellow-50 border-yellow-600 rounded">
                     <p className="text-sm text-gray-700">
                       <span className="font-bold text-yellow-900">こんな方におすすめ：</span>
                       前歯の軽いガタガタや隙間が気になる方、短期間で治したい方、費用を抑えたい方

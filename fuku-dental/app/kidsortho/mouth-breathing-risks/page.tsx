@@ -185,7 +185,7 @@ export default function MouthBreathingRisksPage() {
                 </div>
               </div>
 
-              <div className="bg-red-50 p-6 rounded-xl border-l-4 border-red-400">
+              <div className="bg-red-50 p-6 rounded-xl border-red-400">
                 <p className="font-sans text-sm text-gray-700 font-sans">
                   <span className="font-bold text-red-700">緊急性が高い症状：</span>
                   睡眠中の無呼吸（10秒以上息が止まる）、極度の集中力低下、日中の強い眠気が見られる場合は、

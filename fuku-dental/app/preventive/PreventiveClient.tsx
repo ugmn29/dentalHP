@@ -95,14 +95,14 @@ export default function GeneralPreventivePage() {
                             </div>
                             <div className="space-y-8">
                                 <div>
-                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-l-4 border-[#C5A572] py-3 px-4 mb-4">スケーリング（歯石除去）</h4>
+                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-[#C5A572] py-3 px-4 mb-4">スケーリング（歯石除去）</h4>
                                     <p className="text-[#5A4D41] leading-loose">
                                         <span className="font-bold bg-yellow-100">専用の器具を使って、歯ブラシでは取れない硬い歯石を除去</span>します。
                                         <span className="text-[#2E8B57] font-bold">歯石は細菌の温床となる</span>ため、定期的な除去が必要です。
                                     </p>
                                 </div>
                                 <div>
-                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-l-4 border-[#C5A572] py-3 px-4 mb-4">PMTC（専門的クリーニング）</h4>
+                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-[#C5A572] py-3 px-4 mb-4">PMTC（専門的クリーニング）</h4>
                                     <p className="text-[#5A4D41] leading-loose mb-3">
                                         Professional Mechanical Tooth Cleaningの略。
                                         <span className="font-bold bg-yellow-100">専用の機器と研磨剤で、歯の表面のバイオフィルム（細菌の膜）や着色汚れを徹底的に除去</span>し、
@@ -118,7 +118,7 @@ export default function GeneralPreventivePage() {
                                     </div>
                                 </div>
                                 <div>
-                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-l-4 border-[#C5A572] py-3 px-4 mb-4">フッ素コーティング</h4>
+                                    <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-[#C5A572] py-3 px-4 mb-4">フッ素コーティング</h4>
                                     <p className="text-[#5A4D41] leading-loose">
                                         きれいになった歯に<span className="font-bold bg-yellow-100">高濃度のフッ素を塗布</span>します。
                                         <span className="text-[#2E8B57] font-bold">歯質を強化し、虫歯菌の活動を抑制</span>することで、虫歯になりにくい歯を作ります。

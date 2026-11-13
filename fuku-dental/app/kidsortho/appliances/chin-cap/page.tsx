@@ -118,7 +118,7 @@ export default function ChinCapPage() {
                                 category="appliances"
                             />
 
-                            <div className="bg-yellow-50 p-6 border-l-4 border-yellow-400 rounded-r-lg mt-8">
+                            <div className="bg-yellow-50 p-6 border-yellow-400 rounded-lg mt-8">
                                 <p className="font-bold text-[#5A4D41] mb-2 font-serif">早期治療が重要</p>
                                 <p className="text-sm text-[#5A4D41] leading-relaxed font-sans">
                                     受け口は自然に治ることがほとんどなく、放置すると症状が悪化します。<span className="font-bold text-[#C5A572]">3〜10歳の成長期に治療を開始</span>することで、下顎の過剰な成長を抑制し、外科手術を避けられる可能性が高まります。
@@ -277,7 +277,7 @@ export default function ChinCapPage() {
                                 </div>
                             </div>
 
-                            <div className="bg-yellow-50 p-6 border-l-4 border-yellow-400 rounded-r-lg">
+                            <div className="bg-yellow-50 p-6 border-yellow-400 rounded-lg">
                                 <p className="font-bold text-[#5A4D41] mb-2 font-serif">医療費控除の対象です</p>
                                 <p className="text-sm text-[#5A4D41] leading-relaxed font-sans">
                                     小児矯正治療は医療費控除の対象となります。確定申告で一部が還付される可能性がありますので、領収書は大切に保管してください。

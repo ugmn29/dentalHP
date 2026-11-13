@@ -187,9 +187,7 @@ iframe {
 .article-body h2 {
   font-size: 1.55em;
   margin: 2em 0 0.8em;
-  padding: 0.5em 0 0.5em 0.9em;
-  border-left: 5px solid #8B92AB;
-  background: linear-gradient(90deg, #EDEEF3 0%, transparent 100%);
+  padding: 0.5em 0;
 }
 .article-body h3 {
   font-size: 1.25em;
@@ -274,10 +272,9 @@ iframe {
   margin: 1.6em 0;
   padding: 1em 1.4em;
   background: #f7f4ee;
-  border-left: 4px solid #D0D3DE;
   color: #6b5a4a;
   font-style: italic;
-  border-radius: 0 8px 8px 0;
+  border-radius: 8px;
 }
 .article-body blockquote p { margin: 0.4em 0; }
 

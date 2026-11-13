@@ -118,7 +118,7 @@ export default function PainPage() {
               </div>
 
               <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-white p-6 rounded-xl border-l-4 border-red-500 shadow-md">
+                <div className="bg-white p-6 rounded-xl border-red-500 shadow-md">
                   <div className="flex items-start mb-3">
                     <AlertCircle className="w-6 h-6 text-red-500 mr-3 flex-shrink-0 mt-0.5" />
                     <div>
@@ -130,7 +130,7 @@ export default function PainPage() {
                   </div>
                 </div>
 
-                <div className="bg-white p-6 rounded-xl border-l-4 border-red-500 shadow-md">
+                <div className="bg-white p-6 rounded-xl border-red-500 shadow-md">
                   <div className="flex items-start mb-3">
                     <AlertCircle className="w-6 h-6 text-red-500 mr-3 flex-shrink-0 mt-0.5" />
                     <div>
@@ -142,7 +142,7 @@ export default function PainPage() {
                   </div>
                 </div>
 
-                <div className="bg-white p-6 rounded-xl border-l-4 border-red-500 shadow-md">
+                <div className="bg-white p-6 rounded-xl border-red-500 shadow-md">
                   <div className="flex items-start mb-3">
                     <AlertCircle className="w-6 h-6 text-red-500 mr-3 flex-shrink-0 mt-0.5" />
                     <div>
@@ -154,7 +154,7 @@ export default function PainPage() {
                   </div>
                 </div>
 
-                <div className="bg-white p-6 rounded-xl border-l-4 border-red-500 shadow-md">
+                <div className="bg-white p-6 rounded-xl border-red-500 shadow-md">
                   <div className="flex items-start mb-3">
                     <AlertCircle className="w-6 h-6 text-red-500 mr-3 flex-shrink-0 mt-0.5" />
                     <div>
@@ -166,7 +166,7 @@ export default function PainPage() {
                   </div>
                 </div>
 
-                <div className="bg-white p-6 rounded-xl border-l-4 border-red-500 shadow-md">
+                <div className="bg-white p-6 rounded-xl border-red-500 shadow-md">
                   <div className="flex items-start mb-3">
                     <AlertCircle className="w-6 h-6 text-red-500 mr-3 flex-shrink-0 mt-0.5" />
                     <div>
@@ -178,7 +178,7 @@ export default function PainPage() {
                   </div>
                 </div>
 
-                <div className="bg-white p-6 rounded-xl border-l-4 border-red-500 shadow-md">
+                <div className="bg-white p-6 rounded-xl border-red-500 shadow-md">
                   <div className="flex items-start mb-3">
                     <AlertCircle className="w-6 h-6 text-red-500 mr-3 flex-shrink-0 mt-0.5" />
                     <div>
@@ -273,7 +273,7 @@ export default function PainPage() {
                     自宅でできる応急処置
                   </h3>
                   <div className="space-y-6">
-                    <div className="bg-green-50 p-6 rounded-xl border-l-4 border-green-500">
+                    <div className="bg-green-50 p-6 rounded-xl border-green-500">
                       <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 flex items-center">
                         <CheckCircle2 className="w-6 h-6 text-green-500 mr-3" />
                         市販の痛み止めを服用する
@@ -296,7 +296,7 @@ export default function PainPage() {
                       </div>
                     </div>
 
-                    <div className="bg-green-50 p-6 rounded-xl border-l-4 border-green-500">
+                    <div className="bg-green-50 p-6 rounded-xl border-green-500">
                       <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 flex items-center">
                         <CheckCircle2 className="w-6 h-6 text-green-500 mr-3" />
                         患部を冷やす
@@ -318,7 +318,7 @@ export default function PainPage() {
                       </div>
                     </div>
 
-                    <div className="bg-green-50 p-6 rounded-xl border-l-4 border-green-500">
+                    <div className="bg-green-50 p-6 rounded-xl border-green-500">
                       <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 flex items-center">
                         <CheckCircle2 className="w-6 h-6 text-green-500 mr-3" />
                         口の中を清潔に保つ
@@ -340,7 +340,7 @@ export default function PainPage() {
                       </div>
                     </div>
 
-                    <div className="bg-green-50 p-6 rounded-xl border-l-4 border-green-500">
+                    <div className="bg-green-50 p-6 rounded-xl border-green-500">
                       <h4 className="text-xl font-bold text-[#5A4D41] font-serif mb-4 flex items-center">
                         <CheckCircle2 className="w-6 h-6 text-green-500 mr-3" />
                         安静にする
@@ -370,7 +370,7 @@ export default function PainPage() {
                     やってはいけないこと
                   </h3>
                   <div className="space-y-4">
-                    <div className="bg-red-50 p-6 rounded-xl border-l-4 border-red-500">
+                    <div className="bg-red-50 p-6 rounded-xl border-red-500">
                       <h4 className="text-lg font-bold text-red-600 mb-3 flex items-center">
                         <span className="text-2xl mr-3">✗</span>
                         患部を直接触る
@@ -380,7 +380,7 @@ export default function PainPage() {
                       </p>
                     </div>
 
-                    <div className="bg-red-50 p-6 rounded-xl border-l-4 border-red-500">
+                    <div className="bg-red-50 p-6 rounded-xl border-red-500">
                       <h4 className="text-lg font-bold text-red-600 mb-3 flex items-center">
                         <span className="text-2xl mr-3">✗</span>
                         患部側で咬む
@@ -390,7 +390,7 @@ export default function PainPage() {
                       </p>
                     </div>
 
-                    <div className="bg-red-50 p-6 rounded-xl border-l-4 border-red-500">
+                    <div className="bg-red-50 p-6 rounded-xl border-red-500">
                       <h4 className="text-lg font-bold text-red-600 mb-3 flex items-center">
                         <span className="text-2xl mr-3">✗</span>
                         熱いもの・刺激物を摂る
@@ -400,7 +400,7 @@ export default function PainPage() {
                       </p>
                     </div>
 
-                    <div className="bg-red-50 p-6 rounded-xl border-l-4 border-red-500">
+                    <div className="bg-red-50 p-6 rounded-xl border-red-500">
                       <h4 className="text-lg font-bold text-red-600 mb-3 flex items-center">
                         <span className="text-2xl mr-3">✗</span>
                         飲酒・喫煙
@@ -410,7 +410,7 @@ export default function PainPage() {
                       </p>
                     </div>
 
-                    <div className="bg-red-50 p-6 rounded-xl border-l-4 border-red-500">
+                    <div className="bg-red-50 p-6 rounded-xl border-red-500">
                       <h4 className="text-lg font-bold text-red-600 mb-3 flex items-center">
                         <span className="text-2xl mr-3">✗</span>
                         痛み止めを過剰に服用する
@@ -420,7 +420,7 @@ export default function PainPage() {
                       </p>
                     </div>
 
-                    <div className="bg-red-50 p-6 rounded-xl border-l-4 border-red-500">
+                    <div className="bg-red-50 p-6 rounded-xl border-red-500">
                       <h4 className="text-lg font-bold text-red-600 mb-3 flex items-center">
                         <span className="text-2xl mr-3">✗</span>
                         市販の詰め物を使う
@@ -464,7 +464,7 @@ export default function PainPage() {
                       </div>
                     </div>
 
-                    <div className="bg-red-50 p-6 rounded-xl border-l-4 border-red-500">
+                    <div className="bg-red-50 p-6 rounded-xl border-red-500">
                       <h4 className="text-xl font-bold text-red-600 font-serif mb-4">
                         我慢できない痛みの場合
                       </h4>

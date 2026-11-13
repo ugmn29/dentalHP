@@ -554,7 +554,7 @@ export default function KidsOrthoAppliancesPage() {
 
                             <div className="space-y-4 text-[#5A4D41] leading-loose max-w-3xl mx-auto mb-12">
                                 {appliances.filter(a => a.usedInClinic).map((appliance) => (
-                                    <div key={appliance.id} className="border-l-4 border-[#C5A572] pl-4">
+                                    <div key={appliance.id} className="border-[#C5A572] pl-4">
                                         <h3 className="text-xl font-serif font-bold text-[#5A4D41] mb-2">{appliance.name}</h3>
                                         <p className="font-sans mb-2">
                                             {appliance.shortDesc}

@@ -455,25 +455,25 @@ export default function TreatmentMethodsPage() {
                         治療の流れ
                       </h4>
                       <div className="space-y-3">
-                        <div className="bg-[#FDFBF7] p-4 rounded-xl border-l-4 border-[#C5A572]">
+                        <div className="bg-[#FDFBF7] p-4 rounded-xl border-[#C5A572]">
                           <p className="font-bold text-[#5A4D41] mb-2">1. 根管の開放と神経の除去</p>
                           <p className="text-sm text-[#5A4D41]">
                             虫歯部分を削り、歯髄腔を開放して、感染した神経を除去します。
                           </p>
                         </div>
-                        <div className="bg-[#FDFBF7] p-4 rounded-xl border-l-4 border-[#C5A572]">
+                        <div className="bg-[#FDFBF7] p-4 rounded-xl border-[#C5A572]">
                           <p className="font-bold text-[#5A4D41] mb-2">2. 根管の清掃・消毒</p>
                           <p className="text-sm text-[#5A4D41]">
                             専用の器具で根管内を徹底的に清掃し、消毒液で洗浄します。症状に応じて数回繰り返します。
                           </p>
                         </div>
-                        <div className="bg-[#FDFBF7] p-4 rounded-xl border-l-4 border-[#C5A572]">
+                        <div className="bg-[#FDFBF7] p-4 rounded-xl border-[#C5A572]">
                           <p className="font-bold text-[#5A4D41] mb-2">3. 根管充填</p>
                           <p className="text-sm text-[#5A4D41]">
                             根管内が清潔になったら、ガッタパーチャという材料で緊密に充填します。
                           </p>
                         </div>
-                        <div className="bg-[#FDFBF7] p-4 rounded-xl border-l-4 border-[#C5A572]">
+                        <div className="bg-[#FDFBF7] p-4 rounded-xl border-[#C5A572]">
                           <p className="font-bold text-[#5A4D41] mb-2">4. 土台の作製とクラウンの装着</p>
                           <p className="text-sm text-[#5A4D41]">
                             歯質が少ないため、土台（コア）を作製してからクラウンを被せます。

@@ -138,7 +138,7 @@ export default function OverbiteDetailPage() {
 
           {/* 放置した場合のリスク */}
           <section>
-            <div className="rounded-2xl p-8 md:p-10 border-l-4 border-red-500">
+            <div className="rounded-2xl p-8 md:p-10 border-red-500">
               <h3 className="text-2xl font-bold text-[#5A4D41] mb-6 flex items-center gap-3">
                 <span className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center text-white text-sm">!</span>
                 放置した場合のリスク
@@ -469,7 +469,7 @@ export default function OverbiteDetailPage() {
                       <span><strong className="text-[#5A4D41]">成人：</strong>骨格的な問題が大きい場合、抜歯や外科矯正が必要なこともある</span>
                     </li>
                   </ul>
-                  <p className="text-sm bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+                  <p className="text-sm bg-blue-50 p-4 rounded-lg border-blue-500">
                     抜歯の有無は、顎の大きさ、歯の大きさ、前突の程度によって判断します。当院では可能な限り非抜歯での治療を目指しています。
                   </p>
                 </div>
@@ -501,7 +501,7 @@ export default function OverbiteDetailPage() {
                       <span><strong className="text-[#5A4D41]">効果：</strong>指示された時間を守って使用すれば、十分な効果が得られます</span>
                     </li>
                   </ul>
-                  <p className="text-sm bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-400">
+                  <p className="text-sm bg-yellow-50 p-4 rounded-lg border-yellow-400">
                     装着時間が短いと効果が得られないため、保護者の方のサポートが重要です。お子様が嫌がる場合は、励ましと見守りをお願いします。
                   </p>
                 </div>
@@ -565,7 +565,7 @@ export default function OverbiteDetailPage() {
                       <span><strong className="text-[#5A4D41]">予防効果：</strong>早めにやめることで、悪化を防ぐことはできます</span>
                     </li>
                   </ul>
-                  <p className="text-sm bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+                  <p className="text-sm bg-blue-50 p-4 rounded-lg border-blue-500">
                     矯正治療と並行して習癖を改善することで、治療効果が高まり、後戻りも防げます。タンガードなどの装置で習癖改善をサポートします。
                   </p>
                 </div>

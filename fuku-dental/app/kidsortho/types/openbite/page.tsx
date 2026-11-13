@@ -225,7 +225,7 @@ export default function OpenBiteDetailPage() {
                     <span><strong className="text-[#5A4D41]">舌の大きさ：</strong>舌が大きい場合、歯を押す力が強くなります</span>
                   </li>
                 </ul>
-                <div className="bg-blue-50 p-5 rounded-lg mt-4 border-l-4 border-blue-500">
+                <div className="bg-blue-50 p-5 rounded-lg mt-4 border-blue-500">
                   <p className="text-sm text-[#5A4D41]">
                     <strong className="text-blue-600">遺伝の影響：</strong>骨格的な開咬は遺伝的要因が大きいですが、早期治療により成長をコントロールすることで改善が可能です。
                   </p>
@@ -265,7 +265,7 @@ export default function OpenBiteDetailPage() {
                     <span><strong className="text-[#5A4D41]">アデノイド肥大・扁桃腺肥大：</strong>鼻呼吸ができず、口呼吸になることで開咬が進行します</span>
                   </li>
                 </ul>
-                <div className="bg-yellow-50 p-5 rounded-lg mt-4 border-l-4 border-yellow-400">
+                <div className="bg-yellow-50 p-5 rounded-lg mt-4 border-yellow-400">
                   <p className="text-sm text-[#5A4D41]">
                     <strong className="text-yellow-600">習癖の改善が最優先：</strong>開咬の多くは習癖が原因です。指しゃぶりは3歳まで、おしゃぶりは2歳半までにやめることが推奨されます。早期に習癖を改善することで、開咬の進行を防げます。
                   </p>
@@ -398,7 +398,7 @@ export default function OpenBiteDetailPage() {
               </h4>
               <div className="space-y-6">
                 {/* 1期治療 */}
-                <div className="bg-blue-50 p-6 rounded-xl border-l-4 border-blue-500">
+                <div className="bg-blue-50 p-6 rounded-xl border-blue-500">
                   <h4 className="font-bold text-[#5A4D41] mb-4 text-lg">1期治療（4〜12歳頃）</h4>
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="bg-white p-4 rounded-lg">
@@ -419,7 +419,7 @@ export default function OpenBiteDetailPage() {
                 </div>
 
                 {/* 2期治療 */}
-                <div className="bg-yellow-50 p-6 rounded-xl border-l-4 border-yellow-400">
+                <div className="bg-yellow-50 p-6 rounded-xl border-yellow-400">
                   <h4 className="font-bold text-[#5A4D41] mb-4 text-lg">2期治療（12歳以降〜）</h4>
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="bg-white p-4 rounded-lg">
@@ -485,14 +485,14 @@ export default function OpenBiteDetailPage() {
                   </ul>
                 </div>
 
-                <div className="bg-red-50 p-6 rounded-xl border-l-4 border-red-500">
+                <div className="bg-red-50 p-6 rounded-xl border-red-500">
                   <h4 className="font-bold text-[#5A4D41] mb-3">3歳までの習癖改善を推奨</h4>
                   <p className="text-sm text-[#8D8070] leading-relaxed">
                     指しゃぶりやおしゃぶりは3歳までにやめることが推奨されます。3歳以降も続く場合は、早めに専門の病院でご相談ください。習癖が長く続くほど、開咬が進行し、治療が困難になります。
                   </p>
                 </div>
 
-                <div className="bg-yellow-50 p-6 rounded-xl border-l-4 border-yellow-400">
+                <div className="bg-yellow-50 p-6 rounded-xl border-yellow-400">
                   <h4 className="font-bold text-[#5A4D41] mb-3">12歳以降でも治療可能</h4>
                   <p className="text-sm text-[#8D8070] leading-relaxed">
                     成長期を過ぎてしまった場合でも、マルチブラケット装置とMFTで治療可能です。ただし、骨格的な問題が大きい場合は、外科矯正が必要になることがあります。また、後戻りしやすいため、長期の保定が必要です。
@@ -570,7 +570,7 @@ export default function OpenBiteDetailPage() {
                       <span><strong className="text-[#5A4D41]">口唇閉鎖：</strong>口を閉じる筋肉を強化します</span>
                     </li>
                   </ul>
-                  <p className="text-sm bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+                  <p className="text-sm bg-blue-50 p-4 rounded-lg border-blue-500">
                     MFTは開咬治療に不可欠です。毎日のトレーニングにより、習癖を改善し、治療効果を高め、後戻りを防ぐことができます。
                   </p>
                 </div>
@@ -602,7 +602,7 @@ export default function OpenBiteDetailPage() {
                       <span><strong className="text-[#5A4D41]">長期保定が必要：</strong>2〜3年以上の保定期間が推奨されます</span>
                     </li>
                   </ul>
-                  <p className="text-sm bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-400">
+                  <p className="text-sm bg-yellow-50 p-4 rounded-lg border-yellow-400">
                     後戻り防止には、治療後もMFTを継続し、正しい舌の位置と鼻呼吸を維持することが重要です。定期的なメンテナンスで確認します。
                   </p>
                 </div>
@@ -666,7 +666,7 @@ export default function OpenBiteDetailPage() {
                       <span><strong className="text-[#5A4D41]">習癖防止効果：</strong>舌を前に出せないため、習癖が自然に改善されます</span>
                     </li>
                   </ul>
-                  <p className="text-sm bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+                  <p className="text-sm bg-blue-50 p-4 rounded-lg border-blue-500">
                     タンガードは習癖改善に非常に効果的です。お子様が慣れるまで、保護者の方の励ましとサポートが重要です。
                   </p>
                 </div>

@@ -200,21 +200,21 @@ export default function RootCanalPage() {
                                 <div className="space-y-8">
                                     {/* 初回根管治療 */}
                                     <div>
-                                        <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-l-4 border-[#C5A572] py-3 px-4 mb-4">初回根管治療</h4>
+                                        <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-[#C5A572] py-3 px-4 mb-4">初回根管治療</h4>
                                         <p className="text-[#5A4D41] leading-loose">
                                             虫歯が神経まで達した場合や、外傷などで歯髄（神経）が死んでしまった場合に行う、<span className="font-bold bg-yellow-100">初めての根管治療</span>です。感染した歯髄を取り除き、根管内を徹底的に清掃・消毒します。
                                         </p>
                                     </div>
                                     {/* 再根管治療 */}
                                     <div>
-                                        <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-l-4 border-[#C5A572] py-3 px-4 mb-4">再根管治療（リトリートメント）</h4>
+                                        <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-[#C5A572] py-3 px-4 mb-4">再根管治療（リトリートメント）</h4>
                                         <p className="text-[#5A4D41] leading-loose">
                                             過去に根管治療を行った歯が再び感染した場合に行う治療です。<span className="font-bold bg-yellow-100">一度充填した薬剤を取り除き、再度清掃・消毒</span>を行います。初回より複雑で難易度が高い治療となります。
                                         </p>
                                     </div>
                                     {/* 歯根端切除術 */}
                                     <div>
-                                        <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-l-4 border-[#C5A572] py-3 px-4 mb-4">歯根端切除術</h4>
+                                        <h4 className="text-xl font-bold text-[#5A4D41] font-serif bg-[#FAF8F5] border-[#C5A572] py-3 px-4 mb-4">歯根端切除術</h4>
                                         <p className="text-[#5A4D41] leading-loose">
                                             通常の根管治療では治癒しない場合に行う<span className="font-bold bg-yellow-100">外科的な治療法</span>です。歯茎を切開し、根の先端部分と病巣を直接取り除きます。被せ物を外さずに治療できるメリットがあります。
                                         </p>

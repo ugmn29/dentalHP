@@ -517,7 +517,7 @@ export default function LasikLPPage() {
                 <div className="w-full lg:w-[300px] xl:w-[318px] aspect-[318/424] bg-gray-700 rounded-lg mb-4 flex items-center justify-center">
                   <span className="text-gray-400">院長写真</span>
                 </div>
-                <div className="border-l-2 border-white pl-4">
+                <div className="border-white pl-4">
                   <p className="text-white text-xl md:text-2xl mb-2">中原眼科</p>
                   <div className="flex items-baseline gap-2">
                     <span className="text-white text-lg md:text-xl">院長</span>

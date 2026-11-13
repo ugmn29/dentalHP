@@ -77,7 +77,7 @@ export default function CavityStagesPage() {
                   <p className="text-lg">
                     虫歯の進行度は、<span className="font-bold bg-yellow-100">英語でむし歯を意味するCaries（カリエス）の頭文字を取った「C0、C1〜C4」で表され</span>、数字が大きくなるにつれ重症になります。
                   </p>
-                  <div className="bg-[#FDFBF7] p-6 rounded-xl border-l-4 border-[#C5A572]">
+                  <div className="bg-[#FDFBF7] p-6 rounded-xl border-[#C5A572]">
                     <p className="font-bold text-xl mb-3 text-[#C5A572]">進行段階と痛みの関係</p>
                     <ul className="space-y-2">
                       <li className="flex items-start">
